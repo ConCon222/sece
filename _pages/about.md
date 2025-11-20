@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: No one can reinforcements us, except outselves | <a href='#https://english.ecnu.edu.cn'>East China Normal University</a>.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: photo1.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Education Information Technology</p>
+    <p>East China Normal University</p>
+    <p>Shanghai, China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,31 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am **Haoming Wang (王浩名)**, a researcher in the Department of Education 
+Information Technology at East China Normal University. My work explores how 
+artificial intelligence can meaningfully transform teaching and learning.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+## Research Interests
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I focus on educational technology innovation, particularly:
+- Large language models (LLMs) in education
+- AI-assisted teaching and personalized learning
+- Multi-agent systems for collaborative learning
+- Responsible AI integration in educational contexts
+
+## Methodology
+
+My research employs diverse methodological approaches including quasi-experimental 
+designs, lag sequential analysis, epistemic network analysis (ENA), and bibliometric 
+methods to rigorously evaluate AI's impact on learning outcomes.
+
+## Current Work
+
+I am currently investigating AI agent empowerment in educational settings, developing 
+intelligent assistants that adapt to learner needs while upholding pedagogical 
+principles and ethical standards. My work bridges theoretical foundations with 
+practical implementation, aiming to create solutions that are both research-informed 
+and educationally impactful.
+
+Feel free to explore my [publications](/publications/), [blog posts](/blog/), 
+or [reach out](/contact/) for potential collaborations on AI in education research.
