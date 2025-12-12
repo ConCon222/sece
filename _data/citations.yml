@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2025-12-05'
+  last_updated: '2025-12-12'
 papers:
   VV0nEt4AAAAJ:2osOgNQ5qMEC:
     citations: 77
     title: What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study
     year: '2024'
   VV0nEt4AAAAJ:9yKSN-GCB0IC:
-    citations: 102
+    citations: 104
     title: 'Research landscape of adaptive learning in education: A bibliometric study on research publications from 2000 to 2022'
     year: '2023'
   VV0nEt4AAAAJ:IjCSPb-OGe4C:
@@ -22,11 +22,11 @@ papers:
     title: 'Evolution in Simulation: AI-Agent School with Dual Memory for High-Fidelity Educational Dynamics'
     year: '2025'
   VV0nEt4AAAAJ:Tyk-4Ss8FVUC:
-    citations: 8
+    citations: 9
     title: 'MetaClassroom: A new paradigm and experience for programming education'
     year: '2025'
   VV0nEt4AAAAJ:UeHWp8X0CEIC:
-    citations: 212
+    citations: 217
     title: "Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
     year: '2025'
   VV0nEt4AAAAJ:W7OEmFMy1HYC:
@@ -38,7 +38,7 @@ papers:
     title: 'AI-Agent School: Construction and Evaluation of an Educational Simulation Environment Based on LLM-Driven Agents'
     year: '2025'
   VV0nEt4AAAAJ:Y0pCki6q_DkC:
-    citations: 19
+    citations: 20
     title: Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses
     year: '2025'
   VV0nEt4AAAAJ:_FxGoFyzp5QC:
@@ -46,7 +46,7 @@ papers:
     title: 'Prediction of Online Mathematics Test Efficiency Based on Stacked Integrated Models: A Case Study of NAEP Data'
     year: '2025'
   VV0nEt4AAAAJ:d1gkVwhDpl0C:
-    citations: 95
+    citations: 97
     title: 'Bibliometric mapping techniques in educational technology research: A systematic literature review'
     year: '2024'
   VV0nEt4AAAAJ:eQOLeE2rZwMC:
