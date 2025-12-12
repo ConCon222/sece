@@ -25,7 +25,7 @@ events:
     year: 2025
 
   - date: "2025-07"
-    title: "Presentation at GHMP STEAM Conference (CUHK)"
+    title: "Presentation at GHMP STEAM Conference (The Chinese University of Hong Kong)"
     description: "香港中文大学 · 粤港澳促进STEAM教育大会 · 论文汇报"
     type: "talk"
     icon: "🇭🇰"
@@ -39,7 +39,7 @@ events:
     year: 2025
 
   - date: "2025-05"
-    title: "Presentation at CITERS 2025 (University of Hong Kong)"
+    title: "Presentation at CITERS 2025 (The University of Hong Kong)"
     description: "香港大学 · CITERS 2025 · 论文汇报"
     type: "talk"
     icon: "🎤"
@@ -353,8 +353,8 @@ events:
     year: 2018
 
   - date: "2016-04"
-    title: "First Prize, 1st Campus Maker Exhibition"
-    description: "首届校园创客作品展活动一等奖 证书编号：CM1602"
+    title: "First Prize, 1st National Campus Maker Exhibition"
+    description: "全国首届校园创客作品展活动一等奖 证书编号：CM1602"
     type: "award"
     icon: "🛠️"
     year: 2016
