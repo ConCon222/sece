@@ -4,27 +4,34 @@ const ninja = document.querySelector('ninja-keys');
 // add the home and posts menu items
 ninja.data = [{
     id: "nav-about",
-    title: "about",
+    title: "About",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
   },{id: "nav-blog",
-          title: "blog",
+          title: "Blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
           },
         },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "publications by categories and year in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-call-for-papers",
+          title: "Call for Papers",
+          description: "Curated academic opportunities in Edu. Auto-updated daily.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cfp/";
+          },
         },{id: "nav-projects",
-          title: "projects",
+          title: "Projects",
           description: "A growing collection of cool projects.",
           section: "Navigation",
           handler: () => {
