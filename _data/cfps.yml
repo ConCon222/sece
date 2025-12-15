@@ -22,9 +22,34 @@
   editors: 'Guest editors: Di Zou, Guangwei Hu, Shaofeng Li'
   link: https://www.sciencedirect.com/special-issue/323258/where-pedagogy-and-latest-digital-technologies-meet-new-frontiers-in-language-teaching-and-learning
   description: ''
+- journal: International Journal of Computer-Supported Collaborative Learning
+  publisher: Springer
+  tag:
+  - educational technology
+  title: 'Artificial Intelligence in CSCL: Discerning Promising Opportunities while Avoiding Pitfalls in Light of Past Accomplishments
+    and Recent Advances'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2025
+  fullpaper_deadline_sort: '2025-12-31'
+  editors: ''
+  link: https://link.springer.com/collections/dhfjajijij
+  description: For the past two decades, the integration of Artificial Intelligence (AI) into Computer-Supported Collaborative
+    Learning (CSCL) has offered new opportunities for large-scale multimodal process analysis, real...
+- journal: System
+  publisher: Elsevier
+  tag:
+  - language learning
+  - educational technology
+  title: Language Learning Strategies in the Age of Artificial Intelligence
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2025
+  fullpaper_deadline_sort: '2025-12-31'
+  editors: 'Guest editors: Peter Yongqi Gu, Osamu Takeuchi'
+  link: https://www.sciencedirect.com/special-issue/327158/language-learning-strategies-in-the-age-of-artificial-intelligence
+  description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: &id002
+  tag: &id003
   - language learning
   - educational technology
   title: Inclusive CALL
@@ -33,6 +58,17 @@
   fullpaper_deadline_sort: '2026-02-01'
   editors: Glenn Stockwell (Waseda University); Yijen Wang (Waseda University)
   link: https://think.taylorandfrancis.com/special_issues/inclusive-call/
+  description: ''
+- journal: Learning and Instruction
+  publisher: Elsevier
+  tag: &id002
+  - general education
+  title: Problem Solving in Early Childhood Education
+  abstract_deadline: ''
+  fullpaper_deadline: 01 February 2026
+  fullpaper_deadline_sort: '2026-02-01'
+  editors: 'Guest editors: Lyn English, Joke Torbeyns, Pirjo Aunio, Emily Farran , Joris Van Elsen'
+  link: https://www.sciencedirect.com/special-issue/324588/problem-solving-in-early-childhood-education
   description: ''
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
@@ -46,9 +82,32 @@
   link: https://link.springer.com/collections/cgfhfcafai
   description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
     on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: &id005
+  - general education
+  - educational policy
+  title: 'Special Issue: Review and Meta-Analysis of AI in Education'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 March 2026
+  fullpaper_deadline_sort: '2026-03-30'
+  editors: ''
+  link: https://www.springer.com/collections/daaajbgbgg
+  description: The special issue will focus on a comprehensive review and meta-analysis of how artificial intelligence (AI)
+    impacts education, spanning multiple critical areas that address both current challenges and futur...
+- journal: Learning and Instruction
+  publisher: Elsevier
+  tag: *id002
+  title: 'Retrieval Practice in Meaningful Learning: When and Why Does it Work?'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 March 2026
+  fullpaper_deadline_sort: '2026-03-31'
+  editors: 'Guest editors: Veit Kubik, Tamara van Gog, Ralf Rummer, Julian Roelle'
+  link: https://www.sciencedirect.com/special-issue/326413/retrieval-practice-in-meaningful-learning-when-and-why-does-it-work
+  description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id002
+  tag: *id003
   title: Agency in language teaching and learning with GenAI
   abstract_deadline: 30 June 2025
   fullpaper_deadline: 30 April 2026
@@ -69,7 +128,7 @@
     education - an area that has received limited attention despite the growing discourse on Gen AI ...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id002
+  tag: *id003
   title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
   abstract_deadline: 31 October 2025
   fullpaper_deadline: 30 June 2026
@@ -78,6 +137,30 @@
     Chung Hsing University); Mirjam Hauck (The Open University)
   link: https://think.taylorandfrancis.com/special_issues/beyond-automation-ai-driven-language-assessment-in-call-through-pedagogical-ethical-and-ai-literacy-lenses/
   description: ''
+- journal: International Journal of STEM Education
+  publisher: Springer
+  tag: &id004
+  - educational technology
+  - STEM education
+  title: AI Literacy and STEM Education
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2027
+  fullpaper_deadline_sort: '2027-01-31'
+  editors: ''
+  link: https://link.springer.com/collections/chdfcibfje
+  description: Artificial intelligence (AI) and its applications in education have a rich and complex history dating back
+    to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
+- journal: International Journal of STEM Education
+  publisher: Springer
+  tag: *id004
+  title: Assessment for STEM Education in the AI Era
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2027
+  fullpaper_deadline_sort: '2027-01-31'
+  editors: ''
+  link: https://link.springer.com/collections/hbgejjhffg
+  description: Assessment plays a pivotal role in STEM (science, technology, engineering, and mathematics) education, serving
+    as a mechanism for collecting and analyzing information to inform both teaching and learning, as...
 - journal: Journal of Science Education and Technology
   publisher: Springer
   tag:
@@ -91,3 +174,36 @@
   link: https://link.springer.com/collections/ajbdagfbfd
   description: 'Springer is calling for articles to our new Collection on Education for Sustainable Development and Global
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: *id005
+  title: SDG 4 Quality Education Collection
+  abstract_deadline: ''
+  fullpaper_deadline: 01 January 2030
+  fullpaper_deadline_sort: '2030-01-01'
+  editors: ''
+  link: https://www.springer.com/collections/ajbdagfbfd
+  description: 'Springer is calling for articles to our new Collection on Education for Sustainable Development and Global
+    Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: *id005
+  title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
+  abstract_deadline: ''
+  fullpaper_deadline: Ongoing
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.springer.com/collections/fjaaeaaiaf
+  description: The main goal of this special issue is to achieve a comprehensive understanding of AI adoption in education,
+    by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: *id005
+  title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
+  abstract_deadline: ''
+  fullpaper_deadline: Ongoing
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.springer.com/collections/fegdjgibfb
+  description: This special issue will include efforts to document and analyze a series of contextual pedagogical renewal
+    and innovative partnership in teacher education programs around the world. The studies in the specia...
