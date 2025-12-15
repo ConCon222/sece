@@ -1,0 +1,181 @@
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: &id001
+  - educational technology
+  title: 'From Chaos to Clarity: Unveiling the Dynamics of Learning Processes with Complexity Sciences'
+  abstract_deadline: ''
+  fullpaper_deadline: 15 December 2025
+  fullpaper_deadline_sort: '2025-12-15'
+  editors: Daryn Dever, University of Florida, USA; Sonsoles López-Pernas, University of Eastern Finland, Finland; Mar Pérez-Sanagustín,
+    Université Paul Sabatier Toulouse III, France; Ángel Hernández-García, Universidad Politécnica de Madrid, Spain; Avi Kaplan,
+    Temple University, USA; Mohammed Saqr, University of Eastern Finland, Finland
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/complexity-sciences-and-learning
+  description: ''
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: EdTech implementation research in low- and middle-income countries (LMICs)
+  abstract_deadline: ''
+  fullpaper_deadline: 15 December 2025
+  fullpaper_deadline_sort: '2025-12-15'
+  editors: Annette Zhao, EdTech Hub & Jigsaw, UK; Loise Wambui, University of Nairobi, Kenya; Laura Czerniewicz, University
+    of Cape Town, South Africa; Louis Major, University of Manchester & EdTech Hub, UK
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/edtech-in-lmics
+  description: ''
+- journal: International Journal of Educational Technology in Higher Education
+  publisher: Springer
+  tag: &id003
+  - educational technology
+  - higher education
+  title: 'Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and Future Directions'
+  abstract_deadline: ''
+  fullpaper_deadline: 19 December 2025
+  fullpaper_deadline_sort: '2025-12-19'
+  editors: ''
+  link: https://link.springer.com/collections/jighbjcefd
+  description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
+    on Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and ...'
+- journal: Computers & Education
+  publisher: Elsevier
+  tag:
+  - educational technology
+  title: 'Where pedagogy and latest digital technologies meet: New frontiers in language teaching and learning'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2025
+  fullpaper_deadline_sort: '2025-12-31'
+  editors: 'Guest editors: Di Zou, Guangwei Hu, Shaofeng Li'
+  link: https://www.sciencedirect.com/special-issue/323258/where-pedagogy-and-latest-digital-technologies-meet-new-frontiers-in-language-teaching-and-learning
+  description: ''
+- journal: Journal of Computer Assisted Learning
+  publisher: Wiley
+  tag: &id002
+  - educational technology
+  title: 'Informal Digital Learning of English (IDLE) as Innovative Pedagogy: Mapping Current and Future Trends'
+  abstract_deadline: ''
+  fullpaper_deadline: 1 January 2026
+  fullpaper_deadline_sort: '2026-01-01'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/13652729/call-for-papers/si-2025-000977
+  description: ''
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: Pedagogical and methodological advancements in fostering students' AI literacy skills
+  abstract_deadline: ''
+  fullpaper_deadline: 30 January 2026
+  fullpaper_deadline_sort: '2026-01-30'
+  editors: Seyyed Kazem Banihashem, Open Universiteit, Netherlands; Nikol Rummel, Ruhr-Universität Bochum, and CAIS (Center
+    for Advanced Internet Studies), Germany; Hassan Khosravi, University of Queensland, Australia; Alyssa Wise, Vanderbilt
+    University, USA; Omid Noroozi, Wageningen University and Research, Netherlands
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/students-ai-literacy
+  description: ''
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: Digital technologies, algorithms and the changing topology of (teacher) education
+  abstract_deadline: ''
+  fullpaper_deadline: 30 January 2026
+  fullpaper_deadline_sort: '2026-01-30'
+  editors: Norbert Pachler, University College London, Institute of Education, UK; Keith Turvey, Independent Academic, UK
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/cfp-digital-technologies
+  description: ''
+- journal: Journal of Computer Assisted Learning
+  publisher: Wiley
+  tag: *id002
+  title: Dynamics of Learning and Learners in the Changing Digital Landscape
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2026
+  fullpaper_deadline_sort: '2026-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers/si-2025-000971
+  description: ''
+- journal: Computer Assisted Language Learning
+  publisher: Taylor & Francis
+  tag: &id004
+  - language learning
+  - educational technology
+  title: Inclusive CALL
+  abstract_deadline: 15 October 2025
+  fullpaper_deadline: 01 February 2026
+  fullpaper_deadline_sort: '2026-02-01'
+  editors: Glenn Stockwell (Waseda University); Yijen Wang (Waseda University)
+  link: https://think.taylorandfrancis.com/special_issues/inclusive-call/
+  description: ''
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: 'Generative AI in Computer-Supported Collaborative Learning: Unpacking the Processes and Dynamics of Human-AI Collaboration'
+  abstract_deadline: 14 November 2025
+  fullpaper_deadline: 14 February 2026
+  fullpaper_deadline_sort: '2026-02-14'
+  editors: Shen Ba, The Education University of Hong Kong; Dragan Gašević, Monash University; Xiao Hu, The University of Arizona;
+    Lingyun Huang, The Education University of Hong Kong; Sanna Järvelä, University of Oulu
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/gen-ai-comp-supported-learning
+  description: ''
+- journal: International Journal of Educational Technology in Higher Education
+  publisher: Springer
+  tag: *id003
+  title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
+    Education'
+  abstract_deadline: ''
+  fullpaper_deadline: 01 March 2026
+  fullpaper_deadline_sort: '2026-03-01'
+  editors: ''
+  link: https://link.springer.com/collections/cgfhfcafai
+  description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
+    on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
+- journal: Computer Assisted Language Learning
+  publisher: Taylor & Francis
+  tag: *id004
+  title: Agency in language teaching and learning with GenAI
+  abstract_deadline: 30 June 2025
+  fullpaper_deadline: 30 April 2026
+  fullpaper_deadline_sort: '2026-04-30'
+  editors: Chun Lai (The University of Hong Kong); Tan Jin (South China Normal University)
+  link: https://think.taylorandfrancis.com/special_issues/agency-in-language-teaching-and-learning-with-genai/
+  description: ''
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: 'The Future of Learning Analytics Dashboards: Bridging Design, Sense-Making and Pedagogical Impact'
+  abstract_deadline: ''
+  fullpaper_deadline: 15 May 2026
+  fullpaper_deadline_sort: '2026-05-15'
+  editors: Vanessa Echeverria, RMIT University and Monash University; Anouschka van Leeuwen, Utrecht University; Gloria Fernandez-Nieto,
+    Monash University, Australia; Ioana Jivet, FernUniversität in Hagen, Germany; Stanislav Pozdniakov, The University of
+    Queensland, Australia, Australia; Prof. Isabel Hilliger, Pontificia Universidad Católica de Chile, Chile
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/learning-analytics-dashboards
+  description: ''
+- journal: International Journal of Educational Technology in Higher Education
+  publisher: Springer
+  tag: *id003
+  title: Human Interaction with Gen AI Across Learning and Teaching Processes in Higher Education
+  abstract_deadline: ''
+  fullpaper_deadline: 31 May 2026
+  fullpaper_deadline_sort: '2026-05-31'
+  editors: ''
+  link: https://link.springer.com/collections/iddjabccja
+  description: This special issue aims to explore the nature of human interaction with Generative AI in the context of higher
+    education - an area that has received limited attention despite the growing discourse on Gen AI ...
+- journal: British Journal of Educational Technology
+  publisher: Wiley
+  tag: *id001
+  title: Building Inclusive Generative AI for Learners with Special Educational Needs
+  abstract_deadline: 2 February 2026
+  fullpaper_deadline: 1 June 2026
+  fullpaper_deadline_sort: '2026-06-01'
+  editors: Dr. Skye Zhao, The University of Manchester, UK; Professor Zhongling Pi, Shaanxi Normal University, China; Dr.
+    Arif Nurwidyantoro, Universitas Gadjah Mada, Indonesia; Professor Wenli Chen, Nanyang Technological University, Singapore
+  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/gen-ai-learners-special-educational-needs
+  description: ''
+- journal: Computer Assisted Language Learning
+  publisher: Taylor & Francis
+  tag: *id004
+  title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
+  abstract_deadline: 31 October 2025
+  fullpaper_deadline: 30 June 2026
+  fullpaper_deadline_sort: '2026-06-30'
+  editors: Yijen Wang (Waseda University); Glenn Stockwell (The Education University of Hong Kong); Wen-Chi Vivian Wu (National
+    Chung Hsing University); Mirjam Hauck (The Open University)
+  link: https://think.taylorandfrancis.com/special_issues/beyond-automation-ai-driven-language-assessment-in-call-through-pedagogical-ethical-and-ai-literacy-lenses/
+  description: ''
