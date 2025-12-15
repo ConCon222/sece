@@ -22,16 +22,6 @@ JOURNALS = [
         "tag": ["educational technology", "higher education"]
     },
     {
-        "name": "Educational Psychologist",
-        "url": "https://www.tandfonline.com/journals/hedp20",
-        "tag": ["educational psychology"]
-    },
-    {
-        "name": "Educational Research Review",
-        "url": "https://www.sciencedirect.com/journal/educational-research-review/about/call-for-papers",
-        "tag": ["review", "general education"]
-    },
-    {
         "name": "Computers & Education",
         "url": "https://www.sciencedirect.com/journal/computers-and-education/about/call-for-papers",
         "tag": ["educational technology"]
@@ -42,10 +32,20 @@ JOURNALS = [
         "tag": ["educational technology"]
     },
     {
-        "name": "International Journal of STEM Education",
-        "url": "https://link.springer.com/journal/40594/collections?filter=Open",
-        "tag": ["educational technology", "STEM education"]
+        "name": "Computer Assisted Language Learning",
+        "url": "https://www.tandfonline.com/journals/ncal20",
+        "tag": ["language learning", "educational technology"]
     },
+    {
+        "name": "ReCALL",
+        "url": "https://www.cambridge.org/core/journals/recall/announcements/call-for-papers",
+        "tag": ["language learning", "educational technology"]
+    },
+        {
+        "name": "Journal of Computer Assisted Learning",
+        "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
+        "tag": ["educational technology"]
+    }
     # ... 添加其他期刊
 ]
 
