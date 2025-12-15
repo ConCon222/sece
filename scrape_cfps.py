@@ -32,15 +32,20 @@ JOURNALS = [
         "tag": ["educational technology"]
     },
     {
-        "name": "Review of Educational Research",
-        "url": "https://journals.sagepub.com/home/rer",
-        "tag": ["review", "general education"]
+        "name": "Computer Assisted Language Learning",
+        "url": "https://www.tandfonline.com/journals/ncal20",
+        "tag": ["language learning", "educational technology"]
     },
     {
-        "name": "Educational Psychologist",
-        "url": "https://www.tandfonline.com/journals/hedp20",
-        "tag": ["educational psychology"]
+        "name": "ReCALL",
+        "url": "https://www.cambridge.org/core/journals/recall/announcements/call-for-papers",
+        "tag": ["language learning", "educational technology"]
     },
+        {
+        "name": "Journal of Computer Assisted Learning",
+        "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
+        "tag": ["educational technology"]
+    }
     # ... 请把剩余的期刊列表粘贴回这里 ...
 ]
 
