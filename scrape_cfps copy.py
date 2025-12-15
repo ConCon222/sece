@@ -1,20 +1,18 @@
 import re
 import time
-import os
+import os  # 新增
 import yaml
-import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta # 新增
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 # === 核心库 ===
-from curl_cffi import requests
-from DrissionPage import ChromiumPage, ChromiumOptions
+from curl_cffi import requests  # 快：用于 Elsevier, Springer, Cambridge Core
+from DrissionPage import ChromiumPage, ChromiumOptions  # 稳：用于 Taylor & Francis, Wiley, SAGE
 
 # ==========================================
 # ⚙️ 配置区域
 # ==========================================
-# 【请在此处填入你完整的 JOURNALS 列表】
 JOURNALS = [
     {
         "name": "International Journal of Educational Technology in Higher Education",
@@ -22,9 +20,24 @@ JOURNALS = [
         "tag": ["educational technology", "higher education"]
     },
     {
+        "name": "Educational Psychologist",
+        "url": "https://www.tandfonline.com/journals/hedp20",
+        "tag": ["educational psychology"]
+    },
+    {
+        "name": "Educational Research Review",
+        "url": "https://www.sciencedirect.com/journal/educational-research-review/about/call-for-papers",
+        "tag": ["review", "general education"]
+    },
+    {
         "name": "Computers & Education",
         "url": "https://www.sciencedirect.com/journal/computers-and-education/about/call-for-papers",
         "tag": ["educational technology"]
+    },
+    {
+        "name": "Studies in Science Education",
+        "url": "https://www.tandfonline.com/journals/rsse20",
+        "tag": ["review"]
     },
     {
         "name": "British Journal of Educational Technology",
@@ -32,20 +45,149 @@ JOURNALS = [
         "tag": ["educational technology"]
     },
     {
+        "name": "International Journal of STEM Education",
+        "url": "https://link.springer.com/journal/40594/collections?filter=Open",
+        "tag": ["educational technology", "STEM education"]
+    },
+    {
         "name": "Review of Educational Research",
         "url": "https://journals.sagepub.com/home/rer",
         "tag": ["review", "general education"]
     },
     {
-        "name": "Educational Psychologist",
-        "url": "https://www.tandfonline.com/journals/hedp20",
-        "tag": ["educational psychology"]
+        "name": "International Journal of Management Education",
+        "url": "https://www.sciencedirect.com/journal/the-international-journal-of-management-education/about/call-for-papers",
+        "tag": ["educational management", "higher education"]
     },
-    # ... 请把剩余的期刊列表粘贴回这里 ...
+    {
+        "name": "The Internet and Higher Education",
+        "url": "https://www.sciencedirect.com/journal/the-internet-and-higher-education/about/call-for-papers",
+        "tag": ["higher education", "educational technology"]
+    },
+    {
+        "name": "Computer Assisted Language Learning",
+        "url": "https://www.tandfonline.com/journals/ncal20",
+        "tag": ["language learning", "educational technology"]
+    },
+    {
+        "name": "Educational Technology & Society",
+        "url": "https://www.j-ets.net",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "ReCALL",
+        "url": "https://www.cambridge.org/core/journals/recall/announcements/call-for-papers",
+        "tag": ["language learning", "educational technology"]
+    },
+    {
+        "name": "International Journal of Computer-Supported Collaborative Learning",
+        "url": "https://link.springer.com/journal/11412/collections?filter=Open",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "System",
+        "url": "https://www.sciencedirect.com/journal/system/about/call-for-papers",
+        "tag": ["language learning", "educational technology"]
+    },
+    {
+        "name": "Assessing Writing",
+        "url": "https://www.sciencedirect.com/journal/assessing-writing/about/call-for-papers",
+        "tag": ["language learning"]
+    },
+    {
+        "name": "Journal of Science Education and Technology",
+        "url": "https://link.springer.com/journal/10956/collections?filter=Open",
+        "tag": ["educational technology", "STEM education"]
+    },
+    {
+        "name": "Education and Information Technologies",
+        "url": "https://link.springer.com/journal/10639/collections?filter=Open",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Interactive Learning Environments",
+        "url": "https://www.tandfonline.com/journals/nile20",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Academy of Management Learning & Education",
+        "url": "https://journals.aom.org/journal/amle",
+        "tag": ["educational management", "higher education"]
+    },
+    {
+        "name": "Language Teaching",
+        "url": "https://www.cambridge.org/core/journals/language-teaching/announcements/call-for-papers",
+        "tag": ["language learning"]
+    },
+    {
+        "name": "Journal of Research on Technology in Education",
+        "url": "https://www.tandfonline.com/journals/ujrt20",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Innovations in Education and Teaching International",
+        "url": "https://www.tandfonline.com/journals/riie20",
+        "tag": ["general education", "higher education"]
+    },
+    {
+        "name": "Journal of Computing in Higher Education",
+        "url": "https://www.springer.com/journal/12528/collections?filter=Open",
+        "tag": ["higher education", "educational technology"]
+    },
+    {
+        "name": "Educational Researcher",
+        "url": "https://journals.sagepub.com/home/edr",
+        "tag": ["general education", "educational policy"]
+    },
+    {
+        "name": "Journal of Educational Computing Research",
+        "url": "https://journals.sagepub.com/home/jec",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Learning and Instruction",
+        "url": "https://www.sciencedirect.com/journal/learning-and-instruction/about/call-for-papers",
+        "tag": ["general education"]
+    },
+    {
+        "name": "IEEE Transactions on Learning Technologies",
+        "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4620076",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Metacognition and Learning",
+        "url": "https://www.springer.com/journal/11409/collections?filter=Open",
+        "tag": ["educational psychology", "educational technology"]
+    },
+    {
+        "name": "Journal of Legal Education",
+        "url": "https://jle.aals.org/",
+        "tag": ["educational policy", "legal education"]
+    },
+    {
+        "name": "Asia-Pacific Education Researcher",
+        "url": "https://www.springer.com/journal/40299/collections?filter=Open",
+        "tag": ["general education", "educational policy"]
+    },
+    {
+        "name": "Innovation in Language Learning and Teaching",
+        "url": "https://www.tandfonline.com/journals/rill20",
+        "tag": ["language learning", "educational technology"]
+    },
+    {
+        "name": "Journal of Computer Assisted Learning",
+        "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
+        "tag": ["educational technology"]
+    }
 ]
 
+# 修改：适配 al-folio 目录结构，自动存入 _data 文件夹
+# 请确保你的项目根目录下有 _data 文件夹，或者脚本会自动创建
 OUTPUT_YML_PATH = "_data/cfps.yml"
 
+# ==========================================
+# 月份映射
+# ==========================================
 MONTH_MAP = {
     'jan': 1, 'january': 1, 'feb': 2, 'february': 2,
     'mar': 3, 'march': 3, 'apr': 4, 'april': 4, 'may': 5,
@@ -53,6 +195,7 @@ MONTH_MAP = {
     'sep': 9, 'sept': 9, 'september': 9, 'oct': 10, 'october': 10,
     'nov': 11, 'november': 11, 'dec': 12, 'december': 12,
 }
+
 
 class JournalCFPScraper:
     def __init__(self):
@@ -66,32 +209,21 @@ class JournalCFPScraper:
             r"(\d{1,2})(?:st|nd|rd|th)?\s+(\w+)\s+(\d{4})",
             re.I,
         )
-        
-        # === 唯一修改点：增强 DrissionPage 配置 ===
-        print("⚙️ 初始化浏览器组件 (增强隐身模式)...")
+
+        print("⚙️ 初始化浏览器组件 (无头模式)...")
         co = ChromiumOptions()
         co.headless(True)
         co.set_argument("--no-sandbox")
         co.set_argument("--disable-gpu")
-        
-        # 1. 核心：移除自动化标记 (对抗 Cloudflare 关键)
-        co.set_argument("--disable-blink-features=AutomationControlled") 
-        co.set_argument("--disable-infobars")
-        
-        # 2. 核心：固定 User-Agent (模拟 Win10 Chrome 120)
-        co.set_user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
-        
-        # 3. 核心：大窗口 (防止因为无头默认小窗口被判定为爬虫)
-        co.set_argument("--window-size=1920,1080")
-        co.set_argument("--start-maximized")
-        co.set_argument("--lang=en-US")
-        
+        co.set_argument("--ignore-certificate-errors")
+        co.set_user_agent(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            )
+        )
         self.browser = ChromiumPage(co)
-        # 4. 二次防御：JS 层面移除 webdriver 属性
-        self.browser.run_js("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-
-        # Session 用于快速抓取 (Elsevier/Springer)
-        self.session = requests.Session()
 
     def __del__(self):
         try:
@@ -103,52 +235,80 @@ class JournalCFPScraper:
     # 通用工具
     # --------------------------
     def clean_text(self, text):
-        if not text: return "N/A"
+        if not text:
+            return "N/A"
         return re.sub(r"\s+", " ", str(text)).strip()
 
     def normalize_for_date_extraction(self, text):
-        if not text: return ""
+        if not text:
+            return ""
         text = re.sub(r'<[^>]+>', '', str(text))
         text = re.sub(r'(\d)(st|nd|rd|th)\b', r'\1', text, flags=re.I)
         text = re.sub(r'\s+', ' ', text).strip()
         return text
 
     def extract_date(self, text):
-        if not text: return None
+        if not text:
+            return None
         normalized = self.normalize_for_date_extraction(text)
         m = self.date_pattern.search(normalized)
-        if m: return self.clean_text(m.group(0))
+        if m:
+            return self.clean_text(m.group(0))
         return None
 
     def parse_date_to_sort_key(self, date_str):
+        """
+        修改：如果解析失败或为空，直接返回 '9999-99-99'
+        """
         default_date = "9999-99-99"
-        if not date_str or date_str in {"N/A", "未找到日期", ""}: return default_date
+        
+        if not date_str or date_str in {"N/A", "未找到日期", ""}:
+            return default_date
+
         normalized = self.normalize_for_date_extraction(date_str)
+
         try:
+            # 1. ISO格式: YYYY-MM-DD
             m = re.match(r'(\d{4})-(\d{2})-(\d{2})', normalized)
-            if m: return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+            if m:
+                return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
+
+            # 2. DD Month YYYY
             m = re.match(r'(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', normalized)
             if m:
-                day, month_str, year = int(m.group(1)), m.group(2).lower(), m.group(3)
+                day = int(m.group(1))
+                month_str = m.group(2).lower()
+                year = m.group(3)
                 month = MONTH_MAP.get(month_str[:3], 0)
-                if month: return f"{year}-{month:02d}-{day:02d}"
+                if month:
+                    return f"{year}-{month:02d}-{day:02d}"
+
+            # 3. Month DD, YYYY
             m = re.match(r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})', normalized)
             if m:
-                month_str, day, year = m.group(1).lower(), int(m.group(2)), m.group(3)
+                month_str = m.group(1).lower()
+                day = int(m.group(2))
+                year = m.group(3)
                 month = MONTH_MAP.get(month_str[:3], 0)
-                if month: return f"{year}-{month:02d}-{day:02d}"
+                if month:
+                    return f"{year}-{month:02d}-{day:02d}"
+
+            # 4. Range: 取最后一个日期
             dates_found = re.findall(r'(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', normalized)
             if dates_found:
                 day, month_str, year = dates_found[-1]
                 month = MONTH_MAP.get(month_str.lower()[:3], 0)
-                if month: return f"{year}-{month:02d}-{int(day):02d}"
-        except Exception: pass
+                if month:
+                    return f"{year}-{month:02d}-{int(day):02d}"
+        except Exception:
+            pass
+
         return default_date
 
     def fetch_page_fast(self, url, timeout=30):
         try:
             print(f"🚀 [HTTP] 正在访问: {url}")
-            resp = self.session.get(
+            resp = requests.get(
                 url,
                 impersonate="chrome120",
                 timeout=timeout,
@@ -165,7 +325,7 @@ class JournalCFPScraper:
         return None
 
     # --------------------------
-    # Browser 工具 (增强版：加入 Cloudflare 等待)
+    # Browser 工具 (保持不变)
     # --------------------------
     def try_accept_cookies(self):
         selectors = ["css:#onetrust-accept-btn-handler", "text:Accept All Cookies", "text:Accept all", "text:Accept", "text:I Agree"]
@@ -179,42 +339,29 @@ class JournalCFPScraper:
             except Exception:
                 pass
 
-    def get_html_browser_safe(self, url, wait=5, scroll_rounds=2):
-        print(f"🌐 [Drission] GET {url}")
-        try:
-            self.browser.get(url)
-            
-            # === 新增：Cloudflare 检测与等待 ===
-            title = self.browser.title.lower()
-            if "just a moment" in title or "security check" in title or "cloudflare" in title:
-                print("   🛡️ 检测到 Cloudflare 盾，增加等待时间 (15s)...")
-                time.sleep(15) # 增加等待让 JS 计算完成
-            else:
-                time.sleep(wait) # 正常等待
-            
-            # 模拟一点鼠标活动
+    def scroll_to_bottom(self, rounds=3, pause=1.0):
+        for _ in range(rounds):
             try:
-                self.browser.run_js("window.scrollTo(0, 300)")
-                time.sleep(0.5)
-            except: pass
+                self.browser.scroll.to_bottom()
+            except Exception:
+                try:
+                    self.browser.run_js("window.scrollTo(0, document.body.scrollHeight);")
+                except Exception:
+                    pass
+            time.sleep(pause)
 
-            self.try_accept_cookies()
-            time.sleep(0.8)
-            
-            if scroll_rounds > 0:
-                for _ in range(scroll_rounds):
-                    try:
-                        self.browser.scroll.to_bottom()
-                        time.sleep(0.8)
-                    except: pass
-            
-            return self.browser.html
-        except Exception as e:
-            print(f"   ❌ 浏览器加载异常: {e}")
-            return None
+    def get_html_browser(self, url, wait=2, scroll_rounds=2):
+        print(f"🌐 [Browser] GET {url}")
+        self.browser.get(url)
+        time.sleep(wait)
+        self.try_accept_cookies()
+        time.sleep(0.8)
+        if scroll_rounds > 0:
+            self.scroll_to_bottom(rounds=scroll_rounds, pause=0.8)
+        return self.browser.html
 
     # ==========================================
-    # 解析器部分 (完全保留你的原始逻辑)
+    # 解析器部分 (保持原样，仅做缩进调整确认)
     # ==========================================
     def _extract_text_clean(self, element):
         if not element: return ""
@@ -223,7 +370,6 @@ class JournalCFPScraper:
         temp_soup = BeautifulSoup(html_str, 'lxml')
         return self.clean_text(temp_soup.get_text(' ', strip=True))
 
-    # --- Wiley (原封不动) ---
     def _parse_wiley_dst_listing(self, soup, journal_url):
         wrap = soup.select_one("div.DST-CFP-listing-wrap")
         if not wrap: return []
@@ -279,11 +425,9 @@ class JournalCFPScraper:
         return results
 
     def parse_wiley_browser(self, journal_url):
-        # 使用 safe 方法获取 HTML，后续逻辑不变
+        print(f"🌐 [Browser] Wiley: {journal_url}")
         try:
-            # 增加 wait 时间
-            html = self.get_html_browser_safe(journal_url, wait=8, scroll_rounds=3)
-            if not html: return []
+            html = self.get_html_browser(journal_url, wait=3, scroll_rounds=2)
             soup = BeautifulSoup(html, "lxml")
             results = self._parse_wiley_dst_listing(soup, journal_url) + self._parse_wiley_h4_blocks(soup, journal_url)
             uniq = {}
@@ -293,7 +437,6 @@ class JournalCFPScraper:
             print(f"❌ Wiley 异常: {e}")
             return []
 
-    # --- T&F (原封不动，只增加 Tab 操作的等待) ---
     def _tf_parse_detail_page_html(self, html, page_url):
         soup = BeautifulSoup(html, "lxml")
         title = "未知标题"
@@ -328,56 +471,38 @@ class JournalCFPScraper:
         return {"title": title, "abstract_deadline": abstract_deadline, "fullpaper_deadline": fullpaper_deadline, "editors": editors, "desc": desc, "link": page_url}
 
     def parse_taylor_francis(self, journal_url):
+        print(f"🌐 [Browser] T&F: {journal_url}")
         results = []
         try:
-            # 使用 safe 方法进入主页，等待更久以加载 JS
-            html = self.get_html_browser_safe(journal_url, wait=10, scroll_rounds=2)
-            if not html: return []
-            
+            html = self.get_html_browser(journal_url, wait=6, scroll_rounds=1)
             soup = BeautifulSoup(html, "lxml")
             target_links = []
             cfp_container = soup.select_one(".cfpContent") or soup
             for a in cfp_container.select("a[href]"):
                 if "think.taylorandfrancis.com" in a.get("href", ""): target_links.append(a.get("href"))
             
-            # 使用列表去重
-            unique_links = list(dict.fromkeys(target_links))
-            print(f"   🔎 T&F 发现 {len(unique_links)} 个详情页链接，准备逐个访问...")
-
-            for link_url in unique_links:
+            for link_url in list(dict.fromkeys(target_links)):
+                tab = self.browser.new_tab(link_url)
                 try:
-                    # 使用 DrissionPage 的 new_tab
-                    tab = self.browser.new_tab(link_url)
-                    # 增加等待时间，防止并发太快被封
-                    try: tab.wait.doc_loaded(timeout=15)
+                    try: tab.wait.doc_loaded(timeout=12)
                     except: pass
-                    
-                    time.sleep(5) # 【关键】增加 TAB 间的等待
-                    
+                    time.sleep(2.5)
                     try: 
                         btn = tab.ele("css:#onetrust-accept-btn-handler", timeout=1)
                         if btn: btn.click()
                     except: pass
-                    
                     results.append(self._tf_parse_detail_page_html(tab.html, link_url))
-                except Exception as e: 
-                    print(f"   ⚠️ T&F 子页面加载失败: {e}")
-                finally: 
-                    try: tab.close()
-                    except: pass
-        except Exception as e:
-            print(f"❌ T&F 异常: {e}")
-            
+                except: pass
+                finally: tab.close()
+        except Exception: pass
         uniq = {}
         for r in results: uniq[(r.get("title"), r.get("link"))] = r
         return list(uniq.values())
 
-    # --- SAGE (原封不动) ---
     def parse_sage_browser(self, journal_url):
+        print(f"🌐 [Browser] SAGE: {journal_url}")
         try:
-            html = self.get_html_browser_safe(journal_url, wait=8, scroll_rounds=3)
-            if not html: return []
-            
+            html = self.get_html_browser(journal_url, wait=2, scroll_rounds=3)
             soup = BeautifulSoup(html, "lxml")
             results = []
             for card in soup.select("div.marketing-spot"):
@@ -387,6 +512,7 @@ class JournalCFPScraper:
                 link = urljoin(journal_url, a["href"]) if a else "N/A"
                 if "closed" in desc.lower() or title == "N/A": continue
                 
+                # 简单过滤广告
                 if any(x in title.lower() or x in desc.lower() for x in ["why publish", "reviewer resources", "discipline hubs"]): continue
                 if not ("call" in title.lower() or "special issue" in title.lower() or "submit" in desc.lower()): continue
 
@@ -400,7 +526,6 @@ class JournalCFPScraper:
             print(f"❌ SAGE 异常: {e}")
             return []
 
-    # --- 其他 (原封不动) ---
     def parse_elsevier(self, html, base_url):
         soup = BeautifulSoup(html, "lxml")
         results = []
@@ -459,7 +584,7 @@ class JournalCFPScraper:
         return list(uniq.values())
 
     # ==========================================
-    # 数据输出与合并
+    # 数据规范化 & 输出 (核心逻辑修改)
     # ==========================================
     def infer_publisher(self, journal_url, journal_name=""):
         u, n = (journal_url or "").lower(), (journal_name or "").lower()
@@ -477,16 +602,26 @@ class JournalCFPScraper:
 
     def normalize_item_for_yaml(self, journal, item):
         fullpaper_deadline = self._empty_if_na(item.get("fullpaper_deadline", "") or item.get("deadline", ""))
-        fullpaper_deadline_sort = self.parse_date_to_sort_key(fullpaper_deadline)
         
+        # 即使这里是空字符串，parse_date_to_sort_key 也会返回 '9999-99-99'
+        fullpaper_deadline_sort = self.parse_date_to_sort_key(fullpaper_deadline)
+
+        # 获取 raw_tag，如果是字符串就转成列表，如果是列表就保持原样
         raw_tag = journal.get("tag", [])
         if isinstance(raw_tag, str):
-            tag_out = [raw_tag] if raw_tag else []
+            # 如果配置的是 "tag": "A"，转为 ["A"]
+            # 如果配置的是 "tag": "A, B"，转为 ["A", "B"] (可选，看你喜好，这里简单处理)
+            if raw_tag:
+                tag_out = [raw_tag] 
+            else:
+                tag_out = []
         elif isinstance(raw_tag, list):
+            # 如果配置的是 "tag": ["A", "B"]，保持原样
             tag_out = raw_tag
         else:
             tag_out = []
-
+        # === 修改结束 ===
+        
         return {
             "journal": self._empty_if_na(journal.get("name")),
             "publisher": journal.get("publisher") or self.infer_publisher(journal.get("url"), journal.get("name")),
@@ -500,8 +635,19 @@ class JournalCFPScraper:
             "description": self._empty_if_na(item.get("desc")),
         }
 
+    def export_to_yaml(self, records, path):
+        # 确保目录存在
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            yaml.safe_dump(records, f, allow_unicode=True, sort_keys=False, default_flow_style=False, width=120)
+
+    # ==========================================
+    # 核心修改：合并旧数据与新数据，并清洗过期数据
+    # ==========================================
     def merge_and_clean_records(self, new_records, file_path):
         existing_records = []
+        
+        # 1. 读取旧数据
         if os.path.exists(file_path):
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
@@ -510,77 +656,78 @@ class JournalCFPScraper:
             except Exception as e:
                 print(f"⚠️ 读取旧 YAML 失败: {e}")
 
+        # 2. 合并：使用 (Title, Link) 作为唯一键
+        # 只要 Title 和 Link 相同，新数据会覆盖旧数据（更新 deadline 等信息）
+        # 如果新数据这次没爬到（new_records 里没有），旧数据保留在 merged_map 中
         merged_map = {}
+        
+        # 先放入旧数据
         for item in existing_records:
             key = (item.get("title"), item.get("link"))
             merged_map[key] = item
             
+        # 再放入新数据 (覆盖旧的)
         for item in new_records:
             key = (item.get("title"), item.get("link"))
             merged_map[key] = item
 
+        # 3. 清洗过期数据
         final_list = []
         today = datetime.now().date()
-        expire_threshold = today - timedelta(days=10)
+        expire_threshold = today - timedelta(days=10) # 允许过期10天
         
+        print(f"🧹 执行清理: 剔除 {expire_threshold} 之前截止的条目...")
+
         for item in merged_map.values():
             sort_date_str = item.get("fullpaper_deadline_sort")
+            
+            # 如果是 9999-99-99，说明是“待定”或“长期”，必须保留
             if sort_date_str == '9999-99-99':
                 final_list.append(item)
                 continue
+                
             try:
                 deadline_date = datetime.strptime(sort_date_str, "%Y-%m-%d").date()
                 if deadline_date >= expire_threshold:
                     final_list.append(item)
+                else:
+                    # print(f"   🗑️ 移除过期: {item.get('title')} ({sort_date_str})")
+                    pass
             except ValueError:
+                # 解析不了日期的，保留比较安全
                 final_list.append(item)
 
+        # 4. 排序：日期越早越靠前 (9999会排在最后)
         final_list.sort(key=lambda x: x.get("fullpaper_deadline_sort") or "9999-99-99")
+        
         return final_list
 
     def run(self, output_yml_path=OUTPUT_YML_PATH):
         new_scraped_records = []
-        print("🕷️ 开始爬取任务 (Mix Mode: Enhanced Drission + Requests)...")
+        print("🕷️ 开始爬取任务...")
 
         for journal in JOURNALS:
             j_name = journal["name"]
             j_url = journal["url"]
-            url_l = j_url.lower()
             data = []
             
             try:
+                url_l = j_url.lower()
                 if "tandfonline.com" in url_l:
-                    # 使用增强的 Browser + 原有 Tab 逻辑
                     data = self.parse_taylor_francis(j_url)
-                
-                elif "wiley.com" in url_l or "onlinelibrary.wiley" in url_l:
-                    # 使用增强的 Browser + 原有 Soup 解析
+                elif "wiley.com" in url_l:
                     data = self.parse_wiley_browser(j_url)
-                
                 elif "sagepub.com" in url_l:
-                    # 使用增强的 Browser + 原有解析
                     data = self.parse_sage_browser(j_url)
-                
-                elif "cambridge.org" in url_l:
-                    # 保持 curl_cffi 不变
+                elif "cambridge.org/core" in url_l:
                     html = self.fetch_page_fast(j_url)
                     if html: data = self.parse_cambridge_core_call_for_papers(html, j_url)
-                
-                elif "springer.com" in url_l:
-                    # 保持 curl_cffi 不变
-                    html = self.fetch_page_fast(j_url)
-                    if html: data = self.parse_springer(html, j_url)
-                
-                elif "sciencedirect.com" in url_l:
-                    # 保持 curl_cffi 不变
-                    html = self.fetch_page_fast(j_url)
-                    if html: data = self.parse_elsevier(html, j_url)
-                
                 else:
-                    # 兜底
                     html = self.fetch_page_fast(j_url)
-                    print(f"   ⚠️ 通用出版社 (未特定解析): {j_name}")
-
+                    if html:
+                        if "springer.com" in url_l: data = self.parse_springer(html, j_url)
+                        elif "sciencedirect.com" in url_l: data = self.parse_elsevier(html, j_url)
+                
                 if data:
                     print(f"   ✅ {j_name}: 抓取成功 {len(data)} 条")
                     for item in data:
@@ -588,18 +735,16 @@ class JournalCFPScraper:
                         if rec["title"] or rec["link"]:
                             new_scraped_records.append(rec)
                 else:
-                    print(f"   ⚠️ {j_name}: 页面已获取但无数据/保留历史")
+                    print(f"   ⚠️ {j_name}: 未抓取到数据 (将保留历史数据)")
 
             except Exception as e:
-                print(f"   ❌ {j_name} 处理异常: {e}")
+                print(f"   ❌ {j_name} 爬取失败: {e} (将保留历史数据)")
 
+        # 调用合并与清理逻辑
         final_records = self.merge_and_clean_records(new_scraped_records, output_yml_path)
-        
-        os.makedirs(os.path.dirname(output_yml_path), exist_ok=True)
-        with open(output_yml_path, "w", encoding="utf-8") as f:
-            yaml.safe_dump(final_records, f, allow_unicode=True, sort_keys=False, default_flow_style=False, width=120)
-        
-        print(f"🎉 任务结束! 总条目: {len(final_records)}")
+
+        self.export_to_yaml(final_records, output_yml_path)
+        print(f"🎉 处理完成! 最终写入: {output_yml_path} / 总记录数: {len(final_records)}")
 
 if __name__ == "__main__":
     scraper = JournalCFPScraper()
