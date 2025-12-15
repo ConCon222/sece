@@ -159,5 +159,173 @@
         "name": "Journal of Computer Assisted Learning",
         "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
         "tag": ["educational technology"]
+    },
+    {
+        "name": "Higher Education",
+        "url": "https://link.springer.com/journal/10734/collections?filter=Open",
+        "tag": ["Higher Education"]
+    },
+    {
+        "name": "Thinking Skills and Creativity",
+        "url": "https://www.sciencedirect.com/journal/thinking-skills-and-creativity/about/call-for-papers",
+        "tag": ["Educational Psychology", "Educational Technology"]
+    },
+    {
+        "name": "Journal of Research in Science Teaching",
+        "url": "https://onlinelibrary.wiley.com/page/journal/10982736/homepage/call-for-papers",
+        "tag": ["Subject Education", "Science Education"]
+    },
+    {
+        "name": "Educational Technology Research and Development",
+        "url": "https://link.springer.com/journal/11423/collections?filter=Open",
+        "tag": ["Educational Technology"]
+    },
+    { 
+        "name": "Australasian Journal of Educational Technology",
+        "url": "https://ajet.org.au/index.php/AJET",
+        "tag": ["Educational Technology"]
+    },
+    {
+        "name": "Language Learning",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14679922/homepage/call-for-papers",
+        "tag": ["Language Education & Acquisition"]
+    },
+    {
+        "name": "Journal of Hospitality, Leisure, Sport & Tourism Education",
+        "url": "https://www.sciencedirect.com/journal/journal-of-hospitality-leisure-sport-and-tourism-education/about/call-for-papers",
+        "tag": ["Vocational & Continuing Education", "Higher Education"]
+    },
+    {
+        "name": "Reading Research Quarterly",
+        "url": "https://ila.onlinelibrary.wiley.com/page/journal/19362722/homepage/call-for-papers",
+        "tag": ["Language Education & Acquisition", "Early Childhood Education"]
+    },
+    {
+        "name": "Journal of Teacher Education",
+        "url": "https://journals.sagepub.com/home/jte",
+        "tag": ["Teacher Education & Development"]
+    },
+    {
+        "name": "The Modern Language Journal",
+        "url": "https://onlinelibrary.wiley.com/page/journal/15404781/homepage/call-for-papers",
+        "tag": ["Language Education & Acquisition"]
+    },
+    {
+        "name": "Teaching and Teacher Education",
+        "url": "https://www.sciencedirect.com/journal/teaching-and-teacher-education/about/call-for-papers",
+        "tag": ["Teacher Education & Development"]
+    },
+    {
+        "name": "TESOL Quarterly",
+        "url": "https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers",
+        "tag": ["Language Education & Acquisition"]
+    },
+    {
+        "name": "Journal of the Learning Sciences",
+        "url": "https://www.tandfonline.com/journals/hlns20",
+        "tag": ["Educational Psychology", "Educational Technology"]
+    },
+    {
+        "name": "Assessment & Evaluation in Higher Education",
+        "url": "https://www.tandfonline.com/journals/caeh20",
+        "tag": ["Higher Education", "Educational Management & Leadership"]
+    },
+    {
+        "name": "Language Teaching Research",
+        "url": "https://journals.sagepub.com/home/ltr",
+        "tag": ["Language Education & Acquisition"]
+    },
+    {
+        "name": "Medical Education Online",
+        "url": "https://www.tandfonline.com/journals/zmeo20",
+        "tag": ["Medical Education"]
+    },
+    {
+        "name": "Comparative Education",
+        "url": "https://www.tandfonline.com/journals/cced20",
+        "tag": ["Education Policy & Social Issues", "Comparative Education"]
+    },
+    {
+        "name": "Educational Administration Quarterly",
+        "url": "https://journals.sagepub.com/home/eaq",
+        "tag": ["Educational Management & Leadership"]
+    },
+    {
+        "name": "American Educational Research Journal",
+        "url": "https://journals.sagepub.com/home/aer",
+        "tag": ["General Education"]
+    },
+    {
+        "name": "AERA Open",
+        "url": "https://journals.sagepub.com/home/ero",
+        "tag": ["General Education"]
+    },
+    {
+        "name": "European Journal of Education",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers",
+        "tag": ["General Education", "Education Policy & Social Issues"]
+    },
+    {
+        "name": "Journal of English for Academic Purposes",
+        "url": "https://www.sciencedirect.com/journal/journal-of-english-for-academic-purposes/about/call-for-papers",
+        "tag": ["Language Education & Acquisition", "Higher Education"]
+    },
+    {
+        "name": "Science Education",
+        "url": "https://onlinelibrary.wiley.com/page/journal/1098237x/call-for-papers",
+        "tag": ["Subject Education", "Science Education"]
+    },
+    {
+        "name": "Educational Review",
+        "url": "https://www.tandfonline.com/journals/cedr20",
+        "tag": ["General Education"]
+    },
+    {
+        "name": "Journal of Engineering Education",
+        "url": "https://onlinelibrary.wiley.com/page/journal/21689830/call-for-papers",
+        "tag": ["Subject Education", "Engineering Education"]
+    },
+    {
+        "name": "Revista de Psicodidáctica",
+        "url": "https://www.sciencedirect.com/journal/revista-de-psicodidactica/about/call-for-papers",
+        "tag": ["Educational Psychology", "Teacher Education & Development"]
+    },
+    {
+        "name": "Educational Management Administration & Leadership",
+        "url": "https://journals.sagepub.com/home/ema",
+        "tag": ["Educational Management & Leadership"]
+    },
+    {
+        "name": "European Physical Education Review",
+        "url": "https://journals.sagepub.com/home/epe",
+        "tag": ["Subject Education", "Physical Education"]
+    },
+    {
+        "name": "Advances in Health Sciences Education",
+        "url": "https://link.springer.com/journal/10459/collections?filter=Open ",
+        "tag": ["Medical Education"]
+    },
+    {
+        "name": "Active Learning in Higher Education",
+        "url": "https://journals.sagepub.com/home/alh",
+        "tag": ["Higher Education", "Educational Technology"]
+    },
+    {
+        "name": "Minerva",
+        "url": "https://link.springer.com/journal/11024/collections?filter=Open",
+        "tag": ["Education Policy & Social Issues", "Higher Education"]
+    },
+    {
+        "name": "Studies in Higher Education",
+        "url": "https://www.tandfonline.com/journals/cshe20",
+        "tag": ["Higher Education"]
+    },
+    {
+        "name": "BMC Medical Education",
+        "url": "https://link.springer.com/journal/12909/collections?filter=Open",
+        "tag": ["Medical Education"]
     }
+
+
+
 ]
