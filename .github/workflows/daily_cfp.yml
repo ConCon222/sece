@@ -27,14 +27,14 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install playwright playwright-stealth curl_cffi beautifulsoup4 pyyaml lxml
+          pip install playwright playwright-stealth==1.0.6 curl_cffi beautifulsoup4 pyyaml lxml
           playwright install chromium
           playwright install-deps
 
       - name: Run scraper
         run: |
           # 随机延迟 0-60 秒，避免固定时间被识别
-          sleep $((RANDOM % 60))
+          sleep $((RANDOM % 10))
           python scrape_cfps.py
 
       - name: Commit and push changes
