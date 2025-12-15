@@ -13,6 +13,12 @@ jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
 
+    services:
+      flaresolverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,25 +28,42 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install playwright playwright-stealth==1.0.6 curl_cffi beautifulsoup4 pyyaml lxml
-          playwright install chromium
-          playwright install-deps
+          pip install curl-cffi DrissionPage beautifulsoup4 pyyaml lxml
 
-      - name: Run scraper
+      - name: Wait for FlareSolverr
         run: |
-          # 随机延迟 0-60 秒，避免固定时间被识别
-          sleep $((RANDOM % 10))
-          python scrape_cfps.py
+          echo "等待 FlareSolverr 启动..."
+          for i in {1..30}; do
+            curl -s http://localhost:8191/health && break
+            sleep 2
+          done
 
-      - name: Commit and push changes
+      - name: Run Scraper
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          # 确保脚本有执行权限（可选）
+          # 假设你的脚本在根目录，且输出到 _data/cfps.yml
+          # 你需要根据实际路径修改下面的路径
+          python scrape_cfps.py 
+        env:
+          # 如果你的脚本里写死了路径，这里不需要改；
+          # 建议在脚本里把 OUTPUT_YML_PATH 改为 relative path 如 '_data/cfps.yml'
+          PYTHONUNBUFFERED: 1
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add _data/cfps.yml
-          git diff --staged --quiet || git commit -m "Update CFPs data $(date +'%Y-%m-%d %H:%M')"
+          # 检查是否有变动，有变动才提交
+          git diff --staged --quiet || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and Push
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git commit -m "🤖 Auto-update CFP list [$(date +'%Y-%m-%d')]"
           git push
