@@ -4,24 +4,23 @@
   - educational technology
   - higher education
   title: 'Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and Future Directions'
-  abstract_deadline: ''
+  abstract_deadline: 未找到日期
   fullpaper_deadline: 19 December 2025
   fullpaper_deadline_sort: '2025-12-19'
-  editors: ''
+  editors: N/A
   link: https://link.springer.com/collections/jighbjcefd
-  description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
-    on Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and ...'
+  description: N/A
 - journal: Computers & Education
   publisher: Elsevier
   tag:
   - educational technology
   title: 'Where pedagogy and latest digital technologies meet: New frontiers in language teaching and learning'
-  abstract_deadline: ''
+  abstract_deadline: 未找到日期
   fullpaper_deadline: 31 December 2025
   fullpaper_deadline_sort: '2025-12-31'
-  editors: 'Guest editors: Di Zou, Guangwei Hu, Shaofeng Li'
+  editors: N/A
   link: https://www.sciencedirect.com/special-issue/323258/where-pedagogy-and-latest-digital-technologies-meet-new-frontiers-in-language-teaching-and-learning
-  description: ''
+  description: N/A
 - journal: International Journal of Computer-Supported Collaborative Learning
   publisher: Springer
   tag:
@@ -75,13 +74,12 @@
   tag: *id001
   title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
     Education'
-  abstract_deadline: ''
+  abstract_deadline: 未找到日期
   fullpaper_deadline: 01 March 2026
   fullpaper_deadline_sort: '2026-03-01'
-  editors: ''
+  editors: N/A
   link: https://link.springer.com/collections/cgfhfcafai
-  description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
-    on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
+  description: N/A
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
   tag: &id005
@@ -119,13 +117,12 @@
   publisher: Springer
   tag: *id001
   title: Human Interaction with Gen AI Across Learning and Teaching Processes in Higher Education
-  abstract_deadline: ''
+  abstract_deadline: 未找到日期
   fullpaper_deadline: 31 May 2026
   fullpaper_deadline_sort: '2026-05-31'
-  editors: ''
+  editors: N/A
   link: https://link.springer.com/collections/iddjabccja
-  description: This special issue aims to explore the nature of human interaction with Generative AI in the context of higher
-    education - an area that has received limited attention despite the growing discourse on Gen AI ...
+  description: N/A
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
   tag: *id003
