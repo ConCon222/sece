@@ -3,7 +3,7 @@ name: Daily CFP Scraper
 on:
   schedule:
     # 每天 UTC 时间 00:00 运行 (北京时间早上 8:00)
-    - cron: '0 0 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch: # 允许手动点按钮触发
 
 permissions:
@@ -34,11 +34,15 @@ jobs:
         run: |
           pip install curl-cffi DrissionPage beautifulsoup4 pyyaml lxml
 
-      - name: Wait for FlareSolverr
+      - name: Wait for FlareSolverr to be ready
         run: |
-          echo "等待 FlareSolverr 启动..."
+          echo "⏳ 等待 FlareSolverr 启动..."
           for i in {1..30}; do
-            curl -s http://localhost:8191/health && break
+            if curl -s http://localhost:8191/health | grep -q "ok"; then
+              echo "✅ FlareSolverr 已就绪"
+              break
+            fi
+            echo "   等待中... ($i/30)"
             sleep 2
           done
 
