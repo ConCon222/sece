@@ -22,6 +22,21 @@ JOURNALS = [
         "tag": ["educational technology", "higher education"]
     },
     {
+        "name": "Computers & Education",
+        "url": "https://www.sciencedirect.com/journal/computers-and-education/about/call-for-papers",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "British Journal of Educational Technology",
+        "url": "https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/bjet_special_issues.htm",
+        "tag": ["educational technology"]
+    },
+    {
+        "name": "Review of Educational Research",
+        "url": "https://journals.sagepub.com/home/rer",
+        "tag": ["review", "general education"]
+    },
+    {
         "name": "Educational Psychologist",
         "url": "https://www.tandfonline.com/journals/hedp20",
         "tag": ["educational psychology"]
