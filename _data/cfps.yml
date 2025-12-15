@@ -24,7 +24,7 @@
   description: ''
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: &id003
+  tag: &id005
   - educational technology
   - higher education
   title: 'Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and Future Directions'
@@ -35,6 +35,18 @@
   link: https://link.springer.com/collections/jighbjcefd
   description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
     on Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and ...'
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: &id002
+  - Medical Education
+  title: Nursing education
+  abstract_deadline: ''
+  fullpaper_deadline: 22 December 2025
+  fullpaper_deadline_sort: '2025-12-22'
+  editors: ''
+  link: https://link.springer.com/collections/bajaciifif
+  description: BMC Medical Education is inviting submissions for a Collection entitled Nursing education. As the complexity
+    of patient care increases, so does the need for well-trained nursing professionals. The landscape ...
 - journal: Computers & Education
   publisher: Elsevier
   tag:
@@ -71,9 +83,21 @@
   editors: 'Guest editors: Peter Yongqi Gu, Osamu Takeuchi'
   link: https://www.sciencedirect.com/special-issue/327158/language-learning-strategies-in-the-age-of-artificial-intelligence
   description: ''
+- journal: European Journal of Education
+  publisher: Wiley
+  tag: &id010
+  - General Education
+  - Education Policy & Social Issues
+  title: Outdoor Learning in Initial Teacher Education
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2025
+  fullpaper_deadline_sort: '2025-12-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers/si-2025-001410
+  description: ''
 - journal: Journal of Computer Assisted Learning
   publisher: Wiley
-  tag: &id002
+  tag: &id003
   - educational technology
   title: 'Informal Digital Learning of English (IDLE) as Innovative Pedagogy: Mapping Current and Future Trends'
   abstract_deadline: ''
@@ -82,6 +106,28 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/13652729/call-for-papers/si-2025-000977
   description: ''
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: 'Breaking disciplinary silos in medical education: advancing interprofessional collaboration in the era of AI'
+  abstract_deadline: ''
+  fullpaper_deadline: 08 January 2026
+  fullpaper_deadline_sort: '2026-01-08'
+  editors: ''
+  link: https://link.springer.com/collections/iabgfacfie
+  description: 'BMC Medical Education invites submissions to our Collection, Breaking disciplinary silos in medical education:
+    advancing interprofessional collaboration in the era of AI. This Collection seeks innovative res...'
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Regional and international policies in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 19 January 2026
+  fullpaper_deadline_sort: '2026-01-19'
+  editors: ''
+  link: https://link.springer.com/collections/iggicdbdaj
+  description: BMC Medical Education is calling for submissions to our Collection on Regional and international policies in
+    medical education. As healthcare systems evolve, regional and international policies play a crucia...
 - journal: British Journal of Educational Technology
   publisher: Wiley
   tag: *id001
@@ -106,7 +152,7 @@
   description: ''
 - journal: Journal of Computer Assisted Learning
   publisher: Wiley
-  tag: *id002
+  tag: *id003
   title: Dynamics of Learning and Learners in the Changing Digital Landscape
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2026
@@ -114,9 +160,30 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers/si-2025-000971
   description: ''
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: &id004
+  - Language Education & Acquisition
+  title: Informal Digital Learning of English and TESOL in the Global South
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2026
+  fullpaper_deadline_sort: '2026-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2025-001551
+  description: ''
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: *id004
+  title: Rethinking “Criticality” in TESOL and Applied Linguistics
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2026
+  fullpaper_deadline_sort: '2026-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2025-001550
+  description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: &id005
+  tag: &id008
   - language learning
   - educational technology
   title: Inclusive CALL
@@ -128,7 +195,7 @@
   description: ''
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: &id004
+  tag: &id007
   - general education
   title: Problem Solving in Early Childhood Education
   abstract_deadline: ''
@@ -148,9 +215,43 @@
     Lingyun Huang, The Education University of Hong Kong; Sanna Järvelä, University of Oulu
   link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/gen-ai-comp-supported-learning
   description: ''
+- journal: Medical Education Online
+  publisher: Taylor & Francis
+  tag: &id006
+  - Medical Education
+  title: Supporting Healthcare Workers and Patients with Disabilities in Medicine
+  abstract_deadline: ''
+  fullpaper_deadline: 25 February 2026
+  fullpaper_deadline_sort: '2026-02-25'
+  editors: Dr. Mikio Hayashi (Kansai Medical University, Center for Health Professions Education); Dr. Dorothy W. Tolchin
+    (Harvard Medical School)
+  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-supporting-healthcare-workers-and-patients-with-disabilities-in-medicine/
+  description: Dr. Mikio Hayashi , Kansai Medical University, Center for Health Professions Education hayasmik@hirakata.kmu.ac.jp
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Environmental sustainability across the medical education curriculum
+  abstract_deadline: ''
+  fullpaper_deadline: 27 February 2026
+  fullpaper_deadline_sort: '2026-02-27'
+  editors: ''
+  link: https://link.springer.com/collections/iiefgcidbe
+  description: BMC Medical Education is calling for papers to a Collection entitled Environmental sustainability across the
+    medical education curriculum. This Collection aims to explore how medical curricula can incorporat...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: 'Shaping the future of ultrasound education: advancing equity, innovation, and faculty development'
+  abstract_deadline: ''
+  fullpaper_deadline: 27 February 2026
+  fullpaper_deadline_sort: '2026-02-27'
+  editors: ''
+  link: https://link.springer.com/collections/eehigjbied
+  description: 'BMC Medical Education is inviting submissions for a Collection entitled Shaping the future of ultrasound education:
+    advancing equity, innovation, and faculty development. The first wave of ultrasound curricu...'
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: *id003
+  tag: *id005
   title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
     Education'
   abstract_deadline: ''
@@ -160,9 +261,53 @@
   link: https://link.springer.com/collections/cgfhfcafai
   description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
     on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Artificial intelligence in curriculum development and assessment
+  abstract_deadline: ''
+  fullpaper_deadline: 02 March 2026
+  fullpaper_deadline_sort: '2026-03-02'
+  editors: ''
+  link: https://link.springer.com/collections/dhicbcbceb
+  description: BMC Medical Education welcomes submissions to our Artificial intelligence (AI) in curriculum development and
+    assessment Collection. The incorporation of AI technologies and methodologies into medical and all...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Tools for assessment of medical skills
+  abstract_deadline: ''
+  fullpaper_deadline: 12 March 2026
+  fullpaper_deadline_sort: '2026-03-12'
+  editors: ''
+  link: https://link.springer.com/collections/gebbgjajie
+  description: BMC Medical Education is calling for submissions to our Collection on Tools for assessment of medical skills.
+    Effective assessment is essential for ensuring that future health professionals trainees develop ...
+- journal: Medical Education Online
+  publisher: Taylor & Francis
+  tag: *id006
+  title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
+  abstract_deadline: ''
+  fullpaper_deadline: 16 March 2026
+  fullpaper_deadline_sort: '2026-03-16'
+  editors: Dr. Michelle Jiménez de Tavárez (Pontificia Universidad Católica Madre y Maestra (PUCMM)); Dr. Nelson Leonel Martínez
+    Rodríguez (Pontificia Universidad Católica Madre y Maestra); Dr. José Javier Sánchez Rodríguez (Pontificia Universidad
+    Católica Madre y Maestra (PUCMM))
+  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-medical-education-in-the-global-south-lessons-learned-and-opportunities-to-improve/
+  description: Dr. José Javier Sánchez Rodríguez , Pontificia Universidad Católica Madre y Maestra (PUCMM) sanchezjosejavier8@gmail.com
+- journal: Medical Education Online
+  publisher: Taylor & Francis
+  tag: *id006
+  title: 'Artificial Intelligence in Medical Education: Shaping the Future of Teaching, Learning, and Assessment'
+  abstract_deadline: ''
+  fullpaper_deadline: 25 March 2026
+  fullpaper_deadline_sort: '2026-03-25'
+  editors: Nicole Rockich Winston (Medical College of Georgia at Augusta University)
+  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-artificial-intelligence-in-medical-education-shaping-the-future-of-teaching-learning-and-assessment/
+  description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id009
+  tag: &id014
   - general education
   - educational policy
   title: 'Special Issue: Review and Meta-Analysis of AI in Education'
@@ -175,7 +320,7 @@
     impacts education, spanning multiple critical areas that address both current challenges and futur...
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id004
+  tag: *id007
   title: 'Retrieval Practice in Meaningful Learning: When and Why Does it Work?'
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2026
@@ -195,9 +340,31 @@
     Stansberry (Oklahoma State University)
   link: https://think.taylorandfrancis.com/special_issues/promoting-pk-12-teachers-ai-competencies-practices-and-challenges/
   description: ''
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Intensive care education
+  abstract_deadline: ''
+  fullpaper_deadline: 17 April 2026
+  fullpaper_deadline_sort: '2026-04-17'
+  editors: ''
+  link: https://link.springer.com/collections/gcbeibfjaj
+  description: BMC Medical Education is calling for submissions to our Collection on Intensive care education. The delivery
+    of care in high-acuity settings requires not only clinical expertise but also rapid decision-makin...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: The role of medical humanities in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 24 April 2026
+  fullpaper_deadline_sort: '2026-04-24'
+  editors: ''
+  link: https://link.springer.com/collections/gghecfhhce
+  description: BMC Medical Education is calling for papers to a Collection entitled The role of medical humanities in medical
+    education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id008
   title: Agency in language teaching and learning with GenAI
   abstract_deadline: 30 June 2025
   fullpaper_deadline: 30 April 2026
@@ -207,7 +374,7 @@
   description: ''
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: &id006
+  tag: &id009
   - general education
   - higher education
   title: 'Learning and Teaching with Social Justice in the University Classroom: Contemporary Approaches and Challenges'
@@ -217,6 +384,31 @@
   editors: A/Prof Tai Peseta (Western Sydney University); Dr Ashlee Gore (Western Sydney University); Dr Peta Hinton (Western
     Sydney University); Dr Sky Hugman (Western Sydney University); Dr Ana Rodas (Western Sydney University)
   link: https://think.taylorandfrancis.com/special_issues/learning-and-teaching-with-social-justice-in-the-university-classroom-contemporary-approaches-and-challenges/
+  description: ''
+- journal: Journal of English for Academic Purposes
+  publisher: Elsevier
+  tag:
+  - Language Education & Acquisition
+  - Higher Education
+  title: Leveraging GenAI in the Development, Adaptation, and Evaluation of EAP Materials
+  abstract_deadline: ''
+  fullpaper_deadline: 01 May 2026
+  fullpaper_deadline_sort: '2026-05-01'
+  editors: 'Guest editors: Tan Jin, Jun Lei'
+  link: https://www.sciencedirect.com/special-issue/321745/leveraging-genai-in-the-development-adaptation-and-evaluation-of-eap-materials
+  description: ''
+- journal: Science Education
+  publisher: Wiley
+  tag:
+  - Subject Education
+  - Science Education
+  title: 'From Manifesto to Collective Praxis: Towards Critical-Feminist and Justice-Centered Epistemic Futures in Science
+    Education'
+  abstract_deadline: ''
+  fullpaper_deadline: 1 May 2026
+  fullpaper_deadline_sort: '2026-05-01'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/1098237x/call-for-papers/si-2025-001484
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
@@ -230,9 +422,20 @@
     Queensland, Australia, Australia; Prof. Isabel Hilliger, Pontificia Universidad Católica de Chile, Chile
   link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/learning-analytics-dashboards
   description: ''
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Diagnostic and interventional CT and MRI
+  abstract_deadline: ''
+  fullpaper_deadline: 20 May 2026
+  fullpaper_deadline_sort: '2026-05-20'
+  editors: ''
+  link: https://link.springer.com/collections/ghfefacdbh
+  description: BMC Medical Education is calling for submissions to our Collection, Diagnostic and interventional CT and MRI.
+    Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: *id006
+  tag: *id009
   title: 'The Future of the Doctorate: Professional, Collaborative, and Practice-Based Research in UK Higher Education'
   abstract_deadline: 28 November 2025
   fullpaper_deadline: 29 May 2026
@@ -241,9 +444,22 @@
     (Birmingham City University)
   link: https://think.taylorandfrancis.com/special_issues/the-future-of-the-doctorate-professional-collaborative-and-practice-based-research-in-uk-higher-education/
   description: ''
+- journal: Educational Technology Research and Development
+  publisher: Springer
+  tag: &id013
+  - Educational Technology
+  title: 'Special Issue: Generative AI and the Future of K-12 Education - Towards Sustainable and Ethical Innovations to Strengthen
+    Human Agency'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 May 2026
+  fullpaper_deadline_sort: '2026-05-30'
+  editors: ''
+  link: https://link.springer.com/collections/aehghabaej
+  description: This special issue of Educational Technology Research and Development aims to advance research, theory, and
+    practice on the responsible, sustainable, and ethical use of GenAI in K-12 education, promoting the...
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: *id003
+  tag: *id005
   title: Human Interaction with Gen AI Across Learning and Teaching Processes in Higher Education
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2026
@@ -263,9 +479,32 @@
     Arif Nurwidyantoro, Universitas Gadjah Mada, Indonesia; Professor Wenli Chen, Nanyang Technological University, Singapore
   link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/gen-ai-learners-special-educational-needs
   description: ''
+- journal: Educational Review
+  publisher: Taylor & Francis
+  tag:
+  - General Education
+  title: 'Educators’ Responsible Well-Being as Social Justice: Toward a Sustainable Future for Educational Systems'
+  abstract_deadline: 01 September 2025
+  fullpaper_deadline: 01 June 2026
+  fullpaper_deadline_sort: '2026-06-01'
+  editors: Luis Javier Pentón Herrera (University of Economics and Human Sciences, Warsaw, Poland); Brent Bradford (Concordia
+    University of Edmonton, Canada)
+  link: https://think.taylorandfrancis.com/special_issues/well-being-social-justice/
+  description: Luis Javier Pentón Herrera , University of Economics and Human Sciences, Warsaw, Poland luis.penton@gmail.com
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Transnational medical education programs
+  abstract_deadline: ''
+  fullpaper_deadline: 23 June 2026
+  fullpaper_deadline_sort: '2026-06-23'
+  editors: ''
+  link: https://link.springer.com/collections/ggghaibcji
+  description: BMC Medical Education is calling for submissions to our Collection on Transnational medical education programs.
+    As medical education expands beyond national boundaries, new opportunities and challenges are e...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id008
   title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
   abstract_deadline: 31 October 2025
   fullpaper_deadline: 30 June 2026
@@ -274,9 +513,52 @@
     Chung Hsing University); Mirjam Hauck (The Open University)
   link: https://think.taylorandfrancis.com/special_issues/beyond-automation-ai-driven-language-assessment-in-call-through-pedagogical-ethical-and-ai-literacy-lenses/
   description: ''
+- journal: European Journal of Education
+  publisher: Wiley
+  tag: *id010
+  title: 'New Lenses of Psychology in Second Language Education: Exploring Positive Psycho-Emotional Variables in Child Learners'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 June 2026
+  fullpaper_deadline_sort: '2026-06-30'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers/si-2025-001403
+  description: ''
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: 'Clinical reasoning education: advances and updates'
+  abstract_deadline: ''
+  fullpaper_deadline: 03 August 2026
+  fullpaper_deadline_sort: '2026-08-03'
+  editors: ''
+  link: https://link.springer.com/collections/hjajbgjcfi
+  description: 'BMC Medical Education welcomes submissions to the Clinical reasoning education: advances and updates Collection.
+    Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Psychiatric education and its challenges
+  abstract_deadline: ''
+  fullpaper_deadline: 10 August 2026
+  fullpaper_deadline_sort: '2026-08-10'
+  editors: ''
+  link: https://link.springer.com/collections/hjhiagdbaj
+  description: BMC Medical Education is calling for submissions to our Collection on Psychiatric education and its challenges.
+    Mental illnesses account for a significant portion of the global disease burden, underlying the...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Lifelong learning and patient safety
+  abstract_deadline: ''
+  fullpaper_deadline: 18 August 2026
+  fullpaper_deadline_sort: '2026-08-18'
+  editors: ''
+  link: https://link.springer.com/collections/djeaiahcga
+  description: BMC Medical Education is calling for submissions to our Collection, Lifelong learning and patient safety. As
+    healthcare delivery becomes increasingly complex, shaped by biomedical advances, digital transform...
 - journal: Innovation in Language Learning and Teaching
   publisher: Taylor & Francis
-  tag: &id007
+  tag: &id011
   - language learning
   - educational technology
   title: Critical AI Literacy in Language Education
@@ -287,9 +569,20 @@
     Hong Kong); Christoph Hafner (City University of Hong Kong)
   link: https://think.taylorandfrancis.com/special_issues/critical-ai-literacy-in-language-education/
   description: ''
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Palliative care education
+  abstract_deadline: ''
+  fullpaper_deadline: 01 September 2026
+  fullpaper_deadline_sort: '2026-09-01'
+  editors: ''
+  link: https://link.springer.com/collections/ihhfcjgagd
+  description: BMC Medical Education is calling for submissions to our Collection, Palliative care education. Palliative care
+    education is an essential component of healthcare training, aimed at equipping healthcare profes...
 - journal: Innovation in Language Learning and Teaching
   publisher: Taylor & Francis
-  tag: *id007
+  tag: *id011
   title: 'Multimodality in Language Learning and Teaching in the Age of AI and GenAI: Current Innovations and Emerging Trends'
   abstract_deadline: 25 February 2026
   fullpaper_deadline: 25 September 2026
@@ -301,7 +594,7 @@
     China wangyongliang@ncwu.edu.cn
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: &id008
+  tag: &id012
   - educational technology
   - STEM education
   title: AI Literacy and STEM Education
@@ -314,7 +607,7 @@
     to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id008
+  tag: *id012
   title: Assessment for STEM Education in the AI Era
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -323,11 +616,9 @@
   link: https://link.springer.com/collections/hbgejjhffg
   description: Assessment plays a pivotal role in STEM (science, technology, engineering, and mathematics) education, serving
     as a mechanism for collecting and analyzing information to inform both teaching and learning, as...
-- journal: Journal of Science Education and Technology
+- journal: Educational Technology Research and Development
   publisher: Springer
-  tag:
-  - educational technology
-  - STEM education
+  tag: *id013
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -338,7 +629,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id009
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -349,7 +640,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id009
+  tag: *id014
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -360,7 +651,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id009
+  tag: *id014
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -369,3 +660,63 @@
   link: https://www.springer.com/collections/fegdjgibfb
   description: This special issue will include efforts to document and analyze a series of contextual pedagogical renewal
     and innovative partnership in teacher education programs around the world. The studies in the specia...
+- journal: Language Teaching Research
+  publisher: SAGE
+  tag:
+  - Language Education & Acquisition
+  title: LTR special issue calls for papers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://journals.sagepub.com/page/ltr/special_issue_call_for_paper
+  description: Call for papers for Language Teaching Research Special Issues
+- journal: AERA Open
+  publisher: SAGE
+  tag:
+  - General Education
+  title: Learn about our Special Collections
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: ''
+  description: Submit your paper to one of our Special Collections. If you are interested in submitting a Special Collection
+    idea, read through our guidelines for Guest Editors. Special Collection proposals can be submitted at any time via our
+    online form.
+- journal: European Journal of Education
+  publisher: Wiley
+  tag: *id010
+  title: 'From Theory to Practice: Empowering the Next Generation for a Sustainable Future'
+  abstract_deadline: ''
+  fullpaper_deadline: March 2026
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers/si-2024-001717
+  description: ''
+- journal: Active Learning in Higher Education
+  publisher: SAGE
+  tag:
+  - Higher Education
+  - Educational Technology
+  title: ALH Special Issue Call for Papers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://journals.sagepub.com/page/alh/call-for-papers
+  description: Active Learning in Higher Education is open to Special Issues. Please click the link below for open Call for
+    Papers.
+- journal: Minerva
+  publisher: Springer
+  tag:
+  - Education Policy & Social Issues
+  - Higher Education
+  title: New Approaches to the Relationship between Science and Democracy during Crises
+  abstract_deadline: ''
+  fullpaper_deadline: Ongoing
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://link.springer.com/collections/fachiaaedf
+  description: 'MINERVA Invited authors are welcome to submit to the special issue of Minerva entitled: New Approaches to
+    the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
