@@ -16,38 +16,21 @@ from DrissionPage import ChromiumPage, ChromiumOptions
 # ==========================================
 FLARESOLVERR_URL = "http://localhost:8191"  # GitHub Actions 中自动启动
 
-JOURNALS = [
-    {
-        "name": "International Journal of Educational Technology in Higher Education",
-        "url": "https://link.springer.com/journal/41239/collections?filter=Open",
-        "tag": ["educational technology", "higher education"]
-    },
-    {
-        "name": "Computers & Education",
-        "url": "https://www.sciencedirect.com/journal/computers-and-education/about/call-for-papers",
-        "tag": ["educational technology"]
-    },
-    {
-        "name": "British Journal of Educational Technology",
-        "url": "https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/bjet_special_issues.htm",
-        "tag": ["educational technology"]
-    },
-    {
-        "name": "Computer Assisted Language Learning",
-        "url": "https://www.tandfonline.com/journals/ncal20",
-        "tag": ["language learning", "educational technology"]
-    },
-    {
-        "name": "ReCALL",
-        "url": "https://www.cambridge.org/core/journals/recall/announcements/call-for-papers",
-        "tag": ["language learning", "educational technology"]
-    },
-    {
-        "name": "Journal of Computer Assisted Learning",
-        "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
-        "tag": ["educational technology"]
-    }
-]
+# 2. 从 YAML 加载期刊列表
+def load_journals(filepath="_data/journal_cfp.json"):
+    try:
+        with open(filepath, 'r', encoding='utf-8') as f:
+            # 使用 safe_load 安全地读取 yaml
+            return yaml.safe_load(f)
+    except FileNotFoundError:
+        print(f"❌ 错误：找不到文件 {filepath}")
+        return []
+    except yaml.YAMLError as e:
+        print(f"❌ 错误：YAML 格式解析失败: {e}")
+        return []
+
+# 初始化变量
+JOURNALS = load_journals()
 
 OUTPUT_YML_PATH = "_data/cfps.yml"
 
