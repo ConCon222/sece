@@ -286,18 +286,6 @@
 - journal: Medical Education Online
   publisher: Taylor & Francis
   tag: *id006
-  title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
-  abstract_deadline: ''
-  fullpaper_deadline: 16 March 2026
-  fullpaper_deadline_sort: '2026-03-16'
-  editors: Dr. Michelle Jiménez de Tavárez (Pontificia Universidad Católica Madre y Maestra (PUCMM)); Dr. Nelson Leonel Martínez
-    Rodríguez (Pontificia Universidad Católica Madre y Maestra); Dr. José Javier Sánchez Rodríguez (Pontificia Universidad
-    Católica Madre y Maestra (PUCMM))
-  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-medical-education-in-the-global-south-lessons-learned-and-opportunities-to-improve/
-  description: Dr. José Javier Sánchez Rodríguez , Pontificia Universidad Católica Madre y Maestra (PUCMM) sanchezjosejavier8@gmail.com
-- journal: Medical Education Online
-  publisher: Taylor & Francis
-  tag: *id006
   title: 'Artificial Intelligence in Medical Education: Shaping the Future of Teaching, Learning, and Assessment'
   abstract_deadline: ''
   fullpaper_deadline: 25 March 2026
@@ -523,6 +511,18 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers/si-2025-001403
   description: ''
+- journal: Medical Education Online
+  publisher: Taylor & Francis
+  tag: *id006
+  title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
+  abstract_deadline: ''
+  fullpaper_deadline: 20 July 2026
+  fullpaper_deadline_sort: '2026-07-20'
+  editors: Dr. Michelle Jiménez de Tavárez (Pontificia Universidad Católica Madre y Maestra (PUCMM)); Dr. Nelson Leonel Martínez
+    Rodríguez (Pontificia Universidad Católica Madre y Maestra); Dr. José Javier Sánchez Rodríguez (Pontificia Universidad
+    Católica Madre y Maestra (PUCMM))
+  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-medical-education-in-the-global-south-lessons-learned-and-opportunities-to-improve/
+  description: Dr. José Javier Sánchez Rodríguez , Pontificia Universidad Católica Madre y Maestra (PUCMM) sanchezjosejavier8@gmail.com
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id002
