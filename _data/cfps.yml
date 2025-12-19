@@ -95,17 +95,6 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers/si-2025-001410
   description: ''
-- journal: Journal of Computer Assisted Learning
-  publisher: Wiley
-  tag: &id003
-  - educational technology
-  title: 'Informal Digital Learning of English (IDLE) as Innovative Pedagogy: Mapping Current and Future Trends'
-  abstract_deadline: ''
-  fullpaper_deadline: 1 January 2026
-  fullpaper_deadline_sort: '2026-01-01'
-  editors: ''
-  link: https://onlinelibrary.wiley.com/page/journal/13652729/call-for-papers/si-2025-000977
-  description: ''
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id002
@@ -149,6 +138,17 @@
   fullpaper_deadline_sort: '2026-01-30'
   editors: Norbert Pachler, University College London, Institute of Education, UK; Keith Turvey, Independent Academic, UK
   link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/cfp-digital-technologies
+  description: ''
+- journal: Journal of Computer Assisted Learning
+  publisher: Wiley
+  tag: &id003
+  - educational technology
+  title: 'Informal Digital Learning of English (IDLE) as Innovative Pedagogy: Mapping Current and Future Trends'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2026
+  fullpaper_deadline_sort: '2026-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/13652729/call-for-papers/si-2025-000977
   description: ''
 - journal: Journal of Computer Assisted Learning
   publisher: Wiley
