@@ -107,7 +107,7 @@ jobs:
           repository-name: frank-haoming/frank-haoming.github.io       # 例如: wanghaoming/wanghaoming.github.io
           branch: main                                  # 公开仓库用来展示的分支，通常是 main 或 gh-pages
           clean: true
-
+          single-commit: true
           git-config-name: "Deploy Bot"              # 提交者名字，随便起
           git-config-email: "bot@noreply.github.com" # 提交者邮箱，用 noreply
           commit-message: "Update website content"   # 关键！写一个通用的信息，不要包含变量
