@@ -103,3 +103,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          token: ${{ secrets.PRI }}          # 必须！你在仓库设置里添加的那个 Secret
+          repository-name: frank-haoming/frank-haoming.github.io       # 例如: wanghaoming/wanghaoming.github.io
+          branch: main                                  # 公开仓库用来展示的分支，通常是 main 或 gh-pages
+          clean: true
