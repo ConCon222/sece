@@ -24,7 +24,7 @@
   description: ''
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: &id005
+  tag:
   - educational technology
   - higher education
   title: 'Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and Future Directions'
@@ -183,7 +183,7 @@
   description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: &id008
+  tag: &id007
   - language learning
   - educational technology
   title: Inclusive CALL
@@ -195,7 +195,7 @@
   description: ''
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: &id007
+  tag: &id006
   - general education
   title: Problem Solving in Early Childhood Education
   abstract_deadline: ''
@@ -217,7 +217,7 @@
   description: ''
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: &id006
+  tag: &id005
   - Medical Education
   title: Supporting Healthcare Workers and Patients with Disabilities in Medicine
   abstract_deadline: ''
@@ -251,7 +251,9 @@
     advancing equity, innovation, and faculty development. The first wave of ultrasound curricu...'
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: *id005
+  tag: &id009
+  - educational technology
+  - higher education
   title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
     Education'
   abstract_deadline: ''
@@ -285,7 +287,7 @@
     Effective assessment is essential for ensuring that future health professionals trainees develop ...
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: *id006
+  tag: *id005
   title: 'Artificial Intelligence in Medical Education: Shaping the Future of Teaching, Learning, and Assessment'
   abstract_deadline: ''
   fullpaper_deadline: 25 March 2026
@@ -308,7 +310,7 @@
     impacts education, spanning multiple critical areas that address both current challenges and futur...
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: 'Retrieval Practice in Meaningful Learning: When and Why Does it Work?'
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2026
@@ -352,7 +354,7 @@
     education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id008
+  tag: *id007
   title: Agency in language teaching and learning with GenAI
   abstract_deadline: 30 June 2025
   fullpaper_deadline: 30 April 2026
@@ -362,7 +364,7 @@
   description: ''
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: &id009
+  tag: &id008
   - general education
   - higher education
   title: 'Learning and Teaching with Social Justice in the University Classroom: Contemporary Approaches and Challenges'
@@ -423,7 +425,7 @@
     Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: *id009
+  tag: *id008
   title: 'The Future of the Doctorate: Professional, Collaborative, and Practice-Based Research in UK Higher Education'
   abstract_deadline: 28 November 2025
   fullpaper_deadline: 29 May 2026
@@ -447,7 +449,7 @@
     practice on the responsible, sustainable, and ethical use of GenAI in K-12 education, promoting the...
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: *id005
+  tag: *id009
   title: Human Interaction with Gen AI Across Learning and Teaching Processes in Higher Education
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2026
@@ -492,7 +494,7 @@
     As medical education expands beyond national boundaries, new opportunities and challenges are e...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id008
+  tag: *id007
   title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
   abstract_deadline: 31 October 2025
   fullpaper_deadline: 30 June 2026
@@ -513,7 +515,7 @@
   description: ''
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: *id006
+  tag: *id005
   title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
   abstract_deadline: ''
   fullpaper_deadline: 20 July 2026
