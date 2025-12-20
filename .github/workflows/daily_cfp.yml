@@ -51,7 +51,7 @@ jobs:
           # 确保脚本有执行权限（可选）
           # 假设你的脚本在根目录，且输出到 _data/cfps.yml
           # 你需要根据实际路径修改下面的路径
-          python scrape_cfps.py 
+          python bin/scrape_cfps.py 
         env:
           # 如果你的脚本里写死了路径，这里不需要改；
           # 建议在脚本里把 OUTPUT_YML_PATH 改为 relative path 如 '_data/cfps.yml'

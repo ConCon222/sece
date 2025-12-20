@@ -189,7 +189,7 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
-  - ".py"
+  - "*.py"
   - pages copy
 keep_files:
   - CNAME
