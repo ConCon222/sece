@@ -321,6 +321,8 @@ nav_order: 5  # 导航栏顺序，数字越小越靠前
   reverse - 倒序（最新的在前）
 -->
 
+
+
 <!-- ==================== 页面结构 ==================== -->
 <div class="lifeline-header">
   <h2>Life Line: {{ site.data.lifeline.events | size }} Moments · {{ total_years }} Years</h2>
