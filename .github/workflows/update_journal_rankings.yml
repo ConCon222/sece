@@ -1,0 +1,86 @@
+name: Update Journal Rankings
+
+on:
+  schedule:
+    # Run on the 3rd of every month at 2 AM UTC (10 AM Beijing time)
+    - cron: '0 2 3 * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-rankings:
+    runs-on: ubuntu-latest
+    
+    services:
+      # FlareSolverr container for bypassing anti-bot protection
+      flaresolverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        
+    - name: Install Chrome for DrissionPage
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget gnupg
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+        
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests pyyaml DrissionPage python-dotenv
+        
+    - name: Update journal rankings
+      env:
+        EASYSCHOLAR_KEY: ${{ secrets.EASYSCHOLAR_KEY }}
+        FLARESOLVERR_URL: http://localhost:8191
+      run: |
+        python bin/journal_data_manager.py --no-diff
+        
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add _data/jrank.yml
+        git commit -m "🤖 Auto-update journal rankings - $(date +'%Y-%m-%d')"
+        git push
+        
+    - name: Create summary
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        echo "## 📊 Journal Rankings Updated" >> $GITHUB_STEP_SUMMARY
+        echo "Journal ranking data has been automatically updated." >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Data Sources:" >> $GITHUB_STEP_SUMMARY
+        echo "- 🟠 Orange metrics (Scopus: CiteScore, Percentile)" >> $GITHUB_STEP_SUMMARY
+        echo "- � Purple metrics (EasyScholar: JCR Quartile, IF)" >> $GITHUB_STEP_SUMMARY
+        echo "- � Red metrics (CAS Division)" >> $GITHUB_STEP_SUMMARY
+        echo "- 📝 Publisher websites (Acceptance rates, Review times)" >> $GITHUB_STEP_SUMMARY
+        
+    - name: No changes summary
+      if: steps.verify-changed-files.outputs.changed == 'false'
+      run: |
+        echo "## ✅ Journal Rankings Check Complete" >> $GITHUB_STEP_SUMMARY
+        echo "No updates were needed - all journal ranking data is current." >> $GITHUB_STEP_SUMMARY

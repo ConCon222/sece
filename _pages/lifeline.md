@@ -4,7 +4,7 @@ title: Life Line
 permalink: /lifeline/
 description: 
 nav: true
-nav_order: 5  # 导航栏顺序，数字越小越靠前
+nav_order: 7  # 导航栏顺序，数字越小越靠前
 ---
 
 <!-- ==================== 隐藏默认标题 ==================== -->

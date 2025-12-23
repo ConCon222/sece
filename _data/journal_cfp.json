@@ -2,330 +2,1500 @@
     {
         "name": "International Journal of Educational Technology in Higher Education",
         "url": "https://link.springer.com/journal/41239/collections?filter=Open",
-        "tag": ["educational technology", "higher education"]
+        "tag": [
+            "Educational Technology",
+            "Higher Education"
+        ]
     },
     {
         "name": "Educational Psychologist",
         "url": "https://www.tandfonline.com/journals/hedp20",
-        "tag": ["educational psychology"]
+        "tag": [
+            "Educational Psychology"
+        ]
     },
     {
         "name": "Educational Research Review",
         "url": "https://www.sciencedirect.com/journal/educational-research-review/about/call-for-papers",
-        "tag": ["review", "general education"]
+        "tag": [
+            "Review Journal",
+            "General Education"
+        ]
     },
     {
         "name": "Computers & Education",
         "url": "https://www.sciencedirect.com/journal/computers-and-education/about/call-for-papers",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Studies in Science Education",
         "url": "https://www.tandfonline.com/journals/rsse20",
-        "tag": ["review"]
+        "tag": [
+            "Review Journal"
+        ]
     },
     {
         "name": "British Journal of Educational Technology",
         "url": "https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/bjet_special_issues.htm",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "International Journal of STEM Education",
         "url": "https://link.springer.com/journal/40594/collections?filter=Open",
-        "tag": ["educational technology", "STEM education"]
+        "tag": [
+            "Educational Technology",
+            "STEM Education"
+        ]
     },
     {
         "name": "Review of Educational Research",
         "url": "https://journals.sagepub.com/home/rer",
-        "tag": ["review", "general education"]
+        "tag": [
+            "Review Journal",
+            "General Education"
+        ]
     },
     {
         "name": "International Journal of Management Education",
         "url": "https://www.sciencedirect.com/journal/the-international-journal-of-management-education/about/call-for-papers",
-        "tag": ["educational management", "higher education"]
+        "tag": [
+            "Educational Management & Leadership",
+            "Higher Education"
+        ]
     },
     {
         "name": "The Internet and Higher Education",
         "url": "https://www.sciencedirect.com/journal/the-internet-and-higher-education/about/call-for-papers",
-        "tag": ["higher education", "educational technology"]
+        "tag": [
+            "Higher Education",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Computer Assisted Language Learning",
         "url": "https://www.tandfonline.com/journals/ncal20",
-        "tag": ["language learning", "educational technology"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Educational Technology & Society",
         "url": "https://www.j-ets.net",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "ReCALL",
         "url": "https://www.cambridge.org/core/journals/recall/announcements/call-for-papers",
-        "tag": ["language learning", "educational technology"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Educational Technology"
+        ]
     },
     {
         "name": "International Journal of Computer-Supported Collaborative Learning",
         "url": "https://link.springer.com/journal/11412/collections?filter=Open",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "System",
         "url": "https://www.sciencedirect.com/journal/system/about/call-for-papers",
-        "tag": ["language learning", "educational technology"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Assessing Writing",
         "url": "https://www.sciencedirect.com/journal/assessing-writing/about/call-for-papers",
-        "tag": ["language learning"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Journal of Science Education and Technology",
         "url": "https://link.springer.com/journal/10956/collections?filter=Open",
-        "tag": ["educational technology", "STEM education"]
+        "tag": [
+            "Educational Technology",
+            "STEM Education"
+        ]
     },
     {
         "name": "Education and Information Technologies",
         "url": "https://link.springer.com/journal/10639/collections?filter=Open",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Interactive Learning Environments",
         "url": "https://www.tandfonline.com/journals/nile20",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
-    { 
+    {
         "name": "Academy of Management Learning & Education",
         "url": "https://journals.aom.org/journal/amle",
-        "tag": ["educational management", "higher education"]
+        "tag": [
+            "Educational Management & Leadership",
+            "Higher Education"
+        ]
     },
     {
         "name": "Language Teaching",
         "url": "https://www.cambridge.org/core/journals/language-teaching/announcements/call-for-papers",
-        "tag": ["language learning"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Journal of Research on Technology in Education",
         "url": "https://www.tandfonline.com/journals/ujrt20",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Innovations in Education and Teaching International",
         "url": "https://www.tandfonline.com/journals/riie20",
-        "tag": ["general education", "higher education"]
+        "tag": [
+            "General Education",
+            "Higher Education"
+        ]
     },
     {
         "name": "Journal of Computing in Higher Education",
         "url": "https://www.springer.com/journal/12528/collections?filter=Open",
-        "tag": ["higher education", "educational technology"]
+        "tag": [
+            "Higher Education",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Educational Researcher",
         "url": "https://journals.sagepub.com/home/edr",
-        "tag": ["general education", "educational policy"]
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
     },
     {
         "name": "Journal of Educational Computing Research",
         "url": "https://journals.sagepub.com/home/jec",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Learning and Instruction",
         "url": "https://www.sciencedirect.com/journal/learning-and-instruction/about/call-for-papers",
-        "tag": ["general education"]
+        "tag": [
+            "General Education"
+        ]
     },
     {
         "name": "IEEE Transactions on Learning Technologies",
         "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4620076",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Metacognition and Learning",
         "url": "https://www.springer.com/journal/11409/collections?filter=Open",
-        "tag": ["educational psychology", "educational technology"]
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
     },
-
     {
         "name": "Asia-Pacific Education Researcher",
         "url": "https://www.springer.com/journal/40299/collections?filter=Open",
-        "tag": ["general education", "educational policy"]
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
     },
     {
         "name": "Innovation in Language Learning and Teaching",
         "url": "https://www.tandfonline.com/journals/rill20",
-        "tag": ["language learning", "educational technology"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Journal of Computer Assisted Learning",
         "url": "https://onlinelibrary.wiley.com/page/journal/13652729/homepage/call-for-papers",
-        "tag": ["educational technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Higher Education",
         "url": "https://link.springer.com/journal/10734/collections?filter=Open",
-        "tag": ["Higher Education"]
+        "tag": [
+            "Higher Education"
+        ]
     },
     {
         "name": "Thinking Skills and Creativity",
         "url": "https://www.sciencedirect.com/journal/thinking-skills-and-creativity/about/call-for-papers",
-        "tag": ["Educational Psychology", "Educational Technology"]
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Journal of Research in Science Teaching",
         "url": "https://onlinelibrary.wiley.com/page/journal/10982736/homepage/call-for-papers",
-        "tag": ["Subject Education", "Science Education"]
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
     },
     {
         "name": "Educational Technology Research and Development",
         "url": "https://link.springer.com/journal/11423/collections?filter=Open",
-        "tag": ["Educational Technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
-    { 
+    {
         "name": "Australasian Journal of Educational Technology",
         "url": "https://ajet.org.au/index.php/AJET",
-        "tag": ["Educational Technology"]
+        "tag": [
+            "Educational Technology"
+        ]
     },
     {
         "name": "Language Learning",
         "url": "https://onlinelibrary.wiley.com/page/journal/14679922/homepage/call-for-papers",
-        "tag": ["Language Education & Acquisition"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Journal of Hospitality, Leisure, Sport & Tourism Education",
         "url": "https://www.sciencedirect.com/journal/journal-of-hospitality-leisure-sport-and-tourism-education/about/call-for-papers",
-        "tag": ["Vocational & Continuing Education", "Higher Education"]
+        "tag": [
+            "Vocational & Continuing Education",
+            "Higher Education"
+        ]
     },
     {
         "name": "Reading Research Quarterly",
         "url": "https://ila.onlinelibrary.wiley.com/page/journal/19362722/homepage/call-for-papers",
-        "tag": ["Language Education & Acquisition", "Early Childhood Education"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Early Childhood Education"
+        ]
     },
     {
         "name": "Journal of Teacher Education",
         "url": "https://journals.sagepub.com/home/jte",
-        "tag": ["Teacher Education & Development"]
+        "tag": [
+            "Teacher Education & Development"
+        ]
     },
     {
         "name": "The Modern Language Journal",
         "url": "https://onlinelibrary.wiley.com/page/journal/15404781/homepage/call-for-papers",
-        "tag": ["Language Education & Acquisition"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Teaching and Teacher Education",
         "url": "https://www.sciencedirect.com/journal/teaching-and-teacher-education/about/call-for-papers",
-        "tag": ["Teacher Education & Development"]
+        "tag": [
+            "Teacher Education & Development"
+        ]
     },
     {
         "name": "TESOL Quarterly",
         "url": "https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers",
-        "tag": ["Language Education & Acquisition"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Journal of the Learning Sciences",
         "url": "https://www.tandfonline.com/journals/hlns20",
-        "tag": ["Educational Psychology", "Educational Technology"]
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Assessment & Evaluation in Higher Education",
         "url": "https://www.tandfonline.com/journals/caeh20",
-        "tag": ["Higher Education", "Educational Management & Leadership"]
+        "tag": [
+            "Higher Education",
+            "Educational Management & Leadership"
+        ]
     },
     {
         "name": "Language Teaching Research",
         "url": "https://journals.sagepub.com/home/ltr",
-        "tag": ["Language Education & Acquisition"]
+        "tag": [
+            "Language Education & Acquisition"
+        ]
     },
     {
         "name": "Medical Education Online",
         "url": "https://www.tandfonline.com/journals/zmeo20",
-        "tag": ["Medical Education"]
+        "tag": [
+            "Medical Education"
+        ]
     },
     {
         "name": "Comparative Education",
         "url": "https://www.tandfonline.com/journals/cced20",
-        "tag": ["Education Policy & Social Issues", "Comparative Education"]
+        "tag": [
+            "Education Policy & Social Issues",
+            "International/Comparative Education"
+        ]
     },
     {
         "name": "Educational Administration Quarterly",
         "url": "https://journals.sagepub.com/home/eaq",
-        "tag": ["Educational Management & Leadership"]
+        "tag": [
+            "Educational Management & Leadership"
+        ]
     },
     {
         "name": "American Educational Research Journal",
         "url": "https://journals.sagepub.com/home/aer",
-        "tag": ["General Education"]
+        "tag": [
+            "General Education"
+        ]
     },
     {
         "name": "AERA Open",
         "url": "https://journals.sagepub.com/home/ero",
-        "tag": ["General Education"]
+        "tag": [
+            "General Education"
+        ]
     },
     {
         "name": "European Journal of Education",
         "url": "https://onlinelibrary.wiley.com/page/journal/14653435/homepage/call-for-papers",
-        "tag": ["General Education", "Education Policy & Social Issues"]
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
     },
     {
         "name": "Journal of English for Academic Purposes",
         "url": "https://www.sciencedirect.com/journal/journal-of-english-for-academic-purposes/about/call-for-papers",
-        "tag": ["Language Education & Acquisition", "Higher Education"]
+        "tag": [
+            "Language Education & Acquisition",
+            "Higher Education"
+        ]
     },
     {
         "name": "Science Education",
         "url": "https://onlinelibrary.wiley.com/page/journal/1098237x/call-for-papers",
-        "tag": ["Subject Education", "Science Education"]
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
     },
     {
         "name": "Educational Review",
         "url": "https://www.tandfonline.com/journals/cedr20",
-        "tag": ["General Education"]
+        "tag": [
+            "General Education"
+        ]
     },
     {
         "name": "Journal of Engineering Education",
         "url": "https://onlinelibrary.wiley.com/page/journal/21689830/call-for-papers",
-        "tag": ["Subject Education", "Engineering Education"]
+        "tag": [
+            "Subject Education",
+            "Engineering/Design Education"
+        ]
     },
     {
         "name": "Revista de Psicodidáctica",
         "url": "https://www.sciencedirect.com/journal/revista-de-psicodidactica/about/call-for-papers",
-        "tag": ["Educational Psychology", "Teacher Education & Development"]
+        "tag": [
+            "Educational Psychology",
+            "Teacher Education & Development"
+        ]
     },
     {
         "name": "Educational Management Administration & Leadership",
         "url": "https://journals.sagepub.com/home/ema",
-        "tag": ["Educational Management & Leadership"]
+        "tag": [
+            "Educational Management & Leadership"
+        ]
     },
     {
         "name": "European Physical Education Review",
         "url": "https://journals.sagepub.com/home/epe",
-        "tag": ["Subject Education", "Physical Education"]
+        "tag": [
+            "Subject Education",
+            "Physical Education"
+        ]
     },
     {
         "name": "Advances in Health Sciences Education",
         "url": "https://link.springer.com/journal/10459/collections?filter=Open ",
-        "tag": ["Medical Education"]
+        "tag": [
+            "Medical Education"
+        ]
     },
     {
         "name": "Active Learning in Higher Education",
         "url": "https://journals.sagepub.com/home/alh",
-        "tag": ["Higher Education", "Educational Technology"]
+        "tag": [
+            "Higher Education",
+            "Educational Technology"
+        ]
     },
     {
         "name": "Minerva",
         "url": "https://link.springer.com/journal/11024/collections?filter=Open",
-        "tag": ["Education Policy & Social Issues", "Higher Education"]
+        "tag": [
+            "Education Policy & Social Issues",
+            "Higher Education"
+        ]
     },
     {
         "name": "Studies in Higher Education",
         "url": "https://www.tandfonline.com/journals/cshe20",
-        "tag": ["Higher Education"]
+        "tag": [
+            "Higher Education"
+        ]
     },
     {
         "name": "BMC Medical Education",
         "url": "https://link.springer.com/journal/12909/collections?filter=Open",
-        "tag": ["Medical Education"]
+        "tag": [
+            "Medical Education"
+        ]
+    },
+    {
+        "name": "Learning, Media and Technology",
+        "url": "https://www.tandfonline.com/journals/cjem20",
+        "tag": [
+            "Educational Technology"
+        ]
+    },
+    {
+        "name": "Early Childhood Research Quarterly",
+        "url": "https://www.sciencedirect.com/journal/early-childhood-research-quarterly/about/call-for-papers",
+        "tag": [
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "Studies in Educational Evaluation",
+        "url": "https://www.sciencedirect.com/journal/studies-in-educational-evaluation/about/call-for-papers",
+        "tag": [
+            "General Education",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "European Journal of Teacher Education",
+        "url": "https://www.tandfonline.com/journals/cete20",
+        "tag": [
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Professional Development in Education",
+        "url": "https://www.tandfonline.com/journals/rjie20",
+        "tag": [
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Environmental Education Research",
+        "url": "https://www.tandfonline.com/journals/ceer20",
+        "tag": [
+            "Subject Education",
+            "Environmental Education"
+        ]
+    },
+    {
+        "name": "Educational Psychology",
+        "url": "https://www.tandfonline.com/journals/cedp20",
+        "tag": [
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "Distance Education",
+        "url": "https://www.tandfonline.com/journals/cdie20",
+        "tag": [
+            "Educational Technology",
+            "Higher Education"
+        ]
+    },
+    {
+        "name": "Journal of Education Policy",
+        "url": "https://www.tandfonline.com/journals/tedp20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Management & Leadership"
+        ]
+    },
+    {
+        "name": "Physical Education and Sport Pedagogy",
+        "url": "https://www.tandfonline.com/journals/cpes20",
+        "tag": [
+            "Subject Education",
+            "Physical Education"
+        ]
+    },
+    {
+        "name": "Journal of Educational Change",
+        "url": "https://link.springer.com/journal/10833/collections?filter=Open",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Management & Leadership"
+        ]
+    },
+    {
+        "name": "Higher Education Research & Development",
+        "url": "https://www.tandfonline.com/journals/cher20",
+        "tag": [
+            "Higher Education"
+        ]
+    },
+    {
+        "name": "Language and Education",
+        "url": "https://www.tandfonline.com/journals/rlae20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Sociology of Education",
+        "url": "https://journals.sagepub.com/home/soe",
+        "tag": [
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "School Effectiveness and School Improvement",
+        "url": "https://www.tandfonline.com/journals/nses20",
+        "tag": [
+            "Educational Management & Leadership",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Academic Psychiatry",
+        "url": "https://link.springer.com/journal/40596/collections?filter=Open",
+        "tag": [
+            "Medical Education",
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "Educational Evaluation and Policy Analysis",
+        "url": "https://journals.sagepub.com/home/epa",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "Critical Studies in Education",
+        "url": "https://www.tandfonline.com/journals/rcse20",
+        "tag": [
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Sport, Education and Society",
+        "url": "https://www.tandfonline.com/journals/cses20",
+        "tag": [
+            "Subject Education",
+            "Physical Education"
+        ]
+    },
+    {
+        "name": "International Journal of Technology and Design Education",
+        "url": "https://link.springer.com/journal/10798/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Engineering/Design Education"
+        ]
+    },
+    {
+        "name": "Teacher Education and Special Education",
+        "url": "https://journals.sagepub.com/home/tes",
+        "tag": [
+            "Teacher Education & Development",
+            "Special Education"
+        ]
+    },
+    {
+        "name": "Educational Research",
+        "url": "https://www.tandfonline.com/journals/rere20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Australian Journal of Education",
+        "url": "https://journals.sagepub.com/home/aed",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "The Journal of Agricultural Education and Extension",
+        "url": "https://www.tandfonline.com/journals/raee20",
+        "tag": [
+            "Subject Education",
+            "Agricultural Education"
+        ]
+    },
+    {
+        "name": "International Journal of Bilingual Education and Bilingualism",
+        "url": "https://www.tandfonline.com/journals/rbeb20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Science & Education",
+        "url": "https://link.springer.com/journal/11191/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
+    },
+    {
+        "name": "Technology, Pedagogy and Education",
+        "url": "https://www.tandfonline.com/journals/rtpe20",
+        "tag": [
+            "Educational Technology",
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "International Journal of Educational Research",
+        "url": "https://www.sciencedirect.com/journal/international-journal-of-educational-research/about/call-for-papers",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Teaching in Higher Education",
+        "url": "https://www.tandfonline.com/journals/cthe20",
+        "tag": [
+            "Higher Education",
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Scientific Studies of Reading",
+        "url": "https://www.tandfonline.com/journals/hssr20",
+        "tag": [
+            "Language Education & Acquisition",
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "ZDM - Mathematics Education",
+        "url": "https://link.springer.com/journal/11858/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Mathematics Education"
+        ]
+    },
+    {
+        "name": "The Journal of Higher Education",
+        "url": "https://www.tandfonline.com/journals/uhej20",
+        "tag": [
+            "Higher Education"
+        ]
+    },
+    {
+        "name": "The Australian Educational Researcher",
+        "url": "https://link.springer.com/journal/13384/collections?filter=Open",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Journal of Higher Education Policy and Management",
+        "url": "https://www.tandfonline.com/journals/cjhe20",
+        "tag": [
+            "Higher Education",
+            "Educational Management & Leadership"
+        ]
+    },
+    {
+        "name": "Review of Research in Education",
+        "url": "https://journals.sagepub.com/home/rre",
+        "tag": [
+            "Review Journal",
+            "General Education"
+        ]
+    },
+    {
+        "name": "Higher Education Policy",
+        "url": "https://link.springer.com/journal/41307/collections?filter=Open",
+        "tag": [
+            "Higher Education",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "The Journal of Environmental Education",
+        "url": "https://www.tandfonline.com/journals/vjee20",
+        "tag": [
+            "Subject Education",
+            "Environmental Education"
+        ]
+    },
+    {
+        "name": "International Journal of Educational Development",
+        "url": "https://www.sciencedirect.com/journal/international-journal-of-educational-development/about/call-for-papers",
+        "tag": [
+            "Education Policy & Social Issues",
+            "International/Comparative Education"
+        ]
+    },
+    {
+        "name": "Research in Science Education",
+        "url": "https://link.springer.com/journal/11165/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
+    },
+    {
+        "name": "Asia Pacific Education Review",
+        "url": "https://link.springer.com/journal/12564/collections?filter=Open",
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "International Journal of Science Education",
+        "url": "https://www.tandfonline.com/journals/tsed20",
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
+    },
+    {
+        "name": "Research in Higher Education",
+        "url": "https://link.springer.com/journal/11162/collections?filter=Open",
+        "tag": [
+            "Higher Education"
+        ]
+    },
+    {
+        "name": "American Journal of Education",
+        "url": "https://www.journals.uchicago.edu/journals/aje/calls",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Curriculum Inquiry",
+        "url": "https://www.tandfonline.com/journals/rcui20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Curriculum Studies"
+        ]
+    },
+    {
+        "name": "Language, Culture and Curriculum",
+        "url": "https://www.tandfonline.com/journals/rlcc20",
+        "tag": [
+            "Language Education & Acquisition",
+            "Curriculum Studies"
+        ]
+    },
+    {
+        "name": "Language Policy",
+        "url": "https://link.springer.com/journal/10993/collections?filter=Open",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Assessment in Education: Principles, Policy & Practice",
+        "url": "https://www.tandfonline.com/journals/caie20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "Reading and Writing",
+        "url": "https://link.springer.com/journal/11145/collections?filter=Open",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Mind, Brain, and Education",
+        "url": "https://onlinelibrary.wiley.com/page/journal/1751228x/homepage/call-for-papers",
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
+    },
+    {
+        "name": "Early Education and Development",
+        "url": "https://www.tandfonline.com/journals/heed20",
+        "tag": [
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "Linguistics and Education",
+        "url": "https://www.sciencedirect.com/journal/linguistics-and-education/about/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "International Multilingual Research Journal",
+        "url": "https://www.tandfonline.com/journals/hmrj20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "British Educational Research Journal",
+        "url": "https://bera-journals.onlinelibrary.wiley.com/hub/journal/14693518/call-for-papers",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Theory & Research in Social Education",
+        "url": "https://www.tandfonline.com/journals/utrs20",
+        "tag": [
+            "Subject Education",
+            "Social Studies Education"
+        ]
+    },
+    {
+        "name": "Instructional Science",
+        "url": "https://link.springer.com/journal/11251/collections?filter=Open",
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
+    },
+    {
+        "name": "International Journal of Science and Mathematics Education",
+        "url": "https://link.springer.com/journal/10763/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Mathematics Education",
+            "Science Education"
+        ]
+    },
+    {
+        "name": "British Journal of Sociology of Education",
+        "url": "https://www.tandfonline.com/journals/cbse20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Sociology of Education"
+        ]
+    },
+    {
+        "name": "Oxford Review of Education",
+        "url": "https://www.tandfonline.com/journals/core20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "British Journal of Educational Studies",
+        "url": "https://www.tandfonline.com/journals/rbje20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Journal of Marketing for Higher Education",
+        "url": "https://www.tandfonline.com/journals/wmhe20",
+        "tag": [
+            "Higher Education",
+            "Educational Management & Leadership"
+        ]
+    },
+    {
+        "name": "International Journal of Multilingualism",
+        "url": "https://www.tandfonline.com/journals/rmjm20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Journal of Studies in International Education",
+        "url": "https://journals.sagepub.com/home/jsi",
+        "tag": [
+            "Higher Education",
+            "International/Comparative Education"
+        ]
+    },
+    {
+        "name": "Race Ethnicity and Education",
+        "url": "https://www.tandfonline.com/journals/cree20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Equity"
+        ]
+    },
+    {
+        "name": "European Educational Research Journal",
+        "url": "https://journals.sagepub.com/home/eer",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Journal of Curriculum Studies",
+        "url": "https://www.tandfonline.com/journals/tcus20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Curriculum Studies"
+        ]
+    },
+    {
+        "name": "Research in Science & Technological Education",
+        "url": "https://www.tandfonline.com/journals/crst20",
+        "tag": [
+            "Subject Education",
+            "Educational Technology"
+        ]
+    },
+    {
+        "name": "Journal of School Violence",
+        "url": "https://www.tandfonline.com/journals/wjsv20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "School Safety"
+        ]
+    },
+    {
+        "name": "Discourse: Studies in the Cultural Politics of Education",
+        "url": "https://www.tandfonline.com/journals/cdis20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Sociology of Education"
+        ]
+    },
+    {
+        "name": "Journal of Research in Reading",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14679817/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Educational Studies in Mathematics",
+        "url": "https://link.springer.com/journal/10649/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Mathematics Education"
+        ]
+    },
+    {
+        "name": "Theory Into Practice",
+        "url": "https://www.tandfonline.com/journals/htip20",
+        "tag": [
+            "General Education",
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Gender and Education",
+        "url": "https://www.tandfonline.com/journals/cgee20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Gender and Education"
+        ]
+    },
+    {
+        "name": "Educational Measurement: Issues and Practice",
+        "url": "https://onlinelibrary.wiley.com/page/journal/17453992/call-for-papers",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "Teachers and Teaching",
+        "url": "https://www.tandfonline.com/journals/ctat20",
+        "tag": [
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Compare: A Journal of Comparative and International Education",
+        "url": "https://www.tandfonline.com/journals/ccom20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "International/Comparative Education"
+        ]
+    },
+    {
+        "name": "Measurement in Physical Education and Exercise Science",
+        "url": "https://www.tandfonline.com/journals/hmpe20",
+        "tag": [
+            "Subject Education",
+            "Physical Education"
+        ]
+    },
+    {
+        "name": "Sex Education",
+        "url": "https://www.tandfonline.com/journals/csed20",
+        "tag": [
+            "Subject Education",
+            "Health Education"
+        ]
+    },
+    {
+        "name": "Teachers College Record",
+        "url": "https://journals.sagepub.com/home/tcz",
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Current Issues in Language Planning",
+        "url": "https://www.tandfonline.com/journals/rclp20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Journal of Language, Identity & Education",
+        "url": "https://www.tandfonline.com/journals/hlie20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Early Childhood Education Journal",
+        "url": "https://link.springer.com/journal/10643/collections?filter=Open",
+        "tag": [
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "Learning, Culture and Social Interaction",
+        "url": "https://www.sciencedirect.com/journal/learning-culture-and-social-interaction/about/call-for-papers",
+        "tag": [
+            "Educational Psychology",
+            "Sociology of Education"
+        ]
+    },
+    {
+        "name": "Educational Policy",
+        "url": "https://journals.sagepub.com/home/epx",
+        "tag": [
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Vocations and Learning",
+        "url": "https://link.springer.com/journal/12186/collections?filter=Open",
+        "tag": [
+            "Vocational & Continuing Education",
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "Journal of Mathematics Teacher Education",
+        "url": "https://link.springer.com/journal/10857/collections?filter=Open",
+        "tag": [
+            "Teacher Education & Development",
+            "Mathematics Education"
+        ]
+    },
+    {
+        "name": "Journal of Teaching in Physical Education",
+        "url": "https://journals.humankinetics.com/page/callforpapers/jtpe",
+        "tag": [
+            "Teacher Education & Development",
+            "Physical Education"
+        ]
+    },
+    {
+        "name": "Journal of Moral Education",
+        "url": "https://www.tandfonline.com/journals/cjme20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Moral/Character Education"
+        ]
+    },
+    {
+        "name": "Research Papers in Education",
+        "url": "https://www.tandfonline.com/journals/rred20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Studies in Continuing Education",
+        "url": "https://www.tandfonline.com/journals/csce20",
+        "tag": [
+            "Vocational & Continuing Education"
+        ]
+    },
+    {
+        "name": "The Journal of Educational Research",
+        "url": "https://www.tandfonline.com/journals/vjer20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Economics of Education Review",
+        "url": "https://www.sciencedirect.com/journal/economics-of-education-review/about/call-for-papers",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Economics of Education"
+        ]
+    },
+    {
+        "name": "Journal of School Health",
+        "url": "https://onlinelibrary.wiley.com/page/journal/17461561/call-for-papers",
+        "tag": [
+            "Subject Education",
+            "Health Education"
+        ]
+    },
+    {
+        "name": "Educational Philosophy and Theory",
+        "url": "https://www.tandfonline.com/journals/cept20",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Philosophy of Education"
+        ]
+    },
+    {
+        "name": "International Journal of Applied Linguistics",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14734192/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "International Journal of Inclusive Education",
+        "url": "https://www.tandfonline.com/journals/tied20",
+        "tag": [
+            "Special Education",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Urban Education",
+        "url": "https://journals.sagepub.com/home/uex",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Urban Education"
+        ]
+    },
+    {
+        "name": "Asia Pacific Journal of Education",
+        "url": "https://www.tandfonline.com/journals/cape20",
+        "tag": [
+            "General Education",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Journal of Literacy Research",
+        "url": "https://journals.sagepub.com/home/jlr",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Journal of Educational and Behavioral Statistics",
+        "url": "https://journals.sagepub.com/home/jeb",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "Journal of Education for Teaching",
+        "url": "https://www.tandfonline.com/journals/cjet20",
+        "tag": [
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Quest",
+        "url": "https://www.tandfonline.com/journals/uqst20",
+        "tag": [
+            "Subject Education",
+            "Physical Education"
+        ]
+    },
+    {
+        "name": "International Journal for Educational and Vocational Guidance",
+        "url": "https://link.springer.com/journal/10775/collections?filter=Open",
+        "tag": [
+            "Vocational & Continuing Education",
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "The Journal of Experimental Education",
+        "url": "https://www.tandfonline.com/journals/vjxe20",
+        "tag": [
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "Educational Assessment, Evaluation and Accountability",
+        "url": "https://link.springer.com/journal/11092/collections?filter=Open",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Educational Assessment"
+        ]
+    },
+    {
+        "name": "Educational Studies",
+        "url": "https://www.tandfonline.com/journals/ceds20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Journal of Research on Educational Effectiveness",
+        "url": "https://www.tandfonline.com/journals/uree20",
+        "tag": [
+            "Educational Psychology",
+            "Education Policy & Social Issues"
+        ]
+    },
+    {
+        "name": "Asia-Pacific Journal of Teacher Education",
+        "url": "https://www.tandfonline.com/journals/capj20",
+        "tag": [
+            "Teacher Education & Development"
+        ]
+    },
+    {
+        "name": "Cultural Studies of Science Education",
+        "url": "https://link.springer.com/journal/11422/collections?filter=Open",
+        "tag": [
+            "Subject Education",
+            "Science Education"
+        ]
+    },
+    {
+        "name": "Literacy",
+        "url": "https://onlinelibrary.wiley.com/page/journal/17414369/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Cambridge Journal of Education",
+        "url": "https://www.tandfonline.com/journals/ccje20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Mathematical Thinking and Learning",
+        "url": "https://www.tandfonline.com/journals/hmtl20",
+        "tag": [
+            "Subject Education",
+            "Mathematics Education"
+        ]
+    },
+    {
+        "name": "Foreign Language Annals",
+        "url": "https://onlinelibrary.wiley.com/page/journal/19449720/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Scandinavian Journal of Educational Research",
+        "url": "https://www.tandfonline.com/journals/csje20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Adult Education Quarterly",
+        "url": "https://journals.sagepub.com/home/aeq",
+        "tag": [
+            "Vocational & Continuing Education"
+        ]
+    },
+    {
+        "name": "Journal of American College Health",
+        "url": "https://www.tandfonline.com/journals/vach20",
+        "tag": [
+            "Subject Education",
+            "Health Education"
+        ]
+    },
+    {
+        "name": "Educational Gerontology",
+        "url": "https://www.tandfonline.com/journals/uedg20",
+        "tag": [
+            "Vocational & Continuing Education",
+            "Educational Gerontology"
+        ]
+    },
+    {
+        "name": "The Reading Teacher",
+        "url": "https://ila.onlinelibrary.wiley.com/hub/journal/19362714/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition",
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "Journal of Adolescent & Adult Literacy",
+        "url": "https://ila.onlinelibrary.wiley.com/hub/journal/19362706/call-for-papers",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Mind, Culture, and Activity",
+        "url": "https://www.tandfonline.com/journals/hmca20",
+        "tag": [
+            "Educational Psychology"
+        ]
+    },
+    {
+        "name": "European Early Childhood Education Research Journal",
+        "url": "https://www.tandfonline.com/journals/recr20",
+        "tag": [
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "International Journal for Academic Development",
+        "url": "https://www.tandfonline.com/journals/rija20",
+        "tag": [
+            "Higher Education"
+        ]
+    },
+    {
+        "name": "International Review of Economics Education",
+        "url": "https://www.sciencedirect.com/journal/international-review-of-economics-education/about/call-for-papers",
+        "tag": [
+            "Subject Education",
+            "Economics Education"
+        ]
+    },
+    {
+        "name": "Journal of Biological Education",
+        "url": "https://www.tandfonline.com/journals/rjbe20",
+        "tag": [
+            "Subject Education",
+            "Biology Education"
+        ]
+    },
+    {
+        "name": "Second Language Research",
+        "url": "https://journals.sagepub.com/home/slr",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Anthropology & Education Quarterly",
+        "url": "https://onlinelibrary.wiley.com/page/journal/15481492/call-for-papers",
+        "tag": [
+            "Education Policy & Social Issues",
+            "Anthropology of Education"
+        ]
+    },
+    {
+        "name": "Journal of Early Childhood Literacy",
+        "url": "https://journals.sagepub.com/home/ecl",
+        "tag": [
+            "Early Childhood Education",
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "International Journal of Art & Design Education",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14768070/call-for-papers",
+        "tag": [
+            "Subject Education",
+            "Art Education"
+        ]
+    },
+    {
+        "name": "International Journal of Music Education",
+        "url": "https://journals.sagepub.com/home/ijm",
+        "tag": [
+            "Subject Education",
+            "Music Education"
+        ]
+    },
+    {
+        "name": "Reading & Writing Quarterly",
+        "url": "https://www.tandfonline.com/journals/urwl20",
+        "tag": [
+            "Language Education & Acquisition"
+        ]
+    },
+    {
+        "name": "Irish Educational Studies",
+        "url": "https://www.tandfonline.com/journals/ries20",
+        "tag": [
+            "General Education"
+        ]
+    },
+    {
+        "name": "Journal of Social Work Education",
+        "url": "https://www.tandfonline.com/journals/uswe20",
+        "tag": [
+            "Vocational & Continuing Education",
+            "Social Work Education"
+        ]
+    },
+    {
+        "name": "Australasian Journal of Early Childhood",
+        "url": "https://journals.sagepub.com/home/aec",
+        "tag": [
+            "Early Childhood Education"
+        ]
+    },
+    {
+        "name": "Health Education Journal",
+        "url": "https://journals.sagepub.com/home/hej",
+        "tag": [
+            "Subject Education",
+            "Health Education"
+        ]
     }
-
-
-
 ]
