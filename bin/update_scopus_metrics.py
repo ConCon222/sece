@@ -173,7 +173,9 @@ class ScopusDrissionCrawler:
                         doc_text = cells[1].text.strip()
                         
                         # 使用正则提取纯数字 (处理 "176 documents" -> "176")
-                        doc_count_match = re.search(r'(\d+)', doc_text)
+                        # 先移除逗号（千位分隔符），处理 "1,001" -> "1001"
+                        doc_text_clean = doc_text.replace(',', '')
+                        doc_count_match = re.search(r'(\d+)', doc_text_clean)
                         doc_count = doc_count_match.group(1) if doc_count_match else "0"
 
                         print(f"解析第 {i} 行 -> 年份: {year_text} | 数量: {doc_count}")

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /journal-rankings/
+permalink: /jrank/
 title: Journal Rankings
 description: HM Score combines journal quality metrics and author-friendliness
 nav: true
@@ -245,43 +245,7 @@ nav_order: 5
   display: inline-block;
   min-width: 35px;
   text-align: center;
-}
-
-.hm-score[data-score="100"], .hm-score[data-score^="9"] {
-  background-color: #28a745;
-}
-
-.hm-score[data-score^="8"] {
-  background-color: #20c997;
-}
-
-.hm-score[data-score^="7"] {
-  background-color: #17a2b8;
-}
-
-.hm-score[data-score^="6"] {
-  background-color: #007bff;
-}
-
-.hm-score[data-score^="5"] {
-  background-color: #6610f2;
-}
-
-.hm-score[data-score^="4"] {
-  background-color: #e83e8c;
-}
-
-.hm-score[data-score^="3"] {
-  background-color: #fd7e14;
-}
-
-.hm-score[data-score^="2"] {
-  background-color: #ffc107;
-  color: #212529;
-}
-
-.hm-score[data-score^="1"], .hm-score[data-score^="0"] {
-  background-color: #6c757d;
+  background-color: #6c757d; /* 默认灰色 */
 }
 
 .statistics-section {
@@ -357,6 +321,42 @@ document.addEventListener('DOMContentLoaded', function() {
   const tableBody = document.getElementById('journal-tbody');
   const rows = Array.from(tableBody.querySelectorAll('tr'));
 
+  // 根据HM分数数值设置背景颜色
+  function setHmScoreColors() {
+    document.querySelectorAll('.hm-score').forEach(function(el) {
+      const score = parseFloat(el.dataset.score);
+      if (isNaN(score)) return;
+      
+      let bgColor, textColor = 'white';
+      if (score >= 90) {
+        bgColor = '#28a745';  // 绿色 - 优秀
+      } else if (score >= 80) {
+        bgColor = '#20c997';  // 青绿色
+      } else if (score >= 70) {
+        bgColor = '#17a2b8';  // 青色
+      } else if (score >= 60) {
+        bgColor = '#007bff';  // 蓝色
+      } else if (score >= 50) {
+        bgColor = '#6610f2';  // 紫色
+      } else if (score >= 40) {
+        bgColor = '#e83e8c';  // 粉色
+      } else if (score >= 30) {
+        bgColor = '#fd7e14';  // 橙色
+      } else if (score >= 20) {
+        bgColor = '#ffc107';  // 黄色
+        textColor = '#212529';
+      } else {
+        bgColor = '#6c757d';  // 灰色
+      }
+      
+      el.style.backgroundColor = bgColor;
+      el.style.color = textColor;
+    });
+  }
+  
+  // 页面加载时设置颜色
+  setHmScoreColors();
+
   function filterTable() {
     const searchTerm = searchInput.value.toLowerCase();
     const selectedQuartile = quartileFilter.value;
@@ -408,3 +408,129 @@ document.addEventListener('DOMContentLoaded', function() {
     <strong>免责声明：</strong>本页面数据仅供参考，原始数据已链接至对应来源网站。请在做出任何决策前自行核实官方信息。
   </small>
 </div>
+
+<!-- 微信二维码浮窗 CSS -->
+<style>
+  .qr-float-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #07c160, #06ae56);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(7, 193, 96, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .qr-float-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.5);
+  }
+  .qr-float-btn img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+  }
+  .qr-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+  }
+  .qr-modal-overlay.active {
+    display: flex;
+  }
+  .qr-modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: qrPopIn 0.3s ease;
+  }
+  @keyframes qrPopIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .qr-modal-content img {
+    width: 280px;
+    height: 280px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  .qr-modal-content h4 {
+    margin: 0 0 8px 0;
+    color: #07c160;
+  }
+  .qr-modal-content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .qr-close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .qr-modal-box {
+    position: relative;
+  }
+</style>
+
+<!-- 微信二维码浮窗 -->
+<div class="qr-float-btn" id="qrFloatBtn" title="Join WeChat Group">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
+    <path d="M8.5 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.5 8c-4.14 0-7.5-2.91-7.5-6.5 0-3.59 3.36-6.5 7.5-6.5S18.5 9.41 18.5 13c0 1.38-.47 2.66-1.27 3.74l.77 2.26-2.72-.9c-1.1.57-2.35.9-3.78.9z"/>
+  </svg>
+</div>
+
+<div class="qr-modal-overlay" id="qrModalOverlay">
+  <div class="qr-modal-box">
+    <div class="qr-modal-content">
+      <button class="qr-close-btn" id="qrCloseBtn">&times;</button>
+      <img src="/assets/img/wechat_qr.png" alt="WeChat QR Code">
+      <h4>💬 学术交流群</h4>
+      <p>
+        欢迎加入学术交流群！<br>
+        期刊资讯分享 · 数据问题反馈 · 新增期刊建议<br>
+        <span class="text-muted" style="font-size: 0.8rem;">Join for academic discussions, data feedback & journal suggestions.</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 二维码浮窗交互
+  document.getElementById('qrFloatBtn').addEventListener('click', function() {
+    document.getElementById('qrModalOverlay').classList.add('active');
+  });
+  document.getElementById('qrCloseBtn').addEventListener('click', function() {
+    document.getElementById('qrModalOverlay').classList.remove('active');
+  });
+  document.getElementById('qrModalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.classList.remove('active');
+    }
+  });
+</script>
