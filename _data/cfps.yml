@@ -1,27 +1,3 @@
-- journal: British Journal of Educational Technology
-  publisher: Wiley
-  tag: &id001
-  - Educational Technology
-  title: 'From Chaos to Clarity: Unveiling the Dynamics of Learning Processes with Complexity Sciences'
-  abstract_deadline: ''
-  fullpaper_deadline: 15 December 2025
-  fullpaper_deadline_sort: '2025-12-15'
-  editors: Daryn Dever, University of Florida, USA; Sonsoles López-Pernas, University of Eastern Finland, Finland; Mar Pérez-Sanagustín,
-    Université Paul Sabatier Toulouse III, France; Ángel Hernández-García, Universidad Politécnica de Madrid, Spain; Avi Kaplan,
-    Temple University, USA; Mohammed Saqr, University of Eastern Finland, Finland
-  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/complexity-sciences-and-learning
-  description: ''
-- journal: British Journal of Educational Technology
-  publisher: Wiley
-  tag: *id001
-  title: EdTech implementation research in low- and middle-income countries (LMICs)
-  abstract_deadline: ''
-  fullpaper_deadline: 15 December 2025
-  fullpaper_deadline_sort: '2025-12-15'
-  editors: Annette Zhao, EdTech Hub & Jigsaw, UK; Loise Wambui, University of Nairobi, Kenya; Laura Czerniewicz, University
-    of Cape Town, South Africa; Louis Major, University of Manchester & EdTech Hub, UK
-  link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/homepage/call-for-papers/edtech-in-lmics
-  description: ''
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
   tag:
@@ -37,7 +13,7 @@
     on Harnessing Large Language Models for Teaching and Learning: Challenges, Opportunities, and ...'
 - journal: International Journal of Applied Linguistics
   publisher: Wiley
-  tag: &id002
+  tag: &id001
   - Language Education & Acquisition
   title: 'Ethical AI in Applied Linguistics: From Ethics to Praxis'
   abstract_deadline: ''
@@ -121,7 +97,7 @@
     the RISE readership and the wider science education research community. The current collection prese...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id003
+  tag: &id002
   - Medical Education
   title: 'Breaking disciplinary silos in medical education: advancing interprofessional collaboration in the era of AI'
   abstract_deadline: ''
@@ -171,7 +147,7 @@
   description: Desirée Joosten - ten Brinke , Maastricht University desiree.joosten-tenbrinke@maastrichtuniversity.nl
 - journal: International Journal of Applied Linguistics
   publisher: Wiley
-  tag: *id002
+  tag: *id001
   title: 'Linguistic Racism in the Age of Generative AI: Challenges for Applied Linguistics and Beyond'
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2026
@@ -194,7 +170,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Regional and international policies in medical education
   abstract_deadline: ''
   fullpaper_deadline: 19 January 2026
@@ -205,7 +181,8 @@
     medical education. As healthcare systems evolve, regional and international policies play a crucia...
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id001
+  tag: &id003
+  - Educational Technology
   title: Pedagogical and methodological advancements in fostering students' AI literacy skills
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2026
@@ -217,7 +194,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id001
+  tag: *id003
   title: Digital technologies, algorithms and the changing topology of (teacher) education
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2026
@@ -351,7 +328,7 @@
     and knowledge construction and dissemination worldwide. Yet the integration of GenAI into multili...
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id001
+  tag: *id003
   title: 'Generative AI in Computer-Supported Collaborative Learning: Unpacking the Processes and Dynamics of Human-AI Collaboration'
   abstract_deadline: 14 November 2025
   fullpaper_deadline: 14 February 2026
@@ -374,7 +351,7 @@
   description: Dr. Mikio Hayashi , Kansai Medical University, Center for Health Professions Education hayasmik@hirakata.kmu.ac.jp
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Environmental sustainability across the medical education curriculum
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2026
@@ -385,7 +362,7 @@
     medical education curriculum. This Collection aims to explore how medical curricula can incorporat...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: 'Shaping the future of ultrasound education: advancing equity, innovation, and faculty development'
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2026
@@ -431,7 +408,7 @@
     on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Artificial intelligence in curriculum development and assessment
   abstract_deadline: ''
   fullpaper_deadline: 02 March 2026
@@ -442,7 +419,7 @@
     assessment Collection. The incorporation of AI technologies and methodologies into medical and all...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Tools for assessment of medical skills
   abstract_deadline: ''
   fullpaper_deadline: 12 March 2026
@@ -535,7 +512,7 @@
   description: Gina Chin-Yi Yang , Hong Kong University & Lingnan University, Hong Kong SAR, China
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Intensive care education
   abstract_deadline: ''
   fullpaper_deadline: 17 April 2026
@@ -546,7 +523,7 @@
     of care in high-acuity settings requires not only clinical expertise but also rapid decision-makin...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: The role of medical humanities in medical education
   abstract_deadline: ''
   fullpaper_deadline: 24 April 2026
@@ -665,7 +642,7 @@
   description: Dr. Suzanne Le-May Sheffield , Dalhousie University Suzanne.Le-May.Sheffield@dal.ca
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id001
+  tag: *id003
   title: 'The Future of Learning Analytics Dashboards: Bridging Design, Sense-Making and Pedagogical Impact'
   abstract_deadline: ''
   fullpaper_deadline: 15 May 2026
@@ -677,7 +654,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
   fullpaper_deadline: 20 May 2026
@@ -723,7 +700,7 @@
     education - an area that has received limited attention despite the growing discourse on Gen AI ...
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id001
+  tag: *id003
   title: Building Inclusive Generative AI for Learners with Special Educational Needs
   abstract_deadline: 2 February 2026
   fullpaper_deadline: 1 June 2026
@@ -770,7 +747,7 @@
   description: Associate Professor Gail Crimmins , University of the Sunshine Coast gcrimmin@usc.edu.au
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Transnational medical education programs
   abstract_deadline: ''
   fullpaper_deadline: 23 June 2026
@@ -876,7 +853,7 @@
     on “Mathematics in and for STEM Education.” This collection aims to publish high-quality research pa...
 - journal: International Journal of Applied Linguistics
   publisher: Wiley
-  tag: *id002
+  tag: *id001
   title: Researching and Applying Metaphor in Professional Contexts
   abstract_deadline: ''
   fullpaper_deadline: 30 June 2026
@@ -924,7 +901,7 @@
   description: Peter Aggleton , The Australian National University, Australia P.Aggleton@unsw.edu.au
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: 'Clinical reasoning education: advances and updates'
   abstract_deadline: ''
   fullpaper_deadline: 03 August 2026
@@ -935,7 +912,7 @@
     Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 10 August 2026
@@ -946,7 +923,7 @@
     Mental illnesses account for a significant portion of the global disease burden, underlying the...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Lifelong learning and patient safety
   abstract_deadline: ''
   fullpaper_deadline: 18 August 2026
@@ -1017,7 +994,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id002
   title: Palliative care education
   abstract_deadline: ''
   fullpaper_deadline: 01 September 2026
@@ -1080,8 +1057,7 @@
   abstract_deadline: ''
   fullpaper_deadline: 15 October 2026
   fullpaper_deadline_sort: '2026-10-15'
-  editors: 'Guest editors: Kai-Sean Lee, Stefanie Kate Benjamin, Hongping Zhang, Swechchha Subedi, Shawn Bucher Submission
-    deadline: 15 October 2026'
+  editors: ''
   link: https://www.sciencedirect.com/special-issue/329013/unlearning-qualitative-inquiry
   description: ''
 - journal: Research in Science Education
