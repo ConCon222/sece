@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: No one can reinforcements us, except outselves | <a href='#https://english.ecnu.edu.cn'>East China Normal University</a>.
+subtitle: No one can reinforcements us, except ourselves | <a href='#https://english.ecnu.edu.cn'>East China Normal University</a>.
 
 profile:
   align: right
