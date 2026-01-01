@@ -60,7 +60,7 @@
   description: ''
 - journal: Research in Science Education
   publisher: Springer
-  tag: &id016
+  tag:
   - Subject Education
   - Science Education
   title: STEM and teaching engineering design
@@ -123,7 +123,7 @@
   description: Desirée Joosten - ten Brinke , Maastricht University desiree.joosten-tenbrinke@maastrichtuniversity.nl
 - journal: International Journal of Applied Linguistics
   publisher: Wiley
-  tag: &id018
+  tag: &id017
   - Language Education & Acquisition
   title: 'Linguistic Racism in the Age of Generative AI: Challenges for Applied Linguistics and Beyond'
   abstract_deadline: ''
@@ -292,7 +292,7 @@
   description: ''
 - journal: Language Policy
   publisher: Springer
-  tag: &id017
+  tag: &id016
   - Education Policy & Social Issues
   - Language Education & Acquisition
   title: 'Multilingual GenAI: Policy Gaps, Societal Consequences, and Decolonial Praxis'
@@ -675,6 +675,19 @@
   link: https://link.springer.com/collections/iddjabccja
   description: This special issue aims to explore the nature of human interaction with Generative AI in the context of higher
     education - an area that has received limited attention despite the growing discourse on Gen AI ...
+- journal: Journal of Computing in Higher Education
+  publisher: Springer
+  tag:
+  - Higher Education
+  - Educational Technology
+  title: STEM Microcredentials in Higher Education — Organizational Barriers and Value Propositions
+  abstract_deadline: ''
+  fullpaper_deadline: 31 May 2026
+  fullpaper_deadline_sort: '2026-05-31'
+  editors: ''
+  link: https://www.springer.com/collections/edfacadjgg
+  description: Over the past decade, higher education has witnessed a rapid proliferation of microcredentials, particularly
+    in STEM fields. This growth reflects both the urgent demands of a shifting workforce and the limit...
 - journal: British Journal of Educational Technology
   publisher: Wiley
   tag: *id002
@@ -700,7 +713,7 @@
   description: Luis Javier Pentón Herrera , University of Economics and Human Sciences, Warsaw, Poland luis.penton@gmail.com
 - journal: 'Discourse: Studies in the Cultural Politics of Education'
   publisher: Taylor & Francis
-  tag: &id019
+  tag: &id018
   - Education Policy & Social Issues
   - Sociology of Education
   title: 'Globalisation Processes and the Cultural Politics of Education: Essays in Honour of Bob Lingard and Fazal Rizvi'
@@ -793,7 +806,9 @@
     pandemics, and socio-political crises—have renewed attention to the importance of the future....
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id016
+  tag: &id019
+  - Subject Education
+  - Science Education
   title: 'Special Issue: Research-Informed Policy and Practice in Science Education'
   abstract_deadline: ''
   fullpaper_deadline: 30 June 2026
@@ -804,7 +819,7 @@
     At the same time, debates have emerged over the extent to which educational practice and pol...
 - journal: Language Policy
   publisher: Springer
-  tag: *id017
+  tag: *id016
   title: 'Time and temporality in the internationalization of education in the Global South(s): A new research agenda in language
     policy'
   abstract_deadline: ''
@@ -830,7 +845,7 @@
     on “Mathematics in and for STEM Education.” This collection aims to publish high-quality research pa...
 - journal: International Journal of Applied Linguistics
   publisher: Wiley
-  tag: *id018
+  tag: *id017
   title: Researching and Applying Metaphor in Professional Contexts
   abstract_deadline: ''
   fullpaper_deadline: 30 June 2026
@@ -911,7 +926,7 @@
     healthcare delivery becomes increasingly complex, shaped by biomedical advances, digital transform...
 - journal: 'Discourse: Studies in the Cultural Politics of Education'
   publisher: Taylor & Francis
-  tag: *id019
+  tag: *id018
   title: 'The Spatialization of Education and the Educationalization of Space: Divergent Studies of Affect and Power in Educational
     Research'
   abstract_deadline: 12 January 2026
@@ -937,7 +952,7 @@
   description: ''
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id016
+  tag: *id019
   title: 'Special Issue: Science Education for Agency and Scientific Literacy in Understanding Climate Change'
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2026
@@ -1039,7 +1054,7 @@
   description: ''
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id016
+  tag: *id019
   title: Argumentation and the problem of misinformation in science education
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -1050,7 +1065,7 @@
     reshaped by digital technologies and the diverse ways in which individuals engage with (mis)info...
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id016
+  tag: *id019
   title: Multimodal literacies and representations for learning
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -1061,7 +1076,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id016
+  tag: *id019
   title: Artificial Intelligence in Science Education
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -1504,7 +1519,7 @@
     forms of civic, workplace, and community life.'
 - journal: Asia Pacific Journal of Education
   publisher: Taylor & Francis
-  tag: &id036
+  tag:
   - General Education
   - Education Policy & Social Issues
   title: Asia Pacific Journal of Education
@@ -1601,7 +1616,9 @@
     health literacy, and health promotion
 - journal: Asia Pacific Journal of Education
   publisher: Taylor & Francis
-  tag: *id036
+  tag:
+  - General Education
+  - Education Policy & Social Issues
   title: 404 Error. Page not found.
   abstract_deadline: ''
   fullpaper_deadline: ''
