@@ -1,15 +1,3 @@
-- journal: BMC Medical Education
-  publisher: Springer
-  tag:
-  - Medical Education
-  title: Nursing education
-  abstract_deadline: ''
-  fullpaper_deadline: 22 December 2025
-  fullpaper_deadline_sort: '2025-12-22'
-  editors: ''
-  link: https://link.springer.com/collections/bajaciifif
-  description: BMC Medical Education is inviting submissions for a Collection entitled Nursing education. As the complexity
-    of patient care increases, so does the need for well-trained nursing professionals. The landscape ...
 - journal: Computers & Education
   publisher: Elsevier
   tag:
@@ -735,6 +723,16 @@
     University)
   link: https://think.taylorandfrancis.com/special_issues/looking-back-moving-forward-gender-equity-in-higher-education-and-research-2015-2025/
   description: Associate Professor Gail Crimmins , University of the Sunshine Coast gcrimmin@usc.edu.au
+- journal: Learning and Instruction
+  publisher: Elsevier
+  tag: *id008
+  title: Minding Students’ Musical Skill Acquisition in Education
+  abstract_deadline: ''
+  fullpaper_deadline: 21 June 2026
+  fullpaper_deadline_sort: '2026-06-21'
+  editors: 'Guest editors: Daniel Müllensiefen, Patrizia Bieber, Bret Smith, Richard Göllner'
+  link: https://www.sciencedirect.com/special-issue/329122/minding-students-musical-skill-acquisition-in-education
+  description: ''
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id001
