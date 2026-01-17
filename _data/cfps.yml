@@ -38,7 +38,7 @@
   description: ''
 - journal: 'Assessment in Education: Principles, Policy & Practice'
   publisher: Taylor & Francis
-  tag: &id005
+  tag:
   - Education Policy & Social Issues
   - Educational Assessment
   title: 'Responsible AI in Higher Education Assessment: Principles, Policy & Practice'
@@ -186,7 +186,7 @@
   description: ''
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id006
+  tag: &id005
   - Language Education & Acquisition
   title: 'Special Issue: Teachers’ Knowledge of Language and Literacy Concepts'
   abstract_deadline: ''
@@ -222,7 +222,7 @@
     in East Asia, which target at politically more just and culturally more specific understandin...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: &id009
+  tag: &id008
   - Language Education & Acquisition
   - Educational Technology
   title: Inclusive CALL
@@ -234,7 +234,7 @@
   description: ''
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: &id008
+  tag: &id007
   - General Education
   title: Problem Solving in Early Childhood Education
   abstract_deadline: ''
@@ -269,7 +269,7 @@
   description: ''
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: &id007
+  tag: &id006
   - Medical Education
   title: Supporting Healthcare Workers and Patients with Disabilities in Medicine
   abstract_deadline: ''
@@ -303,7 +303,9 @@
     advancing equity, innovation, and faculty development. The first wave of ultrasound curricu...'
 - journal: 'Assessment in Education: Principles, Policy & Practice'
   publisher: Taylor & Francis
-  tag: *id005
+  tag: &id009
+  - Education Policy & Social Issues
+  - Educational Assessment
   title: 'Recent Pressures on Higher Education Admissions Systems: Lessons for Educational Assessment'
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2026
@@ -313,7 +315,7 @@
   description: Maria Veronica Santelices , Pontificia Universidad Católica de Chile vsanteli@uc.cl
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: Multi-Tiered System of Supports in Literacy
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2026
@@ -360,7 +362,7 @@
     Effective assessment is essential for ensuring that future health professionals trainees develop ...
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: *id007
+  tag: *id006
   title: 'Artificial Intelligence in Medical Education: Shaping the Future of Teaching, Learning, and Assessment'
   abstract_deadline: ''
   fullpaper_deadline: 25 March 2026
@@ -383,7 +385,7 @@
     impacts education, spanning multiple critical areas that address both current challenges and futur...
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id008
+  tag: *id007
   title: 'Retrieval Practice in Meaningful Learning: When and Why Does it Work?'
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2026
@@ -464,7 +466,7 @@
     education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id009
+  tag: *id008
   title: Agency in language teaching and learning with GenAI
   abstract_deadline: 30 June 2025
   fullpaper_deadline: 30 April 2026
@@ -551,7 +553,7 @@
   description: ''
 - journal: 'Assessment in Education: Principles, Policy & Practice'
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id009
   title: Examining Assessment to Support Learning Across Borders and Systems of Education
   abstract_deadline: 01 October 2025
   fullpaper_deadline: 01 May 2026
@@ -702,7 +704,7 @@
   description: Associate Professor Gail Crimmins , University of the Sunshine Coast gcrimmin@usc.edu.au
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id008
+  tag: *id007
   title: Minding Students’ Musical Skill Acquisition in Education
   abstract_deadline: ''
   fullpaper_deadline: 21 June 2026
@@ -734,7 +736,7 @@
   description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id009
+  tag: *id008
   title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
   abstract_deadline: 31 October 2025
   fullpaper_deadline: 30 June 2026
@@ -855,7 +857,7 @@
     Problematizing and Moving Beyond the Always Successful Narrative Theme and Purpose This Special Issu...'
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: *id007
+  tag: *id006
   title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
   abstract_deadline: ''
   fullpaper_deadline: 20 July 2026
@@ -1168,7 +1170,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: ARWA
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1648,5 +1650,29 @@
   fullpaper_deadline_sort: '9999-99-99'
   editors: ''
   link: https://think.taylorandfrancis.com/special_issues/supporting-wellbeing-farming-communities/
+  description: If you're one of our journal editors looking for policy advice, journal management tips, and support from your
+    peers then Editor Resources is what you want.
+- journal: Studies in Science Education
+  publisher: Taylor & Francis
+  tag:
+  - Review Journal
+  title: About the role
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://think.taylorandfrancis.com/editor_recruitment/associate-editors-needed-for-studies-in-science-education/
+  description: 'The central aim of Studies in Science Education is to publish critical and systematic review articles of the
+    highest quality which provide analytical syntheses of research into key topics and issues in science education. In addressing
+    this aim, the Editor and Editorial Advisory Board, are guided by a commitment to:'
+- journal: 'Assessment in Education: Principles, Policy & Practice'
+  publisher: Taylor & Francis
+  tag: *id009
+  title: 404 Error. Page not found.
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://think.taylorandfrancis.com/special_issues/responsible-ai-in-higher-education-assessment/
   description: If you're one of our journal editors looking for policy advice, journal management tips, and support from your
     peers then Editor Resources is what you want.
