@@ -1,16 +1,3 @@
-- journal: Educational Studies in Mathematics
-  publisher: Springer
-  tag:
-  - Subject Education
-  - Mathematics Education
-  title: 'Special Issue: Cultural Practices in Mathematical Argument'
-  abstract_deadline: ''
-  fullpaper_deadline: 10 January 2026
-  fullpaper_deadline_sort: '2026-01-10'
-  editors: ''
-  link: https://link.springer.com/collections/ibbfbhdcag
-  description: 'Call for Abstracts for a Special Issue in Educational Studies in Mathematics: Cultural Practices in Mathematical
-    Argument Guest Editors: Yusuke Shinno, Christine Knipping, Takeshi Miyakawa, and David A Reid ...'
 - journal: The Journal of Agricultural Education and Extension
   publisher: Taylor & Francis
   tag:
@@ -62,7 +49,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id004
+  tag:
   - Medical Education
   title: Regional and international policies in medical education
   abstract_deadline: ''
@@ -269,7 +256,8 @@
   description: Dr. Mikio Hayashi , Kansai Medical University, Center for Health Professions Education hayasmik@hirakata.kmu.ac.jp
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: &id004
+  - Medical Education
   title: Environmental sustainability across the medical education curriculum
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2026
@@ -416,20 +404,6 @@
   editors: Joana Cadima (University of Porto); Abbie Raikes (University of Nebraska Medical Center)
   link: https://think.taylorandfrancis.com/special_issues/high-quality-practices-in-early-childhood-education-and-care-global-and-culturally-situated-perspectives/
   description: ''
-- journal: Gender and Education
-  publisher: Taylor & Francis
-  tag: &id013
-  - Education Policy & Social Issues
-  - Gender and Education
-  title: Gender, Sexuality and Education in Chinese Contexts
-  abstract_deadline: 30 September 2025
-  fullpaper_deadline: 03 April 2026
-  fullpaper_deadline_sort: '2026-04-03'
-  editors: Emily Gray (Monash University, Australia); Catherine Atkinson-Ross (University of Manchester, UK); William Feng
-    (The Hong Kong Polytechnic University, Hong Kong SAR, China); Wang Xiying (Beijing Normal University, China); Gina Chin-Yi
-    Yang (Hong Kong University & Lingnan University, Hong Kong SAR, China); Yuwei Xu (University of Nottingham, UK)
-  link: https://think.taylorandfrancis.com/special_issues/gender-sexuality-and-education-in-chinese-contexts/
-  description: Gina Chin-Yi Yang , Hong Kong University & Lingnan University, Hong Kong SAR, China
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id004
@@ -452,6 +426,20 @@
   link: https://link.springer.com/collections/gghecfhhce
   description: BMC Medical Education is calling for papers to a Collection entitled The role of medical humanities in medical
     education. The integration of medical humanities into medical education has gained recognition a...
+- journal: Gender and Education
+  publisher: Taylor & Francis
+  tag: &id013
+  - Education Policy & Social Issues
+  - Gender and Education
+  title: Gender, Sexuality and Education in Chinese Contexts
+  abstract_deadline: 30 September 2025
+  fullpaper_deadline: 30 April 2026
+  fullpaper_deadline_sort: '2026-04-30'
+  editors: Emily Gray (Monash University, Australia); Catherine Atkinson-Ross (University of Manchester, UK); William Feng
+    (The Hong Kong Polytechnic University, Hong Kong SAR, China); Wang Xiying (Beijing Normal University, China); Gina Chin-Yi
+    Yang (Hong Kong University & Lingnan University, Hong Kong SAR, China); Yuwei Xu (University of Nottingham, UK)
+  link: https://think.taylorandfrancis.com/special_issues/gender-sexuality-and-education-in-chinese-contexts/
+  description: Gina Chin-Yi Yang , Hong Kong University & Lingnan University, Hong Kong SAR, China
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
   tag: *id008
@@ -683,7 +671,7 @@
   publisher: Taylor & Francis
   tag: *id013
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
-  abstract_deadline: 15 December 2025
+  abstract_deadline: 31 December 2025
   fullpaper_deadline: 15 June 2026
   fullpaper_deadline_sort: '2026-06-15'
   editors: Associate Professor Gail Crimmins (University of the Sunshine Coast); Associate Professor Samantha Owen (Curtin
