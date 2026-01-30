@@ -390,6 +390,17 @@
   link: https://link.springer.com/collections/gghecfhhce
   description: BMC Medical Education is calling for papers to a Collection entitled The role of medical humanities in medical
     education. The integration of medical humanities into medical education has gained recognition a...
+- journal: Higher Education Research & Development
+  publisher: Taylor & Francis
+  tag:
+  - Higher Education
+  title: Leadership of learning, teaching and assessment to 2050 and beyond
+  abstract_deadline: ''
+  fullpaper_deadline: 24 April 2026
+  fullpaper_deadline_sort: '2026-04-24'
+  editors: Dr Lia Blaj-Ward (Nottingham Trent University, UK); Professor Susan Rowland (The University of Sydney, Australia)
+  link: https://think.taylorandfrancis.com/special_issues/leadership-of-learning-teaching-and-assessment-to-2050-and-beyond/
+  description: Professor Susan Rowland , The University of Sydney, Australia susan.rowland@sydney.edu.au
 - journal: Gender and Education
   publisher: Taylor & Francis
   tag: &id013
@@ -1003,6 +1014,18 @@
   fullpaper_deadline_sort: '2026-10-15'
   editors: ''
   link: https://www.sciencedirect.com/special-issue/329013/unlearning-qualitative-inquiry
+  description: ''
+- journal: Language, Culture and Curriculum
+  publisher: Taylor & Francis
+  tag:
+  - Language Education & Acquisition
+  - Curriculum Studies
+  title: Linguistic racism and discrimination in higher education
+  abstract_deadline: 15 March 2027
+  fullpaper_deadline: 01 December 2026
+  fullpaper_deadline_sort: '2026-12-01'
+  editors: Stephen May (University of Auckland, New Zealand); Mi Yung Park (University of Auckland, New Zealand)
+  link: https://think.taylorandfrancis.com/special_issues/linguistic-racism-and-discrimination-in-higher-education/
   description: ''
 - journal: Research in Science Education
   publisher: Springer
