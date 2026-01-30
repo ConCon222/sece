@@ -510,9 +510,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="qr-modal-content">
       <button class="qr-close-btn" id="qrCloseBtn">&times;</button>
       <img src="/assets/img/wechat_qr.png" alt="WeChat QR Code">
-      <h4>💬 学术交流群</h4>
+      <h4>学术柴犬交流群</h4>
       <p>
-        欢迎加入学术交流群！<br>
+        WeChat: whmtech<br>
         期刊资讯分享 · 数据问题反馈 · 新增期刊建议<br>
         <span class="text-muted" style="font-size: 0.8rem;">Join for academic discussions, data feedback & journal suggestions.</span>
       </p>
