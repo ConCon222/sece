@@ -1,42 +1,6 @@
-- journal: Computer Assisted Language Learning
-  publisher: Taylor & Francis
-  tag:
-  - Language Education & Acquisition
-  - Educational Technology
-  title: Inclusive CALL
-  abstract_deadline: 15 October 2025
-  fullpaper_deadline: 01 February 2026
-  fullpaper_deadline_sort: '2026-02-01'
-  editors: Glenn Stockwell (Waseda University); Yijen Wang (Waseda University)
-  link: https://think.taylorandfrancis.com/special_issues/inclusive-call/
-  description: ''
-- journal: Learning and Instruction
-  publisher: Elsevier
-  tag: &id004
-  - General Education
-  title: Problem Solving in Early Childhood Education
-  abstract_deadline: ''
-  fullpaper_deadline: 01 February 2026
-  fullpaper_deadline_sort: '2026-02-01'
-  editors: 'Guest editors: Lyn English, Joke Torbeyns, Pirjo Aunio, Emily Farran , Joris Van Elsen'
-  link: https://www.sciencedirect.com/special-issue/324588/problem-solving-in-early-childhood-education
-  description: ''
-- journal: Language Policy
-  publisher: Springer
-  tag:
-  - Education Policy & Social Issues
-  - Language Education & Acquisition
-  title: 'Multilingual GenAI: Policy Gaps, Societal Consequences, and Decolonial Praxis'
-  abstract_deadline: ''
-  fullpaper_deadline: 01 February 2026
-  fullpaper_deadline_sort: '2026-02-01'
-  editors: ''
-  link: https://link.springer.com/collections/fjbebeejei
-  description: Generative artificial intelligence (GenAI) is rapidly transforming communication, education, human relations,
-    and knowledge construction and dissemination worldwide. Yet the integration of GenAI into multili...
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: &id007
+  tag: &id006
   - Educational Technology
   title: 'Generative AI in Computer-Supported Collaborative Learning: Unpacking the Processes and Dynamics of Human-AI Collaboration'
   abstract_deadline: 14 November 2025
@@ -95,7 +59,7 @@
     advancing equity, innovation, and faculty development. The first wave of ultrasound curricu...'
 - journal: 'Assessment in Education: Principles, Policy & Practice'
   publisher: Taylor & Francis
-  tag: &id005
+  tag: &id004
   - Education Policy & Social Issues
   - Educational Assessment
   title: 'Recent Pressures on Higher Education Admissions Systems: Lessons for Educational Assessment'
@@ -118,7 +82,7 @@
     regardless of their socioeconomic, cultural, or ability background, can access quality educatio...
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: &id009
+  tag: &id008
   - Educational Technology
   - Higher Education
   title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
@@ -188,7 +152,8 @@
     impacts education, spanning multiple critical areas that address both current challenges and futur...
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id004
+  tag: &id010
+  - General Education
   title: 'Retrieval Practice in Meaningful Learning: When and Why Does it Work?'
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2026
@@ -279,7 +244,7 @@
   description: Professor Susan Rowland , The University of Sydney, Australia susan.rowland@sydney.edu.au
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id010
+  tag: &id009
   - Education Policy & Social Issues
   - Gender and Education
   title: Gender, Sexuality and Education in Chinese Contexts
@@ -344,7 +309,7 @@
   description: Ning Ning , University of Nottingham, UK & University of Jinan, China alynn2@nottingham.ac.uk
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: &id008
+  tag: &id007
   - General Education
   - Higher Education
   title: 'Learning and Teaching with Social Justice in the University Classroom: Contemporary Approaches and Challenges'
@@ -369,7 +334,7 @@
   description: ''
 - journal: Science Education
   publisher: Wiley
-  tag: &id006
+  tag: &id005
   - Subject Education
   - Science Education
   title: 'From Manifesto to Collective Praxis: Towards Critical-Feminist and Justice-Centered Epistemic Futures in Science
@@ -382,7 +347,7 @@
   description: ''
 - journal: 'Assessment in Education: Principles, Policy & Practice'
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id004
   title: Examining Assessment to Support Learning Across Borders and Systems of Education
   abstract_deadline: 01 October 2025
   fullpaper_deadline: 01 May 2026
@@ -405,7 +370,7 @@
   description: Dr. Suzanne Le-May Sheffield , Dalhousie University Suzanne.Le-May.Sheffield@dal.ca
 - journal: Science Education
   publisher: Wiley
-  tag: *id006
+  tag: *id005
   title: A Manifesto for Critical-Feminist Science Education
   abstract_deadline: ''
   fullpaper_deadline: 1 May 2026
@@ -415,7 +380,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id007
+  tag: *id006
   title: 'The Future of Learning Analytics Dashboards: Bridging Design, Sense-Making and Pedagogical Impact'
   abstract_deadline: ''
   fullpaper_deadline: 15 May 2026
@@ -438,7 +403,7 @@
     Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: *id008
+  tag: *id007
   title: 'The Future of the Doctorate: Professional, Collaborative, and Practice-Based Research in UK Higher Education'
   abstract_deadline: 28 November 2025
   fullpaper_deadline: 29 May 2026
@@ -449,7 +414,7 @@
   description: ''
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag:
+  tag: &id034
   - Educational Technology
   title: 'Special Issue: Generative AI and the Future of K-12 Education - Towards Sustainable and Ethical Innovations to Strengthen
     Human Agency'
@@ -462,7 +427,7 @@
     practice on the responsible, sustainable, and ethical use of GenAI in K-12 education, promoting the...
 - journal: International Journal of Educational Technology in Higher Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: Human Interaction with Gen AI Across Learning and Teaching Processes in Higher Education
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2026
@@ -523,7 +488,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id007
+  tag: *id006
   title: Building Inclusive Generative AI for Learners with Special Educational Needs
   abstract_deadline: 2 February 2026
   fullpaper_deadline: 1 June 2026
@@ -535,7 +500,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id010
+  tag: *id009
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
   abstract_deadline: 31 December 2025
   fullpaper_deadline: 15 June 2026
@@ -546,7 +511,7 @@
   description: Associate Professor Gail Crimmins , University of the Sunshine Coast gcrimmin@usc.edu.au
 - journal: Learning and Instruction
   publisher: Elsevier
-  tag: *id004
+  tag: *id010
   title: Minding Students’ Musical Skill Acquisition in Education
   abstract_deadline: ''
   fullpaper_deadline: 21 June 2026
@@ -1323,7 +1288,7 @@
   description: ''
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: &id034
+  tag:
   - General Education
   title: Call for papers
   abstract_deadline: ''
@@ -1614,7 +1579,8 @@
     peers then Editor Resources is what you want.
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: *id034
+  tag: &id035
+  - General Education
   title: EERJ Special Issues/Collections
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1623,3 +1589,24 @@
   link: https://journals.sagepub.com/page/eer/special_issues_collections
   description: Thank you for your interest. If you would like to submit a Special Issue or Collection proposal please click
     the Submit Now button.
+- journal: Educational Technology Research and Development
+  publisher: Springer
+  tag: *id034
+  title: Open Call for ETR&D Special Issue Proposals
+  abstract_deadline: ''
+  fullpaper_deadline: Ongoing
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://link.springer.com/collections/ejeacbjgdg
+  description: Educational Technology Research and Development (ETR&D) invites proposals for Special Issues that address timely,
+    significant, and innovative topics in the field of educational technology research and develo...
+- journal: European Educational Research Journal
+  publisher: SAGE
+  tag: *id035
+  title: EERJ Call for Papers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://journals.sagepub.com/page/eer/call-for-papers
+  description: Please click More to see open EERJ Call for Papers.
