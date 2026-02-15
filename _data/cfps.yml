@@ -642,6 +642,19 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/14734192/call-for-papers/si-2025-001471
   description: ''
+- journal: Language, Culture and Curriculum
+  publisher: Taylor & Francis
+  tag: &id020
+  - Language Education & Acquisition
+  - Curriculum Studies
+  title: The impact of Artificial Intelligence on English-medium instruction teaching and learning at university level
+  abstract_deadline: 03 March 2026
+  fullpaper_deadline: 30 June 2026
+  fullpaper_deadline_sort: '2026-06-30'
+  editors: Marta Aguilar-Pérez (Universitat Politècnica de Catalunya (Spain)); David Lasagabaster (Universidad del Pais Vasco
+    (Spain))
+  link: https://think.taylorandfrancis.com/special_issues/the-impact-of-artificial-intelligence-on-english-medium-instruction-teaching-and-learning-at-university-level/
+  description: Marta Aguilar-Pérez , Universitat Politècnica de Catalunya (Spain) marta.aguilar@upc.edu
 - journal: Academic Psychiatry
   publisher: Springer
   tag: &id022
@@ -866,9 +879,7 @@
   description: ''
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: &id020
-  - Language Education & Acquisition
-  - Curriculum Studies
+  tag: *id020
   title: Linguistic racism and discrimination in higher education
   abstract_deadline: 15 March 2026
   fullpaper_deadline: 01 December 2026
