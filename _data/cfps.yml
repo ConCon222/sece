@@ -1648,3 +1648,14 @@
   editors: ''
   link: https://journals.sagepub.com/page/eer/call-for-papers
   description: Please click More to see open EERJ Call for Papers.
+- journal: Academic Psychiatry
+  publisher: Springer
+  tag: *id022
+  title: Advancing Competency-Based Medical Education in Psychiatry Training
+  abstract_deadline: ''
+  fullpaper_deadline: Ongoing
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://link.springer.com/collections/dhigbaffja
+  description: This collection seeks to bring together scholarly, empirical, and practice-informed work that advances understanding
+    of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
