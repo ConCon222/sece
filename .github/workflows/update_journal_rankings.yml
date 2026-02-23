@@ -3,7 +3,7 @@ name: Update Journal Rankings
 on:
   schedule:
     # Run on the 3rd of every month at 2 AM UTC (10 AM Beijing time)
-    - cron: '0 2 3 * *'
+    - cron: '0 2 5,25 * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
