@@ -208,7 +208,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
-  - jekyll-sitemap
+  #- jekyll-sitemap
   - jekyll-tabs
   - jekyll-terser
   - jekyll-toc
@@ -220,7 +220,7 @@ defaults:
   - scope:
       path: "assets"
     values:
-      sitemap: true
+      sitemap: false
 
 sass:
   style: compressed
