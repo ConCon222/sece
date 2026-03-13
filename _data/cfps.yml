@@ -1,29 +1,3 @@
-- journal: International Journal of Educational Technology in Higher Education
-  publisher: Springer
-  tag:
-  - Educational Technology
-  - Higher Education
-  title: 'Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching and Learning in Higher
-    Education'
-  abstract_deadline: ''
-  fullpaper_deadline: 01 March 2026
-  fullpaper_deadline_sort: '2026-03-01'
-  editors: ''
-  link: https://link.springer.com/collections/cgfhfcafai
-  description: 'International Journal of Educational Technology in Higher Education is calling for submissions to our Collection
-    on Credentials in Artificial Intelligence: International Perspectives on Transforming Teaching...'
-- journal: BMC Medical Education
-  publisher: Springer
-  tag:
-  - Medical Education
-  title: Artificial intelligence in curriculum development and assessment
-  abstract_deadline: ''
-  fullpaper_deadline: 02 March 2026
-  fullpaper_deadline_sort: '2026-03-02'
-  editors: ''
-  link: https://link.springer.com/collections/dhicbcbceb
-  description: BMC Medical Education welcomes submissions to our Artificial intelligence (AI) in curriculum development and
-    assessment Collection. The incorporation of AI technologies and methodologies into medical and all...
 - journal: Journal of Computer Assisted Learning
   publisher: Wiley
   tag:
@@ -37,7 +11,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id001
+  tag:
   - Medical Education
   title: Tools for assessment of medical skills
   abstract_deadline: ''
@@ -156,7 +130,8 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: &id001
+  - Medical Education
   title: Intensive care education
   abstract_deadline: ''
   fullpaper_deadline: 17 April 2026
@@ -783,6 +758,17 @@
   fullpaper_deadline_sort: '2026-08-31'
   editors: Carli Rowell (University of Sussex); Teresa Crew (Bangor University); Iona Burnell Reilly (University of East London)
   link: https://think.taylorandfrancis.com/special_issues/widening-participation-in-higher-education-has-it-worked-for-the-working-classes/
+  description: ''
+- journal: The Journal of Experimental Education
+  publisher: Taylor & Francis
+  tag:
+  - Educational Psychology
+  title: 'How do I Choose: Innovations in Understanding Academic Decision-Making Processes'
+  abstract_deadline: 15 April 2026
+  fullpaper_deadline: 31 August 2026
+  fullpaper_deadline_sort: '2026-08-31'
+  editors: Emily Q. Rosenzweig (Teachers College, Columbia University); Patrick N. Beymer, PhD (University of Cincinnati)
+  link: https://think.taylorandfrancis.com/special_issues/how-choose-innovation-understanding-academic-decision-making-processes/
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
@@ -1720,3 +1706,20 @@
   link: https://think.taylorandfrancis.com/special_issues/recent-pressures-on-higher-education-admissions-systems/
   description: If you're one of our journal editors looking for policy advice, journal management tips, and support from your
     peers then Editor Resources is what you want.
+- journal: Journal of Moral Education
+  publisher: Taylor & Francis
+  tag:
+  - Education Policy & Social Issues
+  - Moral/Character Education
+  title: About the role
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://think.taylorandfrancis.com/editor_recruitment/editor-needed-for-journal-of-moral-education/
+  description: 'The Journal of Moral Education Trust, established in 1997-8, is a Charity. According to its constitution its
+    trustees are UK residents; they are currently: Jim Conroy (Chair), Neil Ferguson (Secretary/Treasurer), Brian Gates, Janet
+    Orchard, Michael Reiss and Monica Taylor. The trustees are supported by an international advisory board of invited scholars.
+    Its objectives are to support high quality innovative and scholarly activity and research including work in moral development,
+    civics and citizenship education. Studies from a range of disciplinary and interdisciplinary perspectives are encouraged
+    including (but not exhausted by) psychology, philosophy, sociology, anthropology, economics, history and literature.'
