@@ -21,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: |
@@ -45,23 +45,28 @@ jobs:
       - name: Run citation update script
         id: run_citation_update
         shell: bash
-        env:
-          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
         run: |
           set +e
-          echo "🚀 Running citation update script (single attempt)..."
+          echo "🚀 Running citation update script..."
           start_time=$(date)
-          timeout 240 python bin/update_scholar_citations.py
+          timeout 180 python bin/update_scholar_citations.py
           status=$?
           end_time=$(date)
           if [ $status -eq 0 ]; then
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
             echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
+            echo "script_failed=false" >> $GITHUB_OUTPUT
+          elif [ $status -eq 124 ]; then
+            echo "⏰ Citation update TIMED OUT after 180s (started at $start_time, ended at $end_time)."
+            echo "⏰ Citation update TIMED OUT after 180s." >> $GITHUB_STEP_SUMMARY
+            echo "script_failed=true" >> $GITHUB_OUTPUT
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
+            echo "script_failed=true" >> $GITHUB_OUTPUT
           fi
           set -e
+
 
       - name: Save new citations.yml hash
         id: after
