@@ -1064,6 +1064,17 @@
   editors: ''
   link: https://link.springer.com/collections/eaaeididie
   description: 'Guest Editor: Poh Wee Koh'
+- journal: Research in Science Education
+  publisher: Springer
+  tag: *id014
+  title: Early childhood scientific learning through play
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2030
+  fullpaper_deadline_sort: '2030-12-31'
+  editors: ''
+  link: https://link.springer.com/collections/jdjggecjdd
+  description: This Topical Collection focuses on science learning through play within early childhood education published
+    in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
   tag: *id023
