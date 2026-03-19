@@ -4,7 +4,7 @@ import os
 import sys
 import yaml
 from datetime import datetime
-from scholarly import scholarly
+from scholarly import scholarly, ProxyGenerator
 
 
 def load_scholar_user_id() -> str:
@@ -62,7 +62,19 @@ def get_scholar_citations() -> None:
 
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
-    scholarly.set_timeout(15)
+    # Set up ScraperAPI proxy if API key is available (for GitHub Actions)
+    # Locally, it will connect directly without proxy
+    scraper_api_key = os.environ.get("SCRAPER_API_KEY")
+    if scraper_api_key:
+        print("Setting up ScraperAPI proxy...")
+        pg = ProxyGenerator()
+        pg.ScraperAPI(scraper_api_key)
+        scholarly.use_proxy(pg)
+        print("ScraperAPI proxy configured.")
+    else:
+        print("No SCRAPER_API_KEY found, connecting directly.")
+
+    scholarly.set_timeout(30)
     scholarly.set_retries(3)
     try:
         author = scholarly.search_author_id(SCHOLAR_USER_ID)
