@@ -36,10 +36,32 @@ SCHOLAR_USER_ID: str = load_scholar_user_id()
 OUTPUT_FILE: str = "_data/citations.yml"
 
 
+def fetch_author_data(use_proxy: bool = False) -> dict:
+    """Fetch author data from Google Scholar, optionally using a proxy."""
+    if use_proxy:
+        print("🔄 Setting up FreeProxies proxy...")
+        pg = ProxyGenerator()
+        success = pg.FreeProxies()
+        if success:
+            scholarly.use_proxy(pg)
+            print("✅ Proxy configured successfully.")
+        else:
+            print("⚠️ Failed to set up free proxy, attempting without proxy...")
+
+    scholarly.set_timeout(30)
+    scholarly.set_retries(3)
+
+    author = scholarly.search_author_id(SCHOLAR_USER_ID)
+    author_data = scholarly.fill(author)
+    return author_data
+
+
 def get_scholar_citations() -> None:
     """Fetch and update Google Scholar citation data."""
     print(f"Fetching citations for Google Scholar ID: {SCHOLAR_USER_ID}")
     today = datetime.now().strftime("%Y-%m-%d")
+
+    existing_data = None
 
     # Check if the output file was already updated today
     if os.path.exists(OUTPUT_FILE):
@@ -62,37 +84,32 @@ def get_scholar_citations() -> None:
 
     citation_data = {"metadata": {"last_updated": today}, "papers": {}}
 
-    # Set up ScraperAPI proxy if API key is available (for GitHub Actions)
-    # Locally, it will connect directly without proxy
-    scraper_api_key = os.environ.get("SCRAPER_API_KEY")
-    if scraper_api_key:
-        print("Setting up ScraperAPI proxy...")
-        pg = ProxyGenerator()
-        pg.ScraperAPI(scraper_api_key)
-        scholarly.use_proxy(pg)
-        print("ScraperAPI proxy configured.")
-    else:
-        print("No SCRAPER_API_KEY found, connecting directly.")
-
-    scholarly.set_timeout(30)
-    scholarly.set_retries(3)
-    try:
-        author = scholarly.search_author_id(SCHOLAR_USER_ID)
-        author_data = scholarly.fill(author)
-    except Exception as e:
-        print(
-            f"Error fetching author data from Google Scholar for user ID '{SCHOLAR_USER_ID}': {e}. Please check your internet connection and Scholar user ID."
-        )
-        sys.exit(1)
+    # Try direct connection first, then fallback to proxy
+    author_data = None
+    for attempt, use_proxy in enumerate([(False, "direct"), (True, "proxy")]):
+        try:
+            print(f"\n{'='*50}")
+            print(f"📡 Attempt {attempt + 1}: Fetching via {use_proxy[1]} connection...")
+            print(f"{'='*50}")
+            author_data = fetch_author_data(use_proxy=use_proxy[0])
+            if author_data and "publications" in author_data:
+                print(f"✅ Successfully fetched author data via {use_proxy[1]} connection.")
+                break
+            else:
+                print(f"⚠️ No publications found via {use_proxy[1]} connection.")
+                author_data = None
+        except Exception as e:
+            print(f"❌ {use_proxy[1].capitalize()} connection failed: {e}")
+            author_data = None
 
     if not author_data:
         print(
-            f"Could not fetch author data for user ID '{SCHOLAR_USER_ID}'. Please verify the Scholar user ID and try again."
+            f"❌ Could not fetch author data for user ID '{SCHOLAR_USER_ID}' after all attempts."
         )
         sys.exit(1)
 
     if "publications" not in author_data:
-        print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
+        print(f"❌ No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
         sys.exit(1)
 
     for pub in author_data["publications"]:
@@ -108,7 +125,7 @@ def get_scholar_citations() -> None:
             year = pub.get("bib", {}).get("pub_year", "Unknown Year")
             citations = pub.get("num_citations", 0)
 
-            print(f"Found: {title} ({year}) - Citations: {citations}")
+            print(f"  📄 {title} ({year}) - Citations: {citations}")
 
             citation_data["papers"][pub_id] = {
                 "title": title,
@@ -122,13 +139,13 @@ def get_scholar_citations() -> None:
 
     # Compare new data with existing data
     if existing_data and existing_data.get("papers") == citation_data["papers"]:
-        print("No changes in citation data. Skipping file update.")
+        print("\nℹ️ No changes in citation data. Skipping file update.")
         return
 
     try:
         with open(OUTPUT_FILE, "w") as f:
             yaml.dump(citation_data, f, width=1000, sort_keys=True)
-        print(f"Citation data saved to {OUTPUT_FILE}")
+        print(f"\n✅ Citation data saved to {OUTPUT_FILE}")
     except Exception as e:
         print(
             f"Error writing citation data to {OUTPUT_FILE}: {e}. Please check file permissions and disk space."
