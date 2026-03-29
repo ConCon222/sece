@@ -633,7 +633,7 @@
     acquired knowledge with others across the spectrum of academic psychiatry. We have much to learn...
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: &id034
+  tag:
   - Medical Education
   title: 'Medical Education in the Global South: Lessons Learned and Opportunities to Improve'
   abstract_deadline: ''
@@ -1750,7 +1750,8 @@
     including (but not exhausted by) psychology, philosophy, sociology, anthropology, economics, history and literature.'
 - journal: Medical Education Online
   publisher: Taylor & Francis
-  tag: *id034
+  tag:
+  - Medical Education
   title: 404 Error. Page not found.
   abstract_deadline: ''
   fullpaper_deadline: ''
