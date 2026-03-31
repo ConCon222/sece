@@ -45,19 +45,6 @@
   editors: 'Guest editors: Veit Kubik, Tamara van Gog, Ralf Rummer, Julian Roelle'
   link: https://www.sciencedirect.com/special-issue/326413/retrieval-practice-in-meaningful-learning-when-and-why-does-it-work
   description: ''
-- journal: Educational Assessment, Evaluation and Accountability
-  publisher: Springer
-  tag:
-  - Education Policy & Social Issues
-  - Educational Assessment
-  title: 'Special Issue: Managing external demands and building internal accountabilities within school networks'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 March 2026
-  fullpaper_deadline_sort: '2026-03-31'
-  editors: ''
-  link: https://link.springer.com/collections/gbhdaggaig
-  description: The aim of this special issue is to bring different perspectives that connect leadership, accountability, and
-    school networks to further our understanding of accountability issues beyond individual schools a...
 - journal: Journal of Research on Technology in Education
   publisher: Taylor & Francis
   tag:
@@ -468,6 +455,19 @@
     of Hertfordshire); Neil Harrison (University of Exeter)
   link: https://think.taylorandfrancis.com/special_issues/teaching-and-marginalised-communities-participatory-approaches-pedagogies-and-power/
   description: ''
+- journal: Educational Assessment, Evaluation and Accountability
+  publisher: Springer
+  tag:
+  - Education Policy & Social Issues
+  - Educational Assessment
+  title: 'Special Issue: Managing external demands and building internal accountabilities within school networks'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 June 2026
+  fullpaper_deadline_sort: '2026-06-30'
+  editors: ''
+  link: https://link.springer.com/collections/gbhdaggaig
+  description: The aim of this special issue is to bring different perspectives that connect leadership, accountability, and
+    school networks to further our understanding of accountability issues beyond individual schools a...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
   tag: *id009
