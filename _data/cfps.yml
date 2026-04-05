@@ -1,14 +1,3 @@
-- journal: Medical Education Online
-  publisher: Taylor & Francis
-  tag:
-  - Medical Education
-  title: 'Artificial Intelligence in Medical Education: Shaping the Future of Teaching, Learning, and Assessment'
-  abstract_deadline: ''
-  fullpaper_deadline: 25 March 2026
-  fullpaper_deadline_sort: '2026-03-25'
-  editors: Nicole Rockich Winston (Medical College of Georgia at Augusta University)
-  link: https://think.taylorandfrancis.com/article_collections/medical-education-online-artificial-intelligence-in-medical-education-shaping-the-future-of-teaching-learning-and-assessment/
-  description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
   tag: &id021
