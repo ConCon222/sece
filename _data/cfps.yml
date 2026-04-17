@@ -219,7 +219,7 @@
   description: ''
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id032
+  tag: &id033
   - Educational Technology
   title: 'Special Issue: Generative AI and the Future of K-12 Education - Towards Sustainable and Ethical Innovations to Strengthen
     Human Agency'
@@ -271,7 +271,7 @@
   description: ''
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id021
+  tag: &id022
   - Language Education & Acquisition
   title: 'Special Issue: Teachers’ Knowledge of Language and Literacy Concepts'
   abstract_deadline: ''
@@ -439,7 +439,7 @@
   description: ''
 - journal: European Journal of Education
   publisher: Wiley
-  tag: &id023
+  tag: &id024
   - General Education
   - Education Policy & Social Issues
   title: 'New Lenses of Psychology in Second Language Education: Exploring Positive Psycho-Emotional Variables in Child Learners'
@@ -1034,7 +1034,7 @@
   description: Dr Héctor Ríos-Jara , Centre of the Study of Economics and Society of Universidad Central de Chile
 - journal: Learning, Media and Technology
   publisher: Taylor & Francis
-  tag:
+  tag: &id021
   - Educational Technology
   title: 'Reframing AI ethics in education: From individual responsibilisation to shared responsibility.'
   abstract_deadline: 10 July 2026
@@ -1055,6 +1055,17 @@
     School of Education)
   link: https://think.taylorandfrancis.com/special_issues/asset-based-parent-engagement-education/
   description: Dr Max Antony-Newman , University of Glasgow, School of Education max.antony-newman@glasgow.ac.uk
+- journal: Learning, Media and Technology
+  publisher: Taylor & Francis
+  tag: *id021
+  title: Towards a Critical Approach to AI in Education
+  abstract_deadline: 31 August 2026
+  fullpaper_deadline: 03 May 2027
+  fullpaper_deadline_sort: '2027-05-03'
+  editors: Teresa Cerratto Pargman (Stockholm University); Cormac McGrath (Stockholm University); Felicitas Macgilchrist (Carl
+    von Ossietzky University Oldenburg)
+  link: https://think.taylorandfrancis.com/special_issues/towards-a-critical-approach-to-ai-in-education/
+  description: Felicitas Macgilchrist , Carl von Ossietzky University Oldenburg felicitas.macgilchrist@uni-oldenburg.de
 - journal: Journal of Science Education and Technology
   publisher: Springer
   tag:
@@ -1104,7 +1115,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id022
+  tag: &id023
   - General Education
   - Education Policy & Social Issues
   title: SDG 4 Quality Education Collection
@@ -1117,7 +1128,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id021
+  tag: *id022
   title: ARWA
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1138,7 +1149,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id022
+  tag: *id023
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1149,7 +1160,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id022
+  tag: *id023
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1184,7 +1195,7 @@
     online form.
 - journal: European Journal of Education
   publisher: Wiley
-  tag: *id023
+  tag: *id024
   title: 'From Theory to Practice: Empowering the Next Generation for a Sustainable Future'
   abstract_deadline: ''
   fullpaper_deadline: March 2026
@@ -1220,7 +1231,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id024
+  tag: &id025
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1232,7 +1243,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1242,7 +1253,7 @@
   description: School Improvement and Educational Change
 - journal: Higher Education Research & Development
   publisher: Taylor & Francis
-  tag: &id025
+  tag: &id026
   - Higher Education
   title: Higher Education Research & Development
   abstract_deadline: ''
@@ -1257,7 +1268,7 @@
     a prize of $500.'
 - journal: Higher Education Research & Development
   publisher: Taylor & Francis
-  tag: *id025
+  tag: *id026
   title: Higher Education Research & Development
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1281,7 +1292,7 @@
     to improve the professional experience both for ourselves and for tomorrow’s physicians? • How can we...'
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: &id026
+  tag: &id027
   - Education Policy & Social Issues
   - Educational Assessment
   title: Special issue 2024
@@ -1294,7 +1305,7 @@
     Research."
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: *id026
+  tag: *id027
   title: Special issues collection
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1332,7 +1343,7 @@
     out more via the link below.'
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: &id027
+  tag: &id028
   - General Education
   title: Enhancing climate change and sustainability education through critical and collaborative dialogue between Global
     South and North education communities
@@ -1347,7 +1358,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id027
+  tag: *id028
   title: (Re)thinking Cross-Border Students’ Agency in Higher Education
   abstract_deadline: 31 October 2024
   fullpaper_deadline: ''
@@ -1358,7 +1369,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id027
+  tag: *id028
   title: 'Making teaching an attractive profession: challenges and opportunities'
   abstract_deadline: 30 November 2024
   fullpaper_deadline: ''
@@ -1372,7 +1383,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id027
+  tag: *id028
   title: 'The state of gender(s), young people and education: inequities, inter/intrasectionality and inclusivity'
   abstract_deadline: 30 November 2024
   fullpaper_deadline: ''
@@ -1409,7 +1420,7 @@
     Article Collection proposal please click the More button. /page/eer/call-for-papers
 - journal: Research in Science & Technological Education
   publisher: Taylor & Francis
-  tag: &id028
+  tag: &id029
   - Subject Education
   - Educational Technology
   title: About the role
@@ -1424,7 +1435,7 @@
     education in both formal and informal learning settings.
 - journal: Research in Science & Technological Education
   publisher: Taylor & Francis
-  tag: *id028
+  tag: *id029
   title: About the role
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1437,7 +1448,7 @@
     education in both formal and informal learning settings.
 - journal: Urban Education
   publisher: SAGE
-  tag: &id029
+  tag: &id030
   - Education Policy & Social Issues
   - Urban Education
   title: Call for Special Issue Proposals
@@ -1450,7 +1461,7 @@
     proposals that advance the field of urban education through empirical research, theory, practice, policy and praxis
 - journal: Urban Education
   publisher: SAGE
-  tag: *id029
+  tag: *id030
   title: Published and upcoming special issues
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1518,7 +1529,7 @@
     of its kind to publish twelve issues per volume year.
 - journal: Journal of Early Childhood Literacy
   publisher: SAGE
-  tag: &id030
+  tag: &id031
   - Early Childhood Education
   - Language Education & Acquisition
   title: Call for papers
@@ -1530,7 +1541,7 @@
   description: View Journal of Early Childhood Literacy's open call for papers via the link below.
 - journal: Journal of Early Childhood Literacy
   publisher: SAGE
-  tag: *id030
+  tag: *id031
   title: New special issue
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1552,7 +1563,7 @@
   description: Explore AJEC's open call for papers via the link below.
 - journal: Health Education Journal
   publisher: SAGE
-  tag: &id031
+  tag: &id032
   - Subject Education
   - Health Education
   title: Call for papers
@@ -1564,7 +1575,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Health Education Journal
   publisher: SAGE
-  tag: *id031
+  tag: *id032
   title: 'Special Issue: Men’s Health'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1688,7 +1699,7 @@
     peers then Editor Resources is what you want.
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: &id033
+  tag: &id034
   - General Education
   title: EERJ Special Issues/Collections
   abstract_deadline: ''
@@ -1700,7 +1711,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id032
+  tag: *id033
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1711,7 +1722,7 @@
     significant, and innovative topics in the field of educational technology research and develo...
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: *id033
+  tag: *id034
   title: EERJ Call for Papers
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1732,7 +1743,7 @@
     of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: Series of Short Notes on the State of Educational Change and Its Future
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
