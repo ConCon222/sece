@@ -12,7 +12,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id001
+  tag:
   - Medical Education
   title: Intensive care education
   abstract_deadline: ''
@@ -22,17 +22,6 @@
   link: https://link.springer.com/collections/gcbeibfjaj
   description: BMC Medical Education is calling for submissions to our Collection on Intensive care education. The delivery
     of care in high-acuity settings requires not only clinical expertise but also rapid decision-makin...
-- journal: BMC Medical Education
-  publisher: Springer
-  tag: *id001
-  title: The role of medical humanities in medical education
-  abstract_deadline: ''
-  fullpaper_deadline: 24 April 2026
-  fullpaper_deadline_sort: '2026-04-24'
-  editors: ''
-  link: https://link.springer.com/collections/gghecfhhce
-  description: BMC Medical Education is calling for papers to a Collection entitled The role of medical humanities in medical
-    education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Higher Education Research & Development
   publisher: Taylor & Francis
   tag:
@@ -46,7 +35,7 @@
   description: Professor Susan Rowland , The University of Sydney, Australia susan.rowland@sydney.edu.au
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id005
+  tag: &id004
   - Education Policy & Social Issues
   - Gender and Education
   title: Gender, Sexuality and Education in Chinese Contexts
@@ -111,7 +100,7 @@
   description: Ning Ning , University of Nottingham, UK & University of Jinan, China alynn2@nottingham.ac.uk
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: &id003
+  tag: &id002
   - General Education
   - Higher Education
   title: 'Learning and Teaching with Social Justice in the University Classroom: Contemporary Approaches and Challenges'
@@ -136,7 +125,7 @@
   description: ''
 - journal: Science Education
   publisher: Wiley
-  tag: &id002
+  tag: &id001
   - Subject Education
   - Science Education
   title: 'From Manifesto to Collective Praxis: Towards Critical-Feminist and Justice-Centered Epistemic Futures in Science
@@ -174,7 +163,7 @@
   description: Dr. Suzanne Le-May Sheffield , Dalhousie University Suzanne.Le-May.Sheffield@dal.ca
 - journal: Science Education
   publisher: Wiley
-  tag: *id002
+  tag: *id001
   title: A Manifesto for Critical-Feminist Science Education
   abstract_deadline: ''
   fullpaper_deadline: 1 May 2026
@@ -184,7 +173,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: &id004
+  tag: &id003
   - Educational Technology
   title: 'The Future of Learning Analytics Dashboards: Bridging Design, Sense-Making and Pedagogical Impact'
   abstract_deadline: ''
@@ -197,7 +186,8 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: &id005
+  - Medical Education
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
   fullpaper_deadline: 20 May 2026
@@ -208,7 +198,7 @@
     Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: *id003
+  tag: *id002
   title: 'The Future of the Doctorate: Professional, Collaborative, and Practice-Based Research in UK Higher Education'
   abstract_deadline: 28 November 2025
   fullpaper_deadline: 29 May 2026
@@ -346,7 +336,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id004
+  tag: *id003
   title: Building Inclusive Generative AI for Learners with Special Educational Needs
   abstract_deadline: 2 February 2026
   fullpaper_deadline: 1 June 2026
@@ -358,7 +348,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id004
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
   abstract_deadline: 31 December 2025
   fullpaper_deadline: 15 June 2026
@@ -393,7 +383,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Transnational medical education programs
   abstract_deadline: ''
   fullpaper_deadline: 23 June 2026
@@ -613,6 +603,17 @@
     Católica Madre y Maestra (PUCMM))
   link: https://think.taylorandfrancis.com/article_collections/medical-education-online-medical-education-in-the-global-south-lessons-learned-and-opportunities-to-improve/
   description: Dr. José Javier Sánchez Rodríguez , Pontificia Universidad Católica Madre y Maestra (PUCMM) sanchezjosejavier8@gmail.com
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id005
+  title: The role of medical humanities in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 24 July 2026
+  fullpaper_deadline_sort: '2026-07-24'
+  editors: ''
+  link: https://link.springer.com/collections/gghecfhhce
+  description: BMC Medical Education is calling for papers to a Collection entitled The role of medical humanities in medical
+    education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Sex Education
   publisher: Taylor & Francis
   tag: &id014
@@ -628,7 +629,7 @@
   description: Peter Aggleton , The Australian National University, Australia P.Aggleton@unsw.edu.au
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: 'Clinical reasoning education: advances and updates'
   abstract_deadline: ''
   fullpaper_deadline: 03 August 2026
@@ -639,7 +640,7 @@
     Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 10 August 2026
@@ -650,7 +651,7 @@
     Mental illnesses account for a significant portion of the global disease burden, underlying the...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Lifelong learning and patient safety
   abstract_deadline: ''
   fullpaper_deadline: 18 August 2026
@@ -732,7 +733,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Palliative care education
   abstract_deadline: ''
   fullpaper_deadline: 01 September 2026
@@ -743,7 +744,7 @@
     education is an essential component of healthcare training, aimed at equipping healthcare profes...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Disability in medical education
   abstract_deadline: ''
   fullpaper_deadline: 07 September 2026
@@ -823,7 +824,7 @@
   description: ''
 - journal: British Journal of Educational Technology
   publisher: Wiley
-  tag: *id004
+  tag: *id003
   title: 'Agentic AI in Education: Artificial Agency and the Social-Cognitive Dynamics of Learning'
   abstract_deadline: 1 August 2026
   fullpaper_deadline: 28 October 2026
@@ -942,7 +943,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id005
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -951,6 +952,17 @@
   link: https://link.springer.com/collections/fdccffagib
   description: BMC Medical Education calls for submissions to our Collection, Gamification and virtual reality in medical
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id005
+  title: Nutrition science in health professions education
+  abstract_deadline: ''
+  fullpaper_deadline: 13 January 2027
+  fullpaper_deadline_sort: '2027-01-13'
+  editors: ''
+  link: https://link.springer.com/collections/bdbhidjeie
+  description: BMC Medical Education in collaboration with the Global Nutrition Observatory for Medical Nutrition Education
+    (GNOME) initiative is calling for submissions to our Collection, Nutrition science in health profe...
 - journal: Academic Psychiatry
   publisher: Springer
   tag: *id009
@@ -994,6 +1006,17 @@
   link: https://think.taylorandfrancis.com/special_issues/preparing-educators-for-relationships-and-sexuality-education-critical-perspectives-on-teacher-education-and-professional-development-2/
   description: Lisa van Leent , School of Education, Faculty of Creative Industries, Education and Social Justice, Queensland
     University of Technology, Australia Lisa.vanleent@qut.edu.au
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id005
+  title: Medical education for LGBTQ+ health
+  abstract_deadline: ''
+  fullpaper_deadline: 15 January 2027
+  fullpaper_deadline_sort: '2027-01-15'
+  editors: ''
+  link: https://link.springer.com/collections/egeghiajba
+  description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
+    landscape of medical education has evolved significantly to incorporate the unique health needs of...
 - journal: International Journal of STEM Education
   publisher: Springer
   tag: &id019
