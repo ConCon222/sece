@@ -1,17 +1,6 @@
-- journal: Higher Education Research & Development
-  publisher: Taylor & Francis
-  tag:
-  - Higher Education
-  title: Leadership of learning, teaching and assessment to 2050 and beyond
-  abstract_deadline: ''
-  fullpaper_deadline: 24 April 2026
-  fullpaper_deadline_sort: '2026-04-24'
-  editors: Dr Lia Blaj-Ward (Nottingham Trent University, UK); Professor Susan Rowland (The University of Sydney, Australia)
-  link: https://think.taylorandfrancis.com/special_issues/leadership-of-learning-teaching-and-assessment-to-2050-and-beyond/
-  description: Professor Susan Rowland , The University of Sydney, Australia susan.rowland@sydney.edu.au
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id003
+  tag:
   - Education Policy & Social Issues
   - Gender and Education
   title: Gender, Sexuality and Education in Chinese Contexts
@@ -37,7 +26,7 @@
   description: ''
 - journal: Teaching in Higher Education
   publisher: Taylor & Francis
-  tag: &id005
+  tag: &id004
   - Higher Education
   - Teacher Education & Development
   title: Plural Values in Humanities Education
@@ -162,7 +151,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id004
+  tag: &id003
   - Medical Education
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
@@ -174,7 +163,7 @@
     Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: &id031
+  tag:
   - General Education
   - Higher Education
   title: 'The Future of the Doctorate: Professional, Collaborative, and Practice-Based Research in UK Higher Education'
@@ -214,7 +203,7 @@
   description: Hongbiao Yin , The Chinese University of Hong Kong, Hong Kong SAR, China yinhb@cuhk.edu.hk
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: &id014
+  tag: &id013
   - Subject Education
   - Environmental Education
   title: 'Climate Change Education in the Caribbean: Teaching and Learning for Complex Times'
@@ -264,7 +253,7 @@
     education - an area that has received limited attention despite the growing discourse on Gen AI ...
 - journal: Journal of Computing in Higher Education
   publisher: Springer
-  tag: &id006
+  tag: &id005
   - Higher Education
   - Educational Technology
   title: STEM Microcredentials in Higher Education — Organizational Barriers and Value Propositions
@@ -301,7 +290,7 @@
   description: Luis Javier Pentón Herrera , University of Economics and Human Sciences, Warsaw, Poland luis.penton@gmail.com
 - journal: 'Discourse: Studies in the Cultural Politics of Education'
   publisher: Taylor & Francis
-  tag: &id008
+  tag: &id007
   - Education Policy & Social Issues
   - Sociology of Education
   title: 'Globalisation Processes and the Cultural Politics of Education: Essays in Honour of Bob Lingard and Fazal Rizvi'
@@ -326,7 +315,9 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id003
+  tag:
+  - Education Policy & Social Issues
+  - Gender and Education
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
   abstract_deadline: 31 December 2025
   fullpaper_deadline: 15 June 2026
@@ -361,7 +352,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Transnational medical education programs
   abstract_deadline: ''
   fullpaper_deadline: 23 June 2026
@@ -372,7 +363,7 @@
     As medical education expands beyond national boundaries, new opportunities and challenges are e...
 - journal: Teaching in Higher Education
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id004
   title: 'Teaching and Marginalised Communities: Participatory Approaches, Pedagogies and Power'
   abstract_deadline: 05 January 2026
   fullpaper_deadline: 26 June 2026
@@ -421,7 +412,7 @@
   description: ''
 - journal: Language and Education
   publisher: Taylor & Francis
-  tag: &id013
+  tag: &id012
   - Language Education & Acquisition
   title: Multilingual policies in early childhood education across the globe
   abstract_deadline: 15 January 2026
@@ -447,7 +438,7 @@
     pandemics, and socio-political crises—have renewed attention to the importance of the future....
 - journal: Research in Science Education
   publisher: Springer
-  tag: &id009
+  tag: &id008
   - Subject Education
   - Science Education
   title: 'Special Issue: Research-Informed Policy and Practice in Science Education'
@@ -499,7 +490,7 @@
   description: ''
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: &id015
+  tag: &id014
   - Language Education & Acquisition
   - Curriculum Studies
   title: The impact of Artificial Intelligence on English-medium instruction teaching and learning at university level
@@ -525,7 +516,7 @@
     in East Asia, which target at politically more just and culturally more specific understandin...
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id007
+  tag: &id006
   - Medical Education
   - Educational Psychology
   title: Looking Back on 50 Years of Academic Psychiatry and Envisioning the Future of Scholarly Work in Psychiatry Education
@@ -538,7 +529,7 @@
     1, of the journal that would become Academic Psychiatry. They answered, “Forces both within and w...
 - journal: Journal of Computing in Higher Education
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: 'Failed Innovations and Technology Initiatives in Higher Education: Problematizing and Moving Beyond the Always Successful
     Narrative'
   abstract_deadline: ''
@@ -550,7 +541,7 @@
     Problematizing and Moving Beyond the Always Successful Narrative Theme and Purpose This Special Issu...'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id007
+  tag: *id006
   title: 'Entering Academia: Learner perspectives on becoming leaders in psychiatry education'
   abstract_deadline: ''
   fullpaper_deadline: 01 July 2026
@@ -585,7 +576,7 @@
   description: Dr. José Javier Sánchez Rodríguez , Pontificia Universidad Católica Madre y Maestra (PUCMM) sanchezjosejavier8@gmail.com
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: The role of medical humanities in medical education
   abstract_deadline: ''
   fullpaper_deadline: 24 July 2026
@@ -596,7 +587,7 @@
     education. The integration of medical humanities into medical education has gained recognition a...
 - journal: Sex Education
   publisher: Taylor & Francis
-  tag: &id012
+  tag: &id011
   - Subject Education
   - Health Education
   title: Troubled Times for Sexuality Education?
@@ -609,7 +600,7 @@
   description: Peter Aggleton , The Australian National University, Australia P.Aggleton@unsw.edu.au
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: 'Clinical reasoning education: advances and updates'
   abstract_deadline: ''
   fullpaper_deadline: 03 August 2026
@@ -620,7 +611,7 @@
     Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 10 August 2026
@@ -631,7 +622,7 @@
     Mental illnesses account for a significant portion of the global disease burden, underlying the...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Lifelong learning and patient safety
   abstract_deadline: ''
   fullpaper_deadline: 18 August 2026
@@ -642,7 +633,7 @@
     healthcare delivery becomes increasingly complex, shaped by biomedical advances, digital transform...
 - journal: 'Discourse: Studies in the Cultural Politics of Education'
   publisher: Taylor & Francis
-  tag: *id008
+  tag: *id007
   title: 'The Spatialization of Education and the Educationalization of Space: Divergent Studies of Affect and Power in Educational
     Research'
   abstract_deadline: 12 January 2026
@@ -655,7 +646,7 @@
   description: Inés Dussel , Center for Research and Advanced Studies of the National Polytechnic Institute, CINVESTAV, Mexico
 - journal: Innovation in Language Learning and Teaching
   publisher: Taylor & Francis
-  tag: &id011
+  tag: &id010
   - Language Education & Acquisition
   - Educational Technology
   title: Critical AI Literacy in Language Education
@@ -668,7 +659,7 @@
   description: ''
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: 'Special Issue: Science Education for Agency and Scientific Literacy in Understanding Climate Change'
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2026
@@ -679,7 +670,7 @@
     and adaptation – is more likely to be achieved when the impetus for action emanates from the general...
 - journal: British Journal of Sociology of Education
   publisher: Taylor & Francis
-  tag: &id010
+  tag: &id009
   - Education Policy & Social Issues
   - Sociology of Education
   title: Students and Politics
@@ -692,7 +683,7 @@
   description: ''
 - journal: British Journal of Sociology of Education
   publisher: Taylor & Francis
-  tag: *id010
+  tag: *id009
   title: 'Widening Participation in Higher Education: Has it worked for the working-classes?'
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2026
@@ -713,7 +704,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Palliative care education
   abstract_deadline: ''
   fullpaper_deadline: 01 September 2026
@@ -724,7 +715,7 @@
     education is an essential component of healthcare training, aimed at equipping healthcare profes...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Disability in medical education
   abstract_deadline: ''
   fullpaper_deadline: 07 September 2026
@@ -735,7 +726,7 @@
     impacts so much of our patient population, medical curricula must evolve to address gaps in knowled...
 - journal: Innovation in Language Learning and Teaching
   publisher: Taylor & Francis
-  tag: *id011
+  tag: *id010
   title: 'Multimodality in Language Learning and Teaching in the Age of AI and GenAI: Current Innovations and Emerging Trends'
   abstract_deadline: 25 February 2026
   fullpaper_deadline: 25 September 2026
@@ -747,7 +738,7 @@
     China wangyongliang@ncwu.edu.cn
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
-  tag:
+  tag: &id015
   - Subject Education
   - Physical Education
   title: The Problem of Performance Dominating Sport, Education and Society
@@ -759,7 +750,7 @@
   description: ''
 - journal: Sex Education
   publisher: Taylor & Francis
-  tag: *id012
+  tag: *id011
   title: 'Heterosexual Masculinities in and out of Manosphere Communities: Implications for Sexuality Education'
   abstract_deadline: 28 February 2026
   fullpaper_deadline: 30 September 2026
@@ -770,7 +761,7 @@
   description: ''
 - journal: Language and Education
   publisher: Taylor & Francis
-  tag: *id013
+  tag: *id012
   title: 'Beyond the L2: Multilingual Writing in Education'
   abstract_deadline: 30 March 2026
   fullpaper_deadline: 15 October 2026
@@ -815,7 +806,7 @@
   description: ''
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: *id014
+  tag: *id013
   title: Emotions in Environmental and Sustainability Education - Theoretical, Methodological, and Empirical Developments
   abstract_deadline: 31 May 2026
   fullpaper_deadline: 30 October 2026
@@ -840,7 +831,7 @@
   description: ''
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: *id015
+  tag: *id014
   title: Linguistic racism and discrimination in higher education
   abstract_deadline: 15 March 2026
   fullpaper_deadline: 01 December 2026
@@ -850,7 +841,7 @@
   description: ''
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: *id015
+  tag: *id014
   title: 'Languages in Motion: Foreign Language Education, Cultural Transmission, and Identity Politics in the Global South'
   abstract_deadline: 30 April 2026
   fullpaper_deadline: 15 December 2026
@@ -870,9 +861,20 @@
   editors: 'Guest editors: Prof. Dorota Werbińska, Prof. Cheryl Craig'
   link: https://www.sciencedirect.com/special-issue/331838/teacher-un-belonging-roles-and-identities
   description: ''
+- journal: Sport, Education and Society
+  publisher: Taylor & Francis
+  tag: *id015
+  title: 'Sustainable Development and Physical Education: Critical Perspectives on Motor, Social, and Ecological Transformations'
+  abstract_deadline: 07 July 2026
+  fullpaper_deadline: 21 December 2026
+  fullpaper_deadline_sort: '2026-12-21'
+  editors: Olivier Vors (Aix Marseille University - Marseille, France); Salvador Baena Morales (Valencia International University
+    - Valencia, Spain)
+  link: https://think.taylorandfrancis.com/special_issues/sustainable-development-and-physical-education-critical-perspectives-on-motor-social-and-ecological-transformations/
+  description: Salvador Baena Morales , Valencia International University - Valencia, Spain salvador.baena@gcloud.ua.es
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: Argumentation and the problem of misinformation in science education
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -883,7 +885,7 @@
     reshaped by digital technologies and the diverse ways in which individuals engage with (mis)info...
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: Multimodal literacies and representations for learning
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -905,7 +907,7 @@
     education, spanning across both disciplinary (e.g. science, mathematics) and integrated approach...
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: *id014
+  tag: *id013
   title: 'Environmental and Sustainability education research in the Nordic countries: Convergence, fault lines and diffractions'
   abstract_deadline: 29 May 2026
   fullpaper_deadline: 31 December 2026
@@ -946,7 +948,7 @@
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -957,7 +959,7 @@
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Nutrition science in health professions education
   abstract_deadline: ''
   fullpaper_deadline: 13 January 2027
@@ -968,7 +970,7 @@
     (GNOME) initiative is calling for submissions to our Collection, Nutrition science in health profe...
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id007
+  tag: *id006
   title: Examining the Evidence Base in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -996,7 +998,7 @@
     University of Technology, Australia Lisa.vanleent@qut.edu.au
 - journal: Sex Education
   publisher: Taylor & Francis
-  tag: *id012
+  tag: *id011
   title: 'Preparing Educators for Relationships and Sexuality Education: Critical Perspectives on Teacher Education and Professional
     Development'
   abstract_deadline: 12 June 2026
@@ -1011,7 +1013,7 @@
     University of Technology, Australia Lisa.vanleent@qut.edu.au
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Medical education for LGBTQ+ health
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -1022,7 +1024,7 @@
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id004
+  tag: *id003
   title: Health professions competency-based education (CBE) innovations around the world
   abstract_deadline: ''
   fullpaper_deadline: 29 January 2027
@@ -1129,7 +1131,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: Artificial Intelligence in Science Education
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2027
@@ -1176,7 +1178,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id009
+  tag: *id008
   title: Early childhood scientific learning through play
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2030
@@ -1321,7 +1323,7 @@
     most outstanding reviewers.
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id007
+  tag: *id006
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1690,7 +1692,7 @@
     peers then Editor Resources is what you want.
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id007
+  tag: *id006
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1772,7 +1774,7 @@
   description: Please click More to see open EERJ Call for Papers.
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id007
+  tag: *id006
   title: Advancing Competency-Based Medical Education in Psychiatry Training
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1937,7 +1939,9 @@
     peers then Editor Resources is what you want.
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
-  tag: *id031
+  tag:
+  - General Education
+  - Higher Education
   title: 404 Error. Page not found.
   abstract_deadline: ''
   fullpaper_deadline: ''
