@@ -1506,15 +1506,8 @@
         ]
     },
     {
-        "name": "Science",
-        "url": "https://www.science.org/collections",
-        "tag": [
-            "Interdisciplinary Science"
-        ]
-    },
-    {
         "name": "PNAS",
-        "url": "https://www.pnas.org/special-features",
+        "url": "https://www.pnas.org/author-center/call-for-papers",
         "tag": [
             "Interdisciplinary Science"
         ]
@@ -1542,26 +1535,11 @@
         ]
     },
     {
-        "name": "eLife",
-        "url": "https://elifesciences.org/collections",
-        "tag": [
-            "Life Sciences"
-        ]
-    },
-    {
         "name": "npj Science of Learning",
         "url": "https://www.nature.com/npjscilearn/collections",
         "tag": [
             "Educational Psychology",
             "Educational Technology"
-        ]
-    },
-    {
-        "name": "Nature Reviews Psychology",
-        "url": "https://www.nature.com/nrpsychol/collections",
-        "tag": [
-            "Psychology",
-            "Review Journal"
         ]
     },
     {
