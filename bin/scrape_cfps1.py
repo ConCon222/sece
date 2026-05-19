@@ -61,13 +61,16 @@ MONTH_MAP = {
     'nov': 11, 'november': 11, 'dec': 12, 'december': 12,
 }
 
-# Cloudflare 保护的站点列表
+# Cloudflare / bot-protection 保护的站点列表
 CF_PROTECTED_SITES = [
     "tandfonline.com",
     "wiley.com",
     "onlinelibrary.wiley",
     "sagepub.com",
     "bera-journals",
+    "academic.oup.com",       # Oxford — Cloudflare
+    "journals.uchicago.edu",  # UChicago Press — Cloudflare
+    "pnas.org",               # PNAS — Cloudflare
 ]
 
 
@@ -573,67 +576,59 @@ class JournalCFPScraper:
     def parse_nature_collections(self, html, base_url):
         """
         解析 Nature 系列期刊 Collections 页面。
-        仅保留包含 "Open for submissions" 标识的条目。
-        Nature 和 Springer 共用 SpringerNature 基础设施，结构相似。
+        实际 HTML 结构（来自抓取验证）：
+          - 卡片为普通 <article>（无特定 class）
+          - 标题：h3[itemprop="name headline"] > a  （a 里面有 img，需清除）
+          - 链接：上面 a 的 href（相对路径，如 /collections/xxxxx）
+          - 开放状态：div[data-test="open-status"] 文本为 "Open for submissions"
+          - 描述：div[itemprop="description"]
+          - 注意：列表页不显示截止日期，deadline 留空
         """
         if not html: return []
         soup = BeautifulSoup(html, "lxml")
         results = []
 
-        # 方案1: app-card-collection (与 Springer 相同的 SpringerNature 组件)
-        for art in soup.find_all("article", class_="app-card-collection"):
+        for art in soup.find_all("article"):
             try:
-                card_text = art.get_text(" ", strip=True)
                 # 只保留 "Open for submissions" 的条目
-                if not re.search(r'open\s+for\s+sub', card_text, re.I):
+                open_pill = art.find("div", {"data-test": "open-status"})
+                if not open_pill:
+                    continue
+                if "open for submissions" not in open_pill.get_text(strip=True).lower():
                     continue
 
-                heading = art.find(["h2", "h3"], class_=re.compile("heading"))
-                if not heading:
-                    heading = art.find(["h2", "h3"])
-                a = heading.find("a") if heading else art.find("a", href=True)
-                title = self._extract_text_clean(heading) if heading else "N/A"
-                link = urljoin(base_url, a["href"]) if a and a.get("href") else base_url
+                # 标题：h3 > a，img 的 alt 也会被 get_text 提取，用 strings 过滤
+                h3 = art.find("h3", itemprop=re.compile("name|headline"))
+                if not h3:
+                    h3 = art.find("h3")
+                a = h3.find("a", href=True) if h3 else art.find("a", href=True)
+                if not a:
+                    continue
 
-                desc_el = art.find("div", class_=re.compile(r"text|desc|summary"))
-                desc = self._extract_text_clean(desc_el) if desc_el else "N/A"
+                # 提取 a 里的文本，跳过 img alt
+                title_parts = [s.strip() for s in a.strings if s.strip() and s.strip() != "N/A"]
+                title = " ".join(title_parts).strip()
+                if not title:
+                    continue
 
-                deadline = "未找到日期"
-                for dt in art.find_all("dt"):
-                    if "deadline" in dt.get_text().lower():
-                        dd = dt.find_next_sibling("dd")
-                        if dd:
-                            deadline = self._extract_text_clean(dd)
-                            break
+                href = a.get("href", "")
+                link = urljoin(base_url, href) if href else base_url
 
-                if title and title != "N/A":
-                    results.append({"title": title, "abstract_deadline": "未找到日期",
-                                    "fullpaper_deadline": deadline, "editors": "N/A",
-                                    "desc": desc, "link": link})
+                # 描述
+                desc_div = art.find("div", itemprop="description")
+                desc = self._extract_text_clean(desc_div) if desc_div else "N/A"
+
+                # 列表页无截止日期 — 用空串；不过滤无日期条目，因为 open-status 已是过滤条件
+                results.append({
+                    "title": title,
+                    "abstract_deadline": "未找到日期",
+                    "fullpaper_deadline": "未找到日期",
+                    "editors": "N/A",
+                    "desc": desc,
+                    "link": link
+                })
             except Exception:
                 continue
-
-        # 方案2: c-card 组件 (较新版本的 nature.com)
-        if not results:
-            for card in soup.find_all(["article", "div"], class_=re.compile(r"\bc-card\b")):
-                try:
-                    card_text = card.get_text(" ", strip=True)
-                    if not re.search(r'open\s+for\s+sub', card_text, re.I):
-                        continue
-                    h = card.find(["h2", "h3", "h4"])
-                    if not h: continue
-                    a = h.find("a", href=True) or card.find("a", href=True)
-                    title = self._extract_text_clean(h)
-                    link = urljoin(base_url, a["href"]) if a and a.get("href") else base_url
-                    desc_p = card.find("p")
-                    desc = self._extract_text_clean(desc_p) if desc_p else "N/A"
-                    deadline = self.extract_date(card_text) or "未找到日期"
-                    if title and title != "N/A":
-                        results.append({"title": title, "abstract_deadline": "未找到日期",
-                                        "fullpaper_deadline": deadline, "editors": "N/A",
-                                        "desc": desc, "link": link})
-                except Exception:
-                    continue
 
         uniq = {}
         for r in results: uniq[(r["title"], r["link"])] = r
@@ -1067,27 +1062,29 @@ class JournalCFPScraper:
                     if html:
                         data = self.parse_nature_collections(html, j_url)
 
-                # === Oxford University Press: curl_cffi ===
+                # === Oxford University Press: Cloudflare → FlareSolverr ===
                 elif "academic.oup.com" in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_oup(html, j_url)
 
-                # === University of Chicago Press: curl_cffi ===
+                # === University of Chicago Press: Cloudflare → FlareSolverr ===
                 elif "uchicago.edu" in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_uchicago(html, j_url)
 
-                # === APA: curl_cffi ===
+                # === APA: Imperva 保护，FlareSolverr 可能也无法绕过 ===
                 elif "apa.org" in url_l:
-                    html = self.fetch_page_fast(j_url)
-                    if html:
+                    html = self.fetch_cf_site(j_url)
+                    if html and len(html) > 5000:  # Imperva 拦截页通常极短
                         data = self.parse_apa(html, j_url)
+                    else:
+                        print(f"   ⚠️ APA 被 Imperva 拦截，跳过: {j_name}")
 
-                # === PNAS: curl_cffi ===
+                # === PNAS: Cloudflare → FlareSolverr ===
                 elif "pnas.org" in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_pnas(html, j_url)
 
