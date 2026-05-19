@@ -1038,7 +1038,7 @@
     },
     {
         "name": "Educational Measurement: Issues and Practice",
-        "url": "https://onlinelibrary.wiley.com/page/journal/17453992/call-for-papers",
+        "url": "https://onlinelibrary.wiley.com/page/journal/17453992/homepage/call-for-papers",
         "tag": [
             "Education Policy & Social Issues",
             "Educational Assessment"
@@ -1372,7 +1372,7 @@
     },
     {
         "name": "The Reading Teacher",
-        "url": "https://ila.onlinelibrary.wiley.com/hub/journal/19362714/call-for-papers",
+        "url": "https://ila.onlinelibrary.wiley.com/journal/19362714/calls_for_papers",
         "tag": [
             "Language Education & Acquisition",
             "Early Childhood Education"
@@ -1431,7 +1431,7 @@
     },
     {
         "name": "Anthropology & Education Quarterly",
-        "url": "https://onlinelibrary.wiley.com/page/journal/15481492/call-for-papers",
+        "url": "https://anthrosource.onlinelibrary.wiley.com/journal/15481492",
         "tag": [
             "Education Policy & Social Issues",
             "Anthropology of Education"
@@ -1496,6 +1496,373 @@
         "tag": [
             "Subject Education",
             "Health Education"
+        ]
+    },
+    {
+        "name": "Nature",
+        "url": "https://www.nature.com/nature/collections",
+        "tag": [
+            "Interdisciplinary Science"
+        ]
+    },
+    {
+        "name": "Science",
+        "url": "https://www.science.org/collections",
+        "tag": [
+            "Interdisciplinary Science"
+        ]
+    },
+    {
+        "name": "PNAS",
+        "url": "https://www.pnas.org/special-features",
+        "tag": [
+            "Interdisciplinary Science"
+        ]
+    },
+    {
+        "name": "Nature Communications",
+        "url": "https://www.nature.com/ncomms/collections",
+        "tag": [
+            "Interdisciplinary Science"
+        ]
+    },
+    {
+        "name": "Nature Human Behaviour",
+        "url": "https://www.nature.com/nathumbehav/collections",
+        "tag": [
+            "Psychology",
+            "Behavioral Science"
+        ]
+    },
+    {
+        "name": "Science Advances",
+        "url": "https://www.science.org/journal/sciadv",
+        "tag": [
+            "Interdisciplinary Science"
+        ]
+    },
+    {
+        "name": "eLife",
+        "url": "https://elifesciences.org/collections",
+        "tag": [
+            "Life Sciences"
+        ]
+    },
+    {
+        "name": "npj Science of Learning",
+        "url": "https://www.nature.com/npjscilearn/collections",
+        "tag": [
+            "Educational Psychology",
+            "Educational Technology"
+        ]
+    },
+    {
+        "name": "Nature Reviews Psychology",
+        "url": "https://www.nature.com/nrpsychol/collections",
+        "tag": [
+            "Psychology",
+            "Review Journal"
+        ]
+    },
+    {
+        "name": "Nature Aging",
+        "url": "https://www.nature.com/nataging/collections",
+        "tag": [
+            "Life Sciences"
+        ]
+    },
+    {
+        "name": "Humanities and Social Sciences Communications",
+        "url": "https://www.nature.com/palcomms/collections",
+        "tag": [
+            "Interdisciplinary Science",
+            "General Education"
+        ]
+    },
+    {
+        "name": "American Journal of Sociology",
+        "url": "https://www.journals.uchicago.edu/journals/ajs/calls",
+        "tag": [
+            "Sociology"
+        ]
+    },
+    {
+        "name": "American Sociological Review",
+        "url": "https://journals.sagepub.com/home/ASR",
+        "tag": [
+            "Sociology"
+        ]
+    },
+    {
+        "name": "The British Journal of Sociology",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14684446/homepage/call-for-papers",
+        "tag": [
+            "Sociology"
+        ]
+    },
+    {
+        "name": "Social Forces",
+        "url": "https://academic.oup.com/sf",
+        "tag": [
+            "Sociology"
+        ]
+    },
+    {
+        "name": "Theory, Culture & Society",
+        "url": "https://journals.sagepub.com/home/tcs",
+        "tag": [
+            "Cultural Studies",
+            "Sociology"
+        ]
+    },
+    {
+        "name": "American Political Science Review",
+        "url": "https://www.cambridge.org/core/journals/american-political-science-review/announcements/call-for-papers",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "Journal of Politics",
+        "url": "https://www.journals.uchicago.edu/journals/jop/calls",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "British Journal of Political Science",
+        "url": "https://www.cambridge.org/core/journals/british-journal-of-political-science/announcements/call-for-papers",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "American Journal of Political Science",
+        "url": "https://onlinelibrary.wiley.com/page/journal/15405907/homepage/call-for-papers",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "Comparative Political Studies",
+        "url": "https://journals.sagepub.com/home/CPS",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "World Politics",
+        "url": "https://www.cambridge.org/core/journals/world-politics/announcements/call-for-papers",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "International Organization",
+        "url": "https://www.cambridge.org/core/journals/international-organization/announcements/call-for-papers",
+        "tag": [
+            "Political Science"
+        ]
+    },
+    {
+        "name": "Psychological Review",
+        "url": "https://www.apa.org/pubs/journals/rev",
+        "tag": [
+            "Psychology"
+        ]
+    },
+    {
+        "name": "Psychological Bulletin",
+        "url": "https://www.apa.org/pubs/journals/bul",
+        "tag": [
+            "Psychology",
+            "Review Journal"
+        ]
+    },
+    {
+        "name": "Journal of Personality and Social Psychology",
+        "url": "https://www.apa.org/pubs/journals/psp",
+        "tag": [
+            "Psychology"
+        ]
+    },
+    {
+        "name": "Journal of Communication",
+        "url": "https://academic.oup.com/joc",
+        "tag": [
+            "Communication Studies"
+        ]
+    },
+    {
+        "name": "Human Communication Research",
+        "url": "https://academic.oup.com/hcr",
+        "tag": [
+            "Communication Studies"
+        ]
+    },
+    {
+        "name": "New Media & Society",
+        "url": "https://journals.sagepub.com/home/NMS",
+        "tag": [
+            "Media Studies"
+        ]
+    },
+    {
+        "name": "Media, Culture & Society",
+        "url": "https://journals.sagepub.com/home/MCS",
+        "tag": [
+            "Media Studies",
+            "Cultural Studies"
+        ]
+    },
+    {
+        "name": "Mind",
+        "url": "https://academic.oup.com/mind",
+        "tag": [
+            "Philosophy"
+        ]
+    },
+    {
+        "name": "Ethics",
+        "url": "https://www.journals.uchicago.edu/journals/et/calls",
+        "tag": [
+            "Philosophy"
+        ]
+    },
+    {
+        "name": "British Journal for the Philosophy of Science",
+        "url": "https://www.journals.uchicago.edu/journals/bjps/calls",
+        "tag": [
+            "Philosophy"
+        ]
+    },
+    {
+        "name": "American Historical Review",
+        "url": "https://academic.oup.com/ahr",
+        "tag": [
+            "History"
+        ]
+    },
+    {
+        "name": "Past & Present",
+        "url": "https://academic.oup.com/past",
+        "tag": [
+            "History"
+        ]
+    },
+    {
+        "name": "History and Theory",
+        "url": "https://onlinelibrary.wiley.com/page/journal/14682303/homepage/call-for-papers",
+        "tag": [
+            "History",
+            "Philosophy"
+        ]
+    },
+    {
+        "name": "Economic Journal",
+        "url": "https://academic.oup.com/ej",
+        "tag": [
+            "Economics"
+        ]
+    },
+    {
+        "name": "Journal of Economic Literature",
+        "url": "https://www.aeaweb.org/jel/",
+        "tag": [
+            "Economics",
+            "Review Journal"
+        ]
+    },
+    {
+        "name": "Journal of Economic Perspectives",
+        "url": "https://www.aeaweb.org/jep/",
+        "tag": [
+            "Economics"
+        ]
+    },
+    {
+        "name": "American Anthropologist",
+        "url": "https://anthrosource.onlinelibrary.wiley.com/journal/15481433",
+        "tag": [
+            "Anthropology"
+        ]
+    },
+    {
+        "name": "Current Anthropology",
+        "url": "https://www.journals.uchicago.edu/journals/ca/calls",
+        "tag": [
+            "Anthropology"
+        ]
+    },
+    {
+        "name": "Journal of the Royal Anthropological Institute",
+        "url": "https://rai.onlinelibrary.wiley.com/journal/14679655",
+        "tag": [
+            "Anthropology"
+        ]
+    },
+    {
+        "name": "Gender & Society",
+        "url": "https://uk.sagepub.com/en-gb/eur/journal/gender-society",
+        "tag": [
+            "Gender Studies"
+        ]
+    },
+    {
+        "name": "Signs",
+        "url": "https://www.journals.uchicago.edu/journals/signs/calls",
+        "tag": [
+            "Gender Studies"
+        ]
+    },
+    {
+        "name": "Ethnic and Racial Studies",
+        "url": "https://www.tandfonline.com/journals/rers20",
+        "tag": [
+            "Ethnic Studies"
+        ]
+    },
+    {
+        "name": "Information Processing & Management",
+        "url": "https://www.sciencedirect.com/journal/information-processing-and-management/about/call-for-papers",
+        "tag": [
+            "Library & Information Science"
+        ]
+    },
+    {
+        "name": "Journal of Information Science",
+        "url": "https://uk.sagepub.com/en-gb/eur/journal/journal-information-science",
+        "tag": [
+            "Library & Information Science"
+        ]
+    },
+    {
+        "name": "Lingua",
+        "url": "https://www.sciencedirect.com/journal/lingua/about/call-for-papers",
+        "tag": [
+            "Linguistics"
+        ]
+    },
+    {
+        "name": "Linguistic Inquiry",
+        "url": "https://direct.mit.edu/ling",
+        "tag": [
+            "Linguistics"
+        ]
+    },
+    {
+        "name": "Critical Inquiry",
+        "url": "https://criticalinquiry.uchicago.edu/",
+        "tag": [
+            "Literary Studies",
+            "Cultural Studies"
+        ]
+    },
+    {
+        "name": "New Literary History",
+        "url": "https://muse.jhu.edu/journal/112",
+        "tag": [
+            "Literary Studies"
         ]
     }
 ]
