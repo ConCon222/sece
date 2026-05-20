@@ -808,7 +808,7 @@
     },
     {
         "name": "American Journal of Education",
-        "url": "https://www.journals.uchicago.edu/journals/aje/calls",
+        "url": "https://www.journals.uchicago.edu/journal/aje",
         "tag": [
             "General Education"
         ]
@@ -1559,7 +1559,7 @@
     },
     {
         "name": "American Journal of Sociology",
-        "url": "https://www.journals.uchicago.edu/journals/ajs/calls",
+        "url": "https://www.journals.uchicago.edu/journal/ajs",
         "tag": [
             "Sociology"
         ]
@@ -1602,7 +1602,7 @@
     },
     {
         "name": "Journal of Politics",
-        "url": "https://www.journals.uchicago.edu/journals/jop/calls",
+        "url": "https://www.journals.uchicago.edu/journal/jop",
         "tag": [
             "Political Science"
         ]
@@ -1702,14 +1702,14 @@
     },
     {
         "name": "Ethics",
-        "url": "https://www.journals.uchicago.edu/journals/et/calls",
+        "url": "https://www.journals.uchicago.edu/journal/et",
         "tag": [
             "Philosophy"
         ]
     },
     {
         "name": "British Journal for the Philosophy of Science",
-        "url": "https://www.journals.uchicago.edu/journals/bjps/calls",
+        "url": "https://www.journals.uchicago.edu/journal/bjps",
         "tag": [
             "Philosophy"
         ]
@@ -1767,7 +1767,7 @@
     },
     {
         "name": "Current Anthropology",
-        "url": "https://www.journals.uchicago.edu/journals/ca/calls",
+        "url": "https://www.journals.uchicago.edu/journal/ca",
         "tag": [
             "Anthropology"
         ]
@@ -1788,7 +1788,7 @@
     },
     {
         "name": "Signs",
-        "url": "https://www.journals.uchicago.edu/journals/signs/calls",
+        "url": "https://www.journals.uchicago.edu/journal/signs",
         "tag": [
             "Gender Studies"
         ]
