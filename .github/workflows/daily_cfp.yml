@@ -70,4 +70,5 @@ jobs:
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git commit -m "🤖 Auto-update CFP list [$(date +'%Y-%m-%d')]"
+          git pull --rebase origin main
           git push
