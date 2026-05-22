@@ -175,7 +175,7 @@ class EasyScholarCrawler:
                 official_rank = data.get('data', {}).get('officialRank', {}).get('select', {})
                 
                 result = {
-                    'purple_quartile': official_rank.get('ssci', ''),      # SSCI/SCI分区
+                    'purple_quartile': official_rank.get('ssci', '') or official_rank.get('sci', ''),  # SSCI优先，SCI兜底
                     'red_division': official_rank.get('sciUp', ''),     # 中科院分区
                     'purple_score': official_rank.get('sciif', '')     # Impact Factor
                 }
@@ -212,19 +212,11 @@ class WileyCrawler(PublisherCrawler):
     """Crawler for Wiley journals - 优化版"""
     
     def extract_metrics(self, url: str) -> Dict[str, Any]:
-        """Extract metrics from Wiley journal-metrics page"""
-        # 正确格式: /journal/{ISSN}/journal-metrics
-        # 从各种 Wiley URL 格式中提取 ISSN，统一构造 metrics URL
-        if "journal-metrics" not in url:
-            issn_match = re.search(r'/journal/(\d{7,8}[0-9Xx]?)', url)
-            if issn_match:
-                issn = issn_match.group(1)
-                # 统一用主域名（ila/anthrosource 等子域名的 metrics 页也在主域名上）
-                url = f"https://onlinelibrary.wiley.com/journal/{issn}/journal-metrics"
-            else:
-                logger.warning(f"   ⚠️ 无法从 URL 提取 ISSN: {url}")
-                return {'publisher': 'Wiley'}
+        """Extract metrics from Wiley journal-metrics page
 
+        URL 应已在 journal_rank.json 中配置为正确的 metrics 页面格式:
+        https://onlinelibrary.wiley.com/journal/{ISSN}/journal-metrics
+        """
         logger.info(f"Fetching Wiley data from: {url}")
         html = self.client.get_page(url)
         if not html:
@@ -383,14 +375,12 @@ class SageCrawler(PublisherCrawler):
     """Crawler for SAGE journals - 优化版"""
     
     def extract_metrics(self, url: str) -> Dict[str, Any]:
-        """Extract metrics from SAGE overview-metric page"""
-        # 正确格式: /overview-metric/{code}?tabActivePane=view-indexing-metrics&
-        # 从 /home/{code} 或 /overview-metric/{code} 提取 code，统一构造 metrics URL
-        code_match = re.search(r'/(?:home|overview-metric)/([A-Za-z0-9]+)', url, re.IGNORECASE)
-        if code_match:
-            code = code_match.group(1)
-            url = f"https://journals.sagepub.com/overview-metric/{code}?tabActivePane=view-indexing-metrics&"
+        """Extract metrics from SAGE journal page
 
+        URL 应已在 journal_rank.json 中配置为正确的 metrics 页面格式:
+        https://journals.sagepub.com/overview-metric/{code}?tabActivePane=view-indexing-metrics&
+        或 https://journals.sagepub.com/home/{code} (部分期刊)
+        """
         logger.info(f"Fetching SAGE data from: {url}")
         html = self.client.get_page(url)
         if not html:
@@ -432,9 +422,6 @@ class SageCrawler(PublisherCrawler):
             logger.error(f"Error parsing SAGE HTML: {e}")
 
         return metrics
-
-import re
-from typing import Dict, Any
 
 class ElsevierCrawler(PublisherCrawler):
     """Crawler for Elsevier journals - 优化版"""
