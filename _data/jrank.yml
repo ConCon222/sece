@@ -2576,14 +2576,18 @@
   tag:
   - Medical Education
   - General Education
-- documents_current_year: 7 (2026)
+- acceptance_rate: 10%
+  acceptance_time: 421 days
+  documents_current_year: 7 (2026)
   documents_last_year: 21 (2025)
   documents_published: 21 (2025)
-  hm_score: 45.8
+  first_decision_time: 24 days
+  hm_score: 51.8
   journal: Journal of Research in Reading
   orange_percentile: '88'
   orange_quartile: Q1
   orange_score: '5.2'
+  publication_time: 20 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '2.0'
@@ -2654,14 +2658,18 @@
   tag:
   - Education Policy & Social Issues
   - Sociology of Education
-- documents_current_year: 8 (2026)
+- acceptance_rate: 5%
+  acceptance_time: 292 days
+  documents_current_year: 8 (2026)
   documents_last_year: 28 (2025)
   documents_published: 28 (2025)
-  hm_score: 41.3
+  first_decision_time: 28 days
+  hm_score: 42.3
   journal: 'Educational Measurement: Issues and Practice'
   orange_percentile: '73'
   orange_quartile: Q2
   orange_score: '3.9'
+  publication_time: 21 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.9'
@@ -2974,14 +2982,18 @@
   tag:
   - Education Policy & Social Issues
   - Higher Education
-- documents_current_year: 85 (2026)
+- acceptance_rate: 14%
+  acceptance_time: 159 days
+  documents_current_year: 85 (2026)
   documents_last_year: 109 (2025)
   documents_published: 109 (2025)
-  hm_score: 50.2
+  first_decision_time: 10 days
+  hm_score: 60.2
   journal: Journal of School Health
   orange_percentile: '94'
   orange_quartile: Q1
   orange_score: '3.8'
+  publication_time: 14 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.8'
@@ -3008,14 +3020,18 @@
   tag:
   - General Education
   - Curriculum Studies
-- documents_current_year: 273 (2026)
+- acceptance_rate: 15%
+  acceptance_time: 140 days
+  documents_current_year: 273 (2026)
   documents_last_year: 214 (2025)
   documents_published: 214 (2025)
-  hm_score: 57.3
+  first_decision_time: 5 days
+  hm_score: 68.3
   journal: International Journal of Applied Linguistics
   orange_percentile: '86'
   orange_quartile: Q1
   orange_score: '2.7'
+  publication_time: 17 days
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '1.7'
@@ -3294,14 +3310,18 @@
   tag:
   - Science Education
   - Sociology of Education
-- documents_current_year: 20 (2026)
+- acceptance_rate: 13%
+  acceptance_time: 143 days
+  documents_current_year: 20 (2026)
   documents_last_year: 32 (2025)
   documents_published: 32 (2025)
-  hm_score: 42.2
+  first_decision_time: 11 days
+  hm_score: 51.2
   journal: Literacy
   orange_percentile: '87'
   orange_quartile: Q1
   orange_score: '2.8'
+  publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.5'
@@ -3346,14 +3366,18 @@
   review_time: 91 days
   tag:
   - Mathematics Education
-- documents_current_year: 19 (2026)
+- acceptance_rate: 13%
+  acceptance_time: 213 days
+  documents_current_year: 19 (2026)
   documents_last_year: 62 (2025)
   documents_published: 62 (2025)
-  hm_score: 47.2
+  first_decision_time: 19 days
+  hm_score: 56.2
   journal: Foreign Language Annals
   orange_percentile: '91'
   orange_quartile: Q1
   orange_score: '4.0'
+  publication_time: 46 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.5'
@@ -3432,14 +3456,18 @@
   tag:
   - General Education
   - Vocational & Continuing Education
-- documents_current_year: 30 (2026)
+- acceptance_rate: 18%
+  acceptance_time: 222 days
+  documents_current_year: 30 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
-  hm_score: 43.6
+  first_decision_time: 24 days
+  hm_score: 57.6
   journal: The Reading Teacher
   orange_percentile: '82'
   orange_quartile: Q1
   orange_score: '2.2'
+  publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.5'
@@ -3447,14 +3475,18 @@
   tag:
   - Language Education & Acquisition
   - General Education
-- documents_current_year: 25 (2026)
+- acceptance_rate: 13%
+  acceptance_time: 204 days
+  documents_current_year: 25 (2026)
   documents_last_year: 61 (2025)
   documents_published: 61 (2025)
-  hm_score: 37.9
+  first_decision_time: 35 days
+  hm_score: 46.9
   journal: Journal of Adolescent & Adult Literacy
   orange_percentile: '53'
   orange_quartile: Q2
   orange_score: '2.3'
+  publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.5'
@@ -3605,14 +3637,18 @@
   red_division: 文学2区
   tag:
   - Language Education & Acquisition
-- documents_current_year: 27 (2026)
+- acceptance_rate: 26%
+  acceptance_time: 151 days
+  documents_current_year: 27 (2026)
   documents_last_year: 36 (2025)
   documents_published: 36 (2025)
-  hm_score: 42.9
+  first_decision_time: 8 days
+  hm_score: 64.9
   journal: Anthropology & Education Quarterly
   orange_percentile: '89'
   orange_quartile: Q1
   orange_score: '3.5'
+  publication_time: 25 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.3'
@@ -3649,14 +3685,18 @@
   tag:
   - Higher Education
   - Educational Psychology
-- documents_current_year: 32 (2026)
+- acceptance_rate: 12%
+  acceptance_time: 306 days
+  documents_current_year: 32 (2026)
   documents_last_year: 81 (2025)
   documents_published: 81 (2025)
-  hm_score: 46.6
+  first_decision_time: 77 days
+  hm_score: 54.6
   journal: International Journal of Art & Design Education
   orange_percentile: '96'
   orange_quartile: Q1
   orange_score: '3.0'
+  publication_time: 31 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.2'
@@ -4301,14 +4341,18 @@
   red_division: 哲学1区
   tag:
   - Philosophy
-- documents_current_year: 39 (2026)
+- acceptance_rate: 7%
+  acceptance_time: 277 days
+  documents_current_year: 39 (2026)
   documents_last_year: 61 (2025)
   documents_published: 61 (2025)
-  hm_score: 36.0
+  first_decision_time: 65 days
+  hm_score: 39.0
   journal: Nous
   orange_percentile: '97'
   orange_quartile: Q1
   orange_score: '5.6'
+  publication_time: 27 days
   publisher: Wiley
   purple_score: '2.0'
   red_division: 哲学1区
@@ -4540,14 +4584,18 @@
   red_division: 社会学1区
   tag:
   - Sociology
-- documents_current_year: 59 (2026)
+- acceptance_rate: 20%
+  acceptance_time: 168 days
+  documents_current_year: 59 (2026)
   documents_last_year: 106 (2025)
   documents_published: 106 (2025)
-  hm_score: 57.6
+  first_decision_time: 25 days
+  hm_score: 73.6
   journal: The British Journal of Sociology
   orange_percentile: '85'
   orange_quartile: Q1
   orange_score: '5.0'
+  publication_time: 9 days
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '3.3'
@@ -4645,14 +4693,18 @@
   red_division: 社会学1区
   tag:
   - Political Science
-- documents_current_year: 84 (2026)
+- acceptance_rate: 6%
+  acceptance_time: 326 days
+  documents_current_year: 84 (2026)
   documents_last_year: 141 (2025)
   documents_published: 141 (2025)
-  hm_score: 71.5
+  first_decision_time: 9 days
+  hm_score: 73.5
   journal: American Journal of Political Science
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '11.5'
+  publication_time: 83 days
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '5.6'
@@ -4802,14 +4854,18 @@
   red_division: 文学1区
   tag:
   - Communication Studies
-- documents_current_year: 42 (2026)
+- acceptance_rate: 37%
+  acceptance_time: 252 days
+  documents_current_year: 42 (2026)
   documents_last_year: 102 (2025)
   documents_published: 102 (2025)
-  hm_score: 54.5
+  first_decision_time: 17 days
+  hm_score: 87.5
   journal: American Anthropologist
   orange_percentile: '91'
   orange_quartile: Q1
   orange_score: '3.9'
+  publication_time: 155 days
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '1.7'
@@ -4829,14 +4885,18 @@
   red_division: 社会学2区
   tag:
   - Anthropology
-- documents_current_year: 53 (2026)
+- acceptance_rate: 25%
+  acceptance_time: 454 days
+  documents_current_year: 53 (2026)
   documents_last_year: 91 (2025)
   documents_published: 91 (2025)
-  hm_score: 44.2
+  first_decision_time: 57 days
+  hm_score: 65.2
   journal: Journal of the Royal Anthropological Institute
   orange_percentile: '85'
   orange_quartile: Q1
   orange_score: '3.0'
+  publication_time: 149 days
   publisher: Wiley
   purple_quartile: Q2
   purple_score: '1.1'
@@ -5050,14 +5110,18 @@
   red_division: 社会学2区
   tag:
   - Law
-- documents_current_year: 23 (2026)
+- acceptance_rate: 7%
+  acceptance_time: 116 days
+  documents_current_year: 23 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
-  hm_score: 45.4
+  first_decision_time: 21 days
+  hm_score: 48.4
   journal: Modern Law Review
   orange_percentile: '79'
   orange_quartile: Q1
   orange_score: '2.6'
+  publication_time: 60 days
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '1.5'
