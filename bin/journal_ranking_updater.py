@@ -213,15 +213,18 @@ class WileyCrawler(PublisherCrawler):
     
     def extract_metrics(self, url: str) -> Dict[str, Any]:
         """Extract metrics from Wiley journal-metrics page"""
-        # 确保 URL 指向 metrics 页面
+        # 正确格式: /journal/{ISSN}/journal-metrics
+        # 从各种 Wiley URL 格式中提取 ISSN，统一构造 metrics URL
         if "journal-metrics" not in url:
-            # 处理类似 /journal/1234/ 的 URL
-            if "/journal/" in url:
-                url = url.replace("/journal/", "/journal-metrics/")
-            # 如果结尾不是 metrics
-            if not url.endswith("journal-metrics") and "journal-metrics" not in url:
-                url = f"{url.rstrip('/')}/journal-metrics"
-        
+            issn_match = re.search(r'/journal/(\d{7,8}[0-9Xx]?)', url)
+            if issn_match:
+                issn = issn_match.group(1)
+                # 统一用主域名（ila/anthrosource 等子域名的 metrics 页也在主域名上）
+                url = f"https://onlinelibrary.wiley.com/journal/{issn}/journal-metrics"
+            else:
+                logger.warning(f"   ⚠️ 无法从 URL 提取 ISSN: {url}")
+                return {'publisher': 'Wiley'}
+
         logger.info(f"Fetching Wiley data from: {url}")
         html = self.client.get_page(url)
         if not html:
@@ -380,48 +383,54 @@ class SageCrawler(PublisherCrawler):
     """Crawler for SAGE journals - 优化版"""
     
     def extract_metrics(self, url: str) -> Dict[str, Any]:
-        """Extract metrics from SAGE journal page"""
+        """Extract metrics from SAGE overview-metric page"""
+        # 正确格式: /overview-metric/{code}?tabActivePane=view-indexing-metrics&
+        # 从 /home/{code} 或 /overview-metric/{code} 提取 code，统一构造 metrics URL
+        code_match = re.search(r'/(?:home|overview-metric)/([A-Za-z0-9]+)', url, re.IGNORECASE)
+        if code_match:
+            code = code_match.group(1)
+            url = f"https://journals.sagepub.com/overview-metric/{code}?tabActivePane=view-indexing-metrics&"
+
         logger.info(f"Fetching SAGE data from: {url}")
         html = self.client.get_page(url)
         if not html:
             return {}
-        
+
         metrics = {
             'first_decision_time': '',
             'publication_time': '',
             'acceptance_rate': '',
             'publisher': 'SAGE'
         }
-        
+
         try:
             # 使用 re.DOTALL 忽略换行符影响
             # 使用 re.IGNORECASE 忽略大小写
-            
+
             # 1. Extract First decision -> 映射到 first_decision_time
-            # HTML: First decision:</div><div ...>77<span>days*</span>
-            # 逻辑: 找到 "First decision:"，跳过中间乱七八糟的标签，找到数字，且确保后面跟着 days
-            fd_match = re.search(r'First\s+decision:.*?(\d+)\s*<span[^>]*>days', html, re.DOTALL | re.IGNORECASE)
+            # 模式A (homepage): First decision:</div><div ...>77<span>days*</span>
+            # 模式B (overview-metric): 可能有不同 HTML 包裹
+            fd_match = re.search(r'First\s+decision:.*?(\d+)\s*(?:<[^>]*>\s*)*days', html, re.DOTALL | re.IGNORECASE)
             if fd_match:
                 metrics['first_decision_time'] = f"{fd_match.group(1)} days"
-            
+
             # 2. Extract Acceptance to publication
-            # HTML: Acceptance to publication:</div><div ...>39<span>days*</span>
-            ap_match = re.search(r'Acceptance\s+to\s+publication:.*?(\d+)\s*<span[^>]*>days', html, re.DOTALL | re.IGNORECASE)
+            ap_match = re.search(r'Acceptance\s+to\s+publication:.*?(\d+)\s*(?:<[^>]*>\s*)*days', html, re.DOTALL | re.IGNORECASE)
             if ap_match:
                 metrics['publication_time'] = f"{ap_match.group(1)} days"
-            
+
             # 3. Extract Acceptance rate
-            # HTML: Acceptance rate:</div><div ...>5.0<span class="percentage">%</span>
-            # 逻辑: 匹配整数或小数 (如 5 或 5.0)，且后面跟着 %
-            ar_match = re.search(r'Acceptance\s+rate:.*?(\d+(?:\.\d+)?)\s*<span[^>]*>%', html, re.DOTALL | re.IGNORECASE)
+            # 模式A: 5.0<span class="percentage">%</span>
+            # 模式B: 5.0% (纯文本)
+            ar_match = re.search(r'Acceptance\s+rate:.*?(\d+(?:\.\d+)?)\s*(?:<[^>]*>\s*)*%', html, re.DOTALL | re.IGNORECASE)
             if ar_match:
                 metrics['acceptance_rate'] = f"{ar_match.group(1)}%"
-            
+
             logger.info(f"Extracted SAGE metrics: {metrics}")
-            
+
         except Exception as e:
             logger.error(f"Error parsing SAGE HTML: {e}")
-        
+
         return metrics
 
 import re
