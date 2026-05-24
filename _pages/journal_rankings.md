@@ -7,15 +7,17 @@ nav: true
 nav_order: 5
 ---
 
+{% assign all_tags = site.data.jrank | map: 'tag' | join: ',' | split: ',' | uniq | sort %}
+
 <div class="journal-rankings">
   <!-- Search and Filter Section -->
   <div class="search-filter-section mb-4">
     <div class="row">
-      <div class="col-md-6">
-        <input type="text" id="journal-search" class="form-control" placeholder="Search journals by name or tag...">
+      <div class="col-md-4">
+        <input type="text" id="journal-search" class="form-control form-control-sm" placeholder="Search journals by name or tag...">
       </div>
-      <div class="col-md-3">
-        <select id="quartile-filter" class="form-control">
+      <div class="col-md-2">
+        <select id="quartile-filter" class="form-control form-control-sm">
           <option value="">All Quartiles</option>
           <option value="Q1">Q1</option>
           <option value="Q2">Q2</option>
@@ -23,14 +25,28 @@ nav_order: 5
           <option value="Q4">Q4</option>
         </select>
       </div>
-      <div class="col-md-3">
-        <select id="publisher-filter" class="form-control">
+      <div class="col-md-2">
+        <select id="publisher-filter" class="form-control form-control-sm">
           <option value="">All Publishers</option>
           <option value="Springer">Springer</option>
           <option value="Wiley">Wiley</option>
           <option value="Elsevier">Elsevier</option>
-          <option value="Taylor">Taylor & Francis</option>
+          <option value="Taylor & Francis">Taylor & Francis</option>
+          <option value="SAGE">SAGE</option>
         </select>
+      </div>
+      <div class="col-md-2">
+        <select id="tag-filter" class="form-control form-control-sm">
+          <option value="">All Tags</option>
+          {% for tag in all_tags %}
+            {% if tag != "" %}
+            <option value="{{ tag | strip | downcase }}">{{ tag | strip }}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-2 text-right">
+        <span class="results-count" id="jr-results-count"></span>
       </div>
     </div>
   </div>
@@ -40,41 +56,45 @@ nav_order: 5
     <table class="table table-striped table-hover" id="journal-table">
       <thead class="thead-dark">
         <tr>
-          <th>Journal Name</th>
-          <th>HM</th>
-          <th>Purple<br><small>(score)</small></th>
-          <th>Orange<br><small>(score)</small></th>
+          <th class="sortable" data-sort="name">Journal Name <span class="sort-icon"></span></th>
+          <th class="sortable" data-sort="hm">HM <span class="sort-icon"></span></th>
+          <th class="sortable" data-sort="purple">Purple<br><small>(IF)</small> <span class="sort-icon"></span></th>
+          <th class="sortable" data-sort="orange">Orange<br><small>(CiteScore)</small> <span class="sort-icon"></span></th>
           <th>Red</th>
-          <th>Review<br><small>Timeline (Days)</small></th>
-          <th>Accept<br><small>Rate</small></th>
-          <th>Articles<br><small>Published</small></th>
+          <th class="sortable" data-sort="decision">First<br><small>Decision</small> <span class="sort-icon"></span></th>
+          <th class="sortable" data-sort="accept">Accept<br><small>Rate</small> <span class="sort-icon"></span></th>
+          <th>More</th>
           <th>Tags</th>
         </tr>
       </thead>
       <tbody id="journal-tbody">
         {% assign sorted_journals = site.data.jrank | sort: 'purple_score' | reverse %}
         {% for journal in sorted_journals %}
-        <tr data-journal="{{ journal.journal | downcase }}" 
-            data-publisher="{{ journal.publisher | downcase }}" 
+        {% assign journal_data = site.data.journal_rank | where: "name", journal.journal | first %}
+        <tr data-journal="{{ journal.journal | downcase }}"
+            data-publisher="{{ journal.publisher | downcase }}"
             data-quartile="{{ journal.purple_quartile }}"
-            data-tags="{{ journal.tag | join: ' ' | downcase }}">
+            data-tags="{{ journal.tag | join: ',' | downcase }}"
+            data-hm="{{ journal.hm_score | default: 0 }}"
+            data-purple="{{ journal.purple_score | default: 0 }}"
+            data-orange="{{ journal.orange_score | default: 0 }}"
+            data-decision="{{ journal.first_decision_time | remove: ' days' | default: 9999 }}"
+            data-accept="{{ journal.acceptance_rate | remove: '%' | default: 0 }}"
+            data-name="{{ journal.journal }}">
+          <!-- Journal Name -->
           <td>
             <strong>{{ journal.journal }}</strong>
             {% if journal.publisher and journal.publisher != "" %}
               <br><small class="text-muted">{{ journal.publisher }}</small>
             {% endif %}
-            {% assign journal_url = "" %}
-            {% for j in site.data.journal_rank %}
-              {% if j.name == journal.journal %}
-                {% assign journal_url = j.url %}
-              {% endif %}
-            {% endfor %}
-            {% if journal_url != "" %}
-              <a href="{{ journal_url }}" target="_blank" class="ml-2">
-                <i class="fas fa-external-link-alt"></i>
+            {% if journal_data.url %}
+              <a href="{{ journal_data.url }}" target="_blank" class="ml-1" title="Publisher page">
+                <i class="fas fa-external-link-alt" style="font-size:0.7rem;"></i>
               </a>
             {% endif %}
+            <a href="/cfp/?q={{ journal.journal | url_encode }}" class="jr-cfp-link" title="Search CFPs for this journal">CFP</a>
           </td>
+          <!-- HM Score -->
           <td>
             {% if journal.hm_score and journal.hm_score != "" %}
               <span class="hm-score" data-score="{{ journal.hm_score }}">
@@ -84,6 +104,7 @@ nav_order: 5
               <span class="text-muted">-</span>
             {% endif %}
           </td>
+          <!-- Purple (JCR) -->
           <td>
             {% if journal.purple_quartile and journal.purple_quartile != "" %}
               <span class="badge badge-purple">{{ journal.purple_quartile }}</span>
@@ -94,19 +115,14 @@ nav_order: 5
               <span class="text-muted">-</span>
             {% endif %}
           </td>
+          <!-- Orange (Scopus) -->
           <td>
             {% if journal.orange_quartile and journal.orange_quartile != "" %}
               <span class="badge badge-orange">{{ journal.orange_quartile }}</span>
               {% if journal.orange_score and journal.orange_score != "" %}
-                {% assign sourceid = "" %}
-                {% for j in site.data.journal_rank %}
-                  {% if j.name == journal.journal %}
-                    {% assign sourceid = j.sourceid %}
-                  {% endif %}
-                {% endfor %}
                 <br><small>
-                  {% if sourceid != "" %}
-                    <a href="https://www.scopus.com/sourceid/{{ sourceid }}" target="_blank">{{ journal.orange_score }}</a>
+                  {% if journal_data.sourceid %}
+                    <a href="https://www.scopus.com/sourceid/{{ journal_data.sourceid }}" target="_blank">{{ journal.orange_score }}</a>
                   {% else %}
                     {{ journal.orange_score }}
                   {% endif %}
@@ -116,6 +132,7 @@ nav_order: 5
               <span class="text-muted">-</span>
             {% endif %}
           </td>
+          <!-- Red (CAS) -->
           <td>
             {% if journal.red_division and journal.red_division != "" %}
               <span class="badge badge-red">{{ journal.red_division }}</span>
@@ -123,25 +140,15 @@ nav_order: 5
               <span class="text-muted">-</span>
             {% endif %}
           </td>
+          <!-- First Decision -->
           <td>
-            <small>
-              {% if journal.first_decision_time and journal.first_decision_time != "" %}
-                <strong>First Decision:</strong> {{ journal.first_decision_time | remove: ' days' }}<br>
-              {% endif %}
-              {% if journal.review_time and journal.review_time != "" %}
-                <strong>Review:</strong> {{ journal.review_time | remove: ' days' }}<br>
-              {% endif %}
-              {% if journal.acceptance_time and journal.acceptance_time != "" %}
-                <strong>To Accept:</strong> {{ journal.acceptance_time | remove: ' days' }}<br>
-              {% endif %}
-              {% if journal.publication_time and journal.publication_time != "" %}
-                <strong>To Publish:</strong> {{ journal.publication_time | remove: ' days' }}
-              {% endif %}
-              {% unless journal.first_decision_time or journal.review_time or journal.acceptance_time or journal.publication_time %}
-                <span class="text-muted">-</span>
-              {% endunless %}
-            </small>
+            {% if journal.first_decision_time and journal.first_decision_time != "" %}
+              {{ journal.first_decision_time | remove: ' days' }}d
+            {% else %}
+              <span class="text-muted">-</span>
+            {% endif %}
           </td>
+          <!-- Accept Rate -->
           <td>
             {% if journal.acceptance_rate and journal.acceptance_rate != "" %}
               {{ journal.acceptance_rate }}
@@ -149,23 +156,42 @@ nav_order: 5
               <span class="text-muted">-</span>
             {% endif %}
           </td>
+          <!-- More (expandable details) -->
           <td>
-            <small>
-              {% if journal.documents_current_year and journal.documents_current_year != "" %}
-                <strong>Current:</strong> {{ journal.documents_current_year }}<br>
-              {% endif %}
-              {% if journal.documents_last_year and journal.documents_last_year != "" %}
-                <strong>Last Year:</strong> {{ journal.documents_last_year }}
-              {% endif %}
-              {% unless journal.documents_current_year or journal.documents_last_year %}
-                <span class="text-muted">-</span>
-              {% endunless %}
-            </small>
+            {% assign has_extra = false %}
+            {% if journal.review_time or journal.acceptance_time or journal.publication_time or journal.documents_current_year %}
+              {% assign has_extra = true %}
+            {% endif %}
+            {% if has_extra %}
+            <details class="jr-details">
+              <summary class="small text-primary" style="cursor:pointer;white-space:nowrap;">Details</summary>
+              <div class="jr-details-box">
+                {% if journal.review_time and journal.review_time != "" %}
+                  <div><small><strong>Review:</strong> {{ journal.review_time | remove: ' days' }}d</small></div>
+                {% endif %}
+                {% if journal.acceptance_time and journal.acceptance_time != "" %}
+                  <div><small><strong>To Accept:</strong> {{ journal.acceptance_time | remove: ' days' }}d</small></div>
+                {% endif %}
+                {% if journal.publication_time and journal.publication_time != "" %}
+                  <div><small><strong>To Publish:</strong> {{ journal.publication_time | remove: ' days' }}d</small></div>
+                {% endif %}
+                {% if journal.documents_current_year and journal.documents_current_year != "" %}
+                  <div><small><strong>Articles:</strong> {{ journal.documents_current_year }}</small></div>
+                {% endif %}
+                {% if journal.documents_last_year and journal.documents_last_year != "" %}
+                  <div><small><strong>Last Year:</strong> {{ journal.documents_last_year }}</small></div>
+                {% endif %}
+              </div>
+            </details>
+            {% else %}
+              <span class="text-muted">-</span>
+            {% endif %}
           </td>
+          <!-- Tags -->
           <td class="tags-cell">
             {% if journal.tag %}
               {% for tag in journal.tag %}
-                <span class="badge badge-secondary badge-sm">{{ tag }}</span><br>
+                <span class="badge badge-secondary badge-sm">{{ tag }}</span>
               {% endfor %}
             {% endif %}
           </td>
@@ -175,16 +201,21 @@ nav_order: 5
     </table>
   </div>
 
+  <!-- Empty state -->
+  <div class="jr-empty-state" id="jr-empty-state" style="display:none;">
+    <p>No matching journals found.<br>Try adjusting your filters.</p>
+  </div>
+
   <!-- Statistics Section -->
   <div class="statistics-section mt-4">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-6 col-md-3">
         <div class="stat-card">
           <h6>Total Journals</h6>
           <span id="total-journals">{{ site.data.jrank | size }}</span>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-6 col-md-3">
         <div class="stat-card">
           <h6>Q1 Journals</h6>
           <span id="q1-count">
@@ -198,10 +229,16 @@ nav_order: 5
           </span>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <h6>Publishers</h6>
+          <span>5</span>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
         <div class="stat-card">
           <h6>Last Updated</h6>
-          <span id="last-updated">
+          <span id="last-updated" style="font-size:1rem;">
             {{ site.time | date: "%Y-%m-%d" }}
           </span>
         </div>
@@ -217,9 +254,19 @@ nav_order: 5
 
 .search-filter-section {
   background: #f8f9fa;
-  padding: 20px;
+  padding: 16px 20px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+.search-filter-section .row > div {
+  margin-bottom: 6px;
+}
+
+.results-count {
+  font-size: 0.8rem;
+  color: #6c757d;
+  line-height: 31px;
 }
 
 .badge-purple {
@@ -245,7 +292,66 @@ nav_order: 5
   display: inline-block;
   min-width: 35px;
   text-align: center;
-  background-color: #6c757d; /* 默认灰色 */
+  background-color: #6c757d;
+}
+
+/* Sortable headers */
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.sortable:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+.sort-icon {
+  font-size: 0.65rem;
+  margin-left: 2px;
+  opacity: 0.5;
+}
+.sort-icon::after {
+  content: '⇅';
+}
+.sortable.sort-asc .sort-icon::after {
+  content: '↑';
+  opacity: 1;
+}
+.sortable.sort-desc .sort-icon::after {
+  content: '↓';
+  opacity: 1;
+}
+.sortable.sort-asc .sort-icon,
+.sortable.sort-desc .sort-icon {
+  opacity: 1;
+}
+
+/* Cross-link to CFP */
+.jr-cfp-link {
+  font-size: 0.65rem;
+  color: #17a2b8;
+  text-decoration: none;
+  margin-left: 4px;
+  border: 1px solid #17a2b8;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+.jr-cfp-link:hover {
+  background-color: #17a2b8;
+  color: white;
+  text-decoration: none;
+}
+
+/* More details column */
+.jr-details-box {
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+/* Empty state */
+.jr-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
 }
 
 .statistics-section {
@@ -256,19 +362,21 @@ nav_order: 5
 
 .stat-card {
   text-align: center;
-  padding: 15px;
+  padding: 12px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 8px;
 }
 
 .stat-card h6 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #6c757d;
+  font-size: 0.8rem;
 }
 
 .stat-card span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #495057;
 }
@@ -276,24 +384,21 @@ nav_order: 5
 .table th {
   border-top: none;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   text-align: center;
   vertical-align: middle;
 }
 
-/* 列宽控制 */
-.table th:nth-child(1) { min-width: 200px; } /* Journal Name */
-.table th:nth-child(6) { min-width: 130px; } /* Review Timeline */
-.table th:nth-child(8) { min-width: 100px; } /* Articles Published */
+.table th:nth-child(1) { min-width: 200px; }
 
 .table td {
   vertical-align: middle;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
 
 .badge-sm {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   margin-right: 2px;
   margin-bottom: 2px;
 }
@@ -302,235 +407,214 @@ nav_order: 5
   .table-responsive {
     font-size: 0.75rem;
   }
-  
   .search-filter-section .row > div {
-    margin-bottom: 10px;
-  }
-  
-  .stat-card {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('journal-search');
-  const quartileFilter = document.getElementById('quartile-filter');
-  const publisherFilter = document.getElementById('publisher-filter');
-  const tableBody = document.getElementById('journal-tbody');
-  const rows = Array.from(tableBody.querySelectorAll('tr'));
+  var searchInput = document.getElementById('journal-search');
+  var quartileFilter = document.getElementById('quartile-filter');
+  var publisherFilter = document.getElementById('publisher-filter');
+  var tagFilter = document.getElementById('tag-filter');
+  var tableBody = document.getElementById('journal-tbody');
+  var table = document.getElementById('journal-table');
+  var rows = Array.from(tableBody.querySelectorAll('tr'));
+  var emptyState = document.getElementById('jr-empty-state');
+  var resultsCount = document.getElementById('jr-results-count');
 
-  // 根据HM分数数值设置背景颜色
+  // HM Score: percentile-based coloring
   function setHmScoreColors() {
+    var scores = [];
     document.querySelectorAll('.hm-score').forEach(function(el) {
-      const score = parseFloat(el.dataset.score);
-      if (isNaN(score)) return;
-      
-      let bgColor, textColor = 'white';
-      if (score >= 90) {
-        bgColor = '#28a745';  // 绿色 - 优秀
-      } else if (score >= 80) {
-        bgColor = '#20c997';  // 青绿色
-      } else if (score >= 70) {
-        bgColor = '#17a2b8';  // 青色
-      } else if (score >= 60) {
-        bgColor = '#007bff';  // 蓝色
-      } else if (score >= 50) {
-        bgColor = '#6610f2';  // 紫色
-      } else if (score >= 40) {
-        bgColor = '#e83e8c';  // 粉色
-      } else if (score >= 30) {
-        bgColor = '#fd7e14';  // 橙色
-      } else if (score >= 20) {
-        bgColor = '#ffc107';  // 黄色
-        textColor = '#212529';
-      } else {
-        bgColor = '#6c757d';  // 灰色
+      var s = parseFloat(el.dataset.score);
+      if (!isNaN(s)) scores.push(s);
+    });
+    scores.sort(function(a, b) { return a - b; });
+
+    function getPercentile(val) {
+      if (scores.length === 0) return 0;
+      var idx = 0;
+      for (var i = 0; i < scores.length; i++) {
+        if (scores[i] <= val) idx = i;
       }
-      
+      return idx / (scores.length - 1);
+    }
+
+    document.querySelectorAll('.hm-score').forEach(function(el) {
+      var score = parseFloat(el.dataset.score);
+      if (isNaN(score)) return;
+
+      var pct = getPercentile(score);
+      var bgColor, textColor = 'white';
+      if (pct >= 0.95) {
+        bgColor = '#1a8c35';
+      } else if (pct >= 0.85) {
+        bgColor = '#28a745';
+      } else if (pct >= 0.70) {
+        bgColor = '#20c997';
+      } else if (pct >= 0.55) {
+        bgColor = '#17a2b8';
+      } else if (pct >= 0.40) {
+        bgColor = '#007bff';
+      } else if (pct >= 0.25) {
+        bgColor = '#6610f2';
+      } else if (pct >= 0.10) {
+        bgColor = '#e83e8c';
+      } else {
+        bgColor = '#fd7e14';
+        textColor = '#212529';
+      }
+
       el.style.backgroundColor = bgColor;
       el.style.color = textColor;
     });
   }
-  
-  // 页面加载时设置颜色
   setHmScoreColors();
 
+  // Filter logic
   function filterTable() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const selectedQuartile = quartileFilter.value;
-    const selectedPublisher = publisherFilter.value.toLowerCase();
+    var searchTerm = searchInput.value.toLowerCase();
+    var selectedQuartile = quartileFilter.value;
+    var selectedPublisher = publisherFilter.value.toLowerCase();
+    var selectedTag = tagFilter.value.toLowerCase();
 
-    rows.forEach(row => {
-      const journalName = row.dataset.journal;
-      const publisher = row.dataset.publisher;
-      const quartile = row.dataset.quartile;
-      const tags = row.dataset.tags;
+    var visibleCount = 0;
 
-      const matchesSearch = journalName.includes(searchTerm) || tags.includes(searchTerm);
-      const matchesQuartile = !selectedQuartile || (quartile && quartile.includes(selectedQuartile));
-      const matchesPublisher = !selectedPublisher || (publisher && publisher.includes(selectedPublisher));
+    rows.forEach(function(row) {
+      var journalName = row.dataset.journal;
+      var publisher = row.dataset.publisher;
+      var quartile = row.dataset.quartile;
+      var tags = row.dataset.tags;
 
-      if (matchesSearch && matchesQuartile && matchesPublisher) {
+      var matchesSearch = !searchTerm || journalName.includes(searchTerm) || tags.includes(searchTerm);
+      var matchesQuartile = !selectedQuartile || (quartile && quartile.includes(selectedQuartile));
+      var matchesPublisher = !selectedPublisher || (publisher && publisher.includes(selectedPublisher));
+      var matchesTag = !selectedTag || (tags && tags.split(',').some(function(t) { return t.trim() === selectedTag; }));
+
+      if (matchesSearch && matchesQuartile && matchesPublisher && matchesTag) {
         row.style.display = '';
+        visibleCount++;
       } else {
         row.style.display = 'none';
       }
     });
 
+    // Empty state
+    if (visibleCount === 0) {
+      emptyState.style.display = 'block';
+      table.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      table.style.display = '';
+    }
+
     updateStatistics();
+    resultsCount.textContent = visibleCount + ' / ' + rows.length;
   }
 
   function updateStatistics() {
-    const visibleRows = rows.filter(row => row.style.display !== 'none');
+    var visibleRows = rows.filter(function(r) { return r.style.display !== 'none'; });
     document.getElementById('total-journals').textContent = visibleRows.length;
-    
-    const q1Count = visibleRows.filter(row => 
-      row.dataset.quartile && row.dataset.quartile.includes('Q1')
-    ).length;
+
+    var q1Count = visibleRows.filter(function(r) {
+      return r.dataset.quartile && r.dataset.quartile.includes('Q1');
+    }).length;
     document.getElementById('q1-count').textContent = q1Count;
   }
 
+  // Sortable table
+  var currentSort = { key: 'purple', dir: 'desc' };
+
+  function sortTable(key) {
+    var dir = 'desc';
+    if (currentSort.key === key && currentSort.dir === 'desc') {
+      dir = 'asc';
+    }
+    currentSort = { key: key, dir: dir };
+
+    // Update header styles
+    document.querySelectorAll('.sortable').forEach(function(th) {
+      th.classList.remove('sort-asc', 'sort-desc');
+    });
+    var activeTh = document.querySelector('.sortable[data-sort="' + key + '"]');
+    if (activeTh) activeTh.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+
+    rows.sort(function(a, b) {
+      var valA, valB;
+
+      if (key === 'name') {
+        valA = a.dataset.name.toLowerCase();
+        valB = b.dataset.name.toLowerCase();
+        return dir === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
+      }
+
+      // Numeric sorts
+      var attrMap = {
+        hm: 'hm',
+        purple: 'purple',
+        orange: 'orange',
+        decision: 'decision',
+        accept: 'accept'
+      };
+      valA = parseFloat(a.dataset[attrMap[key]]) || 0;
+      valB = parseFloat(b.dataset[attrMap[key]]) || 0;
+
+      // For decision time, 9999 means missing - push to bottom
+      if (key === 'decision') {
+        if (valA === 9999 && valB !== 9999) return 1;
+        if (valB === 9999 && valA !== 9999) return -1;
+      }
+
+      if (dir === 'asc') return valA - valB;
+      return valB - valA;
+    });
+
+    // Re-append sorted rows
+    rows.forEach(function(row) {
+      tableBody.appendChild(row);
+    });
+  }
+
+  document.querySelectorAll('.sortable').forEach(function(th) {
+    th.addEventListener('click', function() {
+      sortTable(this.dataset.sort);
+    });
+  });
+
+  // Mark initial sort state
+  var initialTh = document.querySelector('.sortable[data-sort="purple"]');
+  if (initialTh) initialTh.classList.add('sort-desc');
+
+  // Event listeners
   searchInput.addEventListener('input', filterTable);
   quartileFilter.addEventListener('change', filterTable);
   publisherFilter.addEventListener('change', filterTable);
+  tagFilter.addEventListener('change', filterTable);
+
+  // URL param: pre-fill search from CFP cross-link
+  var urlParams = new URLSearchParams(window.location.search);
+  var qParam = urlParams.get('q');
+  if (qParam) {
+    searchInput.value = qParam;
+  }
+
+  // Initial filter
+  filterTable();
 });
 </script>
 
 <!-- Disclaimer -->
 <div class="disclaimer mt-4">
   <small class="text-muted">
-    <strong>Disclaimer:</strong> The data presented here is for reference only. 
-    Original metrics are linked to their respective sources. 
+    <strong>Disclaimer:</strong> The data presented here is for reference only.
+    Original metrics are linked to their respective sources.
     Please verify information from official publisher websites before making any decisions.
     <br>
     <strong>免责声明：</strong>本页面数据仅供参考，原始数据已链接至对应来源网站。请在做出任何决策前自行核实官方信息。
   </small>
 </div>
 
-<!-- 微信二维码浮窗 CSS -->
-<style>
-  .qr-float-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #07c160, #06ae56);
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(7, 193, 96, 0.4);
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .qr-float-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.5);
-  }
-  .qr-float-btn img {
-    width: 36px;
-    height: 36px;
-    filter: brightness(0) invert(1);
-  }
-  .qr-modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 1001;
-    justify-content: center;
-    align-items: center;
-  }
-  .qr-modal-overlay.active {
-    display: flex;
-  }
-  .qr-modal-content {
-    background: white;
-    border-radius: 16px;
-    padding: 32px;
-    text-align: center;
-    max-width: 400px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    animation: qrPopIn 0.3s ease;
-  }
-  @keyframes qrPopIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-  .qr-modal-content img {
-    width: 280px;
-    height: 280px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
-  .qr-modal-content h4 {
-    margin: 0 0 8px 0;
-    color: #07c160;
-  }
-  .qr-modal-content p {
-    margin: 0;
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .qr-close-btn {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 32px;
-    height: 32px;
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  .qr-modal-box {
-    position: relative;
-  }
-</style>
-
-<!-- 微信二维码浮窗 -->
-<div class="qr-float-btn" id="qrFloatBtn" title="Join WeChat Group">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
-    <path d="M8.5 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.5 8c-4.14 0-7.5-2.91-7.5-6.5 0-3.59 3.36-6.5 7.5-6.5S18.5 9.41 18.5 13c0 1.38-.47 2.66-1.27 3.74l.77 2.26-2.72-.9c-1.1.57-2.35.9-3.78.9z"/>
-  </svg>
-</div>
-
-<div class="qr-modal-overlay" id="qrModalOverlay">
-  <div class="qr-modal-box">
-    <div class="qr-modal-content">
-      <button class="qr-close-btn" id="qrCloseBtn">&times;</button>
-      <img src="/assets/img/wechat_qr.png" alt="WeChat QR Code">
-      <h4>学术柴犬交流群</h4>
-      <p>
-        WeChat: whmtech<br>
-        期刊资讯分享 · 数据问题反馈 · 新增期刊建议<br>
-        <span class="text-muted" style="font-size: 0.8rem;">Join for academic discussions, data feedback & journal suggestions.</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-<script>
-  // 二维码浮窗交互
-  document.getElementById('qrFloatBtn').addEventListener('click', function() {
-    document.getElementById('qrModalOverlay').classList.add('active');
-  });
-  document.getElementById('qrCloseBtn').addEventListener('click', function() {
-    document.getElementById('qrModalOverlay').classList.remove('active');
-  });
-  document.getElementById('qrModalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.classList.remove('active');
-    }
-  });
-</script>
+{% include wechat_qr.html %}

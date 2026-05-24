@@ -8,20 +8,36 @@ nav_order: 3
 ---
 
 {% assign all_tags = site.data.cfps | map: 'tag' | join: ',' | split: ',' | uniq | sort %}
+{% assign sorted_cfps = site.data.cfps | sort: 'fullpaper_deadline_sort' %}
 
 <style>
-  .filter-btn {
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    text-transform: capitalize;
+  /* Search & Filter Bar */
+  .cfp-filter-section {
+    background: #f8f9fa;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
   }
-  .filter-btn.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+  .cfp-filter-section .row > div {
+    margin-bottom: 8px;
   }
+
+  /* Deadline badges */
+  .deadline-active { background-color: #28a745; color: white; }
+  .deadline-urgent { background-color: #fd7e14; color: white; }
+  .deadline-expired { background-color: #6c757d; color: white; }
+  .deadline-tba { background-color: #ffc107; color: #212529; }
+  .countdown-text {
+    font-size: 0.75rem;
+    color: #dc3545;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .countdown-text.comfortable {
+    color: #28a745;
+  }
+
+  /* Details box */
   .cfp-details-box {
     background-color: #f8f9fa;
     border-left: 3px solid #17a2b8;
@@ -34,162 +50,158 @@ nav_order: 3
     font-weight: 600;
     color: #495057;
   }
-  /* 新增：标签小徽章的样式 */
+
+  /* Tag badges */
   .tag-badge {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-right: 2px;
     margin-bottom: 2px;
     display: inline-block;
   }
-  /* 微信二维码浮窗 */
-  .qr-float-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 100px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #07c160, #06ae56);
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(7, 193, 96, 0.4);
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+
+  /* Journal link to rankings */
+  .cfp-journal-link {
+    font-size: 0.7rem;
+    color: #6f42c1;
+    text-decoration: none;
+    margin-left: 4px;
   }
-  .qr-float-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(7, 193, 96, 0.5);
+  .cfp-journal-link:hover {
+    text-decoration: underline;
   }
-  .qr-float-btn img {
-    width: 36px;
-    height: 36px;
-    filter: brightness(0) invert(1);
-  }
-  .qr-modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 1001;
-    justify-content: center;
-    align-items: center;
-  }
-  .qr-modal-overlay.active {
-    display: flex;
-  }
-  .qr-modal-content {
-    background: white;
-    border-radius: 16px;
-    padding: 32px;
+
+  /* Empty state */
+  .cfp-empty-state {
     text-align: center;
-    max-width: 400px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    animation: qrPopIn 0.3s ease;
+    padding: 40px 20px;
+    color: #6c757d;
+    display: none;
   }
-  @keyframes qrPopIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-  .qr-modal-content img {
-    width: 280px;
-    height: 280px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-  }
-  .qr-modal-content h4 {
-    margin: 0 0 8px 0;
-    color: #07c160;
-  }
-  .qr-modal-content p {
-    margin: 0;
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .qr-close-btn {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 32px;
-    height: 32px;
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
+
+  /* Toggle switch */
+  .toggle-label {
+    font-size: 0.85rem;
+    color: #495057;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    user-select: none;
   }
-  .qr-modal-box {
-    position: relative;
+  .toggle-label input {
+    margin-right: 4px;
+  }
+
+  /* Results count */
+  .results-count {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 8px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .table-responsive { font-size: 0.78rem; }
+    .cfp-filter-section { padding: 12px; }
   }
 </style>
 
-<div class="mb-4">
-  <div id="tag-filters">
-    <button class="btn btn-sm btn-outline-primary filter-btn active" data-filter="all">All</button>
-    {% for tag in all_tags %}
-      {% if tag != "" %}
-      <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="{{ tag | strip }}">{{ tag | strip }}</button>
-      {% endif %}
-    {% endfor %}
+<!-- Search & Filter Section -->
+<div class="cfp-filter-section">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <input type="text" id="cfp-search" class="form-control form-control-sm" placeholder="Search journal or topic...">
+    </div>
+    <div class="col-md-3">
+      <select id="cfp-tag-filter" class="form-control form-control-sm">
+        <option value="">All Tags</option>
+        {% for tag in all_tags %}
+          {% if tag != "" %}
+          <option value="{{ tag | strip }}">{{ tag | strip }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select id="cfp-publisher-filter" class="form-control form-control-sm">
+        <option value="">All Publishers</option>
+        <option value="Springer">Springer</option>
+        <option value="Wiley">Wiley</option>
+        <option value="Elsevier">Elsevier</option>
+        <option value="Taylor & Francis">Taylor & Francis</option>
+        <option value="SAGE">SAGE</option>
+      </select>
+    </div>
+    <div class="col-md-2 text-right">
+      <label class="toggle-label mb-0">
+        <input type="checkbox" id="cfp-show-expired"> Show Expired
+      </label>
+    </div>
   </div>
 </div>
 
+<div class="results-count" id="cfp-results-count"></div>
+
 <div class="table-responsive">
-  <table class="table table-hover">
+  <table class="table table-hover" id="cfp-table">
     <thead>
       <tr>
-        <th width="15%">Deadline</th>
+        <th width="18%">Deadline</th>
         <th width="15%">Journal</th>
-        <th width="60%">Topic & Details</th>
-        <th width="10%">Tags</th> </tr>
+        <th width="55%">Topic & Details</th>
+        <th width="12%">Tags</th>
+      </tr>
     </thead>
     <tbody id="cfp-table-body">
-      {% for cfp in site.data.cfps %}
-      
-      <tr class="cfp-row" data-tags="{{ cfp.tag | join: ',' }}">
-        
+      {% for cfp in sorted_cfps %}
+      {% assign today_date = 'now' | date: '%Y-%m-%d' %}
+      {% assign is_expired = false %}
+      {% if cfp.fullpaper_deadline_sort < today_date and cfp.fullpaper_deadline_sort != '9999-99-99' %}
+        {% assign is_expired = true %}
+      {% endif %}
+
+      <tr class="cfp-row{% if is_expired %} cfp-expired{% endif %}"
+          data-tags="{{ cfp.tag | join: ',' }}"
+          data-journal="{{ cfp.journal | downcase }}"
+          data-title="{{ cfp.title | downcase }}"
+          data-publisher="{{ cfp.publisher | downcase }}"
+          data-deadline="{{ cfp.fullpaper_deadline_sort }}"
+          data-expired="{{ is_expired }}">
+
         <td>
-          {% assign today_date = 'now' | date: '%Y-%m-%d' %}
-          {% if cfp.fullpaper_deadline_sort < today_date and cfp.fullpaper_deadline_sort != '9999-99-99' %}
-            <span class="badge badge-secondary">Expired</span>
+          {% if is_expired %}
+            <span class="badge deadline-expired">Expired</span>
           {% elsif cfp.fullpaper_deadline_sort == '9999-99-99' %}
-            <span class="badge badge-warning text-dark">TBA</span>
+            <span class="badge deadline-tba">TBA</span>
           {% else %}
-            <span class="badge badge-success">{{ cfp.fullpaper_deadline_sort }}</span>
+            <span class="badge deadline-active">{{ cfp.fullpaper_deadline_sort }}</span>
+            <div class="countdown-text" data-deadline="{{ cfp.fullpaper_deadline_sort }}"></div>
           {% endif %}
           <div class="small text-muted mt-1">
             {{ cfp.fullpaper_deadline | default: "See Website" }}
           </div>
         </td>
-        
+
         <td>
           <div style="line-height: 1.2;">
             <b>{{ cfp.journal }}</b>
+            <a href="/jrank/?q={{ cfp.journal | url_encode }}" class="cfp-journal-link" title="View journal metrics">IF/HM</a>
             <div class="small text-muted mt-1"><i>{{ cfp.publisher }}</i></div>
           </div>
         </td>
-        
+
         <td>
           <a href="{{ cfp.link }}" target="_blank" style="font-weight: 600;">{{ cfp.title }}</a>
-          
+
           <details class="mt-2">
             <summary class="small text-primary" style="cursor: pointer;">Show Details</summary>
             <div class="cfp-details-box">
               {% if cfp.abstract_deadline != "" and cfp.abstract_deadline != nil %}
-              <div class="mb-2"><span class="cfp-meta-label">📝 Abstract Deadline:</span> {{ cfp.abstract_deadline }}</div>
+              <div class="mb-2"><span class="cfp-meta-label">Abstract Deadline:</span> {{ cfp.abstract_deadline }}</div>
               {% endif %}
               {% if cfp.editors != "" and cfp.editors != "N/A" %}
-              <div class="mb-2"><span class="cfp-meta-label">👥 Editors:</span> {{ cfp.editors }}</div>
+              <div class="mb-2"><span class="cfp-meta-label">Editors:</span> {{ cfp.editors }}</div>
               {% endif %}
               {% if cfp.description != "" and cfp.description != "N/A" %}
               <div class="mt-2">
-                <span class="cfp-meta-label">ℹ️ Description:</span>
+                <span class="cfp-meta-label">Description:</span>
                 <p class="mb-0 text-muted" style="white-space: pre-wrap;">{{ cfp.description | strip_html | truncate: 350 }}</p>
               </div>
               {% endif %}
@@ -197,7 +209,7 @@ nav_order: 3
             </div>
           </details>
         </td>
-        
+
         <td>
           {% for t in cfp.tag %}
             <span class="badge badge-light border tag-badge">{{ t }}</span>
@@ -209,85 +221,129 @@ nav_order: 3
   </table>
 </div>
 
+<!-- Empty state -->
+<div class="cfp-empty-state" id="cfp-empty-state">
+  <p>No matching Call for Papers found.<br>Try adjusting your filters.</p>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const rows = document.querySelectorAll('.cfp-row');
+  var searchInput = document.getElementById('cfp-search');
+  var tagFilter = document.getElementById('cfp-tag-filter');
+  var publisherFilter = document.getElementById('cfp-publisher-filter');
+  var showExpiredToggle = document.getElementById('cfp-show-expired');
+  var rows = Array.from(document.querySelectorAll('.cfp-row'));
+  var emptyState = document.getElementById('cfp-empty-state');
+  var resultsCount = document.getElementById('cfp-results-count');
+  var table = document.getElementById('cfp-table');
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      // 1. 按钮样式切换
-      filterButtons.forEach(b => {
-        b.classList.remove('active', 'btn-outline-primary');
-        b.classList.add('btn-outline-secondary');
-      });
-      this.classList.remove('btn-outline-secondary');
-      this.classList.add('active', 'btn-outline-primary');
-
-      const filterValue = this.getAttribute('data-filter');
-
-      // 2. 筛选逻辑升级：使用 split + includes
-      rows.forEach(row => {
-        // 获取该行的所有 tag，分割成数组
-        // data-tags="edu tech,higher ed" -> ['edu tech', 'higher ed']
-        const rawTags = row.getAttribute('data-tags');
-        const rowTags = rawTags ? rawTags.split(',') : [];
-
-        if (filterValue === 'all') {
-          row.style.display = '';
-        } else {
-          // 检查数组中是否包含选中的 tag
-          if (rowTags.includes(filterValue)) {
-             row.style.display = '';
-          } else {
-             row.style.display = 'none';
-          }
+  // Calculate and display countdown
+  function setCountdowns() {
+    document.querySelectorAll('.countdown-text[data-deadline]').forEach(function(el) {
+      var deadline = new Date(el.dataset.deadline + 'T23:59:59');
+      var now = new Date();
+      var diffDays = Math.ceil((deadline - now) / (1000 * 60 * 60 * 24));
+      if (diffDays < 0) return;
+      el.textContent = diffDays + ' day' + (diffDays !== 1 ? 's' : '') + ' left';
+      if (diffDays > 30) {
+        el.classList.add('comfortable');
+      } else {
+        el.classList.remove('comfortable');
+      }
+      // Urgent coloring for deadline badge (<=14 days)
+      if (diffDays <= 14) {
+        var badge = el.parentElement.querySelector('.deadline-active');
+        if (badge) {
+          badge.classList.remove('deadline-active');
+          badge.classList.add('deadline-urgent');
         }
-      });
+      }
     });
-  });
+  }
+  setCountdowns();
+
+  // Combined filter logic
+  function filterTable() {
+    var searchTerm = searchInput.value.toLowerCase();
+    var selectedTag = tagFilter.value;
+    var selectedPublisher = publisherFilter.value.toLowerCase();
+    var showExpired = showExpiredToggle.checked;
+
+    var visibleCount = 0;
+
+    rows.forEach(function(row) {
+      var isExpired = row.dataset.expired === 'true';
+      var journal = row.dataset.journal;
+      var title = row.dataset.title;
+      var publisher = row.dataset.publisher;
+      var rawTags = row.dataset.tags;
+      var rowTags = rawTags ? rawTags.split(',') : [];
+
+      // Expired filter
+      if (isExpired && !showExpired) {
+        row.style.display = 'none';
+        return;
+      }
+
+      // Search
+      var matchesSearch = !searchTerm ||
+        journal.includes(searchTerm) ||
+        title.includes(searchTerm) ||
+        rawTags.toLowerCase().includes(searchTerm);
+
+      // Tag filter
+      var matchesTag = !selectedTag || rowTags.includes(selectedTag);
+
+      // Publisher filter
+      var matchesPublisher = !selectedPublisher || publisher.includes(selectedPublisher);
+
+      if (matchesSearch && matchesTag && matchesPublisher) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    // Empty state
+    if (visibleCount === 0) {
+      emptyState.style.display = 'block';
+      table.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      table.style.display = '';
+    }
+
+    // Results count
+    var totalActive = rows.filter(function(r) { return r.dataset.expired !== 'true'; }).length;
+    if (searchTerm || selectedTag || selectedPublisher || showExpired) {
+      resultsCount.textContent = 'Showing ' + visibleCount + ' of ' + rows.length + ' entries';
+    } else {
+      resultsCount.textContent = totalActive + ' active calls for papers';
+    }
+  }
+
+  searchInput.addEventListener('input', filterTable);
+  tagFilter.addEventListener('change', filterTable);
+  publisherFilter.addEventListener('change', filterTable);
+  showExpiredToggle.addEventListener('change', filterTable);
+
+  // URL param: pre-fill search from Journal Rankings cross-link
+  var urlParams = new URLSearchParams(window.location.search);
+  var qParam = urlParams.get('q');
+  if (qParam) {
+    searchInput.value = qParam;
+  }
+
+  // Initial filter (hide expired by default)
+  filterTable();
 });
 </script>
 
 <hr class="mt-5 mb-3">
 <p class="text-muted small text-center">
-  <em>⚠️ Disclaimer: The information on this page is for reference only. Deadlines and details may change. Please visit the official links to verify the latest information.</em><br>
-  <em>⚠️ 免责声明：本页面信息仅供参考，截止日期可能有变动，请访问原链接确认最新信息，一切以官方网站为准。</em>
+  <em>Disclaimer: The information on this page is for reference only. Deadlines and details may change. Please visit the official links to verify the latest information.</em><br>
+  <em>免责声明：本页面信息仅供参考，截止日期可能有变动，请访问原链接确认最新信息，一切以官方网站为准。</em>
 </p>
 
-<!-- 微信二维码浮窗 -->
-<div class="qr-float-btn" id="qrFloatBtn" title="Join WeChat Group">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="32" height="32">
-    <path d="M8.5 11.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.5 8c-4.14 0-7.5-2.91-7.5-6.5 0-3.59 3.36-6.5 7.5-6.5S18.5 9.41 18.5 13c0 1.38-.47 2.66-1.27 3.74l.77 2.26-2.72-.9c-1.1.57-2.35.9-3.78.9z"/>
-  </svg>
-</div>
-
-<div class="qr-modal-overlay" id="qrModalOverlay">
-  <div class="qr-modal-box">
-    <div class="qr-modal-content">
-      <button class="qr-close-btn" id="qrCloseBtn">&times;</button>
-      <img src="/assets/img/wechat_qr.png" alt="WeChat QR Code">
-      <h4>学术柴犬交流群</h4>
-      <p>
-        WeChat: whmtech<br>
-        期刊资讯分享 · 数据问题反馈 · 新增期刊建议<br>
-        <span class="text-muted" style="font-size: 0.8rem;">Join for academic discussions, data feedback & journal suggestions.</span>
-      </p>
-    </div>
-  </div>
-</div>
-
-<script>
-  // 二维码浮窗交互
-  document.getElementById('qrFloatBtn').addEventListener('click', function() {
-    document.getElementById('qrModalOverlay').classList.add('active');
-  });
-  document.getElementById('qrCloseBtn').addEventListener('click', function() {
-    document.getElementById('qrModalOverlay').classList.remove('active');
-  });
-  document.getElementById('qrModalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.classList.remove('active');
-    }
-  });
-</script>
+{% include wechat_qr.html %}
