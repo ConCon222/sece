@@ -16,7 +16,7 @@ icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name 
 
 url: "https://frank-haoming.github.io"
 baseurl: ""
-last_updated: false # set to true if you want to display last updated in the footer
+last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
@@ -59,8 +59,8 @@ max_width: 1100px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
@@ -185,6 +185,11 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/teaching.md
+  - _pages/profiles.md
+  - _pages/repositories.md
+  - _pages/books.md
+  - _pages/dropdown.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -256,7 +261,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["bibliometrics", "experment"] # these tags will be displayed on the front page of your blog
+display_tags: ["bibliometrics", "experiment"] # these tags will be displayed on the front page of your blog
 #display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------

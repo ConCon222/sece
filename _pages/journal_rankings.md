@@ -4,7 +4,7 @@ permalink: /jrank/
 title: Journal Rankings
 description: HM Score combines journal quality metrics and author-friendliness
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
 {% assign all_tags = site.data.jrank | map: 'tag' | join: ',' | split: ',' | uniq | sort %}

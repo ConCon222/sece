@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: publications by categories and year in reversed chronological order.
+description: Selected publications on AI-enhanced education, learning analytics, and bibliometrics.
 nav: true
 nav_order: 2
 ---

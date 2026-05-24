@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of cool projects.
+description: Research projects on AI-powered educational innovations.
 nav: true
-nav_order: 6
-display_categories: [work, fun]
+nav_order: 5
+display_categories: [work]
 horizontal: false
 ---
 

@@ -2,80 +2,138 @@
 layout: page
 title: Life Line
 permalink: /lifeline/
-description: 
+description: ""
 nav: true
-nav_order: 7  # 导航栏顺序，数字越小越靠前
+nav_order: 6
 ---
 
-<!-- ==================== 隐藏默认标题 ==================== -->
-<style>
-  .post-title { display: none; }
-  .post-description { display: none; }
-</style>
+<!-- This page uses a custom header; suppress the auto-generated page title/description -->
+<style>.post-title, .post-description { display: none; }</style>
 
-<!-- ==================== 主要样式 ==================== -->
+<!-- ==================== Main Styles ==================== -->
 <style>
 
-/* ---------- 时间线容器 ---------- */
+/* ---------- Timeline Container ---------- */
 .lifeline {
   position: relative;
-  max-width: 900px;        /* 最大宽度，可调大/小 */
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem 0;
 }
 
-/* ---------- 中间的竖线 ---------- */
+/* ---------- Center Vertical Line ---------- */
 .lifeline::before {
   content: '';
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;              /* 竖线粗细 */
+  width: 2px;
   height: 100%;
-  background: #cbd5e1;     /* 竖线颜色 */
+  background: #cbd5e1;
 }
 
-/* ---------- 顶部标题区域 ---------- */
+/* ---------- Top Header ---------- */
 .lifeline-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .lifeline-hint {
-  color: #94a3b8;          /* 提示文字颜色 */
-  font-size: 0.875rem;     /* 提示文字大小 */
+  color: #94a3b8;
+  font-size: 0.875rem;
   margin-bottom: 1rem;
 }
 
-/* ---------- 展开/折叠按钮 ---------- */
+/* ---------- Type Filter Pills ---------- */
+.lifeline-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-pill {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.filter-pill:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.filter-pill.active {
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.filter-pill.active[data-type="all"]         { background: #334155; }
+.filter-pill.active[data-type="award"]       { background: #f59e0b; }
+.filter-pill.active[data-type="honor"]       { background: #a855f7; }
+.filter-pill.active[data-type="talk"]        { background: #ef4444; }
+.filter-pill.active[data-type="project"]     { background: #06b6d4; }
+.filter-pill.active[data-type="service"]     { background: #8b5cf6; }
+.filter-pill.active[data-type="publication"] { background: #3b82f6; }
+.filter-pill.active[data-type="exchange"]    { background: #ec4899; }
+
+.filter-count {
+  font-size: 0.65rem;
+  opacity: 0.8;
+  background: rgba(255,255,255,0.2);
+  padding: 0.1rem 0.4rem;
+  border-radius: 9999px;
+}
+
+.filter-pill:not(.active) .filter-count {
+  background: rgba(0,0,0,0.08);
+}
+
+/* ---------- Expand / Collapse Buttons ---------- */
 .lifeline-controls {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;            /* 按钮间距 */
+  gap: 0.75rem;
 }
 
 .lifeline-btn {
   padding: 0.375rem 1rem;
   font-size: 0.75rem;
-  background: #f1f5f9;     /* 按钮背景色 */
-  color: #475569;          /* 按钮文字色 */
+  background: #f1f5f9;
+  color: #475569;
   border: none;
-  border-radius: 9999px;   /* 圆角按钮 */
+  border-radius: 9999px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .lifeline-btn:hover {
-  background: #e2e8f0;     /* 悬停背景色 */
+  background: #e2e8f0;
 }
 
-/* ---------- 年份区块 ---------- */
+/* ---------- Year Section ---------- */
 .year-section {
   position: relative;
   margin-bottom: 1rem;
 }
 
-/* ---------- 年份标签（可点击） ---------- */
+.year-section.hidden-by-filter {
+  display: none;
+}
+
+/* ---------- Year Marker (clickable) ---------- */
 .year-marker {
   display: flex;
   justify-content: center;
@@ -88,9 +146,9 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
 }
 
 .year-label {
-  background: #334155;     /* 年份标签背景色 */
+  background: #334155;
   color: white;
-  font-size: 1.25rem;      /* 年份字体大小 */
+  font-size: 1.25rem;
   font-weight: 700;
   padding: 0.625rem 1.5rem;
   border-radius: 9999px;
@@ -101,12 +159,12 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
 }
 
 .year-label:hover {
-  background: #475569;     /* 悬停背景色 */
-  transform: scale(1.05);  /* 悬停放大效果 */
+  background: #475569;
+  transform: scale(1.05);
 }
 
 .year-count {
-  background: #475569;     /* 事件数量标签背景 */
+  background: #475569;
   color: white;
   font-size: 0.75rem;
   padding: 0.125rem 0.5rem;
@@ -115,77 +173,78 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
 
 .year-chevron {
   font-size: 0.875rem;
-  color: #94a3b8;          /* 箭头颜色 */
+  color: #94a3b8;
 }
 
-/* ---------- 事件容器（折叠动画） ---------- */
+/* ---------- Events Container (collapse animation) ---------- */
 .events-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;               /* 事件卡片间距 */
+  gap: 1rem;
   overflow: hidden;
-  max-height: 2000px;      /* 展开时最大高度，事件多可调大 */
-  transition: max-height 0.3s ease;
+  transition: max-height 0.4s ease;
 }
 
 .events-container.collapsed {
-  max-height: 0;           /* 折叠时高度为0 */
+  max-height: 0 !important;
 }
 
-/* ---------- 事件卡片 ---------- */
+/* ---------- Event Card ---------- */
 .event-card {
   position: relative;
-  width: 45%;              /* 卡片宽度，相对于容器 */
-  background: #f8fafc;     /* 卡片背景色 */
+  width: 45%;
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 1rem;     /* 卡片圆角 */
+  border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+.event-card.hidden-by-filter {
+  display: none;
+}
+
 .event-card:hover {
-  transform: translateY(-2px);  /* 悬停上移效果 */
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* 左侧卡片 */
 .event-card.left {
   margin-left: auto;
   margin-right: 55%;
   text-align: right;
 }
 
-/* 右侧卡片 */
 .event-card.right {
   margin-left: 55%;
   margin-right: auto;
   text-align: left;
 }
 
-/* ---------- 卡片上的圆点（连接线上的点） ---------- */
+/* ---------- Connection Dot ---------- */
 .event-card::before {
   content: '';
   position: absolute;
   top: 50%;
-  width: 12px;             /* 圆点大小 */
+  width: 12px;
   height: 12px;
   background: white;
-  border: 3px solid #94a3b8;  /* 圆点边框 */
+  border: 3px solid #94a3b8;
   border-radius: 50%;
   transform: translateY(-50%);
 }
 
 .event-card.left::before {
-  right: -8%;              /* 左侧卡片的点在右边 */
+  right: -8%;
 }
 
 .event-card.right::before {
-  left: -8%;               /* 右侧卡片的点在左边 */
+  left: -8%;
 }
 
-/* ---------- 卡片头部（标签+图标） ---------- */
+/* ---------- Card Header ---------- */
 .event-header {
   display: flex;
   justify-content: space-between;
@@ -201,7 +260,7 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   flex-direction: row-reverse;
 }
 
-/* ---------- 事件类型标签 ---------- */
+/* ---------- Event Type Tag ---------- */
 .event-tag {
   font-size: 0.7rem;
   font-weight: 600;
@@ -210,23 +269,20 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   color: white;
 }
 
-/* 各类型标签颜色 - 可自定义 */
-.tag-award { background: #f59e0b; }       /* 橙色 - 奖项 */
-.tag-honor { background: #a855f7; }       /* 紫色 - 荣誉 */
-.tag-publication { background: #3b82f6; } /* 蓝色 - 发表 */
-.tag-milestone { background: #10b981; }   /* 绿色 - 里程碑 */
-.tag-personal { background: #ec4899; }    /* 粉色 - 个人 */
-.tag-work { background: #6366f1; }        /* 靛蓝 - 工作 */
-.tag-project { background: #06b6d4; }     /* 青色 - 项目 */
-.tag-talk { background: #ef4444; }  /* 红色 - 醒目，代表演讲/发声 */
-.tag-service { background: #8b5cf6; }     /* 蓝紫色 - 代表服务/管理 */
-.tag-exchange    { background: #ec4899; } /* 粉色 - 活跃、社交 */
+.tag-award       { background: #f59e0b; }
+.tag-honor       { background: #a855f7; }
+.tag-publication { background: #3b82f6; }
+.tag-milestone   { background: #10b981; }
+.tag-project     { background: #06b6d4; }
+.tag-talk        { background: #ef4444; }
+.tag-service     { background: #8b5cf6; }
+.tag-exchange    { background: #ec4899; }
 
 .event-icon {
-  font-size: 1.5rem;       /* 图标大小 */
+  font-size: 1.5rem;
 }
 
-/* ---------- 事件标题 ---------- */
+/* ---------- Event Title ---------- */
 .event-title {
   font-size: 0.95rem;
   font-weight: 600;
@@ -234,16 +290,16 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   line-height: 1.4;
 }
 
-/* ---------- 事件详情（点击展开） ---------- */
+/* ---------- Event Details (click to expand) ---------- */
 .event-details {
-  display: none;           /* 默认隐藏 */
+  display: none;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
   border-top: 1px solid #e2e8f0;
 }
 
 .event-card.expanded .event-details {
-  display: block;          /* 展开时显示 */
+  display: block;
 }
 
 .event-date {
@@ -258,7 +314,7 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   margin-top: 0.25rem;
 }
 
-/* ---------- 底部结束点 ---------- */
+/* ---------- Bottom End Dot ---------- */
 .lifeline-end {
   display: flex;
   justify-content: center;
@@ -285,14 +341,23 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   border-radius: 50%;
 }
 
-/* ---------- 移动端适配 ---------- */
+/* ---------- Empty State ---------- */
+.lifeline-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  display: none;
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------- Mobile Responsive ---------- */
 @media (max-width: 768px) {
-  /* 竖线移到左侧 */
   .lifeline::before {
     left: 20px;
   }
 
-  /* 所有卡片靠右排列 */
   .event-card {
     width: calc(100% - 50px);
     margin-left: 50px !important;
@@ -308,25 +373,81 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
     left: -40px !important;
     right: auto !important;
   }
+
+  .lifeline-filters {
+    gap: 0.375rem;
+  }
+
+  .filter-pill {
+    padding: 0.3rem 0.625rem;
+    font-size: 0.7rem;
+  }
 }
 </style>
 
-<!-- ==================== 数据处理 ==================== -->
+<!-- ==================== Data Processing ==================== -->
 {% assign events_by_year = site.data.lifeline.events | group_by: "year" | sort: "name" | reverse %}
 {% assign total_years = events_by_year | size %}
-<!-- 
-  数据来源: _data/lifeline.yml
-  group_by: "year" - 按年份分组
-  sort: "name" - 按年份排序
-  reverse - 倒序（最新的在前）
--->
+{% assign total_events = site.data.lifeline.events | size %}
 
+{% assign award_count = site.data.lifeline.events | where: "type", "award" | size %}
+{% assign honor_count = site.data.lifeline.events | where: "type", "honor" | size %}
+{% assign talk_count = site.data.lifeline.events | where: "type", "talk" | size %}
+{% assign project_count = site.data.lifeline.events | where: "type", "project" | size %}
+{% assign service_count = site.data.lifeline.events | where: "type", "service" | size %}
+{% assign publication_count = site.data.lifeline.events | where: "type", "publication" | size %}
+{% assign exchange_count = site.data.lifeline.events | where: "type", "exchange" | size %}
 
-
-<!-- ==================== 页面结构 ==================== -->
+<!-- ==================== Page Structure ==================== -->
 <div class="lifeline-header">
-  <h2>Life Line: {{ site.data.lifeline.events | size }} Moments · {{ total_years }} Years</h2>
-  <p class="lifeline-hint">(点击节点查看详情 · Click nodes to expand)</p>
+  <h2>Life Line</h2>
+  <p class="lifeline-hint">
+    <span id="visible-count">{{ total_events }}</span> Moments · {{ total_years }} Years
+    <br><small>Click nodes to expand · Filter by type</small>
+  </p>
+
+  <!-- Type Filter Pills -->
+  <div class="lifeline-filters">
+    <button class="filter-pill active" data-type="all" onclick="filterByType('all', this)">
+      All <span class="filter-count">{{ total_events }}</span>
+    </button>
+    {% if award_count > 0 %}
+    <button class="filter-pill" data-type="award" onclick="filterByType('award', this)">
+      🏆 {{ site.data.lifeline.tags.award }} <span class="filter-count">{{ award_count }}</span>
+    </button>
+    {% endif %}
+    {% if honor_count > 0 %}
+    <button class="filter-pill" data-type="honor" onclick="filterByType('honor', this)">
+      🎖️ {{ site.data.lifeline.tags.honor }} <span class="filter-count">{{ honor_count }}</span>
+    </button>
+    {% endif %}
+    {% if talk_count > 0 %}
+    <button class="filter-pill" data-type="talk" onclick="filterByType('talk', this)">
+      🎤 {{ site.data.lifeline.tags.talk }} <span class="filter-count">{{ talk_count }}</span>
+    </button>
+    {% endif %}
+    {% if project_count > 0 %}
+    <button class="filter-pill" data-type="project" onclick="filterByType('project', this)">
+      📋 {{ site.data.lifeline.tags.project }} <span class="filter-count">{{ project_count }}</span>
+    </button>
+    {% endif %}
+    {% if service_count > 0 %}
+    <button class="filter-pill" data-type="service" onclick="filterByType('service', this)">
+      🤝 {{ site.data.lifeline.tags.service }} <span class="filter-count">{{ service_count }}</span>
+    </button>
+    {% endif %}
+    {% if publication_count > 0 %}
+    <button class="filter-pill" data-type="publication" onclick="filterByType('publication', this)">
+      📄 {{ site.data.lifeline.tags.publication }} <span class="filter-count">{{ publication_count }}</span>
+    </button>
+    {% endif %}
+    {% if exchange_count > 0 %}
+    <button class="filter-pill" data-type="exchange" onclick="filterByType('exchange', this)">
+      ✈️ {{ site.data.lifeline.tags.exchange }} <span class="filter-count">{{ exchange_count }}</span>
+    </button>
+    {% endif %}
+  </div>
+
   <div class="lifeline-controls">
     <button class="lifeline-btn" onclick="expandAllYears()">Expand All</button>
     <button class="lifeline-btn" onclick="collapseAllYears()">Collapse All</button>
@@ -334,32 +455,25 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
 </div>
 
 <div class="lifeline">
-  <!-- 遍历每一年 -->
   {% for year in events_by_year %}
-  <div class="year-section">
-    <!-- 年份标签 -->
+  <div class="year-section" data-year="{{ year.name }}">
     <div class="year-marker" onclick="toggleYear('{{ year.name }}')">
       <span class="year-label">
         {{ year.name }}
-        <span class="year-count">{{ year.items | size }}</span>
+        <span class="year-count" id="count-{{ year.name }}">{{ year.items | size }}</span>
         <span class="year-chevron" id="chevron-{{ year.name }}">▼</span>
       </span>
     </div>
-    
-    <!-- 该年的所有事件 -->
+
     <div class="events-container" id="events-{{ year.name }}">
       {% for event in year.items %}
-      <!-- 奇偶判断：奇数在左，偶数在右 -->
       {% assign position = forloop.index | modulo: 2 %}
-      <div class="event-card {% if position == 1 %}left{% else %}right{% endif %}" onclick="toggleCard(this)">
+      <div class="event-card {% if position == 1 %}left{% else %}right{% endif %}" data-type="{{ event.type }}" onclick="toggleCard(this)">
         <div class="event-header">
-          <!-- 类型标签，对应 _data/lifeline.yml 中的 tags -->
           <span class="event-tag tag-{{ event.type }}">{{ site.data.lifeline.tags[event.type] }}</span>
-          <!-- 图标，用 emoji -->
           <span class="event-icon">{{ event.icon }}</span>
         </div>
         <div class="event-title">{{ event.title }}</div>
-        <!-- 点击卡片后展开的详情 -->
         <div class="event-details">
           <span class="event-date">{{ event.date }}</span>
           {% if event.description and event.description != "" %}
@@ -372,36 +486,142 @@ nav_order: 7  # 导航栏顺序，数字越小越靠前
   </div>
   {% endfor %}
 
-  <!-- 时间线底部的结束点 -->
+  <div class="lifeline-empty" id="lifeline-empty">
+    No events found for this category.
+  </div>
+
   <div class="lifeline-end">
     <div class="lifeline-end-dot"></div>
   </div>
 </div>
 
-<!-- ==================== 交互脚本 ==================== -->
+<!-- ==================== Scripts ==================== -->
 <script>
-// 切换某一年的展开/折叠
+var currentFilter = 'all';
+
+/* On load: measure real content heights (replaces hardcoded max-height) */
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.events-container').forEach(function(el) {
+    el.style.maxHeight = el.scrollHeight + 'px';
+  });
+});
+
+/* Toggle a single year open/closed */
 function toggleYear(year) {
-  const container = document.getElementById('events-' + year);
-  const chevron = document.getElementById('chevron-' + year);
-  container.classList.toggle('collapsed');
-  chevron.textContent = container.classList.contains('collapsed') ? '▶' : '▼';
+  var container = document.getElementById('events-' + year);
+  var chevron = document.getElementById('chevron-' + year);
+  if (container.classList.contains('collapsed')) {
+    container.classList.remove('collapsed');
+    container.style.maxHeight = container.scrollHeight + 'px';
+    chevron.textContent = '▼';
+  } else {
+    container.style.maxHeight = container.scrollHeight + 'px';
+    requestAnimationFrame(function() {
+      container.classList.add('collapsed');
+      chevron.textContent = '▶';
+    });
+  }
 }
 
-// 切换单个卡片的展开/折叠
+/* Toggle a card's detail section */
 function toggleCard(card) {
   card.classList.toggle('expanded');
+  var container = card.closest('.events-container');
+  if (container && !container.classList.contains('collapsed')) {
+    setTimeout(function() {
+      container.style.maxHeight = container.scrollHeight + 'px';
+    }, 60);
+  }
 }
 
-// 展开所有年份
+/* Expand all year sections */
 function expandAllYears() {
-  document.querySelectorAll('.events-container').forEach(el => el.classList.remove('collapsed'));
-  document.querySelectorAll('.year-chevron').forEach(el => el.textContent = '▼');
+  document.querySelectorAll('.year-section:not(.hidden-by-filter)').forEach(function(section) {
+    var el = section.querySelector('.events-container');
+    var chevron = section.querySelector('.year-chevron');
+    if (el) {
+      el.classList.remove('collapsed');
+      el.style.maxHeight = el.scrollHeight + 'px';
+    }
+    if (chevron) chevron.textContent = '▼';
+  });
 }
 
-// 折叠所有年份
+/* Collapse all year sections */
 function collapseAllYears() {
-  document.querySelectorAll('.events-container').forEach(el => el.classList.add('collapsed'));
-  document.querySelectorAll('.year-chevron').forEach(el => el.textContent = '▶');
+  document.querySelectorAll('.year-section:not(.hidden-by-filter)').forEach(function(section) {
+    var el = section.querySelector('.events-container');
+    var chevron = section.querySelector('.year-chevron');
+    if (el) {
+      el.style.maxHeight = el.scrollHeight + 'px';
+      requestAnimationFrame(function() { el.classList.add('collapsed'); });
+    }
+    if (chevron) chevron.textContent = '▶';
+  });
+}
+
+/* Re-alternate left/right positions for visible cards within each year */
+function repositionCards() {
+  document.querySelectorAll('.year-section:not(.hidden-by-filter)').forEach(function(section) {
+    var visibleCards = section.querySelectorAll('.event-card:not(.hidden-by-filter)');
+    visibleCards.forEach(function(card, i) {
+      card.classList.remove('left', 'right');
+      card.classList.add(i % 2 === 0 ? 'left' : 'right');
+    });
+  });
+}
+
+/* Filter timeline by event type */
+function filterByType(type, btn) {
+  currentFilter = type;
+
+  /* Update active pill */
+  document.querySelectorAll('.filter-pill').forEach(function(p) {
+    p.classList.remove('active');
+  });
+  btn.classList.add('active');
+
+  /* Show/hide event cards */
+  var visibleCount = 0;
+  document.querySelectorAll('.event-card').forEach(function(card) {
+    if (type === 'all' || card.dataset.type === type) {
+      card.classList.remove('hidden-by-filter');
+      visibleCount++;
+    } else {
+      card.classList.add('hidden-by-filter');
+      card.classList.remove('expanded');
+    }
+  });
+
+  document.getElementById('visible-count').textContent = visibleCount;
+
+  /* Hide empty year sections; update per-year counts */
+  var anyYearVisible = false;
+  document.querySelectorAll('.year-section').forEach(function(section) {
+    var cards = section.querySelectorAll('.event-card:not(.hidden-by-filter)');
+    var countEl = section.querySelector('.year-count');
+    if (cards.length === 0) {
+      section.classList.add('hidden-by-filter');
+    } else {
+      section.classList.remove('hidden-by-filter');
+      anyYearVisible = true;
+      if (countEl) countEl.textContent = cards.length;
+    }
+  });
+
+  /* Re-alternate left/right after filter */
+  repositionCards();
+
+  /* Recalculate container heights */
+  setTimeout(function() {
+    document.querySelectorAll('.year-section:not(.hidden-by-filter) .events-container').forEach(function(el) {
+      if (!el.classList.contains('collapsed')) {
+        el.style.maxHeight = el.scrollHeight + 'px';
+      }
+    });
+  }, 60);
+
+  /* Empty state */
+  document.getElementById('lifeline-empty').style.display = anyYearVisible ? 'none' : 'block';
 }
 </script>
