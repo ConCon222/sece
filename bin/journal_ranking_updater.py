@@ -377,9 +377,9 @@ class SageCrawler(PublisherCrawler):
     def extract_metrics(self, url: str) -> Dict[str, Any]:
         """Extract metrics from SAGE journal page
 
-        URL 应已在 journal_rank.json 中配置为正确的 metrics 页面格式:
-        https://journals.sagepub.com/overview-metric/{code}?tabActivePane=view-indexing-metrics&
-        或 https://journals.sagepub.com/home/{code} (部分期刊)
+        URL 应已在 journal_rank.json 中配置为 /home/{code} 格式:
+        https://journals.sagepub.com/home/{code}
+        注意: /overview-metric/ 页面的指标由 JS 动态渲染，FlareSolverr 无法获取
         """
         logger.info(f"Fetching SAGE data from: {url}")
         html = self.client.get_page(url)
