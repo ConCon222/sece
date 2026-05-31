@@ -1,7 +1,9 @@
 ---
 layout: page
 title: “GAI+元宇宙”联动赋能：虚拟学习空间的模式构建及应用开发
+title_en: "GAI × Metaverse Synergy: Modeling and Developing Virtual Learning Spaces"
 description: 教育信息技术系应用性研究项目介绍
+description_en: An applied research project of the Department of Education Information Technology.
 img: assets/img/12.jpg
 importance: 1
 category: work

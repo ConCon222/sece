@@ -1,3 +1,20 @@
+<!-- Language preference (set before paint to avoid flash of wrong language) -->
+<script>
+  (function () {
+    try {
+      var l = localStorage.getItem("site-lang") || "en";
+      document.documentElement.setAttribute("data-lang", l === "zh" ? "zh" : "en");
+    } catch (e) {
+      document.documentElement.setAttribute("data-lang", "en");
+    }
+  })();
+  // Dark mode is disabled site-wide (committed light aesthetic). theme.js is no
+  // longer loaded, so provide a light-only shim — several al-folio scripts
+  // (common.js, search-setup.js, no_defer.js, chart setups) call this global
+  // and would otherwise throw ReferenceError, aborting their setup.
+  window.determineComputedTheme = function () { return "light"; };
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
@@ -22,14 +39,11 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
+<!-- Text fonts (Cinzel / IM Fell DW Pica / EB Garamond / Inter) are self-hosted
+     via @font-face in _sass/_fonts.scss → assets/fonts/text/, served from the
+     site origin so they load fast worldwide incl. mainland China (no Google Fonts). -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
 <link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url | bust_file_cache }}">
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
->
 
 <!-- Code Syntax Highlighting -->
 <link

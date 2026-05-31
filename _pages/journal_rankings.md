@@ -2,8 +2,11 @@
 layout: page
 permalink: /jrank/
 title: Journal Rankings
+title_zh: 期刊排名
 description: HM Score combines journal quality metrics and author-friendliness
+description_zh: HM 友好性指数综合了期刊质量指标与对作者的友好程度。
 nav: true
+nav_zh: 期刊排名
 nav_order: 4
 ---
 
@@ -253,10 +256,14 @@ nav_order: 4
 }
 
 .search-filter-section {
-  background: #f8f9fa;
+  background: var(--glass-bg-soft, rgba(255,255,255,0.42));
+  border: 1px solid var(--glass-edge, rgba(255,255,255,0.9));
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
   padding: 16px 20px;
-  border-radius: 8px;
+  border-radius: 16px;
   margin-bottom: 20px;
+  box-shadow: 0 8px 24px -14px rgba(60,20,80,0.18);
 }
 
 .search-filter-section .row > div {
@@ -270,7 +277,7 @@ nav_order: 4
 }
 
 .badge-purple {
-  background-color: #6f42c1;
+  background-color: var(--tsinghua, #660874);
   color: white;
 }
 
@@ -300,43 +307,58 @@ nav_order: 4
   cursor: pointer;
   user-select: none;
   position: relative;
+  transition: background-color 0.2s ease;
 }
 .sortable:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255,255,255,0.14);
 }
+/* sort glyph sits in a subtle rounded chip so it reads as a control */
 .sort-icon {
-  font-size: 0.65rem;
-  margin-left: 2px;
-  opacity: 0.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05em;
+  height: 1.05em;
+  margin-left: 4px;
+  font-size: 0.72rem;
+  line-height: 1;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.12);
+  opacity: 0.7;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
-.sort-icon::after {
-  content: '⇅';
-}
-.sortable.sort-asc .sort-icon::after {
-  content: '↑';
-  opacity: 1;
-}
-.sortable.sort-desc .sort-icon::after {
-  content: '↓';
-  opacity: 1;
+.sort-icon::after { content: '⇅'; }
+.sortable:hover .sort-icon { opacity: 1; background: rgba(255,255,255,0.22); }
+
+/* active sorted column: amber arrow chip + amber underline bar — unmistakable */
+.sortable.sort-asc,
+.sortable.sort-desc {
+  background-color: rgba(255,255,255,0.08);
+  box-shadow: inset 0 -3px 0 0 #ffce4d;
 }
 .sortable.sort-asc .sort-icon,
 .sortable.sort-desc .sort-icon {
   opacity: 1;
+  color: #3a2600;
+  background: #ffce4d;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
+.sortable.sort-asc .sort-icon::after { content: '↑'; }
+.sortable.sort-desc .sort-icon::after { content: '↓'; }
 
 /* Cross-link to CFP */
 .jr-cfp-link {
   font-size: 0.65rem;
-  color: #17a2b8;
+  color: var(--tsinghua, #660874);
   text-decoration: none;
   margin-left: 4px;
-  border: 1px solid #17a2b8;
+  border: 1px solid var(--tsinghua-pale, #d9bee0);
   padding: 0 3px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 .jr-cfp-link:hover {
-  background-color: #17a2b8;
+  background-color: var(--tsinghua, #660874);
   color: white;
   text-decoration: none;
 }
@@ -355,30 +377,49 @@ nav_order: 4
 }
 
 .statistics-section {
-  background: #f8f9fa;
+  background: var(--glass-bg-soft, rgba(255,255,255,0.42));
+  border: 1px solid var(--glass-edge, rgba(255,255,255,0.9));
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px -14px rgba(60,20,80,0.18);
 }
 
 .stat-card {
   text-align: center;
   padding: 12px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--rule, rgba(31,20,41,0.10));
+  border-radius: 12px;
+  box-shadow: 0 4px 12px -8px rgba(60,20,80,0.18);
   margin-bottom: 8px;
 }
 
 .stat-card h6 {
   margin-bottom: 8px;
-  color: #6c757d;
-  font-size: 0.8rem;
+  color: var(--ink-faint, #645a72);
+  font-family: var(--engraved, serif);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
 }
 
 .stat-card span {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #495057;
+  font-family: var(--display, Georgia, serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tsinghua, #660874);
+}
+
+/* Purple-glass table header (overrides bootstrap .thead-dark) */
+#journal-table thead.thead-dark th {
+  background: linear-gradient(180deg, var(--tsinghua, #660874), var(--tsinghua-deep, #4a0a5e));
+  color: #fff;
+  border-color: rgba(255,255,255,0.12);
+}
+#journal-table thead.thead-dark .sortable:hover {
+  background: rgba(255,255,255,0.12);
 }
 
 .table th {

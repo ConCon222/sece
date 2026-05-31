@@ -43,13 +43,13 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% assign about_nav_zh = page.nav_zh %} {% endif %}
           {% endfor %}
 
           <!-- About -->
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
-              {{- about_title }}
+              <span class="only-en">{{- about_title -}}</span><span class="only-zh">{{- about_nav_zh | default: about_title -}}</span>
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
@@ -108,7 +108,7 @@
                     {%- assign url = p.url -%}
                   {%- endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
+                    <span class="only-en">{{- p.title -}}</span><span class="only-zh">{{- p.nav_zh | default: p.title -}}</span>
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}
@@ -125,6 +125,13 @@
               </button>
             </li>
           {% endif %}
+          <!-- Language toggle -->
+          <li class="nav-item toggle-container">
+            <button id="lang-toggle" type="button" title="切换语言 / Switch language" aria-label="Switch language">
+              <span class="only-en">中</span>
+              <span class="only-zh">EN</span>
+            </button>
+          </li>
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">

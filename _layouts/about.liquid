@@ -1,80 +1,335 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+{%- comment -%} Compute Scholar stats dynamically {%- endcomment -%}
+{% assign total_citations = 0 %}
+{% for paper in site.data.citations.papers %}
+  {% assign total_citations = total_citations | plus: paper[1].citations %}
+{% endfor %}
+{% assign pub_count = site.data.citations.papers | size %}
+{% assign h_index = page.h_index | default: 7 %}
+
+<div class="hw-home-wrap">
+<main class="hw-home" id="top">
+
+  <!-- HERO ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-type">
+        <h1 class="display">
+          <span class="line">Haoming</span>
+          <span class="line italic"><em>Wang</em><span class="cn">王浩名</span></span>
+        </h1>
+        <p class="tagline">
+          <span class="quote-mark">“</span><span class="only-en">We have no reinforcements, but ourselves.</span><span class="only-zh">我们没有援军，唯有自己。</span><span class="quote-mark">”</span>
+        </p>
+
+        <div class="affiliation glass glass-soft">
+          <div class="aff-row">
+            <svg class="icon" viewBox="0 0 24 24" style="font-size:22px"><path d="M22 9L12 5L2 9l10 4l10-4v6M6 10.6V16a6 3 0 0 0 12 0v-5.4"/></svg>
+            <div>
+              <div class="aff-strong"><span class="only-en">Tsinghua University</span><span class="only-zh">清华大学</span></div>
+              <div class="aff-sub"><span class="only-en">Incoming PhD · School of Education · 2026</span><span class="only-zh">准博士生 · 教育学院 · 2026</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat glass">
+            <div class="stat-num">{{ pub_count }}</div>
+            <div class="stat-label"><span class="only-en">Publications</span><span class="only-zh">论文</span></div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">{{ total_citations }}</div>
+            <div class="stat-label"><span class="only-en">Citations</span><span class="only-zh">被引</span></div>
+          </div>
+          <div class="stat glass">
+            <div class="stat-num">{{ h_index }}</div>
+            <div class="stat-label"><span class="only-en">h-index</span><span class="only-zh">h 指数</span></div>
+          </div>
+          <a class="stat glass stat-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener">
+            <div class="stat-num gs">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M5.242 13.769L0.5 9.5 12 1l11.5 8.5-4.742 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            </div>
+            <div class="stat-label"><span class="only-en">Scholar →</span><span class="only-zh">学术主页 →</span></div>
+          </a>
+        </div>
       </div>
-    {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <aside class="hero-portrait">
+        <div class="portrait-frame glass">
+          <img src="{{ '/assets/img/photo1.jpg' | relative_url }}" alt="Haoming Wang" />
+          <div class="portrait-shine"></div>
+        </div>
+        <div class="portrait-caption glass glass-soft">
+          <div class="caption-label"><span class="only-en">PORTRAIT · 2025</span><span class="only-zh">肖像 · 2025</span></div>
+          <div class="caption-meta"><span class="only-en">Shanghai, before the move north</span><span class="only-zh">摄于上海，北上之前</span></div>
+        </div>
+        <div class="badge-floating glass">
+          <svg class="icon" viewBox="0 0 24 24" style="font-size:22px"><path d="M4 5h2M5 4v2M11.5 4l-.5 2M18 5h2M19 4v2M15 9l-1 1M18 13l2-.5M18 19h2M19 18v2M14 16.518l-1.5-1.5L4 20l8.018-8.518L13 13zM10.5 13.5L7 17"/></svg>
+          <div class="bf-title">AI × EDU</div>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+  <!-- ABOUT ───────────────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">
+        <span class="only-en">About <em>this researcher</em></span>
+        <span class="only-zh">关于<em>这位研究者</em></span>
       </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+      <span class="section-rule"></span>
+    </div>
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
+    <div class="about-grid">
+      <div class="about-prose glass">
+        <div class="only-en">
+          <p class="lead">
+            I am <strong>Haoming Wang</strong>, an incoming PhD student at the <strong>School of Education, Tsinghua University</strong>. My research sits at the intersection of artificial intelligence and education — particularly <em>agentic AI</em>, multi-agent systems, and large language models as genuine partners in learning.
+          </p>
+          <p>
+            I came to this field from competitive programming. Years of contest training earned me national awards across ACM-ICPC and CCPC regionals, alongside honors in algorithm challenges. That habit — build, test, refine, repeat — is still how I approach research today.
+          </p>
+          <p>
+            My current work centers on <strong>AI-agent empowerment</strong> in education: intelligent assistants that adapt to learner needs while holding firmly to pedagogical and ethical standards. I care less about whether AI <em>can</em> enter a classroom than about how and when it <em>should</em> — binding technology to educational theory tightly enough that the impact is real, and lasting.
+          </p>
+        </div>
+        <div class="only-zh">
+          <p class="lead">
+            我是<strong>王浩名</strong>，即将入读<strong>清华大学教育学院</strong>博士项目。我的研究处在人工智能与教育的交叉地带——尤其关注<em>智能体（agentic AI）</em>、多智能体系统，以及作为真正"学习伙伴"的大语言模型。
+          </p>
+          <p>
+            我从竞赛编程走入这一领域。多年训练为我赢得了 ACM-ICPC、CCPC 等多项国家级奖项，以及算法竞赛中的荣誉。"构建、测试、打磨、迭代"——这一习惯至今仍是我做研究的方式。
+          </p>
+          <p>
+            我当前的工作聚焦于教育中的<strong>智能体赋能</strong>：让智能助手既贴合学习者需求，又坚守教学法与伦理底线。比起 AI <em>能否</em>进入课堂，我更关心它<em>应当</em>在何时、以何种方式进入——把技术与教育理论牢牢绑定，让影响真实而持久。
+          </p>
+        </div>
       </div>
-    {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+      <aside class="about-side">
+        <div class="side-card glass">
+          <div class="side-label"><span class="only-en">Currently</span><span class="only-zh">正在进行</span></div>
+          <div class="side-list only-en">
+            <div class="side-row"><span class="bullet"></span>Building <em>AI-Agent School</em> — an educational simulation platform <span class="side-note">(presented at EMNLP 2025)</span></div>
+            <div class="side-row"><span class="bullet"></span>Developing <em>OpenClaw</em>, an open agent toolkit for educators</div>
+            <div class="side-row"><span class="bullet"></span>Maintaining the <em><a href="{{ '/cfp/' | relative_url }}">CFP</a></em> &amp; <em><a href="{{ '/jrank/' | relative_url }}">Journal Rankings</a></em> trackers</div>
+          </div>
+          <div class="side-list only-zh">
+            <div class="side-row"><span class="bullet"></span>构建 <em>AI-Agent School</em> —— 一个教育仿真平台 <span class="side-note">（EMNLP 2025 已发表）</span></div>
+            <div class="side-row"><span class="bullet"></span>开发 <em>OpenClaw</em> —— 面向教育者的开源智能体工具包</div>
+            <div class="side-row"><span class="bullet"></span>维护 <em><a href="{{ '/cfp/' | relative_url }}">期刊征稿</a></em> 与 <em><a href="{{ '/jrank/' | relative_url }}">期刊排名</a></em> 追踪工具</div>
+          </div>
+        </div>
+        <div class="side-card glass">
+          <div class="side-label"><span class="only-en">Academic Service</span><span class="only-zh">学术服务</span></div>
+          <div class="side-list only-en">
+            <div class="side-row"><span class="bullet"></span><strong>Reviewer</strong> — SSCI Q1 journals in educational technology <span class="side-note">(EAIT, HSSC)</span></div>
+            <div class="side-row"><span class="bullet"></span><strong>Program Committee</strong> — AIED, ISLS</div>
+          </div>
+          <div class="side-list only-zh">
+            <div class="side-row"><span class="bullet"></span><strong>审稿人</strong> —— 教育技术领域 SSCI Q1 期刊 <span class="side-note">（EAIT、HSSC）</span></div>
+            <div class="side-row"><span class="bullet"></span><strong>程序委员会</strong> —— AIED、ISLS</div>
+          </div>
+        </div>
+        <div class="side-card glass">
+          <div class="side-label"><span class="only-en">Recognition</span><span class="only-zh">荣誉</span></div>
+          <div class="chip-row">
+            <span class="chip"><span class="only-en">ACM-ICPC Asia Regional</span><span class="only-zh">ACM-ICPC 亚洲区域赛</span></span>
+            <span class="chip"><span class="only-en">National Scholarship</span><span class="only-zh">国家奖学金</span></span>
+            <span class="chip"><span class="only-en">ESI Highly Cited &amp; Hot Paper</span><span class="only-zh">ESI 高被引 & 热点论文</span></span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- RESEARCH ─────────────────────────────────────────── -->
+  <section id="research" class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">
+        <span class="only-en">Research <em>interests</em></span>
+        <span class="only-zh">研究<em>方向</em></span>
+      </h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="research-grid">
+      <article class="r-card glass">
+        <div class="r-index">i.</div>
+        <h3><span class="only-en">Large Language Models in Education</span><span class="only-zh">教育中的大语言模型</span></h3>
+        <p class="only-en">How do students <em>actually</em> learn when ChatGPT is in the loop? AI literacy, cognitive scaffolding, and the new pedagogical contract.</p>
+        <p class="only-zh">当 ChatGPT 介入时，学生<em>究竟</em>是如何学习的？AI 素养、认知支架，以及全新的教学契约。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-index">ii.</div>
+        <h3><span class="only-en">AI-Assisted &amp; Personalized Learning</span><span class="only-zh">AI 辅助与个性化学习</span></h3>
+        <p class="only-en">Adaptive tutors that respect learner proficiency, style, and emotional state — without flattening the experience.</p>
+        <p class="only-zh">尊重学习者水平、风格与情绪状态的自适应导师——而不抹平学习体验。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-index">iii.</div>
+        <h3><span class="only-en">Multi-Agent Collaborative Learning</span><span class="only-zh">多智能体协作学习</span></h3>
+        <p class="only-en">Agent teams as study companions. CSCL reimagined for the post-LLM classroom.</p>
+        <p class="only-zh">以智能体团队作为学习伙伴。为后大模型时代的课堂重新构想 CSCL。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-index">iv.</div>
+        <h3><span class="only-en">Responsible AI in Education</span><span class="only-zh">教育中的负责任 AI</span></h3>
+        <p class="only-en">Ethical, pedagogically-grounded integration. The questions of <em>should</em>, not just <em>can</em>.</p>
+        <p class="only-zh">合乎伦理、植根教学法的融合。回答"<em>应当</em>"，而不止于"<em>能否</em>"。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SELECTED PUBLICATIONS ────────────────────────────── -->
+  <section id="publications" class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">
+        <span class="only-en">Selected <em>publications</em></span>
+        <span class="only-zh">代表性<em>论文</em></span>
+      </h2>
+      <span class="section-rule"></span>
+      <a class="section-link" href="{{ '/publications/' | relative_url }}"><span class="only-en">View all →</span><span class="only-zh">查看全部 →</span></a>
+    </div>
+
+    <div class="pubs">
+      <article class="pub glass">
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/hssc.jpeg' | relative_url }}" alt="" /></div>
+        <div class="pub-body">
+          <div class="pub-meta">
+            <span class="venue">HSSC</span>
+            <span class="year">Feb 2024</span>
+            <span class="award"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3l5 3l-1.5-8"/></svg> <span class="only-en">ESI Highly Cited &amp; Hot Paper</span><span class="only-zh">ESI 高被引 & 热点论文</span></span>
+          </div>
+          <h3 class="pub-title">What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study</h3>
+          <div class="pub-authors">Yuhui Jing, <em>Haoming Wang</em>, Xiaojiao Chen, Chengliang Wang</div>
+          <div class="pub-venue"><em>Humanities and Social Sciences Communications</em></div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1057/s41599-024-02751-w" target="_blank" rel="noopener">DOI ↗</a>
+            <span class="cite-count"><span class="only-en">87 citations</span><span class="only-zh">被引 87 次</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub glass">
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/eait.jpg' | relative_url }}" alt="" /></div>
+        <div class="pub-body">
+          <div class="pub-meta">
+            <span class="venue">EAIT</span>
+            <span class="year">Mar 2025</span>
+          </div>
+          <h3 class="pub-title">Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses</h3>
+          <div class="pub-authors"><em>Haoming Wang</em>, Chengliang Wang, Zhan Chen, Fa Liu, Chunjia Bao, Xianlong Xu</div>
+          <div class="pub-venue"><em>Education and Information Technologies</em></div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1007/s10639-025-13487-8" target="_blank" rel="noopener">DOI ↗</a>
+            <span class="cite-count"><span class="only-en">39 citations</span><span class="only-zh">被引 39 次</span></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub glass">
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/call.png' | relative_url }}" alt="" /></div>
+        <div class="pub-body">
+          <div class="pub-meta">
+            <span class="venue">CALL</span>
+            <span class="year">Oct 2025</span>
+          </div>
+          <h3 class="pub-title">Breaking the boundaries of conventional vocabulary learning: intelligent interactive companion in CAVL environments</h3>
+          <div class="pub-authors">Yuxi Zhang, <em>Haoming Wang</em><sup>*</sup>, Chunjia Bao</div>
+          <div class="pub-venue"><em>Computer Assisted Language Learning</em></div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1080/09588221.2025.2573003" target="_blank" rel="noopener">DOI ↗</a>
+            <span class="cite-count"><span class="only-en">1 citation</span><span class="only-zh">被引 1 次</span></span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- NEWS ─────────────────────────────────────────────── -->
+  <section id="news" class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">
+        <span class="only-en">Recent <em>news</em></span>
+        <span class="only-zh">近期<em>动态</em></span>
+      </h2>
+      <span class="section-rule"></span>
+      <a class="section-link" href="{{ '/news/' | relative_url }}"><span class="only-en">All news →</span><span class="only-zh">全部动态 →</span></a>
+    </div>
+
+    <div class="news-rail">
+      {% assign recent_news = site.news | sort: 'date' | reverse %}
+      {% for item in recent_news limit: 4 %}
+        {% assign tag_zh = item.tag %}
+        {% case item.tag %}
+          {% when 'milestone' %}{% assign tag_zh = '里程碑' %}
+          {% when 'conference' %}{% assign tag_zh = '会议' %}
+          {% when 'award' %}{% assign tag_zh = '奖项' %}
+          {% when 'publication' %}{% assign tag_zh = '论文' %}
+          {% when 'talk' %}{% assign tag_zh = '演讲' %}
+        {% endcase %}
+        <div class="news-card glass{% if item.highlight %} highlight{% endif %}">
+          <div class="news-date"><span class="only-en">{{ item.date | date: '%b %Y' }}</span><span class="only-zh">{{ item.date | date: '%Y 年 %-m 月' }}</span></div>
+          <div class="news-body">
+            {% if item.tag %}<span class="news-tag"><span class="only-en">{{ item.tag }}</span><span class="only-zh">{{ tag_zh }}</span></span>{% endif %}
+            <div class="only-en">{{ item.content }}</div>
+            <div class="only-zh">{% if item.zh %}{{ item.zh | markdownify }}{% else %}{{ item.content }}{% endif %}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- CONTACT ──────────────────────────────────────────── -->
+  <section id="contact" class="section section-contact">
+    <div class="contact-card glass">
+      <div class="contact-eyebrow"><span class="only-en">— L E T &nbsp; U S &nbsp; T A L K</span><span class="only-zh">— 联 系 我</span></div>
+      <h2 class="contact-headline">
+        <span class="only-en">Open to <em>collaborations</em>,<br/>student inquiries, &amp; thoughtful conversation.</span>
+        <span class="only-zh">欢迎<em>合作</em>、学生咨询，<br/>以及一切有深度的交流。</span>
+      </h2>
+
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:{{ site.data.socials.email }}">
+          <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6l9-6"/></svg>
+          <div>
+            <div class="ci-label"><span class="only-en">Email</span><span class="only-zh">邮箱</span></div>
+            <div class="ci-value">{{ site.data.socials.email }}</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://orcid.org/{{ site.data.socials.orcid_id }}" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8 16c1-1.5 2.5-2 4-2s3 0.5 4 2M9 6h6"/></svg>
+          <div>
+            <div class="ci-label">ORCID</div>
+            <div class="ci-value">{{ site.data.socials.orcid_id }}</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><path d="M22 9L12 5L2 9l10 4l10-4v6M6 10.6V16a6 3 0 0 0 12 0v-5.4"/></svg>
+          <div>
+            <div class="ci-label"><span class="only-en">Google Scholar</span><span class="only-zh">谷歌学术</span></div>
+            <div class="ci-value">{{ site.data.socials.scholar_userid }}</div>
+          </div>
+        </a>
+        <div class="contact-item" style="cursor: default;">
+          <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><path d="M9.5 4C5.4 4 2 6.9 2 10.5c0 2 1.1 3.8 2.8 5L4 18l2.6-1.3c.9.3 1.9.4 2.9.4h.6a5.7 5.7 0 0 1-.3-1.8c0-3.4 3.3-6 7.2-6h.6C17.1 6 13.7 4 9.5 4z"/><path d="M22 15.5c0-2.8-2.7-5-6-5s-6 2.2-6 5 2.7 5 6 5c.7 0 1.4-.1 2-.3l1.8.9-.5-1.6c1.3-.9 2.2-2.3 2.2-3.9z"/></svg>
+          <div>
+            <div class="ci-label"><span class="only-en">WeChat</span><span class="only-zh">微信</span></div>
+            <div class="ci-value">whmtech</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 </div>

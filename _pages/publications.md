@@ -2,8 +2,11 @@
 layout: page
 permalink: /publications/
 title: Publications
+title_zh: 论文发表
 description: Selected publications on AI-enhanced education, learning analytics, and bibliometrics.
+description_zh: AI 赋能教育、学习分析与文献计量方向的代表性论文。
 nav: true
+nav_zh: 论文发表
 nav_order: 2
 ---
 <!-- _pages/publications.md -->

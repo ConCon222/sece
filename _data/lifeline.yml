@@ -1,12 +1,23 @@
 tags:
   award: "Competitions"       # 竞赛获奖
   honor: "Honors"             # 荣誉表彰
-  publication: "Publications" # 论文软著
+  publication: "Patents &amp; Software" # 软著/专利
   talk: "Talks & Confs"       # 演讲与会议
   project: "Projects"         # 科研项目
   service: "Service"          # 社会服务/任职
   exchange: "Exchange"        # 交流访学
   milestone: "Milestones"     # 重要节点
+
+# Chinese labels (used by the EN/中 site toggle)
+tags_zh:
+  award: "竞赛获奖"
+  honor: "荣誉表彰"
+  publication: "软著 / 专利"
+  talk: "演讲与会议"
+  project: "科研项目"
+  service: "社会服务"
+  exchange: "交流访学"
+  milestone: "重要节点"
 
 events:
   # ==================== 2025 (Future & Recent) ====================

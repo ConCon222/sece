@@ -1,8 +1,10 @@
 ---
 layout: distill
 title: "OpenClaw Setup (III): Connect a Feishu Bot"
+title_zh: "OpenClaw 配置（三）：连接飞书机器人"
 date: 2026-03-17
 description: Extend OpenClaw into Feishu by enabling the plugin, creating an app, importing permissions, and configuring event subscriptions.
+description_zh: 通过启用插件、创建应用、导入权限并配置事件订阅，将 OpenClaw 扩展到飞书。
 tags: [OpenClaw, ECNU AI, Feishu]
 categories: tutorial
 thumbnail: assets/img/posts/openclaw-tutorial/feishu-step13.png

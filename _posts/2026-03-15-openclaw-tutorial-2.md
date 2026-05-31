@@ -1,8 +1,10 @@
 ---
 layout: distill
 title: "OpenClaw Setup (II): Install OpenClaw and Connect ECNU AI"
+title_zh: "OpenClaw 配置（二）：安装 OpenClaw 并连接 ECNU AI"
 date: 2026-03-15
 description: Install OpenClaw locally, connect it to the ECNU AI platform, and verify that the environment works end to end.
+description_zh: 在本地安装 OpenClaw，连接 ECNU AI 平台，并验证环境端到端可用。
 tags: [OpenClaw, ECNU AI]
 categories: tutorial
 thumbnail: assets/img/posts/openclaw-tutorial/install-step0.png

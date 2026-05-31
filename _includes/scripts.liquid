@@ -187,12 +187,15 @@
 <!-- Jupyter Open External Links New Tab -->
 <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
-<!-- Badges -->
-{% if site.enable_publication_badges.altmetric %}
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-{% endif %}
-{% if site.enable_publication_badges.dimensions %}
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
+<!-- Badges — only load on pages that actually render a bibliography
+     (these external scripts are slow from mainland China; no need site-wide) -->
+{% if page.permalink == '/publications/' or page.related_publications %}
+  {% if site.enable_publication_badges.altmetric %}
+    <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  {% endif %}
+  {% if site.enable_publication_badges.dimensions %}
+    <script async src="https://badge.dimensions.ai/badge.js"></script>
+  {% endif %}
 {% endif %}
 
 {% if site.enable_math %}
@@ -325,3 +328,30 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+<!-- Language toggle (EN / 中).
+     Display is 100% CSS-driven via html[data-lang] (set in <head> before first
+     paint), so the correct language renders with zero flash and even works if
+     this script never runs. JS here only handles the toggle click + persistence. -->
+<script>
+  (function () {
+    function setLang(lang) {
+      document.documentElement.setAttribute("data-lang", lang);
+      try { localStorage.setItem("site-lang", lang); } catch (e) {}
+    }
+    function init() {
+      var btn = document.getElementById("lang-toggle");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          var cur = document.documentElement.getAttribute("data-lang") || "en";
+          setLang(cur === "zh" ? "en" : "zh");
+        });
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>

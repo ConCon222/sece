@@ -1,8 +1,10 @@
 ---
 layout: distill
 title: "OpenClaw × ECNU AI: Setup Series Overview"
+title_zh: "OpenClaw × ECNU AI：配置系列总览"
 date: 2026-03-18
 description: "A guide to the three OpenClaw setup posts: retrieving API credentials, completing the local installation, and connecting a Feishu bot."
+description_zh: "三篇 OpenClaw 配置教程导览：获取 API 凭证、完成本地安装、连接飞书机器人。"
 tags: [OpenClaw, ECNU AI]
 categories: tutorial
 thumbnail: assets/img/posts/openclaw-tutorial/install-step0.png

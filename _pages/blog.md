@@ -3,6 +3,7 @@ layout: default
 permalink: /blog/
 title: Blog
 nav: true
+nav_zh: 博客
 nav_order: 1
 pagination:
   enabled: true
@@ -24,8 +25,8 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
+    <h1><span class="only-en">{{ site.blog_name }}</span><span class="only-zh">浩名的博客</span></h1>
+    <h2><span class="only-en">{{ site.blog_description }}</span><span class="only-zh">关于 AI、教育与技术的思考</span></h2>
   </div>
   {% endif %}
 
@@ -73,8 +74,8 @@ pagination:
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
-<p class="card-text">{{ post.description }}</p>
+<h3 class="card-title text-lowercase"><span class="only-en">{{ post.title }}</span><span class="only-zh">{{ post.title_zh | default: post.title }}</span></h3>
+<p class="card-text"><span class="only-en">{{ post.description }}</span><span class="only-zh">{{ post.description_zh | default: post.description }}</span></p>
 
                     {% if post.external_source == blank %}
                       {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
@@ -84,7 +85,7 @@ pagination:
                     {% assign year = post.date | date: "%Y" %}
 
                     <p class="post-meta">
-                      {{ read_time }} min read &nbsp; &middot; &nbsp;
+                      {{ read_time }} <span class="only-en">min read</span><span class="only-zh">分钟阅读</span> &nbsp; &middot; &nbsp;
                       <a href="{{ year | prepend: '/blog/' | relative_url }}">
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
                     </p>
@@ -128,20 +129,21 @@ pagination:
           <div class="col-sm-9">
 {% endif %}
         <h3>
+        {% capture post_title_html %}<span class="only-en">{{ post.title }}</span><span class="only-zh">{{ post.title_zh | default: post.title }}</span>{% endcapture %}
         {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.url | relative_url }}">{{ post_title_html }}</a>
         {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post_title_html }}</a>
           <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         {% else %}
-          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post_title_html }}</a>
         {% endif %}
       </h3>
-      <p>{{ post.description }}</p>
+      <p><span class="only-en">{{ post.description }}</span><span class="only-zh">{{ post.description_zh | default: post.description }}</span></p>
       <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
+        {{ read_time }} <span class="only-en">min read</span><span class="only-zh">分钟阅读</span> &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %d, %Y' }}
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}

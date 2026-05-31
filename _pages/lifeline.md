@@ -1,9 +1,11 @@
 ---
 layout: page
 title: Life Line
+title_zh: 人生轨迹
 permalink: /lifeline/
 description: ""
 nav: true
+nav_zh: 人生轨迹
 nav_order: 6
 ---
 
@@ -29,7 +31,7 @@ nav_order: 6
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: #cbd5e1;
+  background: linear-gradient(180deg, transparent, var(--tsinghua-pale, #d9bee0) 8%, var(--tsinghua-pale, #d9bee0) 92%, transparent);
 }
 
 /* ---------- Top Header ---------- */
@@ -57,9 +59,10 @@ nav_order: 6
   padding: 0.375rem 0.875rem;
   font-size: 0.75rem;
   font-weight: 500;
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+  font-family: var(--ui, sans-serif);
+  background: rgba(255,255,255,0.6);
+  color: var(--ink-soft, #475569);
+  border: 1px solid var(--tsinghua-pale, #e2e8f0);
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.2s;
@@ -80,7 +83,7 @@ nav_order: 6
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.filter-pill.active[data-type="all"]         { background: #334155; }
+.filter-pill.active[data-type="all"]         { background: var(--tsinghua, #660874); }
 .filter-pill.active[data-type="award"]       { background: #f59e0b; }
 .filter-pill.active[data-type="honor"]       { background: #a855f7; }
 .filter-pill.active[data-type="talk"]        { background: #ef4444; }
@@ -88,6 +91,54 @@ nav_order: 6
 .filter-pill.active[data-type="service"]     { background: #8b5cf6; }
 .filter-pill.active[data-type="publication"] { background: #3b82f6; }
 .filter-pill.active[data-type="exchange"]    { background: #ec4899; }
+
+/* ---------- Collapsible "By type" toggle ---------- */
+.filter-toggle {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--ui, sans-serif);
+  background: var(--tsinghua-wash, #f1e6f5);
+  color: var(--tsinghua, #660874);
+  border: 1px solid var(--tsinghua-pale, #d9bee0);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+.filter-toggle:hover {
+  background: var(--tsinghua, #660874);
+  color: #fff;
+  border-color: var(--tsinghua, #660874);
+  transform: translateY(-1px);
+}
+.filter-chev {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.filter-toggle.open .filter-chev { transform: rotate(180deg); }
+
+.filter-pills-extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+.filter-pills-extra.open {
+  max-height: 240px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
 
 .filter-count {
   font-size: 0.65rem;
@@ -111,16 +162,18 @@ nav_order: 6
 .lifeline-btn {
   padding: 0.375rem 1rem;
   font-size: 0.75rem;
-  background: #f1f5f9;
-  color: #475569;
-  border: none;
+  font-family: var(--ui, sans-serif);
+  background: rgba(255,255,255,0.6);
+  color: var(--ink-soft, #475569);
+  border: 1px solid var(--tsinghua-pale, #e2e8f0);
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .lifeline-btn:hover {
-  background: #e2e8f0;
+  background: var(--tsinghua-wash, #e2e8f0);
+  color: var(--tsinghua, #660874);
 }
 
 /* ---------- Year Section ---------- */
@@ -146,10 +199,11 @@ nav_order: 6
 }
 
 .year-label {
-  background: #334155;
+  background: linear-gradient(180deg, var(--tsinghua, #660874), var(--tsinghua-deep, #4a0a5e));
   color: white;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: var(--display, Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 600;
   padding: 0.625rem 1.5rem;
   border-radius: 9999px;
   display: flex;
@@ -159,12 +213,12 @@ nav_order: 6
 }
 
 .year-label:hover {
-  background: #475569;
+  background: var(--tsinghua-light, #475569);
   transform: scale(1.05);
 }
 
 .year-count {
-  background: #475569;
+  background: rgba(255,255,255,0.22);
   color: white;
   font-size: 0.75rem;
   padding: 0.125rem 0.5rem;
@@ -180,7 +234,7 @@ nav_order: 6
 .events-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.4rem;
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
@@ -192,12 +246,14 @@ nav_order: 6
 /* ---------- Event Card ---------- */
 .event-card {
   position: relative;
-  width: 45%;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  width: 48%;
+  background: var(--glass-bg, rgba(255,255,255,0.62));
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--glass-edge, rgba(255,255,255,0.9));
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px -16px rgba(60, 20, 80, 0.22);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -213,12 +269,12 @@ nav_order: 6
 
 .event-card.left {
   margin-left: auto;
-  margin-right: 55%;
+  margin-right: 52%;
   text-align: right;
 }
 
 .event-card.right {
-  margin-left: 55%;
+  margin-left: 52%;
   margin-right: auto;
   text-align: left;
 }
@@ -231,17 +287,17 @@ nav_order: 6
   width: 12px;
   height: 12px;
   background: white;
-  border: 3px solid #94a3b8;
+  border: 3px solid var(--tsinghua, #660874);
   border-radius: 50%;
   transform: translateY(-50%);
 }
 
 .event-card.left::before {
-  right: -8%;
+  right: -4.2%;
 }
 
 .event-card.right::before {
-  left: -8%;
+  left: -4.2%;
 }
 
 /* ---------- Card Header ---------- */
@@ -284,9 +340,10 @@ nav_order: 6
 
 /* ---------- Event Title ---------- */
 .event-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #1e293b;
+  font-family: var(--display, Georgia, serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink-strong, #1e293b);
   line-height: 1.4;
 }
 
@@ -295,7 +352,7 @@ nav_order: 6
   display: none;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid var(--rule, #e2e8f0);
 }
 
 .event-card.expanded .event-details {
@@ -303,14 +360,15 @@ nav_order: 6
 }
 
 .event-date {
+  font-family: var(--ui, sans-serif);
   font-size: 0.75rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: var(--tsinghua, #94a3b8);
 }
 
 .event-description {
-  font-size: 0.85rem;
-  color: #64748b;
+  font-size: 0.9rem;
+  color: var(--ink-soft, #64748b);
   margin-top: 0.25rem;
 }
 
@@ -326,7 +384,7 @@ nav_order: 6
 .lifeline-end-dot {
   width: 1.5rem;
   height: 1.5rem;
-  background: #cbd5e1;
+  background: var(--tsinghua-pale, #cbd5e1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -337,7 +395,7 @@ nav_order: 6
   content: '';
   width: 0.5rem;
   height: 0.5rem;
-  background: #64748b;
+  background: var(--tsinghua, #64748b);
   border-radius: 50%;
 }
 
@@ -400,57 +458,64 @@ nav_order: 6
 
 <!-- ==================== Page Structure ==================== -->
 <div class="lifeline-header">
-  <h2>Life Line</h2>
+  <h2><span class="only-en">Life Line</span><span class="only-zh">人生轨迹</span></h2>
   <p class="lifeline-hint">
-    <span id="visible-count">{{ total_events }}</span> Moments · {{ total_years }} Years
-    <br><small>Click nodes to expand · Filter by type</small>
+    <span id="visible-count">{{ total_events }}</span>
+    <span class="only-en">Moments · {{ total_years }} Years</span><span class="only-zh">条记录 · {{ total_years }} 年</span>
+    <br><small><span class="only-en">Click nodes to expand · Filter by type</span><span class="only-zh">点击节点展开 · 按类型筛选</span></small>
   </p>
 
   <!-- Type Filter Pills -->
   <div class="lifeline-filters">
     <button class="filter-pill active" data-type="all" onclick="filterByType('all', this)">
-      All <span class="filter-count">{{ total_events }}</span>
+      <span class="only-en">All</span><span class="only-zh">全部</span> <span class="filter-count">{{ total_events }}</span>
     </button>
+    <button class="filter-toggle" id="filter-toggle" onclick="toggleFilterTypes()" aria-expanded="false">
+      <span class="only-en">By type</span><span class="only-zh">按类型</span>
+      <span class="filter-chev">▾</span>
+    </button>
+    <div class="filter-pills-extra" id="filter-extra">
     {% if award_count > 0 %}
     <button class="filter-pill" data-type="award" onclick="filterByType('award', this)">
-      🏆 {{ site.data.lifeline.tags.award }} <span class="filter-count">{{ award_count }}</span>
+      🏆 <span class="only-en">{{ site.data.lifeline.tags.award }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.award }}</span> <span class="filter-count">{{ award_count }}</span>
     </button>
     {% endif %}
     {% if honor_count > 0 %}
     <button class="filter-pill" data-type="honor" onclick="filterByType('honor', this)">
-      🎖️ {{ site.data.lifeline.tags.honor }} <span class="filter-count">{{ honor_count }}</span>
+      🎖️ <span class="only-en">{{ site.data.lifeline.tags.honor }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.honor }}</span> <span class="filter-count">{{ honor_count }}</span>
     </button>
     {% endif %}
     {% if talk_count > 0 %}
     <button class="filter-pill" data-type="talk" onclick="filterByType('talk', this)">
-      🎤 {{ site.data.lifeline.tags.talk }} <span class="filter-count">{{ talk_count }}</span>
+      🎤 <span class="only-en">{{ site.data.lifeline.tags.talk }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.talk }}</span> <span class="filter-count">{{ talk_count }}</span>
     </button>
     {% endif %}
     {% if project_count > 0 %}
     <button class="filter-pill" data-type="project" onclick="filterByType('project', this)">
-      📋 {{ site.data.lifeline.tags.project }} <span class="filter-count">{{ project_count }}</span>
+      📋 <span class="only-en">{{ site.data.lifeline.tags.project }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.project }}</span> <span class="filter-count">{{ project_count }}</span>
     </button>
     {% endif %}
     {% if service_count > 0 %}
     <button class="filter-pill" data-type="service" onclick="filterByType('service', this)">
-      🤝 {{ site.data.lifeline.tags.service }} <span class="filter-count">{{ service_count }}</span>
+      🤝 <span class="only-en">{{ site.data.lifeline.tags.service }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.service }}</span> <span class="filter-count">{{ service_count }}</span>
     </button>
     {% endif %}
     {% if publication_count > 0 %}
     <button class="filter-pill" data-type="publication" onclick="filterByType('publication', this)">
-      📄 {{ site.data.lifeline.tags.publication }} <span class="filter-count">{{ publication_count }}</span>
+      📜 <span class="only-en">{{ site.data.lifeline.tags.publication }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.publication }}</span> <span class="filter-count">{{ publication_count }}</span>
     </button>
     {% endif %}
     {% if exchange_count > 0 %}
     <button class="filter-pill" data-type="exchange" onclick="filterByType('exchange', this)">
-      ✈️ {{ site.data.lifeline.tags.exchange }} <span class="filter-count">{{ exchange_count }}</span>
+      ✈️ <span class="only-en">{{ site.data.lifeline.tags.exchange }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.exchange }}</span> <span class="filter-count">{{ exchange_count }}</span>
     </button>
     {% endif %}
+    </div>
   </div>
 
   <div class="lifeline-controls">
-    <button class="lifeline-btn" onclick="expandAllYears()">Expand All</button>
-    <button class="lifeline-btn" onclick="collapseAllYears()">Collapse All</button>
+    <button class="lifeline-btn" onclick="expandAllYears()"><span class="only-en">Expand All</span><span class="only-zh">全部展开</span></button>
+    <button class="lifeline-btn" onclick="collapseAllYears()"><span class="only-en">Collapse All</span><span class="only-zh">全部收起</span></button>
   </div>
 </div>
 
@@ -470,14 +535,23 @@ nav_order: 6
       {% assign position = forloop.index | modulo: 2 %}
       <div class="event-card {% if position == 1 %}left{% else %}right{% endif %}" data-type="{{ event.type }}" onclick="toggleCard(this)">
         <div class="event-header">
-          <span class="event-tag tag-{{ event.type }}">{{ site.data.lifeline.tags[event.type] }}</span>
+          <span class="event-tag tag-{{ event.type }}">
+            <span class="only-en">{{ site.data.lifeline.tags[event.type] }}</span>
+            <span class="only-zh">{{ site.data.lifeline.tags_zh[event.type] | default: site.data.lifeline.tags[event.type] }}</span>
+          </span>
           <span class="event-icon">{{ event.icon }}</span>
         </div>
-        <div class="event-title">{{ event.title }}</div>
+        <div class="event-title">
+          <span class="only-en">{{ event.title }}</span>
+          <span class="only-zh">{% if event.description and event.description != "" %}{{ event.description }}{% else %}{{ event.title }}{% endif %}</span>
+        </div>
         <div class="event-details">
           <span class="event-date">{{ event.date }}</span>
           {% if event.description and event.description != "" %}
-          <p class="event-description">{{ event.description }}</p>
+          <p class="event-description">
+            <span class="only-en">{{ event.description }}</span>
+            <span class="only-zh">{{ event.title }}</span>
+          </p>
           {% endif %}
         </div>
       </div>
@@ -572,8 +646,28 @@ function repositionCards() {
 }
 
 /* Filter timeline by event type */
+function toggleFilterTypes() {
+  var extra = document.getElementById('filter-extra');
+  var tog = document.getElementById('filter-toggle');
+  if (!extra || !tog) return;
+  var open = extra.classList.toggle('open');
+  tog.classList.toggle('open', open);
+  tog.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
 function filterByType(type, btn) {
   currentFilter = type;
+
+  /* Keep the type panel open while a specific category is active so the
+     selected pill stays visible; collapse it again when returning to "All". */
+  var extra = document.getElementById('filter-extra');
+  var tog = document.getElementById('filter-toggle');
+  if (extra && tog) {
+    var shouldOpen = type !== 'all';
+    extra.classList.toggle('open', shouldOpen);
+    tog.classList.toggle('open', shouldOpen);
+    tog.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+  }
 
   /* Update active pill */
   document.querySelectorAll('.filter-pill').forEach(function(p) {

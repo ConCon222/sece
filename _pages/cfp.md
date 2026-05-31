@@ -1,9 +1,12 @@
 ---
 layout: page
 title: Call for Papers
+title_zh: 期刊征稿
 permalink: /cfp/
 description: Curated academic opportunities in Edu. Auto-updated daily.
+description_zh: 精选的教育领域学术征稿信息，每日自动更新。
 nav: true
+nav_zh: 期刊征稿
 nav_order: 3
 ---
 
@@ -13,10 +16,14 @@ nav_order: 3
 <style>
   /* Search & Filter Bar */
   .cfp-filter-section {
-    background: #f8f9fa;
+    background: var(--glass-bg-soft, rgba(255,255,255,0.42));
+    border: 1px solid var(--glass-edge, rgba(255,255,255,0.9));
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
     padding: 16px 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-bottom: 20px;
+    box-shadow: 0 8px 24px -14px rgba(60,20,80,0.18);
   }
   .cfp-filter-section .row > div {
     margin-bottom: 8px;
@@ -39,16 +46,16 @@ nav_order: 3
 
   /* Details box */
   .cfp-details-box {
-    background-color: #f8f9fa;
-    border-left: 3px solid #17a2b8;
+    background-color: var(--tsinghua-wash, #f1e6f5);
+    border-left: 3px solid var(--tsinghua, #660874);
     padding: 10px 15px;
     margin-top: 10px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 8px 8px 0;
     font-size: 0.9rem;
   }
   .cfp-meta-label {
     font-weight: 600;
-    color: #495057;
+    color: var(--ink-soft, #4d3f5c);
   }
 
   /* Tag badges */
@@ -62,7 +69,7 @@ nav_order: 3
   /* Journal link to rankings */
   .cfp-journal-link {
     font-size: 0.7rem;
-    color: #6f42c1;
+    color: var(--tsinghua, #660874);
     text-decoration: none;
     margin-left: 4px;
   }

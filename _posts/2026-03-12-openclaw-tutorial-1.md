@@ -1,8 +1,10 @@
 ---
 layout: distill
 title: "OpenClaw Setup (I): Retrieve ECNU AI API Credentials"
+title_zh: "OpenClaw 配置（一）：获取 ECNU AI API 凭证"
 date: 2026-03-12
 description: Retrieve the API key, base URL, and model name from ChatECNU before connecting OpenClaw.
+description_zh: 在连接 OpenClaw 之前，从 ChatECNU 获取 API 密钥、Base URL 与模型名称。
 tags: [OpenClaw, ECNU AI, API]
 categories: tutorial
 thumbnail: assets/img/posts/openclaw-tutorial/api-step0.png
