@@ -46,13 +46,20 @@ nav_order: 6
   margin-bottom: 1rem;
 }
 
-/* ---------- Type Filter Pills ---------- */
-.lifeline-filters {
+/* ---------- Toolbar (filters + expand controls, one row) ---------- */
+.lifeline-toolbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.toolbar-divider {
+  width: 1px;
+  height: 1.15rem;
+  background: var(--rule, rgba(31,20,41,0.12));
+  margin: 0 0.3rem;
 }
 
 .filter-pill {
@@ -234,9 +241,14 @@ nav_order: 6
 .events-container {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
+}
+/* Stagger: pull each card up into the previous one's vertical space so
+   left/right cards interleave (zigzag) instead of stacking on one line. */
+.events-container .event-card + .event-card {
+  margin-top: -2.2rem;
 }
 
 .events-container.collapsed {
@@ -246,7 +258,7 @@ nav_order: 6
 /* ---------- Event Card ---------- */
 .event-card {
   position: relative;
-  width: 48%;
+  width: 49.5%;
   background: var(--glass-bg, rgba(255,255,255,0.62));
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
@@ -269,12 +281,12 @@ nav_order: 6
 
 .event-card.left {
   margin-left: auto;
-  margin-right: 52%;
+  margin-right: 50.5%;
   text-align: right;
 }
 
 .event-card.right {
-  margin-left: 52%;
+  margin-left: 50.5%;
   margin-right: auto;
   text-align: left;
 }
@@ -293,11 +305,11 @@ nav_order: 6
 }
 
 .event-card.left::before {
-  right: -4.2%;
+  right: -1%;
 }
 
 .event-card.right::before {
-  left: -4.2%;
+  left: -1%;
 }
 
 /* ---------- Card Header ---------- */
@@ -465,8 +477,8 @@ nav_order: 6
     <br><small><span class="only-en">Click nodes to expand · Filter by type</span><span class="only-zh">点击节点展开 · 按类型筛选</span></small>
   </p>
 
-  <!-- Type Filter Pills -->
-  <div class="lifeline-filters">
+  <!-- Toolbar: filter + expand controls on one row -->
+  <div class="lifeline-toolbar">
     <button class="filter-pill active" data-type="all" onclick="filterByType('all', this)">
       <span class="only-en">All</span><span class="only-zh">全部</span> <span class="filter-count">{{ total_events }}</span>
     </button>
@@ -474,7 +486,13 @@ nav_order: 6
       <span class="only-en">By type</span><span class="only-zh">按类型</span>
       <span class="filter-chev">▾</span>
     </button>
-    <div class="filter-pills-extra" id="filter-extra">
+    <span class="toolbar-divider"></span>
+    <button class="lifeline-btn" onclick="expandAllYears()"><span class="only-en">Expand All</span><span class="only-zh">全部展开</span></button>
+    <button class="lifeline-btn" onclick="collapseAllYears()"><span class="only-en">Collapse All</span><span class="only-zh">全部收起</span></button>
+  </div>
+
+  <!-- Category sub-filters (collapsible, drops below the toolbar) -->
+  <div class="filter-pills-extra" id="filter-extra">
     {% if award_count > 0 %}
     <button class="filter-pill" data-type="award" onclick="filterByType('award', this)">
       🏆 <span class="only-en">{{ site.data.lifeline.tags.award }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.award }}</span> <span class="filter-count">{{ award_count }}</span>
@@ -510,12 +528,6 @@ nav_order: 6
       ✈️ <span class="only-en">{{ site.data.lifeline.tags.exchange }}</span><span class="only-zh">{{ site.data.lifeline.tags_zh.exchange }}</span> <span class="filter-count">{{ exchange_count }}</span>
     </button>
     {% endif %}
-    </div>
-  </div>
-
-  <div class="lifeline-controls">
-    <button class="lifeline-btn" onclick="expandAllYears()"><span class="only-en">Expand All</span><span class="only-zh">全部展开</span></button>
-    <button class="lifeline-btn" onclick="collapseAllYears()"><span class="only-en">Collapse All</span><span class="only-zh">全部收起</span></button>
   </div>
 </div>
 

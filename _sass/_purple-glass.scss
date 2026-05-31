@@ -670,3 +670,60 @@ body.hw-home .post > .post-header { display: none; }
     transform: none !important;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Glass consistency — give data pages the same translucent frosted-glass
+   surfaces as the About page (so the atmosphere/orbs show through).
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Data tables (Journal Rankings, CFP) → float in a glass panel */
+.container[role="main"] .table-responsive {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--glass-edge);
+  border-radius: 18px;
+  box-shadow: var(--glass-shadow);
+  overflow: hidden;
+}
+.container[role="main"] .table-responsive > table { margin-bottom: 0; background: transparent; }
+/* let the glass show through the rows; neutralize Bootstrap/MDB cell fills */
+.container[role="main"] .table-responsive > table > tbody > tr,
+.container[role="main"] .table-responsive > table > tbody > tr > td,
+.container[role="main"] .table-responsive > table > tbody > tr > th {
+  background-color: transparent;
+  --bs-table-accent-bg: transparent;
+  border-color: rgba(31, 20, 41, 0.06);
+}
+/* subtle, translucent striping + hover (kept above the glass) */
+.container[role="main"] .table-responsive > table > tbody > tr:nth-of-type(even) > * {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.container[role="main"] .table-responsive > table > tbody > tr:hover > * {
+  background-color: rgba(102, 8, 116, 0.06);
+}
+
+/* Publications entries → individual glass cards, like the About selected list */
+.publications .bibliography { padding-left: 0; }
+.publications .bibliography li {
+  list-style: none;
+  background: var(--glass-bg-soft);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  border: 1px solid var(--glass-edge);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.publications .bibliography li:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+    0 22px 44px -18px rgba(60, 20, 80, 0.30);
+}
+@media (prefers-reduced-motion: reduce) {
+  .publications .bibliography li { transition: none !important; }
+  .publications .bibliography li:hover { transform: none !important; }
+}
