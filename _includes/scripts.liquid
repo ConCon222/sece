@@ -337,6 +337,7 @@
   (function () {
     function setLang(lang) {
       document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
       try { localStorage.setItem("site-lang", lang); } catch (e) {}
     }
     function init() {

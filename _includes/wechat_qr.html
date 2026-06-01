@@ -20,6 +20,26 @@
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(7, 193, 96, 0.5);
   }
+  .qr-float-btn::after {
+    content: "";
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    white-space: nowrap;
+    background: rgba(46, 31, 51, 0.95);
+    color: #fff;
+    font-size: 12.5px;
+    padding: 7px 12px;
+    border-radius: 9px;
+    box-shadow: 0 6px 18px rgba(46, 31, 51, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .22s, transform .22s;
+  }
+  .qr-float-btn:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+  html[data-lang="en"] .qr-float-btn::after { content: "💬 Join the WeChat group"; }
+  html[data-lang="zh"] .qr-float-btn::after { content: "💬 加入微信交流群"; }
   .qr-modal-overlay {
     display: none;
     position: fixed;

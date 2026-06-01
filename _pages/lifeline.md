@@ -145,6 +145,7 @@ nav_order: 6
   max-height: 240px;
   opacity: 1;
   margin-top: 0.5rem;
+  overflow: visible; /* so the hover lift on pills isn't clipped by the panel edge */
 }
 
 .filter-count {
@@ -250,6 +251,16 @@ nav_order: 6
 .events-container .event-card + .event-card {
   margin-top: -2.2rem;
 }
+/* When filtered to one type: (1) hidden cards break the negative-margin
+   adjacency → disable the stagger; (2) the JS-set max-height (for the
+   collapse animation) becomes stale and clips the now-shorter content →
+   release it so cards always show in full. */
+.lifeline.filtered .events-container {
+  gap: 0.6rem;
+  max-height: none !important;
+  overflow: visible;
+}
+.lifeline.filtered .events-container .event-card + .event-card { margin-top: 0; }
 
 .events-container.collapsed {
   max-height: 0 !important;
@@ -258,7 +269,7 @@ nav_order: 6
 /* ---------- Event Card ---------- */
 .event-card {
   position: relative;
-  width: 49.5%;
+  width: 47%;
   background: var(--glass-bg, rgba(255,255,255,0.62));
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
@@ -281,12 +292,12 @@ nav_order: 6
 
 .event-card.left {
   margin-left: auto;
-  margin-right: 50.5%;
+  margin-right: 53%;
   text-align: right;
 }
 
 .event-card.right {
-  margin-left: 50.5%;
+  margin-left: 53%;
   margin-right: auto;
   text-align: left;
 }
@@ -305,11 +316,11 @@ nav_order: 6
 }
 
 .event-card.left::before {
-  right: -1%;
+  right: -6.4%;
 }
 
 .event-card.right::before {
-  left: -1%;
+  left: -6.4%;
 }
 
 /* ---------- Card Header ---------- */
@@ -444,7 +455,11 @@ nav_order: 6
     right: auto !important;
   }
 
-  .lifeline-filters {
+  /* single column on mobile → no overlap stagger, restore vertical spacing */
+  .events-container { gap: 0.75rem; }
+  .events-container .event-card + .event-card { margin-top: 0; }
+
+  .lifeline-toolbar {
     gap: 0.375rem;
   }
 
@@ -551,7 +566,7 @@ nav_order: 6
             <span class="only-en">{{ site.data.lifeline.tags[event.type] }}</span>
             <span class="only-zh">{{ site.data.lifeline.tags_zh[event.type] | default: site.data.lifeline.tags[event.type] }}</span>
           </span>
-          <span class="event-icon">{{ event.icon }}</span>
+          <span class="event-icon">{% if event.type == 'award' %}{{ event.icon }}{% else %}{{ site.data.lifeline.icons[event.type] | default: event.icon }}{% endif %}</span>
         </div>
         <div class="event-title">
           <span class="only-en">{{ event.title }}</span>
@@ -669,6 +684,11 @@ function toggleFilterTypes() {
 
 function filterByType(type, btn) {
   currentFilter = type;
+
+  /* Disable the interleave stagger while a specific type is active
+     (hidden cards otherwise break the negative-margin adjacency → clipping). */
+  var timeline = document.querySelector('.lifeline');
+  if (timeline) timeline.classList.toggle('filtered', type !== 'all');
 
   /* Keep the type panel open while a specific category is active so the
      selected pill stays visible; collapse it again when returning to "All". */

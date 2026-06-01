@@ -53,6 +53,65 @@ nav_order: 3
     border-radius: 0 8px 8px 0;
     font-size: 0.9rem;
   }
+
+  /* Topic cell: title + inline scope + clear CTA */
+  .cfp-title {
+    font-family: var(--display, Georgia, serif);
+    font-weight: 600;
+    font-size: 1.02rem;
+    line-height: 1.3;
+    color: var(--ink-strong, #100716);
+  }
+  .cfp-title:hover { color: var(--tsinghua, #660874); }
+  .cfp-scope {
+    margin: 6px 0 9px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--ink-faint, #645a72);
+  }
+  .cfp-row-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .cfp-cta {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--ui, sans-serif);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--tsinghua, #660874) !important;
+    background: rgba(102, 8, 116, 0.07);
+    border: 1px solid var(--tsinghua-pale, #d9bee0);
+    padding: 5px 14px;
+    border-radius: 999px;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .cfp-cta:hover {
+    background: var(--tsinghua, #660874);
+    border-color: var(--tsinghua, #660874);
+    color: #fff !important;
+    transform: translateY(-1px);
+  }
+  .cfp-more summary {
+    font-family: var(--ui, sans-serif);
+    font-size: 0.8rem;
+    color: var(--tsinghua, #660874);
+    cursor: pointer;
+    list-style: none;
+  }
+  .cfp-more summary::-webkit-details-marker { display: none; }
+  .cfp-more summary::before { content: "＋ "; }
+  .cfp-more[open] summary::before { content: "− "; }
+
+  /* Sortable headers */
+  .cfp-sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+  .cfp-sort-icon::after { content: "⇅"; font-size: 0.7rem; opacity: 0.4; margin-left: 3px; }
+  .cfp-sortable:hover .cfp-sort-icon::after { opacity: 0.8; }
+  .cfp-sortable.sort-asc, .cfp-sortable.sort-desc { color: var(--tsinghua, #660874); }
+  .cfp-sortable.sort-asc .cfp-sort-icon::after { content: "↑"; opacity: 1; color: var(--tsinghua, #660874); }
+  .cfp-sortable.sort-desc .cfp-sort-icon::after { content: "↓"; opacity: 1; color: var(--tsinghua, #660874); }
   .cfp-meta-label {
     font-weight: 600;
     color: var(--ink-soft, #4d3f5c);
@@ -150,9 +209,9 @@ nav_order: 3
   <table class="table table-hover" id="cfp-table">
     <thead>
       <tr>
-        <th width="18%">Deadline</th>
-        <th width="15%">Journal</th>
-        <th width="55%">Topic & Details</th>
+        <th width="18%" class="cfp-sortable" data-sort="deadline">Deadline <span class="cfp-sort-icon"></span></th>
+        <th width="15%" class="cfp-sortable" data-sort="journal">Journal <span class="cfp-sort-icon"></span></th>
+        <th width="55%">Topic &amp; Details</th>
         <th width="12%">Tags</th>
       </tr>
     </thead>
@@ -195,26 +254,42 @@ nav_order: 3
         </td>
 
         <td>
-          <a href="{{ cfp.link }}" target="_blank" style="font-weight: 600;">{{ cfp.title }}</a>
+          {% assign scope = cfp.description | strip_html | strip %}
+          {% assign has_more = false %}
+          {% if scope != "" and scope != "N/A" %}{% assign has_more = true %}{% endif %}
+          {% if cfp.abstract_deadline != "" and cfp.abstract_deadline != nil %}{% assign has_more = true %}{% endif %}
+          {% if cfp.editors != "" and cfp.editors != "N/A" %}{% assign has_more = true %}{% endif %}
 
-          <details class="mt-2">
-            <summary class="small text-primary" style="cursor: pointer;">Show Details</summary>
-            <div class="cfp-details-box">
-              {% if cfp.abstract_deadline != "" and cfp.abstract_deadline != nil %}
-              <div class="mb-2"><span class="cfp-meta-label">Abstract Deadline:</span> {{ cfp.abstract_deadline }}</div>
-              {% endif %}
-              {% if cfp.editors != "" and cfp.editors != "N/A" %}
-              <div class="mb-2"><span class="cfp-meta-label">Editors:</span> {{ cfp.editors }}</div>
-              {% endif %}
-              {% if cfp.description != "" and cfp.description != "N/A" %}
-              <div class="mt-2">
-                <span class="cfp-meta-label">Description:</span>
-                <p class="mb-0 text-muted" style="white-space: pre-wrap;">{{ cfp.description | strip_html | truncate: 350 }}</p>
+          <a href="{{ cfp.link }}" target="_blank" rel="noopener" class="cfp-title">{{ cfp.title }}</a>
+
+          {% if scope != "" and scope != "N/A" %}
+            <p class="cfp-scope">{{ scope | truncate: 150 }}</p>
+          {% endif %}
+
+          <div class="cfp-row-actions">
+            <a href="{{ cfp.link }}" target="_blank" rel="noopener" class="cfp-cta">
+              <span class="only-en">View call &amp; submit&nbsp;↗</span><span class="only-zh">查看征稿并投稿&nbsp;↗</span>
+            </a>
+            {% if has_more %}
+            <details class="cfp-more">
+              <summary><span class="only-en">More</span><span class="only-zh">更多</span></summary>
+              <div class="cfp-details-box">
+                {% if cfp.abstract_deadline != "" and cfp.abstract_deadline != nil %}
+                <div class="mb-2"><span class="cfp-meta-label"><span class="only-en">Abstract deadline:</span><span class="only-zh">摘要截止：</span></span> {{ cfp.abstract_deadline }}</div>
+                {% endif %}
+                {% if cfp.editors != "" and cfp.editors != "N/A" %}
+                <div class="mb-2"><span class="cfp-meta-label"><span class="only-en">Guest editors:</span><span class="only-zh">特邀编辑：</span></span> {{ cfp.editors }}</div>
+                {% endif %}
+                {% if scope != "" and scope != "N/A" %}
+                <div class="mt-2">
+                  <span class="cfp-meta-label"><span class="only-en">Scope:</span><span class="only-zh">征稿范围：</span></span>
+                  <p class="mb-0 text-muted" style="white-space: pre-wrap;">{{ scope | truncate: 400 }}</p>
+                </div>
+                {% endif %}
               </div>
-              {% endif %}
-              <div class="mt-2"><a href="{{ cfp.link }}" target="_blank" class="btn btn-sm btn-light border">Visit Website &rarr;</a></div>
-            </div>
-          </details>
+            </details>
+            {% endif %}
+          </div>
         </td>
 
         <td>
@@ -335,6 +410,36 @@ document.addEventListener("DOMContentLoaded", function() {
   publisherFilter.addEventListener('change', filterTable);
   showExpiredToggle.addEventListener('change', filterTable);
 
+  // Sortable columns (Deadline / Journal)
+  var cfpSort = { key: 'deadline', dir: 'asc' };
+  function sortCfp(key) {
+    var dir = (cfpSort.key === key && cfpSort.dir === 'asc') ? 'desc' : 'asc';
+    cfpSort = { key: key, dir: dir };
+    document.querySelectorAll('.cfp-sortable').forEach(function(th) { th.classList.remove('sort-asc', 'sort-desc'); });
+    var activeTh = document.querySelector('.cfp-sortable[data-sort="' + key + '"]');
+    if (activeTh) activeTh.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
+    rows.sort(function(a, b) {
+      var va, vb;
+      if (key === 'journal') {
+        va = a.dataset.journal; vb = b.dataset.journal;
+        return dir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+      }
+      va = a.dataset.deadline || '9999-99-99';
+      vb = b.dataset.deadline || '9999-99-99';
+      if (va < vb) return dir === 'asc' ? -1 : 1;
+      if (va > vb) return dir === 'asc' ? 1 : -1;
+      return 0;
+    });
+    var tbody = document.getElementById('cfp-table-body');
+    rows.forEach(function(r) { tbody.appendChild(r); });
+    filterTable();
+  }
+  document.querySelectorAll('.cfp-sortable').forEach(function(th) {
+    th.addEventListener('click', function() { sortCfp(this.dataset.sort); });
+  });
+  var initCfpTh = document.querySelector('.cfp-sortable[data-sort="deadline"]');
+  if (initCfpTh) initCfpTh.classList.add('sort-asc');
+
   // URL param: pre-fill search from Journal Rankings cross-link
   var urlParams = new URLSearchParams(window.location.search);
   var qParam = urlParams.get('q');
@@ -353,4 +458,5 @@ document.addEventListener("DOMContentLoaded", function() {
   <em>免责声明：本页面信息仅供参考，截止日期可能有变动，请访问原链接确认最新信息，一切以官方网站为准。</em>
 </p>
 
+{% include cfp_recommender.html %}
 {% include wechat_qr.html %}

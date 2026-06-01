@@ -573,6 +573,38 @@ class JournalCFPScraper:
     # ==========================================
 
     # --- Nature Portfolio ---
+    def _fetch_nature_deadline(self, url):
+        """抓取单个 Nature collection 页面，提取 Submission deadline。
+        列表页不含截止日期，需进入每个 collection 详情页
+        （页面显示 "Submission status: Open / Submission deadline: <date>"）。
+        防御式：任何失败都返回 ""，保持原有（留空）行为，绝不会让整个爬虫崩溃。
+        Nature 走 curl_cffi（无 Cloudflare），故用 fetch_page_fast。"""
+        try:
+            html = self.fetch_page_fast(url, timeout=20)
+            if not html:
+                return ""
+            soup = BeautifulSoup(html, "lxml")
+            # 1) 结构化元素（若存在）
+            for sel in ['[data-test="submission-deadline"]',
+                        'time[itemprop="submissionDeadline"]',
+                        '[data-test="deadline"]']:
+                el = soup.select_one(sel)
+                if el:
+                    d = self.extract_date(self._extract_text_clean(el))
+                    if d:
+                        return d
+            # 2) 文本兜底："Submission deadline" 后紧跟日期（对 markup 变化稳健）
+            page_text = soup.get_text(" ", strip=True)
+            m = re.search(
+                r'Submission deadline[:\s]*'
+                r'(\d{1,2}\s+[A-Za-z]+\s+\d{4}|[A-Za-z]+\s+\d{1,2},?\s+\d{4}|\d{4}-\d{2}-\d{2})',
+                page_text, re.I)
+            if m:
+                return self.extract_date(m.group(1)) or self.clean_text(m.group(1))
+        except Exception as e:
+            print(f"   ⚠️ Nature deadline 抓取失败 {url}: {e}")
+        return ""
+
     def parse_nature_collections(self, html, base_url):
         """
         解析 Nature 系列期刊 Collections 页面。
@@ -618,11 +650,13 @@ class JournalCFPScraper:
                 desc_div = art.find("div", itemprop="description")
                 desc = self._extract_text_clean(desc_div) if desc_div else "N/A"
 
-                # 列表页无截止日期 — 用空串；不过滤无日期条目，因为 open-status 已是过滤条件
+                # 列表页无截止日期 → 进入 collection 详情页抓取（防御式，失败留空）
+                deadline = self._fetch_nature_deadline(link)
+                time.sleep(0.4)  # 礼貌限速
                 results.append({
                     "title": title,
                     "abstract_deadline": "未找到日期",
-                    "fullpaper_deadline": "未找到日期",
+                    "fullpaper_deadline": deadline if deadline else "未找到日期",
                     "editors": "N/A",
                     "desc": desc,
                     "link": link
@@ -924,11 +958,27 @@ class JournalCFPScraper:
             key = (item.get("title"), item.get("link"))
             merged_map[key] = item
 
+        # Drop mis-scraped entries: when a publisher detail page 404s/redirects,
+        # parsers can capture the error page's heading as the title (e.g.
+        # "404 Error. Page not found.", "What happened?"). These markers are
+        # unambiguous junk and would otherwise leak into the CFP table & recommender.
+        JUNK_TITLE_MARKERS = (
+            "404 error", "page not found", "what happened", "access denied",
+            "403 forbidden", "just a moment", "are you a robot",
+            "attention required", "页面不存在", "页面未找到",
+        )
+
+        def _is_junk(rec):
+            title = (rec.get("title") or "").strip().lower()
+            return any(m in title for m in JUNK_TITLE_MARKERS)
+
         final_list = []
         today = datetime.now().date()
         expire_threshold = today - timedelta(days=10)
 
         for item in merged_map.values():
+            if _is_junk(item):
+                continue
             sort_date_str = item.get("fullpaper_deadline_sort")
             if sort_date_str == '9999-99-99':
                 final_list.append(item)

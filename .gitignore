@@ -17,3 +17,8 @@ vendor
 .idea
 .venv
 web.zip
+sucai/
+
+# Python
+__pycache__/
+*.pyc

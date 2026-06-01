@@ -19,6 +19,17 @@ tags_zh:
   exchange: "交流访学"
   milestone: "重要节点"
 
+# One consistent emoji per category (keeps the timeline calm).
+# Exception: "award" (competitions) keeps each event's own medal emoji.
+icons:
+  honor: "🏵️"
+  talk: "🎤"
+  project: "🔬"
+  service: "🤝"
+  publication: "📜"
+  exchange: "✈️"
+  milestone: "⭐"
+
 events:
   # ==================== 2025 (Future & Recent) ====================
   - date: "2025-11"

@@ -2,13 +2,25 @@
 layout: default
 ---
 
-{%- comment -%} Compute Scholar stats dynamically {%- endcomment -%}
-{% assign total_citations = 0 %}
+{%- comment -%} Stats — all derived dynamically.
+  • Publications: count BibTeX entries (matches the Publications page exactly).
+  • Citations: Google-Scholar profile total (auto-updated 3×/week by the
+    update-citations workflow); falls back to summing per-paper counts.
+  • h-index: from the same Scholar profile metadata; falls back to 7.
+{%- endcomment -%}
+{%- capture _journal_html -%}{% bibliography -q @article %}{%- endcapture -%}
+{%- capture _conf_html -%}{% bibliography -q @inproceedings %}{%- endcapture -%}
+{% assign _j = _journal_html | split: '<li' | size | minus: 1 %}
+{% assign _c = _conf_html | split: '<li' | size | minus: 1 %}
+{% assign pub_count = _j | plus: _c %}
+
+{% assign citation_sum = 0 %}
 {% for paper in site.data.citations.papers %}
-  {% assign total_citations = total_citations | plus: paper[1].citations %}
+  {% assign citation_sum = citation_sum | plus: paper[1].citations %}
 {% endfor %}
-{% assign pub_count = site.data.citations.papers | size %}
-{% assign h_index = page.h_index | default: 7 %}
+{% assign total_citations = site.data.citations.metadata.total_citations | default: citation_sum %}
+{% if total_citations == 0 %}{% assign total_citations = citation_sum %}{% endif %}
+{% assign h_index = site.data.citations.metadata.h_index | default: page.h_index | default: 7 %}
 
 <div class="hw-home-wrap">
 <main class="hw-home" id="top">
@@ -89,13 +101,13 @@ layout: default
       <div class="about-prose glass">
         <div class="only-en">
           <p class="lead">
-            I am <strong>Haoming Wang</strong>, an incoming PhD student at the <strong>School of Education, Tsinghua University</strong>. My research sits at the intersection of artificial intelligence and education — particularly <em>agentic AI</em>, multi-agent systems, and large language models as genuine partners in learning.
+            I am <strong>Haoming Wang</strong>, an incoming PhD student at the <strong>School of Education, Tsinghua University</strong>. My research sits at the intersection of artificial intelligence and education, with a focus on <em>agentic AI</em>, multi-agent systems, and large language models as genuine partners in learning.
           </p>
           <p>
-            I came to this field from competitive programming. Years of contest training earned me national awards across ACM-ICPC and CCPC regionals, alongside honors in algorithm challenges. That habit — build, test, refine, repeat — is still how I approach research today.
+            I came to this field from competitive programming. Years of contest training earned me national awards across ACM-ICPC and CCPC regionals, alongside honors in algorithm challenges. That habit of build, test, refine, repeat is still how I approach research today.
           </p>
           <p>
-            My current work centers on <strong>AI-agent empowerment</strong> in education: intelligent assistants that adapt to learner needs while holding firmly to pedagogical and ethical standards. I care less about whether AI <em>can</em> enter a classroom than about how and when it <em>should</em> — binding technology to educational theory tightly enough that the impact is real, and lasting.
+            My current work centers on <strong>AI-agent empowerment</strong> in education: intelligent assistants that adapt to learner needs while holding firmly to pedagogical and ethical standards. I care less about whether AI <em>can</em> enter a classroom than about how and when it <em>should</em>, binding technology to educational theory tightly enough that the impact is real and lasting.
           </p>
         </div>
         <div class="only-zh">
@@ -115,7 +127,7 @@ layout: default
         <div class="side-card glass">
           <div class="side-label"><span class="only-en">Currently</span><span class="only-zh">正在进行</span></div>
           <div class="side-list only-en">
-            <div class="side-row"><span class="bullet"></span>Building <em>AI-Agent School</em> — an educational simulation platform <span class="side-note">(presented at EMNLP 2025)</span></div>
+            <div class="side-row"><span class="bullet"></span>Building <em>AI-Agent School</em>, an educational simulation platform <span class="side-note">(presented at EMNLP 2025)</span></div>
             <div class="side-row"><span class="bullet"></span>Developing <em>OpenClaw</em>, an open agent toolkit for educators</div>
             <div class="side-row"><span class="bullet"></span>Maintaining the <em><a href="{{ '/cfp/' | relative_url }}">CFP</a></em> &amp; <em><a href="{{ '/jrank/' | relative_url }}">Journal Rankings</a></em> trackers</div>
           </div>
@@ -128,12 +140,26 @@ layout: default
         <div class="side-card glass">
           <div class="side-label"><span class="only-en">Academic Service</span><span class="only-zh">学术服务</span></div>
           <div class="side-list only-en">
-            <div class="side-row"><span class="bullet"></span><strong>Reviewer</strong> — SSCI Q1 journals in educational technology <span class="side-note">(EAIT, HSSC)</span></div>
-            <div class="side-row"><span class="bullet"></span><strong>Program Committee</strong> — AIED, ISLS</div>
+            <div class="side-row"><span class="bullet"></span><strong>Reviewer</strong> · 29 verified peer reviews <span class="side-note">(Web of Science)</span></div>
           </div>
           <div class="side-list only-zh">
-            <div class="side-row"><span class="bullet"></span><strong>审稿人</strong> —— 教育技术领域 SSCI Q1 期刊 <span class="side-note">（EAIT、HSSC）</span></div>
-            <div class="side-row"><span class="bullet"></span><strong>程序委员会</strong> —— AIED、ISLS</div>
+            <div class="side-row"><span class="bullet"></span><strong>审稿人</strong> · 29 篇已认证同行评审 <span class="side-note">（Web of Science）</span></div>
+          </div>
+          <div class="review-journals">
+            <span class="rj">Humanities &amp; Social Sciences Communications</span>
+            <span class="rj">Int'l Journal of AI in Education</span>
+            <span class="rj">Education and Information Technologies</span>
+            <span class="rj">npj Science of Learning</span>
+            <span class="rj">Scientific Reports</span>
+            <span class="rj">Cognitive Neurodynamics</span>
+            <span class="rj">BMC Psychology</span>
+            <span class="rj">Acta Automatica Sinica</span>
+          </div>
+          <div class="side-list only-en" style="margin-top:14px;">
+            <div class="side-row"><span class="bullet"></span><strong>Program Committee</strong> for AIED and ISLS</div>
+          </div>
+          <div class="side-list only-zh" style="margin-top:14px;">
+            <div class="side-row"><span class="bullet"></span><strong>程序委员会</strong>：AIED、ISLS</div>
           </div>
         </div>
         <div class="side-card glass">
@@ -141,6 +167,7 @@ layout: default
           <div class="chip-row">
             <span class="chip"><span class="only-en">ACM-ICPC Asia Regional</span><span class="only-zh">ACM-ICPC 亚洲区域赛</span></span>
             <span class="chip"><span class="only-en">National Scholarship</span><span class="only-zh">国家奖学金</span></span>
+            <span class="chip"><span class="only-en">Distinguished Graduate</span><span class="only-zh">优秀毕业生</span></span>
             <span class="chip"><span class="only-en">ESI Highly Cited &amp; Hot Paper</span><span class="only-zh">ESI 高被引 & 热点论文</span></span>
           </div>
         </div>
@@ -162,27 +189,27 @@ layout: default
     <div class="research-grid">
       <article class="r-card glass">
         <div class="r-index">i.</div>
-        <h3><span class="only-en">Large Language Models in Education</span><span class="only-zh">教育中的大语言模型</span></h3>
-        <p class="only-en">How do students <em>actually</em> learn when ChatGPT is in the loop? AI literacy, cognitive scaffolding, and the new pedagogical contract.</p>
-        <p class="only-zh">当 ChatGPT 介入时，学生<em>究竟</em>是如何学习的？AI 素养、认知支架，以及全新的教学契约。</p>
+        <h3><span class="only-en">Agentic AI in Education</span><span class="only-zh">教育中的智能体（Agentic AI）</span></h3>
+        <p class="only-en">Autonomous, goal-directed agents that plan, act, and adapt as genuine partners in teaching and learning, grounded in educational theory.</p>
+        <p class="only-zh">能够自主规划、行动与调整的目标导向智能体，作为真正的教学伙伴，并植根于教育理论。</p>
       </article>
       <article class="r-card glass">
         <div class="r-index">ii.</div>
         <h3><span class="only-en">AI-Assisted &amp; Personalized Learning</span><span class="only-zh">AI 辅助与个性化学习</span></h3>
-        <p class="only-en">Adaptive tutors that respect learner proficiency, style, and emotional state — without flattening the experience.</p>
-        <p class="only-zh">尊重学习者水平、风格与情绪状态的自适应导师——而不抹平学习体验。</p>
+        <p class="only-en">Adaptive tutors that respect learner proficiency, style, and emotional state, all without flattening the experience.</p>
+        <p class="only-zh">尊重学习者水平、风格与情绪状态的自适应导师，而不抹平学习体验。</p>
       </article>
       <article class="r-card glass">
         <div class="r-index">iii.</div>
-        <h3><span class="only-en">Multi-Agent Collaborative Learning</span><span class="only-zh">多智能体协作学习</span></h3>
-        <p class="only-en">Agent teams as study companions. CSCL reimagined for the post-LLM classroom.</p>
-        <p class="only-zh">以智能体团队作为学习伙伴。为后大模型时代的课堂重新构想 CSCL。</p>
+        <h3><span class="only-en">Multi-Agent Systems for Learning</span><span class="only-zh">多智能体系统</span></h3>
+        <p class="only-en">Building agent-based learning systems such as <em>AI-Agent School</em>, where teams of agents collaborate to support and scaffold learners.</p>
+        <p class="only-zh">构建基于多智能体的学习系统（如 <em>AI-Agent School</em>），让智能体团队协作，为学习者提供支持与认知支架。</p>
       </article>
       <article class="r-card glass">
         <div class="r-index">iv.</div>
-        <h3><span class="only-en">Responsible AI in Education</span><span class="only-zh">教育中的负责任 AI</span></h3>
-        <p class="only-en">Ethical, pedagogically-grounded integration. The questions of <em>should</em>, not just <em>can</em>.</p>
-        <p class="only-zh">合乎伦理、植根教学法的融合。回答"<em>应当</em>"，而不止于"<em>能否</em>"。</p>
+        <h3><span class="only-en">Educational Data Mining &amp; XAI</span><span class="only-zh">教育数据挖掘</span></h3>
+        <p class="only-en">Mining large-scale assessment data such as <em>PISA</em>, with explainable AI to surface what really drives learning outcomes.</p>
+        <p class="only-zh">对 <em>PISA</em> 等大规模测评数据进行挖掘，并借助可解释 AI（XAI）揭示影响学习成效的关键因素。</p>
       </article>
     </div>
   </section>
@@ -224,6 +251,7 @@ layout: default
           <div class="pub-meta">
             <span class="venue">EAIT</span>
             <span class="year">Mar 2025</span>
+            <span class="award"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3l5 3l-1.5-8"/></svg> <span class="only-en">ESI Highly Cited</span><span class="only-zh">ESI 高被引</span></span>
           </div>
           <h3 class="pub-title">Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses</h3>
           <div class="pub-authors"><em>Haoming Wang</em>, Chengliang Wang, Zhan Chen, Fa Liu, Chunjia Bao, Xianlong Xu</div>
@@ -313,23 +341,51 @@ layout: default
             <div class="ci-value">{{ site.data.socials.orcid_id }}</div>
           </div>
         </a>
-        <a class="contact-item" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><path d="M22 9L12 5L2 9l10 4l10-4v6M6 10.6V16a6 3 0 0 0 12 0v-5.4"/></svg>
+        <a class="contact-item" href="https://www.researchgate.net/profile/{{ site.data.socials.research_gate_profile }}" target="_blank" rel="noopener">
+          <i class="ai ai-researchgate" style="font-size:25px; color:var(--tsinghua); flex-shrink:0; width:24px; text-align:center;"></i>
           <div>
-            <div class="ci-label"><span class="only-en">Google Scholar</span><span class="only-zh">谷歌学术</span></div>
-            <div class="ci-value">{{ site.data.socials.scholar_userid }}</div>
+            <div class="ci-label">ResearchGate</div>
+            <div class="ci-value">{{ site.data.socials.research_gate_profile }}</div>
           </div>
         </a>
-        <div class="contact-item" style="cursor: default;">
+        <div class="contact-item" id="wechat-qr-open" style="cursor: pointer;" role="button" tabindex="0" aria-label="Show WeChat QR code">
           <svg class="icon" viewBox="0 0 24 24" style="font-size:24px"><path d="M9.5 4C5.4 4 2 6.9 2 10.5c0 2 1.1 3.8 2.8 5L4 18l2.6-1.3c.9.3 1.9.4 2.9.4h.6a5.7 5.7 0 0 1-.3-1.8c0-3.4 3.3-6 7.2-6h.6C17.1 6 13.7 4 9.5 4z"/><path d="M22 15.5c0-2.8-2.7-5-6-5s-6 2.2-6 5 2.7 5 6 5c.7 0 1.4-.1 2-.3l1.8.9-.5-1.6c1.3-.9 2.2-2.3 2.2-3.9z"/></svg>
           <div>
             <div class="ci-label"><span class="only-en">WeChat</span><span class="only-zh">微信</span></div>
-            <div class="ci-value">whmtech</div>
+            <div class="ci-value"><span class="only-en">whmtech · tap for QR</span><span class="only-zh">whmtech · 点击看二维码</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WeChat QR modal (opened from the contact card) -->
+  <div class="hw-qr-overlay" id="hwQrOverlay" aria-hidden="true">
+    <div class="hw-qr-box glass">
+      <button class="hw-qr-close" id="hwQrClose" aria-label="Close">&times;</button>
+      <img src="{{ '/assets/img/wechat_qr.png' | relative_url }}" alt="WeChat QR code" />
+      <div class="hw-qr-id">WeChat · whmtech</div>
+      <div class="hw-qr-note"><span class="only-en">Scan to add me on WeChat</span><span class="only-zh">扫一扫，加我微信</span></div>
+    </div>
+  </div>
+
 </main>
 </div>
+
+<script>
+  (function () {
+    var opener = document.getElementById("wechat-qr-open");
+    var overlay = document.getElementById("hwQrOverlay");
+    var closer = document.getElementById("hwQrClose");
+    if (!opener || !overlay) return;
+    function show() { overlay.classList.add("active"); }
+    function hide() { overlay.classList.remove("active"); }
+    opener.addEventListener("click", show);
+    opener.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(); }
+    });
+    if (closer) closer.addEventListener("click", hide);
+    overlay.addEventListener("click", function (e) { if (e.target === overlay) hide(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });
+  })();
+</script>

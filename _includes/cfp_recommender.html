@@ -1,0 +1,473 @@
+<!-- ============================================================
+     Venue Recommender — 投稿目标推荐浮窗
+     Pure client-side keyword/tag matcher. NO LLM, NO API key.
+     Matches a pasted title+abstract against both the CFP list
+     (_data/cfps.yml) and the journal list (_data/jrank.yml),
+     entirely in the browser. Works worldwide incl. mainland China.
+     Shared by /cfp/ and /jrank/ (placed above the WeChat float).
+     ============================================================ -->
+
+<!-- Data payload (built at Jekyll build time). Trailing `null` keeps
+     comma handling trivial; it is filtered out in JS. -->
+<script>
+  window.HW_REC_DATA = [
+  {%- for cfp in site.data.cfps -%}
+  {%- assign _rt = cfp.title | default: "" | downcase -%}
+  {%- unless _rt contains "404 error" or _rt contains "page not found" or _rt contains "what happened" or _rt contains "access denied" or _rt contains "just a moment" -%}
+  {"t":"cfp","ti":{{ cfp.title | default: "" | jsonify }},"j":{{ cfp.journal | default: "" | jsonify }},"p":{{ cfp.publisher | default: "" | jsonify }},"tg":{{ cfp.tag | jsonify }},"dl":{{ cfp.fullpaper_deadline | default: "" | jsonify }},"u":{{ cfp.link | default: "" | jsonify }},"d":{{ cfp.description | default: "" | strip_html | truncate: 400 | jsonify }}},
+  {%- endunless -%}
+  {%- endfor -%}
+  {%- for j in site.data.jrank -%}
+  {"t":"journal","j":{{ j.journal | default: "" | jsonify }},"p":{{ j.publisher | default: "" | jsonify }},"tg":{{ j.tag | jsonify }},"q":{{ j.purple_quartile | default: "" | jsonify }},"hm":{{ j.hm_score | default: "" | jsonify }},"ar":{{ j.acceptance_rate | default: "" | jsonify }}},
+  {%- endfor -%}
+  null];
+</script>
+
+<style>
+  /* ---- Float button (sits above the WeChat float at bottom:100px) ---- */
+  .hw-rec-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 175px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7d1a8c, #660874);
+    box-shadow: 0 4px 15px rgba(102, 8, 116, 0.4);
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .hw-rec-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 22px rgba(102, 8, 116, 0.55);
+  }
+  .hw-rec-btn svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* ---- Hover tooltip (explains what the float does) ---- */
+  .hw-rec-btn::after {
+    content: "";
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    white-space: nowrap;
+    background: rgba(46, 31, 51, 0.95);
+    color: #fff;
+    font-size: 12.5px;
+    font-family: var(--ui, sans-serif);
+    padding: 7px 12px;
+    border-radius: 9px;
+    box-shadow: 0 6px 18px rgba(46, 31, 51, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .22s, transform .22s;
+  }
+  .hw-rec-btn:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+  html[data-lang="en"] .hw-rec-btn::after { content: "✨ Suggest a journal or CFP for your paper"; }
+  html[data-lang="zh"] .hw-rec-btn::after { content: "✨ 为你的论文推荐期刊或征稿"; }
+
+  /* ---- Panel ---- */
+  .hw-rec-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 175px;
+    width: 416px;
+    max-width: calc(100vw - 32px);
+    max-height: min(640px, calc(100vh - 260px)); /* keep the panel top clear of the floating nav */
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(102, 8, 116, 0.14);
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(58, 4, 66, 0.28);
+    z-index: 1002;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: bottom right;
+  }
+  .hw-rec-panel.open { display: flex; animation: hwRecPop .26s cubic-bezier(.2,.8,.2,1); }
+  @keyframes hwRecPop {
+    from { transform: scale(.85) translateY(12px); opacity: 0; }
+    to   { transform: scale(1) translateY(0); opacity: 1; }
+  }
+
+  .hw-rec-head {
+    background: linear-gradient(135deg, #7d1a8c, #5a0866);
+    color: #fff;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+  .hw-rec-head .hw-rec-title { font-weight: 600; font-size: 0.98rem; line-height: 1.2; }
+  .hw-rec-head .hw-rec-sub { font-size: 0.7rem; opacity: 0.82; margin-top: 2px; }
+  /* the global content stylesheet forces .only-en/.only-zh spans to dark ink;
+     re-assert white inside the purple header + button so text stays legible */
+  .hw-rec-head .hw-rec-title,
+  .hw-rec-head .hw-rec-sub,
+  .hw-rec-head .only-en,
+  .hw-rec-head .only-zh,
+  .hw-rec-go,
+  .hw-rec-go .only-en,
+  .hw-rec-go .only-zh { color: #fff !important; }
+  .hw-rec-spark { font-size: 1.2rem; line-height: 1; }
+  .hw-rec-close {
+    margin-left: auto;
+    background: rgba(255,255,255,0.18);
+    border: none;
+    color: #fff;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  .hw-rec-close:hover { background: rgba(255,255,255,0.32); }
+
+  .hw-rec-body {
+    padding: 14px 16px 16px;
+    overflow-y: auto;
+    flex: 1 1 auto;
+  }
+  .hw-rec-intro {
+    font-size: 0.8rem;
+    color: #5a4a5f;
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+  .hw-rec-input {
+    width: 100%;
+    min-height: 92px;
+    resize: vertical;
+    border: 1px solid rgba(102, 8, 116, 0.22);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    color: #2e1f33;
+    background: #fff;
+    line-height: 1.5;
+  }
+  .hw-rec-input:focus {
+    outline: none;
+    border-color: #7d1a8c;
+    box-shadow: 0 0 0 3px rgba(102, 8, 116, 0.12);
+  }
+  .hw-rec-actions { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+  .hw-rec-go {
+    background: linear-gradient(135deg, #7d1a8c, #660874);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter .2s, transform .15s;
+  }
+  .hw-rec-go:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .hw-rec-go:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .hw-rec-clear {
+    background: transparent;
+    border: none;
+    color: #8a6a90;
+    font-size: 0.78rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* ---- thinking dots ---- */
+  .hw-rec-thinking { display: flex; align-items: center; gap: 8px; padding: 16px 4px; color: #7d1a8c; font-size: 0.82rem; }
+  .hw-rec-dots { display: inline-flex; gap: 4px; }
+  .hw-rec-dots span {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #7d1a8c; opacity: 0.4;
+    animation: hwRecDot 1s infinite ease-in-out;
+  }
+  .hw-rec-dots span:nth-child(2) { animation-delay: .15s; }
+  .hw-rec-dots span:nth-child(3) { animation-delay: .3s; }
+  @keyframes hwRecDot { 0%,80%,100% { opacity: .35; transform: translateY(0);} 40% { opacity: 1; transform: translateY(-3px);} }
+
+  /* ---- result cards ---- */
+  .hw-rec-results { margin-top: 14px; }
+  .hw-rec-resnote { font-size: 0.74rem; color: #8a6a90; margin-bottom: 8px; }
+  .hw-rec-card {
+    border: 1px solid rgba(102, 8, 116, 0.14);
+    border-left: 3px solid #7d1a8c;
+    border-radius: 12px;
+    padding: 11px 12px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.7);
+    animation: hwRecFade .35s ease both;
+  }
+  @keyframes hwRecFade { from { opacity:0; transform: translateY(6px);} to {opacity:1; transform:none;} }
+  .hw-rec-card .hw-rec-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+  }
+  .hw-rec-badge.cfp { background: rgba(217, 119, 6, 0.12); color: #b45309; }
+  .hw-rec-badge.journal { background: rgba(102, 8, 116, 0.1); color: #660874; }
+  .hw-rec-card .hw-rec-cardtitle { font-size: 0.86rem; font-weight: 600; color: #2e1f33; line-height: 1.35; }
+  .hw-rec-card .hw-rec-meta { font-size: 0.72rem; color: #6b5670; margin-top: 4px; line-height: 1.45; }
+  .hw-rec-chips { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .hw-rec-chip {
+    font-size: 0.64rem; color: #7d1a8c;
+    background: rgba(102, 8, 116, 0.06);
+    border: 1px solid rgba(102, 8, 116, 0.16);
+    border-radius: 20px; padding: 1px 8px;
+  }
+  .hw-rec-chip.metric { background: rgba(217,119,6,0.08); color:#b45309; border-color: rgba(217,119,6,0.2); }
+  .hw-rec-cta {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: #660874;
+    background: rgba(102, 8, 116, 0.07);
+    border: 1px solid rgba(102, 8, 116, 0.18);
+    border-radius: 8px;
+    padding: 4px 10px;
+    text-decoration: none;
+  }
+  .hw-rec-cta:hover { background: rgba(102, 8, 116, 0.13); color: #660874; }
+  .hw-rec-empty { font-size: 0.82rem; color: #8a6a90; padding: 8px 2px; line-height: 1.55; }
+  .hw-rec-disclaim { font-size: 0.66rem; color: #a98fad; margin-top: 6px; line-height: 1.4; }
+
+  @media (max-width: 600px) {
+    .hw-rec-panel { right: 12px; left: 12px; width: auto; bottom: 90px; max-height: 80vh; }
+  }
+</style>
+
+<!-- Float button -->
+<div class="hw-rec-btn" id="hwRecBtn" title="Find your submission venue / 推荐投稿目标" aria-label="Open venue recommender">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2l1.9 4.6L18.5 8l-3.6 3 1.1 4.8L12 13.6 8 15.8 9.1 11 5.5 8l4.6-1.4L12 2zm6.5 12l.9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1L15.5 17l2.1-.9.9-2.1zM5 14l.7 1.6L7.3 16l-1.6.7L5 18.3 4.3 16.7 2.7 16l1.6-.4L5 14z"/>
+  </svg>
+</div>
+
+<!-- Panel -->
+<div class="hw-rec-panel" id="hwRecPanel" role="dialog" aria-labelledby="hwRecHeadTitle">
+  <div class="hw-rec-head">
+    <span class="hw-rec-spark">✨</span>
+    <div>
+      <div class="hw-rec-title" id="hwRecHeadTitle">
+        <span class="only-en">Find your venue</span><span class="only-zh">找到合适的投稿目标</span>
+      </div>
+      <div class="hw-rec-sub">
+        <span class="only-en">Paste a title &amp; abstract · runs in your browser</span><span class="only-zh">粘贴标题与摘要 · 全程在你的浏览器本地运行</span>
+      </div>
+    </div>
+    <button class="hw-rec-close" id="hwRecClose" aria-label="Close">&times;</button>
+  </div>
+  <div class="hw-rec-body">
+    <p class="hw-rec-intro">
+      <span class="only-en">Describe your paper and I'll suggest up to 5 matching calls for papers or journals from this list.</span><span class="only-zh">描述你的论文，我会从本站列表中为你推荐最多 5 个相关的征稿或期刊。</span>
+    </p>
+    <textarea class="hw-rec-input" id="hwRecInput" rows="4"></textarea>
+    <div class="hw-rec-actions">
+      <button class="hw-rec-go" id="hwRecGo">
+        <span class="only-en">Recommend</span><span class="only-zh">推荐</span>
+      </button>
+      <button class="hw-rec-clear" id="hwRecClear">
+        <span class="only-en">Clear</span><span class="only-zh">清空</span>
+      </button>
+    </div>
+    <div class="hw-rec-results" id="hwRecResults" aria-live="polite"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var data = (window.HW_REC_DATA || []).filter(Boolean);
+
+  var STOP = (" a an the and or of to in on for with by is are was were be been being this that these those we our us it its as at from into using used use based study studies paper papers research researches result results approach approaches method methods methodology model models novel propose proposed proposes present presents presented show shows showed can may might also via between among their they which while such more most than but not no all both each other others new two three via per across toward towards within without about over under given due first second high higher low lower large small data analysis analyses framework system systems "
+    .trim().split(/\s+/).reduce(function (m, w) { m[w] = 1; return m; }, {}));
+
+  function tokenize(text) {
+    var raw = (text || "").toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/);
+    var seen = {}, out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var w = raw[i];
+      if (w.length < 3 || STOP[w]) continue;
+      if (!seen[w]) { seen[w] = 1; out.push(w); }
+    }
+    return out;
+  }
+
+  function scoreItem(item, tokens, qtext) {
+    var tags = (item.tg || []).map(function (s) { return (s || "").toLowerCase(); });
+    var title = (item.ti || "").toLowerCase();
+    var jname = (item.j || "").toLowerCase();
+    var blob = title + " " + jname + " " + tags.join(" ") + " " + (item.d || "").toLowerCase();
+    var score = 0, hitTags = {};
+
+    // Strong signal: a full tag phrase appears verbatim in the user's text.
+    tags.forEach(function (tg) {
+      if (tg.length > 3 && qtext.indexOf(tg) >= 0) { score += 6; hitTags[tg] = 1; }
+    });
+
+    tokens.forEach(function (tok) {
+      var inTag = tags.some(function (tg) { return tg.indexOf(tok) >= 0; });
+      if (inTag) { score += 4; }
+      else if (title.indexOf(tok) >= 0) { score += 2; }
+      else if (blob.indexOf(tok) >= 0) { score += 1; }
+    });
+    return score;
+  }
+
+  function esc(s) {
+    return (s || "").replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  var I18N_PLACEHOLDER = {
+    en: "e.g. We propose a generative-AI tutoring system that improves self-regulated learning in K-12 classrooms...",
+    zh: "例如：我们提出一种生成式 AI 辅导系统，用于提升 K-12 课堂中的自主学习能力……"
+  };
+  function curLang() { return document.documentElement.getAttribute("data-lang") === "zh" ? "zh" : "en"; }
+
+  function renderCard(item) {
+    var lang = curLang();
+    if (item.t === "cfp") {
+      var dl = item.dl ? (lang === "zh" ? "截稿：" : "Deadline: ") + esc(item.dl) : "";
+      var jl = esc(item.j) + (item.p ? " · " + esc(item.p) : "");
+      var chips = (item.tg || []).slice(0, 3).map(function (t) { return '<span class="hw-rec-chip">' + esc(t) + "</span>"; }).join("");
+      var href = item.u || ("/cfp/?q=" + encodeURIComponent(item.j || ""));
+      return '<div class="hw-rec-card">' +
+        '<span class="hw-rec-badge cfp">CFP</span>' +
+        '<div class="hw-rec-cardtitle">' + esc(item.ti || item.j) + "</div>" +
+        '<div class="hw-rec-meta">' + jl + (dl ? "<br>" + dl : "") + "</div>" +
+        (chips ? '<div class="hw-rec-chips">' + chips + "</div>" : "") +
+        '<a class="hw-rec-cta" href="' + esc(href) + '" target="_blank" rel="noopener">' +
+        (lang === "zh" ? "查看征稿 ↗" : "View call ↗") + "</a></div>";
+    } else {
+      var metricChips = "";
+      if (item.q) metricChips += '<span class="hw-rec-chip metric">' + esc(item.q) + "</span>";
+      if (item.hm !== "" && item.hm != null) metricChips += '<span class="hw-rec-chip metric">HM ' + esc(String(item.hm)) + "</span>";
+      if (item.ar) metricChips += '<span class="hw-rec-chip metric">' + (lang === "zh" ? "录用 " : "Accept ") + esc(item.ar) + "</span>";
+      var tagChips = (item.tg || []).slice(0, 2).map(function (t) { return '<span class="hw-rec-chip">' + esc(t) + "</span>"; }).join("");
+      var jhref = "/jrank/?q=" + encodeURIComponent(item.j || "");
+      return '<div class="hw-rec-card">' +
+        '<span class="hw-rec-badge journal">' + (lang === "zh" ? "期刊" : "Journal") + "</span>" +
+        '<div class="hw-rec-cardtitle">' + esc(item.j) + "</div>" +
+        (item.p ? '<div class="hw-rec-meta">' + esc(item.p) + "</div>" : "") +
+        '<div class="hw-rec-chips">' + metricChips + tagChips + "</div>" +
+        '<a class="hw-rec-cta" href="' + jhref + '">' +
+        (lang === "zh" ? "查看指标 ↗" : "View metrics ↗") + "</a></div>";
+    }
+  }
+
+  function recommend() {
+    var lang = curLang();
+    var input = document.getElementById("hwRecInput");
+    var box = document.getElementById("hwRecResults");
+    var qtext = (input.value || "").toLowerCase();
+    var tokens = tokenize(input.value);
+
+    if (tokens.length === 0) {
+      box.innerHTML = '<div class="hw-rec-empty">' +
+        (lang === "zh" ? "请先输入论文标题或摘要中的一些关键内容。" : "Please enter a title or some of your abstract first.") + "</div>";
+      return;
+    }
+
+    // thinking animation
+    box.innerHTML = '<div class="hw-rec-thinking"><span class="hw-rec-dots"><span></span><span></span><span></span></span>' +
+      (lang === "zh" ? "正在匹配相关投稿目标…" : "Matching relevant venues…") + "</div>";
+
+    setTimeout(function () {
+      var scored = [];
+      for (var i = 0; i < data.length; i++) {
+        var s = scoreItem(data[i], tokens, qtext);
+        if (s > 0) scored.push({ item: data[i], score: s });
+      }
+      scored.sort(function (a, b) { return b.score - a.score; });
+
+      if (scored.length === 0) {
+        box.innerHTML = '<div class="hw-rec-empty">' +
+          (lang === "zh"
+            ? "没有找到相关的征稿或期刊。可以试试用更具体的研究主题关键词（如「教育技术」「高等教育」）再描述一次。"
+            : "No matching call or journal found. Try describing your topic with more specific keywords (e.g. “educational technology”, “higher education”).") +
+          "</div>";
+        return;
+      }
+
+      // Up to 5 cards; guarantee at least one CFP and one journal when both exist.
+      var cfps = scored.filter(function (x) { return x.item.t === "cfp"; });
+      var jrs = scored.filter(function (x) { return x.item.t === "journal"; });
+      var top = scored.slice(0, 5);
+      function ensureType(t, pool) {
+        if (pool.length && !top.some(function (x) { return x.item.t === t; })) {
+          for (var k = top.length - 1; k >= 0; k--) {
+            if (top[k].item.t !== t) { top.splice(k, 1); break; }
+          }
+          top.push(pool[0]);
+        }
+      }
+      ensureType("journal", jrs);
+      ensureType("cfp", cfps);
+      top.sort(function (a, b) { return b.score - a.score; });
+
+      var note = lang === "zh"
+        ? "为你找到 " + top.length + " 个相关结果（按相关度排序）："
+        : "Found " + top.length + " relevant match" + (top.length > 1 ? "es" : "") + " (by relevance):";
+      var html = '<div class="hw-rec-resnote">' + note + "</div>";
+      html += top.map(function (r) { return renderCard(r.item); }).join("");
+      html += '<div class="hw-rec-disclaim">' +
+        (lang === "zh"
+          ? "基于本站标签与简介的本地关键词匹配，仅供参考。请以期刊官方页面为准。"
+          : "Local keyword match over this site’s tags & descriptions, for reference only. Always verify on the official journal page.") +
+        "</div>";
+      box.innerHTML = html;
+    }, 480);
+  }
+
+  // wiring
+  var btn = document.getElementById("hwRecBtn");
+  var panel = document.getElementById("hwRecPanel");
+  var input = document.getElementById("hwRecInput");
+
+  function openPanel() {
+    panel.classList.add("open");
+    input.placeholder = I18N_PLACEHOLDER[curLang()];
+    setTimeout(function () { input.focus(); }, 60);
+  }
+  function closePanel() { panel.classList.remove("open"); }
+
+  btn.addEventListener("click", function () {
+    panel.classList.contains("open") ? closePanel() : openPanel();
+  });
+  document.getElementById("hwRecClose").addEventListener("click", closePanel);
+  document.getElementById("hwRecGo").addEventListener("click", recommend);
+  document.getElementById("hwRecClear").addEventListener("click", function () {
+    input.value = "";
+    document.getElementById("hwRecResults").innerHTML = "";
+    input.focus();
+  });
+  // Ctrl/Cmd+Enter to submit
+  input.addEventListener("keydown", function (e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); recommend(); }
+  });
+  // Esc closes
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && panel.classList.contains("open")) closePanel();
+  });
+  // keep placeholder in sync if language is toggled while open
+  new MutationObserver(function () {
+    if (panel.classList.contains("open")) input.placeholder = I18N_PLACEHOLDER[curLang()];
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-lang"] });
+})();
+</script>

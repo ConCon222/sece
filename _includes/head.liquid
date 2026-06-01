@@ -2,8 +2,9 @@
 <script>
   (function () {
     try {
-      var l = localStorage.getItem("site-lang") || "en";
-      document.documentElement.setAttribute("data-lang", l === "zh" ? "zh" : "en");
+      var l = localStorage.getItem("site-lang") === "zh" ? "zh" : "en";
+      document.documentElement.setAttribute("data-lang", l);
+      document.documentElement.lang = l === "zh" ? "zh-CN" : "en"; // keep <html lang> in sync for a11y/SEO
     } catch (e) {
       document.documentElement.setAttribute("data-lang", "en");
     }
@@ -39,9 +40,14 @@
 {% endif %}
 
 <!-- Fonts & Icons -->
-<!-- Text fonts (Cinzel / IM Fell DW Pica / EB Garamond / Inter) are self-hosted
+<!-- Latin text fonts (Cinzel / IM Fell DW Pica / EB Garamond / Inter) are self-hosted
      via @font-face in _sass/_fonts.scss → assets/fonts/text/, served from the
      site origin so they load fast worldwide incl. mainland China (no Google Fonts). -->
+<!-- Chinese body uses the system Song/宋体 (Songti SC / SimSun). Only Long Cang
+     (龙藏 · 行草) is loaded via jsDelivr @fontsource for decorative titles/the name
+     (unicode-range → only used glyph chunks download; font-display: swap). -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/long-cang@5/index.css" crossorigin>
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
 <link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url | bust_file_cache }}">
 
@@ -72,13 +78,24 @@
   >
 {% endif %}
 
-{% if site.icon.size <= 4 %}
-  <link
-    rel="shortcut icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>"
-  >
-{% elsif site.icon != blank %}
-  <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
+{% if site.icon != blank %}
+  {% if site.icon.size <= 4 %}
+    <link
+      rel="shortcut icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ site.icon }}</text></svg>"
+    >
+  {% else %}
+    <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
+  {% endif %}
+{% else %}
+  <!-- Favicon set (assets/img/favicons/) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicons/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicons/favicon-16x16.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/img/favicons/favicon-96x96.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/assets/img/favicons/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicons/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/img/favicons/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#660874">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">

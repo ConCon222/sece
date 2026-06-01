@@ -112,6 +112,15 @@ def get_scholar_citations() -> None:
         print(f"❌ No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
         sys.exit(1)
 
+    # Profile-level metrics (drive the homepage stat tiles)
+    citation_data["metadata"]["h_index"] = author_data.get("hindex", 0)
+    citation_data["metadata"]["total_citations"] = author_data.get("citedby", 0)
+    citation_data["metadata"]["i10_index"] = author_data.get("i10index", 0)
+    print(
+        f"  📈 Profile metrics — citations: {citation_data['metadata']['total_citations']}, "
+        f"h-index: {citation_data['metadata']['h_index']}, i10: {citation_data['metadata']['i10_index']}"
+    )
+
     for pub in author_data["publications"]:
         try:
             pub_id = pub.get("pub_id") or pub.get("author_pub_id")
@@ -137,8 +146,13 @@ def get_scholar_citations() -> None:
                 f"Error processing publication '{pub.get('bib', {}).get('title', 'Unknown')}': {e}. This publication will be skipped."
             )
 
-    # Compare new data with existing data
-    if existing_data and existing_data.get("papers") == citation_data["papers"]:
+    # Compare new data with existing data (papers + profile metrics)
+    if (
+        existing_data
+        and existing_data.get("papers") == citation_data["papers"]
+        and existing_data.get("metadata", {}).get("h_index") == citation_data["metadata"]["h_index"]
+        and existing_data.get("metadata", {}).get("total_citations") == citation_data["metadata"]["total_citations"]
+    ):
         print("\nℹ️ No changes in citation data. Skipping file update.")
         return
 
