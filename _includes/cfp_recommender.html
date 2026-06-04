@@ -1,9 +1,12 @@
 <!-- ============================================================
      Venue Recommender — 投稿目标推荐浮窗
-     Pure client-side keyword/tag matcher. NO LLM, NO API key.
+     Default: pure client-side keyword/tag matcher (NO key, runs in-browser).
+     Optional "AI mode": the visitor pastes their OWN API key (kept ONLY in
+     memory for the session, never stored, never sent to this site) to let an
+     LLM re-rank the local top matches. The key goes straight from the
+     browser to the chosen provider. We never embed any key in this file.
      Matches a pasted title+abstract against both the CFP list
-     (_data/cfps.yml) and the journal list (_data/jrank.yml),
-     entirely in the browser. Works worldwide incl. mainland China.
+     (_data/cfps.yml) and the journal list (_data/jrank.yml).
      Shared by /cfp/ and /jrank/ (placed above the WeChat float).
      ============================================================ -->
 
@@ -245,6 +248,60 @@
   .hw-rec-cta:hover { background: rgba(102, 8, 116, 0.13); color: #660874; }
   .hw-rec-empty { font-size: 0.82rem; color: #8a6a90; padding: 8px 2px; line-height: 1.55; }
   .hw-rec-disclaim { font-size: 0.66rem; color: #a98fad; margin-top: 6px; line-height: 1.4; }
+  .hw-rec-reason { font-size: 0.74rem; color: #4d3f5c; margin-top: 7px; line-height: 1.5; }
+  .hw-rec-reason::before { content: "✨ "; }
+  .hw-rec-warn { font-size: 0.72rem; color: #b45309; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.22); border-radius: 9px; padding: 7px 9px; margin-bottom: 10px; line-height: 1.5; }
+  .hw-rec-morebtn { display: block; width: 100%; margin: 2px 0 10px; padding: 9px; font-size: 0.8rem; font-weight: 600; color: #7d1a8c; background: rgba(102,8,116,0.06); border: 1px solid rgba(102,8,116,0.2); border-radius: 10px; cursor: pointer; transition: background .2s; }
+  .hw-rec-morebtn:hover { background: rgba(102,8,116,0.12); }
+
+  /* ---- AI mode (BYO key) ---- */
+  .hw-rec-aibtn {
+    margin-left: auto;
+    background: rgba(102,8,116,0.07);
+    color: #7d1a8c;
+    border: 1px solid rgba(102,8,116,0.22);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .hw-rec-aibtn:hover { background: rgba(102,8,116,0.13); }
+  .hw-rec-aibtn.on { background: linear-gradient(135deg,#7d1a8c,#660874); border-color:#660874; }
+  .hw-rec-aibtn.on, .hw-rec-aibtn.on .only-en, .hw-rec-aibtn.on .only-zh { color:#fff !important; }
+  .hw-rec-ai {
+    margin-top: 10px;
+    border: 1px dashed rgba(102,8,116,0.3);
+    border-radius: 12px;
+    padding: 11px 12px;
+    background: rgba(102,8,116,0.035);
+  }
+  .hw-rec-ai-note { font-size: 0.68rem; color: #6b5670; line-height: 1.55; margin-bottom: 9px; }
+  .hw-rec-ai select, .hw-rec-ai input {
+    width: 100%;
+    font-size: 0.8rem;
+    font-family: inherit;
+    color: #2e1f33;
+    border: 1px solid rgba(102,8,116,0.22);
+    border-radius: 9px;
+    padding: 8px 10px;
+    background: #fff;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+  }
+  .hw-rec-ai select:focus, .hw-rec-ai input:focus { outline:none; border-color:#7d1a8c; box-shadow:0 0 0 3px rgba(102,8,116,0.1); }
+  .hw-rec-ai-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .hw-rec-aienable {
+    background: linear-gradient(135deg,#7d1a8c,#660874); color:#fff; border:none;
+    border-radius: 9px; padding: 8px 16px; font-size: 0.8rem; font-weight:600; cursor:pointer;
+  }
+  .hw-rec-aienable:hover { filter:brightness(1.08); }
+  .hw-rec-aioff { background:transparent; border:none; color:#8a6a90; font-size:0.76rem; cursor:pointer; text-decoration:underline; }
+  .hw-rec-aistatus { font-size: 0.72rem; line-height:1.4; }
+  .hw-rec-aistatus.ok { color: #1a7f4b; }
+  .hw-rec-aistatus.err { color: #c0392b; }
 
   @media (max-width: 600px) {
     .hw-rec-panel { right: 12px; left: 12px; width: auto; bottom: 90px; max-height: 80vh; }
@@ -284,7 +341,42 @@
       <button class="hw-rec-clear" id="hwRecClear">
         <span class="only-en">Clear</span><span class="only-zh">清空</span>
       </button>
+      <button class="hw-rec-aibtn" id="hwRecAiToggle" type="button" aria-expanded="false">
+        <span class="only-en">✨ AI mode</span><span class="only-zh">✨ AI 增强</span>
+      </button>
     </div>
+
+    <div class="hw-rec-ai" id="hwRecAi" hidden>
+      <div class="hw-rec-ai-note">🔒
+        <span class="only-en">Optional: paste your <strong>own</strong> API key to let an LLM re-rank the matches. The key is used <strong>only in this session</strong> — kept in memory, never uploaded to this site, never stored, and cleared when you refresh. Requests go straight from your browser to the provider you pick.</span><span class="only-zh">可选：粘贴你<strong>自己的</strong> API Key，让大模型对结果重新排序。Key <strong>只在本次会话使用</strong>——保存在浏览器内存里，不会上传本站、不写入任何存储，刷新即清除；请求由你的浏览器直接发往所选服务商。</span>
+      </div>
+      <select id="hwRecProv" aria-label="AI provider">
+        <option value="deepseek">DeepSeek（国内可用 · 默认）</option>
+        <option value="openai">OpenAI</option>
+        <option value="kimi">Kimi · 月之暗面</option>
+        <option value="zhipu">智谱 GLM</option>
+        <option value="qwen">通义千问 Qwen</option>
+        <option value="openrouter">OpenRouter</option>
+        <option value="gemini">Google Gemini</option>
+        <option value="anthropic">Anthropic Claude</option>
+        <option value="custom">自定义（OpenAI 兼容）</option>
+      </select>
+      <input id="hwRecKey" type="password" autocomplete="off" spellcheck="false" placeholder="API Key（如 sk-… / AIza…）">
+      <div id="hwRecCustom" hidden>
+        <input id="hwRecBase" type="text" autocomplete="off" spellcheck="false" placeholder="Base URL（如 https://your-endpoint/v1）">
+        <input id="hwRecModel" type="text" autocomplete="off" spellcheck="false" placeholder="Model（如 gpt-4o-mini）">
+      </div>
+      <div class="hw-rec-ai-actions">
+        <button class="hw-rec-aienable" id="hwRecAiEnable" type="button">
+          <span class="only-en">Enable AI</span><span class="only-zh">启用 AI</span>
+        </button>
+        <button class="hw-rec-aioff" id="hwRecAiOff" type="button" hidden>
+          <span class="only-en">Turn off</span><span class="only-zh">关闭</span>
+        </button>
+        <span class="hw-rec-aistatus" id="hwRecAiStatus"></span>
+      </div>
+    </div>
+
     <div class="hw-rec-results" id="hwRecResults" aria-live="polite"></div>
   </div>
 </div>
@@ -340,8 +432,9 @@
   };
   function curLang() { return document.documentElement.getAttribute("data-lang") === "zh" ? "zh" : "en"; }
 
-  function renderCard(item) {
+  function renderCard(item, reason) {
     var lang = curLang();
+    var rz = reason ? '<div class="hw-rec-reason">' + esc(reason) + "</div>" : "";
     if (item.t === "cfp") {
       var dl = item.dl ? (lang === "zh" ? "截稿：" : "Deadline: ") + esc(item.dl) : "";
       var jl = esc(item.j) + (item.p ? " · " + esc(item.p) : "");
@@ -353,7 +446,7 @@
         '<div class="hw-rec-meta">' + jl + (dl ? "<br>" + dl : "") + "</div>" +
         (chips ? '<div class="hw-rec-chips">' + chips + "</div>" : "") +
         '<a class="hw-rec-cta" href="' + esc(href) + '" target="_blank" rel="noopener">' +
-        (lang === "zh" ? "查看征稿 ↗" : "View call ↗") + "</a></div>";
+        (lang === "zh" ? "查看征稿 ↗" : "View call ↗") + "</a>" + rz + "</div>";
     } else {
       var metricChips = "";
       if (item.q) metricChips += '<span class="hw-rec-chip metric">' + esc(item.q) + "</span>";
@@ -367,72 +460,208 @@
         (item.p ? '<div class="hw-rec-meta">' + esc(item.p) + "</div>" : "") +
         '<div class="hw-rec-chips">' + metricChips + tagChips + "</div>" +
         '<a class="hw-rec-cta" href="' + jhref + '">' +
-        (lang === "zh" ? "查看指标 ↗" : "View metrics ↗") + "</a></div>";
+        (lang === "zh" ? "查看指标 ↗" : "View metrics ↗") + "</a>" + rz + "</div>";
     }
+  }
+
+  // ---------- AI mode (optional, bring-your-own-key, in-memory only) ----------
+  var PROVIDERS = {
+    deepseek:   { label: "DeepSeek",     base: "https://api.deepseek.com",                          model: "deepseek-chat",            fmt: "openai" },
+    openai:     { label: "OpenAI",       base: "https://api.openai.com/v1",                         model: "gpt-4o-mini",              fmt: "openai" },
+    kimi:       { label: "Kimi",         base: "https://api.moonshot.cn/v1",                        model: "moonshot-v1-8k",           fmt: "openai" },
+    zhipu:      { label: "智谱 GLM",      base: "https://open.bigmodel.cn/api/paas/v4",              model: "glm-4-flash",              fmt: "openai" },
+    qwen:       { label: "通义千问",       base: "https://dashscope.aliyuncs.com/compatible-mode/v1", model: "qwen-plus",                fmt: "openai" },
+    openrouter: { label: "OpenRouter",   base: "https://openrouter.ai/api/v1",                      model: "openai/gpt-4o-mini",       fmt: "openai" },
+    gemini:     { label: "Gemini",       base: "https://generativelanguage.googleapis.com",         model: "gemini-2.0-flash",         fmt: "gemini" },
+    anthropic:  { label: "Claude",       base: "https://api.anthropic.com",                         model: "claude-3-5-haiku-latest",  fmt: "anthropic" },
+    custom:     { label: "Custom",       base: "",                                                  model: "",                         fmt: "openai" }
+  };
+  var AI = { on: false, prov: "deepseek", key: "", base: "", model: "" };
+
+  function detectProvider(key) {
+    if (/^sk-ant-/.test(key)) return "anthropic";
+    if (/^sk-or-v1-/.test(key)) return "openrouter";
+    if (/^AIza/.test(key)) return "gemini";
+    return null; // sk-... is ambiguous (OpenAI / DeepSeek / Kimi / Qwen) — keep the dropdown choice
+  }
+
+  function callLLM(sys, user) {
+    var p = PROVIDERS[AI.prov] || PROVIDERS.deepseek;
+    var base = (AI.prov === "custom" ? AI.base : p.base).replace(/\/+$/, "");
+    var model = AI.prov === "custom" ? AI.model : p.model;
+    function bad(r) { return r.text().then(function (t) { throw new Error("HTTP " + r.status + " " + (t || "").slice(0, 160)); }); }
+    if (p.fmt === "gemini") {
+      var url = base + "/v1beta/models/" + encodeURIComponent(model) + ":generateContent?key=" + encodeURIComponent(AI.key);
+      return fetch(url, { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: sys + "\n\n" + user }] }], generationConfig: { temperature: 0.2 } }) })
+        .then(function (r) { return r.ok ? r.json() : bad(r); })
+        .then(function (j) { var c = (j.candidates || [])[0] || {}; return ((c.content || {}).parts || []).map(function (x) { return x.text || ""; }).join(""); });
+    }
+    if (p.fmt === "anthropic") {
+      return fetch(base + "/v1/messages", { method: "POST",
+        headers: { "x-api-key": AI.key, "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true", "content-type": "application/json" },
+        body: JSON.stringify({ model: model, max_tokens: 1024, temperature: 0.2, system: sys, messages: [{ role: "user", content: user }] }) })
+        .then(function (r) { return r.ok ? r.json() : bad(r); })
+        .then(function (j) { return (j.content || []).map(function (x) { return x.text || ""; }).join(""); });
+    }
+    var headers = { "Authorization": "Bearer " + AI.key, "Content-Type": "application/json" };
+    if (AI.prov === "openrouter") { headers["HTTP-Referer"] = location.origin; headers["X-Title"] = "Venue Recommender"; }
+    return fetch(base + "/chat/completions", { method: "POST", headers: headers,
+      body: JSON.stringify({ model: model, temperature: 0.2, messages: [{ role: "system", content: sys }, { role: "user", content: user }] }) })
+      .then(function (r) { return r.ok ? r.json() : bad(r); })
+      .then(function (j) { return (((j.choices || [])[0] || {}).message || {}).content || ""; });
+  }
+
+  function aiRerank(abstract, pool, lang) {
+    var langName = lang === "zh" ? "Chinese" : "English";
+    var sys = "You help researchers choose where to submit a paper. You get the paper's title and abstract, plus a NUMBERED candidate list of calls-for-papers (CFP) and journals, pre-filtered from a fixed dataset. Pick the most relevant candidates, up to 10 (fewer, or none, if they are not truly relevant). When both calls-for-papers and journals are relevant, include some of EACH type. Choose ONLY from the numbered list, by index. Reply with STRICT JSON and nothing else: {\"picks\":[{\"i\":<index number>,\"reason\":\"<one concise sentence in " + langName + ">\"}]} ordered from most to least relevant.";
+    var cands = pool.map(function (it, idx) {
+      var type = it.t === "cfp" ? "CFP" : "Journal";
+      var name = it.t === "cfp" ? (it.ti || it.j) : it.j;
+      var at = (it.t === "cfp" && it.j) ? " @" + it.j : ((it.t === "journal" && it.q) ? " (" + it.q + ")" : "");
+      var tags = (it.tg || []).join(", ");
+      var desc = (it.d || "").replace(/\s+/g, " ").slice(0, 160);
+      return idx + ". [" + type + "] " + name + at + (tags ? " | tags: " + tags : "") + (desc ? " | " + desc : "");
+    }).join("\n");
+    var userMsg = "PAPER:\n" + (abstract || "").slice(0, 4000) + "\n\nCANDIDATES:\n" + cands;
+    return callLLM(sys, userMsg).then(function (text) {
+      var m = (text || "").match(/\{[\s\S]*\}/);
+      if (!m) throw new Error("bad-json");
+      var obj = JSON.parse(m[0]);
+      var picks = (obj.picks || []).map(function (p) { return { idx: parseInt(p.i, 10), reason: String(p.reason || "") }; })
+        .filter(function (p) { return !isNaN(p.idx) && p.idx >= 0 && p.idx < pool.length; });
+      var seen = {}, out = [];
+      picks.forEach(function (p) { if (!seen[p.idx]) { seen[p.idx] = 1; out.push(p); } });
+      return out.slice(0, 10);
+    });
+  }
+
+  // ---------- local matcher (tag-bridge so journals surface, not only CFPs) ----------
+  function rankAll(text) {
+    var qtext = (text || "").toLowerCase();
+    var tokens = tokenize(text);
+    if (tokens.length === 0) return null;
+    var arr = [];
+    for (var i = 0; i < data.length; i++) arr.push({ item: data[i], score: scoreItem(data[i], tokens, qtext) });
+    // "hot" topic tags: tags of items that already match well, plus tags literally present in the text
+    var hot = {};
+    arr.forEach(function (x) { if (x.score >= 4) (x.item.tg || []).forEach(function (t) { var k = (t || "").toLowerCase(); if (k) hot[k] = 1; }); });
+    arr.forEach(function (x) { (x.item.tg || []).forEach(function (t) { var k = (t || "").toLowerCase(); if (k && k.length > 3 && qtext.indexOf(k) >= 0) hot[k] = 1; }); });
+    // bridge: items sharing a hot tag get a boost — journals more, since their text is sparse (name + tags only)
+    arr.forEach(function (x) {
+      var b = 0;
+      (x.item.tg || []).forEach(function (t) { if (hot[(t || "").toLowerCase()]) b += (x.item.t === "journal" ? 3 : 1); });
+      x.score += b;
+    });
+    return arr.filter(function (x) { return x.score > 0; }).sort(function (a, b) { return b.score - a.score; });
+  }
+
+  // display order: keep relevance, but interleave so both CFPs and journals appear early (≈3 CFP : 2 journal)
+  function orderForDisplay(scored, cap) {
+    var cfps = scored.filter(function (x) { return x.item.t === "cfp"; }).map(function (x) { return x.item; });
+    var jrs = scored.filter(function (x) { return x.item.t === "journal"; }).map(function (x) { return x.item; });
+    var out = [], ci = 0, ji = 0, pat = ["c", "j", "c", "c", "j"], pi = 0;
+    while ((ci < cfps.length || ji < jrs.length) && out.length < (cap || 30)) {
+      var w = pat[pi % pat.length]; pi++;
+      if (w === "c") { if (ci < cfps.length) out.push(cfps[ci++]); else if (ji < jrs.length) out.push(jrs[ji++]); }
+      else { if (ji < jrs.length) out.push(jrs[ji++]); else if (ci < cfps.length) out.push(cfps[ci++]); }
+    }
+    return out;
+  }
+
+  // balanced candidate pool for the LLM (so it always sees journals, not only CFPs)
+  function aiPool(scored) {
+    var cfps = scored.filter(function (x) { return x.item.t === "cfp"; }).slice(0, 12).map(function (x) { return x.item; });
+    var jrs = scored.filter(function (x) { return x.item.t === "journal"; }).slice(0, 8).map(function (x) { return x.item; });
+    return cfps.concat(jrs);
+  }
+
+  function thinkingHTML(lang, ai) {
+    return '<div class="hw-rec-thinking"><span class="hw-rec-dots"><span></span><span></span><span></span></span>' +
+      (ai ? (lang === "zh" ? "AI 正在分析并匹配…" : "AI is analyzing and matching…")
+          : (lang === "zh" ? "正在匹配相关投稿目标…" : "Matching relevant venues…")) + "</div>";
+  }
+
+  // ---------- results rendering, paginated with a "show more" button ----------
+  var view = null;
+  function appendBatch() {
+    if (!view) return;
+    var end = Math.min(view.shown + 5, view.items.length), frag = "";
+    for (var i = view.shown; i < end; i++) frag += renderCard(view.items[i], view.reasons ? view.reasons[i] : null);
+    var cards = document.getElementById("hwRecCards");
+    if (cards) cards.insertAdjacentHTML("beforeend", frag);
+    view.shown = end;
+    var more = document.getElementById("hwRecMore");
+    if (more) more.hidden = view.shown >= view.items.length;
+  }
+  function showResults(box, opts) {
+    view = { items: opts.items, reasons: opts.reasons || null, shown: 0 };
+    var lang = opts.lang, total = opts.items.length;
+    var note = '<div class="hw-rec-resnote">' + (lang === "zh"
+      ? ("为你找到 " + total + " 个相关结果" + (total > 5 ? "，先展示前 5 个：" : "："))
+      : ("Found " + total + " relevant match" + (total > 1 ? "es" : "") + (total > 5 ? ", showing the top 5:" : ":"))) + "</div>";
+    var disclaim = '<div class="hw-rec-disclaim">' + (opts.mode === "ai"
+      ? (lang === "zh"
+          ? "由 " + opts.provLabel + " 在本站候选范围内排序，仅供参考；请以期刊官方页面为准。你的 Key 未被保存。"
+          : "Ranked by " + opts.provLabel + " within this site’s candidates, for reference only; verify on the official page. Your key was not stored.")
+      : (lang === "zh"
+          ? "基于本站标签与简介的本地匹配，仅供参考。请以期刊官方页面为准。"
+          : "Local match over this site’s tags & descriptions, for reference only. Verify on the official page.")) + "</div>";
+    box.innerHTML = (opts.warn || "") + note +
+      '<div id="hwRecCards"></div>' +
+      '<button type="button" class="hw-rec-morebtn" id="hwRecMore" hidden>' + (lang === "zh" ? "更多推荐 ▾" : "Show more ▾") + "</button>" +
+      disclaim;
+    appendBatch();
+    var more = document.getElementById("hwRecMore");
+    if (more) more.addEventListener("click", appendBatch);
   }
 
   function recommend() {
     var lang = curLang();
     var input = document.getElementById("hwRecInput");
     var box = document.getElementById("hwRecResults");
-    var qtext = (input.value || "").toLowerCase();
-    var tokens = tokenize(input.value);
+    var scored = rankAll(input.value);
 
-    if (tokens.length === 0) {
+    if (scored === null) {
       box.innerHTML = '<div class="hw-rec-empty">' +
         (lang === "zh" ? "请先输入论文标题或摘要中的一些关键内容。" : "Please enter a title or some of your abstract first.") + "</div>";
       return;
     }
+    if (scored.length === 0) {
+      box.innerHTML = '<div class="hw-rec-empty">' +
+        (lang === "zh"
+          ? "没有找到相关的征稿或期刊。可以试试用更具体的研究主题关键词（如「教育技术」「高等教育」）再描述一次。"
+          : "No matching call or journal found. Try more specific topic keywords (e.g. “educational technology”, “higher education”).") + "</div>";
+      return;
+    }
 
-    // thinking animation
-    box.innerHTML = '<div class="hw-rec-thinking"><span class="hw-rec-dots"><span></span><span></span><span></span></span>' +
-      (lang === "zh" ? "正在匹配相关投稿目标…" : "Matching relevant venues…") + "</div>";
+    box.innerHTML = thinkingHTML(lang, AI.on);
+
+    if (AI.on) {
+      var pool = aiPool(scored);
+      aiRerank(input.value, pool, lang).then(function (picks) {
+        if (!picks.length) {
+          box.innerHTML = '<div class="hw-rec-empty">' +
+            (lang === "zh" ? "AI 觉得列表里没有特别契合的目标。可以换个角度再描述一下你的研究。"
+                           : "The AI didn't find a strong match in the list. Try describing your work from a different angle.") + "</div>";
+          return;
+        }
+        showResults(box, { lang: lang, mode: "ai", provLabel: PROVIDERS[AI.prov].label,
+          items: picks.map(function (p) { return pool[p.idx]; }),
+          reasons: picks.map(function (p) { return p.reason; }) });
+      }).catch(function () {
+        var warn = '<div class="hw-rec-warn">' +
+          (lang === "zh"
+            ? "AI 调用失败（可能是 Key 无效，或该服务商不允许浏览器直连 / 跨域 CORS）。已改用本地匹配。"
+            : "AI call failed (invalid key, or the provider blocks direct browser / CORS calls). Falling back to local matching.") + "</div>";
+        showResults(box, { lang: lang, mode: "local", warn: warn, items: orderForDisplay(scored) });
+      });
+      return;
+    }
 
     setTimeout(function () {
-      var scored = [];
-      for (var i = 0; i < data.length; i++) {
-        var s = scoreItem(data[i], tokens, qtext);
-        if (s > 0) scored.push({ item: data[i], score: s });
-      }
-      scored.sort(function (a, b) { return b.score - a.score; });
-
-      if (scored.length === 0) {
-        box.innerHTML = '<div class="hw-rec-empty">' +
-          (lang === "zh"
-            ? "没有找到相关的征稿或期刊。可以试试用更具体的研究主题关键词（如「教育技术」「高等教育」）再描述一次。"
-            : "No matching call or journal found. Try describing your topic with more specific keywords (e.g. “educational technology”, “higher education”).") +
-          "</div>";
-        return;
-      }
-
-      // Up to 5 cards; guarantee at least one CFP and one journal when both exist.
-      var cfps = scored.filter(function (x) { return x.item.t === "cfp"; });
-      var jrs = scored.filter(function (x) { return x.item.t === "journal"; });
-      var top = scored.slice(0, 5);
-      function ensureType(t, pool) {
-        if (pool.length && !top.some(function (x) { return x.item.t === t; })) {
-          for (var k = top.length - 1; k >= 0; k--) {
-            if (top[k].item.t !== t) { top.splice(k, 1); break; }
-          }
-          top.push(pool[0]);
-        }
-      }
-      ensureType("journal", jrs);
-      ensureType("cfp", cfps);
-      top.sort(function (a, b) { return b.score - a.score; });
-
-      var note = lang === "zh"
-        ? "为你找到 " + top.length + " 个相关结果（按相关度排序）："
-        : "Found " + top.length + " relevant match" + (top.length > 1 ? "es" : "") + " (by relevance):";
-      var html = '<div class="hw-rec-resnote">' + note + "</div>";
-      html += top.map(function (r) { return renderCard(r.item); }).join("");
-      html += '<div class="hw-rec-disclaim">' +
-        (lang === "zh"
-          ? "基于本站标签与简介的本地关键词匹配，仅供参考。请以期刊官方页面为准。"
-          : "Local keyword match over this site’s tags & descriptions, for reference only. Always verify on the official journal page.") +
-        "</div>";
-      box.innerHTML = html;
-    }, 480);
+      showResults(box, { lang: lang, mode: "local", items: orderForDisplay(scored) });
+    }, 460);
   }
 
   // wiring
@@ -457,6 +686,55 @@
     document.getElementById("hwRecResults").innerHTML = "";
     input.focus();
   });
+
+  // ---- AI mode wiring ----
+  (function () {
+    var aiBtn = document.getElementById("hwRecAiToggle");
+    var aiBox = document.getElementById("hwRecAi");
+    var provSel = document.getElementById("hwRecProv");
+    var keyIn = document.getElementById("hwRecKey");
+    var customBox = document.getElementById("hwRecCustom");
+    var baseIn = document.getElementById("hwRecBase");
+    var modelIn = document.getElementById("hwRecModel");
+    var enableBtn = document.getElementById("hwRecAiEnable");
+    var offBtn = document.getElementById("hwRecAiOff");
+    var status = document.getElementById("hwRecAiStatus");
+    if (!aiBtn) return;
+    function syncCustom() { customBox.hidden = provSel.value !== "custom"; }
+    aiBtn.addEventListener("click", function () {
+      var show = aiBox.hidden;
+      aiBox.hidden = !show;
+      aiBtn.setAttribute("aria-expanded", show ? "true" : "false");
+    });
+    provSel.addEventListener("change", syncCustom);
+    keyIn.addEventListener("input", function () {
+      var d = detectProvider(keyIn.value.trim());
+      if (d) { provSel.value = d; syncCustom(); }
+    });
+    enableBtn.addEventListener("click", function () {
+      var lang = curLang();
+      var key = keyIn.value.trim();
+      if (!key) { status.className = "hw-rec-aistatus err"; status.textContent = lang === "zh" ? "请先填入 API Key" : "Please enter an API key"; return; }
+      AI.prov = provSel.value; AI.key = key;
+      if (AI.prov === "custom") {
+        AI.base = baseIn.value.trim(); AI.model = modelIn.value.trim();
+        if (!AI.base || !AI.model) { status.className = "hw-rec-aistatus err"; status.textContent = lang === "zh" ? "自定义需填 Base URL 和 Model" : "Custom needs a Base URL and Model"; return; }
+      }
+      AI.on = true;
+      aiBtn.classList.add("on");
+      offBtn.hidden = false;
+      status.className = "hw-rec-aistatus ok";
+      status.textContent = (lang === "zh" ? "✅ 已启用：" : "✅ Enabled: ") + PROVIDERS[AI.prov].label + (lang === "zh" ? "（Key 仅存内存）" : " (key in memory only)");
+    });
+    offBtn.addEventListener("click", function () {
+      var lang = curLang();
+      AI.on = false; AI.key = ""; keyIn.value = "";
+      aiBtn.classList.remove("on");
+      offBtn.hidden = true;
+      status.className = "hw-rec-aistatus";
+      status.textContent = lang === "zh" ? "已关闭，回到本地匹配。" : "Turned off — back to local matching.";
+    });
+  })();
   // Ctrl/Cmd+Enter to submit
   input.addEventListener("keydown", function (e) {
     if ((e.metaKey || e.ctrlKey) && e.key === "Enter") { e.preventDefault(); recommend(); }
