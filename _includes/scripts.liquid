@@ -5,6 +5,11 @@
   crossorigin="anonymous"
 ></script>
 
+<!-- Motion layer: self-hosted GSAP + ScrollTrigger + site animations (deferred; gated by html.hw-anim) -->
+<script defer src="{{ '/assets/js/gsap.min.js' | relative_url | bust_file_cache }}"></script>
+<script defer src="{{ '/assets/js/ScrollTrigger.min.js' | relative_url | bust_file_cache }}"></script>
+<script defer src="{{ '/assets/js/hw-motion.js' | relative_url | bust_file_cache }}"></script>
+
 <!-- Bootsrap & MDB scripts -->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 <script

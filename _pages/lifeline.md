@@ -28,7 +28,8 @@ nav_order: 6
   content: '';
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scaleY(var(--hw-spine, 1));
+  transform-origin: top center;
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg, transparent, var(--tsinghua-pale, #d9bee0) 8%, var(--tsinghua-pale, #d9bee0) 92%, transparent);
@@ -89,6 +90,10 @@ nav_order: 6
   border-color: transparent;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+/* the global content stylesheet forces .only-en/.only-zh to dark ink;
+   re-assert white for the active pill's label (e.g. the default "All") */
+.filter-pill.active .only-en,
+.filter-pill.active .only-zh { color: #fff !important; }
 
 .filter-pill.active[data-type="all"]         { background: var(--tsinghua, #660874); }
 .filter-pill.active[data-type="award"]       { background: #f59e0b; }

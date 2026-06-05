@@ -391,6 +391,8 @@ nav_order: 4
   font-size: 0.6rem;
   white-space: nowrap;
 }
+/* English labels run wider (TOTAL JOURNALS / LAST UPDATED) — one notch smaller */
+html[data-lang="en"] .stat-card h6 { font-size: 0.53rem; }
 
 .stat-card span {
   font-family: var(--display, Georgia, serif);

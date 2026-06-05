@@ -16,6 +16,23 @@
   window.determineComputedTheme = function () { return "light"; };
 </script>
 
+<!-- Motion layer activation (pre-paint). Adds html.hw-anim ONLY when motion is
+     welcome, so entrance targets can be pre-hidden without a flash. A fallback
+     reveals everything if the GSAP script never runs (offline / load failure). -->
+<script>
+  (function () {
+    try {
+      var ok = !window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (ok) {
+        document.documentElement.classList.add("hw-anim");
+        window.__hwAnimFallback = setTimeout(function () {
+          document.documentElement.classList.remove("hw-anim");
+        }, 2500);
+      }
+    } catch (e) {}
+  })();
+</script>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
