@@ -1,12 +1,12 @@
-- documents_current_year: 16 (2026)
+- documents_current_year: 21 (2026)
   documents_last_year: 78 (2025)
   documents_published: 78 (2025)
   first_decision_time: 5 days
-  hm_score: 107.9
+  hm_score: 128.6
   journal: International Journal of Educational Technology in Higher Education
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '27.7'
+  orange_score: '48.4'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '16.7'
@@ -19,11 +19,11 @@
   documents_last_year: 25 (2025)
   documents_published: 25 (2025)
   first_decision_time: 40 days
-  hm_score: 95.5
+  hm_score: 98.3
   journal: Educational Psychologist
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '26.9'
+  orange_score: '29.7'
   publication_time: 52 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -33,15 +33,15 @@
   tag:
   - Educational Psychology
 - acceptance_time: 318 days
-  documents_current_year: 29 (2026)
+  documents_current_year: 30 (2026)
   documents_last_year: 72 (2025)
   documents_published: 72 (2025)
   first_decision_time: 6 days
-  hm_score: 86.3
+  hm_score: 88.6
   journal: Educational Research Review
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '18.3'
+  orange_score: '20.6'
   publication_time: 3 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -52,15 +52,15 @@
   - Review Journal
   - General Education
 - acceptance_time: 190 days
-  documents_current_year: 120 (2026)
+  documents_current_year: 121 (2026)
   documents_last_year: 152 (2025)
   documents_published: 152 (2025)
   first_decision_time: 7 days
-  hm_score: 93.5
+  hm_score: 96.1
   journal: Computers & Education
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '23.7'
+  orange_score: '26.3'
   publication_time: 2 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -74,11 +74,11 @@
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
   first_decision_time: 9 days
-  hm_score: 81.6
+  hm_score: 90.7
   journal: Studies in Science Education
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '18.0'
+  orange_score: '27.1'
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '9.9'
@@ -92,11 +92,11 @@
   documents_last_year: 130 (2025)
   documents_published: 130 (2025)
   first_decision_time: 26 days
-  hm_score: 82.6
+  hm_score: 88.1
   journal: British Journal of Educational Technology
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '17.6'
+  orange_score: '23.1'
   publication_time: 17 days
   publisher: Wiley
   purple_quartile: Q1
@@ -104,15 +104,15 @@
   red_division: 教育学1区
   tag:
   - Educational Technology
-- documents_current_year: 20 (2026)
+- documents_current_year: 25 (2026)
   documents_last_year: 68 (2025)
   documents_published: 68 (2025)
   first_decision_time: 7 days
-  hm_score: 77.4
+  hm_score: 82.6
   journal: International Journal of STEM Education
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '14.8'
+  orange_score: '19.8'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '8.0'
@@ -125,11 +125,11 @@
   documents_last_year: 88 (2025)
   documents_published: 88 (2025)
   first_decision_time: 77 days
-  hm_score: 83.3
+  hm_score: 85.0
   journal: Review of Educational Research
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '20.7'
+  orange_score: '22.4'
   publication_time: 39 days
   publisher: SAGE
   purple_quartile: Q1
@@ -139,15 +139,15 @@
   - Review Journal
   - General Education
 - acceptance_time: 168 days
-  documents_current_year: 143 (2026)
+  documents_current_year: 151 (2026)
   documents_last_year: 170 (2025)
   documents_published: 170 (2025)
   first_decision_time: 1 day
-  hm_score: 77.1
+  hm_score: 78.3
   journal: International Journal of Management Education
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '13.7'
+  orange_score: '14.9'
   publication_time: 7 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -162,11 +162,11 @@
   documents_last_year: 49 (2025)
   documents_published: 49 (2025)
   first_decision_time: 12 days
-  hm_score: 76.5
+  hm_score: 71.0
   journal: Internet and Higher Education
-  orange_percentile: '99'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '19.1'
+  orange_score: '13.8'
   publication_time: 2 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -177,15 +177,15 @@
   - Higher Education
   - Educational Technology
 - acceptance_rate: 11%
-  documents_current_year: 69 (2026)
-  documents_last_year: 190 (2025)
-  documents_published: 190 (2025)
+  documents_current_year: 83 (2026)
+  documents_last_year: 185 (2025)
+  documents_published: 185 (2025)
   first_decision_time: 38 days
-  hm_score: 92.6
+  hm_score: 98.7
   journal: Computer Assisted Language Learning
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '23.6'
+  orange_score: '29.7'
   publication_time: 11 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -198,39 +198,39 @@
 - documents_current_year: 32 (2026)
   documents_last_year: 93 (2025)
   documents_published: 93 (2025)
-  hm_score: 70.6
+  hm_score: 70.2
   journal: Educational Technology & Society
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '12.0'
+  orange_score: '11.6'
   purple_quartile: Q1
   purple_score: '6.0'
   red_division: 教育学2区
   tag:
   - Educational Technology
-- documents_current_year: 14 (2026)
+- documents_current_year: 15 (2026)
   documents_last_year: 33 (2025)
   documents_published: 33 (2025)
-  hm_score: 68.2
+  hm_score: 70.1
   journal: ReCALL
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '13.0'
+  orange_score: '14.9'
   purple_quartile: Q1
   purple_score: '5.7'
   red_division: 文学1区
   tag:
   - Language Education & Acquisition
   - Educational Technology
-- documents_current_year: 20 (2026)
+- documents_current_year: 24 (2026)
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
   first_decision_time: 7 days
-  hm_score: 63.6
+  hm_score: 65.5
   journal: International Journal of Computer-supported Collaborative Learning
-  orange_percentile: '95'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '9.2'
+  orange_score: '10.9'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '5.7'
@@ -239,15 +239,15 @@
   - Educational Technology
 - acceptance_rate: 10%
   acceptance_time: 184 days
-  documents_current_year: 138 (2026)
+  documents_current_year: 140 (2026)
   documents_last_year: 258 (2025)
   documents_published: 258 (2025)
   first_decision_time: 8 days
-  hm_score: 80.2
+  hm_score: 80.8
   journal: System
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '9.4'
+  orange_score: '10.0'
   publication_time: 5 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -259,15 +259,15 @@
   - Educational Technology
 - acceptance_rate: 10%
   acceptance_time: 239 days
-  documents_current_year: 50 (2026)
+  documents_current_year: 52 (2026)
   documents_last_year: 56 (2025)
   documents_published: 56 (2025)
   first_decision_time: 13 days
-  hm_score: 72.4
+  hm_score: 75.9
   journal: Assessing Writing
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '8.8'
+  orange_score: '12.1'
   publication_time: 10 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -276,15 +276,15 @@
   review_time: 78 days
   tag:
   - Language Education & Acquisition
-- documents_current_year: 63 (2026)
-  documents_last_year: 126 (2025)
-  documents_published: 126 (2025)
+- documents_current_year: 83 (2026)
+  documents_last_year: 111 (2025)
+  documents_published: 111 (2025)
   first_decision_time: 11 days
-  hm_score: 70.0
+  hm_score: 70.1
   journal: Journal of Science Education and Technology
   orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '10.8'
+  orange_score: '10.9'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '5.5'
@@ -292,15 +292,15 @@
   tag:
   - Educational Technology
   - Subject Education
-- documents_current_year: 213 (2026)
+- documents_current_year: 223 (2026)
   documents_last_year: 953 (2025)
   documents_published: 953 (2025)
   first_decision_time: 29 days
-  hm_score: 76.0
+  hm_score: 79.9
   journal: Education and Information Technologies
-  orange_percentile: '97'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '11.8'
+  orange_score: '15.5'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '5.4'
@@ -308,15 +308,15 @@
   tag:
   - Educational Technology
 - acceptance_rate: 10%
-  documents_current_year: 209 (2026)
+  documents_current_year: 214 (2026)
   documents_last_year: 475 (2025)
   documents_published: 475 (2025)
   first_decision_time: 13 days
-  hm_score: 84.0
+  hm_score: 88.2
   journal: Interactive Learning Environments
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '13.8'
+  orange_score: '17.8'
   publication_time: 20 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -328,40 +328,40 @@
 - documents_current_year: 7 (2026)
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
-  hm_score: 61.8
+  hm_score: 65.0
   journal: Academy of Management Learning & Education
-  orange_percentile: '94'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '8.6'
+  orange_score: '11.4'
   purple_quartile: Q1
   purple_score: '5.2'
   red_division: 管理学2区
   tag:
   - Educational Management & Leadership
   - Higher Education
-- documents_current_year: 35 (2026)
+- documents_current_year: 37 (2026)
   documents_last_year: 56 (2025)
   documents_published: 56 (2025)
-  hm_score: 66.3
+  hm_score: 69.7
   journal: Language Teaching
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '9.5'
+  orange_score: '12.7'
   purple_quartile: Q1
   purple_score: '5.1'
   red_division: 文学2区
   tag:
   - Language Education & Acquisition
 - acceptance_rate: 4%
-  documents_current_year: 65 (2026)
+  documents_current_year: 66 (2026)
   documents_last_year: 128 (2025)
   documents_published: 128 (2025)
   first_decision_time: 53 days
-  hm_score: 73.4
+  hm_score: 76.7
   journal: Journal of Research on Technology in Education
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '14.8'
+  orange_score: '17.9'
   publication_time: 24 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -371,15 +371,15 @@
   tag:
   - Educational Technology
 - acceptance_rate: 9%
-  documents_current_year: 119 (2026)
+  documents_current_year: 123 (2026)
   documents_last_year: 227 (2025)
   documents_published: 227 (2025)
   first_decision_time: 12 days
-  hm_score: 75.5
+  hm_score: 80.3
   journal: Innovations in Education and Teaching International
-  orange_percentile: '93'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '8.1'
+  orange_score: '12.1'
   publication_time: 20 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -389,15 +389,15 @@
   tag:
   - General Education
   - Higher Education
-- documents_current_year: 25 (2026)
-  documents_last_year: 83 (2025)
-  documents_published: 83 (2025)
+- documents_current_year: 40 (2026)
+  documents_last_year: 71 (2025)
+  documents_published: 71 (2025)
   first_decision_time: 24 days
-  hm_score: 71.1
+  hm_score: 71.8
   journal: Journal of Computing in Higher Education
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '14.7'
+  orange_score: '15.4'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '4.9'
@@ -406,15 +406,15 @@
   - Higher Education
   - Educational Technology
 - acceptance_rate: 7.0%
-  documents_current_year: 47 (2026)
+  documents_current_year: 48 (2026)
   documents_last_year: 59 (2025)
   documents_published: 59 (2025)
   first_decision_time: 43 days
-  hm_score: 70.5
+  hm_score: 68.8
   journal: Educational Researcher
-  orange_percentile: '97'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '11.3'
+  orange_score: '10.0'
   publication_time: 32 days
   publisher: SAGE
   purple_quartile: Q1
@@ -424,15 +424,15 @@
   - General Education
   - Education Policy & Social Issues
 - acceptance_rate: 5.6%
-  documents_current_year: 59 (2026)
+  documents_current_year: 61 (2026)
   documents_last_year: 73 (2025)
   documents_published: 73 (2025)
   first_decision_time: 14 days
-  hm_score: 71.9
+  hm_score: 72.8
   journal: Journal of Educational Computing Research
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '13.9'
+  orange_score: '14.8'
   publication_time: 16 days
   publisher: SAGE
   purple_quartile: Q1
@@ -441,15 +441,15 @@
   tag:
   - Educational Technology
 - acceptance_time: 318 days
-  documents_current_year: 120 (2026)
+  documents_current_year: 124 (2026)
   documents_last_year: 185 (2025)
   documents_published: 185 (2025)
   first_decision_time: 9 days
-  hm_score: 67.5
+  hm_score: 66.8
   journal: Learning and Instruction
-  orange_percentile: '95'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '9.7'
+  orange_score: '9.2'
   publication_time: 12 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -458,28 +458,28 @@
   review_time: 61 days
   tag:
   - General Education
-- documents_current_year: 36 (2026)
+- documents_current_year: 40 (2026)
   documents_last_year: 82 (2025)
   documents_published: 82 (2025)
-  hm_score: 62.2
+  hm_score: 68.7
   journal: IEEE Transactions on Learning Technologies
-  orange_percentile: '91'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '12.5'
   purple_quartile: Q1
   purple_score: '4.9'
   red_division: 教育学3区
   tag:
   - Educational Technology
-- documents_current_year: 18 (2026)
+- documents_current_year: 20 (2026)
   documents_last_year: 45 (2025)
   documents_published: 45 (2025)
   first_decision_time: 9 days
-  hm_score: 60.0
+  hm_score: 61.8
   journal: Metacognition and Learning
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '9.4'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '4.8'
@@ -490,26 +490,26 @@
 - documents_current_year: 36 (2025)
   documents_last_year: 31 (2022)
   documents_published: 31 (2022)
-  hm_score: 46.8
+  hm_score: 52.9
   journal: Journal of Legal Education
-  orange_percentile: '59'
-  orange_quartile: Q2
-  orange_score: '1.4'
+  orange_percentile: '81'
+  orange_quartile: Q1
+  orange_score: '3.1'
   purple_quartile: Q1
   purple_score: '4.8'
   red_division: 教育学4区
   tag:
   - Education Policy & Social Issues
   - Legal Education
-- documents_current_year: 86 (2026)
-  documents_last_year: 191 (2025)
-  documents_published: 191 (2025)
+- documents_current_year: 109 (2026)
+  documents_last_year: 173 (2025)
+  documents_published: 173 (2025)
   first_decision_time: 15 days
-  hm_score: 65.8
+  hm_score: 65.3
   journal: Asia-pacific Education Researcher
-  orange_percentile: '94'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '8.8'
+  orange_score: '8.5'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '4.6'
@@ -518,15 +518,15 @@
   - General Education
   - Education Policy & Social Issues
 - acceptance_rate: 11%
-  documents_current_year: 102 (2026)
-  documents_last_year: 152 (2025)
-  documents_published: 152 (2025)
+  documents_current_year: 117 (2026)
+  documents_last_year: 147 (2025)
+  documents_published: 147 (2025)
   first_decision_time: 7 days
-  hm_score: 74.8
+  hm_score: 78.7
   journal: Innovation in Language Learning and Teaching
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '9.8'
+  orange_score: '13.7'
   publication_time: 16 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -538,15 +538,15 @@
   - Educational Technology
 - acceptance_rate: 9%
   acceptance_time: 267 days
-  documents_current_year: 103 (2026)
+  documents_current_year: 106 (2026)
   documents_last_year: 199 (2025)
   documents_published: 199 (2025)
   first_decision_time: 32 days
-  hm_score: 73.2
+  hm_score: 74.5
   journal: Journal of Computer Assisted Learning
-  orange_percentile: '96'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '10.8'
+  orange_score: '11.9'
   publication_time: 19 days
   publisher: Wiley
   purple_quartile: Q1
@@ -554,15 +554,15 @@
   red_division: 教育学1区
   tag:
   - Educational Technology
-- documents_current_year: 132 (2026)
-  documents_last_year: 295 (2025)
-  documents_published: 295 (2025)
+- documents_current_year: 145 (2026)
+  documents_last_year: 294 (2025)
+  documents_published: 294 (2025)
   first_decision_time: 7 days
-  hm_score: 73.5
+  hm_score: 74.8
   journal: Higher Education
   orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '10.9'
+  orange_score: '12.2'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '4.6'
@@ -571,15 +571,15 @@
   - Higher Education
 - acceptance_rate: 12%
   acceptance_time: 245 days
-  documents_current_year: 269 (2026)
+  documents_current_year: 274 (2026)
   documents_last_year: 222 (2025)
   documents_published: 222 (2025)
   first_decision_time: 34 days
-  hm_score: 77.4
+  hm_score: 79.0
   journal: Thinking Skills and Creativity
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '9.2'
   publication_time: 2 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -595,11 +595,11 @@
   documents_last_year: 84 (2025)
   documents_published: 84 (2025)
   first_decision_time: 13 days
-  hm_score: 64.7
+  hm_score: 66.1
   journal: Journal of Research in Science Teaching
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '8.1'
+  orange_score: '9.3'
   publication_time: 25 days
   publisher: Wiley
   purple_quartile: Q1
@@ -608,15 +608,15 @@
   tag:
   - Subject Education
   - Science Education
-- documents_current_year: 70 (2026)
+- documents_current_year: 77 (2026)
   documents_last_year: 148 (2025)
   documents_published: 148 (2025)
   first_decision_time: 22 days
-  hm_score: 65.5
+  hm_score: 67.3
   journal: Educational Technology Research and Development
-  orange_percentile: '95'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '9.1'
+  orange_score: '10.7'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '4.2'
@@ -626,11 +626,11 @@
 - documents_current_year: 7 (2026)
   documents_last_year: 32 (2025)
   documents_published: 32 (2025)
-  hm_score: 60.0
+  hm_score: 63.8
   journal: Australasian Journal of Educational Technology
-  orange_percentile: '94'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '8.8'
+  orange_score: '12.0'
   purple_quartile: Q1
   purple_score: '4.2'
   red_division: 教育学3区
@@ -638,15 +638,15 @@
   - Educational Technology
 - acceptance_rate: 7%
   acceptance_time: 355 days
-  documents_current_year: 29 (2026)
+  documents_current_year: 34 (2026)
   documents_last_year: 62 (2025)
   documents_published: 62 (2025)
   first_decision_time: 3 days
-  hm_score: 66.8
+  hm_score: 66.4
   journal: Language Learning
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '8.8'
+  orange_score: '8.6'
   publication_time: 74 days
   publisher: Wiley
   purple_quartile: Q1
@@ -654,14 +654,14 @@
   red_division: 文学1区
   tag:
   - Language Education & Acquisition
-- documents_current_year: 7 (2026)
+- documents_current_year: 11 (2026)
   documents_last_year: 25 (2025)
   documents_published: 25 (2025)
-  hm_score: 54.6
+  hm_score: 59.0
   journal: Language Learning & Technology
-  orange_percentile: '92'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '7.4'
   purple_quartile: Q1
   purple_score: '4.1'
   red_division: 文学2区
@@ -673,11 +673,11 @@
   documents_last_year: 50 (2025)
   documents_published: 50 (2025)
   first_decision_time: 6 days
-  hm_score: 62.0
+  hm_score: 60.4
   journal: Journal of Hospitality Leisure Sport & Tourism Education
-  orange_percentile: '96'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '10.6'
+  orange_score: '9.4'
   publication_time: 6 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -689,15 +689,15 @@
   - Higher Education
 - acceptance_rate: 16%
   acceptance_time: 174 days
-  documents_current_year: 47 (2026)
+  documents_current_year: 50 (2026)
   documents_last_year: 121 (2025)
   documents_published: 121 (2025)
   first_decision_time: 11 days
-  hm_score: 78.4
+  hm_score: 72.9
   journal: Reading Research Quarterly
-  orange_percentile: '96'
+  orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '10.0'
+  orange_score: '6.3'
   publication_time: 22 days
   publisher: Wiley
   purple_quartile: Q1
@@ -711,11 +711,11 @@
   documents_last_year: 36 (2025)
   documents_published: 36 (2025)
   first_decision_time: 9 days
-  hm_score: 57.8
+  hm_score: 57.0
   journal: Journal of Teacher Education
-  orange_percentile: '94'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '8.6'
+  orange_score: '8.2'
   publication_time: 26 days
   publisher: SAGE
   purple_quartile: Q1
@@ -731,9 +731,9 @@
   first_decision_time: 13 days
   hm_score: 67.8
   journal: Modern Language Journal
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '8.2'
+  orange_score: '8.4'
   publication_time: 58 days
   publisher: Wiley
   purple_quartile: Q1
@@ -743,15 +743,15 @@
   - Language Education & Acquisition
 - acceptance_rate: 8%
   acceptance_time: 213 days
-  documents_current_year: 271 (2026)
+  documents_current_year: 284 (2026)
   documents_last_year: 336 (2025)
   documents_published: 336 (2025)
   first_decision_time: 6 days
-  hm_score: 72.2
+  hm_score: 72.9
   journal: Teaching and Teacher Education
   orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '8.5'
   publication_time: 9 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -762,15 +762,15 @@
   - Teacher Education & Development
 - acceptance_rate: 12%
   acceptance_time: 280 days
-  documents_current_year: 108 (2026)
+  documents_current_year: 114 (2026)
   documents_last_year: 128 (2025)
   documents_published: 128 (2025)
   first_decision_time: 64 days
-  hm_score: 71.7
+  hm_score: 73.0
   journal: TESOL Quarterly
-  orange_percentile: '97'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '7.5'
+  orange_score: '8.6'
   publication_time: 31 days
   publisher: Wiley
   purple_quartile: Q1
@@ -783,11 +783,11 @@
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
   first_decision_time: 13 days
-  hm_score: 56.6
+  hm_score: 57.5
   journal: Journal of the Learning Sciences
-  orange_percentile: '90'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '6.8'
+  orange_score: '7.5'
   publication_time: 46 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -798,15 +798,15 @@
   - Educational Psychology
   - Educational Technology
 - acceptance_rate: 7%
-  documents_current_year: 96 (2026)
+  documents_current_year: 101 (2026)
   documents_last_year: 114 (2025)
   documents_published: 114 (2025)
   first_decision_time: 1 days
-  hm_score: 71.2
+  hm_score: 73.3
   journal: Assessment & Evaluation in Higher Education
-  orange_percentile: '97'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '12.2'
+  orange_score: '14.1'
   publication_time: 28 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -817,15 +817,15 @@
   - Higher Education
   - Educational Management & Leadership
 - acceptance_rate: 10.7%
-  documents_current_year: 189 (2026)
+  documents_current_year: 192 (2026)
   documents_last_year: 314 (2025)
   documents_published: 314 (2025)
   first_decision_time: 35 days
-  hm_score: 83.9
+  hm_score: 85.9
   journal: Language Teaching Research
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '15.8'
+  orange_score: '17.8'
   publication_time: 30 days
   publisher: SAGE
   purple_quartile: Q1
@@ -834,15 +834,15 @@
   tag:
   - Language Education & Acquisition
 - acceptance_rate: 11%
-  documents_current_year: 38 (2026)
+  documents_current_year: 40 (2026)
   documents_last_year: 106 (2025)
   documents_published: 106 (2025)
   first_decision_time: 4 days
-  hm_score: 67.7
+  hm_score: 68.4
   journal: Medical Education Online
-  orange_percentile: '89'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '6.6'
   publication_time: 12 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -851,14 +851,14 @@
   review_time: 55 days
   tag:
   - Medical Education
-- documents_current_year: 26 (2026)
+- documents_current_year: 29 (2026)
   documents_last_year: 42 (2025)
   documents_published: 42 (2025)
-  hm_score: 56.8
+  hm_score: 58.0
   journal: Comparative Education
-  orange_percentile: '91'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '8.2'
   publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -868,15 +868,15 @@
   - Education Policy & Social Issues
   - International/Comparative Education
 - acceptance_rate: 10.5%
-  documents_current_year: 26 (2026)
+  documents_current_year: 27 (2026)
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
   first_decision_time: 65 days
-  hm_score: 61.9
+  hm_score: 62.8
   journal: Educational Administration Quarterly
-  orange_percentile: '88'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '6.4'
+  orange_score: '6.9'
   publication_time: 25 days
   publisher: SAGE
   purple_quartile: Q1
@@ -887,11 +887,11 @@
 - documents_current_year: 10 (2026)
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
-  hm_score: 56.2
+  hm_score: 58.2
   journal: Journal for Research in Mathematics Education
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '6.4'
+  orange_score: '8.2'
   purple_quartile: Q1
   purple_score: '3.6'
   red_division: 教育学2区
@@ -903,11 +903,11 @@
   documents_last_year: 36 (2025)
   documents_published: 36 (2025)
   first_decision_time: 37 days
-  hm_score: 58.5
+  hm_score: 56.8
   journal: American Educational Research Journal
-  orange_percentile: '94'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '8.1'
+  orange_score: '7.2'
   publication_time: 44 days
   publisher: SAGE
   purple_quartile: Q1
@@ -918,11 +918,11 @@
 - documents_current_year: 33 (2026)
   documents_last_year: 122 (2025)
   documents_published: 122 (2025)
-  hm_score: 61.0
+  hm_score: 59.0
   journal: AERA Open
-  orange_percentile: '93'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '6.2'
+  orange_score: '5.2'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '3.6'
@@ -932,11 +932,11 @@
 - documents_current_year: 39 (2026)
   documents_last_year: 130 (2025)
   documents_published: 130 (2025)
-  hm_score: 59.7
+  hm_score: 60.8
   journal: Physical Review Physics Education Research
-  orange_percentile: '87'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '6.1'
+  orange_score: '6.8'
   purple_quartile: Q1
   purple_score: '3.6'
   red_division: 教育学2区
@@ -945,15 +945,15 @@
   - Physics Education
 - acceptance_rate: 11%
   acceptance_time: 190 days
-  documents_current_year: 309 (2026)
+  documents_current_year: 329 (2026)
   documents_last_year: 483 (2025)
   documents_published: 483 (2025)
   first_decision_time: 12 days
-  hm_score: 65.8
+  hm_score: 69.2
   journal: European Journal of Education
-  orange_percentile: '70'
-  orange_quartile: Q2
-  orange_score: '3.6'
+  orange_percentile: '80'
+  orange_quartile: Q1
+  orange_score: '5.0'
   publication_time: 15 days
   publisher: Wiley
   purple_quartile: Q1
@@ -964,15 +964,15 @@
   - Education Policy & Social Issues
 - acceptance_rate: 9%
   acceptance_time: 148 days
-  documents_current_year: 65 (2026)
+  documents_current_year: 68 (2026)
   documents_last_year: 82 (2025)
   documents_published: 82 (2025)
   first_decision_time: 3 days
-  hm_score: 64.8
+  hm_score: 64.5
   journal: Journal of English for Academic Purposes
-  orange_percentile: '97'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '6.6'
+  orange_score: '6.5'
   publication_time: 7 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -984,15 +984,15 @@
   - Higher Education
 - acceptance_rate: 11%
   acceptance_time: 234 days
-  documents_current_year: 91 (2026)
+  documents_current_year: 93 (2026)
   documents_last_year: 81 (2025)
   documents_published: 81 (2025)
   first_decision_time: 4 days
-  hm_score: 65.6
+  hm_score: 64.9
   journal: Science Education
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '7.0'
+  orange_score: '6.5'
   publication_time: 21 days
   publisher: Wiley
   purple_quartile: Q1
@@ -1002,15 +1002,15 @@
   - Subject Education
   - Science Education
 - acceptance_rate: 4%
-  documents_current_year: 49 (2026)
+  documents_current_year: 50 (2026)
   documents_last_year: 147 (2025)
   documents_published: 147 (2025)
   first_decision_time: 5 days
-  hm_score: 64.1
+  hm_score: 64.5
   journal: Educational Review
   orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '9.3'
+  orange_score: '9.7'
   publication_time: 31 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1021,15 +1021,15 @@
   - General Education
 - acceptance_rate: 9%
   acceptance_time: 293 days
-  documents_current_year: 25 (2026)
+  documents_current_year: 26 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
   first_decision_time: 16 days
-  hm_score: 71.0
+  hm_score: 70.6
   journal: Journal of Engineering Education
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '12.6'
+  orange_score: '12.4'
   publication_time: 21 days
   publisher: Wiley
   purple_quartile: Q1
@@ -1038,14 +1038,14 @@
   tag:
   - Subject Education
   - Engineering/Design Education
-- documents_current_year: 95 (2026)
+- documents_current_year: 108 (2026)
   documents_last_year: 250 (2025)
   documents_published: 250 (2025)
-  hm_score: 66.2
+  hm_score: 69.6
   journal: International Journal of Sustainability in Higher Education
-  orange_percentile: '91'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '9.8'
   purple_quartile: Q1
   purple_score: '3.4'
   red_division: 环境科学与生态学2区
@@ -1058,11 +1058,11 @@
   documents_last_year: 20 (2025)
   documents_published: 20 (2025)
   first_decision_time: 8 days
-  hm_score: 57.5
+  hm_score: 58.4
   journal: Revista De Psicodidactica
-  orange_percentile: '90'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '6.9'
+  orange_score: '7.6'
   publisher: Elsevier
   purple_quartile: Q1
   purple_score: '3.3'
@@ -1072,15 +1072,15 @@
   - Educational Psychology
   - Teacher Education & Development
 - acceptance_rate: 9.3%
-  documents_current_year: 102 (2026)
+  documents_current_year: 109 (2026)
   documents_last_year: 179 (2025)
   documents_published: 179 (2025)
   first_decision_time: 14 days
-  hm_score: 70.9
+  hm_score: 71.3
   journal: Educational Management Administration & Leadership
   orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '10.8'
+  orange_score: '11.2'
   publication_time: 23 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1093,11 +1093,11 @@
   documents_last_year: 48 (2025)
   documents_published: 48 (2025)
   first_decision_time: 27 days
-  hm_score: 67.3
+  hm_score: 67.6
   journal: European Physical Education Review
   orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '7.9'
+  orange_score: '8.2'
   publication_time: 26 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1120,7 +1120,7 @@
   tag:
   - General Education
   - Education Policy & Social Issues
-- documents_current_year: 80 (2026)
+- documents_current_year: 85 (2026)
   documents_last_year: 119 (2025)
   documents_published: 119 (2025)
   first_decision_time: 16 days
@@ -1140,11 +1140,11 @@
   documents_last_year: 67 (2025)
   documents_published: 67 (2025)
   first_decision_time: 8 days
-  hm_score: 66.5
+  hm_score: 65.8
   journal: Active Learning in Higher Education
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '14.6'
+  orange_score: '13.9'
   publication_time: 28 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1153,15 +1153,15 @@
   tag:
   - Higher Education
   - Educational Technology
-- documents_current_year: 28 (2026)
+- documents_current_year: 32 (2026)
   documents_last_year: 71 (2025)
   documents_published: 71 (2025)
   first_decision_time: 9 days
-  hm_score: 57.7
+  hm_score: 59.1
   journal: Minerva
-  orange_percentile: '92'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '5.9'
+  orange_score: '6.9'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '3.2'
@@ -1169,14 +1169,14 @@
   tag:
   - Education Policy & Social Issues
   - Higher Education
-- documents_current_year: 23 (2026)
+- documents_current_year: 28 (2026)
   documents_last_year: 96 (2025)
   documents_published: 96 (2025)
-  hm_score: 60.6
+  hm_score: 59.1
   journal: Education and Training
-  orange_percentile: '94'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '8.4'
+  orange_score: '7.5'
   purple_quartile: Q1
   purple_score: '3.2'
   red_division: 教育学3区
@@ -1184,15 +1184,15 @@
   - Vocational & Continuing Education
   - Higher Education
 - acceptance_rate: 5%
-  documents_current_year: 134 (2026)
-  documents_last_year: 289 (2025)
-  documents_published: 289 (2025)
+  documents_current_year: 140 (2026)
+  documents_last_year: 288 (2025)
+  documents_published: 288 (2025)
   first_decision_time: 6 days
-  hm_score: 71.9
+  hm_score: 72.0
   journal: Studies in Higher Education
-  orange_percentile: '97'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '11.1'
+  orange_score: '11.4'
   publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1201,29 +1201,29 @@
   review_time: 58 days
   tag:
   - Higher Education
-- documents_current_year: 59 (2026)
+- documents_current_year: 63 (2026)
   documents_last_year: 35 (2025)
   documents_published: 35 (2025)
-  hm_score: 51.1
+  hm_score: 50.5
   journal: Chemistry Education Research and Practice
-  orange_percentile: '80'
+  orange_percentile: '78'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '4.5'
   purple_quartile: Q1
   purple_score: '3.2'
   red_division: 教育学2区
   tag:
   - Subject Education
   - Chemistry Education
-- documents_current_year: 761 (2026)
+- documents_current_year: 785 (2026)
   documents_last_year: 1771 (2025)
   documents_published: 1771 (2025)
   first_decision_time: 16 days
-  hm_score: 61.4
+  hm_score: 62.9
   journal: BMC Medical Education
-  orange_percentile: '83'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '4.4'
+  orange_score: '5.3'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '3.2'
@@ -1249,15 +1249,15 @@
   tag:
   - Educational Technology
 - acceptance_time: 328 days
-  documents_current_year: 91 (2026)
+  documents_current_year: 93 (2026)
   documents_last_year: 111 (2025)
   documents_published: 111 (2025)
   first_decision_time: 26 days
-  hm_score: 59.4
+  hm_score: 58.9
   journal: Early Childhood Research Quarterly
-  orange_percentile: '91'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '6.0'
+  orange_score: '5.9'
   publication_time: 11 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -1268,15 +1268,15 @@
   - Early Childhood Education
 - acceptance_rate: 3%
   acceptance_time: 228 days
-  documents_current_year: 55 (2026)
+  documents_current_year: 61 (2026)
   documents_last_year: 85 (2025)
   documents_published: 85 (2025)
   first_decision_time: 2 days
-  hm_score: 58.6
+  hm_score: 56.4
   journal: Studies in Educational Evaluation
-  orange_percentile: '93'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '6.6'
   publication_time: 7 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -1287,15 +1287,15 @@
   - General Education
   - Educational Assessment
 - acceptance_rate: 8%
-  documents_current_year: 50 (2026)
+  documents_current_year: 52 (2026)
   documents_last_year: 121 (2025)
   documents_published: 121 (2025)
   first_decision_time: 141 days
-  hm_score: 67.4
+  hm_score: 68.9
   journal: European Journal of Teacher Education
-  orange_percentile: '95'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '9.2'
+  orange_score: '10.5'
   publication_time: 10 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1305,15 +1305,15 @@
   tag:
   - Teacher Education & Development
 - acceptance_rate: 10%
-  documents_current_year: 37 (2026)
+  documents_current_year: 38 (2026)
   documents_last_year: 214 (2025)
   documents_published: 214 (2025)
   first_decision_time: 13 days
-  hm_score: 72.6
+  hm_score: 72.8
   journal: Professional Development in Education
-  orange_percentile: '93'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '8.2'
   publication_time: 17 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1323,15 +1323,15 @@
   tag:
   - Teacher Education & Development
 - acceptance_rate: 14%
-  documents_current_year: 99 (2026)
-  documents_last_year: 216 (2025)
-  documents_published: 216 (2025)
+  documents_current_year: 114 (2026)
+  documents_last_year: 206 (2025)
+  documents_published: 206 (2025)
   first_decision_time: 5 days
-  hm_score: 73.6
+  hm_score: 75.3
   journal: Environmental Education Research
-  orange_percentile: '87'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '6.0'
+  orange_score: '7.1'
   publication_time: 12 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1342,15 +1342,15 @@
   - Subject Education
   - Environmental Education
 - acceptance_rate: 11%
-  documents_current_year: 54 (2026)
+  documents_current_year: 56 (2026)
   documents_last_year: 80 (2025)
   documents_published: 80 (2025)
   first_decision_time: 37 days
-  hm_score: 65.0
+  hm_score: 64.0
   journal: Educational Psychology
-  orange_percentile: '91'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '6.8'
+  orange_score: '6.2'
   publication_time: 11 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1360,15 +1360,15 @@
   tag:
   - Educational Psychology
 - acceptance_rate: 5%
-  documents_current_year: 16 (2026)
+  documents_current_year: 18 (2026)
   documents_last_year: 41 (2025)
   documents_published: 41 (2025)
   first_decision_time: 46 days
-  hm_score: 57.1
+  hm_score: 53.2
   journal: Distance Education
-  orange_percentile: '92'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '7.7'
+  orange_score: '5.6'
   publication_time: 18 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1381,26 +1381,26 @@
 - documents_current_year: 15 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
-  hm_score: 53.4
+  hm_score: 52.5
   journal: Educacion XX1
-  orange_percentile: '87'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '6.0'
+  orange_score: '5.7'
   purple_quartile: Q1
   purple_score: '3.0'
   red_division: 教育学2区
   tag:
   - General Education
 - acceptance_rate: 8%
-  documents_current_year: 47 (2026)
+  documents_current_year: 49 (2026)
   documents_last_year: 64 (2025)
   documents_published: 64 (2025)
   first_decision_time: 11 days
-  hm_score: 63.4
+  hm_score: 63.6
   journal: Journal of Education Policy
-  orange_percentile: '93'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '8.2'
   publication_time: 22 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1411,15 +1411,15 @@
   - Education Policy & Social Issues
   - Educational Management & Leadership
 - acceptance_rate: 11%
-  documents_current_year: 63 (2026)
+  documents_current_year: 64 (2026)
   documents_last_year: 120 (2025)
   documents_published: 120 (2025)
   first_decision_time: 72 days
-  hm_score: 71.1
+  hm_score: 73.5
   journal: Physical Education and Sport Pedagogy
-  orange_percentile: '97'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '9.7'
+  orange_score: '11.9'
   publication_time: 12 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1429,12 +1429,12 @@
   tag:
   - Subject Education
   - Physical Education
-- documents_current_year: 26 (2026)
+- documents_current_year: 27 (2026)
   documents_last_year: 93 (2025)
   documents_published: 93 (2025)
-  hm_score: 54.2
+  hm_score: 54.0
   journal: npj Science of Learning
-  orange_percentile: '81'
+  orange_percentile: '80'
   orange_quartile: Q1
   orange_score: '5.0'
   purple_quartile: Q1
@@ -1443,15 +1443,15 @@
   tag:
   - Educational Psychology
   - Educational Technology
-- documents_current_year: 13 (2026)
+- documents_current_year: 14 (2026)
   documents_last_year: 26 (2025)
   documents_published: 26 (2025)
   first_decision_time: 12 days
-  hm_score: 52.1
+  hm_score: 55.6
   journal: Journal of Educational Change
-  orange_percentile: '84'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '5.5'
+  orange_score: '7.6'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.9'
@@ -1460,15 +1460,15 @@
   - Education Policy & Social Issues
   - Educational Management & Leadership
 - acceptance_rate: 11%
-  documents_current_year: 148 (2026)
-  documents_last_year: 146 (2025)
-  documents_published: 146 (2025)
+  documents_current_year: 159 (2026)
+  documents_last_year: 142 (2025)
+  documents_published: 142 (2025)
   first_decision_time: 55 days
-  hm_score: 67.8
+  hm_score: 69.0
   journal: Higher Education Research & Development
-  orange_percentile: '92'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '7.6'
+  orange_score: '8.6'
   publication_time: 43 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1482,11 +1482,11 @@
   documents_last_year: 82 (2025)
   documents_published: 82 (2025)
   first_decision_time: 8 days
-  hm_score: 59.1
+  hm_score: 60.4
   journal: Language and Education
-  orange_percentile: '94'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '5.8'
   publication_time: 16 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1499,11 +1499,11 @@
   documents_current_year: 15 (2026)
   documents_last_year: 19 (2025)
   documents_published: 19 (2025)
-  hm_score: 55.0
+  hm_score: 54.3
   journal: Sociology of Education
-  orange_percentile: '93'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '6.8'
+  orange_score: '6.5'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '2.8'
@@ -1515,11 +1515,11 @@
   documents_last_year: 28 (2025)
   documents_published: 28 (2025)
   first_decision_time: 77 days
-  hm_score: 57.6
+  hm_score: 55.4
   journal: School Effectiveness and School Improvement
-  orange_percentile: '88'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '6.4'
+  orange_score: '5.4'
   publication_time: 42 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1529,15 +1529,15 @@
   tag:
   - Educational Management & Leadership
   - Education Policy & Social Issues
-- documents_current_year: 115 (2026)
+- documents_current_year: 118 (2026)
   documents_last_year: 201 (2025)
   documents_published: 201 (2025)
   first_decision_time: 18 days
-  hm_score: 57.0
+  hm_score: 55.0
   journal: Academic Psychiatry
-  orange_percentile: '69'
+  orange_percentile: '62'
   orange_quartile: Q2
-  orange_score: '3.6'
+  orange_score: '3.0'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.8'
@@ -1546,15 +1546,15 @@
   - Medical Education
   - Educational Psychology
 - acceptance_rate: 13.4%
-  documents_current_year: 42 (2026)
+  documents_current_year: 47 (2026)
   documents_last_year: 88 (2025)
   documents_published: 88 (2025)
   first_decision_time: 57 days
-  hm_score: 63.8
+  hm_score: 64.6
   journal: Educational Evaluation and Policy Analysis
-  orange_percentile: '83'
+  orange_percentile: '85'
   orange_quartile: Q1
-  orange_score: '5.4'
+  orange_score: '5.8'
   publication_time: 36 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1568,11 +1568,11 @@
   documents_last_year: 82 (2025)
   documents_published: 82 (2025)
   first_decision_time: 24 days
-  hm_score: 69.0
+  hm_score: 63.1
   journal: Critical Studies in Education
-  orange_percentile: '97'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '11.2'
+  orange_score: '6.9'
   publication_time: 12 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1582,15 +1582,15 @@
   tag:
   - Education Policy & Social Issues
 - acceptance_rate: 16%
-  documents_current_year: 98 (2026)
+  documents_current_year: 103 (2026)
   documents_last_year: 219 (2025)
   documents_published: 219 (2025)
   first_decision_time: 5 days
-  hm_score: 76.4
+  hm_score: 77.2
   journal: Sport Education and Society
-  orange_percentile: '91'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '6.8'
+  orange_score: '7.2'
   publication_time: 13 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1600,15 +1600,15 @@
   tag:
   - Subject Education
   - Physical Education
-- documents_current_year: 86 (2026)
-  documents_last_year: 113 (2025)
-  documents_published: 113 (2025)
+- documents_current_year: 109 (2026)
+  documents_last_year: 96 (2025)
+  documents_published: 96 (2025)
   first_decision_time: 48 days
-  hm_score: 59.8
+  hm_score: 60.6
   journal: International Journal of Technology and Design Education
-  orange_percentile: '91'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '9.4'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.7'
@@ -1619,26 +1619,26 @@
 - documents_current_year: 19 (2026)
   documents_last_year: 54 (2025)
   documents_published: 54 (2025)
-  hm_score: 57.7
+  hm_score: 59.3
   journal: ELT Journal
-  orange_percentile: '96'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '7.7'
   purple_quartile: Q1
   purple_score: '2.6'
   red_division: 文学2区
   tag:
   - Language Education & Acquisition
 - acceptance_rate: 5.6%
-  documents_current_year: 11 (2026)
+  documents_current_year: 12 (2026)
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
   first_decision_time: 26 days
-  hm_score: 55.6
+  hm_score: 52.9
   journal: Teacher Education and Special Education
-  orange_percentile: '90'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '6.8'
+  orange_score: '5.5'
   publication_time: 32 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1652,11 +1652,11 @@
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
   first_decision_time: 8 days
-  hm_score: 46.6
+  hm_score: 49.7
   journal: Educational Research
-  orange_percentile: '73'
-  orange_quartile: Q2
-  orange_score: '3.8'
+  orange_percentile: '81'
+  orange_quartile: Q1
+  orange_score: '5.3'
   publication_time: 20 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1669,11 +1669,11 @@
   documents_current_year: 12 (2026)
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
-  hm_score: 48.7
+  hm_score: 53.6
   journal: Australian Journal of Education
-  orange_percentile: '74'
-  orange_quartile: Q2
-  orange_score: '4.0'
+  orange_percentile: '87'
+  orange_quartile: Q1
+  orange_score: '6.3'
   publication_time: 29 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1682,15 +1682,15 @@
   tag:
   - General Education
 - acceptance_rate: 14%
-  documents_current_year: 35 (2026)
+  documents_current_year: 37 (2026)
   documents_last_year: 67 (2025)
   documents_published: 67 (2025)
   first_decision_time: 39 days
-  hm_score: 65.4
+  hm_score: 66.0
   journal: Journal of Agricultural Education and Extension
   orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '6.4'
   publication_time: 40 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1701,11 +1701,11 @@
   - Subject Education
   - Agricultural Education
 - acceptance_rate: 16%
-  documents_current_year: 45 (2026)
-  documents_last_year: 85 (2025)
-  documents_published: 85 (2025)
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 59 days
-  hm_score: 71.4
+  hm_score: 68.4
   journal: International Journal of Bilingual Education and Bilingualism
   orange_percentile: '98'
   orange_quartile: Q1
@@ -1718,15 +1718,15 @@
   review_time: 165 days
   tag:
   - Language Education & Acquisition
-- documents_current_year: 46 (2026)
+- documents_current_year: 50 (2026)
   documents_last_year: 224 (2025)
   documents_published: 224 (2025)
   first_decision_time: 32 days
-  hm_score: 63.5
+  hm_score: 62.7
   journal: Science & Education
-  orange_percentile: '89'
+  orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '6.7'
+  orange_score: '6.3'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.5'
@@ -1735,15 +1735,15 @@
   - Subject Education
   - Science Education
 - acceptance_rate: 5%
-  documents_current_year: 34 (2026)
-  documents_last_year: 66 (2025)
-  documents_published: 66 (2025)
+  documents_current_year: 46 (2026)
+  documents_last_year: 54 (2025)
+  documents_published: 54 (2025)
   first_decision_time: 61 days
-  hm_score: 62.2
+  hm_score: 58.0
   journal: Technology, Pedagogy and Education
-  orange_percentile: '96'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '10.0'
+  orange_score: '7.0'
   publication_time: 108 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1755,15 +1755,15 @@
   - Teacher Education & Development
 - acceptance_rate: 5%
   acceptance_time: 183 days
-  documents_current_year: 109 (2026)
+  documents_current_year: 116 (2026)
   documents_last_year: 305 (2025)
   documents_published: 305 (2025)
   first_decision_time: 2 days
-  hm_score: 61.6
+  hm_score: 60.2
   journal: International Journal of Educational Research
-  orange_percentile: '82'
+  orange_percentile: '78'
   orange_quartile: Q1
-  orange_score: '5.2'
+  orange_score: '4.6'
   publication_time: 8 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -1775,11 +1775,11 @@
 - documents_current_year: 16 (2026)
   documents_last_year: 32 (2025)
   documents_published: 32 (2025)
-  hm_score: 56.9
+  hm_score: 55.4
   journal: RIED-Revista Iberoamericana de Educacion a Distancia
-  orange_percentile: '95'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '9.1'
+  orange_score: '8.2'
   purple_quartile: Q1
   purple_score: '2.4'
   red_division: 教育学3区
@@ -1787,15 +1787,15 @@
   - Educational Technology
   - Higher Education
 - acceptance_rate: 8%
-  documents_current_year: 78 (2026)
-  documents_last_year: 145 (2025)
-  documents_published: 145 (2025)
+  documents_current_year: 88 (2026)
+  documents_last_year: 139 (2025)
+  documents_published: 139 (2025)
   first_decision_time: 34 days
-  hm_score: 66.5
+  hm_score: 69.4
   journal: Teaching in Higher Education
-  orange_percentile: '95'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '9.7'
+  orange_score: '12.2'
   publication_time: 32 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1806,15 +1806,15 @@
   - Higher Education
   - Teacher Education & Development
 - acceptance_rate: 13%
-  documents_current_year: 25 (2026)
+  documents_current_year: 27 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
   first_decision_time: 45 days
-  hm_score: 62.9
+  hm_score: 64.8
   journal: Scientific Studies of Reading
-  orange_percentile: '94'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '7.8'
   publication_time: 25 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1824,15 +1824,15 @@
   tag:
   - Language Education & Acquisition
   - Educational Psychology
-- documents_current_year: 59 (2026)
+- documents_current_year: 64 (2026)
   documents_last_year: 102 (2025)
   documents_published: 102 (2025)
   first_decision_time: 6 days
-  hm_score: 59.6
+  hm_score: 59.3
   journal: Zdm-mathematics Education
-  orange_percentile: '96'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '6.6'
+  orange_score: '6.5'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.4'
@@ -1841,15 +1841,15 @@
   - Subject Education
   - Mathematics Education
 - acceptance_rate: 8%
-  documents_current_year: 42 (2026)
-  documents_last_year: 88 (2025)
-  documents_published: 88 (2025)
+  documents_current_year: 44 (2026)
+  documents_last_year: 87 (2025)
+  documents_published: 87 (2025)
   first_decision_time: 1 days
-  hm_score: 59.4
+  hm_score: 59.0
   journal: The Journal of Higher Education
-  orange_percentile: '87'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '6.2'
+  orange_score: '6.0'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1858,15 +1858,15 @@
   review_time: 78 days
   tag:
   - Higher Education
-- documents_current_year: 49 (2026)
+- documents_current_year: 53 (2026)
   documents_last_year: 214 (2025)
   documents_published: 214 (2025)
   first_decision_time: 10 days
-  hm_score: 60.0
+  hm_score: 59.9
   journal: The Australian Educational Researcher
-  orange_percentile: '81'
+  orange_percentile: '80'
   orange_quartile: Q1
-  orange_score: '5.0'
+  orange_score: '5.1'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.4'
@@ -1878,11 +1878,11 @@
   documents_last_year: 62 (2025)
   documents_published: 62 (2025)
   first_decision_time: 10 days
-  hm_score: 60.6
+  hm_score: 61.2
   journal: Journal of Higher Education Policy and Management
-  orange_percentile: '85'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '6.2'
   publication_time: 8 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1895,11 +1895,11 @@
 - documents_current_year: 4 (2026)
   documents_last_year: 97 (2025)
   documents_published: 97 (2025)
-  hm_score: 58.3
+  hm_score: 57.5
   journal: Journal of Diversity in Higher Education
-  orange_percentile: '93'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '7.9'
+  orange_score: '7.5'
   purple_quartile: Q1
   purple_score: '2.4'
   red_division: 教育学3区
@@ -1911,11 +1911,11 @@
   documents_last_year: 28 (2023)
   documents_published: 28 (2023)
   first_decision_time: 83 days
-  hm_score: 47.2
+  hm_score: 51.3
   journal: Review of Research in Education
-  orange_percentile: '80'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '4.8'
+  orange_score: '6.9'
   publication_time: 51 days
   publisher: SAGE
   purple_quartile: Q1
@@ -1928,11 +1928,11 @@
   documents_last_year: 84 (2025)
   documents_published: 84 (2025)
   first_decision_time: 3 days
-  hm_score: 55.1
+  hm_score: 57.3
   journal: Higher Education Policy
-  orange_percentile: '89'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '5.5'
+  orange_score: '6.9'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.4'
@@ -1941,15 +1941,15 @@
   - Higher Education
   - Education Policy & Social Issues
 - acceptance_rate: 12%
-  documents_current_year: 37 (2026)
-  documents_last_year: 37 (2025)
-  documents_published: 37 (2025)
+  documents_current_year: 42 (2026)
+  documents_last_year: 32 (2025)
+  documents_published: 32 (2025)
   first_decision_time: 30 days
-  hm_score: 56.5
+  hm_score: 57.8
   journal: Journal of Environmental Education
-  orange_percentile: '77'
+  orange_percentile: '80'
   orange_quartile: Q1
-  orange_score: '4.3'
+  orange_score: '5.0'
   publication_time: 29 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -1961,15 +1961,15 @@
   - Environmental Education
 - acceptance_rate: 5%
   acceptance_time: 168 days
-  documents_current_year: 112 (2026)
+  documents_current_year: 114 (2026)
   documents_last_year: 215 (2025)
   documents_published: 215 (2025)
   first_decision_time: 12 days
-  hm_score: 62.3
+  hm_score: 60.5
   journal: International Journal of Educational Development
-  orange_percentile: '87'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '5.3'
+  orange_score: '4.5'
   publication_time: 9 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -1979,15 +1979,15 @@
   tag:
   - Education Policy & Social Issues
   - International/Comparative Education
-- documents_current_year: 59 (2026)
-  documents_last_year: 102 (2025)
-  documents_published: 102 (2025)
+- documents_current_year: 77 (2026)
+  documents_last_year: 91 (2025)
+  documents_published: 91 (2025)
   first_decision_time: 29 days
-  hm_score: 58.8
+  hm_score: 56.8
   journal: Research in Science Education
-  orange_percentile: '91'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '7.0'
+  orange_score: '7.2'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.3'
@@ -1995,15 +1995,15 @@
   tag:
   - Subject Education
   - Science Education
-- documents_current_year: 66 (2026)
+- documents_current_year: 70 (2026)
   documents_last_year: 121 (2025)
   documents_published: 121 (2025)
   first_decision_time: 18 days
-  hm_score: 56.2
+  hm_score: 57.3
   journal: Asia Pacific Education Review
-  orange_percentile: '85'
+  orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '6.3'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.3'
@@ -2011,14 +2011,14 @@
   tag:
   - General Education
   - Education Policy & Social Issues
-- documents_current_year: 104 (2026)
-  documents_last_year: 240 (2025)
-  documents_published: 240 (2025)
-  hm_score: 59.8
+- documents_current_year: 112 (2026)
+  documents_last_year: 232 (2025)
+  documents_published: 232 (2025)
+  hm_score: 60.1
   journal: International Journal of Science Education
   orange_percentile: '81'
   orange_quartile: Q1
-  orange_score: '5.0'
+  orange_score: '5.3'
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '2.3'
@@ -2026,44 +2026,44 @@
   tag:
   - Subject Education
   - Science Education
-- documents_current_year: 30 (2026)
+- documents_current_year: 36 (2026)
   documents_last_year: 52 (2025)
   documents_published: 52 (2025)
   first_decision_time: 7 days
-  hm_score: 50.7
+  hm_score: 52.1
   journal: Research in Higher Education
-  orange_percentile: '75'
+  orange_percentile: '79'
   orange_quartile: Q1
-  orange_score: '4.1'
+  orange_score: '4.7'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.3'
   red_division: 教育学3区
   tag:
   - Higher Education
-- documents_current_year: 10 (2026)
+- documents_current_year: 12 (2026)
   documents_last_year: 20 (2025)
   documents_published: 20 (2025)
-  hm_score: 44.3
+  hm_score: 45.7
   journal: American Journal of Education
-  orange_percentile: '63'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '3.1'
+  orange_score: '3.5'
   purple_quartile: Q1
   purple_score: '2.3'
   red_division: 教育学2区
   tag:
   - General Education
 - acceptance_rate: 13%
-  documents_current_year: 8 (2026)
-  documents_last_year: 18 (2025)
-  documents_published: 18 (2025)
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 26 days
-  hm_score: 54.9
+  hm_score: 54.4
   journal: Curriculum Inquiry
-  orange_percentile: '69'
+  orange_percentile: '67'
   orange_quartile: Q2
-  orange_score: '3.5'
+  orange_score: '3.4'
   publication_time: 123 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2074,7 +2074,7 @@
   - Education Policy & Social Issues
   - Curriculum Studies
 - acceptance_rate: 7%
-  documents_current_year: 154 (2026)
+  documents_current_year: 163 (2026)
   documents_last_year: 300 (2025)
   documents_published: 300 (2025)
   first_decision_time: 10 days
@@ -2092,29 +2092,29 @@
   tag:
   - Language Education & Acquisition
   - Curriculum Studies
-- documents_current_year: 31 (2026)
+- documents_current_year: 32 (2026)
   documents_last_year: 146 (2025)
   documents_published: 146 (2025)
-  hm_score: 56.1
+  hm_score: 57.8
   journal: IRAL - International Review of Applied Linguistics in Language Teaching
-  orange_percentile: '92'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '4.3'
+  orange_score: '5.4'
   purple_quartile: Q1
   purple_score: '2.2'
   red_division: 文学2区
   tag:
   - Language Education & Acquisition
 - acceptance_rate: 5%
-  documents_current_year: 9 (2026)
+  documents_current_year: 14 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
   first_decision_time: 19 days
-  hm_score: 53.3
+  hm_score: 52.3
   journal: 'Assessment in Education: Principles, Policy & Practice'
-  orange_percentile: '88'
+  orange_percentile: '85'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '5.9'
   publication_time: 10 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2127,25 +2127,25 @@
 - documents_current_year: 4 (2026)
   documents_last_year: 22 (2025)
   documents_published: 22 (2025)
-  hm_score: 44.3
+  hm_score: 45.5
   journal: Review of Higher Education
-  orange_percentile: '64'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '3.1'
+  orange_score: '3.5'
   purple_quartile: Q1
   purple_score: '2.2'
   red_division: 教育学2区
   tag:
   - Higher Education
-- documents_current_year: 161 (2026)
+- documents_current_year: 170 (2026)
   documents_last_year: 160 (2025)
   documents_published: 160 (2025)
   first_decision_time: 3 days
-  hm_score: 57.6
+  hm_score: 58.2
   journal: Reading and Writing
-  orange_percentile: '95'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '5.2'
+  orange_score: '5.6'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.2'
@@ -2154,15 +2154,15 @@
   - Language Education & Acquisition
 - acceptance_rate: 14%
   acceptance_time: 197 days
-  documents_current_year: 17 (2026)
+  documents_current_year: 19 (2026)
   documents_last_year: 33 (2025)
   documents_published: 33 (2025)
   first_decision_time: 9 days
-  hm_score: 57.4
+  hm_score: 55.8
   journal: Mind, Brain, and Education
-  orange_percentile: '75'
-  orange_quartile: Q1
-  orange_score: '4.0'
+  orange_percentile: '69'
+  orange_quartile: Q2
+  orange_score: '3.6'
   publication_time: 16 days
   publisher: Wiley
   purple_quartile: Q1
@@ -2172,15 +2172,15 @@
   - Educational Psychology
   - Educational Technology
 - acceptance_rate: 13%
-  documents_current_year: 75 (2026)
+  documents_current_year: 78 (2026)
   documents_last_year: 100 (2025)
   documents_published: 100 (2025)
   first_decision_time: 4 days
-  hm_score: 62.8
+  hm_score: 62.5
   journal: Early Education and Development
-  orange_percentile: '84'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '5.5'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2191,15 +2191,15 @@
   - Early Childhood Education
 - acceptance_rate: 7%
   acceptance_time: 196 days
-  documents_current_year: 43 (2026)
+  documents_current_year: 45 (2026)
   documents_last_year: 64 (2025)
   documents_published: 64 (2025)
   first_decision_time: 4 days
-  hm_score: 55.8
+  hm_score: 56.9
   journal: Linguistics and Education
-  orange_percentile: '90'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '3.6'
+  orange_score: '4.3'
   publication_time: 12 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -2211,11 +2211,11 @@
 - documents_current_year: 18 (2026)
   documents_last_year: 83 (2025)
   documents_published: 83 (2025)
-  hm_score: 51.1
+  hm_score: 52.7
   journal: Porta Linguarum
-  orange_percentile: '86'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '2.7'
+  orange_score: '3.5'
   purple_quartile: Q1
   purple_score: '2.1'
   red_division: 教育学4区
@@ -2226,11 +2226,11 @@
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
   first_decision_time: 15 days
-  hm_score: 50.7
+  hm_score: 51.3
   journal: International Multilingual Research Journal
   orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '5.3'
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '2.1'
@@ -2240,15 +2240,15 @@
   - Language Education & Acquisition
 - acceptance_rate: 11%
   acceptance_time: 153 days
-  documents_current_year: 172 (2026)
+  documents_current_year: 176 (2026)
   documents_last_year: 184 (2025)
   documents_published: 184 (2025)
   first_decision_time: 7 days
-  hm_score: 60.7
+  hm_score: 61.6
   journal: British Educational Research Journal
-  orange_percentile: '79'
+  orange_percentile: '81'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '5.2'
   publication_time: 17 days
   publisher: Wiley
   purple_quartile: Q1
@@ -2261,11 +2261,11 @@
   documents_last_year: 22 (2025)
   documents_published: 22 (2025)
   first_decision_time: 1 days
-  hm_score: 54.0
+  hm_score: 52.7
   journal: Theory & Research in Social Education
-  orange_percentile: '90'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '5.3'
   publication_time: 16 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2275,15 +2275,15 @@
   tag:
   - Subject Education
   - Social Studies Education
-- documents_current_year: 46 (2026)
+- documents_current_year: 49 (2026)
   documents_last_year: 75 (2025)
   documents_published: 75 (2025)
   first_decision_time: 34 days
-  hm_score: 52.7
+  hm_score: 51.9
   journal: Instructional Science
-  orange_percentile: '82'
+  orange_percentile: '79'
   orange_quartile: Q1
-  orange_score: '5.1'
+  orange_score: '4.9'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.1'
@@ -2291,15 +2291,15 @@
   tag:
   - Educational Psychology
   - Educational Technology
-- documents_current_year: 50 (2026)
+- documents_current_year: 56 (2026)
   documents_last_year: 166 (2025)
   documents_published: 166 (2025)
   first_decision_time: 18 days
-  hm_score: 58.1
+  hm_score: 58.2
   journal: International Journal of Science and Mathematics Education
-  orange_percentile: '95'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '5.9'
+  orange_score: '6.2'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '2.1'
@@ -2309,15 +2309,15 @@
   - Mathematics Education
   - Science Education
 - acceptance_rate: 25%
-  documents_current_year: 80 (2026)
-  documents_last_year: 80 (2025)
-  documents_published: 80 (2025)
+  documents_current_year: 90 (2026)
+  documents_last_year: 74 (2025)
+  documents_published: 74 (2025)
   first_decision_time: 21 days
-  hm_score: 70.9
+  hm_score: 72.9
   journal: British Journal of Sociology of Education
-  orange_percentile: '76'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '3.5'
+  orange_score: '4.3'
   publication_time: 17 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2332,11 +2332,11 @@
   documents_last_year: 88 (2025)
   documents_published: 88 (2025)
   first_decision_time: 20 days
-  hm_score: 66.3
+  hm_score: 68.1
   journal: Oxford Review of Education
-  orange_percentile: '81'
+  orange_percentile: '85'
   orange_quartile: Q1
-  orange_score: '4.9'
+  orange_score: '5.9'
   publication_time: 71 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2350,11 +2350,11 @@
   documents_last_year: 38 (2025)
   documents_published: 38 (2025)
   first_decision_time: 3 days
-  hm_score: 48.2
+  hm_score: 49.0
   journal: British Journal of Educational Studies
-  orange_percentile: '75'
+  orange_percentile: '77'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '4.4'
   publication_time: 25 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2364,15 +2364,15 @@
   tag:
   - General Education
 - acceptance_rate: 3%
-  documents_current_year: 7 (2026)
+  documents_current_year: 13 (2026)
   documents_last_year: 41 (2025)
   documents_published: 41 (2025)
   first_decision_time: 9 days
-  hm_score: 54.1
+  hm_score: 55.8
   journal: Journal of Marketing for Higher Education
-  orange_percentile: '94'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '8.1'
+  orange_score: '9.6'
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '2.1'
@@ -2381,29 +2381,29 @@
   tag:
   - Higher Education
   - Educational Management & Leadership
-- documents_current_year: 19 (2026)
+- documents_current_year: 22 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
   first_decision_time: 22 days
-  hm_score: 28.2
+  hm_score: 27.3
   journal: Language Policy
-  orange_percentile: '95'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '5.2'
+  orange_score: '4.7'
   publisher: Springer
   tag:
   - Language Education & Acquisition
   - Education Policy & Social Issues
 - acceptance_rate: 22%
-  documents_current_year: 138 (2026)
+  documents_current_year: 142 (2026)
   documents_last_year: 228 (2025)
   documents_published: 228 (2025)
   first_decision_time: 16 days
-  hm_score: 81.3
+  hm_score: 80.8
   journal: International Journal of Multilingualism
-  orange_percentile: '96'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '6.1'
+  orange_score: '5.8'
   publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2412,14 +2412,14 @@
   review_time: 77 days
   tag:
   - Language Education & Acquisition
-- documents_current_year: 26 (2026)
-  documents_last_year: 38 (2025)
-  documents_published: 38 (2025)
+- documents_current_year: 32 (2026)
+  documents_last_year: 34 (2025)
+  documents_published: 34 (2025)
   hm_score: 48.7
   journal: Journal of Studies in International Education
-  orange_percentile: '92'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '7.3'
+  orange_score: '7.5'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '2.0'
@@ -2428,15 +2428,15 @@
   - Higher Education
   - International/Comparative Education
 - acceptance_rate: 11%
-  documents_current_year: 50 (2026)
-  documents_last_year: 101 (2025)
-  documents_published: 101 (2025)
+  documents_current_year: 56 (2026)
+  documents_last_year: 98 (2025)
+  documents_published: 98 (2025)
   first_decision_time: 42 days
-  hm_score: 66.6
+  hm_score: 65.6
   journal: Race Ethnicity and Education
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '7.0'
+  orange_score: '7.8'
   publication_time: 18 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2446,14 +2446,14 @@
   tag:
   - Education Policy & Social Issues
   - Sociology of Education
-- documents_current_year: 54 (2026)
-  documents_last_year: 84 (2025)
-  documents_published: 84 (2025)
-  hm_score: 48.7
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 47.3
   journal: European Educational Research Journal
-  orange_percentile: '85'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '5.7'
+  orange_score: '6.7'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '2.0'
@@ -2466,9 +2466,9 @@
   documents_last_year: 86 (2025)
   documents_published: 86 (2025)
   first_decision_time: 3 days
-  hm_score: 52.8
+  hm_score: 52.6
   journal: Journal of Curriculum Studies
-  orange_percentile: '80'
+  orange_percentile: '79'
   orange_quartile: Q1
   orange_score: '4.8'
   publication_time: 14 days
@@ -2479,29 +2479,29 @@
   review_time: 81 days
   tag:
   - Curriculum Studies
-- documents_current_year: 16 (2026)
+- documents_current_year: 17 (2026)
   documents_last_year: 56 (2025)
   documents_published: 56 (2025)
-  hm_score: 43.0
+  hm_score: 46.2
   journal: Journal of Educational Administration
-  orange_percentile: '68'
-  orange_quartile: Q2
-  orange_score: '3.4'
+  orange_percentile: '78'
+  orange_quartile: Q1
+  orange_score: '4.6'
   purple_quartile: Q2
   purple_score: '2.0'
   red_division: 教育学3区
   tag:
   - Educational Management & Leadership
 - acceptance_rate: 14%
-  documents_current_year: 69 (2026)
-  documents_last_year: 140 (2025)
-  documents_published: 140 (2025)
+  documents_current_year: 97 (2026)
+  documents_last_year: 114 (2025)
+  documents_published: 114 (2025)
   first_decision_time: 24 days
-  hm_score: 60.3
+  hm_score: 62.6
   journal: Research in Science & Technological Education
-  orange_percentile: '84'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '5.5'
+  orange_score: '6.8'
   publication_time: 10 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2516,11 +2516,11 @@
   documents_last_year: 56 (2025)
   documents_published: 56 (2025)
   first_decision_time: 12 days
-  hm_score: 61.7
+  hm_score: 60.7
   journal: Journal of School Violence
-  orange_percentile: '74'
+  orange_percentile: '70'
   orange_quartile: Q2
-  orange_score: '3.9'
+  orange_score: '3.7'
   publication_time: 16 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2533,11 +2533,11 @@
 - documents_current_year: 13 (2025)
   documents_last_year: 27 (2024)
   documents_published: 27 (2024)
-  hm_score: 41.1
+  hm_score: 42.2
   journal: Education Finance and Policy
-  orange_percentile: '72'
-  orange_quartile: Q2
-  orange_score: '3.7'
+  orange_percentile: '75'
+  orange_quartile: Q1
+  orange_score: '4.2'
   purple_quartile: Q2
   purple_score: '2.0'
   red_division: 教育学3区
@@ -2545,15 +2545,15 @@
   - Education Policy & Social Issues
   - Educational Management & Leadership
 - acceptance_rate: 17%
-  documents_current_year: 51 (2026)
-  documents_last_year: 102 (2025)
-  documents_published: 102 (2025)
+  documents_current_year: 56 (2026)
+  documents_last_year: 97 (2025)
+  documents_published: 97 (2025)
   first_decision_time: 71 days
-  hm_score: 64.5
+  hm_score: 62.7
   journal: 'Discourse: Studies in the Cultural Politics of Education'
-  orange_percentile: '94'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '5.1'
   publication_time: 24 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2563,14 +2563,14 @@
   tag:
   - Education Policy & Social Issues
   - Sociology of Education
-- documents_current_year: 19 (2026)
+- documents_current_year: 22 (2026)
   documents_last_year: 73 (2025)
   documents_published: 73 (2025)
-  hm_score: 46.0
+  hm_score: 40.8
   journal: Health Education Research
-  orange_percentile: '78'
-  orange_quartile: Q1
-  orange_score: '4.4'
+  orange_percentile: '60'
+  orange_quartile: Q2
+  orange_score: '2.8'
   purple_quartile: Q2
   purple_score: '2.0'
   red_division: 教育学4区
@@ -2579,15 +2579,15 @@
   - General Education
 - acceptance_rate: 10%
   acceptance_time: 421 days
-  documents_current_year: 7 (2026)
+  documents_current_year: 9 (2026)
   documents_last_year: 21 (2025)
   documents_published: 21 (2025)
   first_decision_time: 24 days
-  hm_score: 51.8
+  hm_score: 47.8
   journal: Journal of Research in Reading
-  orange_percentile: '88'
-  orange_quartile: Q1
-  orange_score: '5.2'
+  orange_percentile: '74'
+  orange_quartile: Q2
+  orange_score: '4.0'
   publication_time: 20 days
   publisher: Wiley
   purple_quartile: Q2
@@ -2596,7 +2596,7 @@
   tag:
   - Language Education & Acquisition
   - Subject Education
-- documents_current_year: 64 (2026)
+- documents_current_year: 67 (2026)
   documents_last_year: 95 (2025)
   documents_published: 95 (2025)
   first_decision_time: 19 days
@@ -2614,11 +2614,11 @@
 - documents_current_year: 23 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
-  hm_score: 46.9
+  hm_score: 50.4
   journal: International Review of Research in Open and Distributed Learning
-  orange_percentile: '81'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '4.9'
+  orange_score: '6.8'
   purple_quartile: Q2
   purple_score: '1.9'
   red_division: 教育学3区
@@ -2628,11 +2628,11 @@
 - documents_current_year: 18 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
-  hm_score: 41.8
+  hm_score: 43.4
   journal: Theory Into Practice
-  orange_percentile: '75'
+  orange_percentile: '79'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '4.8'
   publisher: Taylor & Francis
   purple_quartile: Q2
   purple_score: '1.9'
@@ -2641,15 +2641,15 @@
   - General Education
   - Curriculum Studies
 - acceptance_rate: 11%
-  documents_current_year: 38 (2026)
+  documents_current_year: 39 (2026)
   documents_last_year: 70 (2025)
   documents_published: 70 (2025)
   first_decision_time: 12 days
-  hm_score: 55.0
+  hm_score: 54.1
   journal: Gender and Education
-  orange_percentile: '88'
+  orange_percentile: '85'
   orange_quartile: Q1
-  orange_score: '4.6'
+  orange_score: '4.3'
   publication_time: 39 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2661,15 +2661,15 @@
   - Sociology of Education
 - acceptance_rate: 5%
   acceptance_time: 292 days
-  documents_current_year: 9 (2026)
+  documents_current_year: 15 (2026)
   documents_last_year: 28 (2025)
   documents_published: 28 (2025)
   first_decision_time: 28 days
-  hm_score: 42.3
+  hm_score: 43.0
   journal: 'Educational Measurement: Issues and Practice'
-  orange_percentile: '73'
-  orange_quartile: Q2
-  orange_score: '3.9'
+  orange_percentile: '75'
+  orange_quartile: Q1
+  orange_score: '4.2'
   publication_time: 21 days
   publisher: Wiley
   purple_quartile: Q2
@@ -2678,15 +2678,15 @@
   tag:
   - Educational Assessment
 - acceptance_rate: 7%
-  documents_current_year: 67 (2026)
+  documents_current_year: 69 (2026)
   documents_last_year: 141 (2025)
   documents_published: 141 (2025)
   first_decision_time: 31 days
-  hm_score: 53.6
+  hm_score: 54.5
   journal: Teachers and Teaching
-  orange_percentile: '89'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '5.0'
+  orange_score: '5.5'
   publication_time: 9 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2696,15 +2696,15 @@
   tag:
   - Teacher Education & Development
 - acceptance_rate: 11%
-  documents_current_year: 35 (2026)
+  documents_current_year: 37 (2026)
   documents_last_year: 125 (2025)
   documents_published: 125 (2025)
   first_decision_time: 96 days
-  hm_score: 57.9
+  hm_score: 59.3
   journal: 'Compare: A Journal of Comparative and International Education'
-  orange_percentile: '86'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '5.9'
+  orange_score: '6.7'
   publication_time: 28 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2718,11 +2718,11 @@
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
   first_decision_time: 3 days
-  hm_score: 44.1
+  hm_score: 43.8
   journal: Measurement in Physical Education and Exercise Science
   orange_percentile: '78'
   orange_quartile: Q1
-  orange_score: '4.7'
+  orange_score: '4.4'
   publication_time: 8 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2733,7 +2733,7 @@
   - Physical Education
   - Educational Assessment
 - acceptance_rate: 23%
-  documents_current_year: 59 (2026)
+  documents_current_year: 63 (2026)
   documents_last_year: 92 (2025)
   documents_published: 92 (2025)
   first_decision_time: 13 days
@@ -2754,11 +2754,11 @@
 - documents_current_year: 25 (2026)
   documents_last_year: 60 (2025)
   documents_published: 60 (2025)
-  hm_score: 38.7
+  hm_score: 42.9
   journal: Teachers College Record
-  orange_percentile: '53'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '2.3'
+  orange_score: '3.5'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.9'
@@ -2767,15 +2767,15 @@
   - General Education
   - Teacher Education & Development
 - acceptance_rate: 17%
-  documents_current_year: 35 (2026)
-  documents_last_year: 88 (2025)
-  documents_published: 88 (2025)
+  documents_current_year: 47 (2026)
+  documents_last_year: 81 (2025)
+  documents_published: 81 (2025)
   first_decision_time: 8 days
-  hm_score: 68.3
+  hm_score: 67.5
   journal: Current Issues in Language Planning
-  orange_percentile: '95'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '5.7'
+  orange_score: '5.1'
   publication_time: 17 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2786,15 +2786,15 @@
   - Language Education & Acquisition
   - Education Policy & Social Issues
 - acceptance_rate: 12%
-  documents_current_year: 52 (2026)
+  documents_current_year: 53 (2026)
   documents_last_year: 150 (2025)
   documents_published: 150 (2025)
   first_decision_time: 22 days
-  hm_score: 66.1
+  hm_score: 65.5
   journal: Journal of Language, Identity & Education
-  orange_percentile: '96'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '5.9'
   publication_time: 133 days
   publisher: Taylor & Francis
   purple_quartile: Q1
@@ -2804,15 +2804,15 @@
   tag:
   - Language Education & Acquisition
   - Sociology of Education
-- documents_current_year: 372 (2026)
+- documents_current_year: 387 (2026)
   documents_last_year: 280 (2025)
   documents_published: 280 (2025)
   first_decision_time: 15 days
-  hm_score: 56.2
+  hm_score: 54.3
   journal: Early Childhood Education Journal
-  orange_percentile: '87'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '6.2'
+  orange_score: '5.3'
   publisher: Springer
   purple_quartile: Q2
   purple_score: '1.8'
@@ -2821,15 +2821,15 @@
   - Early Childhood Education
 - acceptance_rate: 4%
   acceptance_time: 276 days
-  documents_current_year: 33 (2026)
+  documents_current_year: 39 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
   first_decision_time: 12 days
-  hm_score: 43.8
+  hm_score: 40.0
   journal: Learning, Culture and Social Interaction
-  orange_percentile: '81'
-  orange_quartile: Q1
-  orange_score: '5.0'
+  orange_percentile: '69'
+  orange_quartile: Q2
+  orange_score: '3.6'
   publication_time: 10 days
   publisher: Elsevier
   purple_quartile: Q2
@@ -2839,44 +2839,44 @@
   tag:
   - Educational Psychology
   - General Education
-- documents_current_year: 27 (2026)
+- documents_current_year: 29 (2026)
   documents_last_year: 50 (2025)
   documents_published: 50 (2025)
-  hm_score: 44.1
+  hm_score: 46.0
   journal: Educational Policy
-  orange_percentile: '82'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '5.1'
+  orange_score: '6.2'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.8'
   red_division: 教育学3区
   tag:
   - Education Policy & Social Issues
-- documents_current_year: 11 (2026)
+- documents_current_year: 12 (2026)
   documents_last_year: 24 (2025)
   documents_published: 24 (2025)
   first_decision_time: 14 days
-  hm_score: 43.4
+  hm_score: 42.1
   journal: Vocations and Learning
-  orange_percentile: '80'
+  orange_percentile: '76'
   orange_quartile: Q1
-  orange_score: '4.8'
+  orange_score: '4.3'
   publisher: Springer
   purple_quartile: Q2
   purple_score: '1.8'
   red_division: 教育学4区
   tag:
   - Vocational & Continuing Education
-- documents_current_year: 35 (2026)
+- documents_current_year: 38 (2026)
   documents_last_year: 106 (2025)
   documents_published: 106 (2025)
   first_decision_time: 17 days
-  hm_score: 52.4
+  hm_score: 51.8
   journal: Journal of Mathematics Teacher Education
-  orange_percentile: '95'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '5.6'
   publisher: Springer
   purple_quartile: Q2
   purple_score: '1.8'
@@ -2887,11 +2887,11 @@
 - documents_current_year: 49 (2026)
   documents_last_year: 85 (2025)
   documents_published: 85 (2025)
-  hm_score: 44.4
+  hm_score: 42.7
   journal: Journal of Teaching in Physical Education
-  orange_percentile: '74'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '4.0'
+  orange_score: '3.5'
   purple_quartile: Q2
   purple_score: '1.8'
   red_division: 教育学3区
@@ -2899,15 +2899,15 @@
   - Physical Education
   - Teacher Education & Development
 - acceptance_rate: 8%
-  documents_current_year: 39 (2026)
-  documents_last_year: 90 (2025)
-  documents_published: 90 (2025)
+  documents_current_year: 53 (2026)
+  documents_last_year: 87 (2025)
+  documents_published: 87 (2025)
   first_decision_time: 3 days
-  hm_score: 53.6
+  hm_score: 54.3
   journal: Journal of Moral Education
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '4.4'
+  orange_score: '5.1'
   publication_time: 40 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2918,15 +2918,15 @@
   - General Education
   - Educational Psychology
 - acceptance_rate: 7%
-  documents_current_year: 26 (2026)
-  documents_last_year: 47 (2025)
-  documents_published: 47 (2025)
+  documents_current_year: 33 (2026)
+  documents_last_year: 42 (2025)
+  documents_published: 42 (2025)
   first_decision_time: 10 days
-  hm_score: 51.4
+  hm_score: 50.3
   journal: Research Papers in Education
-  orange_percentile: '92'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '7.4'
+  orange_score: '6.9'
   publication_time: 31 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2937,15 +2937,15 @@
   - General Education
   - Education Policy & Social Issues
 - acceptance_rate: 10%
-  documents_current_year: 15 (2026)
+  documents_current_year: 17 (2026)
   documents_last_year: 48 (2025)
   documents_published: 48 (2025)
   first_decision_time: 97 days
-  hm_score: 53.0
+  hm_score: 50.4
   journal: Studies in Continuing Education
-  orange_percentile: '89'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '6.6'
+  orange_score: '5.4'
   publisher: Taylor & Francis
   purple_quartile: Q2
   purple_score: '1.8'
@@ -2955,15 +2955,15 @@
   - Vocational & Continuing Education
   - Higher Education
 - acceptance_rate: 10%
-  documents_current_year: 71 (2026)
+  documents_current_year: 74 (2026)
   documents_last_year: 92 (2025)
   documents_published: 92 (2025)
   first_decision_time: 60 days
-  hm_score: 48.6
+  hm_score: 44.8
   journal: Journal of Educational Research
-  orange_percentile: '68'
+  orange_percentile: '54'
   orange_quartile: Q2
-  orange_score: '3.4'
+  orange_score: '2.4'
   publication_time: 17 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -2978,9 +2978,9 @@
   documents_last_year: 87 (2025)
   documents_published: 87 (2025)
   first_decision_time: 4 days
-  hm_score: 43.5
+  hm_score: 43.3
   journal: Economics of Education Review
-  orange_percentile: '71'
+  orange_percentile: '70'
   orange_quartile: Q2
   orange_score: '3.7'
   publication_time: 18 days
@@ -2994,15 +2994,15 @@
   - Higher Education
 - acceptance_rate: 14%
   acceptance_time: 159 days
-  documents_current_year: 89 (2026)
+  documents_current_year: 92 (2026)
   documents_last_year: 109 (2025)
   documents_published: 109 (2025)
   first_decision_time: 10 days
-  hm_score: 60.2
+  hm_score: 60.0
   journal: Journal of School Health
   orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '3.8'
+  orange_score: '3.6'
   publication_time: 14 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3012,15 +3012,15 @@
   - General Education
   - Subject Education
 - acceptance_rate: 13%
-  documents_current_year: 70 (2026)
+  documents_current_year: 75 (2026)
   documents_last_year: 146 (2025)
   documents_published: 146 (2025)
   first_decision_time: 99 days
-  hm_score: 60.2
+  hm_score: 60.3
   journal: Educational Philosophy and Theory
-  orange_percentile: '94'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '4.8'
+  orange_score: '4.7'
   publication_time: 19 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3032,15 +3032,15 @@
   - Curriculum Studies
 - acceptance_rate: 15%
   acceptance_time: 140 days
-  documents_current_year: 279 (2026)
+  documents_current_year: 288 (2026)
   documents_last_year: 214 (2025)
   documents_published: 214 (2025)
   first_decision_time: 5 days
-  hm_score: 68.3
+  hm_score: 70.4
   journal: International Journal of Applied Linguistics
-  orange_percentile: '86'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '2.7'
+  orange_score: '3.8'
   publication_time: 17 days
   publisher: Wiley
   purple_quartile: Q1
@@ -3051,11 +3051,11 @@
 - documents_current_year: 23 (2026)
   documents_last_year: 44 (2025)
   documents_published: 44 (2025)
-  hm_score: 40.4
+  hm_score: 41.8
   journal: Journal of Professional Capital and Community
-  orange_percentile: '74'
-  orange_quartile: Q2
-  orange_score: '3.2'
+  orange_percentile: '78'
+  orange_quartile: Q1
+  orange_score: '3.8'
   purple_quartile: Q2
   purple_score: '1.7'
   red_division: 教育学3区
@@ -3063,15 +3063,15 @@
   - Teacher Education & Development
   - Educational Management & Leadership
 - acceptance_rate: 20%
-  documents_current_year: 167 (2026)
-  documents_last_year: 305 (2025)
-  documents_published: 305 (2025)
+  documents_current_year: 194 (2026)
+  documents_last_year: 282 (2025)
+  documents_published: 282 (2025)
   first_decision_time: 49 days
-  hm_score: 74.6
+  hm_score: 76.8
   journal: International Journal of Inclusive Education
-  orange_percentile: '95'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '9.0'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3081,14 +3081,14 @@
   tag:
   - Special Education
   - Education Policy & Social Issues
-- documents_current_year: 91 (2026)
+- documents_current_year: 97 (2026)
   documents_last_year: 116 (2025)
   documents_published: 116 (2025)
-  hm_score: 51.8
+  hm_score: 54.4
   journal: Urban Education
-  orange_percentile: '89'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '6.6'
+  orange_score: '8.2'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.7'
@@ -3101,11 +3101,11 @@
   documents_last_year: 172 (2025)
   documents_published: 172 (2025)
   first_decision_time: 27 days
-  hm_score: 49.2
+  hm_score: 52.8
   journal: Asia Pacific Journal of Education
-  orange_percentile: '85'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '8.0'
   publication_time: 21 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3118,11 +3118,11 @@
 - documents_current_year: 5 (2026)
   documents_last_year: 25 (2025)
   documents_published: 25 (2025)
-  hm_score: 44.4
+  hm_score: 42.9
   journal: Journal of Literacy Research
-  orange_percentile: '91'
+  orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '3.8'
+  orange_score: '3.1'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.7'
@@ -3133,11 +3133,11 @@
 - documents_current_year: 46 (2026)
   documents_last_year: 52 (2025)
   documents_published: 52 (2025)
-  hm_score: 45.1
+  hm_score: 47.0
   journal: Journal of Educational and Behavioral Statistics
-  orange_percentile: '80'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '3.7'
+  orange_score: '4.4'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.7'
@@ -3146,15 +3146,15 @@
   - Educational Assessment
   - General Education
 - acceptance_rate: 9%
-  documents_current_year: 56 (2026)
+  documents_current_year: 59 (2026)
   documents_last_year: 68 (2025)
   documents_published: 68 (2025)
   first_decision_time: 93 days
-  hm_score: 49.7
+  hm_score: 48.7
   journal: Journal of Education for Teaching
-  orange_percentile: '76'
-  orange_quartile: Q1
-  orange_score: '4.1'
+  orange_percentile: '72'
+  orange_quartile: Q2
+  orange_score: '3.9'
   publication_time: 11 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3164,15 +3164,15 @@
   tag:
   - Teacher Education & Development
 - acceptance_rate: 16%
-  documents_current_year: 53 (2026)
+  documents_current_year: 57 (2026)
   documents_last_year: 53 (2025)
   documents_published: 53 (2025)
   first_decision_time: 69 days
-  hm_score: 53.0
+  hm_score: 51.4
   journal: Quest
-  orange_percentile: '63'
+  orange_percentile: '57'
   orange_quartile: Q2
-  orange_score: '3.0'
+  orange_score: '2.6'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3182,15 +3182,15 @@
   tag:
   - Physical Education
   - Higher Education
-- documents_current_year: 53 (2026)
+- documents_current_year: 56 (2026)
   documents_last_year: 132 (2025)
   documents_published: 132 (2025)
   first_decision_time: 22 days
-  hm_score: 51.8
+  hm_score: 52.0
   journal: International Journal for Educational and Vocational Guidance
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '4.8'
+  orange_score: '5.0'
   publisher: Springer
   purple_quartile: Q2
   purple_score: '1.7'
@@ -3199,15 +3199,15 @@
   - Vocational & Continuing Education
   - Educational Psychology
 - acceptance_rate: 11%
-  documents_current_year: 51 (2026)
+  documents_current_year: 53 (2026)
   documents_last_year: 87 (2025)
   documents_published: 87 (2025)
   first_decision_time: 6 days
-  hm_score: 57.7
+  hm_score: 56.5
   journal: Journal of Experimental Education
-  orange_percentile: '91'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '7.1'
+  orange_score: '6.5'
   publication_time: 30 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3217,15 +3217,15 @@
   tag:
   - Educational Psychology
   - Educational Assessment
-- documents_current_year: 16 (2026)
+- documents_current_year: 18 (2026)
   documents_last_year: 28 (2025)
   documents_published: 28 (2025)
   first_decision_time: 39 days
-  hm_score: 45.4
+  hm_score: 44.6
   journal: Educational Assessment, Evaluation and Accountability
-  orange_percentile: '86'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '6.0'
+  orange_score: '5.6'
   publisher: Springer
   purple_quartile: Q2
   purple_score: '1.6'
@@ -3233,14 +3233,14 @@
   tag:
   - Educational Assessment
   - Education Policy & Social Issues
-- documents_current_year: 18 (2026)
+- documents_current_year: 19 (2026)
   documents_last_year: 38 (2025)
   documents_published: 38 (2025)
-  hm_score: 40.3
+  hm_score: 39.3
   journal: Comparative Education Review
-  orange_percentile: '72'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '3.7'
+  orange_score: '3.5'
   purple_quartile: Q2
   purple_score: '1.6'
   red_division: 教育学4区
@@ -3248,15 +3248,15 @@
   - International/Comparative Education
   - Education Policy & Social Issues
 - acceptance_rate: 3%
-  documents_current_year: 48 (2026)
+  documents_current_year: 52 (2026)
   documents_last_year: 96 (2025)
   documents_published: 96 (2025)
   first_decision_time: 6 days
-  hm_score: 49.6
+  hm_score: 51.5
   journal: Educational Studies
-  orange_percentile: '91'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '7.2'
+  orange_score: '8.7'
   publication_time: 10 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3267,15 +3267,15 @@
   - General Education
   - Sociology of Education
 - acceptance_rate: 10%
-  documents_current_year: 44 (2026)
+  documents_current_year: 46 (2026)
   documents_last_year: 44 (2025)
   documents_published: 44 (2025)
   first_decision_time: 25 days
-  hm_score: 46.4
+  hm_score: 47.3
   journal: Journal of Research on Educational Effectiveness
-  orange_percentile: '72'
-  orange_quartile: Q2
-  orange_score: '3.8'
+  orange_percentile: '75'
+  orange_quartile: Q1
+  orange_score: '4.1'
   publication_time: 76 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3290,11 +3290,11 @@
   documents_last_year: 42 (2025)
   documents_published: 42 (2025)
   first_decision_time: 49 days
-  hm_score: 38.8
+  hm_score: 38.5
   journal: Asia-Pacific Journal of Teacher Education
-  orange_percentile: '70'
+  orange_percentile: '69'
   orange_quartile: Q2
-  orange_score: '3.6'
+  orange_score: '3.5'
   publication_time: 48 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3308,11 +3308,11 @@
   documents_last_year: 26 (2025)
   documents_published: 26 (2025)
   first_decision_time: 57 days
-  hm_score: 48.9
+  hm_score: 49.8
   journal: Cultural Studies of Science Education
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '3.3'
+  orange_score: '4.0'
   publisher: Springer
   purple_quartile: Q1
   purple_score: '1.5'
@@ -3322,15 +3322,15 @@
   - Sociology of Education
 - acceptance_rate: 13%
   acceptance_time: 143 days
-  documents_current_year: 22 (2026)
+  documents_current_year: 24 (2026)
   documents_last_year: 32 (2025)
   documents_published: 32 (2025)
   first_decision_time: 11 days
-  hm_score: 51.2
+  hm_score: 52.7
   journal: Literacy
-  orange_percentile: '87'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '2.8'
+  orange_score: '3.7'
   publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3344,9 +3344,9 @@
   documents_last_year: 43 (2025)
   documents_published: 43 (2025)
   first_decision_time: 6 days
-  hm_score: 49.8
+  hm_score: 49.6
   journal: Cambridge Journal of Education
-  orange_percentile: '80'
+  orange_percentile: '79'
   orange_quartile: Q1
   orange_score: '4.8'
   publication_time: 24 days
@@ -3359,15 +3359,15 @@
   - General Education
   - Curriculum Studies
 - acceptance_rate: 4%
-  documents_current_year: 20 (2026)
+  documents_current_year: 21 (2026)
   documents_last_year: 40 (2025)
   documents_published: 40 (2025)
   first_decision_time: 3 days
-  hm_score: 47.6
+  hm_score: 49.1
   journal: Mathematical Thinking and Learning
-  orange_percentile: '96'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '6.4'
+  orange_score: '7.7'
   publication_time: 27 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3382,11 +3382,11 @@
   documents_last_year: 62 (2025)
   documents_published: 62 (2025)
   first_decision_time: 19 days
-  hm_score: 56.2
+  hm_score: 55.5
   journal: Foreign Language Annals
-  orange_percentile: '91'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '3.7'
   publication_time: 46 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3395,15 +3395,15 @@
   tag:
   - Language Education & Acquisition
 - acceptance_rate: 20%
-  documents_current_year: 94 (2026)
-  documents_last_year: 164 (2025)
-  documents_published: 164 (2025)
+  documents_current_year: 110 (2026)
+  documents_last_year: 149 (2025)
+  documents_published: 149 (2025)
   first_decision_time: 52 days
-  hm_score: 64.5
+  hm_score: 65.0
   journal: Scandinavian Journal of Educational Research
-  orange_percentile: '82'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '5.1'
+  orange_score: '5.4'
   publication_time: 27 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3413,14 +3413,14 @@
   tag:
   - General Education
   - International/Comparative Education
-- documents_current_year: 14 (2026)
+- documents_current_year: 15 (2026)
   documents_last_year: 19 (2025)
   documents_published: 19 (2025)
-  hm_score: 40.2
+  hm_score: 41.5
   journal: Adult Education Quarterly
-  orange_percentile: '72'
-  orange_quartile: Q2
-  orange_score: '3.8'
+  orange_percentile: '76'
+  orange_quartile: Q1
+  orange_score: '4.3'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.5'
@@ -3429,15 +3429,15 @@
   - Higher Education
   - Vocational & Continuing Education
 - acceptance_rate: 29%
-  documents_current_year: 206 (2026)
+  documents_current_year: 208 (2026)
   documents_last_year: 530 (2025)
   documents_published: 530 (2025)
   first_decision_time: 23 days
-  hm_score: 78.0
+  hm_score: 79.2
   journal: Journal of American College Health
-  orange_percentile: '77'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '5.8'
   publication_time: 22 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3448,15 +3448,15 @@
   - Higher Education
   - Medical Education
 - acceptance_rate: 51%
-  documents_current_year: 139 (2026)
+  documents_current_year: 148 (2026)
   documents_last_year: 189 (2025)
   documents_published: 189 (2025)
   first_decision_time: 62 days
-  hm_score: 87.1
+  hm_score: 88.3
   journal: Educational Gerontology
-  orange_percentile: '54'
+  orange_percentile: '58'
   orange_quartile: Q2
-  orange_score: '2.3'
+  orange_score: '2.7'
   publication_time: 13 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3468,15 +3468,15 @@
   - Vocational & Continuing Education
 - acceptance_rate: 18%
   acceptance_time: 222 days
-  documents_current_year: 30 (2026)
+  documents_current_year: 32 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
   first_decision_time: 24 days
-  hm_score: 57.6
+  hm_score: 58.5
   journal: The Reading Teacher
-  orange_percentile: '82'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '2.2'
+  orange_score: '2.7'
   publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3487,15 +3487,15 @@
   - General Education
 - acceptance_rate: 13%
   acceptance_time: 204 days
-  documents_current_year: 27 (2026)
+  documents_current_year: 29 (2026)
   documents_last_year: 61 (2025)
   documents_published: 61 (2025)
   first_decision_time: 35 days
-  hm_score: 46.9
+  hm_score: 46.4
   journal: Journal of Adolescent & Adult Literacy
-  orange_percentile: '53'
+  orange_percentile: '51'
   orange_quartile: Q2
-  orange_score: '2.3'
+  orange_score: '2.2'
   publication_time: 18 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3509,11 +3509,11 @@
   documents_last_year: 28 (2024)
   documents_published: 28 (2024)
   first_decision_time: 95 days
-  hm_score: 60.3
+  hm_score: 57.4
   journal: Mind, Culture, and Activity
-  orange_percentile: '98'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '5.9'
+  orange_score: '3.8'
   publication_time: 33 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3524,15 +3524,15 @@
   - Educational Psychology
   - General Education
 - acceptance_rate: 21%
-  documents_current_year: 72 (2026)
+  documents_current_year: 79 (2026)
   documents_last_year: 111 (2025)
   documents_published: 111 (2025)
   first_decision_time: 38 days
-  hm_score: 62.8
+  hm_score: 60.6
   journal: European Early Childhood Education Research Journal
-  orange_percentile: '75'
-  orange_quartile: Q1
-  orange_score: '4.0'
+  orange_percentile: '67'
+  orange_quartile: Q2
+  orange_score: '3.4'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3544,11 +3544,11 @@
 - documents_current_year: 14 (2026)
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
-  hm_score: 36.3
+  hm_score: 34.0
   journal: The Elementary School Journal
-  orange_percentile: '59'
+  orange_percentile: '50'
   orange_quartile: Q2
-  orange_score: '2.7'
+  orange_score: '2.2'
   purple_quartile: Q2
   purple_score: '1.4'
   red_division: 教育学4区
@@ -3558,11 +3558,11 @@
 - documents_current_year: 9 (2025)
   documents_last_year: 19 (2024)
   documents_published: 19 (2024)
-  hm_score: 41.4
+  hm_score: 40.0
   journal: Research in the Teaching of English
-  orange_percentile: '85'
+  orange_percentile: '80'
   orange_quartile: Q1
-  orange_score: '2.6'
+  orange_score: '2.2'
   purple_quartile: Q2
   purple_score: '1.4'
   red_division: 教育学2区
@@ -3570,15 +3570,15 @@
   - Language Education & Acquisition
   - Subject Education
 - acceptance_rate: 12%
-  documents_current_year: 38 (2026)
-  documents_last_year: 68 (2025)
-  documents_published: 68 (2025)
+  documents_current_year: 42 (2026)
+  documents_last_year: 67 (2025)
+  documents_published: 67 (2025)
   first_decision_time: 16 days
-  hm_score: 51.0
+  hm_score: 52.6
   journal: International Journal for Academic Development
-  orange_percentile: '72'
-  orange_quartile: Q2
-  orange_score: '3.8'
+  orange_percentile: '77'
+  orange_quartile: Q1
+  orange_score: '4.4'
   publication_time: 124 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3589,15 +3589,15 @@
   - Higher Education
   - Teacher Education & Development
 - acceptance_time: 253 days
-  documents_current_year: 12 (2026)
+  documents_current_year: 13 (2026)
   documents_last_year: 18 (2025)
   documents_published: 18 (2025)
   first_decision_time: 1 day
-  hm_score: 40.8
+  hm_score: 36.9
   journal: International Review of Economics Education
-  orange_percentile: '75'
-  orange_quartile: Q1
-  orange_score: '4.0'
+  orange_percentile: '61'
+  orange_quartile: Q2
+  orange_score: '2.9'
   publication_time: 5 days
   publisher: Elsevier
   purple_quartile: Q2
@@ -3608,15 +3608,15 @@
   - Subject Education
   - Higher Education
 - acceptance_rate: 13%
-  documents_current_year: 40 (2026)
-  documents_last_year: 89 (2025)
-  documents_published: 89 (2025)
+  documents_current_year: 53 (2026)
+  documents_last_year: 80 (2025)
+  documents_published: 80 (2025)
   first_decision_time: 6 days
-  hm_score: 50.6
+  hm_score: 52.9
   journal: Journal of Biological Education
-  orange_percentile: '67'
-  orange_quartile: Q2
-  orange_score: '3.4'
+  orange_percentile: '75'
+  orange_quartile: Q1
+  orange_score: '4.1'
   publication_time: 45 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3629,22 +3629,22 @@
 - documents_current_year: 22 (2026)
   documents_last_year: 59 (2025)
   documents_published: 59 (2025)
-  hm_score: 20.9
+  hm_score: 18.1
   journal: Revista de Educación
-  orange_percentile: '57'
-  orange_quartile: Q2
-  orange_score: '2.5'
+  orange_percentile: '46'
+  orange_quartile: Q3
+  orange_score: '1.9'
   tag:
   - General Education
   - International/Comparative Education
 - documents_current_year: 25 (2026)
   documents_last_year: 47 (2025)
   documents_published: 47 (2025)
-  hm_score: 46.2
+  hm_score: 45.7
   journal: Second Language Research
-  orange_percentile: '95'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '5.3'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.3'
@@ -3653,15 +3653,15 @@
   - Language Education & Acquisition
 - acceptance_rate: 26%
   acceptance_time: 151 days
-  documents_current_year: 27 (2026)
+  documents_current_year: 31 (2026)
   documents_last_year: 36 (2025)
   documents_published: 36 (2025)
   first_decision_time: 8 days
-  hm_score: 64.9
+  hm_score: 62.6
   journal: Anthropology & Education Quarterly
-  orange_percentile: '89'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '3.5'
+  orange_score: '2.6'
   publication_time: 25 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3673,11 +3673,11 @@
 - documents_current_year: 38 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
-  hm_score: 39.2
+  hm_score: 41.7
   journal: Journal of Early Childhood Literacy
-  orange_percentile: '70'
-  orange_quartile: Q2
-  orange_score: '3.6'
+  orange_percentile: '78'
+  orange_quartile: Q1
+  orange_score: '4.5'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.3'
@@ -3688,11 +3688,11 @@
 - documents_current_year: 15 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
-  hm_score: 38.8
+  hm_score: 38.1
   journal: Journal of College Student Development
-  orange_percentile: '58'
+  orange_percentile: '55'
   orange_quartile: Q2
-  orange_score: '2.6'
+  orange_score: '2.5'
   purple_quartile: Q2
   purple_score: '1.3'
   red_division: 教育学4区
@@ -3701,15 +3701,15 @@
   - Educational Psychology
 - acceptance_rate: 12%
   acceptance_time: 306 days
-  documents_current_year: 32 (2026)
-  documents_last_year: 81 (2025)
-  documents_published: 81 (2025)
+  documents_current_year: 51 (2026)
+  documents_last_year: 62 (2025)
+  documents_published: 62 (2025)
   first_decision_time: 77 days
-  hm_score: 54.6
+  hm_score: 53.7
   journal: International Journal of Art & Design Education
-  orange_percentile: '96'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '3.0'
+  orange_score: '2.3'
   publication_time: 31 days
   publisher: Wiley
   purple_quartile: Q2
@@ -3718,14 +3718,14 @@
   tag:
   - Subject Education
   - Engineering/Design Education
-- documents_current_year: 36 (2026)
+- documents_current_year: 38 (2026)
   documents_last_year: 96 (2025)
   documents_published: 96 (2025)
-  hm_score: 47.9
+  hm_score: 47.8
   journal: International Journal of Music Education
   orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '4.1'
+  orange_score: '4.0'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.2'
@@ -3734,15 +3734,15 @@
   - Subject Education
   - Music Education
 - acceptance_rate: 12%
-  documents_current_year: 27 (2026)
+  documents_current_year: 33 (2026)
   documents_last_year: 35 (2025)
   documents_published: 35 (2025)
   first_decision_time: 59 days
-  hm_score: 51.6
+  hm_score: 51.8
   journal: Reading & Writing Quarterly
   orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '4.2'
   publication_time: 13 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3752,14 +3752,14 @@
   tag:
   - Language Education & Acquisition
   - Special Education
-- documents_current_year: 8 (2026)
+- documents_current_year: 13 (2026)
   documents_last_year: 38 (2025)
   documents_published: 38 (2025)
-  hm_score: 39.6
+  hm_score: 41.2
   journal: 'English Teaching: Practice and Critique'
-  orange_percentile: '81'
+  orange_percentile: '85'
   orange_quartile: Q1
-  orange_score: '2.0'
+  orange_score: '2.8'
   purple_quartile: Q2
   purple_score: '1.2'
   red_division: 教育学4区
@@ -3767,15 +3767,15 @@
   - Language Education & Acquisition
   - Subject Education
 - acceptance_rate: 22%
-  documents_current_year: 26 (2026)
-  documents_last_year: 87 (2025)
-  documents_published: 87 (2025)
+  documents_current_year: 39 (2026)
+  documents_last_year: 85 (2025)
+  documents_published: 85 (2025)
   first_decision_time: 27 days
-  hm_score: 62.2
+  hm_score: 62.5
   journal: Irish Educational Studies
-  orange_percentile: '77'
+  orange_percentile: '78'
   orange_quartile: Q1
-  orange_score: '4.4'
+  orange_score: '4.5'
   publication_time: 22 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3790,11 +3790,11 @@
   documents_last_year: 72 (2025)
   documents_published: 72 (2025)
   first_decision_time: 155 days
-  hm_score: 88.4
+  hm_score: 88.1
   journal: Journal of Social Work Education
-  orange_percentile: '78'
+  orange_percentile: '76'
   orange_quartile: Q1
-  orange_score: '3.4'
+  orange_score: '3.5'
   publication_time: 338 days
   publisher: Taylor & Francis
   purple_quartile: Q2
@@ -3807,39 +3807,39 @@
 - documents_current_year: 10 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
-  hm_score: 33.9
+  hm_score: 32.0
   journal: AIDS Education and Prevention
-  orange_percentile: '50'
-  orange_quartile: Q2
-  orange_score: '2.5'
+  orange_percentile: '43'
+  orange_quartile: Q3
+  orange_score: '2.0'
   purple_quartile: Q2
   purple_score: '1.2'
   red_division: 教育学4区
   tag:
   - Medical Education
   - General Education
-- documents_current_year: 22 (2026)
-  documents_last_year: 40 (2025)
-  documents_published: 40 (2025)
-  hm_score: 37.6
+- documents_current_year: 26 (2026)
+  documents_last_year: 37 (2025)
+  documents_published: 37 (2025)
+  hm_score: 34.1
   journal: Australasian Journal of Early Childhood
-  orange_percentile: '65'
+  orange_percentile: '52'
   orange_quartile: Q2
-  orange_score: '3.2'
+  orange_score: '2.3'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.2'
   red_division: 教育学4区
   tag:
   - Early Childhood Education
-- documents_current_year: 50 (2026)
+- documents_current_year: 51 (2026)
   documents_last_year: 76 (2025)
   documents_published: 76 (2025)
-  hm_score: 38.1
+  hm_score: 38.7
   journal: Health Education Journal
-  orange_percentile: '56'
+  orange_percentile: '58'
   orange_quartile: Q2
-  orange_score: '2.5'
+  orange_score: '2.7'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.2'
@@ -3848,15 +3848,15 @@
   - General Education
   - Medical Education
 - acceptance_rate: 12%
-  documents_current_year: 38 (2026)
+  documents_current_year: 40 (2026)
   documents_last_year: 48 (2025)
   documents_published: 48 (2025)
   first_decision_time: 106 days
-  hm_score: 47.2
+  hm_score: 45.3
   journal: Music Education Research
-  orange_percentile: '96'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '3.8'
+  orange_score: '2.5'
   publication_time: 15 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -3868,19 +3868,19 @@
 - documents_current_year: 8 (2026)
   documents_last_year: 18 (2025)
   documents_published: 18 (2025)
-  hm_score: 20.4
+  hm_score: 19.4
   journal: Psicología Educativa
-  orange_percentile: '62'
+  orange_percentile: '59'
   orange_quartile: Q2
-  orange_score: '4.0'
+  orange_score: '3.6'
   tag:
   - Educational Psychology
-- documents_current_year: 21 (2026)
+- documents_current_year: 44 (2026)
   documents_last_year: 73 (2025)
   documents_published: 73 (2025)
-  hm_score: 29.3
+  hm_score: 29.1
   journal: Phi Delta Kappan
-  orange_percentile: '42'
+  orange_percentile: '41'
   orange_quartile: Q3
   orange_score: '1.7'
   publisher: SAGE
@@ -3894,11 +3894,11 @@
   documents_current_year: 16 (2026)
   documents_last_year: 35 (2025)
   documents_published: 35 (2025)
-  hm_score: 54.4
+  hm_score: 55.4
   journal: Teaching Sociology
-  orange_percentile: '67'
+  orange_percentile: '70'
   orange_quartile: Q2
-  orange_score: '2.4'
+  orange_score: '2.8'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '1.1'
@@ -3907,15 +3907,15 @@
   - Sociology of Education
   - Subject Education
 - acceptance_rate: 6%
-  documents_current_year: 3 (2026)
+  documents_current_year: 6 (2026)
   documents_last_year: 22 (2025)
   documents_published: 22 (2025)
   first_decision_time: 127 days
-  hm_score: 30.3
+  hm_score: 32.3
   journal: Applied Measurement in Education
-  orange_percentile: '50'
+  orange_percentile: '57'
   orange_quartile: Q2
-  orange_score: '2.1'
+  orange_score: '2.7'
   publication_time: 11 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -3927,22 +3927,22 @@
 - documents_current_year: 20 (2026)
   documents_last_year: 20 (2025)
   documents_published: 20 (2025)
-  hm_score: 15.4
+  hm_score: 17.0
   journal: Enseñanza de las Ciencias
-  orange_percentile: '47'
-  orange_quartile: Q3
-  orange_score: '2.0'
+  orange_percentile: '53'
+  orange_quartile: Q2
+  orange_score: '2.4'
   tag:
   - Science Education
   - Mathematics Education
 - documents_current_year: 29 (2026)
   documents_last_year: 39 (2025)
   documents_published: 39 (2025)
-  hm_score: 33.2
+  hm_score: 34.2
   journal: Education and Urban Society
-  orange_percentile: '69'
+  orange_percentile: '72'
   orange_quartile: Q2
-  orange_score: '3.2'
+  orange_score: '3.6'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '1.1'
@@ -3953,11 +3953,11 @@
 - documents_current_year: 21 (2026)
   documents_last_year: 35 (2025)
   documents_published: 35 (2025)
-  hm_score: 39.2
+  hm_score: 39.0
   journal: Journal of Research in Music Education
   orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '4.0'
+  orange_score: '3.8'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '1.0'
@@ -3965,15 +3965,15 @@
   tag:
   - Music Education
 - acceptance_rate: 14%
-  documents_current_year: 34 (2026)
+  documents_current_year: 35 (2026)
   documents_last_year: 74 (2025)
   documents_published: 74 (2025)
   first_decision_time: 61 days
-  hm_score: 50.0
+  hm_score: 50.8
   journal: 'Journal of Beliefs & Values: Studies in Religion & Education'
-  orange_percentile: '94'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '2.2'
+  orange_score: '2.8'
   publication_time: 25 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -3986,24 +3986,24 @@
   documents_last_year: 74 (2025)
   documents_published: 74 (2025)
   first_decision_time: 19 days
-  hm_score: 22.6
+  hm_score: 19.1
   journal: Zeitschrift für Erziehungswissenschaft
-  orange_percentile: '63'
+  orange_percentile: '50'
   orange_quartile: Q2
-  orange_score: '3.0'
+  orange_score: '2.1'
   publisher: Springer
   tag:
   - General Education
 - acceptance_rate: 34%
-  documents_current_year: 47 (2026)
+  documents_current_year: 49 (2026)
   documents_last_year: 42 (2025)
   documents_published: 42 (2025)
   first_decision_time: 64 days
-  hm_score: 67.5
+  hm_score: 65.8
   journal: Journal of Geography in Higher Education
-  orange_percentile: '82'
+  orange_percentile: '77'
   orange_quartile: Q1
-  orange_score: '5.1'
+  orange_score: '4.4'
   publication_time: 23 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4014,15 +4014,15 @@
   - Higher Education
   - Subject Education
 - acceptance_rate: 38%
-  documents_current_year: 43 (2026)
-  documents_last_year: 123 (2025)
-  documents_published: 123 (2025)
+  documents_current_year: 52 (2026)
+  documents_last_year: 116 (2025)
+  documents_published: 116 (2025)
   first_decision_time: 140 days
-  hm_score: 58.6
+  hm_score: 58.1
   journal: 'Early Years: An International Journal of Research and Development'
-  orange_percentile: '63'
+  orange_percentile: '61'
   orange_quartile: Q2
-  orange_score: '3.0'
+  orange_score: '2.9'
   publication_time: 14 days
   publisher: Taylor & Francis
   review_time: 210 days
@@ -4031,11 +4031,11 @@
 - documents_current_year: 25 (2026)
   documents_last_year: 77 (2025)
   documents_published: 77 (2025)
-  hm_score: 31.7
+  hm_score: 32.5
   journal: Journal of Baltic Science Education
-  orange_percentile: '52'
+  orange_percentile: '55'
   orange_quartile: Q2
-  orange_score: '2.3'
+  orange_score: '2.5'
   purple_quartile: Q3
   purple_score: '1.0'
   red_division: 教育学4区
@@ -4044,11 +4044,11 @@
 - documents_current_year: 11 (2026)
   documents_last_year: 25 (2025)
   documents_published: 25 (2025)
-  hm_score: 26.8
+  hm_score: 31.1
   journal: Education as Change
-  orange_percentile: '45'
-  orange_quartile: Q3
-  orange_score: '1.8'
+  orange_percentile: '61'
+  orange_quartile: Q2
+  orange_score: '2.9'
   purple_quartile: Q3
   purple_score: '1.0'
   red_division: 教育学4区
@@ -4058,11 +4058,11 @@
 - documents_current_year: 11 (2025)
   documents_last_year: 38 (2024)
   documents_published: 38 (2024)
-  hm_score: 34.6
+  hm_score: 35.0
   journal: Journal of Psychologists and Counsellors in Schools
-  orange_percentile: '74'
-  orange_quartile: Q2
-  orange_score: '4.0'
+  orange_percentile: '75'
+  orange_quartile: Q1
+  orange_score: '4.2'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '0.9'
@@ -4074,11 +4074,11 @@
   documents_last_year: 39 (2025)
   documents_published: 39 (2025)
   first_decision_time: 30 days
-  hm_score: 43.3
+  hm_score: 42.0
   journal: Journal of Economic Education
-  orange_percentile: '59'
+  orange_percentile: '54'
   orange_quartile: Q2
-  orange_score: '2.7'
+  orange_score: '2.4'
   publication_time: 26 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4090,25 +4090,25 @@
 - documents_current_year: 20 (2026)
   documents_last_year: 29 (2025)
   documents_published: 29 (2025)
-  hm_score: 35.9
+  hm_score: 35.2
   journal: British Journal of Music Education
-  orange_percentile: '90'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '2.3'
+  orange_score: '2.0'
   purple_quartile: Q3
   purple_score: '0.8'
   red_division: 教育学4区
   tag:
   - Music Education
-- documents_current_year: 29 (2026)
+- documents_current_year: 31 (2026)
   documents_last_year: 44 (2025)
   documents_published: 44 (2025)
   first_decision_time: 38 days
-  hm_score: 34.5
+  hm_score: 34.4
   journal: Studies in Philosophy and Education
-  orange_percentile: '85'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '1.9'
+  orange_score: '2.0'
   publisher: Springer
   purple_quartile: Q3
   purple_score: '0.8'
@@ -4120,11 +4120,11 @@
   documents_last_year: 29 (2025)
   documents_published: 29 (2025)
   first_decision_time: 48 days
-  hm_score: 43.4
+  hm_score: 42.9
   journal: English in Education
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '2.2'
+  orange_score: '1.9'
   publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4137,11 +4137,11 @@
 - documents_current_year: 12 (2026)
   documents_last_year: 34 (2025)
   documents_published: 34 (2025)
-  hm_score: 14.9
+  hm_score: 15.4
   journal: Revista Española de Pedagogía
-  orange_percentile: '45'
+  orange_percentile: '47'
   orange_quartile: Q3
-  orange_score: '1.9'
+  orange_score: '2.0'
   tag:
   - General Education
 - acceptance_rate: 14%
@@ -4149,11 +4149,11 @@
   documents_last_year: 103 (2025)
   documents_published: 103 (2025)
   first_decision_time: 4 days
-  hm_score: 48.3
+  hm_score: 46.2
   journal: Early Child Development and Care
-  orange_percentile: '71'
+  orange_percentile: '62'
   orange_quartile: Q2
-  orange_score: '3.5'
+  orange_score: '3.2'
   publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4165,9 +4165,9 @@
 - documents_current_year: 15 (2025)
   documents_last_year: 11 (2024)
   documents_published: 11 (2024)
-  hm_score: 20.8
+  hm_score: 20.6
   journal: KEDI Journal of Educational Policy
-  orange_percentile: '22'
+  orange_percentile: '21'
   orange_quartile: Q4
   orange_score: '0.8'
   purple_quartile: Q3
@@ -4177,15 +4177,15 @@
   - Education Policy & Social Issues
   - International/Comparative Education
 - acceptance_rate: 22%
-  documents_current_year: 56 (2026)
+  documents_current_year: 59 (2026)
   documents_last_year: 84 (2025)
   documents_published: 84 (2025)
   first_decision_time: 85 days
-  hm_score: 57.9
+  hm_score: 56.9
   journal: British Journal of Religious Education
-  orange_percentile: '95'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '2.5'
+  orange_score: '2.1'
   publication_time: 8 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4207,14 +4207,14 @@
   red_division: 教育学4区
   tag:
   - General Education
-- documents_current_year: 18 (2026)
+- documents_current_year: 21 (2026)
   documents_last_year: 41 (2025)
   documents_published: 41 (2025)
-  hm_score: 34.0
+  hm_score: 33.4
   journal: Culture and Education
-  orange_percentile: '84'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '1.8'
+  orange_score: '1.6'
   publisher: Taylor & Francis
   purple_quartile: Q3
   purple_score: '0.7'
@@ -4222,14 +4222,14 @@
   tag:
   - General Education
   - International/Comparative Education
-- documents_current_year: 40 (2026)
+- documents_current_year: 42 (2026)
   documents_last_year: 76 (2025)
   documents_published: 76 (2025)
-  hm_score: 36.2
+  hm_score: 37.3
   journal: Teaching of Psychology
-  orange_percentile: '71'
+  orange_percentile: '74'
   orange_quartile: Q2
-  orange_score: '3.6'
+  orange_score: '4.1'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '0.7'
@@ -4237,14 +4237,14 @@
   tag:
   - Educational Psychology
   - Higher Education
-- documents_current_year: 5 (2026)
+- documents_current_year: 7 (2026)
   documents_last_year: 24 (2025)
   documents_published: 24 (2025)
-  hm_score: 21.0
+  hm_score: 22.0
   journal: Australian Journal of Adult Learning
-  orange_percentile: '24'
-  orange_quartile: Q4
-  orange_score: '0.8'
+  orange_percentile: '28'
+  orange_quartile: Q3
+  orange_score: '1.0'
   purple_quartile: Q3
   purple_score: '0.7'
   red_division: 教育学4区
@@ -4255,11 +4255,11 @@
   documents_last_year: 34 (2025)
   documents_published: 34 (2025)
   first_decision_time: 121 days
-  hm_score: 47.0
+  hm_score: 48.2
   journal: History of Education
-  orange_percentile: '68'
+  orange_percentile: '73'
   orange_quartile: Q2
-  orange_score: '1.2'
+  orange_score: '1.4'
   publication_time: 39 days
   publisher: Taylor & Francis
   purple_quartile: Q3
@@ -4268,12 +4268,12 @@
   review_time: 155 days
   tag:
   - General Education
-- documents_current_year: 12 (2026)
+- documents_current_year: 13 (2026)
   documents_last_year: 41 (2025)
   documents_published: 41 (2025)
-  hm_score: 11.6
+  hm_score: 11.4
   journal: Egitim ve Bilim
-  orange_percentile: '32'
+  orange_percentile: '31'
   orange_quartile: Q3
   orange_score: '1.2'
   tag:
@@ -4281,11 +4281,11 @@
 - documents_current_year: 15 (2026)
   documents_last_year: 90 (2025)
   documents_published: 90 (2025)
-  hm_score: 21.5
+  hm_score: 21.8
   journal: South African Journal of Education
-  orange_percentile: '36'
+  orange_percentile: '37'
   orange_quartile: Q3
-  orange_score: '1.3'
+  orange_score: '1.4'
   purple_quartile: Q4
   purple_score: '0.5'
   red_division: 教育学4区
@@ -4306,14 +4306,14 @@
   tag:
   - Language Education & Acquisition
   - Subject Education
-- documents_current_year: 11 (2026)
+- documents_current_year: 12 (2026)
   documents_last_year: 71 (2025)
   documents_published: 71 (2025)
-  hm_score: 24.8
+  hm_score: 24.1
   journal: Movimento
-  orange_percentile: '29'
+  orange_percentile: '26'
   orange_quartile: Q3
-  orange_score: '1.0'
+  orange_score: '0.9'
   purple_quartile: Q3
   purple_score: '0.5'
   red_division: 教育学4区
@@ -4322,11 +4322,11 @@
 - documents_current_year: 7 (2026)
   documents_last_year: 35 (2025)
   documents_published: 35 (2025)
-  hm_score: 29.0
+  hm_score: 29.4
   journal: Mind
   orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '3.2'
+  orange_score: '3.6'
   purple_score: '1.6'
   red_division: 哲学1区
   tag:
@@ -4334,11 +4334,11 @@
 - documents_current_year: 15 (2026)
   documents_last_year: 24 (2025)
   documents_published: 24 (2025)
-  hm_score: 51.9
+  hm_score: 51.4
   journal: Ethics
-  orange_percentile: '95'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '4.1'
+  orange_score: '3.8'
   purple_quartile: Q1
   purple_score: '2.4'
   red_division: 哲学1区
@@ -4347,11 +4347,11 @@
 - documents_current_year: 4 (2026)
   documents_last_year: 8 (2025)
   documents_published: 8 (2025)
-  hm_score: 32.3
+  hm_score: 34.6
   journal: Philosophical Review
-  orange_percentile: '94'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '3.9'
+  orange_score: '5.6'
   purple_score: '2.8'
   red_division: 哲学1区
   tag:
@@ -4362,25 +4362,25 @@
   documents_last_year: 61 (2025)
   documents_published: 61 (2025)
   first_decision_time: 65 days
-  hm_score: 39.0
+  hm_score: 38.8
   journal: Nous
   orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '5.4'
   publication_time: 27 days
   publisher: Wiley
   purple_score: '2.0'
   red_division: 哲学1区
   tag:
   - Philosophy
-- documents_current_year: 18 (2025)
-  documents_last_year: 27 (2024)
-  documents_published: 27 (2024)
-  hm_score: 26.9
+- documents_current_year: 2 (2026)
+  documents_last_year: 18 (2025)
+  documents_published: 18 (2025)
+  hm_score: 28.9
   journal: Journal of Philosophy
-  orange_percentile: '85'
+  orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '1.9'
+  orange_score: '2.9'
   purple_score: '2.0'
   red_division: 哲学1区
   tag:
@@ -4388,11 +4388,11 @@
 - documents_current_year: 14 (2026)
   documents_last_year: 44 (2025)
   documents_published: 44 (2025)
-  hm_score: 54.7
+  hm_score: 53.5
   journal: British Journal for the Philosophy of Science
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '6.3'
+  orange_score: '5.1'
   purple_quartile: Q1
   purple_score: '2.3'
   red_division: 哲学1区
@@ -4404,11 +4404,11 @@
   documents_last_year: 70 (2025)
   documents_published: 70 (2025)
   first_decision_time: 71 days
-  hm_score: 69.4
+  hm_score: 70.0
   journal: Studies in History and Philosophy of Science
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '3.2'
+  orange_score: '3.8'
   publication_time: 15 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -4421,11 +4421,11 @@
 - documents_current_year: 71 (2025)
   documents_last_year: 70 (2024)
   documents_published: 70 (2024)
-  hm_score: 27.0
+  hm_score: 27.1
   journal: PMLA
   orange_percentile: '90'
   orange_quartile: Q1
-  orange_score: '0.8'
+  orange_score: '0.9'
   purple_score: '0.6'
   red_division: 文学2区
   tag:
@@ -4445,11 +4445,11 @@
 - documents_current_year: 16 (2026)
   documents_last_year: 29 (2025)
   documents_published: 29 (2025)
-  hm_score: 49.6
+  hm_score: 48.1
   journal: Critical Inquiry
-  orange_percentile: '96'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '3.6'
+  orange_score: '2.5'
   purple_quartile: Q1
   purple_score: '1.4'
   red_division: 社会学2区
@@ -4459,11 +4459,11 @@
 - documents_current_year: 5 (2026)
   documents_last_year: 31 (2025)
   documents_published: 31 (2025)
-  hm_score: 36.7
+  hm_score: 38.1
   journal: Representations
-  orange_percentile: '75'
+  orange_percentile: '80'
   orange_quartile: Q1
-  orange_score: '0.9'
+  orange_score: '1.3'
   purple_quartile: Q2
   purple_score: '0.9'
   red_division: 社会学3区
@@ -4473,11 +4473,11 @@
 - documents_current_year: 8 (2026)
   documents_last_year: 36 (2025)
   documents_published: 36 (2025)
-  hm_score: 51.6
+  hm_score: 52.1
   journal: Past & Present
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '3.2'
+  orange_score: '3.7'
   purple_quartile: Q1
   purple_score: '2.4'
   red_division: 历史学1区
@@ -4486,11 +4486,11 @@
 - documents_current_year: 21 (2026)
   documents_last_year: 58 (2025)
   documents_published: 58 (2025)
-  hm_score: 43.1
+  hm_score: 43.2
   journal: American Historical Review
   orange_percentile: '66'
   orange_quartile: Q2
-  orange_score: '0.5'
+  orange_score: '0.6'
   purple_quartile: Q1
   purple_score: '1.2'
   red_division: 历史学1区
@@ -4499,11 +4499,11 @@
 - documents_current_year: 10 (2026)
   documents_last_year: 41 (2025)
   documents_published: 41 (2025)
-  hm_score: 46.8
+  hm_score: 47.6
   journal: History and Theory
-  orange_percentile: '93'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '1.8'
+  orange_score: '2.2'
   publisher: Wiley
   purple_quartile: Q1
   purple_score: '1.2'
@@ -4511,14 +4511,14 @@
   tag:
   - History
   - Philosophy
-- documents_current_year: 35 (2026)
-  documents_last_year: 69 (2025)
-  documents_published: 69 (2025)
-  hm_score: 48.2
+- documents_current_year: 42 (2026)
+  documents_last_year: 62 (2025)
+  documents_published: 62 (2025)
+  hm_score: 48.5
   journal: The Historical Journal
-  orange_percentile: '90'
+  orange_percentile: '91'
   orange_quartile: Q1
-  orange_score: '1.4'
+  orange_score: '1.5'
   purple_quartile: Q1
   purple_score: '0.9'
   red_division: 历史学1区
@@ -4527,24 +4527,24 @@
 - documents_current_year: 40 (2025)
   documents_last_year: 37 (2024)
   documents_published: 37 (2024)
-  hm_score: 42.7
+  hm_score: 42.2
   journal: Language
-  orange_percentile: '88'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '3.1'
+  orange_score: '3.0'
   purple_quartile: Q2
   purple_score: '1.5'
   red_division: 文学2区
   tag:
   - Linguistics
-- documents_current_year: 22 (2026)
+- documents_current_year: 23 (2026)
   documents_last_year: 44 (2025)
   documents_published: 44 (2025)
-  hm_score: 43.1
+  hm_score: 41.3
   journal: Journal of Linguistics
-  orange_percentile: '93'
+  orange_percentile: '87'
   orange_quartile: Q1
-  orange_score: '3.1'
+  orange_score: '2.5'
   purple_quartile: Q2
   purple_score: '1.2'
   red_division: 文学2区
@@ -4553,11 +4553,11 @@
 - documents_current_year: 32 (2026)
   documents_last_year: 27 (2025)
   documents_published: 27 (2025)
-  hm_score: 42.6
+  hm_score: 43.0
   journal: Linguistic Inquiry
-  orange_percentile: '87'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '3.0'
+  orange_score: '3.2'
   purple_quartile: Q2
   purple_score: '1.6'
   red_division: 文学1区
@@ -4565,15 +4565,15 @@
   - Linguistics
 - acceptance_rate: 9%
   acceptance_time: 152 days
-  documents_current_year: 52 (2026)
+  documents_current_year: 54 (2026)
   documents_last_year: 89 (2025)
   documents_published: 89 (2025)
   first_decision_time: 1 day
-  hm_score: 49.6
+  hm_score: 48.7
   journal: Lingua
-  orange_percentile: '86'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '2.8'
+  orange_score: '2.5'
   publication_time: 18 days
   publisher: Elsevier
   purple_quartile: Q2
@@ -4582,28 +4582,28 @@
   review_time: 48 days
   tag:
   - Linguistics
-- documents_current_year: 8 (2026)
+- documents_current_year: 9 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
-  hm_score: 56.0
+  hm_score: 56.3
   journal: American Journal of Sociology
   orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '6.4'
+  orange_score: '6.7'
   purple_quartile: Q1
   purple_score: '3.6'
   red_division: 社会学1区
   tag:
   - Sociology
 - acceptance_rate: 5.3%
-  documents_current_year: 15 (2026)
+  documents_current_year: 19 (2026)
   documents_last_year: 49 (2025)
   documents_published: 49 (2025)
-  hm_score: 69.7
+  hm_score: 65.9
   journal: American Sociological Review
-  orange_percentile: '98'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '12.4'
+  orange_score: '9.0'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '6.2'
@@ -4612,15 +4612,15 @@
   - Sociology
 - acceptance_rate: 20%
   acceptance_time: 168 days
-  documents_current_year: 62 (2026)
+  documents_current_year: 68 (2026)
   documents_last_year: 106 (2025)
   documents_published: 106 (2025)
   first_decision_time: 25 days
-  hm_score: 73.6
+  hm_score: 74.0
   journal: The British Journal of Sociology
-  orange_percentile: '85'
+  orange_percentile: '86'
   orange_quartile: Q1
-  orange_score: '5.0'
+  orange_score: '5.2'
   publication_time: 9 days
   publisher: Wiley
   purple_quartile: Q1
@@ -4631,11 +4631,11 @@
 - documents_current_year: 38 (2026)
   documents_last_year: 76 (2025)
   documents_published: 76 (2025)
-  hm_score: 58.6
+  hm_score: 59.2
   journal: Social Forces
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '5.6'
+  orange_score: '6.2'
   purple_quartile: Q1
   purple_score: '3.1'
   red_division: 社会学1区
@@ -4645,62 +4645,62 @@
   documents_current_year: 46 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
-  hm_score: 7.1
+  hm_score: 9.1
   journal: Contemporary Sociology
-  orange_percentile: '8'
+  orange_percentile: '17'
   orange_quartile: Q4
-  orange_score: '0.2'
+  orange_score: '0.4'
   publisher: SAGE
   tag:
   - Sociology
-- documents_current_year: 73 (2026)
+- documents_current_year: 75 (2026)
   documents_last_year: 149 (2025)
   documents_published: 149 (2025)
-  hm_score: 69.5
+  hm_score: 71.4
   journal: American Political Science Review
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '9.3'
+  orange_score: '11.0'
   purple_quartile: Q1
   purple_score: '5.8'
   red_division: 社会学1区
   tag:
   - Political Science
-- documents_current_year: 94 (2026)
+- documents_current_year: 103 (2026)
   documents_last_year: 128 (2025)
   documents_published: 128 (2025)
-  hm_score: 60.8
+  hm_score: 62.1
   journal: Journal of Politics
-  orange_percentile: '91'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '6.0'
+  orange_score: '6.9'
   purple_quartile: Q1
   purple_score: '3.8'
   red_division: 社会学1区
   tag:
   - Political Science
-- documents_current_year: 69 (2026)
+- documents_current_year: 74 (2026)
   documents_last_year: 129 (2025)
   documents_published: 129 (2025)
-  hm_score: 63.7
+  hm_score: 63.6
   journal: Comparative Political Studies
   orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '8.7'
+  orange_score: '8.6'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '3.4'
   red_division: 社会学1区
   tag:
   - Political Science
-- documents_current_year: 72 (2026)
+- documents_current_year: 73 (2026)
   documents_last_year: 121 (2025)
   documents_published: 121 (2025)
-  hm_score: 61.5
+  hm_score: 62.0
   journal: Political Studies
-  orange_percentile: '95'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '7.9'
+  orange_score: '8.2'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '2.8'
@@ -4710,11 +4710,11 @@
 - documents_current_year: 35 (2026)
   documents_last_year: 180 (2025)
   documents_published: 180 (2025)
-  hm_score: 67.3
+  hm_score: 64.6
   journal: British Journal of Political Science
-  orange_percentile: '98'
+  orange_percentile: '95'
   orange_quartile: Q1
-  orange_score: '9.3'
+  orange_score: '7.2'
   purple_quartile: Q1
   purple_score: '4.7'
   red_division: 社会学1区
@@ -4722,15 +4722,15 @@
   - Political Science
 - acceptance_rate: 6%
   acceptance_time: 326 days
-  documents_current_year: 84 (2026)
+  documents_current_year: 86 (2026)
   documents_last_year: 141 (2025)
   documents_published: 141 (2025)
   first_decision_time: 9 days
-  hm_score: 73.5
+  hm_score: 74.4
   journal: American Journal of Political Science
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '11.5'
+  orange_score: '12.4'
   publication_time: 83 days
   publisher: Wiley
   purple_quartile: Q1
@@ -4754,24 +4754,24 @@
 - documents_current_year: 14 (2026)
   documents_last_year: 45 (2025)
   documents_published: 45 (2025)
-  hm_score: 68.1
+  hm_score: 59.0
   journal: International Organization
-  orange_percentile: '99'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '15.3'
+  orange_score: '6.8'
   purple_quartile: Q1
   purple_score: '4.5'
   red_division: 社会学1区
   tag:
   - Political Science
-- documents_current_year: 44 (2026)
+- documents_current_year: 47 (2026)
   documents_last_year: 92 (2025)
   documents_published: 92 (2025)
-  hm_score: 70.0
+  hm_score: 69.2
   journal: Journal of Political Economy
-  orange_percentile: '94'
+  orange_percentile: '93'
   orange_quartile: Q1
-  orange_score: '11.6'
+  orange_score: '11.0'
   purple_quartile: Q1
   purple_score: '6.3'
   red_division: 经济学1区
@@ -4780,11 +4780,11 @@
 - documents_current_year: 6 (2026)
   documents_last_year: 22 (2025)
   documents_published: 22 (2025)
-  hm_score: 86.2
+  hm_score: 86.9
   journal: Journal of Economic Literature
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '21.4'
+  orange_score: '21.9'
   purple_quartile: Q1
   purple_score: '10.6'
   red_division: 经济学1区
@@ -4793,11 +4793,11 @@
 - documents_current_year: 11 (2026)
   documents_last_year: 33 (2025)
   documents_published: 33 (2025)
-  hm_score: 73.4
+  hm_score: 76.4
   journal: Journal of Economic Perspectives
-  orange_percentile: '95'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '12.8'
+  orange_score: '15.4'
   purple_quartile: Q1
   purple_score: '8.8'
   red_division: 经济学1区
@@ -4806,11 +4806,11 @@
 - documents_current_year: 40 (2026)
   documents_last_year: 75 (2025)
   documents_published: 75 (2025)
-  hm_score: 59.1
+  hm_score: 58.2
   journal: Economic Journal
-  orange_percentile: '86'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '7.7'
+  orange_score: '7.2'
   purple_quartile: Q1
   purple_score: '3.6'
   red_division: 经济学2区
@@ -4819,11 +4819,11 @@
 - documents_current_year: 22 (2026)
   documents_last_year: 65 (2025)
   documents_published: 65 (2025)
-  hm_score: 67.5
+  hm_score: 70.9
   journal: Psychological Review
-  orange_percentile: '93'
+  orange_percentile: '96'
   orange_quartile: Q1
-  orange_score: '10.3'
+  orange_score: '13.1'
   purple_quartile: Q1
   purple_score: '5.8'
   red_division: 心理学1区
@@ -4832,11 +4832,11 @@
 - documents_current_year: 12 (2026)
   documents_last_year: 49 (2025)
   documents_published: 49 (2025)
-  hm_score: 112.1
+  hm_score: 113.4
   journal: Psychological Bulletin
   orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '28.9'
+  orange_score: '30.2'
   purple_quartile: Q1
   purple_score: '19.8'
   red_division: 心理学1区
@@ -4845,24 +4845,24 @@
 - documents_current_year: 41 (2026)
   documents_last_year: 113 (2025)
   documents_published: 113 (2025)
-  hm_score: 73.9
+  hm_score: 75.6
   journal: Journal of Personality and Social Psychology
-  orange_percentile: '98'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '11.9'
+  orange_score: '13.4'
   purple_quartile: Q1
   purple_score: '6.7'
   red_division: 心理学1区
   tag:
   - Psychology
-- documents_current_year: 17 (2026)
+- documents_current_year: 23 (2026)
   documents_last_year: 49 (2025)
   documents_published: 49 (2025)
-  hm_score: 66.0
+  hm_score: 63.0
   journal: Journal of Communication
-  orange_percentile: '99'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '11.2'
+  orange_score: '8.6'
   purple_quartile: Q1
   purple_score: '5.5'
   red_division: 文学1区
@@ -4871,11 +4871,11 @@
 - documents_current_year: 6 (2026)
   documents_last_year: 23 (2025)
   documents_published: 23 (2025)
-  hm_score: 55.9
+  hm_score: 58.4
   journal: Human Communication Research
-  orange_percentile: '97'
+  orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '5.9'
+  orange_score: '8.0'
   purple_quartile: Q1
   purple_score: '3.3'
   red_division: 文学1区
@@ -4883,13 +4883,13 @@
   - Communication Studies
 - acceptance_rate: 37%
   acceptance_time: 252 days
-  documents_current_year: 42 (2026)
+  documents_current_year: 45 (2026)
   documents_last_year: 102 (2025)
   documents_published: 102 (2025)
   first_decision_time: 17 days
-  hm_score: 87.5
+  hm_score: 87.7
   journal: American Anthropologist
-  orange_percentile: '91'
+  orange_percentile: '92'
   orange_quartile: Q1
   orange_score: '3.9'
   publication_time: 155 days
@@ -4902,11 +4902,11 @@
 - documents_current_year: 35 (2026)
   documents_last_year: 66 (2025)
   documents_published: 66 (2025)
-  hm_score: 54.8
+  hm_score: 51.9
   journal: Current Anthropology
-  orange_percentile: '97'
+  orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '4.8'
+  orange_score: '2.9'
   purple_quartile: Q1
   purple_score: '1.8'
   red_division: 社会学2区
@@ -4914,15 +4914,15 @@
   - Anthropology
 - acceptance_rate: 25%
   acceptance_time: 454 days
-  documents_current_year: 54 (2026)
-  documents_last_year: 91 (2025)
-  documents_published: 91 (2025)
+  documents_current_year: 64 (2026)
+  documents_last_year: 81 (2025)
+  documents_published: 81 (2025)
   first_decision_time: 57 days
-  hm_score: 65.2
+  hm_score: 64.3
   journal: Journal of the Royal Anthropological Institute
-  orange_percentile: '85'
+  orange_percentile: '82'
   orange_quartile: Q1
-  orange_score: '3.0'
+  orange_score: '2.7'
   publication_time: 149 days
   publisher: Wiley
   purple_quartile: Q2
@@ -4930,14 +4930,14 @@
   red_division: 社会学3区
   tag:
   - Anthropology
-- documents_current_year: 76 (2026)
+- documents_current_year: 81 (2026)
   documents_last_year: 106 (2025)
   documents_published: 106 (2025)
-  hm_score: 61.2
+  hm_score: 61.6
   journal: Media, Culture & Society
-  orange_percentile: '93'
+  orange_percentile: '94'
   orange_quartile: Q1
-  orange_score: '7.0'
+  orange_score: '7.2'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '3.3'
@@ -4945,14 +4945,14 @@
   tag:
   - Media Studies
   - Cultural Studies
-- documents_current_year: 44 (2026)
+- documents_current_year: 46 (2026)
   documents_last_year: 66 (2025)
   documents_published: 66 (2025)
-  hm_score: 54.3
+  hm_score: 54.7
   journal: Theory, Culture & Society
-  orange_percentile: '87'
+  orange_percentile: '88'
   orange_quartile: Q1
-  orange_score: '5.3'
+  orange_score: '5.5'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '2.3'
@@ -4960,28 +4960,28 @@
   tag:
   - Cultural Studies
   - Sociology
-- documents_current_year: 226 (2026)
+- documents_current_year: 234 (2026)
   documents_last_year: 487 (2025)
   documents_published: 487 (2025)
-  hm_score: 76.1
+  hm_score: 76.7
   journal: New Media & Society
   orange_percentile: '99'
   orange_quartile: Q1
-  orange_score: '13.7'
+  orange_score: '14.3'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '4.3'
   red_division: 文学1区
   tag:
   - Media Studies
-- documents_current_year: 16 (2026)
+- documents_current_year: 19 (2026)
   documents_last_year: 30 (2025)
   documents_published: 30 (2025)
-  hm_score: 62.1
+  hm_score: 57.2
   journal: Gender & Society
-  orange_percentile: '98'
+  orange_percentile: '97'
   orange_quartile: Q1
-  orange_score: '11.7'
+  orange_score: '7.0'
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '3.4'
@@ -4991,24 +4991,24 @@
 - documents_current_year: 34 (2026)
   documents_last_year: 51 (2025)
   documents_published: 51 (2025)
-  hm_score: 49.1
+  hm_score: 49.0
   journal: Signs
-  orange_percentile: '77'
+  orange_percentile: '78'
   orange_quartile: Q1
-  orange_score: '2.9'
+  orange_score: '2.6'
   purple_quartile: Q1
   purple_score: '1.9'
   red_division: 社会学2区
   tag:
   - Gender Studies
-- documents_current_year: 13 (2026)
+- documents_current_year: 14 (2026)
   documents_last_year: 21 (2025)
   documents_published: 21 (2025)
-  hm_score: 33.2
+  hm_score: 33.3
   journal: Feminist Review
-  orange_percentile: '70'
+  orange_percentile: '71'
   orange_quartile: Q2
-  orange_score: '1.8'
+  orange_score: '1.7'
   publisher: SAGE
   purple_quartile: Q3
   purple_score: '1.7'
@@ -5016,7 +5016,7 @@
   tag:
   - Gender Studies
 - acceptance_rate: 26%
-  documents_current_year: 211 (2026)
+  documents_current_year: 226 (2026)
   documents_last_year: 299 (2025)
   documents_published: 299 (2025)
   first_decision_time: 3 days
@@ -5033,14 +5033,14 @@
   review_time: 77 days
   tag:
   - Ethnic Studies
-- documents_current_year: 59 (2026)
+- documents_current_year: 60 (2026)
   documents_last_year: 167 (2025)
   documents_published: 167 (2025)
-  hm_score: 52.8
+  hm_score: 54.0
   journal: Journal of Information Science
-  orange_percentile: '88'
+  orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '7.8'
+  orange_score: '8.8'
   publisher: SAGE
   purple_quartile: Q2
   purple_score: '1.7'
@@ -5048,15 +5048,15 @@
   tag:
   - Library & Information Science
 - acceptance_time: 145 days
-  documents_current_year: 545 (2026)
+  documents_current_year: 564 (2026)
   documents_last_year: 362 (2025)
   documents_published: 362 (2025)
   first_decision_time: 2 days
-  hm_score: 86.2
+  hm_score: 84.2
   journal: Information Processing & Management
-  orange_percentile: '99'
+  orange_percentile: '98'
   orange_quartile: Q1
-  orange_score: '18.6'
+  orange_score: '16.8'
   publication_time: 13 days
   publisher: Elsevier
   purple_quartile: Q1
@@ -5068,11 +5068,11 @@
 - documents_current_year: 13 (2026)
   documents_last_year: 43 (2025)
   documents_published: 43 (2025)
-  hm_score: 41.0
+  hm_score: 38.5
   journal: Journal of Asian Studies
-  orange_percentile: '93'
+  orange_percentile: '84'
   orange_quartile: Q1
-  orange_score: '1.8'
+  orange_score: '1.1'
   purple_quartile: Q2
   purple_score: '0.8'
   red_division: 社会学2区
@@ -5081,11 +5081,11 @@
 - documents_current_year: 29 (2025)
   documents_last_year: 32 (2024)
   documents_published: 32 (2024)
-  hm_score: 19.1
+  hm_score: 16.8
   journal: Art History
-  orange_percentile: '69'
+  orange_percentile: '58'
   orange_quartile: Q2
-  orange_score: '0.5'
+  orange_score: '0.4'
   publisher: Wiley
   purple_score: '0.4'
   red_division: 艺术学2区
@@ -5106,11 +5106,11 @@
 - documents_current_year: 4 (2026)
   documents_last_year: 16 (2025)
   documents_published: 16 (2025)
-  hm_score: 18.1
+  hm_score: 19.1
   journal: Journal of Religion
-  orange_percentile: '64'
+  orange_percentile: '68'
   orange_quartile: Q2
-  orange_score: '0.5'
+  orange_score: '0.7'
   purple_score: '0.4'
   red_division: 哲学3区
   tag:
@@ -5118,11 +5118,11 @@
 - documents_current_year: 9 (2026)
   documents_last_year: 49 (2025)
   documents_published: 49 (2025)
-  hm_score: 41.7
+  hm_score: 43.0
   journal: Cambridge Law Journal
-  orange_percentile: '66'
+  orange_percentile: '70'
   orange_quartile: Q2
-  orange_score: '1.7'
+  orange_score: '2.2'
   purple_quartile: Q1
   purple_score: '1.4'
   red_division: 社会学3区
@@ -5131,11 +5131,11 @@
 - documents_current_year: 21 (2026)
   documents_last_year: 69 (2025)
   documents_published: 69 (2025)
-  hm_score: 56.0
+  hm_score: 56.4
   journal: Harvard Law Review
   orange_percentile: '89'
   orange_quartile: Q1
-  orange_score: '3.8'
+  orange_score: '4.2'
   purple_quartile: Q1
   purple_score: '3.7'
   red_division: 社会学2区
@@ -5143,15 +5143,15 @@
   - Law
 - acceptance_rate: 7%
   acceptance_time: 116 days
-  documents_current_year: 24 (2026)
+  documents_current_year: 25 (2026)
   documents_last_year: 46 (2025)
   documents_published: 46 (2025)
   first_decision_time: 21 days
-  hm_score: 48.4
+  hm_score: 49.9
   journal: Modern Law Review
-  orange_percentile: '79'
+  orange_percentile: '83'
   orange_quartile: Q1
-  orange_score: '2.6'
+  orange_score: '3.3'
   publication_time: 60 days
   publisher: Wiley
   purple_quartile: Q1
@@ -5160,15 +5160,15 @@
   tag:
   - Law
 - acceptance_time: 119 days
-  documents_current_year: 93 (2026)
+  documents_current_year: 101 (2026)
   documents_last_year: 88 (2025)
   documents_published: 88 (2025)
   first_decision_time: 9 days
-  hm_score: 57.6
+  hm_score: 57.5
   journal: Evolution and Human Behavior
   orange_percentile: '92'
   orange_quartile: Q1
-  orange_score: '5.8'
+  orange_score: '5.7'
   publication_time: 12 days
   publisher: Elsevier
   purple_quartile: Q1
