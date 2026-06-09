@@ -150,19 +150,6 @@
     Singapore
   link: https://bera-journals.onlinelibrary.wiley.com/hub/journal/14678535/call-for-papers/si-2026-000097
   description: ''
-- journal: npj Science of Learning
-  publisher: Nature Portfolio
-  tag: &id010
-  - Educational Psychology
-  - Educational Technology
-  title: Effects of lifestyle behaviours on learning and neuroplasticity
-  abstract_deadline: ''
-  fullpaper_deadline: 09 June 2026
-  fullpaper_deadline_sort: '2026-06-09'
-  editors: ''
-  link: https://www.nature.com/collections/fdafiejgbg
-  description: This collection invites research on health psychology, sports science, public health, neuroscience, physical
-    activity and physical education across the lifespan.
 - journal: Innovations in Education and Teaching International
   publisher: Taylor & Francis
   tag:
@@ -178,7 +165,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id016
+  tag: &id015
   - Education Policy & Social Issues
   - Gender and Education
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
@@ -343,7 +330,7 @@
   description: ''
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: &id015
+  tag: &id014
   - Language Education & Acquisition
   - Curriculum Studies
   title: The impact of Artificial Intelligence on English-medium instruction teaching and learning at university level
@@ -647,6 +634,19 @@
   link: https://link.springer.com/collections/cccbbaigdh
   description: BMC Medical Education welcomes submissions to our Disability in medical education Collection. As disability
     impacts so much of our patient population, medical curricula must evolve to address gaps in knowled...
+- journal: npj Science of Learning
+  publisher: Nature Portfolio
+  tag: &id010
+  - Educational Psychology
+  - Educational Technology
+  title: Effects of lifestyle behaviours on learning and neuroplasticity
+  abstract_deadline: ''
+  fullpaper_deadline: 09 September 2026
+  fullpaper_deadline_sort: '2026-09-09'
+  editors: ''
+  link: https://www.nature.com/collections/fdafiejgbg
+  description: This collection invites research on health psychology, sports science, public health, neuroscience, physical
+    activity and physical education across the lifespan.
 - journal: Academic Psychiatry
   publisher: Springer
   tag: *id003
@@ -814,7 +814,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: &id014
+  tag:
   - Interdisciplinary Science
   - General Education
   title: Arts integration in education
@@ -839,7 +839,9 @@
     invite submissions that address the importance of psychological needs for well-being and mental health.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: &id016
+  - Interdisciplinary Science
+  - General Education
   title: Living with human enhancement – ethical, social, and psychological dimensions
   abstract_deadline: ''
   fullpaper_deadline: 27 November 2026
@@ -861,7 +863,7 @@
     through their interactions with cognitive, affective, and neural factors
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: *id015
+  tag: *id014
   title: Linguistic racism and discrimination in higher education
   abstract_deadline: 15 March 2026
   fullpaper_deadline: 01 December 2026
@@ -871,7 +873,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id016
+  tag: *id015
   title: Queer Imaginaries as Pedagogy
   abstract_deadline: 01 August 2026
   fullpaper_deadline: 01 December 2026
@@ -882,7 +884,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'The Nobel Prize: historical and sociocultural perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 02 December 2026
@@ -893,7 +895,7 @@
     and cultural frameworks.
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: *id015
+  tag: *id014
   title: 'Languages in Motion: Foreign Language Education, Cultural Transmission, and Identity Politics in the Global South'
   abstract_deadline: 30 April 2026
   fullpaper_deadline: 15 December 2026
@@ -915,7 +917,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Education for marginalised or displaced populations
   abstract_deadline: ''
   fullpaper_deadline: 20 December 2026
@@ -936,7 +938,7 @@
   description: Olivier Vors , Aix Marseille University - Marseille, France olivier.vors@univ-amu.fr
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Translational humanities
   abstract_deadline: ''
   fullpaper_deadline: 24 December 2026
@@ -1045,7 +1047,7 @@
   description: Gwo-Jen Hwang , Taichung University of Education, Taiwan gjhwang.academic@gmail.com
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Gender, democracy and political violence: A feminist perspective'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -1057,7 +1059,7 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'The Olympic Games: Media, representation and cultural politics'
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2027
@@ -1069,7 +1071,7 @@
     them.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Learning spaces and classroom design
   abstract_deadline: ''
   fullpaper_deadline: 08 January 2027
@@ -1191,7 +1193,7 @@
     but not limited to personalized vaccine approaches.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Corruption beyond borders: power, crime, and governance'
   abstract_deadline: ''
   fullpaper_deadline: 28 January 2027
@@ -1276,7 +1278,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Creative rights, copyright and culture: intellectual property in the arts and humanities'
   abstract_deadline: ''
   fullpaper_deadline: 08 February 2027
@@ -1322,7 +1324,7 @@
     and complicated pregnancies, including preeclampsia and preterm birth risk.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Sacred substances, Social Worlds: Psychedelics Across Cultures'
   abstract_deadline: ''
   fullpaper_deadline: 22 February 2027
@@ -1427,7 +1429,7 @@
     into how inflammatory and immunometabolic processes shape chronic disease.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Remembering World War I: archives, history and empire'
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1436,6 +1438,17 @@
   link: https://www.nature.com/collections/jahcehjefe
   description: This Collection invites interdisciplinary scholarship that re-examines World War I through diverse lenses,
     uncovering overlooked narratives and challenging Eurocentric perspectives.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id016
+  title: Race, biopolitics and political violence
+  abstract_deadline: ''
+  fullpaper_deadline: 05 March 2027
+  fullpaper_deadline_sort: '2027-03-05'
+  editors: ''
+  link: https://www.nature.com/collections/aihfgjijah
+  description: This Collection creates an interdisciplinary space to interrogate the intersections of race, biopolitics, and
+    colonial violence.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id023
