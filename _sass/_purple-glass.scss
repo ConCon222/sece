@@ -902,6 +902,12 @@ select:focus-visible,
   border-radius: 8px;
 }
 
+/* featured (pinned) blog card: a vendored rule lowercases the title —
+   restore the post's real Title Case */
+.featured-posts .card-title {
+  text-transform: none;
+}
+
 /* ─── GSAP motion layer: pre-hide entrance targets ──────────────────────
    Applies ONLY when html.hw-anim is set (added pre-paint by head.liquid,
    and only when prefers-reduced-motion is NOT set). hw-motion.js reveals

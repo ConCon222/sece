@@ -7,6 +7,11 @@ on:
     - cron: "0 0 * * 5" # Friday
   workflow_dispatch:
 
+# Required for the auto-commit push. Without this the push step dies with
+# HTTP 403 (this silently broke citation updates from 2025-12 to 2026-06).
+permissions:
+  contents: write
+
 jobs:
   update-citations:
     runs-on: ubuntu-latest
@@ -14,9 +19,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      # See CUSTOMIZE.md for details on how to set up PAT for triggering subsequent workflows
-      #        with:
-      #          token: ${{ secrets.PAT }}
+        with:
+          # PAT (same pattern as the CFP/JR workflows) so the pushed commit
+          # also triggers the Deploy site workflow; GITHUB_TOKEN pushes don't cascade.
+          token: ${{ secrets.PAGE }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -106,3 +112,11 @@ jobs:
             git commit -m "Update Google Scholar citations"
             git push
           )
+
+      # Surface script failures AFTER the push step, so a partial update still
+      # lands but the run shows red instead of rotting silently for months.
+      - name: Fail the run if the citation script failed
+        if: steps.run_citation_update.outputs.script_failed == 'true'
+        run: |
+          echo "❌ Citation script failed earlier in this run — marking workflow as failed so it's visible."
+          exit 1

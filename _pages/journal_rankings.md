@@ -47,11 +47,8 @@ nav_order: 4
       <div class="col-md-2">
         <select id="publisher-filter" class="form-control form-control-sm">
           <option value="">All Publishers</option>
-          <option value="Springer">Springer</option>
-          <option value="Wiley">Wiley</option>
-          <option value="Elsevier">Elsevier</option>
-          <option value="Taylor & Francis">Taylor & Francis</option>
-          <option value="SAGE">SAGE</option>
+          {% assign jr_publishers = site.data.jrank | map: 'publisher' | compact | uniq | sort %}
+          {% for p in jr_publishers %}{% if p != "" %}<option value="{{ p }}">{{ p }}</option>{% endif %}{% endfor %}
         </select>
       </div>
       <div class="col-md-2">

@@ -74,7 +74,7 @@ pagination:
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase"><span class="only-en">{{ post.title }}</span><span class="only-zh">{{ post.title_zh | default: post.title }}</span></h3>
+<h3 class="card-title"><span class="only-en">{{ post.title }}</span><span class="only-zh">{{ post.title_zh | default: post.title }}</span></h3>
 <p class="card-text"><span class="only-en">{{ post.description }}</span><span class="only-zh">{{ post.description_zh | default: post.description }}</span></p>
 
                     {% if post.external_source == blank %}

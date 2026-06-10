@@ -22,7 +22,7 @@ toc:
 
 _styles: >
   .series-hero {
-    background: linear-gradient(135deg, #0f4c81 0%, #2e7d6b 100%);
+    background: linear-gradient(135deg, #7d1a8c 0%, #4a0a5e 100%);
     color: white;
     padding: 2rem;
     border-radius: 18px;
@@ -46,7 +46,7 @@ _styles: >
   }
   .series-card {
     background: white;
-    border: 1px solid #dde5ec;
+    border: 1px solid #d9bee0;
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 14px 30px rgba(16, 35, 52, 0.08);
@@ -67,7 +67,7 @@ _styles: >
     padding: 0.2rem 0.65rem;
     border-radius: 999px;
     background: #eaf2ff;
-    color: #0f4c81;
+    color: #660874;
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -81,7 +81,7 @@ _styles: >
     margin-bottom: 0.8rem;
   }
   .series-meta {
-    color: #556270;
+    color: #4d3f5c;
     font-size: 0.92rem;
   }
   .series-link {
@@ -96,8 +96,8 @@ _styles: >
     margin: 1.5rem 0;
   }
   .series-outcome {
-    background: linear-gradient(180deg, #fbfcfd 0%, #f2f6fa 100%);
-    border: 1px solid #dde5ec;
+    background: linear-gradient(180deg, #faf8fc 0%, #f1e6f5 100%);
+    border: 1px solid #d9bee0;
     border-radius: 14px;
     padding: 1rem 1.1rem;
   }

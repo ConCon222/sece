@@ -528,6 +528,49 @@ class JournalRankingUpdater:
             'sciencedirect.com': 'elsevier',
             'elsevier.com': 'elsevier'
         }
+
+        # Display-name inference for publishers we don't crawl metrics from.
+        # Without this, ~27% of journals had an empty publisher and never
+        # matched the page's publisher filter.
+        self.publisher_display_domains = {
+            'cambridge.org': 'Cambridge University Press',
+            'academic.oup.com': 'Oxford University Press',
+            'oup.com': 'Oxford University Press',
+            'journals.uchicago.edu': 'University of Chicago Press',
+            'uchicago.edu': 'University of Chicago Press',
+            'apa.org': 'APA',
+            'emeraldgrouppublishing.com': 'Emerald',
+            'emerald.com': 'Emerald',
+            'muse.jhu.edu': 'Johns Hopkins University Press',
+            'press.jhu.edu': 'Johns Hopkins University Press',
+            'direct.mit.edu': 'MIT Press',
+            'aeaweb.org': 'American Economic Association',
+            'journals.aom.org': 'Academy of Management',
+            'aom.org': 'Academy of Management',
+            'ieeexplore.ieee.org': 'IEEE',
+            'ieee.org': 'IEEE',
+            'nature.com': 'Nature Portfolio',
+            'degruyter.com': 'De Gruyter',
+            'journals.aps.org': 'American Physical Society',
+            'pubs.rsc.org': 'Royal Society of Chemistry',
+            'guilfordjournals.com': 'Guilford Press',
+            'journals.humankinetics.com': 'Human Kinetics',
+            'frontiersin.org': 'Frontiers',
+            'mdpi.com': 'MDPI',
+        }
+
+    def infer_publisher_display(self, url: str) -> Optional[str]:
+        """Display publisher name for non-crawler domains (Cambridge, OUP, ...)."""
+        try:
+            domain = urlparse(url).netloc.lower()
+            if domain.startswith('www.'):
+                domain = domain[4:]
+            for d, name in self.publisher_display_domains.items():
+                if domain == d or domain.endswith('.' + d) or d in domain:
+                    return name
+        except Exception:
+            pass
+        return None
     
     def load_journal_data(self):
         """Load journal data from journal_rank.json and jrank.yml"""
@@ -646,6 +689,10 @@ class JournalRankingUpdater:
                 publisher_key = self.get_publisher_from_url(url)
                 if publisher_key:
                     journal_data['publisher'] = publisher_key
+                elif not journal_data.get('publisher'):
+                    display_name = self.infer_publisher_display(url)
+                    if display_name:
+                        journal_data['publisher'] = display_name
             
             # Get publisher-specific metrics
             if url and journal_data.get('publisher'):

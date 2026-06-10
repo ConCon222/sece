@@ -950,12 +950,19 @@ class JournalCFPScraper:
             except Exception as e:
                 print(f"⚠️ 读取旧 YAML 失败: {e}")
 
+        # Dedup by (journal, title): the same call often appears under two URLs
+        # (listing page + detail page), which the old (title, link) key kept as
+        # visible duplicates. Prefer the richer record: real deadline first,
+        # then the longer description.
+        def _richness(rec):
+            has_deadline = 1 if (rec.get("fullpaper_deadline_sort") or "9999-99-99") != "9999-99-99" else 0
+            return (has_deadline, len(rec.get("description") or ""), len(rec.get("editors") or ""))
+
         merged_map = {}
-        for item in existing_records:
-            key = (item.get("title"), item.get("link"))
-            merged_map[key] = item
-        for item in new_records:
-            key = (item.get("title"), item.get("link"))
+        for item in existing_records + new_records:
+            key = (item.get("journal"), (item.get("title") or "").strip().lower())
+            if key in merged_map and _richness(merged_map[key]) > _richness(item):
+                continue
             merged_map[key] = item
 
         # Drop mis-scraped entries: when a publisher detail page 404s/redirects,
@@ -966,11 +973,20 @@ class JournalCFPScraper:
             "404 error", "page not found", "what happened", "access denied",
             "403 forbidden", "just a moment", "are you a robot",
             "attention required", "页面不存在", "页面未找到",
+            "about the role",
+        )
+        # Editor-recruitment / reviewer-award pages are not calls for papers.
+        JUNK_URL_MARKERS = (
+            "editor_recruitment", "reviewer-award", "reviewer-prize",
+            "associate-editor", "editors-needed", "editor-needed", "reviewers-needed",
         )
 
         def _is_junk(rec):
             title = (rec.get("title") or "").strip().lower()
-            return any(m in title for m in JUNK_TITLE_MARKERS)
+            link = (rec.get("link") or "").lower()
+            if any(m in title for m in JUNK_TITLE_MARKERS):
+                return True
+            return any(m in link for m in JUNK_URL_MARKERS)
 
         final_list = []
         today = datetime.now().date()

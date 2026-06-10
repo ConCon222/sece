@@ -36,7 +36,7 @@ toc:
 
 _styles: >
   .tutorial-info {
-    background: linear-gradient(135deg, #2298ff 0%, #0f71d8 100%);
+    background: linear-gradient(135deg, #660874 0%, #3c0648 100%);
     color: white;
     padding: 1.4rem 1.5rem;
     border-radius: 14px;
@@ -48,7 +48,7 @@ _styles: >
   }
   .step-card {
     background: #f5f9ff;
-    border-left: 4px solid #2298ff;
+    border-left: 4px solid #8d2aa3;
     padding: 1rem 1.3rem;
     margin: 1rem 0 1.4rem;
     border-radius: 0 10px 10px 0;

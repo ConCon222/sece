@@ -124,17 +124,26 @@
     if (endDot) gsap.from(endDot, { scale: 0.4, autoAlpha: 0, duration: 0.45, ease: "power2.out", clearProps: CLEAR,
       scrollTrigger: { trigger: endDot, start: "top 94%", once: true } });
 
-    var toolbar = one(".lifeline-toolbar");
-    if (toolbar) toolbar.addEventListener("click", function () {
-      setTimeout(function () {
-        $(".event-card").forEach(function (c) {
-          if (c.offsetParent !== null && Number(gsap.getProperty(c, "opacity")) < 1) {
-            gsap.to(c, { autoAlpha: 1, x: 0, duration: 0.35, ease: "power2.out", clearProps: CLEAR });
-          }
-        });
-        ScrollTrigger.refresh();
-      }, 70);
-    });
+    // The Life Line collapses years via max-height (it reserves full height for
+    // every card at load). Cards reveal individually on scroll, so a year's lower
+    // cards can still be hidden when you toggle it → the re-opened container shows
+    // blank space. So: the moment the user interacts with the timeline, FINALIZE —
+    // reveal every remaining card at once and kill the scroll-reveals. No
+    // ScrollTrigger.refresh (which would cause the "hitch"); runs in capture phase
+    // so it happens before toggleYear() measures scrollHeight.
+    var finalized = false;
+    function finalizeLifeline() {
+      if (finalized) return;
+      finalized = true;
+      var els = $(".lifeline-header, .lifeline .year-marker, .lifeline .event-card, .lifeline-end-dot");
+      gsap.set(els, { clearProps: "transform" }); // drop x / scale / y offsets
+      els.forEach(function (el) { el.style.opacity = "1"; el.style.visibility = "visible"; }); // beat the CSS pre-hide
+      ScrollTrigger.getAll().forEach(function (st) { st.kill(); }); // only lifeline triggers exist on this page
+    }
+    var llRoot = one(".lifeline");
+    if (llRoot) llRoot.addEventListener("click", finalizeLifeline, true);
+    var bar = one(".lifeline-toolbar");
+    if (bar) bar.addEventListener("click", finalizeLifeline, true);
   }
 
   window.addEventListener("load", function () { ScrollTrigger.refresh(); });

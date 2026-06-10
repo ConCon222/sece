@@ -8,4 +8,4 @@ highlight: true
 zh: 获 **清华大学** 录取——今秋开始博士研究。
 ---
 
-Admitted to **Tsinghua University** — beginning doctoral studies this autumn.
+Admitted to **Tsinghua University**, beginning doctoral studies this autumn.

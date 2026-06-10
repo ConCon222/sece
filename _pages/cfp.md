@@ -188,11 +188,8 @@ nav_order: 3
     <div class="col-md-3">
       <select id="cfp-publisher-filter" class="form-control form-control-sm">
         <option value="">All Publishers</option>
-        <option value="Springer">Springer</option>
-        <option value="Wiley">Wiley</option>
-        <option value="Elsevier">Elsevier</option>
-        <option value="Taylor & Francis">Taylor & Francis</option>
-        <option value="SAGE">SAGE</option>
+        {% assign all_publishers = site.data.cfps | map: 'publisher' | compact | uniq | sort %}
+        {% for p in all_publishers %}{% if p != "" %}<option value="{{ p }}">{{ p }}</option>{% endif %}{% endfor %}
       </select>
     </div>
     <div class="col-md-2 text-right">

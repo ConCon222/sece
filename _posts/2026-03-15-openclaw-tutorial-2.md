@@ -33,7 +33,7 @@ toc:
 
 _styles: >
   .tutorial-info {
-    background: linear-gradient(135deg, #ef6b73 0%, #d74b6c 100%);
+    background: linear-gradient(135deg, #b73a8e 0%, #7d1a8c 100%);
     color: white;
     padding: 1.4rem 1.5rem;
     border-radius: 14px;

@@ -69,8 +69,11 @@ Docker container for Cloudflare bypass, port 8191. Works from GitHub Actions clo
 | Workflow | Schedule | Trigger | Output |
 |---|---|---|---|
 | `daily_cfp.yml` | Every 2 days 21:00 UTC | `workflow_dispatch` | `_data/cfps.yml` |
-| `update_journal_rankings.yml` | 5th & 25th of month, 02:00 UTC | `workflow_dispatch` | `_data/jrank.yml` |
-| `update-citations.yml` | Manual | — | `_data/citations.yml` |
+| `update_journal_rankings.yml` | 5th & 25th of month, 02:00 UTC | `workflow_dispatch` | `_data/jrank.yml` + `_data/jaims.yml` |
+| `update-citations.yml` | Mon/Wed/Fri 00:00 UTC | `workflow_dispatch` | `_data/citations.yml` |
+
+The citations workflow needs `permissions: contents: write` + the `PAGE` PAT checkout
+(both added 2026-06); without them its push fails with HTTP 403 and the run rots silently.
 
 Secrets: `PAGE` (CFP workflow PAT), `JOU` (journal rankings PAT), `EASYSCHOLAR_KEY` (API key).
 
@@ -84,6 +87,7 @@ Both data workflows use FlareSolverr as a service container and auto-commit chan
 | `_data/journal_cfp.json` | JSON | CFP journal list: name, collections URL, tags |
 | `_data/jrank.yml` | YAML | Computed journal metrics (output of ranking pipeline) |
 | `_data/cfps.yml` | YAML | Scraped CFP entries (output of CFP pipeline) |
+| `_data/jaims.yml` | YAML | Journal aims & scope (bin/scrape_aims.py; feeds the venue recommender's topical matching) |
 | `_bibliography/papers.bib` | BibTeX | Publications (rendered via jekyll-scholar) |
 
 ### URL conventions in journal_rank.json

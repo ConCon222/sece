@@ -48,7 +48,15 @@ jobs:
         FLARESOLVERR_URL: http://localhost:8191
       run: |
         python bin/journal_data_manager.py --no-diff
-        
+
+    - name: Update journal aims & scope (feeds the venue recommender)
+      env:
+        FLARESOLVERR_URL: http://localhost:8191
+      run: |
+        # Incremental: journals with stored aims are skipped, so after the
+        # first full pass this step only fetches new/missing journals.
+        python bin/scrape_aims.py || echo "aims scrape failed — keeping existing jaims.yml"
+
     - name: Check for changes
       id: verify-changed-files
       run: |
@@ -63,7 +71,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add _data/jrank.yml
+        git add _data/jrank.yml _data/jaims.yml
         git commit -m "🤖 Auto-update journal rankings - $(date +'%Y-%m-%d')"
         git pull --rebase origin main
         git push

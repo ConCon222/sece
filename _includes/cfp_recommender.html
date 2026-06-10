@@ -21,7 +21,8 @@
   {%- endunless -%}
   {%- endfor -%}
   {%- for j in site.data.jrank -%}
-  {"t":"journal","j":{{ j.journal | default: "" | jsonify }},"p":{{ j.publisher | default: "" | jsonify }},"tg":{{ j.tag | jsonify }},"q":{{ j.purple_quartile | default: "" | jsonify }},"hm":{{ j.hm_score | default: "" | jsonify }},"ar":{{ j.acceptance_rate | default: "" | jsonify }}},
+  {%- assign _aims = site.data.jaims[j.journal].aims | default: "" -%}
+  {"t":"journal","j":{{ j.journal | default: "" | jsonify }},"p":{{ j.publisher | default: "" | jsonify }},"tg":{{ j.tag | jsonify }},"q":{{ j.purple_quartile | default: "" | jsonify }},"hm":{{ j.hm_score | default: "" | jsonify }},"ar":{{ j.acceptance_rate | default: "" | jsonify }},"d":{{ _aims | strip_html | truncate: 500 | jsonify }}},
   {%- endfor -%}
   null];
 </script>
