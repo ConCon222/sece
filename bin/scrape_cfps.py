@@ -71,6 +71,8 @@ CF_PROTECTED_SITES = [
     "academic.oup.com",       # Oxford — Cloudflare
     "journals.uchicago.edu",  # UChicago Press — Cloudflare
     "pnas.org",               # PNAS — Cloudflare
+    "link.springer.com",      # 2026-06: idp.springer.com cookie/JS 门
+    "sciencedirect.com",      # Elsevier — curl_cffi 在云 IP 上 403
 ]
 
 
@@ -1053,15 +1055,21 @@ class JournalCFPScraper:
                     if html:
                         data = self.parse_cambridge_core_call_for_papers(html, j_url)
 
-                # === Springer: curl_cffi ===
+                # === Springer: FlareSolverr（2026-06 起 link.springer.com 加了
+                #     idp.springer.com cookie/JS 门，curl_cffi 只能拿到 3KB 挑战页）===
                 elif "springer.com" in url_l and "nature" not in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
+                    # IDP 重定向偶尔未完成就返回（落在期刊主页快照），重试一次
+                    if html and "collections/" not in html:
+                        print("   🔁 Springer 重定向未完成，重试一次")
+                        html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_springer(html, j_url)
 
-                # === Elsevier / ScienceDirect: curl_cffi ===
+                # === Elsevier / ScienceDirect: FlareSolverr（curl_cffi 在 CI 上 403；
+                #     经 FlareSolverr 可正常停留在 /about/call-for-papers 并解析）===
                 elif "sciencedirect.com" in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_elsevier(html, j_url)
 

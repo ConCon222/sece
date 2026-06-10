@@ -60,6 +60,13 @@ Data sources flow through 5 crawlers in sequence:
 
 Scrapes publisher special-issue/collection pages. Uses FlareSolverr for Cloudflare-protected sites, falls back to curl_cffi. Outputs sorted by `fullpaper_deadline_sort`.
 
+Routing notes (2026-06): **Springer must go through FlareSolverr** — link.springer.com
+added an idp.springer.com cookie/JS gate, so curl_cffi only gets a 3 KB challenge stub
+(HTTP 200, looks like success, parses 0). **Elsevier/ScienceDirect must too** — curl_cffi
+gets 403 from cloud IPs; via FlareSolverr the /about/call-for-papers page loads and
+parses fine (journals with no active calls redirect to the journal homepage → legitimate 0).
+UChicago journal homepages genuinely list no CFPs (parser kept for the future).
+
 ### FlareSolverr
 
 Docker container for Cloudflare bypass, port 8191. Works from GitHub Actions cloud IPs but **times out locally** for Wiley/SAGE/T&F — local testing of publisher crawlers is unreliable.
