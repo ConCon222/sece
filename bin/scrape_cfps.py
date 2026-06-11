@@ -73,6 +73,7 @@ CF_PROTECTED_SITES = [
     "pnas.org",               # PNAS — Cloudflare
     "link.springer.com",      # 2026-06: idp.springer.com cookie/JS 门
     "sciencedirect.com",      # Elsevier — curl_cffi 在云 IP 上 403
+    "nature.com",             # 2026-06-10 前后铺了同一个 idp 门
 ]
 
 
@@ -580,10 +581,10 @@ class JournalCFPScraper:
         列表页不含截止日期，需进入每个 collection 详情页
         （页面显示 "Submission status: Open / Submission deadline: <date>"）。
         防御式：任何失败都返回 ""，保持原有（留空）行为，绝不会让整个爬虫崩溃。
-        Nature 走 curl_cffi（无 Cloudflare），故用 fetch_page_fast。"""
+        2026-06 起 nature.com 有 idp cookie/JS 门 → 走 fetch_cf_site（FlareSolverr）。"""
         try:
-            html = self.fetch_page_fast(url, timeout=20)
-            if not html:
+            html = self.fetch_cf_site(url)
+            if not html or len(html) < 5000:
                 return ""
             soup = BeautifulSoup(html, "lxml")
             # 1) 结构化元素（若存在）
@@ -1073,9 +1074,14 @@ class JournalCFPScraper:
                     if html:
                         data = self.parse_elsevier(html, j_url)
 
-                # === Nature Portfolio: curl_cffi (SpringerNature infra, 无 CF) ===
+                # === Nature Portfolio: FlareSolverr（2026-06-10 前后 nature.com 也
+                #     上了与 link.springer.com 相同的 idp cookie/JS 门，
+                #     curl_cffi 只能拿到 3KB 挑战页）===
                 elif "nature.com" in url_l:
-                    html = self.fetch_page_fast(j_url)
+                    html = self.fetch_cf_site(j_url)
+                    if html and "collections" not in html:
+                        print("   🔁 Nature 重定向未完成，重试一次")
+                        html = self.fetch_cf_site(j_url)
                     if html:
                         data = self.parse_nature_collections(html, j_url)
 
