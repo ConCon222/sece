@@ -525,6 +525,19 @@
   editors: 'Guest editors: Yang Yang, Sara Dolnicar, Jim Jansen'
   link: https://www.sciencedirect.com/special-issue/326025/joint-special-issue-call-for-papers-large-language-models-llms-for-tourism-and-tourists
   description: ''
+- journal: Curriculum Inquiry
+  publisher: Taylor & Francis
+  tag:
+  - Education Policy & Social Issues
+  - Curriculum Studies
+  title: 'Towards childhood as curriculum: Theory, research, and practice'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 August 2026
+  fullpaper_deadline_sort: '2026-08-31'
+  editors: Neil T. Ramjewan (Ontario Institute for Studies in Education, University of Toronto); Julie C. Garlen (Ontario
+    Institute for Studies in Education, University of Toronto)
+  link: https://think.taylorandfrancis.com/special_issues/towards-childhood-as-curriculum-theory-research-and-practice/
+  description: Neil T. Ramjewan , Ontario Institute for Studies in Education, University of Toronto curriculum.inquiry.oise@utoronto.ca
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id002
@@ -764,7 +777,7 @@
     invite submissions that address the importance of psychological needs for well-being and mental health.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: &id014
+  tag:
   - Interdisciplinary Science
   - General Education
   title: Living with human enhancement – ethical, social, and psychological dimensions
@@ -809,7 +822,9 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: &id014
+  - Interdisciplinary Science
+  - General Education
   title: 'The Nobel Prize: historical and sociocultural perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 02 December 2026
@@ -1208,7 +1223,7 @@
     invite submissions that address psychological aspects of social group dynamics.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id021
+  tag:
   - Interdisciplinary Science
   title: Behaviour and digital population health
   abstract_deadline: ''
@@ -1220,7 +1235,8 @@
     that explore the use of digital technologies to measure, understand and influence population health behaviours.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id021
+  tag: &id021
+  - Interdisciplinary Science
   title: Advances in Women’s Reproductive Biology
   abstract_deadline: ''
   fullpaper_deadline: 22 February 2027
@@ -1369,6 +1385,53 @@
   link: https://www.nature.com/collections/aihfgjijah
   description: This Collection creates an interdisciplinary space to interrogate the intersections of race, biopolitics, and
     colonial violence.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id021
+  title: Macrophages in scar-free repair and regeneration
+  abstract_deadline: ''
+  fullpaper_deadline: 10 March 2027
+  fullpaper_deadline_sort: '2027-03-10'
+  editors: ''
+  link: https://www.nature.com/collections/fhajgaihbd
+  description: Editors invite submissions of primary research Articles aiming to understand the mechanisms how macrophages
+    respond to injury signals, signal to progenitors, and promote a pro-regenerative microenvironment in model organisms that
+    exhibit remarkable regenerative capacity and scar-free wound healing.
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Health communication in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 11 March 2027
+  fullpaper_deadline_sort: '2027-03-11'
+  editors: ''
+  link: https://link.springer.com/collections/jbiagdjdhc
+  description: Effective health communication plays a crucial role in bridging gaps in health literacy, empowering patients,
+    and fostering collaborative relationships between healthcare providers and communities. This Coll...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Disaster preparedness in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 11 March 2027
+  fullpaper_deadline_sort: '2027-03-11'
+  editors: ''
+  link: https://link.springer.com/collections/hjbcaihdcc
+  description: Equipping healthcare professionals to respond effectively to emergencies is crucial as the frequency and severity
+    of natural and man-made disasters increase. This Collection seeks to explore the evolving lan...
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id014
+  title: Leisure reading and reader engagement
+  abstract_deadline: ''
+  fullpaper_deadline: 11 March 2027
+  fullpaper_deadline_sort: '2027-03-11'
+  editors: ''
+  link: https://www.nature.com/collections/gaihaaiagc
+  description: Leisure reading and reader engagement refer to the voluntary, self-directed practices through which individuals
+    select, interpret, and respond to texts beyond compulsory educational or occupational requirements. Submissions are encouraged
+    from education studies, literacy studies, sociology, psychology, anthropology, media and cultural studies, library and
+    information science, publishing studies, and related fields.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id021
