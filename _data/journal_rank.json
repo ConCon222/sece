@@ -2724,49 +2724,56 @@
     "tag": [
       "Psychology",
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 12808
   },
   {
     "name": "Contemporary Educational Psychology",
     "url": "https://www.sciencedirect.com/journal/contemporary-educational-psychology/about/insights",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 12882
   },
   {
     "name": "Educational Psychology Review",
     "url": "https://link.springer.com/journal/10648",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 14278
   },
   {
     "name": "Learning and Individual Differences",
     "url": "https://www.sciencedirect.com/journal/learning-and-individual-differences/about/insights",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 13453
   },
   {
     "name": "Motivation and Emotion",
     "url": "https://link.springer.com/journal/11031",
     "tag": [
       "Psychology"
-    ]
+    ],
+    "sourceid": 12710
   },
   {
     "name": "Cognition",
     "url": "https://www.sciencedirect.com/journal/cognition/about/insights",
     "tag": [
       "Cognitive Science"
-    ]
+    ],
+    "sourceid": 12857
   },
   {
     "name": "Cognitive Science",
     "url": "https://onlinelibrary.wiley.com/journal/15516709/journal-metrics",
     "tag": [
       "Cognitive Science"
-    ]
+    ],
+    "sourceid": 12874
   },
   {
     "name": "Cognition and Instruction",
@@ -2774,56 +2781,64 @@
     "tag": [
       "Cognitive Science",
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 12859
   },
   {
     "name": "Applied Cognitive Psychology",
     "url": "https://onlinelibrary.wiley.com/journal/10990720/journal-metrics",
     "tag": [
       "Cognitive Science"
-    ]
+    ],
+    "sourceid": 12024
   },
   {
     "name": "Child Development",
     "url": "https://srcd.onlinelibrary.wiley.com/journal/14678624/journal-metrics",
     "tag": [
       "Developmental Psychology"
-    ]
+    ],
+    "sourceid": 24456
   },
   {
     "name": "Developmental Psychology",
     "url": "https://www.apa.org/pubs/journals/dev",
     "tag": [
       "Developmental Psychology"
-    ]
+    ],
+    "sourceid": 13500
   },
   {
     "name": "Developmental Science",
     "url": "https://onlinelibrary.wiley.com/journal/14677687/journal-metrics",
     "tag": [
       "Developmental Psychology"
-    ]
+    ],
+    "sourceid": 13503
   },
   {
     "name": "Journal of Experimental Child Psychology",
     "url": "https://www.sciencedirect.com/journal/journal-of-experimental-child-psychology/about/insights",
     "tag": [
       "Developmental Psychology"
-    ]
+    ],
+    "sourceid": 15472
   },
   {
     "name": "Journal of Applied Developmental Psychology",
     "url": "https://www.sciencedirect.com/journal/journal-of-applied-developmental-psychology/about/insights",
     "tag": [
       "Developmental Psychology"
-    ]
+    ],
+    "sourceid": 15385
   },
   {
     "name": "Current Psychology",
     "url": "https://link.springer.com/journal/12144",
     "tag": [
       "Psychology"
-    ]
+    ],
+    "sourceid": 13479
   },
   {
     "name": "BMC Psychology",
@@ -2831,7 +2846,8 @@
     "tag": [
       "Psychology",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100464683
   },
   {
     "name": "Frontiers in Psychology",
@@ -2839,56 +2855,64 @@
     "tag": [
       "Psychology",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100216571
   },
   {
     "name": "Psychological Science",
     "url": "https://journals.sagepub.com/home/pss",
     "tag": [
       "Psychology"
-    ]
+    ],
+    "sourceid": 13468
   },
   {
     "name": "Perspectives on Psychological Science",
     "url": "https://journals.sagepub.com/home/pps",
     "tag": [
       "Psychology"
-    ]
+    ],
+    "sourceid": 19700182323
   },
   {
     "name": "British Journal of Psychology",
     "url": "https://bpspsychub.onlinelibrary.wiley.com/journal/20448295/journal-metrics",
     "tag": [
       "Psychology"
-    ]
+    ],
+    "sourceid": 12775
   },
   {
     "name": "Journal of School Psychology",
     "url": "https://www.sciencedirect.com/journal/journal-of-school-psychology/about/insights",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 30074
   },
   {
     "name": "Psychology in the Schools",
     "url": "https://onlinelibrary.wiley.com/journal/15206807/journal-metrics",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 14030
   },
   {
     "name": "School Psychology International",
     "url": "https://journals.sagepub.com/home/spi",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 23164
   },
   {
     "name": "Social Psychology of Education",
     "url": "https://link.springer.com/journal/11218",
     "tag": [
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 13344
   },
   {
     "name": "Educational and Psychological Measurement",
@@ -2896,7 +2920,8 @@
     "tag": [
       "Methodology",
       "Psychology"
-    ]
+    ],
+    "sourceid": 13563
   },
   {
     "name": "Journal of Learning Analytics",
@@ -2904,7 +2929,8 @@
     "tag": [
       "Learning Analytics",
       "Data Science"
-    ]
+    ],
+    "sourceid": 21100932472
   },
   {
     "name": "Journal of Educational Data Mining",
@@ -2912,14 +2938,16 @@
     "tag": [
       "Data Science",
       "Educational Technology"
-    ]
+    ],
+    "sourceid": 21101042013
   },
   {
     "name": "Big Data & Society",
     "url": "https://journals.sagepub.com/home/bds",
     "tag": [
       "Data Science"
-    ]
+    ],
+    "sourceid": 21100933954
   },
   {
     "name": "Journal of Big Data",
@@ -2927,7 +2955,8 @@
     "tag": [
       "Data Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100791292
   },
   {
     "name": "Scientific Data",
@@ -2935,7 +2964,8 @@
     "tag": [
       "Data Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100451321
   },
   {
     "name": "Data in Brief",
@@ -2943,14 +2973,16 @@
     "tag": [
       "Data Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100372856
   },
   {
     "name": "International Journal of Data Science and Analytics",
     "url": "https://link.springer.com/journal/41060",
     "tag": [
       "Data Science"
-    ]
+    ],
+    "sourceid": 21101017225
   },
   {
     "name": "EPJ Data Science",
@@ -2958,7 +2990,8 @@
     "tag": [
       "Data Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100397403
   },
   {
     "name": "Behavior Research Methods",
@@ -2966,7 +2999,8 @@
     "tag": [
       "Methodology",
       "Psychology"
-    ]
+    ],
+    "sourceid": 12103
   },
   {
     "name": "Social Science Computer Review",
@@ -2974,21 +3008,24 @@
     "tag": [
       "Data Science",
       "General Social Science"
-    ]
+    ],
+    "sourceid": 18916
   },
   {
     "name": "Journal of Mixed Methods Research",
     "url": "https://journals.sagepub.com/home/mmr",
     "tag": [
       "Methodology"
-    ]
+    ],
+    "sourceid": 11200153507
   },
   {
     "name": "Sociological Methods & Research",
     "url": "https://journals.sagepub.com/home/smr",
     "tag": [
       "Methodology"
-    ]
+    ],
+    "sourceid": 18091
   },
   {
     "name": "Humanities and Social Sciences Communications",
@@ -2996,7 +3033,8 @@
     "tag": [
       "General Social Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21101018925
   },
   {
     "name": "Scientific Reports",
@@ -3004,7 +3042,8 @@
     "tag": [
       "Multidisciplinary",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100200805
   },
   {
     "name": "SAGE Open",
@@ -3012,7 +3051,8 @@
     "tag": [
       "General Social Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21100255401
   },
   {
     "name": "PLOS ONE",
@@ -3020,7 +3060,8 @@
     "tag": [
       "Multidisciplinary",
       "Open Science"
-    ]
+    ],
+    "sourceid": 10600153309
   },
   {
     "name": "Social Sciences & Humanities Open",
@@ -3028,21 +3069,24 @@
     "tag": [
       "General Social Science",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21101142603
   },
   {
     "name": "Social Indicators Research",
     "url": "https://link.springer.com/journal/11205",
     "tag": [
       "General Social Science"
-    ]
+    ],
+    "sourceid": 19391
   },
   {
     "name": "Quality & Quantity",
     "url": "https://link.springer.com/journal/11135",
     "tag": [
       "Methodology"
-    ]
+    ],
+    "sourceid": 19372
   },
   {
     "name": "International Journal of Artificial Intelligence in Education",
@@ -3050,7 +3094,8 @@
     "tag": [
       "AI",
       "Educational Technology"
-    ]
+    ],
+    "sourceid": 19600156811
   },
   {
     "name": "Computers in Human Behavior",
@@ -3058,7 +3103,8 @@
     "tag": [
       "Psychology",
       "HCI"
-    ]
+    ],
+    "sourceid": 19419
   },
   {
     "name": "Computers and Education: Artificial Intelligence",
@@ -3066,7 +3112,8 @@
     "tag": [
       "AI",
       "Educational Technology"
-    ]
+    ],
+    "sourceid": 21101074919
   },
   {
     "name": "Computers and Education Open",
@@ -3074,7 +3121,8 @@
     "tag": [
       "Educational Technology",
       "Open Science"
-    ]
+    ],
+    "sourceid": 21101259019
   },
   {
     "name": "International Journal of Human-Computer Interaction",
@@ -3082,21 +3130,24 @@
     "tag": [
       "HCI",
       "Psychology"
-    ]
+    ],
+    "sourceid": 19420
   },
   {
     "name": "International Journal of Human-Computer Studies",
     "url": "https://www.sciencedirect.com/journal/international-journal-of-human-computer-studies/about/insights",
     "tag": [
       "HCI"
-    ]
+    ],
+    "sourceid": 12960
   },
   {
     "name": "Cognitive Neurodynamics",
     "url": "https://link.springer.com/journal/11571",
     "tag": [
       "Neuroscience"
-    ]
+    ],
+    "sourceid": 5200153049
   },
   {
     "name": "Trends in Neuroscience and Education",
@@ -3104,6 +3155,152 @@
     "tag": [
       "Neuroscience",
       "Educational Psychology"
-    ]
+    ],
+    "sourceid": 21100228128
+  },
+  {
+    "name": "Information, Communication & Society",
+    "url": "https://www.tandfonline.com/journals/rics20",
+    "tag": [
+      "Communication"
+    ],
+    "sourceid": 200147110
+  },
+  {
+    "name": "Applied Linguistics",
+    "url": "https://academic.oup.com/applij",
+    "tag": [
+      "Linguistics",
+      "Language Education"
+    ],
+    "sourceid": 18651
+  },
+  {
+    "name": "Studies in Second Language Acquisition",
+    "url": "https://www.cambridge.org/core/journals/studies-in-second-language-acquisition",
+    "tag": [
+      "Linguistics",
+      "Language Education"
+    ],
+    "sourceid": 3900148216
+  },
+  {
+    "name": "The Modern Language Journal",
+    "url": "https://onlinelibrary.wiley.com/journal/15404781/journal-metrics",
+    "tag": [
+      "Linguistics",
+      "Language Education"
+    ],
+    "sourceid": 100147338
+  },
+  {
+    "name": "British Journal of Sociology",
+    "url": "https://onlinelibrary.wiley.com/journal/14684446/journal-metrics",
+    "tag": [
+      "Sociology"
+    ],
+    "sourceid": 17497
+  },
+  {
+    "name": "Annual Review of Sociology",
+    "url": "https://www.annualreviews.org/content/journals/soc",
+    "tag": [
+      "Sociology"
+    ],
+    "sourceid": 16976
+  },
+  {
+    "name": "Journal of Experimental Psychology: General",
+    "url": "https://www.apa.org/pubs/journals/xge",
+    "tag": [
+      "Psychology"
+    ],
+    "sourceid": 15473
+  },
+  {
+    "name": "Psychological Methods",
+    "url": "https://www.apa.org/pubs/journals/met",
+    "tag": [
+      "Methodology",
+      "Psychology"
+    ],
+    "sourceid": 13461
+  },
+  {
+    "name": "Trends in Cognitive Sciences",
+    "url": "https://www.sciencedirect.com/journal/trends-in-cognitive-sciences/about/insights",
+    "tag": [
+      "Cognitive Science"
+    ],
+    "sourceid": 15359
+  },
+  {
+    "name": "Nature Human Behaviour",
+    "url": "https://www.nature.com/nathumbehav/",
+    "tag": [
+      "Psychology",
+      "Multidisciplinary"
+    ],
+    "sourceid": 21100838541
+  },
+  {
+    "name": "Psychonomic Bulletin & Review",
+    "url": "https://link.springer.com/journal/13423",
+    "tag": [
+      "Psychology",
+      "Cognitive Science"
+    ],
+    "sourceid": 14062
+  },
+  {
+    "name": "Annual Review of Psychology",
+    "url": "https://www.annualreviews.org/content/journals/psych",
+    "tag": [
+      "Psychology"
+    ],
+    "sourceid": 12010
+  },
+  {
+    "name": "Nature Communications",
+    "url": "https://www.nature.com/ncomms/",
+    "tag": [
+      "Multidisciplinary",
+      "Open Science"
+    ],
+    "sourceid": 19700182758
+  },
+  {
+    "name": "Proceedings of the National Academy of Sciences",
+    "url": "https://www.pnas.org/",
+    "tag": [
+      "Multidisciplinary"
+    ],
+    "sourceid": 21121
+  },
+  {
+    "name": "Technological Forecasting and Social Change",
+    "url": "https://www.sciencedirect.com/journal/technological-forecasting-and-social-change/about/insights",
+    "tag": [
+      "Management",
+      "General Social Science"
+    ],
+    "sourceid": 14704
+  },
+  {
+    "name": "MIS Quarterly",
+    "url": "https://misq.org/",
+    "tag": [
+      "Management",
+      "Information Systems"
+    ],
+    "sourceid": 12402
+  },
+  {
+    "name": "American Economic Review",
+    "url": "https://www.aeaweb.org/journals/aer",
+    "tag": [
+      "Economics"
+    ],
+    "sourceid": 22697
   }
 ]
