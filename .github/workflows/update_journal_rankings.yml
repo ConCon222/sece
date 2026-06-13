@@ -52,17 +52,20 @@ jobs:
         EASYSCHOLAR_KEY: ${{ secrets.EASYSCHOLAR_KEY }}
         FLARESOLVERR_URL: http://localhost:8191
       run: |
-        # Default = only-missing: skip journals that already have data, so the
-        # run finishes in minutes and never hits the 6h ceiling (which gets the
-        # job cancelled and commits nothing). A full re-scrape of all ~390
-        # journals via the Scopus headless browser takes >6h — only do it on
-        # explicit request (manual dispatch with full_refresh=true).
+        # Default = rotating window of 250 journals. A full re-scrape of all
+        # ~390 journals via the Scopus headless browser exceeds GitHub's 6h job
+        # ceiling → the run is cancelled and commits nothing. Instead each run
+        # refreshes 250 journals starting from a persisted cursor (_data/.rank_cursor)
+        # and advances it; 2 runs cover the whole list, so on the 5th+25th
+        # schedule everything (incl. acceptance rates / review times that DO
+        # drift) is refreshed ~monthly, and no single run gets near 6h.
+        # full_refresh=true forces the old all-at-once behavior on demand.
         if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_refresh }}" = "true" ]; then
           echo "🐢 FULL refresh: re-scraping every journal (may take hours)"
           python bin/journal_data_manager.py --no-diff
         else
-          echo "⚡ Incremental: only journals missing data"
-          python bin/journal_data_manager.py --no-diff --only-missing
+          echo "🔄 Rotating window: 250 journals from the saved cursor"
+          python bin/journal_data_manager.py --no-diff --batch-size 250
         fi
 
     - name: Update journal aims & scope (feeds the venue recommender)
@@ -87,7 +90,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add _data/jrank.yml _data/jaims.yml
+        git add _data/jrank.yml _data/jaims.yml _data/.rank_cursor
         git commit -m "🤖 Auto-update journal rankings - $(date +'%Y-%m-%d')"
         git pull --rebase origin main
         git push

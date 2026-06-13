@@ -638,17 +638,30 @@ class JournalRankingUpdater:
             return None
     
     def update_journal_rankings(self, dry_run: bool = False, only_missing: bool = False,
-                                save_every: int = 10):
+                                save_every: int = 10, batch_offset: int = 0,
+                                batch_size: int = 0):
         """Main function to update all journal rankings
 
         only_missing: 只处理还没有 EasyScholar 数据(purple_score)的期刊，跳过已完成的，
                       把 388 本的全量重爬（会顶破 6h）缩短为只处理新刊。
         save_every:   每处理 N 本就把 jrank.yml 写一次盘，超时被杀也保住已爬进度。
+        batch_offset/batch_size: 轮转窗口——本轮只处理 journal_list[offset:offset+size]
+                      （绕回开头）。配合管理器游标实现「每轮 250 本」滚动刷新，保证
+                      录用率/审稿周期等会变的数据也能定期更新，而不超时。
         """
         if dry_run:
             logger.info("Running in DRY-RUN mode - data will NOT be saved")
 
         journal_list, existing_data = self.load_journal_data()
+
+        # 轮转窗口：只处理本轮分配到的那一段期刊
+        if batch_size:
+            total = len(journal_list)
+            if batch_size < total:
+                off = (batch_offset or 0) % total
+                end = off + batch_size
+                journal_list = journal_list[off:end] if end <= total else journal_list[off:] + journal_list[:end - total]
+                logger.info(f"Batch window [{off}:+{batch_size}] → processing {len(journal_list)} of {total} journals")
 
         # Create a dictionary for quick lookup of existing data
         existing_dict = {item['journal']: item for item in existing_data}
@@ -872,6 +885,10 @@ def main():
                        help='只处理还没有 EasyScholar 数据的期刊（跳过已完成，避免 6h 超时）')
     parser.add_argument('--save-every', type=int, default=10,
                        help='每处理 N 本写一次盘（增量保存，默认 10）')
+    parser.add_argument('--batch-offset', type=int, default=0,
+                       help='轮转窗口起点（配合 --batch-size）')
+    parser.add_argument('--batch-size', type=int, default=0,
+                       help='本轮只处理这么多本（0=全部）；窗口超出末尾会绕回开头')
     args = parser.parse_args()
     
     # Set logging level
@@ -887,7 +904,8 @@ def main():
     try:
         logger.info("Starting journal ranking update...")
         updater.update_journal_rankings(dry_run=args.dry_run, only_missing=args.only_missing,
-                                        save_every=args.save_every)
+                                        save_every=args.save_every,
+                                        batch_offset=args.batch_offset, batch_size=args.batch_size)
         logger.info("Journal ranking update completed successfully")
     except KeyboardInterrupt:
         logger.info("Update interrupted by user")

@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 # 文件路径
 JRANK_FILE = '_data/jrank.yml'
 JOURNAL_RANK_FILE = '_data/journal_rank.json'
+CURSOR_FILE = '_data/.rank_cursor'  # 轮转游标：记录下一轮窗口起点（随仓库提交，跨运行保留）
 
 
 class JournalDataManager:
@@ -57,6 +58,21 @@ class JournalDataManager:
         except Exception as e:
             logger.error(f"❌ 加载期刊列表失败: {e}")
             return []
+
+    def read_cursor(self) -> int:
+        """读取轮转游标（下一轮窗口起点）。文件不存在或损坏则从 0 开始。"""
+        try:
+            with open(CURSOR_FILE, 'r', encoding='utf-8') as f:
+                return int((f.read() or '0').strip())
+        except Exception:
+            return 0
+
+    def write_cursor(self, offset: int):
+        try:
+            with open(CURSOR_FILE, 'w', encoding='utf-8') as f:
+                f.write(str(int(offset)))
+        except Exception as e:
+            logger.error(f"❌ 写入游标失败: {e}")
     
     def save_data(self, data: List[Dict]) -> bool:
         """保存数据到 jrank.yml"""
@@ -194,7 +210,8 @@ class JournalDataManager:
         
         print("="*80 + "\n")
     
-    def run_scopus_update(self, dry_run: bool = False, only_missing: bool = False) -> bool:
+    def run_scopus_update(self, dry_run: bool = False, only_missing: bool = False,
+                          batch_offset: int = 0, batch_size: int = 0) -> bool:
         """运行橙色系指标更新脚本"""
         logger.info("🔶 运行橙色系指标更新...")
         script_path = 'bin/update_scopus_metrics.py'
@@ -208,6 +225,8 @@ class JournalDataManager:
             cmd.append('--dry-run')
         if only_missing:
             cmd.append('--only-missing')
+        if batch_size:
+            cmd.extend(['--batch-offset', str(batch_offset), '--batch-size', str(batch_size)])
 
         try:
             result = subprocess.run(cmd, capture_output=True, text=True)
@@ -220,7 +239,8 @@ class JournalDataManager:
             return False
     
     def run_publisher_update(self, dry_run: bool = False, easyscholar_key: str = None,
-                             only_missing: bool = False) -> bool:
+                             only_missing: bool = False, batch_offset: int = 0,
+                             batch_size: int = 0) -> bool:
         """运行出版商+EasyScholar 更新脚本"""
         logger.info("🔷 运行出版商+EasyScholar 更新...")
         script_path = 'bin/journal_ranking_updater.py'
@@ -236,6 +256,8 @@ class JournalDataManager:
             cmd.extend(['--easyscholar-key', easyscholar_key])
         if only_missing:
             cmd.append('--only-missing')
+        if batch_size:
+            cmd.extend(['--batch-offset', str(batch_offset), '--batch-size', str(batch_size)])
 
         try:
             result = subprocess.run(cmd, capture_output=True, text=True)
@@ -248,12 +270,27 @@ class JournalDataManager:
             return False
     
     def run_all(self, dry_run: bool = False, show_diff: bool = True,
-                easyscholar_key: str = None, only_missing: bool = False):
-        """运行所有更新"""
+                easyscholar_key: str = None, only_missing: bool = False,
+                batch_size: int = 0):
+        """运行所有更新
+
+        batch_size > 0 时启用「轮转窗口」：本轮只处理从游标开始的 batch_size 本，
+        Scopus 与出版商用同一窗口；两步都跑完后游标前移 batch_size（绕回开头）。
+        这样录用率/审稿周期/IF 等会变的数据也能随轮转定期刷新，而每轮都不超时。
+        """
         print("\n" + "="*80)
         print("🚀 期刊数据统一更新")
         print(f"   时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print("="*80 + "\n")
+
+        # 轮转窗口：读取游标，确定本轮处理哪一段
+        batch_offset = 0
+        total = len(self.load_journal_list()) if batch_size else 0
+        if batch_size and total:
+            batch_offset = self.read_cursor() % total
+            end = batch_offset + batch_size
+            wrap = '…(绕回开头)' if end > total else ''
+            print(f"🔄 轮转窗口: 本轮处理第 {batch_offset} ~ {min(end, total)} 本{wrap} / 共 {total} 本\n")
 
         # 保存更新前的数据
         old_data = deepcopy(self.load_data())
@@ -261,14 +298,22 @@ class JournalDataManager:
         # 1. 先运行橙色系指标更新（获取 orange_score 等数据）
         print("\n[1/2] 橙色系指标更新")
         print("-"*40)
-        self.run_scopus_update(dry_run=dry_run, only_missing=only_missing)
+        self.run_scopus_update(dry_run=dry_run, only_missing=only_missing,
+                               batch_offset=batch_offset, batch_size=batch_size)
 
         # 2. 再运行出版商更新（此时 HM score 计算可以使用 orange 数据）
         print("\n[2/2] 出版商 + EasyScholar 更新 (含 HM Score 计算)")
         print("-"*40)
         self.run_publisher_update(dry_run=dry_run, easyscholar_key=easyscholar_key,
-                                  only_missing=only_missing)
-        
+                                  only_missing=only_missing,
+                                  batch_offset=batch_offset, batch_size=batch_size)
+
+        # 两步都跑完，前移游标（仅在非 dry-run 且启用轮转时）
+        if batch_size and total and not dry_run:
+            new_offset = (batch_offset + batch_size) % total
+            self.write_cursor(new_offset)
+            print(f"\n🔄 游标前移: 下一轮从第 {new_offset} 本开始")
+
         # 3. 对比差异
         if show_diff:
             new_data = self.load_data()
@@ -314,6 +359,8 @@ def main():
                        help='不显示差异报告')
     parser.add_argument('--only-missing', action='store_true',
                        help='只处理缺数据的期刊（跳过已完成，避免 6h 超时）')
+    parser.add_argument('--batch-size', type=int, default=0,
+                       help='轮转窗口：本轮只处理这么多本（从游标开始，绕回开头），跑完游标前移。0=全部')
 
     args = parser.parse_args()
     
@@ -326,7 +373,8 @@ def main():
             dry_run=args.dry_run,
             show_diff=not args.no_diff,
             easyscholar_key=args.easyscholar_key,
-            only_missing=args.only_missing
+            only_missing=args.only_missing,
+            batch_size=args.batch_size
         )
     elif args.orange_only:
         old_data = deepcopy(manager.load_data())
@@ -356,7 +404,8 @@ def main():
             dry_run=args.dry_run,
             show_diff=not args.no_diff,
             easyscholar_key=args.easyscholar_key,
-            only_missing=args.only_missing
+            only_missing=args.only_missing,
+            batch_size=args.batch_size
         )
 
 
