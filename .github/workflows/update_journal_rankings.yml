@@ -2,9 +2,14 @@ name: Update Journal Rankings
 
 on:
   schedule:
-    # Run on the 3rd of every month at 2 AM UTC (10 AM Beijing time)
+    # Run on the 5th & 25th of every month at 2 AM UTC (10 AM Beijing time)
     - cron: '0 2 5,25 * *'
   workflow_dispatch: # Allow manual trigger
+    inputs:
+      full_refresh:
+        description: 'Re-scrape ALL journals (slow, hours). Leave off to only fill journals missing data.'
+        type: boolean
+        default: false
 
 jobs:
   update-rankings:
@@ -47,7 +52,18 @@ jobs:
         EASYSCHOLAR_KEY: ${{ secrets.EASYSCHOLAR_KEY }}
         FLARESOLVERR_URL: http://localhost:8191
       run: |
-        python bin/journal_data_manager.py --no-diff
+        # Default = only-missing: skip journals that already have data, so the
+        # run finishes in minutes and never hits the 6h ceiling (which gets the
+        # job cancelled and commits nothing). A full re-scrape of all ~390
+        # journals via the Scopus headless browser takes >6h — only do it on
+        # explicit request (manual dispatch with full_refresh=true).
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_refresh }}" = "true" ]; then
+          echo "🐢 FULL refresh: re-scraping every journal (may take hours)"
+          python bin/journal_data_manager.py --no-diff
+        else
+          echo "⚡ Incremental: only journals missing data"
+          python bin/journal_data_manager.py --no-diff --only-missing
+        fi
 
     - name: Update journal aims & scope (feeds the venue recommender)
       env:

@@ -211,12 +211,26 @@ class ScopusDrissionCrawler:
         return result
 
 
-def update_scopus_metrics_in_yaml(dry_run: bool = False):
+def _save_jrank(jrank_dict, jrank_file):
+    """把 jrank_dict 写回 YAML（增量保存用，失败不抛出以免中断主循环）。"""
+    try:
+        with open(jrank_file, 'w', encoding='utf-8') as f:
+            yaml.dump(list(jrank_dict.values()), f, default_flow_style=False, allow_unicode=True)
+        return True
+    except Exception as e:
+        logger.error(f"❌ 增量保存失败: {e}")
+        return False
+
+
+def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = False,
+                                  save_every: int = 10):
     """
     更新 jrank.yml 中的橙色系指标
-    
+
     Args:
         dry_run: 是否为测试模式（不保存文件）
+        only_missing: 只处理还没有 orange_score 的期刊（跳过已完成的，大幅缩短耗时）
+        save_every: 每处理 N 本就写一次盘（防止超时被杀导致整轮丢失）
     """
     journal_rank_file = '_data/journal_rank.json'
     jrank_file = '_data/jrank.yml'
@@ -257,7 +271,14 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False):
         if not sourceid:
             logger.info(f"⏩ 跳过 {journal_name} (无 sourceid)")
             continue
-        
+
+        # only_missing: 已有 orange_score 的期刊跳过浏览器导航（最贵的一步）
+        if only_missing:
+            existing = jrank_dict.get(journal_name, {})
+            if existing.get('orange_score'):
+                logger.info(f"⏩ 跳过 {journal_name} (已有橙色数据)")
+                continue
+
         if journal_name not in jrank_dict:
             # 自动创建期刊条目
             logger.info(f"➕ 创建新条目: {journal_name}")
@@ -297,10 +318,15 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False):
             
             updated_count += 1
             logger.info(f"✅ {journal_name} 更新完成")
-            
+
+            # 增量保存：每 save_every 本写一次盘，超时被杀也能保住已爬的数据
+            if not dry_run and save_every and updated_count % save_every == 0:
+                if _save_jrank(jrank_dict, jrank_file):
+                    logger.info(f"💾 增量保存：已写入 {updated_count} 本的进度")
+
             # 延迟，避免请求过快
             time.sleep(2)
-            
+
         except Exception as e:
             logger.error(f"❌ {journal_name} 更新失败: {e}")
     
@@ -335,8 +361,12 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='更新期刊橙色系指标 (橙色分数, 橙色分区, Documents Published, Percentile)')
-    parser.add_argument('--dry-run', '-n', action='store_true', 
+    parser.add_argument('--dry-run', '-n', action='store_true',
                        help='测试模式 - 不保存文件')
+    parser.add_argument('--only-missing', action='store_true',
+                       help='只处理还没有橙色数据的期刊（跳过已完成，避免 6h 超时）')
+    parser.add_argument('--save-every', type=int, default=10,
+                       help='每处理 N 本写一次盘（增量保存，默认 10）')
     args = parser.parse_args()
     
     logger.info("="*80)
@@ -344,7 +374,8 @@ def main():
     logger.info("="*80)
     
     try:
-        update_scopus_metrics_in_yaml(dry_run=args.dry_run)
+        update_scopus_metrics_in_yaml(dry_run=args.dry_run, only_missing=args.only_missing,
+                                      save_every=args.save_every)
     except KeyboardInterrupt:
         logger.info("\n⚠️ 用户中断")
     except Exception as e:

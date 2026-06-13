@@ -637,24 +637,46 @@ class JournalRankingUpdater:
             logger.error(f"Error determining publisher from URL {url}: {e}")
             return None
     
-    def update_journal_rankings(self, dry_run: bool = False):
-        """Main function to update all journal rankings"""
+    def update_journal_rankings(self, dry_run: bool = False, only_missing: bool = False,
+                                save_every: int = 10):
+        """Main function to update all journal rankings
+
+        only_missing: 只处理还没有 EasyScholar 数据(purple_score)的期刊，跳过已完成的，
+                      把 388 本的全量重爬（会顶破 6h）缩短为只处理新刊。
+        save_every:   每处理 N 本就把 jrank.yml 写一次盘，超时被杀也保住已爬进度。
+        """
         if dry_run:
             logger.info("Running in DRY-RUN mode - data will NOT be saved")
-        
+
         journal_list, existing_data = self.load_journal_data()
-        
+
         # Create a dictionary for quick lookup of existing data
         existing_dict = {item['journal']: item for item in existing_data}
-        
+
+        def _flush():
+            try:
+                with open('_data/jrank.yml', 'w', encoding='utf-8') as f:
+                    yaml.dump(list(existing_dict.values()), f, default_flow_style=False, allow_unicode=True)
+                return True
+            except Exception as e:
+                logger.error(f"❌ 增量保存失败: {e}")
+                return False
+
         updated_count = 0
-        
+
         for journal_info in journal_list:
             journal_name = journal_info['name']
             url = journal_info.get('url', '')
             sourceid = journal_info.get('sourceid')
             tags = journal_info.get('tag', [])
-            
+
+            # only_missing: 已有 purple_score(EasyScholar IF) 的期刊跳过昂贵的
+            # 出版社爬虫 + EasyScholar 网络调用，只处理新刊/缺数据的
+            if only_missing:
+                ex = existing_dict.get(journal_name)
+                if ex and ex.get('purple_score'):
+                    continue
+
             logger.info(f"Processing {journal_name}...")
             
             # 获取现有数据或创建新条目（保留所有现有字段）
@@ -729,7 +751,12 @@ class JournalRankingUpdater:
             # 更新到 existing_dict
             existing_dict[journal_name] = journal_data
             updated_count += 1
-            
+
+            # 增量保存：每 save_every 本写一次盘
+            if not dry_run and save_every and updated_count % save_every == 0:
+                if _flush():
+                    logger.info(f"💾 增量保存：已写入 {updated_count} 本的进度")
+
             # Add delay to avoid rate limiting
             time.sleep(random.uniform(2, 5))
         
@@ -839,8 +866,12 @@ def main():
     parser.add_argument('--easyscholar-key', '-e', type=str, 
                        help='EasyScholar API secret key (can also use EASYSCHOLAR_KEY env variable)')
     parser.add_argument('--debug', '-d', action='store_true', help='Enable debug logging')
-    parser.add_argument('--dry-run', '-n', action='store_true', 
+    parser.add_argument('--dry-run', '-n', action='store_true',
                        help='Dry run - collect data but don\'t save')
+    parser.add_argument('--only-missing', action='store_true',
+                       help='只处理还没有 EasyScholar 数据的期刊（跳过已完成，避免 6h 超时）')
+    parser.add_argument('--save-every', type=int, default=10,
+                       help='每处理 N 本写一次盘（增量保存，默认 10）')
     args = parser.parse_args()
     
     # Set logging level
@@ -855,7 +886,8 @@ def main():
     
     try:
         logger.info("Starting journal ranking update...")
-        updater.update_journal_rankings(dry_run=args.dry_run)
+        updater.update_journal_rankings(dry_run=args.dry_run, only_missing=args.only_missing,
+                                        save_every=args.save_every)
         logger.info("Journal ranking update completed successfully")
     except KeyboardInterrupt:
         logger.info("Update interrupted by user")

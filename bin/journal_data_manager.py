@@ -194,19 +194,21 @@ class JournalDataManager:
         
         print("="*80 + "\n")
     
-    def run_scopus_update(self, dry_run: bool = False) -> bool:
+    def run_scopus_update(self, dry_run: bool = False, only_missing: bool = False) -> bool:
         """运行橙色系指标更新脚本"""
         logger.info("🔶 运行橙色系指标更新...")
         script_path = 'bin/update_scopus_metrics.py'
-        
+
         if not os.path.exists(script_path):
             logger.error(f"❌ 脚本不存在: {script_path}")
             return False
-        
+
         cmd = [sys.executable, script_path]
         if dry_run:
             cmd.append('--dry-run')
-        
+        if only_missing:
+            cmd.append('--only-missing')
+
         try:
             result = subprocess.run(cmd, capture_output=True, text=True)
             print(result.stdout)
@@ -217,21 +219,24 @@ class JournalDataManager:
             logger.error(f"❌ 运行脚本失败: {e}")
             return False
     
-    def run_publisher_update(self, dry_run: bool = False, easyscholar_key: str = None) -> bool:
+    def run_publisher_update(self, dry_run: bool = False, easyscholar_key: str = None,
+                             only_missing: bool = False) -> bool:
         """运行出版商+EasyScholar 更新脚本"""
         logger.info("🔷 运行出版商+EasyScholar 更新...")
         script_path = 'bin/journal_ranking_updater.py'
-        
+
         if not os.path.exists(script_path):
             logger.error(f"❌ 脚本不存在: {script_path}")
             return False
-        
+
         cmd = [sys.executable, script_path]
         if dry_run:
             cmd.append('--dry-run')
         if easyscholar_key:
             cmd.extend(['--easyscholar-key', easyscholar_key])
-        
+        if only_missing:
+            cmd.append('--only-missing')
+
         try:
             result = subprocess.run(cmd, capture_output=True, text=True)
             print(result.stdout)
@@ -242,26 +247,27 @@ class JournalDataManager:
             logger.error(f"❌ 运行脚本失败: {e}")
             return False
     
-    def run_all(self, dry_run: bool = False, show_diff: bool = True, 
-                easyscholar_key: str = None):
+    def run_all(self, dry_run: bool = False, show_diff: bool = True,
+                easyscholar_key: str = None, only_missing: bool = False):
         """运行所有更新"""
         print("\n" + "="*80)
         print("🚀 期刊数据统一更新")
         print(f"   时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print("="*80 + "\n")
-        
+
         # 保存更新前的数据
         old_data = deepcopy(self.load_data())
-        
+
         # 1. 先运行橙色系指标更新（获取 orange_score 等数据）
         print("\n[1/2] 橙色系指标更新")
         print("-"*40)
-        self.run_scopus_update(dry_run=dry_run)
-        
+        self.run_scopus_update(dry_run=dry_run, only_missing=only_missing)
+
         # 2. 再运行出版商更新（此时 HM score 计算可以使用 orange 数据）
         print("\n[2/2] 出版商 + EasyScholar 更新 (含 HM Score 计算)")
         print("-"*40)
-        self.run_publisher_update(dry_run=dry_run, easyscholar_key=easyscholar_key)
+        self.run_publisher_update(dry_run=dry_run, easyscholar_key=easyscholar_key,
+                                  only_missing=only_missing)
         
         # 3. 对比差异
         if show_diff:
@@ -306,7 +312,9 @@ def main():
                        help='EasyScholar API key')
     parser.add_argument('--no-diff', action='store_true',
                        help='不显示差异报告')
-    
+    parser.add_argument('--only-missing', action='store_true',
+                       help='只处理缺数据的期刊（跳过已完成，避免 6h 超时）')
+
     args = parser.parse_args()
     
     manager = JournalDataManager()
@@ -315,13 +323,14 @@ def main():
         manager.show_status()
     elif args.all:
         manager.run_all(
-            dry_run=args.dry_run, 
+            dry_run=args.dry_run,
             show_diff=not args.no_diff,
-            easyscholar_key=args.easyscholar_key
+            easyscholar_key=args.easyscholar_key,
+            only_missing=args.only_missing
         )
     elif args.orange_only:
         old_data = deepcopy(manager.load_data())
-        manager.run_scopus_update(dry_run=args.dry_run)
+        manager.run_scopus_update(dry_run=args.dry_run, only_missing=args.only_missing)
         if not args.no_diff:
             new_data = manager.load_data()
             diff = manager.compare_data(old_data, new_data)
@@ -329,8 +338,9 @@ def main():
     elif args.publisher_only:
         old_data = deepcopy(manager.load_data())
         manager.run_publisher_update(
-            dry_run=args.dry_run, 
-            easyscholar_key=args.easyscholar_key
+            dry_run=args.dry_run,
+            easyscholar_key=args.easyscholar_key,
+            only_missing=args.only_missing
         )
         if not args.no_diff:
             new_data = manager.load_data()
@@ -343,9 +353,10 @@ def main():
         # 默认运行所有更新
         logger.info("未指定参数，默认运行所有更新...")
         manager.run_all(
-            dry_run=args.dry_run, 
+            dry_run=args.dry_run,
             show_diff=not args.no_diff,
-            easyscholar_key=args.easyscholar_key
+            easyscholar_key=args.easyscholar_key,
+            only_missing=args.only_missing
         )
 
 
