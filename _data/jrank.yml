@@ -5240,7 +5240,9 @@
   - Anthropology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 36.8
   journal: Journal of Educational Psychology
@@ -5258,7 +5260,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: 347 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 23 days
   hm_score: 31.6
   journal: Contemporary Educational Psychology
@@ -5275,7 +5279,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 3 days
   hm_score: 41.6
   journal: Educational Psychology Review
@@ -5292,7 +5298,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: 273 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 13 days
   hm_score: 42.0
   journal: Learning and Individual Differences
@@ -5309,7 +5317,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 42 days
   hm_score: 24.0
   journal: Motivation and Emotion
@@ -5326,7 +5336,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: 247 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 7 days
   hm_score: 29.6
   journal: Cognition
@@ -5343,7 +5355,9 @@
   - Cognitive Science
 - acceptance_rate: 15%
   acceptance_time: 249 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 10 days
   hm_score: 34.8
   journal: Cognitive Science
@@ -5360,7 +5374,9 @@
   - Cognitive Science
 - acceptance_rate: 7%
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 15 days
   hm_score: 27.2
   journal: Cognition and Instruction
@@ -5378,7 +5394,9 @@
   - Educational Psychology
 - acceptance_rate: 18%
   acceptance_time: 212 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 7 days
   hm_score: 31.6
   journal: Applied Cognitive Psychology
@@ -5395,7 +5413,9 @@
   - Cognitive Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 31.6
   journal: Child Development
@@ -5412,7 +5432,9 @@
   - Developmental Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 25.2
   journal: Developmental Psychology
@@ -5429,7 +5451,9 @@
   - Developmental Psychology
 - acceptance_rate: 20%
   acceptance_time: 225 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 43 days
   hm_score: 46.4
   journal: Developmental Science
@@ -5446,7 +5470,9 @@
   - Developmental Psychology
 - acceptance_rate: 24%
   acceptance_time: 171 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 4 days
   hm_score: 43.0
   journal: Journal of Experimental Child Psychology
@@ -5463,7 +5489,9 @@
   - Developmental Psychology
 - acceptance_rate: ''
   acceptance_time: 250 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 18.2
   journal: Journal of Applied Developmental Psychology
@@ -5480,7 +5508,9 @@
   - Developmental Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 55 days
   hm_score: 29.2
   journal: Current Psychology
@@ -5497,7 +5527,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 30.0
   journal: BMC Psychology
@@ -5515,7 +5547,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 29.8
   journal: Frontiers in Psychology
@@ -5533,7 +5567,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 34.2
   journal: Psychological Science
@@ -5550,7 +5586,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 40.8
   journal: Perspectives on Psychological Science
@@ -5567,7 +5605,9 @@
   - Psychology
 - acceptance_rate: 14%
   acceptance_time: 177 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 12 days
   hm_score: 40.6
   journal: British Journal of Psychology
@@ -5584,7 +5624,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: 436 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 32.2
   journal: Journal of School Psychology
@@ -5601,7 +5643,9 @@
   - Educational Psychology
 - acceptance_rate: 14%
   acceptance_time: 208 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 4 days
   hm_score: 27.4
   journal: Psychology in the Schools
@@ -5618,7 +5662,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 17.0
   journal: School Psychology International
@@ -5635,7 +5681,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 4 days
   hm_score: 30.4
   journal: Social Psychology of Education
@@ -5652,7 +5700,9 @@
   - Educational Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 23.6
   journal: Educational and Psychological Measurement
@@ -5670,7 +5720,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 11.2
   journal: Journal of Learning Analytics
@@ -5688,7 +5740,9 @@
   - Data Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 4.0
   journal: Journal of Educational Data Mining
@@ -5706,7 +5760,9 @@
   - Educational Technology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 35.8
   journal: Big Data & Society
@@ -5723,7 +5779,9 @@
   - Data Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 57 days
   hm_score: 36.8
   journal: Journal of Big Data
@@ -5741,7 +5799,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 37.8
   journal: Scientific Data
@@ -5759,7 +5819,9 @@
   - Open Science
 - acceptance_rate: 51%
   acceptance_time: 84 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 7 days
   hm_score: 53.8
   journal: Data in Brief
@@ -5777,7 +5839,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 18 days
   hm_score: 9.6
   journal: International Journal of Data Science and Analytics
@@ -5794,7 +5858,9 @@
   - Data Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 10 days
   hm_score: 29.0
   journal: EPJ Data Science
@@ -5812,7 +5878,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 31.8
   journal: Behavior Research Methods
@@ -5830,7 +5898,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 29.4
   journal: Social Science Computer Review
@@ -5848,7 +5918,9 @@
   - General Social Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 39.6
   journal: Journal of Mixed Methods Research
@@ -5865,7 +5937,9 @@
   - Methodology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 37.0
   journal: Sociological Methods & Research
@@ -5882,7 +5956,9 @@
   - Methodology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 31.2
   journal: Humanities and Social Sciences Communications
@@ -5900,7 +5976,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 31.8
   journal: Scientific Reports
@@ -5918,7 +5996,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 28.0
   journal: SAGE Open
@@ -5936,7 +6016,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: ''
   hm_score: 24.2
   journal: PLOS ONE
@@ -5954,7 +6036,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: 197 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 28 days
   hm_score: 4.0
   journal: Social Sciences & Humanities Open
@@ -5972,7 +6056,9 @@
   - Open Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 7 days
   hm_score: 29.6
   journal: Social Indicators Research
@@ -5989,7 +6075,9 @@
   - General Social Science
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 7 days
   hm_score: 4.0
   journal: Quality & Quantity
@@ -6006,7 +6094,9 @@
   - Methodology
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 53 days
   hm_score: 21.0
   journal: International Journal of Artificial Intelligence in Education
@@ -6024,7 +6114,9 @@
   - Educational Technology
 - acceptance_rate: ''
   acceptance_time: 153 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 6 days
   hm_score: 41.8
   journal: Computers in Human Behavior
@@ -6042,7 +6134,9 @@
   - HCI
 - acceptance_rate: ''
   acceptance_time: 160 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 6 days
   hm_score: 4.0
   journal: 'Computers and Education: Artificial Intelligence'
@@ -6060,7 +6154,9 @@
   - Educational Technology
 - acceptance_rate: ''
   acceptance_time: 181 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 31 days
   hm_score: 15.4
   journal: Computers and Education Open
@@ -6078,7 +6174,9 @@
   - Open Science
 - acceptance_rate: 16%
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 47 days
   hm_score: 45.8
   journal: International Journal of Human-Computer Interaction
@@ -6096,7 +6194,9 @@
   - Psychology
 - acceptance_rate: ''
   acceptance_time: 278 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 25 days
   hm_score: 34.2
   journal: International Journal of Human-Computer Studies
@@ -6113,7 +6213,9 @@
   - HCI
 - acceptance_rate: ''
   acceptance_time: ''
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 6 days
   hm_score: 26.8
   journal: Cognitive Neurodynamics
@@ -6130,7 +6232,9 @@
   - Neuroscience
 - acceptance_rate: ''
   acceptance_time: 157 days
-  documents_published: ''
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
   first_decision_time: 6 days
   hm_score: 10.0
   journal: Trends in Neuroscience and Education
@@ -6146,3 +6250,260 @@
   tag:
   - Neuroscience
   - Educational Psychology
+- acceptance_rate: 10%
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  first_decision_time: 5 days
+  hm_score: 36.6
+  journal: Information, Communication & Society
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publication_time: 15 days
+  publisher: Taylor & Francis
+  purple_quartile: Q1
+  purple_score: '3.3'
+  red_division: 文学1区
+  review_time: 104 days
+  tag:
+  - Communication
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 32.4
+  journal: Applied Linguistics
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Oxford University Press
+  purple_quartile: Q1
+  purple_score: '4.2'
+  red_division: 文学1区
+  tag:
+  - Linguistics
+  - Language Education
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 33.8
+  journal: Studies in Second Language Acquisition
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Cambridge University Press
+  purple_quartile: Q1
+  purple_score: '4.9'
+  red_division: 文学1区
+  tag:
+  - Linguistics
+  - Language Education
+- acceptance_rate: 9%
+  acceptance_time: 2 days
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  first_decision_time: 13 days
+  hm_score: 37.0
+  journal: The Modern Language Journal
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publication_time: 58 days
+  publisher: Wiley
+  purple_quartile: Q1
+  purple_score: '4.0'
+  red_division: 文学1区
+  tag:
+  - Linguistics
+  - Language Education
+- acceptance_rate: 20%
+  acceptance_time: 168 days
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  first_decision_time: 25 days
+  hm_score: 46.6
+  journal: British Journal of Sociology
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publication_time: 9 days
+  publisher: Wiley
+  purple_quartile: Q1
+  purple_score: '3.3'
+  red_division: 社会学1区
+  tag:
+  - Sociology
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 42.0
+  journal: Annual Review of Sociology
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  purple_quartile: Q1
+  purple_score: '9.0'
+  red_division: 社会学1区
+  tag:
+  - Sociology
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 31.0
+  journal: 'Journal of Experimental Psychology: General'
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: APA
+  purple_quartile: Q1
+  purple_score: '3.5'
+  red_division: 心理学1区
+  tag:
+  - Psychology
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 39.6
+  journal: Psychological Methods
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: APA
+  purple_quartile: Q1
+  purple_score: '7.8'
+  red_division: 心理学1区
+  tag:
+  - Methodology
+  - Psychology
+- acceptance_time: 107 days
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 58.4
+  journal: Trends in Cognitive Sciences
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Elsevier
+  purple_quartile: Q1
+  purple_score: '17.2'
+  red_division: 心理学1区
+  tag:
+  - Cognitive Science
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 55.8
+  journal: Nature Human Behaviour
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Nature Portfolio
+  purple_quartile: Q1
+  purple_score: '15.9'
+  red_division: 心理学1区
+  tag:
+  - Psychology
+  - Multidisciplinary
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 30.0
+  journal: Psychonomic Bulletin & Review
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Springer
+  purple_quartile: Q1
+  purple_score: '3.0'
+  red_division: 心理学2区
+  tag:
+  - Psychology
+  - Cognitive Science
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 82.8
+  journal: Annual Review of Psychology
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  purple_quartile: Q1
+  purple_score: '29.4'
+  red_division: 心理学1区
+  tag:
+  - Psychology
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 55.4
+  journal: Nature Communications
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: Nature Portfolio
+  purple_quartile: Q1
+  purple_score: '15.7'
+  red_division: 综合性期刊1区
+  tag:
+  - Multidisciplinary
+  - Open Science
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 4.0
+  journal: Proceedings of the National Academy of Sciences
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  tag:
+  - Multidisciplinary
+- acceptance_time: 337 days
+  documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  first_decision_time: 16 days
+  hm_score: 50.6
+  journal: Technological Forecasting and Social Change
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publication_time: 11 days
+  publisher: Elsevier
+  purple_quartile: Q1
+  purple_score: '13.3'
+  red_division: 管理学1区
+  review_time: 126 days
+  tag:
+  - Management
+  - General Social Science
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 36.0
+  journal: MIS Quarterly
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  purple_quartile: Q1
+  purple_score: '6.0'
+  red_division: 管理学2区
+  tag:
+  - Management
+  - Information Systems
+- documents_current_year: '0'
+  documents_last_year: '0'
+  documents_published: '0'
+  hm_score: 47.2
+  journal: American Economic Review
+  orange_percentile: ''
+  orange_quartile: ''
+  orange_score: ''
+  publisher: American Economic Association
+  purple_quartile: Q1
+  purple_score: '11.6'
+  red_division: 经济学1区
+  tag:
+  - Economics
