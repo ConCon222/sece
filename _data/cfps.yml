@@ -140,7 +140,7 @@
     on the English-driven internationalization of education in the Global South(s). Since language po...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id015
+  tag: &id014
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -178,7 +178,7 @@
   description: Marta Aguilar-Pérez , Universitat Politècnica de Catalunya (Spain) marta.aguilar@upc.edu
 - journal: Asia Pacific Education Review
   publisher: Springer
-  tag: &id026
+  tag: &id027
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Post-Asia-as-Method for Educational Practice and Research'
@@ -251,7 +251,7 @@
   description: ''
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id024
+  tag: &id025
   - Educational Technology
   title: 'Special Issue: Generative AI and the Future of K-12 Education - Towards Sustainable and Ethical Innovations to Strengthen
     Human Agency'
@@ -264,7 +264,7 @@
     Authors with accepted proposals are invited to complete full paper submission via ETRD's online sys...
 - journal: Science & Education
   publisher: Springer
-  tag: &id025
+  tag: &id026
   - Subject Education
   - Science Education
   title: 'Futurizing Science Education: historical, philosophical, and sociological aspects of futures literacy for science
@@ -663,7 +663,7 @@
   description: ''
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: &id016
+  tag: &id015
   - Subject Education
   - Environmental Education
   title: Emotions in Environmental and Sustainability Education - Theoretical, Methodological, and Empirical Developments
@@ -820,7 +820,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: &id014
+  tag:
   - Interdisciplinary Science
   - General Education
   title: Education for marginalised or displaced populations
@@ -843,7 +843,9 @@
   description: Olivier Vors , Aix Marseille University - Marseille, France olivier.vors@univ-amu.fr
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: &id016
+  - Interdisciplinary Science
+  - General Education
   title: Translational humanities
   abstract_deadline: ''
   fullpaper_deadline: 24 December 2026
@@ -876,7 +878,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id015
+  tag: *id014
   title: 'Transforming Equity in STEM Education: Disciplinary Challenges and Global Perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -887,7 +889,7 @@
     education, spanning across both disciplinary (e.g. science, mathematics) and integrated approach...
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: *id016
+  tag: *id015
   title: 'Environmental and Sustainability education research in the Nordic countries: Convergence, fault lines and diffractions'
   abstract_deadline: 29 May 2026
   fullpaper_deadline: 31 December 2026
@@ -952,7 +954,7 @@
   description: Gwo-Jen Hwang , Taichung University of Education, Taiwan gjhwang.academic@gmail.com
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Gender, democracy and political violence: A feminist perspective'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -964,7 +966,7 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'The Olympic Games: Media, representation and cultural politics'
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2027
@@ -976,7 +978,7 @@
     them.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Learning spaces and classroom design
   abstract_deadline: ''
   fullpaper_deadline: 08 January 2027
@@ -1081,7 +1083,7 @@
     but not limited to personalized vaccine approaches.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Corruption beyond borders: power, crime, and governance'
   abstract_deadline: ''
   fullpaper_deadline: 28 January 2027
@@ -1166,7 +1168,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Creative rights, copyright and culture: intellectual property in the arts and humanities'
   abstract_deadline: ''
   fullpaper_deadline: 08 February 2027
@@ -1213,7 +1215,7 @@
     and complicated pregnancies, including preeclampsia and preterm birth risk.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Sacred substances, Social Worlds: Psychedelics Across Cultures'
   abstract_deadline: ''
   fullpaper_deadline: 22 February 2027
@@ -1280,6 +1282,19 @@
   description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology and Scientific
     Reports invite manuscripts that highlight neural models of consciousness. Topics include, but are not limited to, neural
     correlates of consciousness, theories of consciousness, meditation, and conscious awareness.
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: &id023
+  - General Education
+  - Education Policy & Social Issues
+  title: Humanizing AI-mediated Feedback for Writing
+  abstract_deadline: ''
+  fullpaper_deadline: 28 February 2027
+  fullpaper_deadline_sort: '2027-02-28'
+  editors: ''
+  link: https://www.springer.com/collections/iffhjcagac
+  description: The rapid integration of artificial intelligence (AI) into educational practice has substantially reconfigured
+    the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id020
@@ -1318,7 +1333,7 @@
     into how inflammatory and immunometabolic processes shape chronic disease.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: 'Remembering World War I: archives, history and empire'
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1341,7 +1356,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Race, biopolitics and political violence
   abstract_deadline: ''
   fullpaper_deadline: 05 March 2027
@@ -1386,7 +1401,7 @@
     of natural and man-made disasters increase. This Collection seeks to explore the evolving lan...
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Leisure reading and reader engagement
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1399,7 +1414,7 @@
     information science, publishing studies, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id014
+  tag: *id016
   title: Adam Smith and the 250th anniversary of "The Wealth of Nations"
   abstract_deadline: ''
   fullpaper_deadline: 12 March 2027
@@ -1409,6 +1424,17 @@
   description: This Collection aims to provide a forum for rigorous scholarly reflection on the historical, philosophical,
     and theoretical dimensions of Adam Smith’s writings, as well as on their subsequent reception and reinterpretation across
     disciplines.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id016
+  title: 'Maritime security: hybrid actors, legal ambiguity, and state security at sea'
+  abstract_deadline: ''
+  fullpaper_deadline: 15 March 2027
+  fullpaper_deadline_sort: '2027-03-15'
+  editors: ''
+  link: https://www.nature.com/collections/gdegcjbdcj
+  description: This Collection investigates the blurred boundaries between state and non-state actors in maritime contexts,
+    with a particular focus on how legitimacy is constructed, contested, and operationalised in policy and practice.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id020
@@ -1502,7 +1528,7 @@
   description: ''
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id023
+  tag: &id024
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1559,9 +1585,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id028
-  - General Education
-  - Education Policy & Social Issues
+  tag: *id023
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1572,7 +1596,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id027
+  tag: &id028
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1583,7 +1607,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1594,7 +1618,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1605,7 +1629,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Science & Education
   publisher: Springer
-  tag: *id025
+  tag: *id026
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1628,7 +1652,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia Pacific Education Review
   publisher: Springer
-  tag: *id026
+  tag: *id027
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1639,7 +1663,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id027
+  tag: *id028
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1650,7 +1674,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id015
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1672,7 +1696,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id028
+  tag: *id023
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1683,7 +1707,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id028
+  tag: *id023
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2033,7 +2057,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
