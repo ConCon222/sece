@@ -13,7 +13,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id012
+  tag:
   - Education Policy & Social Issues
   - Gender and Education
   title: 'Looking Back, Moving Forward: Gender Equity in Higher Education and Research, 2015–2025'
@@ -88,7 +88,7 @@
     school networks to further our understanding of accountability issues beyond individual schools a...
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: &id022
+  tag: &id023
   - Language Education & Acquisition
   - Educational Technology
   title: 'Beyond Automation: AI-Driven Language Assessment in CALL through Pedagogical, Ethical and AI Literacy Lenses'
@@ -140,7 +140,7 @@
     on the English-driven internationalization of education in the Global South(s). Since language po...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id014
+  tag: &id013
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -178,7 +178,7 @@
   description: Marta Aguilar-Pérez , Universitat Politècnica de Catalunya (Spain) marta.aguilar@upc.edu
 - journal: Asia Pacific Education Review
   publisher: Springer
-  tag: &id027
+  tag: &id028
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Post-Asia-as-Method for Educational Practice and Research'
@@ -251,7 +251,7 @@
   description: ''
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id025
+  tag: &id026
   - Educational Technology
   title: 'Special Issue: Generative AI and the Future of K-12 Education - Towards Sustainable and Ethical Innovations to Strengthen
     Human Agency'
@@ -264,7 +264,7 @@
     Authors with accepted proposals are invited to complete full paper submission via ETRD's online sys...
 - journal: Science & Education
   publisher: Springer
-  tag: &id026
+  tag: &id027
   - Subject Education
   - Science Education
   title: 'Futurizing Science Education: historical, philosophical, and sociological aspects of futures literacy for science
@@ -348,6 +348,18 @@
   fullpaper_deadline_sort: '2026-07-31'
   editors: 'Guest editors: Chihiro Inoue, Fumiyo Nakatsuhara, Parvaneh Tavakoli, Jim Mckinley'
   link: https://www.sciencedirect.com/special-issue/315925/online-communication-and-behaviour-in-emi-higher-education
+  description: ''
+- journal: Studies in Educational Evaluation
+  publisher: Elsevier
+  tag:
+  - General Education
+  - Educational Assessment
+  title: Long-term change in school and teaching culture
+  abstract_deadline: ''
+  fullpaper_deadline: 01 August 2026
+  fullpaper_deadline_sort: '2026-08-01'
+  editors: 'Guest editors: Prof. Dr. Eckhard Klieme, Prof. Dr. Falk Radisch, Prof. Dr. Katharina Maag Merki'
+  link: https://www.sciencedirect.com/special-issue/334556/long-term-change-in-school-and-teaching-culture
   description: ''
 - journal: BMC Medical Education
   publisher: Springer
@@ -584,7 +596,7 @@
   description: ''
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
-  tag: &id013
+  tag: &id012
   - Subject Education
   - Physical Education
   title: The Problem of Performance Dominating Sport, Education and Society
@@ -663,7 +675,7 @@
   description: ''
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: &id015
+  tag: &id014
   - Subject Education
   - Environmental Education
   title: Emotions in Environmental and Sustainability Education - Theoretical, Methodological, and Empirical Developments
@@ -774,7 +786,9 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id012
+  tag:
+  - Education Policy & Social Issues
+  - Gender and Education
   title: Queer Imaginaries as Pedagogy
   abstract_deadline: 01 August 2026
   fullpaper_deadline: 01 December 2026
@@ -833,7 +847,7 @@
     possibilities of education for marginalised or displaced populations.
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
-  tag: *id013
+  tag: *id012
   title: 'Sustainable Development and Physical Education: Critical Perspectives on Motor, Social, and Ecological Transformations'
   abstract_deadline: 07 July 2026
   fullpaper_deadline: 21 December 2026
@@ -843,7 +857,7 @@
   description: Olivier Vors , Aix Marseille University - Marseille, France olivier.vors@univ-amu.fr
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: &id016
+  tag: &id015
   - Interdisciplinary Science
   - General Education
   title: Translational humanities
@@ -878,7 +892,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id014
+  tag: *id013
   title: 'Transforming Equity in STEM Education: Disciplinary Challenges and Global Perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -889,7 +903,7 @@
     education, spanning across both disciplinary (e.g. science, mathematics) and integrated approach...
 - journal: Environmental Education Research
   publisher: Taylor & Francis
-  tag: *id015
+  tag: *id014
   title: 'Environmental and Sustainability education research in the Nordic countries: Convergence, fault lines and diffractions'
   abstract_deadline: 29 May 2026
   fullpaper_deadline: 31 December 2026
@@ -954,7 +968,7 @@
   description: Gwo-Jen Hwang , Taichung University of Education, Taiwan gjhwang.academic@gmail.com
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id016
+  tag: *id015
   title: 'Gender, democracy and political violence: A feminist perspective'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -966,7 +980,9 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id016
+  tag: &id016
+  - Interdisciplinary Science
+  - General Education
   title: 'The Olympic Games: Media, representation and cultural politics'
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2027
@@ -1227,7 +1243,8 @@
     and entheogens shape human experience, social organisation, and biological systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: &id021
+  - Interdisciplinary Science
   title: Cerebrovascular contributions to neurodegeneration
   abstract_deadline: ''
   fullpaper_deadline: 25 February 2027
@@ -1250,7 +1267,7 @@
     submissions of primary research in structural biology that link protein dynamics to function, structure and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: 'Translational challenges in multi drug discovery: model informed design to enhance efficacy and limit resistance'
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2027
@@ -1261,7 +1278,7 @@
     and limiting resistance evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Human Admixture and Migration
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1272,7 +1289,7 @@
     shifts or health. Topics of interest include, but are not limited to, genetic or genomic approaches to the study of:'
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Neural Models of Consciousness
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1284,7 +1301,7 @@
     correlates of consciousness, theories of consciousness, meditation, and conscious awareness.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id023
+  tag: &id024
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -1297,7 +1314,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Expanding the landscape of post-translational modifications
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1309,7 +1326,7 @@
     paradigms.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Tuberculosis vaccines
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1322,7 +1339,7 @@
     considerations.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Inflammation, Immunometabolism, and Chronic Disease
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1367,7 +1384,7 @@
     colonial violence.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
   title: Macrophages in scar-free repair and regeneration
   abstract_deadline: ''
   fullpaper_deadline: 10 March 2027
@@ -1437,7 +1454,42 @@
     with a particular focus on how legitimacy is constructed, contested, and operationalised in policy and practice.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id020
+  tag: *id021
+  title: Phase-Change Reconfigurable Photonics
+  abstract_deadline: ''
+  fullpaper_deadline: 16 March 2027
+  fullpaper_deadline_sort: '2027-03-16'
+  editors: ''
+  link: https://www.nature.com/collections/ajaheacjhe
+  description: This collection aims to highlight and promote advances that address challenges and move phase change nanophotonic
+    technologies toward practical implementation.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id021
+  title: Complications of Diabetes
+  abstract_deadline: ''
+  fullpaper_deadline: 17 March 2027
+  fullpaper_deadline_sort: '2027-03-17'
+  editors: ''
+  link: https://www.nature.com/collections/aeaedhjdib
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Health, Communications
+    Medicine and Scientific Reports invite manuscripts encompassing the full spectrum of diabetes complications and welcomes
+    contributions in the areas of public health, epidemiology and clinical and preclinical research to highlight the latest
+    developments in the field.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id016
+  title: Children, teenagers and social media
+  abstract_deadline: ''
+  fullpaper_deadline: 17 March 2027
+  fullpaper_deadline_sort: '2027-03-17'
+  editors: ''
+  link: https://www.nature.com/collections/jiejaideha
+  description: This Collection invites contributions that critically explore the relationships between children, teenagers
+    and social media.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id021
   title: Sustainable Transport
   abstract_deadline: ''
   fullpaper_deadline: 28 March 2027
@@ -1448,7 +1500,7 @@
     transport to shape the future of mobility.
 - journal: Learning, Media and Technology
   publisher: Taylor & Francis
-  tag: &id021
+  tag: &id022
   - Educational Technology
   title: 'Reframing AI ethics in education: From individual responsibilisation to shared responsibility.'
   abstract_deadline: 10 July 2026
@@ -1494,7 +1546,7 @@
   description: Alexandra Mihai , Maastricht University, Netherlands a.mihai@maastrichtuniversity.nl
 - journal: Learning, Media and Technology
   publisher: Taylor & Francis
-  tag: *id021
+  tag: *id022
   title: Towards a Critical Approach to AI in Education
   abstract_deadline: 31 August 2026
   fullpaper_deadline: 03 May 2027
@@ -1517,7 +1569,7 @@
   description: ''
 - journal: Computer Assisted Language Learning
   publisher: Taylor & Francis
-  tag: *id022
+  tag: *id023
   title: 'Reclaiming Pedagogy in CALL: Foregrounding Pedagogical Design in Technology-Enhanced Language Teaching'
   abstract_deadline: 31 July 2026
   fullpaper_deadline: 31 May 2027
@@ -1528,7 +1580,7 @@
   description: ''
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id024
+  tag: &id025
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1585,7 +1637,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1596,7 +1648,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id028
+  tag: &id029
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1607,7 +1659,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1618,7 +1670,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id025
+  tag: *id026
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1629,7 +1681,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Science & Education
   publisher: Springer
-  tag: *id026
+  tag: *id027
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1652,7 +1704,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia Pacific Education Review
   publisher: Springer
-  tag: *id027
+  tag: *id028
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1663,7 +1715,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id028
+  tag: *id029
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1674,7 +1726,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id014
+  tag: *id013
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1696,7 +1748,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1707,7 +1759,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1780,7 +1832,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id029
+  tag: &id030
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1792,7 +1844,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id029
+  tag: *id030
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1813,7 +1865,7 @@
     to improve the professional experience both for ourselves and for tomorrow’s physicians? • How can we...'
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: &id030
+  tag: &id031
   - Education Policy & Social Issues
   - Educational Assessment
   title: Special issue 2024
@@ -1826,7 +1878,7 @@
     Research."
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: *id030
+  tag: *id031
   title: Special issues collection
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1848,7 +1900,7 @@
     out more via the link below.'
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: &id031
+  tag: &id032
   - General Education
   title: Enhancing climate change and sustainability education through critical and collaborative dialogue between Global
     South and North education communities
@@ -1863,7 +1915,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id031
+  tag: *id032
   title: (Re)thinking Cross-Border Students’ Agency in Higher Education
   abstract_deadline: 31 October 2024
   fullpaper_deadline: ''
@@ -1874,7 +1926,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id031
+  tag: *id032
   title: 'Making teaching an attractive profession: challenges and opportunities'
   abstract_deadline: 30 November 2024
   fullpaper_deadline: ''
@@ -1888,7 +1940,7 @@
   description: ''
 - journal: British Educational Research Journal
   publisher: Wiley
-  tag: *id031
+  tag: *id032
   title: 'The state of gender(s), young people and education: inequities, inter/intrasectionality and inclusivity'
   abstract_deadline: 30 November 2024
   fullpaper_deadline: ''
@@ -1925,7 +1977,7 @@
     Article Collection proposal please click the More button. /page/eer/call-for-papers
 - journal: Urban Education
   publisher: SAGE
-  tag: &id032
+  tag: &id033
   - Education Policy & Social Issues
   - Urban Education
   title: Call for Special Issue Proposals
@@ -1938,7 +1990,7 @@
     proposals that advance the field of urban education through empirical research, theory, practice, policy and praxis
 - journal: Urban Education
   publisher: SAGE
-  tag: *id032
+  tag: *id033
   title: Published and upcoming special issues
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1977,7 +2029,7 @@
   description: 'Writing, Agency, and Linguistic Diversity: Multilingual Learners as Agentive Writers'
 - journal: Journal of Early Childhood Literacy
   publisher: SAGE
-  tag: &id033
+  tag: &id034
   - Early Childhood Education
   - Language Education & Acquisition
   title: Call for papers
@@ -1989,7 +2041,7 @@
   description: View Journal of Early Childhood Literacy's open call for papers via the link below.
 - journal: Journal of Early Childhood Literacy
   publisher: SAGE
-  tag: *id033
+  tag: *id034
   title: New special issue
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2011,7 +2063,7 @@
   description: Explore AJEC's open call for papers via the link below.
 - journal: Health Education Journal
   publisher: SAGE
-  tag: &id034
+  tag: &id035
   - Subject Education
   - Health Education
   title: Call for papers
@@ -2023,7 +2075,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Health Education Journal
   publisher: SAGE
-  tag: *id034
+  tag: *id035
   title: 'Special Issue: Men’s Health'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2045,7 +2097,7 @@
     may be deeply rooted in our experience of media. What effect may applications of media have on...
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: &id035
+  tag: &id036
   - General Education
   title: EERJ Special Issues/Collections
   abstract_deadline: ''
@@ -2057,7 +2109,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id025
+  tag: *id026
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2068,7 +2120,7 @@
     significant, and innovative topics in the field of educational technology research and develo...
 - journal: European Educational Research Journal
   publisher: SAGE
-  tag: *id035
+  tag: *id036
   title: EERJ Call for Papers
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2078,7 +2130,7 @@
   description: Please click More to see open EERJ Call for Papers.
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id029
+  tag: *id030
   title: Series of Short Notes on the State of Educational Change and Its Future
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2089,7 +2141,7 @@
     from founding editor Andy Hargreaves: What better time could there be than the opening months of a n...'
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: *id030
+  tag: *id031
   title: Special call for guest editors
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2148,7 +2200,7 @@
     by King's College London.
 - journal: American Anthropologist
   publisher: Wiley
-  tag: &id036
+  tag: &id037
   - Anthropology
   title: 'Unsettling the Self: Autoethnography and Related Kin'
   abstract_deadline: ''
@@ -2159,7 +2211,7 @@
   description: ''
 - journal: American Anthropologist
   publisher: Wiley
-  tag: *id036
+  tag: *id037
   title: 'Vital Topics Forum: Archaeology, Politics, and Environmental Crisis'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2169,7 +2221,7 @@
   description: ''
 - journal: American Anthropologist
   publisher: Wiley
-  tag: *id036
+  tag: *id037
   title: decolonization is hijacked
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2179,7 +2231,7 @@
   description: ''
 - journal: American Anthropologist
   publisher: Wiley
-  tag: *id036
+  tag: *id037
   title: 'Chronic Erasure: Eradicating Heritage in Gaza and Ayodhya'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2249,7 +2301,7 @@
   description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id037
+  tag: &id038
   - Interdisciplinary Science
   title: Extreme Events in High-Latitude Regions
   abstract_deadline: ''
@@ -2261,7 +2313,7 @@
     impacts of extreme events in high-latitude regions under changing climatic conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id037
+  tag: *id038
   title: Lipids in Cell Biology 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2273,7 +2325,7 @@
     submissions from all disciplines with insights into lipid function, regulation or detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id037
+  tag: *id038
   title: Magnetosphere and exosphere of Mercury
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2284,7 +2336,7 @@
     and exosphere, particularly through findings from space missions, as well as relevant theoretical and modelling studies.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id037
+  tag: *id038
   title: Cancer Prevention and Control
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2295,7 +2347,7 @@
     the science and practice of cancer prevention, including strategies to reduce cancer risk and improve early detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id037
+  tag: *id038
   title: 'Next-generation models for metabolic research: from single cell to complex systems'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2306,7 +2358,7 @@
     disease mechanisms, from molecular to whole-organism scales.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id037
+  tag: *id038
   title: Clinical Research in Respiratory Medicine
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2318,7 +2370,7 @@
     hybrid studies integrating mechanistic or translational insights with clinical data.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id038
+  tag: &id039
   - Interdisciplinary Science
   title: Advances in Central Nervous System Injuries
   abstract_deadline: ''
@@ -2330,7 +2382,7 @@
     in pathophysiology, diagnosis, treatment and rehabilitation strategies.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id038
+  tag: *id039
   title: Emergent phases in materials under nonequilibrium excitation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2341,7 +2393,7 @@
     their mechanisms under nonequilibrium excitation conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id038
+  tag: *id039
   title: Initially Anode-less and Anode-free Batteries
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2378,3 +2430,15 @@
   description: This Collection examines alternative forms of education and their social, cultural, political, and psychological
     implications. We invite research that explores alternative educational practices, including community-led learning, informal
     and non-formal education, experimental pedagogies, digital learning spaces, and decolonial or indigenous knowledge systems.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id016
+  title: Islam – belief, politics and culture
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dcbejgjgbi
+  description: This Collection looks to explore Islam and its place in the world today. The Collection is interested in the
+    belief, culture and politics of this major religion, welcoming research on the everyday lives of modern Muslims, the religion's
+    links to politics, and also the cultural imprint of Islam on society.
