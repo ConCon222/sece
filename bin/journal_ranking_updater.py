@@ -372,49 +372,72 @@ class SpringerCrawler(PublisherCrawler):
         return metrics
 
 class SageCrawler(PublisherCrawler):
-    """Crawler for SAGE journals - 优化版"""
-    
-    def extract_metrics(self, url: str) -> Dict[str, Any]:
-        """Extract metrics from SAGE journal page
+    """Crawler for SAGE journals — fetches /overview-metric/{code} page."""
 
-        URL 应已在 journal_rank.json 中配置为 /home/{code} 格式:
-        https://journals.sagepub.com/home/{code}
-        注意: /overview-metric/ 页面的指标由 JS 动态渲染，FlareSolverr 无法获取
+    def extract_metrics(self, url: str) -> Dict[str, Any]:
+        """Extract metrics from SAGE overview-metric page.
+
+        URL in journal_rank.json is /home/{code}; we derive the code and
+        fetch /overview-metric/{code} instead, because /home/ no longer
+        embeds metrics.  The overview-metric page renders metrics via JS;
+        FlareSolverr (headless Chrome) executes JS and returns the final DOM.
+
+        HTML structure (as of 2026-06):
+          <div class="alt-journals-metric__metric__title">First decision</div>
+          <a class="alt-journals-metric__metric__value">14<span>days*</span></a>
         """
-        logger.info(f"Fetching SAGE data from: {url}")
-        html = self.client.get_page(url)
+        code = url.rstrip('/').split('/')[-1]
+        metrics_url = f'https://journals.sagepub.com/overview-metric/{code}'
+        logger.info(f"Fetching SAGE data from: {metrics_url}")
+        html = self.client.get_page(metrics_url)
         if not html:
             return {}
 
-        metrics = {
+        metrics: Dict[str, Any] = {
             'first_decision_time': '',
+            'review_time': '',
             'publication_time': '',
             'acceptance_rate': '',
             'publisher': 'SAGE'
         }
 
         try:
-            # 使用 re.DOTALL 忽略换行符影响
-            # 使用 re.IGNORECASE 忽略大小写
+            # New structure: title div followed by value anchor
+            # <div class="...title">First decision</div>
+            # <a class="...value">14<span>days*</span></a>
+            fd = re.search(
+                r'First\s+decision</div>.*?class="alt-journals-metric__metric__value"[^>]*>(\d+)',
+                html, re.DOTALL | re.IGNORECASE)
+            if fd:
+                metrics['first_decision_time'] = f"{fd.group(1)} days"
 
-            # 1. Extract First decision -> 映射到 first_decision_time
-            # 模式A (homepage): First decision:</div><div ...>77<span>days*</span>
-            # 模式B (overview-metric): 可能有不同 HTML 包裹
-            fd_match = re.search(r'First\s+decision:.*?(\d+)\s*(?:<[^>]*>\s*)*days', html, re.DOTALL | re.IGNORECASE)
-            if fd_match:
-                metrics['first_decision_time'] = f"{fd_match.group(1)} days"
+            pr = re.search(
+                r'Peer\s+review</div>.*?class="alt-journals-metric__metric__value"[^>]*>(\d+)',
+                html, re.DOTALL | re.IGNORECASE)
+            if pr:
+                metrics['review_time'] = f"{pr.group(1)} days"
 
-            # 2. Extract Acceptance to publication
-            ap_match = re.search(r'Acceptance\s+to\s+publication:.*?(\d+)\s*(?:<[^>]*>\s*)*days', html, re.DOTALL | re.IGNORECASE)
-            if ap_match:
-                metrics['publication_time'] = f"{ap_match.group(1)} days"
+            ap = re.search(
+                r'Acceptance\s+to\s+publication</div>.*?class="alt-journals-metric__metric__value"[^>]*>(\d+)',
+                html, re.DOTALL | re.IGNORECASE)
+            if ap:
+                metrics['publication_time'] = f"{ap.group(1)} days"
 
-            # 3. Extract Acceptance rate
-            # 模式A: 5.0<span class="percentage">%</span>
-            # 模式B: 5.0% (纯文本)
-            ar_match = re.search(r'Acceptance\s+rate:.*?(\d+(?:\.\d+)?)\s*(?:<[^>]*>\s*)*%', html, re.DOTALL | re.IGNORECASE)
-            if ar_match:
-                metrics['acceptance_rate'] = f"{ar_match.group(1)}%"
+            ar = re.search(
+                r'Acceptance\s+rate</div>.*?class="alt-journals-metric__metric__value"[^>]*>([\d.]+)',
+                html, re.DOTALL | re.IGNORECASE)
+            if ar:
+                metrics['acceptance_rate'] = f"{ar.group(1)}%"
+
+            # Fallback: old /home/ style (title: value pattern)
+            if not metrics['first_decision_time']:
+                fd2 = re.search(r'First\s+decision:.*?(\d+)\s*(?:<[^>]*>\s*)*days', html, re.DOTALL | re.IGNORECASE)
+                if fd2:
+                    metrics['first_decision_time'] = f"{fd2.group(1)} days"
+            if not metrics['acceptance_rate']:
+                ar2 = re.search(r'Acceptance\s+rate:.*?(\d+(?:\.\d+)?)\s*(?:<[^>]*>\s*)*%', html, re.DOTALL | re.IGNORECASE)
+                if ar2:
+                    metrics['acceptance_rate'] = f"{ar2.group(1)}%"
 
             logger.info(f"Extracted SAGE metrics: {metrics}")
 
