@@ -555,6 +555,57 @@ class APACrawler(PublisherCrawler):
         return metrics
 
 
+class UChicagoCrawler(PublisherCrawler):
+    """Crawler for University of Chicago Press journals — uses FlareSolverr."""
+
+    def _extract_code(self, url: str) -> Optional[str]:
+        path = urlparse(url).path.strip('/')
+        # /journals/{code}/about  or  /toc/{code}/current
+        m = re.match(r'(?:journals|toc)/([^/]+)', path)
+        if m:
+            return m.group(1)
+        # bare /{code}
+        parts = path.split('/')
+        if len(parts) == 1 and parts[0]:
+            return parts[0]
+        return None
+
+    def extract_metrics(self, url: str) -> Dict[str, Any]:
+        code = self._extract_code(url)
+        if not code:
+            logger.warning(f"Cannot extract UChicago code from: {url}")
+            return {}
+        tt_url = f'https://www.journals.uchicago.edu/journals/{code}/turnaround-times'
+        logger.info(f"Fetching UChicago data from: {tt_url}")
+        html = self.client.get_page(tt_url)
+        if not html:
+            return {}
+
+        metrics: Dict[str, Any] = {'publisher': 'University of Chicago Press'}
+        try:
+            desk = re.search(r'Desk Rejection\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
+            reject = re.search(r'Reject with Reviews?\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
+            revise = re.search(r'Revise\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
+
+            if revise:
+                metrics['acceptance_rate'] = f"{revise.group(1)}%"
+
+            rows = []
+            for m in (desk, reject, revise):
+                if m:
+                    rows.append((float(m.group(1)), int(m.group(3))))
+            if rows:
+                total_pct = sum(r[0] for r in rows)
+                if total_pct > 0:
+                    weighted = sum(r[0] * r[1] for r in rows) / total_pct
+                    metrics['first_decision_time'] = f"{round(weighted)} days"
+
+            logger.info(f"Extracted UChicago metrics: {metrics}")
+        except Exception as e:
+            logger.error(f"Error parsing UChicago HTML: {e}")
+        return metrics
+
+
 class NatureCrawler:
     """Crawler for Nature Portfolio journals — no Cloudflare, plain requests."""
 
@@ -604,7 +655,8 @@ class JournalRankingUpdater:
             'sage': SageCrawler(self.flaresolverr_client),
             'elsevier': ElsevierCrawler(self.flaresolverr_client),
             'apa': APACrawler(self.flaresolverr_client),
-            'nature': NatureCrawler()
+            'nature': NatureCrawler(),
+            'uchicago': UChicagoCrawler(self.flaresolverr_client)
         }
 
         # Map publishers to crawlers
@@ -619,7 +671,9 @@ class JournalRankingUpdater:
             'sciencedirect.com': 'elsevier',
             'elsevier.com': 'elsevier',
             'apa.org': 'apa',
-            'nature.com': 'nature'
+            'nature.com': 'nature',
+            'journals.uchicago.edu': 'uchicago',
+            'uchicago.edu': 'uchicago'
         }
 
         # Display-name inference for publishers we don't crawl metrics from.
@@ -629,8 +683,6 @@ class JournalRankingUpdater:
             'cambridge.org': 'Cambridge University Press',
             'academic.oup.com': 'Oxford University Press',
             'oup.com': 'Oxford University Press',
-            'journals.uchicago.edu': 'University of Chicago Press',
-            'uchicago.edu': 'University of Chicago Press',
             'emeraldgrouppublishing.com': 'Emerald',
             'emerald.com': 'Emerald',
             'muse.jhu.edu': 'Johns Hopkins University Press',
