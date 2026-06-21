@@ -800,8 +800,8 @@ class JournalRankingUpdater:
         
         计算公式:
         - 紫色分区 (purple_quartile): 20分 (Q1=20, Q2=15, Q3=10, Q4=5)
-        - 紫色分数 (purple_score): 直接加
-        - 橙色分数 (orange_score): 除以2直接加
+        - 紫色分数 (purple_score): IF直接加
+        - 橙色分数 (orange_score): CiteScore/2
         - 橙色百分位 (orange_percentile): 20分 (按百分比计算)
         - 接受率 (acceptance_rate): 反向加分 (100-rate)/10，默认4分
         - 发文量 (documents_last_year): >200加10分, >100加5分, >50加3分
@@ -819,17 +819,17 @@ class JournalRankingUpdater:
         elif 'Q4' in jcr:
             score += 5
             
-        # 2. 紫色分数 - 乘以2直接加
+        # 2. 紫色分数 - 直接加
         try:
             purple_score = float(journal_data.get('purple_score', 0) or 0)
-            score += purple_score * 2
+            score += purple_score
         except (ValueError, TypeError):
             pass
-            
-        # 3. 橙色分数 - 直接加
+
+        # 3. 橙色分数 - 除以2加
         try:
             orange_score = float(journal_data.get('orange_score', 0) or 0)
-            score += orange_score
+            score += orange_score / 2
         except (ValueError, TypeError):
             pass
             
