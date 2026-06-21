@@ -495,6 +495,35 @@ class ElsevierCrawler(PublisherCrawler):
         
         return metrics
 
+class NatureCrawler:
+    """Crawler for Nature Portfolio journals — no Cloudflare, plain requests."""
+
+    def extract_metrics(self, url: str) -> Dict[str, Any]:
+        slug = url.rstrip('/').split('/')[-1]
+        metrics_url = f'https://www.nature.com/{slug}/journal-impact'
+        logger.info(f"Fetching Nature data from: {metrics_url}")
+
+        metrics: Dict[str, Any] = {'publisher': 'Nature Portfolio'}
+        try:
+            r = requests.get(metrics_url, headers={
+                'User-Agent': random.choice(USER_AGENTS)
+            }, timeout=30)
+            if r.status_code != 200:
+                logger.warning(f"Nature page returned {r.status_code}")
+                return metrics
+            html = r.text
+            m1 = re.search(r'first editorial decision \(median days\):\s*(\d+)', html)
+            m2 = re.search(r'acceptance \(median days\):\s*(\d+)', html)
+            if m1:
+                metrics['first_decision_time'] = f"{m1.group(1)} days"
+            if m2:
+                metrics['acceptance_time'] = f"{m2.group(1)} days"
+            logger.info(f"Extracted Nature metrics: {metrics}")
+        except Exception as e:
+            logger.error(f"Error fetching Nature metrics: {e}")
+        return metrics
+
+
 class JournalRankingUpdater:
     def __init__(self, flaresolverr_url: str = FLARESOLVERR_URL, easyscholar_key: str = None):
         self.flaresolverr_client = FlareSolverrClient(flaresolverr_url)
@@ -513,9 +542,10 @@ class JournalRankingUpdater:
             'taylor_francis': TaylorFrancisCrawler(self.flaresolverr_client),
             'springer': SpringerCrawler(self.flaresolverr_client),
             'sage': SageCrawler(self.flaresolverr_client),
-            'elsevier': ElsevierCrawler(self.flaresolverr_client)
+            'elsevier': ElsevierCrawler(self.flaresolverr_client),
+            'nature': NatureCrawler()
         }
-        
+
         # Map publishers to crawlers
         self.publisher_map = {
             'wiley.com': 'wiley',
@@ -526,7 +556,8 @@ class JournalRankingUpdater:
             'sagepub.com': 'sage',
             'journals.sagepub.com': 'sage',
             'sciencedirect.com': 'elsevier',
-            'elsevier.com': 'elsevier'
+            'elsevier.com': 'elsevier',
+            'nature.com': 'nature'
         }
 
         # Display-name inference for publishers we don't crawl metrics from.
@@ -549,7 +580,6 @@ class JournalRankingUpdater:
             'aom.org': 'Academy of Management',
             'ieeexplore.ieee.org': 'IEEE',
             'ieee.org': 'IEEE',
-            'nature.com': 'Nature Portfolio',
             'degruyter.com': 'De Gruyter',
             'journals.aps.org': 'American Physical Society',
             'pubs.rsc.org': 'Royal Society of Chemistry',
