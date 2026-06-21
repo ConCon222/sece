@@ -222,9 +222,9 @@ nav_order: 3
 
       <tr class="cfp-row{% if is_expired %} cfp-expired{% endif %}"
           data-tags="{{ cfp.tag | join: ',' }}"
-          data-journal="{{ cfp.journal | downcase }}"
-          data-title="{{ cfp.title | downcase }}"
-          data-publisher="{{ cfp.publisher | downcase }}"
+          data-journal="{{ cfp.journal | downcase | xml_escape }}"
+          data-title="{{ cfp.title | downcase | xml_escape }}"
+          data-publisher="{{ cfp.publisher | downcase | xml_escape }}"
           data-deadline="{{ cfp.fullpaper_deadline_sort }}"
           data-expired="{{ is_expired }}">
 
