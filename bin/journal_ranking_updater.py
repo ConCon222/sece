@@ -495,6 +495,43 @@ class ElsevierCrawler(PublisherCrawler):
         
         return metrics
 
+class APACrawler(PublisherCrawler):
+    """Crawler for APA journals — uses FlareSolverr to bypass Incapsula."""
+
+    def extract_metrics(self, url: str) -> Dict[str, Any]:
+        about_url = url.rstrip('/') + '/about'
+        logger.info(f"Fetching APA data from: {about_url}")
+        html = self.client.get_page(about_url)
+        if not html:
+            return {}
+
+        metrics: Dict[str, Any] = {'publisher': 'APA'}
+        try:
+            m_dec = re.search(
+                r'<strong>Average time to first decision</strong>\s*<span>(\d+)\s*days</span>',
+                html, re.I)
+            if m_dec:
+                metrics['first_decision_time'] = f"{m_dec.group(1)} days"
+
+            m_lag = re.search(
+                r'<strong>Average lag for online first</strong>\s*<span>(\d+)\s*days</span>',
+                html, re.I)
+            if m_lag:
+                metrics['publication_time'] = f"{m_lag.group(1)} days"
+
+            m_rej = re.search(
+                r'<strong>Rejection rate</strong>\s*<span>([\d.]+)%</span>',
+                html, re.I)
+            if m_rej:
+                acceptance = round(100 - float(m_rej.group(1)), 1)
+                metrics['acceptance_rate'] = f"{acceptance}%"
+
+            logger.info(f"Extracted APA metrics: {metrics}")
+        except Exception as e:
+            logger.error(f"Error parsing APA HTML: {e}")
+        return metrics
+
+
 class NatureCrawler:
     """Crawler for Nature Portfolio journals — no Cloudflare, plain requests."""
 
@@ -543,6 +580,7 @@ class JournalRankingUpdater:
             'springer': SpringerCrawler(self.flaresolverr_client),
             'sage': SageCrawler(self.flaresolverr_client),
             'elsevier': ElsevierCrawler(self.flaresolverr_client),
+            'apa': APACrawler(self.flaresolverr_client),
             'nature': NatureCrawler()
         }
 
@@ -557,6 +595,7 @@ class JournalRankingUpdater:
             'journals.sagepub.com': 'sage',
             'sciencedirect.com': 'elsevier',
             'elsevier.com': 'elsevier',
+            'apa.org': 'apa',
             'nature.com': 'nature'
         }
 
@@ -569,7 +608,6 @@ class JournalRankingUpdater:
             'oup.com': 'Oxford University Press',
             'journals.uchicago.edu': 'University of Chicago Press',
             'uchicago.edu': 'University of Chicago Press',
-            'apa.org': 'APA',
             'emeraldgrouppublishing.com': 'Emerald',
             'emerald.com': 'Emerald',
             'muse.jhu.edu': 'Johns Hopkins University Press',
