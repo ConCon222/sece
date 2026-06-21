@@ -519,11 +519,18 @@ class ElsevierCrawler(PublisherCrawler):
         return metrics
 
 class APACrawler(PublisherCrawler):
-    """Crawler for APA journals — uses FlareSolverr to bypass Incapsula."""
+    """Crawler for APA journals — uses FlareSolverr to bypass Incapsula.
+
+    Incapsula cookies are per-path; reusing a session across different
+    journal pages returns a JS challenge that FlareSolverr doesn't re-solve.
+    Fix: destroy+recreate the session before each request so every journal
+    goes through the full Incapsula flow.
+    """
 
     def extract_metrics(self, url: str) -> Dict[str, Any]:
         about_url = url.rstrip('/') + '/about'
         logger.info(f"Fetching APA data from: {about_url}")
+        self.client.destroy_session()
         html = self.client.get_page(about_url)
         if not html:
             return {}
@@ -577,6 +584,7 @@ class UChicagoCrawler(PublisherCrawler):
             return {}
         tt_url = f'https://www.journals.uchicago.edu/journals/{code}/turnaround-times'
         logger.info(f"Fetching UChicago data from: {tt_url}")
+        self.client.destroy_session()
         html = self.client.get_page(tt_url)
         if not html:
             return {}
