@@ -776,7 +776,9 @@
     through their interactions with cognitive, affective, and neural factors
 - journal: Language, Culture and Curriculum
   publisher: Taylor & Francis
-  tag: *id011
+  tag:
+  - Language Education & Acquisition
+  - Curriculum Studies
   title: Linguistic racism and discrimination in higher education
   abstract_deadline: 15 March 2026
   fullpaper_deadline: 01 December 2026
