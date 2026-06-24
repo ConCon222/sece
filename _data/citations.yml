@@ -1,15 +1,15 @@
 metadata:
   h_index: 7
   i10_index: 6
-  last_updated: '2026-06-19'
-  total_citations: 903
+  last_updated: '2026-06-24'
+  total_citations: 920
 papers:
   RkLnsEwAAAAJ:2osOgNQ5qMEC:
     citations: 152
     title: 'Research landscape of adaptive learning in education: A bibliometric study on research publications from 2000 to 2022'
     year: '2023'
   RkLnsEwAAAAJ:9yKSN-GCB0IC:
-    citations: 99
+    citations: 98
     title: What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study
     year: '2024'
   RkLnsEwAAAAJ:IjCSPb-OGe4C:
@@ -49,7 +49,7 @@ papers:
     title: 'The Future Landscape of Education: Constructing an Analytical and Application Framework for Generative Artificial Intelligence in Higher Education'
     year: '2025'
   RkLnsEwAAAAJ:d1gkVwhDpl0C:
-    citations: 410
+    citations: 425
     title: "Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
     year: '2025'
   RkLnsEwAAAAJ:eQOLeE2rZwMC:
@@ -57,7 +57,7 @@ papers:
     title: 'AI-Agent School: Construction and Evaluation of an Educational Simulation Environment Based on LLM-Driven Agents'
     year: '2025'
   RkLnsEwAAAAJ:qjMakFHDy7sC:
-    citations: 69
+    citations: 71
     title: Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses
     year: '2025'
   RkLnsEwAAAAJ:roLk4NBRz8UC:
@@ -65,7 +65,7 @@ papers:
     title: Enhancing real-time facial emotion recognition in classrooms via Attention-ResNet optimization
     year: '2026'
   RkLnsEwAAAAJ:u-x6o8ySG0sC:
-    citations: 16
+    citations: 17
     title: 'MetaClassroom: a new paradigm and experience for programming education'
     year: '2025'
   RkLnsEwAAAAJ:u5HHmVD_uO8C:
