@@ -1,15 +1,15 @@
 metadata:
   h_index: 7
   i10_index: 6
-  last_updated: '2026-06-26'
-  total_citations: 924
+  last_updated: '2026-06-29'
+  total_citations: 934
 papers:
   RkLnsEwAAAAJ:2osOgNQ5qMEC:
-    citations: 154
+    citations: 155
     title: 'Research landscape of adaptive learning in education: A bibliometric study on research publications from 2000 to 2022'
     year: '2023'
   RkLnsEwAAAAJ:9yKSN-GCB0IC:
-    citations: 98
+    citations: 99
     title: What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study
     year: '2024'
   RkLnsEwAAAAJ:IjCSPb-OGe4C:
@@ -49,7 +49,7 @@ papers:
     title: 'The Future Landscape of Education: Constructing an Analytical and Application Framework for Generative Artificial Intelligence in Higher Education'
     year: '2025'
   RkLnsEwAAAAJ:d1gkVwhDpl0C:
-    citations: 426
+    citations: 428
     title: "\U0001F3C6Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
     year: '2025'
   RkLnsEwAAAAJ:eQOLeE2rZwMC:
@@ -57,7 +57,7 @@ papers:
     title: 'AI-Agent School: Construction and Evaluation of an Educational Simulation Environment Based on LLM-Driven Agents'
     year: '2025'
   RkLnsEwAAAAJ:qjMakFHDy7sC:
-    citations: 72
+    citations: 73
     title: Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses
     year: '2025'
   RkLnsEwAAAAJ:roLk4NBRz8UC:
@@ -65,11 +65,11 @@ papers:
     title: Enhancing real-time facial emotion recognition in classrooms via Attention-ResNet optimization
     year: '2026'
   RkLnsEwAAAAJ:u-x6o8ySG0sC:
-    citations: 17
+    citations: 19
     title: 'MetaClassroom: a new paradigm and experience for programming education'
     year: '2025'
   RkLnsEwAAAAJ:u5HHmVD_uO8C:
-    citations: 133
+    citations: 136
     title: 'Bibliometric mapping techniques in educational technology research: A systematic literature review'
     year: '2024'
   RkLnsEwAAAAJ:ufrVoPGSRksC:
