@@ -55,7 +55,7 @@ jobs:
           set +e
           echo "🚀 Running citation update script..."
           start_time=$(date)
-          timeout 180 python bin/update_scholar_citations.py
+          timeout 360 python bin/update_scholar_citations.py
           status=$?
           end_time=$(date)
           if [ $status -eq 0 ]; then
@@ -63,8 +63,8 @@ jobs:
             echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
             echo "script_failed=false" >> $GITHUB_OUTPUT
           elif [ $status -eq 124 ]; then
-            echo "⏰ Citation update TIMED OUT after 180s (started at $start_time, ended at $end_time)."
-            echo "⏰ Citation update TIMED OUT after 180s." >> $GITHUB_STEP_SUMMARY
+            echo "⏰ Citation update TIMED OUT after 360s (started at $start_time, ended at $end_time)."
+            echo "⏰ Citation update TIMED OUT after 360s." >> $GITHUB_STEP_SUMMARY
             echo "script_failed=true" >> $GITHUB_OUTPUT
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."

@@ -1,0 +1,27 @@
+{%- assign citation_count = 0 -%}
+{%- assign citation_papers = site.data.citations.papers -%}
+{%- assign scholar_id = include.google_scholar_id -%}
+
+{%- if scholar_id and citation_papers -%}
+  {%- assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: scholar_id -%}
+
+  {%- if citation_papers[scholar_id_key] -%}
+    {%- assign citation_count = citation_papers[scholar_id_key].citations | default: 0 -%}
+  {%- elsif citation_papers[scholar_id] -%}
+    {%- assign citation_count = citation_papers[scholar_id].citations | default: 0 -%}
+  {%- else -%}
+    {%- for paper in citation_papers -%}
+      {%- assign paper_key = paper[0] -%}
+      {%- if paper_key contains scholar_id -%}
+        {%- assign citation_count = paper[1].citations | default: 0 -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endif -%}
+
+<span class="cite-count"
+  ><span class="only-en">
+    {{- citation_count }} citation{% unless citation_count == 1 %}s{% endunless -%}</span
+  ><span class="only-zh">被引 {{ citation_count }} 次</span></span
+>
