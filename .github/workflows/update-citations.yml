@@ -73,7 +73,6 @@ jobs:
           fi
           set -e
 
-
       - name: Save new citations.yml hash
         id: after
         run: |
