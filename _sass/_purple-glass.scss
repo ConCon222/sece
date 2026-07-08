@@ -722,6 +722,7 @@ body.hw-home .post > .post-header { display: none; }
 .publications .bibliography { padding-left: 0; }
 .publications .bibliography li {
   list-style: none;
+  position: relative;
   background: var(--glass-bg-soft);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
@@ -741,6 +742,130 @@ body.hw-home .post > .post-header { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .publications .bibliography li { transition: none !important; }
   .publications .bibliography li:hover { transform: none !important; }
+}
+
+/* Publication metadata markers: role chips, visible award corner, and legend */
+.publication-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 22px;
+  font-family: var(--ui);
+}
+.publication-legend-item,
+.publication-role-chip,
+.publication-award-corner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  font-family: var(--ui);
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.publication-legend-item,
+.publication-role-chip {
+  min-height: 30px;
+  padding: 5px 10px;
+  font-size: 0.76rem;
+  color: var(--tsinghua-deep);
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(102, 8, 116, 0.16);
+}
+.publication-role-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--tsinghua);
+  font-family: var(--ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+.publications .bibliography li .author sup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--tsinghua);
+  font-family: var(--ui);
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1;
+  vertical-align: text-top;
+}
+.publication-role-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+.publication-role-chip-cofirst {
+  background: rgba(102, 8, 116, 0.08);
+}
+.publication-role-chip-corresponding {
+  color: #6f3f00;
+  background: rgba(255, 193, 7, 0.16);
+  border-color: rgba(180, 111, 0, 0.28);
+}
+.publication-role-chip-corresponding .publication-role-mark {
+  background: #9a5b00;
+}
+.publication-award-corner {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 2;
+  max-width: min(56%, 300px);
+  padding: 7px 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: #704500;
+  background: linear-gradient(135deg, rgba(255, 248, 222, 0.96), rgba(255, 232, 153, 0.88));
+  border: 1px solid rgba(188, 123, 0, 0.30);
+  box-shadow: 0 10px 24px -18px rgba(120, 70, 0, 0.65);
+}
+.publication-award-corner-hot {
+  color: #812400;
+  background: linear-gradient(135deg, rgba(255, 244, 230, 0.98), rgba(255, 204, 172, 0.88));
+  border-color: rgba(199, 73, 23, 0.30);
+}
+.publication-award-corner i,
+.publication-legend-item i {
+  font-size: 0.86rem;
+}
+.publication-award-corner ~ .publication-entry-row .publication-main {
+  padding-top: 2.1rem;
+}
+
+@media (max-width: 767px) {
+  .publication-award-corner {
+    position: static;
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 0 12px;
+    white-space: normal;
+  }
+  .publication-award-corner ~ .publication-entry-row .publication-main {
+    padding-top: 0;
+  }
+  .publication-legend {
+    gap: 6px;
+  }
+  .publication-legend-item,
+  .publication-role-chip {
+    white-space: normal;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════

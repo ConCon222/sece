@@ -1,6 +1,32 @@
 ---
 ---
-<div class="row">
+{% if entry.award %}
+  {% assign award_label = entry.award_name | default: entry.award %}
+  {% assign award_is_hot = false %}
+  {% assign award_is_highly_cited = false %}
+  {% if award_label contains 'Hot' or award_label contains 'hot' %}
+    {% assign award_is_hot = true %}
+  {% endif %}
+  {% if award_label contains 'Highly Cited' or award_label contains 'highly cited' %}
+    {% assign award_is_highly_cited = true %}
+  {% endif %}
+  <div
+    class="publication-award-corner{% if award_is_hot %} publication-award-corner-hot{% endif %}"
+    aria-label="{{ award_label | strip_html | escape }}"
+  >
+    {% if award_is_highly_cited %}
+      <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+    {% endif %}
+    {% if award_is_hot %}
+      <i class="fa-solid fa-fire" aria-hidden="true"></i>
+    {% elsif award_is_highly_cited == false %}
+      <i class="fa-solid fa-award" aria-hidden="true"></i>
+    {% endif %}
+    <span>{{ award_label }}</span>
+  </div>
+{% endif %}
+
+<div class="row publication-entry-row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
       {%- if entry.abbr -%}
@@ -46,7 +72,7 @@
   {% endif %}
 
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %} publication-main">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -136,7 +162,11 @@
           {{- more_authors_hide -}}
         </span>
       {% endif %}
-      {% if entry.annotation %}
+      {% assign has_role_annotation = false %}
+      {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' or entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
+        {% assign has_role_annotation = true %}
+      {% endif %}
+      {% if entry.annotation and has_role_annotation == false %}
         <i
           class="fa-solid fa-circle-info ml-1"
           data-toggle="popover"
@@ -147,6 +177,16 @@
         </i>
       {% endif %}
     </div>
+    {% if has_role_annotation %}
+      <div class="publication-role-chips" aria-label="Author contribution roles">
+        {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' %}
+          <span class="publication-role-chip publication-role-chip-cofirst"><span class="publication-role-mark">†</span> Co-first author</span>
+        {% endif %}
+        {% if entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
+          <span class="publication-role-chip publication-role-chip-corresponding"><span class="publication-role-mark">*</span> Corresponding author</span>
+        {% endif %}
+      </div>
+    {% endif %}
 
     <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
