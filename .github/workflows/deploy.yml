@@ -61,6 +61,10 @@ on:
       - "!README.md"
   workflow_dispatch:
 
+concurrency:
+  group: deploy-site-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -98,6 +102,9 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Add GitHub Pages bypass marker
+        run: |
+          touch _site/.nojekyll
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
@@ -111,3 +118,54 @@ jobs:
           git-config-name: "Deploy Bot"              # 提交者名字，随便起
           git-config-email: "bot@noreply.github.com" # 提交者邮箱，用 noreply
           commit-message: "Update website content"   # 关键！写一个通用的信息，不要包含变量
+      - name: Verify target Pages deployment
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.PRI }}
+          TARGET_REPO: frank-haoming/frank-haoming.github.io
+        run: |
+          set -euo pipefail
+
+          api="https://api.github.com/repos/${TARGET_REPO}"
+          auth_header="Authorization: Bearer ${GH_TOKEN}"
+          accept_header="Accept: application/vnd.github+json"
+
+          target_sha="$(curl -fsSL -H "$auth_header" -H "$accept_header" "$api/commits/main" | jq -r '.sha')"
+          echo "Waiting for target Pages deployment for ${TARGET_REPO}@${target_sha}"
+
+          run_id=""
+          for i in {1..30}; do
+            runs="$(curl -fsSL -H "$auth_header" -H "$accept_header" "$api/actions/runs?per_page=20&branch=main")"
+            run_id="$(jq -r --arg sha "$target_sha" '.workflow_runs[] | select(.head_sha == $sha and .name == "pages build and deployment") | .id' <<< "$runs" | head -n 1)"
+            if [ -n "$run_id" ]; then
+              echo "Found target Pages run: $run_id"
+              break
+            fi
+            echo "Target Pages run not visible yet ($i/30); waiting..."
+            sleep 10
+          done
+
+          if [ -z "$run_id" ]; then
+            echo "Could not find a target Pages run for ${target_sha}."
+            exit 1
+          fi
+
+          for i in {1..60}; do
+            run="$(curl -fsSL -H "$auth_header" -H "$accept_header" "$api/actions/runs/$run_id")"
+            status="$(jq -r '.status' <<< "$run")"
+            conclusion="$(jq -r '.conclusion // ""' <<< "$run")"
+            echo "Target Pages run $run_id: status=$status conclusion=${conclusion:-pending}"
+
+            if [ "$status" = "completed" ]; then
+              if [ "$conclusion" = "success" ]; then
+                exit 0
+              fi
+              echo "Target Pages deployment finished with conclusion=$conclusion."
+              exit 1
+            fi
+
+            sleep 10
+          done
+
+          echo "Timed out waiting for target Pages deployment."
+          exit 1

@@ -110,6 +110,7 @@ jobs:
           git diff --staged --quiet || (
             echo "📤 Committing and pushing changes..."
             git commit -m "Update Google Scholar citations"
+            git pull --rebase origin main
             git push
           )
 
