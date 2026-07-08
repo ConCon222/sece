@@ -31,12 +31,48 @@ icons:
   milestone: "⭐"
 
 events:
+  # ==================== 2026 (Tsinghua & Conferences) ====================
+  - date: "2026-06"
+    title: "Project Showcase at AIED 2026 Interactive Events (Seoul, Korea)"
+    description: "韩国首尔 · AIED 2026 Interactive Events · 项目展示"
+    type: "talk"
+    icon: "🇰🇷"
+    year: 2026
+
+  - date: "2026-05"
+    title: "Outstanding Graduate of Shanghai"
+    description: "上海市优秀毕业生"
+    type: "honor"
+    icon: "🎓"
+    year: 2026
+
+  - date: "2026-04"
+    title: "Presentation at AERA 2026 Annual Meeting (Los Angeles, USA)"
+    description: "美国洛杉矶 · 美国教育研究协会年会 (AERA) · 论文汇报"
+    type: "talk"
+    icon: "🇺🇸"
+    year: 2026
+
   # ==================== 2025 (Future & Recent) ====================
+  - date: "2025-12"
+    title: "Outstanding Student Cadre of ECNU"
+    description: "华东师范大学 · 优秀学生干部"
+    type: "honor"
+    icon: "🎖️"
+    year: 2025
+
   - date: "2025-11"
     title: "Poster Presentation at EMNLP 2025 (Suzhou, China)"
     description: "EMNLP 2025 (自然语言处理顶会) Poster 展示"
     type: "talk"
     icon: "📊"
+    year: 2025
+
+  - date: "2025-10-28"
+    title: "Design Patent: Login GUI for Electronic Devices"
+    description: "专利 · 电子设备的登录图形用户界面 · 专利号：ZL 2024 3 0676574.5"
+    type: "publication"
+    icon: "📜"
     year: 2025
 
   - date: "2025-09"
@@ -75,13 +111,6 @@ events:
     year: 2025
 
   - date: "2025-01"
-    title: "Outstanding Student Cadre of ECNU"
-    description: "华东师范大学 · 优秀学生干部"
-    type: "honor"
-    icon: "🎖️"
-    year: 2025
-
-  - date: "2025-01"
     title: "Key Project of ECNU: Influencer-Led New Learning Models"
     description: "校级重点课题 · 探索博主主导学习新学习模式：影响因素、作用机理与实践路径"
     type: "project"
@@ -96,7 +125,7 @@ events:
     year: 2025
 
   # ==================== 2024 (ECNU) ====================
-  - date: "2024-09"
+  - date: "2024-12"
     title: "Outstanding Student of ECNU"
     description: "华东师范大学 · 优秀学生"
     type: "honor"
@@ -175,6 +204,41 @@ events:
     icon: "🥉"
     year: 2022
 
+  - date: "2022-11"
+    title: "Outstanding Student of ZJUT"
+    description: "浙江工业大学 · 校优秀学生"
+    type: "honor"
+    icon: "🎓"
+    year: 2022
+
+  - date: "2022-11"
+    title: "Zhejiang Provincial Government Scholarship"
+    description: "浙江省政府奖学金"
+    type: "honor"
+    icon: "🏛️"
+    year: 2022
+
+  - date: "2022-11"
+    title: "First-Class Excellent Student Scholarship of ZJUT"
+    description: "浙江工业大学 · 校优秀学生一等奖学金"
+    type: "honor"
+    icon: "📜"
+    year: 2022
+
+  - date: "2022-11"
+    title: "Innovation & Entrepreneurship Scholarship of ZJUT"
+    description: "浙江工业大学 · 创新创业奖学金"
+    type: "honor"
+    icon: "💡"
+    year: 2022
+
+  - date: "2022-11"
+    title: "Second Class Academic Scholarship of ZJUT"
+    description: "浙江工业大学 · 二等学习奖学金"
+    type: "honor"
+    icon: "📚"
+    year: 2022
+
   - date: "2022-10"
     title: "Bronze Medal, ACM-ICPC Asia Regional Contest (Hangzhou)"
     description: "ACM国际大学生程序设计竞赛亚洲区域赛（杭州站）铜奖"
@@ -182,37 +246,23 @@ events:
     icon: "🥉"
     year: 2022
 
-  - date: "2022-09"
-    title: "Zhejiang Provincial Government Scholarship"
-    description: "浙江省政府奖学金"
-    type: "honor"
-    icon: "🏛️"
-    year: 2022
-
-  - date: "2022-09"
-    title: "Excellent Student Scholarship of ZJUT"
-    description: "浙江工业大学 · 优秀学生奖学金"
-    type: "honor"
-    icon: "📜"
-    year: 2022
-
-  - date: "2022-09"
-    title: "Innovation & Entrepreneurship Scholarship of ZJUT"
-    description: "浙江工业大学 · 创新创业奖学金"
-    type: "honor"
-    icon: "💡"
-    year: 2022
-
-  - date: "2022-09"
-    title: "Second Class Academic Scholarship of ZJUT"
-    description: "浙江工业大学 · 二等学习奖学金"
-    type: "honor"
-    icon: "📚"
+  - date: "2022-06"
+    title: "Software Copyright: Course Management Review System CAS"
+    description: "计算机软件著作权 · 课程管理评论系统 CAS"
+    type: "publication"
+    icon: "💾"
     year: 2022
 
   - date: "2022-05"
-    title: "Outstanding League Member of ZJUT"
-    description: "浙江工业大学 · 优秀团员"
+    title: "One-Star Excellent Volunteer of ZJUT"
+    description: "浙江工业大学 · 校级一星优秀志愿者"
+    type: "service"
+    icon: "🤝"
+    year: 2022
+
+  - date: "2022-04"
+    title: "Outstanding League Cadre of ZJUT"
+    description: "浙江工业大学 · 优秀团干"
     type: "honor"
     icon: "🏵️"
     year: 2022
@@ -267,13 +317,6 @@ events:
     icon: "📚"
     year: 2021
 
-  - date: "2021-09"
-    title: "One-Star Excellent Volunteer of ZJUT"
-    description: "浙江工业大学 · 校级一星优秀志愿者"
-    type: "service"
-    icon: "🤝"
-    year: 2021
-
   - date: "2021-06"
     title: "Gold Medal, 19th ZJUT Programming Contest"
     description: "浙江工业大学第十九届程序设计竞赛 金奖"
@@ -302,7 +345,14 @@ events:
     icon: "🥉"
     year: 2021
 
-  - date: "2021-05"
+  - date: "2021-04"
+    title: "Second Prize, College Class Style Competition"
+    description: "组织班级完成学院风采大赛，获得二等奖"
+    type: "honor"
+    icon: "🏅"
+    year: 2021
+
+  - date: "2021-04"
     title: "Outstanding League Member of ZJUT"
     description: "浙江工业大学 · 优秀团员"
     type: "honor"
@@ -346,17 +396,17 @@ events:
     year: 2020
 
   - date: "2020-05"
-    title: "Outstanding League Member of ZJUT"
-    description: "浙江工业大学 · 优秀团员"
-    type: "honor"
-    icon: "🏵️"
-    year: 2020
-
-  - date: "2020-05"
     title: "Gold Medal, 2nd National College Algorithm Challenge"
     description: "第二届全国大学生算法与编程挑战赛 金奖"
     type: "award"
     icon: "🥇"
+    year: 2020
+
+  - date: "2020-04"
+    title: "Outstanding League Member of ZJUT"
+    description: "浙江工业大学 · 优秀团员"
+    type: "honor"
+    icon: "🏵️"
     year: 2020
 
   # ==================== Early Days ====================
