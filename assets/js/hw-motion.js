@@ -98,7 +98,7 @@
     batchReveal(".hw-home .about-side .side-card", { y: 20, stagger: 0.1, start: "top 86%" });
     batchReveal(".hw-home .research-grid .r-card", { y: 22, stagger: 0.08, start: "top 86%" });
     batchReveal(".hw-home .pubs .pub", { y: 20, stagger: 0.1, start: "top 86%" });
-    batchReveal(".hw-home .news-rail .news-card", { y: 18, stagger: 0.07, start: "top 88%" });
+    batchReveal(".hw-home .visit-rail .visit-card", { y: 18, stagger: 0.07, start: "top 88%" });
 
     if (one(".hw-home .contact-card")) {
       var ct = gsap.timeline({ defaults: { ease: "power3.out", clearProps: CLEAR },

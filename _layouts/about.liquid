@@ -41,17 +41,26 @@ layout: default
           <div class="aff-row">
             <svg class="icon" viewBox="0 0 24 24" style="font-size:22px"><path d="M22 9L12 5L2 9l10 4l10-4v6M6 10.6V16a6 3 0 0 0 12 0v-5.4"/></svg>
             <div>
-              <div class="aff-strong"><span class="only-en">Tsinghua University</span><span class="only-zh">清华大学</span></div>
-              <div class="aff-sub"><span class="only-en">Incoming PhD · School of Education · 2026</span><span class="only-zh">准博士生 · 教育学院 · 2026</span></div>
+              <div class="aff-strong">
+                <a href="https://www.tsinghua.edu.cn/en/index.htm" target="_blank" rel="noopener"><span class="only-en">Tsinghua University</span><span class="only-zh">清华大学</span></a>
+              </div>
+              <div class="aff-sub">
+                <span class="only-en">PhD Student · <a href="https://www.ioe.tsinghua.edu.cn" target="_blank" rel="noopener">School of Education</a></span>
+                <span class="only-zh">博士生 · <a href="https://www.ioe.tsinghua.edu.cn" target="_blank" rel="noopener">教育学院</a></span>
+              </div>
+              <div class="aff-advisors">
+                <span class="only-en">Advised by <a href="https://www.ioe.tsinghua.edu.cn/en/info/1238/1078.htm" target="_blank" rel="noopener">HAN Xibin</a> and <a href="https://www.ioe.tsinghua.edu.cn/en/info/1238/1231.htm" target="_blank" rel="noopener">Lixiang YAN</a></span>
+                <span class="only-zh">导师：<a href="https://www.ioe.tsinghua.edu.cn/en/info/1238/1078.htm" target="_blank" rel="noopener">HAN Xibin</a> 与 <a href="https://www.ioe.tsinghua.edu.cn/en/info/1238/1231.htm" target="_blank" rel="noopener">Lixiang YAN</a></span>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="stats">
-          <div class="stat glass">
+          <a class="stat glass stat-link" href="{{ '/publications/' | relative_url }}">
             <div class="stat-num">{{ pub_count }}</div>
             <div class="stat-label"><span class="only-en">Publications</span><span class="only-zh">论文</span></div>
-          </div>
+          </a>
           <div class="stat glass">
             <div class="stat-num">{{ total_citations }}</div>
             <div class="stat-label"><span class="only-en">Citations</span><span class="only-zh">被引</span></div>
@@ -101,7 +110,7 @@ layout: default
       <div class="about-prose glass">
         <div class="only-en">
           <p class="lead">
-            I am <strong>Haoming Wang</strong>, an incoming PhD student at the <strong>School of Education, Tsinghua University</strong>. My research sits at the intersection of artificial intelligence and education, with a focus on <em>agentic AI</em>, multi-agent systems, and large language models as genuine partners in learning.
+            I am <strong>Haoming Wang</strong>, a PhD student at the <strong>School of Education, Tsinghua University</strong>. My research sits at the intersection of artificial intelligence and education, with a focus on <em>agentic AI</em>, multi-agent systems, and large language models as genuine partners in learning.
           </p>
           <p>
             I came to this field from competitive programming. Years of contest training earned me national awards across ACM-ICPC and CCPC regionals, alongside honors in algorithm challenges. That habit of build, test, refine, repeat is still how I approach research today.
@@ -112,7 +121,7 @@ layout: default
         </div>
         <div class="only-zh">
           <p class="lead">
-            我是<strong>王浩名</strong>，即将入读<strong>清华大学教育学院</strong>博士项目。我的研究处在人工智能与教育的交叉地带——尤其关注<em>智能体（agentic AI）</em>、多智能体系统，以及作为真正"学习伙伴"的大语言模型。
+            我是<strong>王浩名</strong>，清华大学教育学院博士生。我的研究处在人工智能与教育的交叉地带——尤其关注<em>智能体（agentic AI）</em>、多智能体系统，以及作为真正"学习伙伴"的大语言模型。
           </p>
           <p>
             我从竞赛编程走入这一领域。多年训练为我赢得了 ACM-ICPC、CCPC 等多项国家级奖项，以及算法竞赛中的荣誉。"构建、测试、打磨、迭代"——这一习惯至今仍是我做研究的方式。
@@ -136,6 +145,7 @@ layout: default
             <div class="side-row"><span class="bullet"></span>开发 <em>OpenClaw</em> —— 面向教育者的开源智能体工具包</div>
             <div class="side-row"><span class="bullet"></span>维护 <em><a href="{{ '/cfp/' | relative_url }}">期刊征稿</a></em> 与 <em><a href="{{ '/jrank/' | relative_url }}">期刊排名</a></em> 追踪工具</div>
           </div>
+          <a class="side-action" href="{{ '/projects/' | relative_url }}"><span class="only-en">See more in Projects →</span><span class="only-zh">查看更多项目 →</span></a>
         </div>
         <div class="side-card glass">
           <div class="side-label"><span class="only-en">Academic Service</span><span class="only-zh">学术服务</span></div>
@@ -170,47 +180,60 @@ layout: default
             <span class="chip"><span class="only-en">Distinguished Graduate</span><span class="only-zh">优秀毕业生</span></span>
             <span class="chip"><span class="only-en">ESI Highly Cited &amp; Hot Paper</span><span class="only-zh">ESI 高被引 & 热点论文</span></span>
           </div>
+          <a class="side-action" href="{{ '/lifeline/' | relative_url }}"><span class="only-en">See more in Life Line →</span><span class="only-zh">查看更多人生轨迹 →</span></a>
         </div>
       </aside>
     </div>
   </section>
 
-  <!-- RESEARCH ─────────────────────────────────────────── -->
-  <section id="research" class="section">
+  <!-- LEARNING & VISITS ───────────────────────────────── -->
+  <section id="learning-visits" class="section">
     <div class="section-head">
       <span class="section-num">02</span>
       <h2 class="section-title">
-        <span class="only-en">Research <em>interests</em></span>
-        <span class="only-zh">研究<em>方向</em></span>
+        <span class="only-en">Learning <em>&amp; visits</em></span>
+        <span class="only-zh">学习与<em>访问</em></span>
       </h2>
       <span class="section-rule"></span>
+      <a class="section-link" href="{{ '/lifeline/' | relative_url }}"><span class="only-en">Full lifeline →</span><span class="only-zh">完整轨迹 →</span></a>
     </div>
 
-    <div class="research-grid">
-      <article class="r-card glass">
-        <div class="r-index">i.</div>
-        <h3><span class="only-en">Agentic AI in Education</span><span class="only-zh">教育中的智能体（Agentic AI）</span></h3>
-        <p class="only-en">Autonomous, goal-directed agents that plan, act, and adapt as genuine partners in teaching and learning, grounded in educational theory.</p>
-        <p class="only-zh">能够自主规划、行动与调整的目标导向智能体，作为真正的教学伙伴，并植根于教育理论。</p>
-      </article>
-      <article class="r-card glass">
-        <div class="r-index">ii.</div>
-        <h3><span class="only-en">AI-Assisted &amp; Personalized Learning</span><span class="only-zh">AI 辅助与个性化学习</span></h3>
-        <p class="only-en">Adaptive tutors that respect learner proficiency, style, and emotional state, all without flattening the experience.</p>
-        <p class="only-zh">尊重学习者水平、风格与情绪状态的自适应导师，而不抹平学习体验。</p>
-      </article>
-      <article class="r-card glass">
-        <div class="r-index">iii.</div>
-        <h3><span class="only-en">Multi-Agent Systems for Learning</span><span class="only-zh">多智能体系统</span></h3>
-        <p class="only-en">Building agent-based learning systems such as <em>AI-Agent School</em>, where teams of agents collaborate to support and scaffold learners.</p>
-        <p class="only-zh">构建基于多智能体的学习系统（如 <em>AI-Agent School</em>），让智能体团队协作，为学习者提供支持与认知支架。</p>
-      </article>
-      <article class="r-card glass">
-        <div class="r-index">iv.</div>
-        <h3><span class="only-en">Educational Data Mining &amp; XAI</span><span class="only-zh">教育数据挖掘</span></h3>
-        <p class="only-en">Mining large-scale assessment data such as <em>PISA</em>, with explainable AI to surface what really drives learning outcomes.</p>
-        <p class="only-zh">对 <em>PISA</em> 等大规模测评数据进行挖掘，并借助可解释 AI（XAI）揭示影响学习成效的关键因素。</p>
-      </article>
+    <div class="visit-rail" aria-label="Learning and institutional visits">
+      {% assign learning_visits = site.data.learning_visits | reverse %}
+      {% for item in learning_visits %}
+        <details class="visit-card glass">
+          <summary class="visit-summary">
+            <div class="visit-date"><span class="only-en">{{ item.date }}</span><span class="only-zh">{{ item.date_zh | default: item.date }}</span></div>
+            <h3 class="visit-place"><span class="only-en">{{ item.institution }}</span><span class="only-zh">{{ item.institution_zh | default: item.institution }}</span></h3>
+            <div class="visit-role"><span class="only-en">{{ item.role }}</span><span class="only-zh">{{ item.role_zh | default: item.role }}</span></div>
+            {% if item.note or item.note_zh %}
+              <p class="visit-note"><span class="only-en">{{ item.note }}</span><span class="only-zh">{{ item.note_zh | default: item.note }}</span></p>
+            {% endif %}
+            {% if item.tags %}
+              <div class="visit-tags">
+                {% for tag in item.tags %}
+                  <span>{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            {% if item.highlights %}
+              <div class="visit-cue"><span class="only-en">Highlights</span><span class="only-zh">重点</span><span aria-hidden="true">+</span></div>
+            {% endif %}
+          </summary>
+          {% if item.highlights %}
+            <div class="visit-details">
+              <ul class="visit-detail-list">
+                {% for highlight in item.highlights %}
+                  <li>
+                    <span class="visit-detail-type"><span class="only-en">{{ highlight.type }}</span><span class="only-zh">{{ highlight.type_zh | default: highlight.type }}</span></span>
+                    <span class="visit-detail-text"><span class="only-en">{{ highlight.text }}</span><span class="only-zh">{{ highlight.text_zh | default: highlight.text }}</span></span>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        </details>
+      {% endfor %}
     </div>
   </section>
 
@@ -282,38 +305,50 @@ layout: default
     </div>
   </section>
 
-  <!-- NEWS ─────────────────────────────────────────────── -->
-  <section id="news" class="section">
+  <!-- RESEARCH ─────────────────────────────────────────── -->
+  <section id="research" class="section">
     <div class="section-head">
       <span class="section-num">04</span>
       <h2 class="section-title">
-        <span class="only-en">Recent <em>news</em></span>
-        <span class="only-zh">近期<em>动态</em></span>
+        <span class="only-en">Research <em>interests</em></span>
+        <span class="only-zh">研究<em>方向</em></span>
       </h2>
       <span class="section-rule"></span>
-      <a class="section-link" href="{{ '/news/' | relative_url }}"><span class="only-en">All news →</span><span class="only-zh">全部动态 →</span></a>
     </div>
 
-    <div class="news-rail">
-      {% assign recent_news = site.news | sort: 'date' | reverse %}
-      {% for item in recent_news limit: 4 %}
-        {% assign tag_zh = item.tag %}
-        {% case item.tag %}
-          {% when 'milestone' %}{% assign tag_zh = '里程碑' %}
-          {% when 'conference' %}{% assign tag_zh = '会议' %}
-          {% when 'award' %}{% assign tag_zh = '奖项' %}
-          {% when 'publication' %}{% assign tag_zh = '论文' %}
-          {% when 'talk' %}{% assign tag_zh = '演讲' %}
-        {% endcase %}
-        <div class="news-card glass{% if item.highlight %} highlight{% endif %}">
-          <div class="news-date"><span class="only-en">{{ item.date | date: '%b %Y' }}</span><span class="only-zh">{{ item.date | date: '%Y 年 %-m 月' }}</span></div>
-          <div class="news-body">
-            {% if item.tag %}<span class="news-tag"><span class="only-en">{{ item.tag }}</span><span class="only-zh">{{ tag_zh }}</span></span>{% endif %}
-            <div class="only-en">{{ item.content }}</div>
-            <div class="only-zh">{% if item.zh %}{{ item.zh | markdownify }}{% else %}{{ item.content }}{% endif %}</div>
-          </div>
+    <div class="research-grid">
+      <article class="r-card glass">
+        <div class="r-heading">
+          <div class="r-index">i.</div>
+          <h3><span class="only-en">Agentic AI in Education</span><span class="only-zh">教育中的智能体（Agentic AI）</span></h3>
         </div>
-      {% endfor %}
+        <p class="only-en">Autonomous, goal-directed agents that plan, act, and adapt as genuine partners in teaching and learning, grounded in educational theory.</p>
+        <p class="only-zh">能够自主规划、行动与调整的目标导向智能体，作为真正的教学伙伴，并植根于教育理论。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-heading">
+          <div class="r-index">ii.</div>
+          <h3><span class="only-en">AI-Assisted &amp; Personalized Learning</span><span class="only-zh">AI 辅助与个性化学习</span></h3>
+        </div>
+        <p class="only-en">Adaptive tutors that respect learner proficiency, style, and emotional state, all without flattening the experience.</p>
+        <p class="only-zh">尊重学习者水平、风格与情绪状态的自适应导师，而不抹平学习体验。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-heading">
+          <div class="r-index">iii.</div>
+          <h3><span class="only-en">Multi-Agent Systems for Learning</span><span class="only-zh">多智能体系统</span></h3>
+        </div>
+        <p class="only-en">Building agent-based learning systems such as <em>AI-Agent School</em>, where teams of agents collaborate to support and scaffold learners.</p>
+        <p class="only-zh">构建基于多智能体的学习系统（如 <em>AI-Agent School</em>），让智能体团队协作，为学习者提供支持与认知支架。</p>
+      </article>
+      <article class="r-card glass">
+        <div class="r-heading">
+          <div class="r-index">iv.</div>
+          <h3><span class="only-en">Educational Data Mining &amp; XAI</span><span class="only-zh">教育数据挖掘</span></h3>
+        </div>
+        <p class="only-en">Mining large-scale assessment data such as <em>PISA</em>, with explainable AI to surface what really drives learning outcomes.</p>
+        <p class="only-zh">对 <em>PISA</em> 等大规模测评数据进行挖掘，并借助可解释 AI（XAI）揭示影响学习成效的关键因素。</p>
+      </article>
     </div>
   </section>
 

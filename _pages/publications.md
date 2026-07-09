@@ -12,13 +12,6 @@ nav_order: 2
 <!-- Bibsearch Feature -->
 {% include bib_search.liquid %}
 
-<div class="publication-legend" aria-label="Publication markers">
-  <span class="publication-legend-item"><span class="publication-role-mark">†</span> Co-first author</span>
-  <span class="publication-legend-item"><span class="publication-role-mark">*</span> Corresponding author</span>
-  <span class="publication-legend-item"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Highly Cited</span>
-  <span class="publication-legend-item"><i class="fa-solid fa-fire" aria-hidden="true"></i> Hot Paper</span>
-</div>
-
 {%- comment -%}
   1. 先把 Journal / Conference 的 bibliography 渲染到临时变量里
 {%- endcomment -%}

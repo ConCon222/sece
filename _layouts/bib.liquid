@@ -83,16 +83,39 @@
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
+      {% assign entry_is_first_author = false %}
+      {% assign entry_marks_cofirst = false %}
+      {% if entry.cofirst and entry.cofirst != 'false' %}
+        {% assign entry_marks_cofirst = true %}
+      {% endif %}
+      {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' %}
+        {% assign entry_marks_cofirst = true %}
+      {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
-        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {% assign author_has_corresponding_marker = false %}
+        {% if author.last contains '*' %}
+          {% assign author_has_corresponding_marker = true %}
+        {% endif %}
+        {% if author.last contains '∗' %}
+          {% assign author_has_corresponding_marker = true %}
+        {% endif %}
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+        {% if forloop.first and author_is_self %}
+          {% assign entry_is_first_author = true %}
+        {% endif %}
+        {%- capture author_marker_html -%}
+          {%- if forloop.first and author_is_self and entry_marks_cofirst == false -%}<sup class="publication-author-marker publication-author-marker-first">1</sup>{%- endif -%}
+          {%- if author.last contains '†' -%}<sup class="publication-author-marker publication-author-marker-cofirst">†</sup>{%- endif -%}
+          {%- if author_has_corresponding_marker -%}<sup class="publication-author-marker publication-author-marker-corresponding">*</sup>{%- endif -%}
+        {%- endcapture -%}
+        {%- assign author_last_html = author_last_name | append: author_marker_html -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -162,11 +185,30 @@
           {{- more_authors_hide -}}
         </span>
       {% endif %}
-      {% assign has_role_annotation = false %}
-      {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' or entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
-        {% assign has_role_annotation = true %}
+      {% assign has_cofirst_role = false %}
+      {% assign has_corresponding_role = false %}
+      {% assign has_visible_role = false %}
+      {% if entry.cofirst and entry.cofirst != 'false' %}
+        {% assign has_cofirst_role = true %}
       {% endif %}
-      {% if entry.annotation and has_role_annotation == false %}
+      {% if entry.corresponding and entry.corresponding != 'false' %}
+        {% assign has_corresponding_role = true %}
+      {% endif %}
+      {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' or entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
+        {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' %}
+          {% assign has_cofirst_role = true %}
+        {% endif %}
+        {% if entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
+          {% assign has_corresponding_role = true %}
+        {% endif %}
+      {% endif %}
+      {% if entry_is_first_author and has_cofirst_role == false %}
+        {% assign has_visible_role = true %}
+      {% endif %}
+      {% if has_cofirst_role or has_corresponding_role %}
+        {% assign has_visible_role = true %}
+      {% endif %}
+      {% if entry.annotation %}
         <i
           class="fa-solid fa-circle-info ml-1"
           data-toggle="popover"
@@ -177,13 +219,16 @@
         </i>
       {% endif %}
     </div>
-    {% if has_role_annotation %}
+    {% if has_visible_role %}
       <div class="publication-role-chips" aria-label="Author contribution roles">
-        {% if entry.annotation contains 'Co-first' or entry.annotation contains 'co-first' %}
-          <span class="publication-role-chip publication-role-chip-cofirst"><span class="publication-role-mark">†</span> Co-first author</span>
+        {% if entry_is_first_author and has_cofirst_role == false %}
+          <span class="publication-role-chip publication-role-chip-first"><span class="publication-role-mark publication-role-mark-first">1</span> First author</span>
         {% endif %}
-        {% if entry.annotation contains 'Corresponding' or entry.annotation contains 'corresponding' %}
-          <span class="publication-role-chip publication-role-chip-corresponding"><span class="publication-role-mark">*</span> Corresponding author</span>
+        {% if has_cofirst_role %}
+          <span class="publication-role-chip publication-role-chip-cofirst"><span class="publication-role-mark publication-role-mark-cofirst">†</span> Co-first author</span>
+        {% endif %}
+        {% if has_corresponding_role %}
+          <span class="publication-role-chip publication-role-chip-corresponding"><span class="publication-role-mark publication-role-mark-corresponding">*</span> Corresponding author</span>
         {% endif %}
       </div>
     {% endif %}
@@ -221,12 +266,14 @@
     <div class="periodical">
       {{ periodical | strip }}
     </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
-    </div>
+    {% if entry.note %}
+      <div class="periodical">
+        {{ entry.note | strip }}
+      </div>
+    {% endif %}
 
     <!-- Links/Buttons -->
-    <div class="links">
+    {% capture publication_links %}
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
@@ -293,7 +340,13 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
-    </div>
+    {% endcapture %}
+    {% assign publication_links = publication_links | strip %}
+    {% if publication_links != "" %}
+      <div class="links">
+        {{ publication_links }}
+      </div>
+    {% endif %}
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}
       {% if entry.altmetric and entry.altmetric != 'false' %}

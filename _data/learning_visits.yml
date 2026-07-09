@@ -1,0 +1,183 @@
+- date: "Jul 2017"
+  date_zh: "2017 年 7 月"
+  institution: "Zhejiang University of Finance & Economics"
+  institution_zh: "浙江财经大学"
+  role: "Algorithmic Problem-Solving Summer Institute"
+  role_zh: "暑期竞赛集训"
+  note: "An early intensive training period in algorithmic thinking and competitive programming."
+  note_zh: "早期算法思维与程序设计竞赛训练。"
+  tags:
+    - Algorithms
+    - Programming
+  highlights:
+    - type: "Training"
+      type_zh: "训练"
+      text: "Early intensive training in algorithmic thinking and contest programming."
+      text_zh: "早期算法思维与程序设计竞赛集训。"
+    - type: "Foundation"
+      type_zh: "基础"
+      text: "Built the problem-solving foundation that later shaped my computational research style."
+      text_zh: "建立后来影响我计算研究方式的问题求解基础。"
+
+- date: "Sep 2019 - Jun 2023"
+  date_zh: "2019 年 9 月 - 2023 年 6 月"
+  institution: "Zhejiang University of Technology"
+  institution_zh: "浙江工业大学"
+  role: "Undergraduate Study"
+  role_zh: "本科学习"
+  note: "Built the computing foundation behind my later AI and education research."
+  note_zh: "建立后来开展 AI 与教育研究的计算能力基础。"
+  tags:
+    - ACM-ICPC
+    - CCPC
+    - Distinguished Graduate
+  highlights:
+    - type: "Awards"
+      type_zh: "竞赛"
+      text: "ACM-ICPC Asia Regional medals, CCPC medals, and national/provincial algorithm awards."
+      text_zh: "获得 ACM-ICPC 亚洲区域赛、CCPC 及国家/省级算法竞赛奖项。"
+    - type: "Honors"
+      type_zh: "荣誉"
+      text: "Outstanding University Graduate, Outstanding Student, and student leadership honors."
+      text_zh: "获校级优秀毕业生、优秀学生及学生骨干类荣誉。"
+    - type: "Funding"
+      type_zh: "资助"
+      text: "Cumulative undergraduate scholarships: RMB 20,000, including Zhejiang Provincial Government and ZJUT scholarships."
+      text_zh: "本科阶段奖学金累计 2 万元，包括浙江省政府奖学金与浙江工业大学校级奖学金。"
+
+- date: "Sep 2023 - Jun 2026"
+  date_zh: "2023 年 9 月 - 2026 年 6 月"
+  institution: "East China Normal University"
+  institution_zh: "华东师范大学"
+  role: "Master's Study"
+  role_zh: "硕士学习"
+  note: "Supervised by Xianlong Xu; focused on AI-agent-supported learning and agentic AI in education."
+  note_zh: "师从 Xianlong Xu，聚焦 AI 智能体支持学习与教育中的 agentic AI。"
+  tags:
+    - AI Agents
+    - National Scholarship
+  highlights:
+    - type: "Funding"
+      type_zh: "资助"
+      text: "National Scholarship: RMB 20,000; additional master's funding: RMB 23,000."
+      text_zh: "研究生国家奖学金 2 万元；其他硕士阶段资助累计 2.3 万元。"
+    - type: "Honors"
+      type_zh: "荣誉"
+      text: "Outstanding Student, Outstanding Student Cadre, and Shanghai Outstanding Graduate."
+      text_zh: "获优秀学生、优秀学生干部、上海市优秀毕业生等荣誉。"
+    - type: "Projects"
+      type_zh: "项目"
+      text: "Led or participated in ECNU-level projects on AIGC, metaverse learning spaces, and AI-agent-supported learning."
+      text_zh: "参与/承担 AIGC、元宇宙学习空间与 AI 智能体支持学习相关校级课题。"
+
+- date: "Aug 2024"
+  date_zh: "2024 年 8 月"
+  institution: "NYU Shanghai"
+  institution_zh: "上海纽约大学"
+  role: "N.E.T Summer Camp"
+  role_zh: "N.E.T Summer Camp 学术训练"
+  note: "Academic training and exchange in an international learning environment."
+  note_zh: "在国际化学习环境中进行学术训练与交流。"
+  tags:
+    - Academic Training
+    - Exchange
+  highlights:
+    - type: "Visit"
+      type_zh: "访问"
+      text: "International summer academic training and research exchange at NYU Shanghai."
+      text_zh: "在上海纽约大学参加国际化暑期学术训练与交流。"
+    - type: "Focus"
+      type_zh: "方向"
+      text: "Expanded research perspective across educational technology and global learning environments."
+      text_zh: "拓展教育技术与国际化学习环境相关研究视角。"
+
+- date: "May 2025"
+  date_zh: "2025 年 5 月"
+  institution: "The University of Hong Kong"
+  institution_zh: "香港大学"
+  role: "Short-term Academic Visit"
+  role_zh: "短期访学"
+  note: "Academic exchange on AI in education and learning sciences with scholars in Hong Kong."
+  note_zh: "围绕 AI 教育与学习科学开展短期学术交流。"
+  tags:
+    - Academic Visit
+    - Hong Kong
+  highlights:
+    - type: "Visit"
+      type_zh: "访学"
+      text: "Short-term academic visit at The University of Hong Kong."
+      text_zh: "香港大学短期访学。"
+    - type: "Focus"
+      type_zh: "方向"
+      text: "Academic exchange on AI in education, learning analytics, and learning sciences."
+      text_zh: "围绕 AI 教育、学习分析与学习科学开展学术交流。"
+
+- date: "Jun 2025"
+  date_zh: "2025 年 6 月"
+  institution: "University of Helsinki"
+  institution_zh: "赫尔辛基大学"
+  role: "Short-term Academic Visit"
+  role_zh: "短期访学"
+  note: "Short-term scholarly exchange in learning sciences and technology-enhanced education."
+  note_zh: "围绕学习科学与技术增强教育开展短期学术交流。"
+  tags:
+    - Academic Visit
+    - Learning Sciences
+    - Finland
+  highlights:
+    - type: "Visit"
+      type_zh: "访学"
+      text: "Short-term academic visit at the University of Helsinki."
+      text_zh: "赫尔辛基大学短期访学。"
+    - type: "Focus"
+      type_zh: "方向"
+      text: "Scholarly exchange in learning sciences and technology-enhanced education."
+      text_zh: "围绕学习科学与技术增强教育开展学术交流。"
+
+- date: "Jul 2025"
+  date_zh: "2025 年 7 月"
+  institution: "The Chinese University of Hong Kong"
+  institution_zh: "香港中文大学"
+  role: "Short-term Academic Visit"
+  role_zh: "短期访学"
+  note: "Academic exchange on STEAM education, AI-supported learning, and educational innovation."
+  note_zh: "围绕 STEAM 教育、AI 支持学习与教育创新开展短期学术交流。"
+  tags:
+    - Academic Visit
+    - STEAM
+    - Hong Kong
+  highlights:
+    - type: "Visit"
+      type_zh: "访学"
+      text: "Short-term academic visit at The Chinese University of Hong Kong."
+      text_zh: "香港中文大学短期访学。"
+    - type: "Focus"
+      type_zh: "方向"
+      text: "Academic exchange on STEAM education, AI-supported learning, and educational innovation."
+      text_zh: "围绕 STEAM 教育、AI 支持学习与教育创新开展学术交流。"
+
+- date: "2026-Present"
+  date_zh: "2026 年至今"
+  institution: "Tsinghua University"
+  institution_zh: "清华大学"
+  role: "PhD Study"
+  role_zh: "博士学习"
+  note: "Advised by HAN Xibin and Lixiang YAN at the School of Education."
+  note_zh: "在教育学院师从 HAN Xibin 与 Lixiang YAN。"
+  tags:
+    - PhD
+    - AI in Education
+    - Learning Sciences
+  highlights:
+    - type: "Milestone"
+      type_zh: "阶段"
+      text: "PhD study at the School of Education, Tsinghua University."
+      text_zh: "清华大学教育学院博士阶段学习。"
+    - type: "Advisors"
+      type_zh: "导师"
+      text: "Advised by HAN Xibin and Lixiang YAN."
+      text_zh: "师从 HAN Xibin 与 Lixiang YAN。"
+    - type: "Focus"
+      type_zh: "方向"
+      text: "Researching agentic AI, learning sciences, and AI in education."
+      text_zh: "聚焦 agentic AI、学习科学与 AI 教育。"
