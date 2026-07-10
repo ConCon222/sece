@@ -1,0 +1,19 @@
+---
+permalink: /assets/data/cfp-browser.json
+---
+[
+{%- for cfp in site.data.cfps -%}
+  {
+    "journal": {{ cfp.journal | default: "" | jsonify }},
+    "publisher": {{ cfp.publisher | default: "" | jsonify }},
+    "tags": {{ cfp.tag | default: empty | jsonify }},
+    "title": {{ cfp.title | default: "" | jsonify }},
+    "abstractDeadline": {{ cfp.abstract_deadline | default: "" | jsonify }},
+    "deadline": {{ cfp.fullpaper_deadline | default: "See Website" | jsonify }},
+    "deadlineSort": {{ cfp.fullpaper_deadline_sort | default: "9999-99-99" | jsonify }},
+    "editors": {{ cfp.editors | default: "" | jsonify }},
+    "url": {{ cfp.link | default: "" | jsonify }},
+    "description": {{ cfp.description | default: "" | strip_html | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

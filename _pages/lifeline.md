@@ -488,8 +488,10 @@ nav_order: 6
 {% assign publication_count = site.data.lifeline.events | where: "type", "publication" | size %}
 {% assign exchange_count = site.data.lifeline.events | where: "type", "exchange" | size %}
 
+{% include context_rail.liquid items="lifeline-top::Overview::概览|lifeline-filters::Filters::筛选" years=events_by_year %}
+
 <!-- ==================== Page Structure ==================== -->
-<div class="lifeline-header">
+<div class="lifeline-header context-rail-target" id="lifeline-top">
   <h2><span class="only-en">Life Line</span><span class="only-zh">人生轨迹</span></h2>
   <p class="lifeline-hint">
     <span id="visible-count">{{ total_events }}</span>
@@ -498,7 +500,7 @@ nav_order: 6
   </p>
 
   <!-- Toolbar: filter + expand controls on one row -->
-  <div class="lifeline-toolbar">
+  <div class="lifeline-toolbar context-rail-target" id="lifeline-filters">
     <button class="filter-pill active" data-type="all" onclick="filterByType('all', this)">
       <span class="only-en">All</span><span class="only-zh">全部</span> <span class="filter-count">{{ total_events }}</span>
     </button>
@@ -553,7 +555,7 @@ nav_order: 6
 
 <div class="lifeline">
   {% for year in events_by_year %}
-  <div class="year-section" data-year="{{ year.name }}">
+  <div class="year-section context-rail-target" id="year-{{ year.name }}" data-year="{{ year.name }}">
     <div class="year-marker" onclick="toggleYear('{{ year.name }}')">
       <span class="year-label">
         {{ year.name }}

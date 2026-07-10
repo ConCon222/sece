@@ -10,21 +10,14 @@
      Shared by /cfp/ and /jrank/ (placed above the WeChat float).
      ============================================================ -->
 
-<!-- Data payload (built at Jekyll build time). Trailing `null` keeps
-     comma handling trivial; it is filtered out in JS. -->
+<!-- Shared data is fetched only when the panel is opened. CFP and ranking
+     pages use the same cached JSON, so the full datasets are not duplicated
+     inside either HTML document. -->
 <script>
-  window.HW_REC_DATA = [
-  {%- for cfp in site.data.cfps -%}
-  {%- assign _rt = cfp.title | default: "" | downcase -%}
-  {%- unless _rt contains "404 error" or _rt contains "page not found" or _rt contains "what happened" or _rt contains "access denied" or _rt contains "just a moment" -%}
-  {"t":"cfp","ti":{{ cfp.title | default: "" | jsonify }},"j":{{ cfp.journal | default: "" | jsonify }},"p":{{ cfp.publisher | default: "" | jsonify }},"tg":{{ cfp.tag | jsonify }},"dl":{{ cfp.fullpaper_deadline | default: "" | jsonify }},"u":{{ cfp.link | default: "" | jsonify }},"d":{{ cfp.description | default: "" | strip_html | truncate: 400 | jsonify }}},
-  {%- endunless -%}
-  {%- endfor -%}
-  {%- for j in site.data.jrank -%}
-  {%- assign _aims = site.data.jaims[j.journal].aims | default: "" -%}
-  {"t":"journal","j":{{ j.journal | default: "" | jsonify }},"p":{{ j.publisher | default: "" | jsonify }},"tg":{{ j.tag | jsonify }},"q":{{ j.purple_quartile | default: "" | jsonify }},"hm":{{ j.hm_score | default: "" | jsonify }},"ar":{{ j.acceptance_rate | default: "" | jsonify }},"d":{{ _aims | strip_html | truncate: 500 | jsonify }}},
-  {%- endfor -%}
-  null];
+  window.HW_REC_DATA_SOURCES = {
+    cfp: {{ '/assets/data/cfp-browser.json' | relative_url | jsonify }},
+    journals: {{ '/assets/data/jrank-browser.json' | relative_url | jsonify }}
+  };
 </script>
 
 <style>
@@ -384,7 +377,40 @@
 
 <script>
 (function () {
-  var data = (window.HW_REC_DATA || []).filter(Boolean);
+  var data = [];
+  var dataPromise = null;
+
+  function loadData() {
+    if (data.length) return Promise.resolve(data);
+    if (dataPromise) return dataPromise;
+    var sources = window.HW_REC_DATA_SOURCES || {};
+    dataPromise = Promise.all([
+      fetch(sources.cfp, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) throw new Error("cfp-data");
+        return response.json();
+      }),
+      fetch(sources.journals, { credentials: "same-origin" }).then(function (response) {
+        if (!response.ok) throw new Error("journal-data");
+        return response.json();
+      })
+    ]).then(function (sets) {
+      var cfps = sets[0].map(function (item) {
+        return { t: "cfp", ti: item.title, j: item.journal, p: item.publisher, tg: item.tags || [], dl: item.deadline, u: item.url, d: item.description || "" };
+      });
+      var journals = sets[1].map(function (item) {
+        return { t: "journal", j: item.journal, p: item.publisher, tg: item.tags || [], q: item.purpleQuartile, hm: item.hm, ar: item.acceptanceRate, d: item.aims || "" };
+      });
+      data = cfps.concat(journals).filter(function (item) {
+        var title = String(item.ti || item.j || "").toLowerCase();
+        return !/(404 error|page not found|what happened|access denied|just a moment)/.test(title);
+      });
+      return data;
+    }).catch(function (error) {
+      dataPromise = null;
+      throw error;
+    });
+    return dataPromise;
+  }
 
   var STOP = (" a an the and or of to in on for with by is are was were be been being this that these those we our us it its as at from into using used use based study studies paper papers research researches result results approach approaches method methods methodology model models novel propose proposed proposes present presents presented show shows showed can may might also via between among their they which while such more most than but not no all both each other others new two three via per across toward towards within without about over under given due first second high higher low lower large small data analysis analyses framework system systems "
     .trim().split(/\s+/).reduce(function (m, w) { m[w] = 1; return m; }, {}));
@@ -621,48 +647,52 @@
     var lang = curLang();
     var input = document.getElementById("hwRecInput");
     var box = document.getElementById("hwRecResults");
-    var scored = rankAll(input.value);
-
-    if (scored === null) {
-      box.innerHTML = '<div class="hw-rec-empty">' +
-        (lang === "zh" ? "请先输入论文标题或摘要中的一些关键内容。" : "Please enter a title or some of your abstract first.") + "</div>";
-      return;
-    }
-    if (scored.length === 0) {
-      box.innerHTML = '<div class="hw-rec-empty">' +
-        (lang === "zh"
-          ? "没有找到相关的征稿或期刊。可以试试用更具体的研究主题关键词（如「教育技术」「高等教育」）再描述一次。"
-          : "No matching call or journal found. Try more specific topic keywords (e.g. “educational technology”, “higher education”).") + "</div>";
-      return;
-    }
-
     box.innerHTML = thinkingHTML(lang, AI.on);
 
-    if (AI.on) {
-      var pool = aiPool(scored);
-      aiRerank(input.value, pool, lang).then(function (picks) {
-        if (!picks.length) {
-          box.innerHTML = '<div class="hw-rec-empty">' +
-            (lang === "zh" ? "AI 觉得列表里没有特别契合的目标。可以换个角度再描述一下你的研究。"
-                           : "The AI didn't find a strong match in the list. Try describing your work from a different angle.") + "</div>";
-          return;
-        }
-        showResults(box, { lang: lang, mode: "ai", provLabel: PROVIDERS[AI.prov].label,
-          items: picks.map(function (p) { return pool[p.idx]; }),
-          reasons: picks.map(function (p) { return p.reason; }) });
-      }).catch(function () {
-        var warn = '<div class="hw-rec-warn">' +
+    loadData().then(function () {
+      var scored = rankAll(input.value);
+      if (scored === null) {
+        box.innerHTML = '<div class="hw-rec-empty">' +
+          (lang === "zh" ? "请先输入论文标题或摘要中的一些关键内容。" : "Please enter a title or some of your abstract first.") + "</div>";
+        return;
+      }
+      if (scored.length === 0) {
+        box.innerHTML = '<div class="hw-rec-empty">' +
           (lang === "zh"
-            ? "AI 调用失败（可能是 Key 无效，或该服务商不允许浏览器直连 / 跨域 CORS）。已改用本地匹配。"
-            : "AI call failed (invalid key, or the provider blocks direct browser / CORS calls). Falling back to local matching.") + "</div>";
-        showResults(box, { lang: lang, mode: "local", warn: warn, items: orderForDisplay(scored) });
-      });
-      return;
-    }
+            ? "没有找到相关的征稿或期刊。可以试试用更具体的研究主题关键词（如「教育技术」「高等教育」）再描述一次。"
+            : "No matching call or journal found. Try more specific topic keywords (e.g. “educational technology”, “higher education”).") + "</div>";
+        return;
+      }
 
-    setTimeout(function () {
-      showResults(box, { lang: lang, mode: "local", items: orderForDisplay(scored) });
-    }, 460);
+      if (AI.on) {
+        var pool = aiPool(scored);
+        aiRerank(input.value, pool, lang).then(function (picks) {
+          if (!picks.length) {
+            box.innerHTML = '<div class="hw-rec-empty">' +
+              (lang === "zh" ? "AI 觉得列表里没有特别契合的目标。可以换个角度再描述一下你的研究。"
+                             : "The AI didn't find a strong match in the list. Try describing your work from a different angle.") + "</div>";
+            return;
+          }
+          showResults(box, { lang: lang, mode: "ai", provLabel: PROVIDERS[AI.prov].label,
+            items: picks.map(function (p) { return pool[p.idx]; }),
+            reasons: picks.map(function (p) { return p.reason; }) });
+        }).catch(function () {
+          var warn = '<div class="hw-rec-warn">' +
+            (lang === "zh"
+              ? "AI 调用失败（可能是 Key 无效，或该服务商不允许浏览器直连 / 跨域 CORS）。已改用本地匹配。"
+              : "AI call failed (invalid key, or the provider blocks direct browser / CORS calls). Falling back to local matching.") + "</div>";
+          showResults(box, { lang: lang, mode: "local", warn: warn, items: orderForDisplay(scored) });
+        });
+        return;
+      }
+
+      setTimeout(function () {
+        showResults(box, { lang: lang, mode: "local", items: orderForDisplay(scored) });
+      }, 220);
+    }).catch(function () {
+      box.innerHTML = '<div class="hw-rec-empty">' +
+        (lang === "zh" ? "推荐数据加载失败，请刷新页面后重试。" : "The recommendation data could not be loaded. Please refresh and try again.") + "</div>";
+    });
   }
 
   // wiring
@@ -673,6 +703,7 @@
   function openPanel() {
     panel.classList.add("open");
     input.placeholder = I18N_PLACEHOLDER[curLang()];
+    loadData().catch(function () {});
     setTimeout(function () { input.focus(); }, 60);
   }
   function closePanel() { panel.classList.remove("open"); }

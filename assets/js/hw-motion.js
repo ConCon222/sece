@@ -112,14 +112,9 @@
   /* ================= LIFE LINE ================= */
   if (isLife) {
     fadeIn(".lifeline-header", { y: 16, start: "top 90%" });
-    $(".year-marker").forEach(function (m) {
-      gsap.from(m, { scale: 0.85, autoAlpha: 0, duration: 0.5, ease: "power2.out", clearProps: CLEAR,
-        scrollTrigger: { trigger: m, start: "top 90%", once: true } });
-    });
-    $(".event-card").forEach(function (card) {
-      gsap.from(card, { x: card.classList.contains("left") ? -32 : 32, autoAlpha: 0, duration: 0.55, ease: "power3.out", clearProps: CLEAR,
-        scrollTrigger: { trigger: card, start: "top 90%", once: true } });
-    });
+    // Reveal one year group at a time. Animating every individual event made
+    // long timelines create dozens of scroll observers during first load.
+    batchReveal(".lifeline .year-section", { y: 22, stagger: 0.04, start: "top 90%" });
     var endDot = one(".lifeline-end-dot");
     if (endDot) gsap.from(endDot, { scale: 0.4, autoAlpha: 0, duration: 0.45, ease: "power2.out", clearProps: CLEAR,
       scrollTrigger: { trigger: endDot, start: "top 94%", once: true } });
@@ -135,7 +130,7 @@
     function finalizeLifeline() {
       if (finalized) return;
       finalized = true;
-      var els = $(".lifeline-header, .lifeline .year-marker, .lifeline .event-card, .lifeline-end-dot");
+      var els = $(".lifeline-header, .lifeline .year-section, .lifeline .year-marker, .lifeline .event-card, .lifeline-end-dot");
       gsap.set(els, { clearProps: "transform" }); // drop x / scale / y offsets
       els.forEach(function (el) { el.style.opacity = "1"; el.style.visibility = "visible"; }); // beat the CSS pre-hide
       ScrollTrigger.getAll().forEach(function (st) { st.kill(); }); // only lifeline triggers exist on this page

@@ -23,10 +23,11 @@ layout: default
 {% assign h_index = site.data.citations.metadata.h_index | default: page.h_index | default: 7 %}
 
 <div class="hw-home-wrap">
-<main class="hw-home" id="top">
+{% include context_rail.liquid items="top::Intro::首页|about::About::关于|learning-visits::Visits::访学|publications::Selected work::代表作|research::Research::研究|contact::Contact::联系" %}
+<main class="hw-home" id="home-main">
 
   <!-- HERO ─────────────────────────────────────────────── -->
-  <section class="hero">
+  <section class="hero context-rail-target" id="top">
     <div class="hero-grid">
       <div class="hero-type">
         <h1 class="display">
@@ -80,7 +81,7 @@ layout: default
 
       <aside class="hero-portrait">
         <div class="portrait-frame glass">
-          <img src="{{ '/assets/img/photo1.jpg' | relative_url }}" alt="Haoming Wang" />
+          <img src="{{ '/assets/img/photo1.jpg' | relative_url }}" alt="Haoming Wang" width="1440" height="2160" fetchpriority="high" decoding="async" />
           <div class="portrait-shine"></div>
         </div>
         <div class="portrait-caption glass glass-soft">
@@ -251,7 +252,7 @@ layout: default
 
     <div class="pubs">
       <article class="pub glass">
-        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/hssc.jpeg' | relative_url }}" alt="" /></div>
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/square/hssc.webp' | relative_url }}" alt="" width="512" height="576" loading="lazy" /></div>
         <div class="pub-body">
           <div class="pub-meta">
             <span class="venue">HSSC</span>
@@ -269,7 +270,7 @@ layout: default
       </article>
 
       <article class="pub glass">
-        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/eait.jpg' | relative_url }}" alt="" /></div>
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/square/eait.webp' | relative_url }}" alt="" width="512" height="576" loading="lazy" /></div>
         <div class="pub-body">
           <div class="pub-meta">
             <span class="venue">EAIT</span>
@@ -287,7 +288,7 @@ layout: default
       </article>
 
       <article class="pub glass">
-        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/call.png' | relative_url }}" alt="" /></div>
+        <div class="pub-thumb"><img src="{{ '/assets/img/publication_preview/square/call.webp' | relative_url }}" alt="" width="512" height="576" loading="lazy" /></div>
         <div class="pub-body">
           <div class="pub-meta">
             <span class="venue">CALL</span>
@@ -398,7 +399,7 @@ layout: default
   <div class="hw-qr-overlay" id="hwQrOverlay" aria-hidden="true">
     <div class="hw-qr-box glass">
       <button class="hw-qr-close" id="hwQrClose" aria-label="Close">&times;</button>
-      <img src="{{ '/assets/img/wechat_qr.png' | relative_url }}" alt="WeChat QR code" />
+      <img src="{{ '/assets/img/wechat_qr.webp' | relative_url }}" alt="WeChat QR code" width="1022" height="1021" loading="lazy" />
       <div class="hw-qr-id">WeChat · whmtech</div>
       <div class="hw-qr-note"><span class="only-en">Scan to add me on WeChat</span><span class="only-zh">扫一扫，加我微信</span></div>
     </div>

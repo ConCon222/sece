@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiet Paper Data Style — Visual Demo</title>
+    <style>
+      @font-face {
+        font-family: "Demo Garamond";
+        src: url("../assets/fonts/text/eb-garamond-latin-400-normal.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Demo Inter";
+        src: url("../assets/fonts/text/inter-latin-400-normal.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Demo Inter";
+        src: url("../assets/fonts/text/inter-latin-600-normal.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
+
+      :root {
+        --paper: #f3efe7;
+        --paper-raised: #faf7f0;
+        --ink: #211d19;
+        --muted: #6d665d;
+        --rule: #cfc6b7;
+        --rule-strong: #a99d8c;
+        --purple: #64246d;
+        --purple-soft: #eadfea;
+        --orange: #b75b25;
+        --green: #3f7453;
+        --ui: "Demo Inter", system-ui, sans-serif;
+        --serif: "Demo Garamond", Georgia, serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: linear-gradient(rgba(91, 70, 45, 0.025) 1px, transparent 1px), var(--paper);
+        background-size: 100% 28px;
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: 18px;
+      }
+
+      .topline {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 58px;
+        padding: 0 32px;
+        border-bottom: 1px solid var(--ink);
+        background: rgba(243, 239, 231, 0.96);
+        font-family: var(--ui);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .brand {
+        font-weight: 600;
+      }
+      .brand span {
+        color: var(--purple);
+      }
+      .demo-note {
+        color: var(--muted);
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 76px 0 96px;
+      }
+      .masthead {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+        gap: 64px;
+        align-items: end;
+        padding-bottom: 38px;
+        border-bottom: 2px solid var(--ink);
+      }
+      .eyebrow {
+        margin-bottom: 12px;
+        color: var(--purple);
+        font-family: var(--ui);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 760px;
+        margin: 0;
+        font-size: clamp(48px, 7vw, 88px);
+        font-weight: 400;
+        letter-spacing: -0.035em;
+        line-height: 0.92;
+      }
+      .dek {
+        margin: 0;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      .ledger {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--rule-strong);
+      }
+      .ledger-item {
+        padding: 23px 20px 22px 0;
+      }
+      .ledger-item + .ledger-item {
+        padding-left: 20px;
+        border-left: 1px solid var(--rule);
+      }
+      .ledger-label {
+        color: var(--muted);
+        font-family: var(--ui);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .ledger-value {
+        margin-top: 3px;
+        font-size: 32px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .filters {
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 12px;
+        padding: 26px 0;
+        border-bottom: 1px solid var(--rule-strong);
+      }
+      input,
+      select {
+        width: 100%;
+        height: 44px;
+        border: 1px solid var(--rule-strong);
+        border-radius: 0;
+        background: var(--paper-raised);
+        color: var(--ink);
+        padding: 0 13px;
+        font: 14px var(--ui);
+      }
+      input:focus,
+      select:focus {
+        outline: 2px solid var(--purple);
+        outline-offset: 2px;
+      }
+
+      .table-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 34px 0 14px;
+      }
+      h2 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 400;
+      }
+      .result-count {
+        color: var(--muted);
+        font: 12px var(--ui);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th {
+        padding: 12px 10px;
+        border-top: 1px solid var(--ink);
+        border-bottom: 1px solid var(--ink);
+        font: 600 11px var(--ui);
+        letter-spacing: 0.08em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      td {
+        padding: 18px 10px;
+        border-bottom: 1px solid var(--rule);
+        vertical-align: top;
+      }
+      tbody tr:hover {
+        background: rgba(255, 255, 255, 0.34);
+      }
+      .journal {
+        max-width: 330px;
+        font-size: 20px;
+        line-height: 1.15;
+      }
+      .publisher {
+        margin-top: 5px;
+        color: var(--muted);
+        font: 11px var(--ui);
+      }
+      .score {
+        display: inline-flex;
+        min-width: 48px;
+        justify-content: center;
+        padding: 5px 8px;
+        background: var(--purple);
+        color: #fff;
+        font: 600 12px var(--ui);
+        font-variant-numeric: tabular-nums;
+      }
+      .quartile {
+        color: var(--purple);
+        font: 600 13px var(--ui);
+      }
+      .number {
+        font: 14px var(--ui);
+        font-variant-numeric: tabular-nums;
+      }
+      .tag {
+        display: inline-block;
+        margin: 0 4px 4px 0;
+        padding: 4px 7px;
+        border: 1px solid var(--rule);
+        color: var(--muted);
+        font: 10px var(--ui);
+      }
+      .mobile-label {
+        display: none;
+      }
+
+      .method {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 64px;
+        margin-top: 68px;
+        padding-top: 24px;
+        border-top: 2px solid var(--ink);
+      }
+      .method p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .page-rail {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: grid;
+        gap: 12px;
+        padding-left: 12px;
+        border-left: 1px solid var(--rule-strong);
+        font: 10px var(--ui);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .page-rail a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .page-rail a:hover {
+        color: var(--purple);
+      }
+
+      @media (max-width: 1240px) {
+        .page-rail {
+          display: none;
+        }
+      }
+      @media (max-width: 760px) {
+        body {
+          font-size: 17px;
+          background-size: 100% 26px;
+        }
+        .topline {
+          padding: 0 18px;
+        }
+        .demo-note {
+          display: none;
+        }
+        .shell {
+          width: min(100% - 28px, 640px);
+          padding-top: 48px;
+        }
+        .masthead {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        h1 {
+          font-size: clamp(48px, 17vw, 68px);
+        }
+        .ledger {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .ledger-item:nth-child(3) {
+          border-left: 0;
+          border-top: 1px solid var(--rule);
+        }
+        .ledger-item:nth-child(4) {
+          border-top: 1px solid var(--rule);
+        }
+        .filters {
+          grid-template-columns: 1fr;
+        }
+        table,
+        tbody {
+          display: block;
+        }
+        thead {
+          display: none;
+        }
+        tbody tr {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          padding: 17px 0;
+          border-bottom: 1px solid var(--ink);
+        }
+        td {
+          display: block;
+          padding: 8px 6px;
+          border: 0;
+        }
+        td:first-child,
+        td:last-child {
+          grid-column: 1 / -1;
+        }
+        .journal {
+          max-width: none;
+        }
+        .mobile-label {
+          display: block;
+          margin-bottom: 5px;
+          color: var(--muted);
+          font: 600 9px var(--ui);
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+        .method {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topline">
+      <div class="brand">Haoming Wang <span>/ Research Tools</span></div>
+      <div class="demo-note">Visual study · quiet paper</div>
+    </header>
+
+    <nav class="page-rail" aria-label="Demo page sections">
+      <a href="#overview">Overview</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#method">Method</a>
+    </nav>
+
+    <main class="shell">
+      <section class="masthead" id="overview">
+        <div>
+          <div class="eyebrow">Academic publishing field notes · 2026</div>
+          <h1>Journal<br />Rankings</h1>
+        </div>
+        <p class="dek">A quieter, paper-led treatment: stronger rules, fewer surfaces, and purple used as an index rather than an atmosphere.</p>
+      </section>
+
+      <section class="ledger" aria-label="Summary">
+        <div class="ledger-item">
+          <div class="ledger-label">Journals</div>
+          <div class="ledger-value">388</div>
+        </div>
+        <div class="ledger-item">
+          <div class="ledger-label">Q1</div>
+          <div class="ledger-value">225</div>
+        </div>
+        <div class="ledger-item">
+          <div class="ledger-label">Publishers</div>
+          <div class="ledger-value">23</div>
+        </div>
+        <div class="ledger-item">
+          <div class="ledger-label">Updated</div>
+          <div class="ledger-value">07·10</div>
+        </div>
+      </section>
+
+      <section class="filters" aria-label="Demo filters">
+        <input type="search" placeholder="Search journal or field…" />
+        <select>
+          <option>All quartiles</option>
+          <option>Q1</option>
+          <option>Q2</option>
+        </select>
+        <select>
+          <option>All publishers</option>
+          <option>Elsevier</option>
+          <option>Springer</option>
+        </select>
+        <select>
+          <option>All fields</option>
+          <option>Educational Technology</option>
+          <option>Higher Education</option>
+        </select>
+      </section>
+
+      <section id="rankings">
+        <div class="table-heading">
+          <h2>Current index</h2>
+          <div class="result-count">Showing 1–4 of 388</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Journal</th>
+              <th>HM</th>
+              <th>Impact</th>
+              <th>Decision</th>
+              <th>Accept</th>
+              <th>Fields</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="mobile-label">Journal</div>
+                <div class="journal">International Journal of Educational Technology in Higher Education</div>
+                <div class="publisher">Springer</div>
+              </td>
+              <td>
+                <div class="mobile-label">HM</div>
+                <span class="score">109.7</span>
+              </td>
+              <td>
+                <div class="mobile-label">Impact</div>
+                <div class="quartile">Q1 · 38.7</div>
+              </td>
+              <td>
+                <div class="mobile-label">Decision</div>
+                <span class="number">5 days</span>
+              </td>
+              <td>
+                <div class="mobile-label">Accept</div>
+                <span class="number">—</span>
+              </td>
+              <td>
+                <div class="mobile-label">Fields</div>
+                <span class="tag">Educational Technology</span><span class="tag">Higher Education</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mobile-label">Journal</div>
+                <div class="journal">Computers &amp; Education</div>
+                <div class="publisher">Elsevier</div>
+              </td>
+              <td>
+                <div class="mobile-label">HM</div>
+                <span class="score">75.2</span>
+              </td>
+              <td>
+                <div class="mobile-label">Impact</div>
+                <div class="quartile">Q1 · 13.2</div>
+              </td>
+              <td>
+                <div class="mobile-label">Decision</div>
+                <span class="number">7 days</span>
+              </td>
+              <td>
+                <div class="mobile-label">Accept</div>
+                <span class="number">—</span>
+              </td>
+              <td>
+                <div class="mobile-label">Fields</div>
+                <span class="tag">Educational Technology</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mobile-label">Journal</div>
+                <div class="journal">Educational Research Review</div>
+                <div class="publisher">Elsevier</div>
+              </td>
+              <td>
+                <div class="mobile-label">HM</div>
+                <span class="score">67.4</span>
+              </td>
+              <td>
+                <div class="mobile-label">Impact</div>
+                <div class="quartile">Q1 · 10.3</div>
+              </td>
+              <td>
+                <div class="mobile-label">Decision</div>
+                <span class="number">6 days</span>
+              </td>
+              <td>
+                <div class="mobile-label">Accept</div>
+                <span class="number">—</span>
+              </td>
+              <td>
+                <div class="mobile-label">Fields</div>
+                <span class="tag">Review Journal</span><span class="tag">General Education</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="mobile-label">Journal</div>
+                <div class="journal">Educational Psychologist</div>
+                <div class="publisher">Taylor &amp; Francis</div>
+              </td>
+              <td>
+                <div class="mobile-label">HM</div>
+                <span class="score">71.2</span>
+              </td>
+              <td>
+                <div class="mobile-label">Impact</div>
+                <div class="quartile">Q1 · 10.6</div>
+              </td>
+              <td>
+                <div class="mobile-label">Decision</div>
+                <span class="number">40 days</span>
+              </td>
+              <td>
+                <div class="mobile-label">Accept</div>
+                <span class="number">6%</span>
+              </td>
+              <td>
+                <div class="mobile-label">Fields</div>
+                <span class="tag">Educational Psychology</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="method" id="method">
+        <h2>Why it feels quieter</h2>
+        <p>
+          There is only one raised surface: the form controls. Hierarchy comes from type scale, ink rules, and spacing. On small screens the same
+          records become compact two-column cards without changing the visual language.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

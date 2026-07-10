@@ -16,7 +16,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {{ page.body_class }}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if page.layout == 'about' or page.permalink == '/lifeline/' %}has-ambient-motion{% endif %} {{ page.body_class }}">
     <!-- Atmosphere: animated gradient orbs + grain (purple-glass theme) -->
     <div class="atmosphere" aria-hidden="true">
       <div class="orb orb-1"></div>

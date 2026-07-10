@@ -53,18 +53,21 @@
       {% endif %}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
+          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}" alt="{{ entry.title | escape }}" loading="lazy">
         {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% assign preview_stem = entry.preview | split: '.' | first %}
+          {% assign entry_path = preview_stem | prepend: '/assets/img/publication_preview/square/' | append: '.webp' %}
           {%
             include figure.liquid
-            loading="eager"
+            loading="lazy"
             path=entry_path
             sizes = "200px"
             class="preview z-depth-1 rounded"
+            width="512"
+            height="576"
             zoomable=true
             avoid_scaling=true
-            alt=entry.preview
+            alt=entry.title
           %}
         {% endif %}
       {% endif %}
@@ -431,6 +434,9 @@
               <img
                 src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
                 alt="{{ citation_count }} Google Scholar citations"
+                height="20"
+                loading="lazy"
+                decoding="async"
               >
             </a>
           {% endif %}
@@ -443,6 +449,9 @@
               <img
                 src="https://img.shields.io/badge/inspire-{% inspirehep_citations entry.inspirehep_id %}-001628?logo=inspire&logoColor=001628&labelColor=beige"
                 alt="{% inspirehep_citations entry.inspirehep_id %} InspireHEP citations"
+                height="20"
+                loading="lazy"
+                decoding="async"
               >
             </a>
           {% endif %}

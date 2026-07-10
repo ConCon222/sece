@@ -6,9 +6,11 @@
 ></script>
 
 <!-- Motion layer: self-hosted GSAP + ScrollTrigger + site animations (deferred; gated by html.hw-anim) -->
+{% if page.layout == 'about' or page.permalink == '/lifeline/' %}
 <script defer src="{{ '/assets/js/gsap.min.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/ScrollTrigger.min.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/hw-motion.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
 
 <!-- Bootsrap & MDB scripts -->
 <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
@@ -18,7 +20,7 @@
   crossorigin="anonymous"
 ></script>
 
-{% if site.enable_masonry %}
+{% if site.enable_masonry and page.masonry %}
   <!-- Masonry & imagesLoaded -->
   <script
     defer
@@ -157,7 +159,13 @@
   <script src="{{ '/assets/js/tooltips-setup.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
 
+{% assign use_medium_zoom = false %}
 {% if site.enable_medium_zoom %}
+  {% if page.layout == 'post' or page.layout == 'distill' or page.permalink == '/publications/' %}
+    {% assign use_medium_zoom = true %}
+  {% endif %}
+{% endif %}
+{% if use_medium_zoom %}
   <!-- Medium Zoom JS -->
   <script
     defer
@@ -187,10 +195,14 @@
 <!-- Load Common JS -->
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>
-<script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% if page.layout == 'post' or page.layout == 'distill' %}
+  <script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
+{% endif %}
 
 <!-- Jupyter Open External Links New Tab -->
-<script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
+{% if page.layout == 'distill' %}
+  <script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
+{% endif %}
 
 <!-- Badges — only load on pages that actually render a bibliography
      (these external scripts are slow from mainland China; no need site-wide) -->

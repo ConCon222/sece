@@ -1,0 +1,31 @@
+---
+permalink: /assets/data/jrank-browser.json
+---
+[
+{%- assign sorted_journals = site.data.jrank | sort: 'purple_score' | reverse -%}
+{%- for journal in sorted_journals -%}
+  {%- assign journal_data = site.data.journal_rank | where: "name", journal.journal | first -%}
+  {%- assign aims = site.data.jaims[journal.journal].aims | default: "" -%}
+  {
+    "journal": {{ journal.journal | default: "" | jsonify }},
+    "publisher": {{ journal.publisher | default: "" | jsonify }},
+    "tags": {{ journal.tag | default: empty | jsonify }},
+    "hm": {{ journal.hm_score | default: 0 | jsonify }},
+    "purpleQuartile": {{ journal.purple_quartile | default: "" | jsonify }},
+    "purpleScore": {{ journal.purple_score | default: 0 | jsonify }},
+    "orangeQuartile": {{ journal.orange_quartile | default: "" | jsonify }},
+    "orangeScore": {{ journal.orange_score | default: 0 | jsonify }},
+    "redDivision": {{ journal.red_division | default: "" | jsonify }},
+    "firstDecision": {{ journal.first_decision_time | default: "" | jsonify }},
+    "acceptanceRate": {{ journal.acceptance_rate | default: "" | jsonify }},
+    "reviewTime": {{ journal.review_time | default: "" | jsonify }},
+    "acceptanceTime": {{ journal.acceptance_time | default: "" | jsonify }},
+    "publicationTime": {{ journal.publication_time | default: "" | jsonify }},
+    "documentsCurrentYear": {{ journal.documents_current_year | default: "" | jsonify }},
+    "documentsLastYear": {{ journal.documents_last_year | default: "" | jsonify }},
+    "url": {{ journal_data.url | default: "" | jsonify }},
+    "sourceId": {{ journal_data.sourceid | default: "" | jsonify }},
+    "aims": {{ aims | strip_html | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]

@@ -92,6 +92,10 @@ a:hover { color: var(--rose-accent); }
   border-radius: 50%;
   filter: blur(100px);
   opacity: 0.28;
+  animation: none;
+  will-change: auto;
+}
+body.has-ambient-motion .orb {
   animation: hw-float 36s ease-in-out infinite;
   will-change: transform;
 }
@@ -119,7 +123,10 @@ a:hover { color: var(--rose-accent); }
   mix-blend-mode: multiply;
 }
 @media (prefers-reduced-motion: reduce) {
-  .orb { animation: none; }
+  body.has-ambient-motion .orb { animation: none; will-change: auto; }
+}
+@media (max-width: 768px) {
+  body.has-ambient-motion .orb { animation: none; filter: blur(72px); will-change: auto; }
 }
 
 /* ─── Glass primitive ─────────────────────────────────────────────── */
@@ -226,6 +233,16 @@ html[data-lang="zh"] .hw-home .side-row { line-height: 1.85; }
 }
 #navbar #search-toggle .nav-link,
 #navbar .toggle-container { color: var(--ink-soft); }
+#navbar .nav-search-icon {
+  width: 13px;
+  height: 13px;
+  margin-left: 3px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  vertical-align: -2px;
+}
 /* hamburger color */
 #navbar .navbar-toggler .icon-bar { background: var(--tsinghua); }
 /* progress bar accent */
@@ -719,6 +736,16 @@ body.hw-home .post > .post-header { display: none; }
 .hw-home .pub-thumb img { transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); }
 .hw-home .pub:hover .pub-thumb img { transform: scale(1.06); }
 .publications .preview { overflow: hidden; }
+.publications .bibliography li .abbr figure { margin: 0 auto 0.75rem; }
+.publications .bibliography li img.preview {
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  aspect-ratio: 8 / 9;
+  object-fit: contain;
+  margin-inline: auto;
+}
 .publications .bibliography li img.preview,
 .publications .bibliography li .preview img { transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); }
 .publications .bibliography li:hover .preview img,
@@ -727,6 +754,10 @@ body.hw-home .post > .post-header { display: none; }
 /* Data tables: gentle row highlight on hover */
 .container[role="main"] table tbody tr { transition: background-color 0.15s ease; }
 .container[role="main"] table tbody tr:hover { background-color: rgba(102, 8, 116, 0.045); }
+
+@media (max-width: 575.98px) {
+  .publications .bibliography li img.preview { max-width: 128px; }
+}
 
 /* Buttons: soft lift */
 .btn.z-depth-0 { transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease; }
@@ -1139,6 +1170,110 @@ select:focus-visible,
   text-transform: none;
 }
 
+/* Wide-screen contextual index. It stays out of the content column and is
+   deliberately absent on laptops/tablets where the gutter is too narrow. */
+.context-rail {
+  display: none;
+  position: fixed;
+  top: 50%;
+  right: max(14px, calc((100vw - 1140px) / 2 - 124px));
+  z-index: 40;
+  width: 110px;
+  padding: 5px 0 5px 17px;
+  transform: translateY(-50%);
+  font-family: var(--ui, sans-serif);
+}
+.context-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 1px;
+  background: rgba(102, 8, 116, 0.18);
+}
+.context-rail-kicker {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ink-faint, #74677c);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.context-rail a {
+  position: relative;
+  display: block;
+  padding: 5px 0;
+  color: var(--ink-faint, #74677c);
+  font-size: 0.66rem;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+.context-rail a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -17px;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(102, 8, 116, 0.34);
+  border-radius: 50%;
+  background: var(--paper, #f7f3fb);
+  transform: translateY(-50%);
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+.context-rail a:hover,
+.context-rail a.active {
+  color: var(--tsinghua, #660874);
+  transform: translateX(2px);
+}
+.context-rail a.active::before {
+  border-color: var(--tsinghua, #660874);
+  background: var(--tsinghua, #660874);
+  transform: translateY(-50%) scale(1.12);
+}
+.context-rail-target,
+[id^="year-"] {
+  scroll-margin-top: 100px;
+}
+@media (min-width: 1400px) and (min-height: 680px) {
+  .context-rail { display: block; }
+}
+
+/* Keep the Blog header on the same type scale as other inner-page titles. */
+.header-bar h1 {
+  font-size: 2.5rem;
+  line-height: 1.08;
+}
+.header-bar h2 {
+  font-size: 1.28rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 560px) {
+  .header-bar {
+    padding-top: 1.25rem;
+    padding-bottom: 2rem;
+  }
+  .header-bar h1 {
+    font-size: 2.5rem;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .header-bar h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .featured-posts .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 /* ─── GSAP motion layer: pre-hide entrance targets ──────────────────────
    Applies ONLY when html.hw-anim is set (added pre-paint by head.liquid,
    and only when prefers-reduced-motion is NOT set). hw-motion.js reveals
@@ -1161,8 +1296,7 @@ html.hw-anim {
   .hw-home .contact-headline,
   .hw-home .contact-item,
   .lifeline-header,
-  .lifeline .event-card,
-  .lifeline .year-marker,
+  .lifeline .year-section,
   .lifeline-end-dot {
     visibility: hidden;
   }

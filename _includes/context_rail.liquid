@@ -1,0 +1,18 @@
+{% assign rail_items = include.items | default: '' | split: '|' %}
+<nav class="context-rail" data-context-rail aria-label="On this page">
+  <span class="context-rail-kicker"><span class="only-en">Index</span><span class="only-zh">页内</span></span>
+  {% for item in rail_items %}
+    {% if item != '' %}
+      {% assign parts = item | split: '::' %}
+      <a href="#{{ parts[0] }}" data-section="{{ parts[0] }}">
+        <span class="only-en">{{ parts[1] }}</span><span class="only-zh">{{ parts[2] | default: parts[1] }}</span>
+      </a>
+    {% endif %}
+  {% endfor %}
+  {% if include.years %}
+    {% for year in include.years %}
+      <a href="#year-{{ year.name }}" data-section="year-{{ year.name }}">{{ year.name }}</a>
+    {% endfor %}
+  {% endif %}
+</nav>
+<script defer src="{{ '/assets/js/context-rail.js' | relative_url | bust_file_cache }}"></script>

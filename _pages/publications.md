@@ -10,7 +10,10 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 <!-- Bibsearch Feature -->
+{% include context_rail.liquid items="publication-search::Search::检索|journal-papers::Journals::期刊论文|conference-papers::Conferences::会议论文" %}
+<div id="publication-search" class="context-rail-target">
 {% include bib_search.liquid %}
+</div>
 
 {%- comment -%}
   1. 先把 Journal / Conference 的 bibliography 渲染到临时变量里
@@ -31,9 +34,13 @@ nav_order: 2
 {%- assign conf_count    = conf_html    | split:'<li' | size | minus: 1 -%}
 
 <div class="publications">
+<section id="journal-papers" class="context-rail-target">
 <h2>Journal Papers ({{ journal_count }})</h2>
   {% bibliography -q @article %}
+</section>
 
+<section id="conference-papers" class="context-rail-target">
 <h2>Conference Papers ({{ conf_count }})</h2>
   {% bibliography -q @inproceedings %}
+</section>
 </div>
