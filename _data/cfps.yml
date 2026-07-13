@@ -737,7 +737,8 @@
   fullpaper_deadline_sort: '2026-12-31'
   editors: Lan Yang (The Education University of Hong Kong, China); Shen Ba (The Education University of Hong Kong, China);
     Hongbiao Yin (The Chinese University of Hong Kong, China); Dragan Gasevic (Monash University, Australia); Gwo-Jen Hwang
-    (Taichung University of Education, Taiwan); Junjun Chen (The Education University of Hong Kong, China)
+    (Taichung University of Education, Taiwan); Junjun Chen (The Education University of Hong Kong, China); Hui Wang (The
+    Education University of Hong Kong, China)
   link: https://think.taylorandfrancis.com/special_issues/unpacking-the-black-box-of-ai-assisted-feedback-teachers/
   description: Gwo-Jen Hwang , Taichung University of Education, Taiwan gjhwang.academic@gmail.com
 - journal: Humanities and Social Sciences Communications
@@ -849,6 +850,18 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
+- journal: Mind, Culture, and Activity
+  publisher: Taylor & Francis
+  tag:
+  - Educational Psychology
+  title: 'Hope, Healing, and Care in the Times of Dread: Enacted Utopias and Collective Futures'
+  abstract_deadline: 15 September 2026
+  fullpaper_deadline: 15 January 2027
+  fullpaper_deadline_sort: '2027-01-15'
+  editors: Aydin Bal (University of Wisconsin–Madison); Monica Lemos (University of Helsinki); Antti Rajala (University of
+    Neuchâtel); Laya Hooshyari (University of Manchester)
+  link: https://think.taylorandfrancis.com/special_issues/hope-healing-and-care-in-the-times-of-dread-enacted-utopias-and-collective-futures/
+  description: ''
 - journal: Nature
   publisher: Nature Portfolio
   tag:
@@ -2265,7 +2278,9 @@
     from founding editor Andy Hargreaves: What better time could there be than the opening months of a n...'
 - journal: Educational Evaluation and Policy Analysis
   publisher: SAGE
-  tag: *id035
+  tag:
+  - Education Policy & Social Issues
+  - Educational Assessment
   title: Special call for guest editors
   abstract_deadline: ''
   fullpaper_deadline: ''
