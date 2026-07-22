@@ -1,19 +1,23 @@
 metadata:
   h_index: 7
-  i10_index: 6
-  last_updated: '2026-07-08'
-  total_citations: 961
+  i10_index: 7
+  last_updated: '2026-07-22'
+  total_citations: 1006
 papers:
+  RkLnsEwAAAAJ:0EnyYjriUFMC:
+    citations: 0
+    title: "Human-AI Collaborative Learning Ecosystem: Effects of Multi-Agent-Based Programming Learning on Learning Outcomes, Computational Thinking, and Behavioral Patterns in Higher \u2026"
+    year: '2026'
   RkLnsEwAAAAJ:2osOgNQ5qMEC:
-    citations: 157
+    citations: 159
     title: 'Research landscape of adaptive learning in education: A bibliometric study on research publications from 2000 to 2022'
     year: '2023'
   RkLnsEwAAAAJ:9yKSN-GCB0IC:
-    citations: 99
-    title: What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study
+    citations: 103
+    title: "\U0001F3C6What factors will affect the effectiveness of using ChatGPT to solve programming problems? A quasi-experimental study"
     year: '2024'
   RkLnsEwAAAAJ:IjCSPb-OGe4C:
-    citations: 1
+    citations: 2
     title: 'Knowledge Mapping and Trend Analysis of AI Agents in Education: A Bibliometric Study from 2004-2024'
     year: '2025'
   RkLnsEwAAAAJ:Se3iqnhoufwC:
@@ -29,11 +33,11 @@ papers:
     title: 'Prediction of online mathematics test efficiency based on stacked integrated models: a case study of NAEP data'
     year: '2025'
   RkLnsEwAAAAJ:UebtZRa9Y70C:
-    citations: 9
+    citations: 11
     title: 'Dsadf: Thinking fast and slow for decision making'
     year: '2026'
   RkLnsEwAAAAJ:W7OEmFMy1HYC:
-    citations: 5
+    citations: 7
     title: "Breaking the boundaries of conventional vocabulary learning: the impact of vocabulary learning with intelligent interactive companion in CAVL environments on learning outcomes \u2026"
     year: '2025'
   RkLnsEwAAAAJ:WF5omc3nYNoC:
@@ -41,35 +45,39 @@ papers:
     title: 'Bibliometrics in educational technology: a critical literature review incorporating content analysis'
     year: Unknown Year
   RkLnsEwAAAAJ:Y0pCki6q_DkC:
-    citations: 5
+    citations: 6
     title: 'Evolution in Simulation: AI-Agent School with Dual Memory for High-Fidelity Educational Dynamics'
     year: '2025'
   RkLnsEwAAAAJ:YsMSGLbcyi4C:
-    citations: 2
+    citations: 3
     title: 'The Future Landscape of Education: Constructing an Analytical and Application Framework for Generative Artificial Intelligence in Higher Education'
     year: '2025'
   RkLnsEwAAAAJ:d1gkVwhDpl0C:
-    citations: 442
-    title: "\U0001F3C6Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
+    citations: 466
+    title: "\U0001F525\U0001F3C6Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
     year: '2025'
   RkLnsEwAAAAJ:eQOLeE2rZwMC:
     citations: 0
     title: 'AI-Agent School: Construction and Evaluation of an Educational Simulation Environment Based on LLM-Driven Agents'
     year: '2025'
+  RkLnsEwAAAAJ:hqOjcs7Dif8C:
+    citations: 1
+    title: 'Academic transformation in the era of artificial intelligence: drivers of university faculty adoption of GenAI based on the UTAUT model'
+    year: '2026'
   RkLnsEwAAAAJ:qjMakFHDy7sC:
-    citations: 77
-    title: Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses
+    citations: 79
+    title: "\U0001F3C6Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses"
     year: '2025'
   RkLnsEwAAAAJ:roLk4NBRz8UC:
     citations: 2
     title: Enhancing real-time facial emotion recognition in classrooms via Attention-ResNet optimization
     year: '2026'
   RkLnsEwAAAAJ:u-x6o8ySG0sC:
-    citations: 19
+    citations: 20
     title: 'MetaClassroom: a new paradigm and experience for programming education'
     year: '2025'
   RkLnsEwAAAAJ:u5HHmVD_uO8C:
-    citations: 140
+    citations: 144
     title: 'Bibliometric mapping techniques in educational technology research: A systematic literature review'
     year: '2024'
   RkLnsEwAAAAJ:ufrVoPGSRksC:
