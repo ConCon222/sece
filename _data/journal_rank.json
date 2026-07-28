@@ -367,14 +367,6 @@
     "sourceid": 13354
   },
   {
-    "name": "Modern Language Journal",
-    "url": "https://onlinelibrary.wiley.com/journal/15404781/journal-metrics",
-    "tag": [
-      "Language Education & Acquisition"
-    ],
-    "sourceid": 100147338
-  },
-  {
     "name": "Teaching and Teacher Education",
     "url": "https://www.sciencedirect.com/journal/teaching-and-teacher-education/about/insights",
     "tag": [
@@ -3189,17 +3181,9 @@
     "url": "https://onlinelibrary.wiley.com/journal/15404781/journal-metrics",
     "tag": [
       "Linguistics",
-      "Language Education"
+      "Language Education & Acquisition"
     ],
     "sourceid": 100147338
-  },
-  {
-    "name": "British Journal of Sociology",
-    "url": "https://onlinelibrary.wiley.com/journal/14684446/journal-metrics",
-    "tag": [
-      "Sociology"
-    ],
-    "sourceid": 17497
   },
   {
     "name": "Annual Review of Sociology",

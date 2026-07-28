@@ -174,7 +174,7 @@
     },
     {
         "name": "Journal of Computing in Higher Education",
-        "url": "https://www.springer.com/journal/12528/collections?filter=Open",
+        "url": "https://link.springer.com/journal/12528/collections?filter=Open",
         "tag": [
             "Higher Education",
             "Educational Technology"
@@ -211,7 +211,7 @@
     },
     {
         "name": "Metacognition and Learning",
-        "url": "https://www.springer.com/journal/11409/collections?filter=Open",
+        "url": "https://link.springer.com/journal/11409/collections?filter=Open",
         "tag": [
             "Educational Psychology",
             "Educational Technology"
@@ -219,7 +219,7 @@
     },
     {
         "name": "Asia-Pacific Education Researcher",
-        "url": "https://www.springer.com/journal/40299/collections?filter=Open",
+        "url": "https://link.springer.com/journal/40299/collections?filter=Open",
         "tag": [
             "General Education",
             "Education Policy & Social Issues"
@@ -451,7 +451,7 @@
     },
     {
         "name": "Advances in Health Sciences Education",
-        "url": "https://link.springer.com/journal/10459/collections?filter=Open ",
+        "url": "https://link.springer.com/journal/10459/collections?filter=Open",
         "tag": [
             "Medical Education"
         ]
@@ -1674,6 +1674,7 @@
     {
         "name": "Human Communication Research",
         "url": "https://academic.oup.com/hcr",
+        "cfp_url": "https://academic.oup.com/hcr/pages/special-issue-call-for-papers-2026?login=false",
         "tag": [
             "Communication Studies"
         ]

@@ -233,8 +233,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     matched.sort(function (a, b) {
-      var aValue = currentSort.key === "journal" ? String(a.journal || "").toLowerCase() : a.deadlineSort || "9999-99-99";
-      var bValue = currentSort.key === "journal" ? String(b.journal || "").toLowerCase() : b.deadlineSort || "9999-99-99";
+      var aValue = currentSort.key === "journal" ? String(a.journal || "").toLowerCase() : a.deadlineSort || "";
+      var bValue = currentSort.key === "journal" ? String(b.journal || "").toLowerCase() : b.deadlineSort || "";
+      if (currentSort.key === "deadline") {
+        var aMissing = !aValue || aValue === "9999-99-99";
+        var bMissing = !bValue || bValue === "9999-99-99";
+        if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      }
       var result = aValue.localeCompare(bValue);
       return currentSort.dir === "asc" ? result : -result;
     });
@@ -254,15 +259,21 @@ document.addEventListener("DOMContentLoaded", function () {
     currentPage = requestedPage;
   }
 
+  function updateSortHeaders() {
+    document.querySelectorAll(".cfp-sortable").forEach(function (header) {
+      var active = header.dataset.sort === currentSort.key;
+      header.classList.remove("sort-asc", "sort-desc");
+      header.setAttribute("aria-sort", active ? (currentSort.dir === "asc" ? "ascending" : "descending") : "none");
+      if (active) header.classList.add(currentSort.dir === "asc" ? "sort-asc" : "sort-desc");
+    });
+  }
+
   document.querySelectorAll(".cfp-sortable").forEach(function (header) {
     header.addEventListener("click", function () {
       var key = this.dataset.sort;
       currentSort.dir = currentSort.key === key && currentSort.dir === "asc" ? "desc" : "asc";
       currentSort.key = key;
-      document.querySelectorAll(".cfp-sortable").forEach(function (item) {
-        item.classList.remove("sort-asc", "sort-desc");
-      });
-      this.classList.add(currentSort.dir === "asc" ? "sort-asc" : "sort-desc");
+      updateSortHeaders();
       applyFilters(true);
     });
   });
@@ -284,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   restoreUrlState();
+  updateSortHeaders();
   fetch(source, { credentials: "same-origin" })
     .then(function (response) {
       if (!response.ok) throw new Error("Unable to load CFP data");

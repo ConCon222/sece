@@ -3,8 +3,11 @@ import time
 import os
 import yaml
 import random
+import calendar
+import tempfile
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urlencode, urljoin, urlsplit, urlunsplit
 from bs4 import BeautifulSoup
 
 # === 核心库 ===
@@ -14,8 +17,10 @@ from DrissionPage import ChromiumPage, ChromiumOptions
 # ==========================================
 # ⚙️ 配置区域
 # ==========================================
-FLARESOLVERR_URL = "http://localhost:8191"  # GitHub Actions 中自动启动
+FLARESOLVERR_URL = os.environ.get("FLARESOLVERR_URL", "http://localhost:8191").rstrip("/")
 FLARESOLVERR_AVAILABLE = False              # 运行时动态检测
+NATURE_MAX_PAGES = max(1, int(os.environ.get("NATURE_MAX_PAGES", "120")))
+NATURE_DETAIL_WORKERS = max(1, min(8, int(os.environ.get("NATURE_DETAIL_WORKERS", "4"))))
 
 
 def check_flaresolverr_health():
@@ -40,12 +45,39 @@ def check_flaresolverr_health():
 def load_journals(filepath="_data/journal_cfp.json"):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
-            return yaml.safe_load(f)
+            journals = yaml.safe_load(f) or []
+        if not isinstance(journals, list):
+            raise ValueError(f"{filepath} 顶层必须是列表")
+
+        cleaned = []
+        seen = set()
+        for index, journal in enumerate(journals, start=1):
+            if not isinstance(journal, dict):
+                raise ValueError(f"{filepath} 第 {index} 项不是对象")
+            item = journal.copy()
+            item["name"] = str(item.get("name") or "").strip()
+            item["url"] = str(item.get("url") or "").strip()
+            if item.get("cfp_url"):
+                item["cfp_url"] = str(item["cfp_url"]).strip()
+            if not item["name"] or not item["url"]:
+                raise ValueError(f"{filepath} 第 {index} 项缺少 name/url")
+            parsed = urlsplit(item["url"])
+            if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+                raise ValueError(f"{filepath} 第 {index} 项 URL 非法: {item['url']}")
+            key = (item["name"].casefold(), item["url"])
+            if key in seen:
+                raise ValueError(f"{filepath} 存在重复期刊配置: {item['name']}")
+            seen.add(key)
+            cleaned.append(item)
+        return cleaned
     except FileNotFoundError:
         print(f"❌ 错误：找不到文件 {filepath}")
         return []
     except yaml.YAMLError as e:
         print(f"❌ 错误：YAML 格式解析失败: {e}")
+        return []
+    except ValueError as e:
+        print(f"❌ 错误：期刊配置无效: {e}")
         return []
 
 
@@ -80,13 +112,15 @@ CF_PROTECTED_SITES = [
 class JournalCFPScraper:
     def __init__(self):
         self.date_pattern = re.compile(
-            r"(\d{1,2})(?:st|nd|rd|th)?\s*"
-            r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+"
-            r"(\d{4})|"
-            r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+"
-            r"(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})|"
-            r"(\d{4})-(\d{2})-(\d{2})|"
-            r"(\d{1,2})(?:st|nd|rd|th)?\s+(\w+)\s+(\d{4})",
+            r"\b(?:"
+            r"\d{4}-\d{1,2}-\d{1,2}|"
+            r"\d{1,2}[/-]\d{1,2}[/-]\d{4}|"
+            r"\d{1,2}(?:st|nd|rd|th)?\s+"
+            r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4}|"
+            r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+"
+            r"\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}|"
+            r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\s+\d{4}"
+            r")\b",
             re.I,
         )
 
@@ -96,6 +130,8 @@ class JournalCFPScraper:
         # DrissionPage 延迟初始化（仅 T&F 需要）
         self._browser = None
         self._browser_cookies_injected = False
+        self._nature_scan_complete = False
+        self._known_deadlines_by_link = {}
 
     @property
     def browser(self):
@@ -130,6 +166,95 @@ class JournalCFPScraper:
         """判断是否需要 FlareSolverr"""
         return any(site in url.lower() for site in CF_PROTECTED_SITES)
 
+    def _is_error_or_challenge_page(self, html, status_code=None):
+        """Reject HTTP errors, bot challenges, and publisher error pages."""
+        if status_code is not None:
+            try:
+                if int(status_code) >= 400:
+                    return True
+            except (TypeError, ValueError):
+                pass
+        if not html:
+            return True
+        text = str(html)
+        sample = text[:12000].lower()
+        markers = (
+            "<title>just a moment",
+            "cf-chl-",
+            "attention required",
+            "access denied",
+            "captcha-delivery",
+            "incapsula incident",
+            "404 error",
+            "<title>page not found",
+        )
+        return any(marker in sample for marker in markers)
+
+    @staticmethod
+    def _canonical_link(link):
+        """Normalize links for validation and de-duplication."""
+        if not link:
+            return ""
+        try:
+            parsed = urlsplit(str(link).strip())
+            if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+                return ""
+            path = re.sub(r"/+$", "", parsed.path) or "/"
+            return urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path, parsed.query, ""))
+        except (TypeError, ValueError):
+            return ""
+
+    def _is_non_cfp_candidate(self, title, link, context=""):
+        """Reject clearly non-submission pages before they enter persistent data."""
+        title_l = self.clean_text(title).casefold()
+        context_l = self.clean_text(context).casefold()
+        link_l = self._canonical_link(link).casefold()
+        if not title_l or not link_l:
+            return True
+
+        junk_title_markers = (
+            "call for editor-in-chief",
+            "call for guest editor",
+            "guest editor opportunity",
+            "special issues collection",
+            "published and upcoming special issues",
+            "virtual special issue",
+            "learn about our special collections",
+            "see jrai's website",
+            "tools, tips, and journal insights",
+            "early career reviewer",
+            "75th anniversary collection",
+            "call for reviewers",
+            "reviewer recruitment",
+            "painting special issue",
+            "new special issue",
+            "special issue 2024",
+        )
+        junk_url_markers = (
+            "/doi/",
+            "/doi/toc/",
+            "/toc/",
+            "editor_recruitment",
+            "editor-recruitment",
+            "reviewer-award",
+            "reviewer-prize",
+            "associate-editor",
+            "editors-needed",
+            "editor-needed",
+            "reviewers-needed",
+        )
+        published_markers = (
+            "has published",
+            "now published",
+            "read the special issue",
+            "read this special issue",
+        )
+        return (
+            any(marker in title_l for marker in junk_title_markers)
+            or any(marker in link_l for marker in junk_url_markers)
+            or any(marker in context_l for marker in published_markers)
+        )
+
     def fetch_with_flaresolverr(self, url, max_timeout=60000):
         """
         使用 FlareSolverr 获取页面
@@ -153,8 +278,12 @@ class JournalCFPScraper:
             if data.get("status") == "ok":
                 solution = data.get("solution", {})
                 html = solution.get("response", "")
+                status_code = solution.get("status")
                 cookies = solution.get("cookies", [])
                 user_agent = solution.get("userAgent", "")
+                if self._is_error_or_challenge_page(html, status_code):
+                    print(f"   ❌ [FlareSolverr] 返回错误/挑战页 (HTTP {status_code or 'unknown'})")
+                    return None, None, None
                 print(f"   ✅ [FlareSolverr] 成功! 获取 {len(html)} 字节, {len(cookies)} 个 cookies")
                 return html, cookies, user_agent
             else:
@@ -221,36 +350,66 @@ class JournalCFPScraper:
         text = re.sub(r'\s+', ' ', text).strip()
         return text
 
-    def extract_date(self, text):
-        if not text: return None
+    def extract_dates(self, text):
+        if not text:
+            return []
         normalized = self.normalize_for_date_extraction(text)
-        m = self.date_pattern.search(normalized)
-        if m: return self.clean_text(m.group(0))
+        return [self.clean_text(match.group(0)) for match in self.date_pattern.finditer(normalized)]
+
+    def extract_date(self, text):
+        dates = self.extract_dates(text)
+        return dates[0] if dates else None
+
+    def _single_date_to_sort_key(self, value):
+        normalized = self.normalize_for_date_extraction(value)
+        try:
+            match = re.fullmatch(r'(\d{4})-(\d{1,2})-(\d{1,2})', normalized)
+            if match:
+                parsed = datetime(int(match.group(1)), int(match.group(2)), int(match.group(3)))
+                return parsed.strftime("%Y-%m-%d")
+
+            match = re.fullmatch(r'(\d{1,2})[/-](\d{1,2})[/-](\d{4})', normalized)
+            if match:
+                # Publisher pages in this project use day-first numeric dates.
+                parsed = datetime(int(match.group(3)), int(match.group(2)), int(match.group(1)))
+                return parsed.strftime("%Y-%m-%d")
+
+            match = re.fullmatch(r'(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', normalized)
+            if match:
+                day, month_text, year = int(match.group(1)), match.group(2).lower(), int(match.group(3))
+                month = MONTH_MAP.get(month_text[:3])
+                if month:
+                    return datetime(year, month, day).strftime("%Y-%m-%d")
+
+            match = re.fullmatch(r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})', normalized)
+            if match:
+                month_text, day, year = match.group(1).lower(), int(match.group(2)), int(match.group(3))
+                month = MONTH_MAP.get(month_text[:3])
+                if month:
+                    return datetime(year, month, day).strftime("%Y-%m-%d")
+
+            match = re.fullmatch(r'([A-Za-z]+)\s+(\d{4})', normalized)
+            if match:
+                month = MONTH_MAP.get(match.group(1).lower()[:3])
+                year = int(match.group(2))
+                if month:
+                    # Month-only deadlines sort at the end of that month rather
+                    # than remaining TBA forever.
+                    return f"{year:04d}-{month:02d}-{calendar.monthrange(year, month)[1]:02d}"
+        except (TypeError, ValueError):
+            return None
         return None
 
     def parse_date_to_sort_key(self, date_str):
         default_date = "9999-99-99"
-        if not date_str or date_str in {"N/A", "未找到日期", ""}: return default_date
-        normalized = self.normalize_for_date_extraction(date_str)
-        try:
-            m = re.match(r'(\d{4})-(\d{2})-(\d{2})', normalized)
-            if m: return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
-            m = re.match(r'(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', normalized)
-            if m:
-                day, month_str, year = int(m.group(1)), m.group(2).lower(), m.group(3)
-                month = MONTH_MAP.get(month_str[:3], 0)
-                if month: return f"{year}-{month:02d}-{day:02d}"
-            m = re.match(r'([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})', normalized)
-            if m:
-                month_str, day, year = m.group(1).lower(), int(m.group(2)), m.group(3)
-                month = MONTH_MAP.get(month_str[:3], 0)
-                if month: return f"{year}-{month:02d}-{day:02d}"
-            dates_found = re.findall(r'(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})', normalized)
-            if dates_found:
-                day, month_str, year = dates_found[-1]
-                month = MONTH_MAP.get(month_str.lower()[:3], 0)
-                if month: return f"{year}-{month:02d}-{int(day):02d}"
-        except Exception: pass
+        if not date_str or date_str in {"N/A", "未找到日期", ""}:
+            return default_date
+        # Date ranges and paragraphs containing both abstract/full-paper
+        # deadlines must sort by the final (usually full-paper) date.
+        for candidate in reversed(self.extract_dates(date_str)):
+            sort_key = self._single_date_to_sort_key(candidate)
+            if sort_key:
+                return sort_key
         return default_date
 
     def fetch_page_fast(self, url, timeout=30):
@@ -266,7 +425,7 @@ class JournalCFPScraper:
                     "Accept-Language": "en-US,en;q=0.9",
                 },
             )
-            if resp.status_code == 200:
+            if resp.status_code == 200 and not self._is_error_or_challenge_page(resp.text, resp.status_code):
                 return resp.text
             print(f"   ❌ 状态码错误 {resp.status_code}")
         except Exception as e:
@@ -337,6 +496,8 @@ class JournalCFPScraper:
             deadline_text = self._extract_text_clean(d_el) if d_el else ""
             dt = self.extract_date(deadline_text)
             deadline = dt or (self.clean_text(deadline_text.split(":", 1)[1]) if ":" in deadline_text else "未找到日期")
+            if self._is_non_cfp_candidate(title, link, deadline_text):
+                continue
             results.append({"title": title, "abstract_deadline": "未找到日期", "fullpaper_deadline": deadline, "editors": "N/A", "desc": "N/A", "link": link})
         return results
 
@@ -356,21 +517,39 @@ class JournalCFPScraper:
                 link = urljoin(journal_url, href)
 
                 abstract_deadline, fullpaper_deadline, editor_list = "未找到日期", "未找到日期", []
+                block_texts = []
                 for sib in h4.find_next_siblings():
                     if sib.name in {"h4", "hr"}: break
                     if sib.name == "div" and "border-top" in (sib.get("style") or "").lower(): break
+                    sibling_text = self._extract_text_clean(sib)
+                    if sibling_text:
+                        block_texts.append(sibling_text)
                     if sib.name == "p":
-                        txt = self._extract_text_clean(sib)
-                        lower = txt.lower()
-                        if "deadline" in lower:
-                            dt = self.extract_date(txt)
-                            if "abstract" in lower: abstract_deadline = dt or abstract_deadline
-                            elif "full paper" in lower or "full-paper" in lower: fullpaper_deadline = dt or fullpaper_deadline
-                            elif dt and fullpaper_deadline == "未找到日期": fullpaper_deadline = dt
+                        # Some Wiley pages put abstract and full-paper deadlines
+                        # in separate <strong> nodes inside the same paragraph.
+                        segments = sib.find_all(["strong", "b"]) or [sib]
+                        for segment in segments:
+                            txt = self._extract_text_clean(segment)
+                            lower = txt.lower()
+                            if "deadline" not in lower:
+                                continue
+                            dates = self.extract_dates(txt)
+                            dt = dates[-1] if dates else None
+                            if "abstract" in lower:
+                                abstract_deadline = dt or abstract_deadline
+                            elif "full paper" in lower or "full-paper" in lower or "manuscript" in lower:
+                                fullpaper_deadline = dt or fullpaper_deadline
+                            elif dt and fullpaper_deadline == "未找到日期":
+                                fullpaper_deadline = dt
                     if sib.name == "ul":
                         editor_list = [self._extract_text_clean(li) for li in sib.find_all("li") if li.get_text(strip=True)]
 
-                if title and title != "N/A":
+                context = " ".join(block_texts)
+                has_submission_evidence = bool(
+                    re.search(r"\b(call for papers?|submission deadline|deadline for .{0,40}submissions?|submit (?:an? )?(?:abstract|paper|manuscript))\b", context, re.I)
+                    or re.search(r"(call[-_/]?for[-_/]?papers?|special[-_/]?issues?|cfp)", link, re.I)
+                )
+                if title and title != "N/A" and has_submission_evidence and not self._is_non_cfp_candidate(title, link, context):
                     results.append({"title": title, "abstract_deadline": abstract_deadline, "fullpaper_deadline": fullpaper_deadline, "editors": "; ".join(editor_list) if editor_list else "N/A", "desc": "N/A", "link": link})
             except Exception: continue
         return results
@@ -381,12 +560,29 @@ class JournalCFPScraper:
         soup = BeautifulSoup(html, "lxml")
         results = self._parse_wiley_dst_listing(soup, journal_url) + self._parse_wiley_h4_blocks(soup, journal_url)
         uniq = {}
-        for r in results: uniq[(r.get("title"), r.get("link"))] = r
+        for r in results:
+            if not self._is_non_cfp_candidate(r.get("title"), r.get("link")):
+                uniq[(r.get("title"), self._canonical_link(r.get("link")))] = r
         return list(uniq.values())
 
     # --- T&F (保持解析逻辑不变) ---
     def _tf_parse_detail_page_html(self, html, page_url):
+        if self._is_error_or_challenge_page(html):
+            return None
         soup = BeautifulSoup(html, "lxml")
+        page_text = self.clean_text(soup.get_text(" ", strip=True))
+        has_deadline_section = bool(soup.select("section.layout__deadline--title"))
+        has_submission_evidence = bool(
+            re.search(
+                r"\b(call for papers?|call for submissions?|submission deadline|"
+                r"deadline for .{0,50}submissions?|submit (?:your|a|an)?\s*(?:paper|article|manuscript|abstract))\b",
+                page_text,
+                re.I,
+            )
+        )
+        if not has_deadline_section and not has_submission_evidence:
+            return None
+
         title = "未知标题"
         hero_h2 = soup.select_one("section.layout__hero h2")
         if hero_h2: title = self._extract_text_clean(hero_h2)
@@ -416,6 +612,8 @@ class JournalCFPScraper:
             ps = [self._extract_text_clean(p) for p in about.select("p") if len(self._extract_text_clean(p)) >= 80]
             if ps: desc = max(ps, key=len)
 
+        if self._is_non_cfp_candidate(title, page_url, page_text):
+            return None
         return {"title": title, "abstract_deadline": abstract_deadline, "fullpaper_deadline": fullpaper_deadline, "editors": editors, "desc": desc, "link": page_url}
 
     def parse_taylor_francis(self, journal_url):
@@ -438,7 +636,13 @@ class JournalCFPScraper:
             for a in cfp_container.select("a[href]"):
                 href = a.get("href", "")
                 if "think.taylorandfrancis.com" in href:
-                    target_links.append(href)
+                    anchor_context = f"{self._extract_text_clean(a)} {href}"
+                    if re.search(
+                        r"(special_issues|article_collections|call[-_/ ]?for[-_/ ]?papers?|/cfp(?:/|$))",
+                        anchor_context,
+                        re.I,
+                    ):
+                        target_links.append(href)
 
             unique_links = list(dict.fromkeys(target_links))
             print(f"   🔎 T&F 发现 {len(unique_links)} 个详情页链接")
@@ -451,7 +655,8 @@ class JournalCFPScraper:
                         detail_html = self.fetch_page_fast(link_url)
                     if detail_html:
                         result = self._tf_parse_detail_page_html(detail_html, link_url)
-                        results.append(result)
+                        if result:
+                            results.append(result)
                     time.sleep(random.uniform(2, 4))
                 except Exception as e:
                     print(f"   ⚠️ T&F 子页面处理失败: {e}")
@@ -473,10 +678,14 @@ class JournalCFPScraper:
             title = self._extract_text_clean(card.select_one("h3.marketing-spot__title"))
             desc = self._extract_text_clean(card.select_one("div.marketing-spot__text"))
             a = card.select_one("div.marketing-spot__footer a[href]")
-            link = urljoin(journal_url, a["href"]) if a else "N/A"
+            if not a:
+                continue
+            link = urljoin(journal_url, a["href"])
             if "closed" in desc.lower() or title == "N/A": continue
             if any(x in title.lower() or x in desc.lower() for x in ["why publish", "reviewer resources", "discipline hubs"]): continue
             if not ("call" in title.lower() or "special issue" in title.lower() or "submit" in desc.lower()): continue
+            if self._is_non_cfp_candidate(title, link, desc):
+                continue
 
             deadline = self.extract_date(desc) or "未找到日期"
             results.append({"title": title, "abstract_deadline": "未找到日期", "fullpaper_deadline": deadline, "editors": "N/A", "desc": desc, "link": link})
@@ -503,6 +712,7 @@ class JournalCFPScraper:
                 link = urljoin(journal_url, a["href"]) if a else journal_url
                 text = card.get_text(" ", strip=True)
                 if not re.search(r'call|special issue|submit', text, re.I): continue
+                if self._is_non_cfp_candidate(title, link, text): continue
                 deadline = self.extract_date(text) or "未找到日期"
                 desc_p = card.find("p")
                 desc = self._extract_text_clean(desc_p) if desc_p else "N/A"
@@ -576,18 +786,36 @@ class JournalCFPScraper:
     # ==========================================
 
     # --- Nature Portfolio ---
-    def _fetch_nature_deadline(self, url):
-        """抓取单个 Nature collection 页面，提取 Submission deadline。
-        列表页不含截止日期，需进入每个 collection 详情页
-        （页面显示 "Submission status: Open / Submission deadline: <date>"）。
-        防御式：任何失败都返回 ""，保持原有（留空）行为，绝不会让整个爬虫崩溃。
-        2026-06 起 nature.com 有 idp cookie/JS 门 → 走 fetch_cf_site（FlareSolverr）。"""
+    def _fetch_nature_html(self, url, allow_flaresolverr=True):
+        """Nature usually works with curl; only fall back to FlareSolverr when needed."""
         try:
-            html = self.fetch_cf_site(url)
-            if not html or len(html) < 5000:
+            # Use an independent request per worker; sharing curl_cffi.Session
+            # across the deadline thread pool is not guaranteed to be safe.
+            response = requests.get(
+                url,
+                impersonate="chrome",
+                timeout=35,
+                headers={
+                    "User-Agent": self.ua,
+                    "Accept-Language": "en-US,en;q=0.9",
+                },
+            )
+            if response.status_code == 200 and not self._is_error_or_challenge_page(response.text, response.status_code):
+                return response.text
+        except Exception as exc:
+            print(f"   ⚠️ Nature 快速请求失败 {url}: {exc}")
+        return self.fetch_cf_site(url) if allow_flaresolverr else None
+
+    def _fetch_nature_deadline(self, url):
+        """Fetch one Nature collection page and extract its submission deadline."""
+        cached = self._known_deadlines_by_link.get(self._canonical_link(url))
+        if cached:
+            return cached
+        try:
+            html = self._fetch_nature_html(url, allow_flaresolverr=False)
+            if not html:
                 return ""
             soup = BeautifulSoup(html, "lxml")
-            # 1) 结构化元素（若存在）
             for sel in ['[data-test="submission-deadline"]',
                         'time[itemprop="submissionDeadline"]',
                         '[data-test="deadline"]']:
@@ -596,7 +824,6 @@ class JournalCFPScraper:
                     d = self.extract_date(self._extract_text_clean(el))
                     if d:
                         return d
-            # 2) 文本兜底："Submission deadline" 后紧跟日期（对 markup 变化稳健）
             page_text = soup.get_text(" ", strip=True)
             m = re.search(
                 r'Submission deadline[:\s]*'
@@ -608,58 +835,35 @@ class JournalCFPScraper:
             print(f"   ⚠️ Nature deadline 抓取失败 {url}: {e}")
         return ""
 
-    def parse_nature_collections(self, html, base_url):
-        """
-        解析 Nature 系列期刊 Collections 页面。
-        实际 HTML 结构（来自抓取验证）：
-          - 卡片为普通 <article>（无特定 class）
-          - 标题：h3[itemprop="name headline"] > a  （a 里面有 img，需清除）
-          - 链接：上面 a 的 href（相对路径，如 /collections/xxxxx）
-          - 开放状态：div[data-test="open-status"] 文本为 "Open for submissions"
-          - 描述：div[itemprop="description"]
-          - 注意：列表页不显示截止日期，deadline 留空
-        """
-        if not html: return []
+    def _parse_nature_listing(self, html, base_url):
+        """Parse open collection cards from one Nature listing page."""
+        if not html:
+            return []
         soup = BeautifulSoup(html, "lxml")
         results = []
-
         for art in soup.find_all("article"):
             try:
-                # 只保留 "Open for submissions" 的条目
                 open_pill = art.find("div", {"data-test": "open-status"})
-                if not open_pill:
+                if not open_pill or "open for submissions" not in open_pill.get_text(strip=True).lower():
                     continue
-                if "open for submissions" not in open_pill.get_text(strip=True).lower():
-                    continue
-
-                # 标题：h3 > a，img 的 alt 也会被 get_text 提取，用 strings 过滤
                 h3 = art.find("h3", itemprop=re.compile("name|headline"))
                 if not h3:
                     h3 = art.find("h3")
                 a = h3.find("a", href=True) if h3 else art.find("a", href=True)
                 if not a:
                     continue
-
-                # 提取 a 里的文本，跳过 img alt
                 title_parts = [s.strip() for s in a.strings if s.strip() and s.strip() != "N/A"]
                 title = " ".join(title_parts).strip()
                 if not title:
                     continue
-
                 href = a.get("href", "")
                 link = urljoin(base_url, href) if href else base_url
-
-                # 描述
                 desc_div = art.find("div", itemprop="description")
                 desc = self._extract_text_clean(desc_div) if desc_div else "N/A"
-
-                # 列表页无截止日期 → 进入 collection 详情页抓取（防御式，失败留空）
-                deadline = self._fetch_nature_deadline(link)
-                time.sleep(0.4)  # 礼貌限速
                 results.append({
                     "title": title,
                     "abstract_deadline": "未找到日期",
-                    "fullpaper_deadline": deadline if deadline else "未找到日期",
+                    "fullpaper_deadline": "未找到日期",
                     "editors": "N/A",
                     "desc": desc,
                     "link": link
@@ -668,8 +872,81 @@ class JournalCFPScraper:
                 continue
 
         uniq = {}
-        for r in results: uniq[(r["title"], r["link"])] = r
+        for r in results:
+            uniq[self._canonical_link(r["link"])] = r
         return list(uniq.values())
+
+    def _nature_page_url(self, base_url, page_number):
+        parts = urlsplit(base_url)
+        query = parse_qs(parts.query, keep_blank_values=True)
+        query["page"] = [str(page_number)]
+        return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query, doseq=True), ""))
+
+    def _nature_last_page(self, html):
+        soup = BeautifulSoup(html or "", "lxml")
+        pages = [1]
+        for anchor in soup.select('a[href*="page="]'):
+            try:
+                query = parse_qs(urlsplit(anchor.get("href", "")).query)
+                pages.extend(int(value) for value in query.get("page", []) if str(value).isdigit())
+            except (TypeError, ValueError):
+                continue
+        return max(pages)
+
+    def parse_nature_collections(self, html, base_url):
+        """Scan every collection page, then fetch deadlines for open calls only."""
+        self._nature_scan_complete = False
+        if not html:
+            return []
+
+        detected_last_page = self._nature_last_page(html)
+        last_page = min(detected_last_page, NATURE_MAX_PAGES)
+        listing_html = [html]
+        completed_pages = True
+        for page_number in range(2, last_page + 1):
+            page_html = self._fetch_nature_html(self._nature_page_url(base_url, page_number))
+            if not page_html:
+                completed_pages = False
+                print(f"   ⚠️ Nature 列表第 {page_number}/{detected_last_page} 页获取失败")
+                continue
+            listing_html.append(page_html)
+
+        if detected_last_page > NATURE_MAX_PAGES:
+            completed_pages = False
+            print(f"   ⚠️ Nature 分页超过安全上限 {NATURE_MAX_PAGES}，本次不替换历史记录")
+
+        by_link = {}
+        for page_html in listing_html:
+            for item in self._parse_nature_listing(page_html, base_url):
+                by_link[self._canonical_link(item["link"])] = item
+
+        missing_deadline_items = []
+        for key, item in by_link.items():
+            cached = self._known_deadlines_by_link.get(key)
+            if cached:
+                item["fullpaper_deadline"] = cached
+            else:
+                missing_deadline_items.append(item)
+
+        if missing_deadline_items:
+            print(f"   🔎 Nature 全分页发现 {len(by_link)} 个开放专题，补抓 {len(missing_deadline_items)} 个截止日期")
+            with ThreadPoolExecutor(max_workers=NATURE_DETAIL_WORKERS) as pool:
+                future_to_item = {
+                    pool.submit(self._fetch_nature_deadline, item["link"]): item
+                    for item in missing_deadline_items
+                }
+                for future in as_completed(future_to_item):
+                    item = future_to_item[future]
+                    try:
+                        deadline = future.result()
+                    except Exception as exc:
+                        print(f"   ⚠️ Nature 截止日期任务失败 {item['link']}: {exc}")
+                        deadline = ""
+                    if deadline:
+                        item["fullpaper_deadline"] = deadline
+
+        self._nature_scan_complete = completed_pages and len(listing_html) == last_page
+        return list(by_link.values())
 
     # --- Oxford University Press ---
     def parse_oup(self, html, base_url):
@@ -735,10 +1012,123 @@ class JournalCFPScraper:
             except Exception:
                 continue
 
+        # Explicit CFP detail pages (configured with cfp_url) do not contain a
+        # featurePanel. Parse the document itself instead of silently returning 0.
+        if not results:
+            page_text = self.clean_text(soup.get_text(" ", strip=True))
+            if re.search(r"\b(call for papers?|special issue call|submission deadline)\b", page_text, re.I):
+                headings = [
+                    self._extract_text_clean(node)
+                    for node in soup.find_all(["h1", "h2", "h3"])
+                    if self._extract_text_clean(node)
+                ]
+                specific_headings = [
+                    value for value in headings
+                    if not re.fullmatch(r"(special issue\s*[-–—]?\s*)?call for papers?(?:\s*\d{4})?", value, re.I)
+                ]
+                title = specific_headings[0] if specific_headings else (headings[0] if headings else "Call for Papers")
+                abstract_deadline = "未找到日期"
+                fullpaper_deadline = "未找到日期"
+                # Avoid container <div>s: they repeat all descendant dates and
+                # can make the final publication date look like a deadline.
+                for node in soup.find_all(["p", "li", "tr"]):
+                    text = self._extract_text_clean(node)
+                    if not text or not re.search(r"\b(deadline|due)\b", text, re.I):
+                        continue
+                    dates = self.extract_dates(text)
+                    if not dates:
+                        continue
+                    if "abstract" in text.lower():
+                        abstract_deadline = dates[-1]
+                    elif re.search(r"full|manuscript|paper|article", text, re.I):
+                        fullpaper_deadline = dates[-1]
+                if fullpaper_deadline == "未找到日期" and abstract_deadline != "未找到日期":
+                    fullpaper_deadline = abstract_deadline
+                if not self._is_non_cfp_candidate(title, base_url, page_text):
+                    results.append({
+                        "title": title,
+                        "abstract_deadline": abstract_deadline,
+                        "fullpaper_deadline": fullpaper_deadline,
+                        "editors": "N/A",
+                        "desc": "N/A",
+                        "link": base_url,
+                    })
+
         uniq = {}
         for r in results:
             k = (r["title"], r["link"])
             if k not in uniq: uniq[k] = r
+        return list(uniq.values())
+
+    def parse_generic_cfp_page(self, html, base_url):
+        """Conservative fallback for journals without a publisher adapter."""
+        if self._is_error_or_challenge_page(html):
+            return []
+        soup = BeautifulSoup(html, "lxml")
+        results = []
+        for anchor in soup.select("a[href]"):
+            try:
+                if anchor.find_parent(["nav", "header", "footer"]):
+                    continue
+                href = anchor.get("href", "")
+                link = urljoin(base_url, href)
+                anchor_text = self._extract_text_clean(anchor)
+                container = anchor.find_parent(["article", "li", "p", "section", "div"]) or anchor.parent
+                context = self._extract_text_clean(container)
+                semantic_text = f"{anchor_text} {context} {href}"
+                has_call_language = bool(
+                    re.search(
+                        r"\b(call for papers?|call for submissions?|"
+                        r"submission deadline|deadline for .{0,50}submissions?)\b",
+                        semantic_text,
+                        re.I,
+                    )
+                    or (
+                        re.search(r"\bspecial issues?\b", semantic_text, re.I)
+                        and re.search(r"\b(open call|submit|submission|deadline|due)\b", semantic_text, re.I)
+                    )
+                    or re.search(r"(call[-_/]?for[-_/]?papers?|callforpapers|/cfp(?:/|$))", href, re.I)
+                )
+                if not has_call_language:
+                    continue
+
+                title = anchor_text
+                if title.casefold() in {"read more", "learn more", "view", "details", "download"} or len(title) < 5:
+                    heading = container.find(["h1", "h2", "h3", "h4"]) if container else None
+                    title = self._extract_text_clean(heading) if heading else title
+                if self._is_non_cfp_candidate(title, link, context):
+                    continue
+
+                abstract_deadline = "未找到日期"
+                fullpaper_deadline = "未找到日期"
+                for segment in container.find_all(["p", "li", "strong", "b"], recursive=True) if container else []:
+                    text = self._extract_text_clean(segment)
+                    dates = self.extract_dates(text)
+                    if not dates:
+                        continue
+                    if "abstract" in text.lower():
+                        abstract_deadline = dates[-1]
+                    elif re.search(r"deadline|due|submission", text, re.I):
+                        fullpaper_deadline = dates[-1]
+                if fullpaper_deadline == "未找到日期":
+                    dates = self.extract_dates(context)
+                    if dates:
+                        fullpaper_deadline = dates[-1]
+
+                results.append({
+                    "title": title,
+                    "abstract_deadline": abstract_deadline,
+                    "fullpaper_deadline": fullpaper_deadline,
+                    "editors": "N/A",
+                    "desc": context[:300] if context else "N/A",
+                    "link": link,
+                })
+            except Exception:
+                continue
+
+        uniq = {}
+        for item in results:
+            uniq[self._canonical_link(item["link"])] = item
         return list(uniq.values())
 
     # --- University of Chicago Press ---
@@ -866,10 +1256,6 @@ class JournalCFPScraper:
                 if not title: continue
                 link = urljoin(base_url, a.get("href", ""))
 
-                # 发布日期（span.card__meta__date），作为 fullpaper_deadline 的参考
-                date_span = card.find("span", class_="card__meta__date")
-                pub_date = date_span.get_text(strip=True) if date_span else "未找到日期"
-
                 # 描述：h3 之后第一个有内容的 div
                 desc = "N/A"
                 for sib in h3.find_next_siblings("div"):
@@ -881,7 +1267,9 @@ class JournalCFPScraper:
                 results.append({
                     "title": title,
                     "abstract_deadline": "未找到日期",
-                    "fullpaper_deadline": pub_date,
+                    # card__meta__date is the announcement publication date,
+                    # not a submission deadline.
+                    "fullpaper_deadline": "未找到日期",
                     "editors": "N/A",
                     "desc": desc,
                     "link": link
@@ -919,8 +1307,9 @@ class JournalCFPScraper:
         return "" if s in {"N/A", "未找到日期"} else s
 
     def normalize_item_for_yaml(self, journal, item):
+        abstract_deadline = self._empty_if_na(item.get("abstract_deadline"))
         fullpaper_deadline = self._empty_if_na(item.get("fullpaper_deadline", "") or item.get("deadline", ""))
-        fullpaper_deadline_sort = self.parse_date_to_sort_key(fullpaper_deadline)
+        fullpaper_deadline_sort = self.parse_date_to_sort_key(fullpaper_deadline or abstract_deadline)
 
         raw_tag = journal.get("tag", [])
         if isinstance(raw_tag, str):
@@ -935,7 +1324,7 @@ class JournalCFPScraper:
             "publisher": journal.get("publisher") or self.infer_publisher(journal.get("url"), journal.get("name")),
             "tag": tag_out,
             "title": self._empty_if_na(item.get("title")),
-            "abstract_deadline": self._empty_if_na(item.get("abstract_deadline")),
+            "abstract_deadline": abstract_deadline,
             "fullpaper_deadline": fullpaper_deadline,
             "fullpaper_deadline_sort": fullpaper_deadline_sort,
             "editors": self._empty_if_na(item.get("editors")),
@@ -943,27 +1332,38 @@ class JournalCFPScraper:
             "description": self._empty_if_na(item.get("desc")),
         }
 
-    def merge_and_clean_records(self, new_records, file_path):
+    def merge_and_clean_records(self, new_records, file_path, replace_journals=None):
+        replace_journals = set(replace_journals or [])
         existing_records = []
         if os.path.exists(file_path):
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
                     existing_records = yaml.safe_load(f) or []
+                if not isinstance(existing_records, list):
+                    raise ValueError("顶层必须是列表")
                 print(f"📂 读取到历史数据: {len(existing_records)} 条")
             except Exception as e:
-                print(f"⚠️ 读取旧 YAML 失败: {e}")
+                raise RuntimeError(f"读取旧 YAML 失败，为避免覆盖已停止写入: {e}") from e
 
-        # Dedup by (journal, title): the same call often appears under two URLs
-        # (listing page + detail page), which the old (title, link) key kept as
-        # visible duplicates. Prefer the richer record: real deadline first,
-        # then the longer description.
+        # Only a verified full scan may replace all historical records for a
+        # journal. Failed/partial scans continue to preserve the last good data.
+        existing_for_merge = [
+            item for item in existing_records
+            if item.get("journal") not in replace_journals
+        ]
+
         def _richness(rec):
             has_deadline = 1 if (rec.get("fullpaper_deadline_sort") or "9999-99-99") != "9999-99-99" else 0
             return (has_deadline, len(rec.get("description") or ""), len(rec.get("editors") or ""))
 
         merged_map = {}
-        for item in existing_records + new_records:
-            key = (item.get("journal"), (item.get("title") or "").strip().lower())
+        for raw_item in existing_for_merge + new_records:
+            item = dict(raw_item)
+            sort_source = item.get("fullpaper_deadline") or item.get("abstract_deadline")
+            item["fullpaper_deadline_sort"] = self.parse_date_to_sort_key(sort_source)
+            canonical_link = self._canonical_link(item.get("link"))
+            title_key = self.clean_text(item.get("title")).casefold()
+            key = (item.get("journal"), canonical_link or title_key)
             if key in merged_map and _richness(merged_map[key]) > _richness(item):
                 continue
             merged_map[key] = item
@@ -977,6 +1377,12 @@ class JournalCFPScraper:
             "403 forbidden", "just a moment", "are you a robot",
             "attention required", "页面不存在", "页面未找到",
             "about the role",
+            "call for editor", "call for guest editor", "guest editor opportunity",
+            "special issues collection", "published and upcoming special issues",
+            "virtual special issue", "learn about our special collections",
+            "see jrai's website", "tools, tips, and journal insights",
+            "painting special issue", "new special issue",
+            "special issue 2024",
         )
         # Editor-recruitment / reviewer-award pages are not calls for papers.
         JUNK_URL_MARKERS = (
@@ -987,6 +1393,9 @@ class JournalCFPScraper:
         def _is_junk(rec):
             title = (rec.get("title") or "").strip().lower()
             link = (rec.get("link") or "").lower()
+            context = rec.get("description") or ""
+            if self._is_non_cfp_candidate(title, link, context):
+                return True
             if any(m in title for m in JUNK_TITLE_MARKERS):
                 return True
             return any(m in link for m in JUNK_URL_MARKERS)
@@ -997,6 +1406,8 @@ class JournalCFPScraper:
 
         for item in merged_map.values():
             if _is_junk(item):
+                continue
+            if not item.get("journal") or not item.get("title") or not self._canonical_link(item.get("link")):
                 continue
             sort_date_str = item.get("fullpaper_deadline_sort")
             if sort_date_str == '9999-99-99':
@@ -1010,6 +1421,10 @@ class JournalCFPScraper:
                 final_list.append(item)
 
         final_list.sort(key=lambda x: x.get("fullpaper_deadline_sort") or "9999-99-99")
+        if len(existing_records) >= 20 and len(final_list) < int(len(existing_records) * 0.4):
+            raise RuntimeError(
+                f"CFP 质量门未通过: {len(existing_records)} 条骤降至 {len(final_list)} 条"
+            )
         return final_list
 
     # ==========================================
@@ -1020,12 +1435,35 @@ class JournalCFPScraper:
         check_flaresolverr_health()
 
         new_scraped_records = []
+        replace_journals = set()
+        if os.path.exists(output_yml_path):
+            try:
+                with open(output_yml_path, "r", encoding="utf-8") as existing_file:
+                    existing = yaml.safe_load(existing_file) or []
+                if not isinstance(existing, list):
+                    raise ValueError("顶层必须是列表")
+                today = datetime.now().date()
+                for item in existing:
+                    link = self._canonical_link(item.get("link"))
+                    deadline = self._empty_if_na(item.get("fullpaper_deadline"))
+                    sort_key = item.get("fullpaper_deadline_sort") or self.parse_date_to_sort_key(deadline)
+                    if not link or not deadline or sort_key == "9999-99-99":
+                        continue
+                    try:
+                        if datetime.strptime(sort_key, "%Y-%m-%d").date() < today - timedelta(days=10):
+                            continue
+                    except ValueError:
+                        continue
+                    self._known_deadlines_by_link[link] = deadline
+            except Exception as exc:
+                raise RuntimeError(f"读取旧 CFP 数据失败，为避免覆盖已停止抓取: {exc}") from exc
+
         print("\n🕷️ 开始爬取任务 (FlareSolverr + curl_cffi 混合模式)...")
         print(f"   FlareSolverr: {'✅ 可用' if FLARESOLVERR_AVAILABLE else '⚠️ 不可用，使用 curl_cffi 回退'}\n")
 
         for journal in JOURNALS:
             j_name = journal["name"]
-            j_url = journal["url"]
+            j_url = journal["url"].strip()
             url_l = j_url.lower()
             data = []
 
@@ -1078,18 +1516,21 @@ class JournalCFPScraper:
                 #     上了与 link.springer.com 相同的 idp cookie/JS 门，
                 #     curl_cffi 只能拿到 3KB 挑战页）===
                 elif "nature.com" in url_l:
-                    html = self.fetch_cf_site(j_url)
+                    html = self._fetch_nature_html(j_url)
                     if html and "collections" not in html:
                         print("   🔁 Nature 重定向未完成，重试一次")
-                        html = self.fetch_cf_site(j_url)
+                        html = self._fetch_nature_html(j_url)
                     if html:
                         data = self.parse_nature_collections(html, j_url)
+                        if self._nature_scan_complete:
+                            replace_journals.add(j_name)
 
                 # === Oxford University Press: Cloudflare → FlareSolverr ===
                 elif "academic.oup.com" in url_l:
-                    html = self.fetch_cf_site(j_url)
+                    target_url = journal.get("cfp_url") or j_url
+                    html = self.fetch_cf_site(target_url)
                     if html:
-                        data = self.parse_oup(html, j_url)
+                        data = self.parse_oup(html, target_url)
 
                 # === University of Chicago Press: Cloudflare → FlareSolverr ===
                 elif "uchicago.edu" in url_l:
@@ -1115,8 +1556,7 @@ class JournalCFPScraper:
                 elif "science.org" in url_l:
                     html = self.fetch_page_fast(j_url)
                     if html:
-                        # Science.org 无统一 CFP 列表页，用通用解析
-                        data = self.parse_pnas(html, j_url)  # 结构相近，复用
+                        data = self.parse_generic_cfp_page(html, j_url)
                     else:
                         print(f"   ⚠️ Science.org 可能返回 403，跳过: {j_name}")
 
@@ -1125,14 +1565,16 @@ class JournalCFPScraper:
                     html = self.fetch_page_fast(j_url)
                     if not html and FLARESOLVERR_AVAILABLE and self.needs_flaresolverr(j_url):
                         html, _, _ = self.fetch_with_flaresolverr(j_url)
-                    print(f"   ⚠️ 通用出版社 (未特定解析): {j_name}")
+                    if html:
+                        data = self.parse_generic_cfp_page(html, j_url)
+                    print(f"   ℹ️ 通用 CFP 解析器: {j_name}")
 
                 # 处理结果
                 if data:
                     print(f"   ✅ 抓取成功: {len(data)} 条\n")
                     for item in data:
                         rec = self.normalize_item_for_yaml(journal, item)
-                        if rec["title"] or rec["link"]:
+                        if rec["title"] and self._canonical_link(rec["link"]):
                             new_scraped_records.append(rec)
                 else:
                     print(f"   ⚠️ 无数据/保留历史\n")
@@ -1143,16 +1585,31 @@ class JournalCFPScraper:
             time.sleep(random.uniform(1, 2))
 
         # 合并与保存
-        final_records = self.merge_and_clean_records(new_scraped_records, output_yml_path)
+        final_records = self.merge_and_clean_records(
+            new_scraped_records,
+            output_yml_path,
+            replace_journals=replace_journals,
+        )
 
-        os.makedirs(os.path.dirname(output_yml_path), exist_ok=True)
-        with open(output_yml_path, "w", encoding="utf-8") as f:
-            yaml.safe_dump(final_records, f, allow_unicode=True, sort_keys=False,
-                           default_flow_style=False, width=120)
+        output_dir = os.path.dirname(output_yml_path) or "."
+        os.makedirs(output_dir, exist_ok=True)
+        fd, temporary_path = tempfile.mkstemp(prefix=".cfps-", suffix=".yml", dir=output_dir)
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                yaml.safe_dump(final_records, f, allow_unicode=True, sort_keys=False,
+                               default_flow_style=False, width=120)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(temporary_path, output_yml_path)
+        finally:
+            if os.path.exists(temporary_path):
+                os.unlink(temporary_path)
 
         print(f"🎉 任务结束! 总条目: {len(final_records)}")
 
 
 if __name__ == "__main__":
+    if not JOURNALS:
+        raise SystemExit("期刊配置为空或无效，已停止以避免覆盖 CFP 数据")
     scraper = JournalCFPScraper()
     scraper.run()

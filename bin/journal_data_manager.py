@@ -11,6 +11,7 @@ import sys
 import argparse
 import subprocess
 import logging
+import tempfile
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 from copy import deepcopy
@@ -23,6 +24,7 @@ logger = logging.getLogger(__name__)
 JRANK_FILE = '_data/jrank.yml'
 JOURNAL_RANK_FILE = '_data/journal_rank.json'
 CURSOR_FILE = '_data/.rank_cursor'  # 轮转游标：记录下一轮窗口起点（随仓库提交，跨运行保留）
+META_FILE = '_data/jrank_meta.yml'  # 最近一次完整成功更新的信息，供页面和审计使用
 
 
 class JournalDataManager:
@@ -31,6 +33,8 @@ class JournalDataManager:
     def __init__(self):
         self.jrank_file = JRANK_FILE
         self.journal_rank_file = JOURNAL_RANK_FILE
+        self.cursor_file = CURSOR_FILE
+        self.meta_file = META_FILE
         self.original_data = None
         self.current_data = None
     
@@ -62,17 +66,52 @@ class JournalDataManager:
     def read_cursor(self) -> int:
         """读取轮转游标（下一轮窗口起点）。文件不存在或损坏则从 0 开始。"""
         try:
-            with open(CURSOR_FILE, 'r', encoding='utf-8') as f:
+            with open(self.cursor_file, 'r', encoding='utf-8') as f:
                 return int((f.read() or '0').strip())
         except Exception:
             return 0
 
-    def write_cursor(self, offset: int):
+    def _atomic_write_text(self, path: str, content: str) -> bool:
+        """Atomically replace a small state file."""
+        target_dir = os.path.dirname(path) or "."
+        temp_path = None
         try:
-            with open(CURSOR_FILE, 'w', encoding='utf-8') as f:
-                f.write(str(int(offset)))
+            with tempfile.NamedTemporaryFile(
+                mode="w",
+                encoding="utf-8",
+                dir=target_dir,
+                prefix=f".{os.path.basename(path)}.",
+                suffix=".tmp",
+                delete=False,
+            ) as temp_file:
+                temp_path = temp_file.name
+                temp_file.write(content)
+            os.replace(temp_path, path)
+            return True
         except Exception as e:
-            logger.error(f"❌ 写入游标失败: {e}")
+            logger.error(f"❌ 写入状态文件 {path} 失败: {e}")
+            if temp_path:
+                try:
+                    os.unlink(temp_path)
+                except OSError:
+                    pass
+            return False
+
+    def write_cursor(self, offset: int) -> bool:
+        return self._atomic_write_text(self.cursor_file, str(int(offset)))
+
+    def write_success_metadata(self, batch_offset: int, batch_size: int, journal_count: int) -> bool:
+        """Record only a fully successful two-stage update."""
+        completed_at = datetime.now().astimezone()
+        metadata = {
+            "last_successful_update": completed_at.date().isoformat(),
+            "last_successful_update_at": completed_at.isoformat(timespec="seconds"),
+            "batch_offset": int(batch_offset),
+            "batch_size": int(batch_size),
+            "journal_count": int(journal_count),
+        }
+        content = yaml.safe_dump(metadata, allow_unicode=True, sort_keys=False)
+        return self._atomic_write_text(self.meta_file, content)
     
     def save_data(self, data: List[Dict]) -> bool:
         """保存数据到 jrank.yml"""
@@ -220,7 +259,7 @@ class JournalDataManager:
             logger.error(f"❌ 脚本不存在: {script_path}")
             return False
 
-        cmd = [sys.executable, script_path]
+        cmd = [sys.executable, '-u', script_path]
         if dry_run:
             cmd.append('--dry-run')
         if only_missing:
@@ -229,10 +268,8 @@ class JournalDataManager:
             cmd.extend(['--batch-offset', str(batch_offset), '--batch-size', str(batch_size)])
 
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            print(result.stdout)
-            if result.stderr:
-                print(result.stderr)
+            # Inherit stdout/stderr so Actions shows progress while the crawler runs.
+            result = subprocess.run(cmd)
             return result.returncode == 0
         except Exception as e:
             logger.error(f"❌ 运行脚本失败: {e}")
@@ -249,7 +286,7 @@ class JournalDataManager:
             logger.error(f"❌ 脚本不存在: {script_path}")
             return False
 
-        cmd = [sys.executable, script_path]
+        cmd = [sys.executable, '-u', script_path]
         if dry_run:
             cmd.append('--dry-run')
         if easyscholar_key:
@@ -260,10 +297,8 @@ class JournalDataManager:
             cmd.extend(['--batch-offset', str(batch_offset), '--batch-size', str(batch_size)])
 
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            print(result.stdout)
-            if result.stderr:
-                print(result.stderr)
+            # Inherit stdout/stderr so Actions shows progress while the crawler runs.
+            result = subprocess.run(cmd)
             return result.returncode == 0
         except Exception as e:
             logger.error(f"❌ 运行脚本失败: {e}")
@@ -271,7 +306,7 @@ class JournalDataManager:
     
     def run_all(self, dry_run: bool = False, show_diff: bool = True,
                 easyscholar_key: str = None, only_missing: bool = False,
-                batch_size: int = 0):
+                batch_size: int = 0) -> bool:
         """运行所有更新
 
         batch_size > 0 时启用「轮转窗口」：本轮只处理从游标开始的 batch_size 本，
@@ -285,7 +320,10 @@ class JournalDataManager:
 
         # 轮转窗口：读取游标，确定本轮处理哪一段
         batch_offset = 0
-        total = len(self.load_journal_list()) if batch_size else 0
+        total = len(self.load_journal_list())
+        if not total:
+            logger.error("❌ 期刊配置为空，停止更新")
+            return False
         if batch_size and total:
             batch_offset = self.read_cursor() % total
             end = batch_offset + batch_size
@@ -298,21 +336,41 @@ class JournalDataManager:
         # 1. 先运行橙色系指标更新（获取 orange_score 等数据）
         print("\n[1/2] 橙色系指标更新")
         print("-"*40)
-        self.run_scopus_update(dry_run=dry_run, only_missing=only_missing,
-                               batch_offset=batch_offset, batch_size=batch_size)
+        scopus_ok = self.run_scopus_update(
+            dry_run=dry_run,
+            only_missing=only_missing,
+            batch_offset=batch_offset,
+            batch_size=batch_size,
+        )
 
         # 2. 再运行出版商更新（此时 HM score 计算可以使用 orange 数据）
         print("\n[2/2] 出版商 + EasyScholar 更新 (含 HM Score 计算)")
         print("-"*40)
-        self.run_publisher_update(dry_run=dry_run, easyscholar_key=easyscholar_key,
-                                  only_missing=only_missing,
-                                  batch_offset=batch_offset, batch_size=batch_size)
+        publisher_ok = self.run_publisher_update(
+            dry_run=dry_run,
+            easyscholar_key=easyscholar_key,
+            only_missing=only_missing,
+            batch_offset=batch_offset,
+            batch_size=batch_size,
+        )
 
-        # 两步都跑完，前移游标（仅在非 dry-run 且启用轮转时）
-        if batch_size and total and not dry_run:
-            new_offset = (batch_offset + batch_size) % total
-            self.write_cursor(new_offset)
-            print(f"\n🔄 游标前移: 下一轮从第 {new_offset} 本开始")
+        success = scopus_ok and publisher_ok
+        if not scopus_ok:
+            logger.error("❌ Scopus 子进程失败")
+        if not publisher_ok:
+            logger.error("❌ 出版商子进程失败")
+
+        # Only a fully successful two-stage run may advance the cursor or update
+        # the "last successful" metadata. Partial data remains on disk for CI to commit.
+        if success and not dry_run:
+            if not self.write_success_metadata(batch_offset, batch_size, total):
+                success = False
+            if success and batch_size:
+                new_offset = (batch_offset + batch_size) % total
+                if self.write_cursor(new_offset):
+                    print(f"\n🔄 游标前移: 下一轮从第 {new_offset} 本开始")
+                else:
+                    success = False
 
         # 3. 对比差异
         if show_diff:
@@ -320,7 +378,11 @@ class JournalDataManager:
             diff = self.compare_data(old_data, new_data)
             self.print_diff(diff)
         
-        print("\n✅ 更新完成!")
+        if success:
+            print("\n✅ 更新完成!")
+        else:
+            print("\n❌ 更新未完整成功；游标未推进，已抓取的数据仍可保留。")
+        return success
 
 
 def main():
@@ -365,11 +427,12 @@ def main():
     args = parser.parse_args()
     
     manager = JournalDataManager()
+    success = True
     
     if args.status:
         manager.show_status()
     elif args.all:
-        manager.run_all(
+        success = manager.run_all(
             dry_run=args.dry_run,
             show_diff=not args.no_diff,
             easyscholar_key=args.easyscholar_key,
@@ -378,14 +441,14 @@ def main():
         )
     elif args.orange_only:
         old_data = deepcopy(manager.load_data())
-        manager.run_scopus_update(dry_run=args.dry_run, only_missing=args.only_missing)
+        success = manager.run_scopus_update(dry_run=args.dry_run, only_missing=args.only_missing)
         if not args.no_diff:
             new_data = manager.load_data()
             diff = manager.compare_data(old_data, new_data)
             manager.print_diff(diff)
     elif args.publisher_only:
         old_data = deepcopy(manager.load_data())
-        manager.run_publisher_update(
+        success = manager.run_publisher_update(
             dry_run=args.dry_run,
             easyscholar_key=args.easyscholar_key,
             only_missing=args.only_missing
@@ -400,13 +463,16 @@ def main():
     else:
         # 默认运行所有更新
         logger.info("未指定参数，默认运行所有更新...")
-        manager.run_all(
+        success = manager.run_all(
             dry_run=args.dry_run,
             show_diff=not args.no_diff,
             easyscholar_key=args.easyscholar_key,
             only_missing=args.only_missing,
             batch_size=args.batch_size
         )
+
+    if not success:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

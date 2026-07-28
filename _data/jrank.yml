@@ -204,6 +204,7 @@
   orange_percentile: '98'
   orange_quartile: Q1
   orange_score: '11.6'
+  publisher: International Forum of Educational Technology & Society
   purple_quartile: Q1
   purple_score: '7.1'
   red_division: 教育学2区
@@ -731,24 +732,6 @@
   review_time: 102 days
   tag:
   - Teacher Education & Development
-- acceptance_rate: 9%
-  acceptance_time: 2 days
-  documents_current_year: 47 (2026)
-  documents_last_year: 64 (2025)
-  documents_published: 64 (2025)
-  first_decision_time: 13 days
-  hm_score: 60.1
-  journal: Modern Language Journal
-  orange_percentile: '97'
-  orange_quartile: Q1
-  orange_score: '8.4'
-  publication_time: 58 days
-  publisher: Wiley
-  purple_quartile: Q1
-  purple_score: '4.5'
-  red_division: 文学1区
-  tag:
-  - Language Education & Acquisition
 - acceptance_rate: 8%
   acceptance_time: 213 days
   documents_current_year: 321 (2026)
@@ -5221,11 +5204,11 @@
   tag:
   - Library & Information Science
 - acceptance_time: 145 days
-  documents_current_year: 11 (2027)
-  documents_last_year: 596 (2026)
-  documents_published: 596 (2026)
+  documents_current_year: 596 (2026)
+  documents_last_year: ''
+  documents_published: ''
   first_decision_time: 2 days
-  hm_score: 70.1
+  hm_score: 60.1
   journal: Information Processing & Management
   orange_percentile: '98'
   orange_quartile: Q1
@@ -6092,11 +6075,11 @@
   - General Social Science
   - Open Science
 - acceptance_rate: ''
-  acceptance_time: ''
+  acceptance_time: 138 days
   documents_current_year: 18698 (2026)
   documents_last_year: 45894 (2025)
   documents_published: 45894 (2025)
-  first_decision_time: ''
+  first_decision_time: 12 days
   hm_score: 59.5
   journal: Scientific Reports
   orange_percentile: '87'
@@ -6433,25 +6416,7 @@
   red_division: 文学1区
   tag:
   - Linguistics
-  - Language Education
-- acceptance_rate: 20%
-  acceptance_time: 168 days
-  documents_current_year: 79 (2026)
-  documents_last_year: 99 (2025)
-  documents_published: 99 (2025)
-  first_decision_time: 25 days
-  hm_score: 65.4
-  journal: British Journal of Sociology
-  orange_percentile: '86'
-  orange_quartile: Q1
-  orange_score: '5.2'
-  publication_time: 9 days
-  publisher: Wiley
-  purple_quartile: Q1
-  purple_score: '2.6'
-  red_division: 社会学1区
-  tag:
-  - Sociology
+  - Language Education & Acquisition
 - documents_current_year: 25 (2025)
   documents_last_year: 36 (2024)
   documents_published: 36 (2024)

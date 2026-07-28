@@ -5,22 +5,46 @@
 """
 
 import json
-import yaml
-import time
 import logging
-from DrissionPage import WebPage, ChromiumOptions
-from typing import Dict, Any, Optional
+import os
 import re
+import sys
+import tempfile
+import time
+from datetime import datetime
+from typing import Dict, Any
+
+import yaml
+
+try:
+    from DrissionPage import WebPage, ChromiumOptions
+except ImportError:  # Allow the pure data-merging helpers to be unit-tested without Chrome.
+    WebPage = None
+    ChromiumOptions = None
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 
+def _select_document_years(parsed_years, current_year=None):
+    """Return counts for the actual calendar year and previous year only.
+
+    Scopus may expose future-volume rows; choosing the two numerically largest
+    years would incorrectly label those as current/last-year production.
+    """
+    year = int(current_year or datetime.now().year)
+    by_year = {int(item_year): str(count) for item_year, count in parsed_years}
+    return by_year.get(year), by_year.get(year - 1)
+
+
 class ScopusDrissionCrawler:
     """使用 DrissionPage 爬取期刊橙色系指标"""
     
     def __init__(self, headless: bool = True):
+        if ChromiumOptions is None or WebPage is None:
+            raise RuntimeError("DrissionPage is required to crawl Scopus metrics")
+
         self.headless = headless
         self.base_url = "https://www.scopus.com/sourceid"
         
@@ -77,18 +101,18 @@ class ScopusDrissionCrawler:
             }
         """
         result = {
-        "source_id": source_id,
-        "orange_score": None,
-        "orange_quartile": None,
-        "orange_percentile": None,
-        "documents_published": None,
-        "docs_current_year": None,  # 新增：当年发文量
-        "docs_last_year": None,     # 新增：去年发文量
-        "citescore_rank_data": [],
-        "documents_data": [],
-        "success": False,
-        "error": None
-    }
+            "source_id": source_id,
+            "orange_score": None,
+            "orange_quartile": None,
+            "orange_percentile": None,
+            "documents_published": None,
+            "docs_current_year": None,
+            "docs_last_year": None,
+            "citescore_rank_data": [],
+            "documents_data": [],
+            "success": False,
+            "error": None,
+        }
         
         # 创建 WebPage 实例，应用配置
         page = WebPage(chromium_options=self.options)
@@ -140,10 +164,6 @@ class ScopusDrissionCrawler:
             # 4. 导航到 Content Coverage 标签页 (#tabs=2) 获取 Documents Published 数据
             print("\n=== 步骤 3: 获取 Documents Published 数据 (当年 & 去年) ===")
             try:
-                # 确保 result 字典里有这两个字段 (建议在函数开头初始化时加上)
-                result["docs_current_year"] = "0"
-                result["docs_last_year"] = "0"
-
                 print("正在导航到 Content Coverage 标签页 (#tabs=2)...")
                 content_coverage_url = f"https://www.scopus.com/sourceid/{source_id}#tabs=2"
                 page.get(content_coverage_url, timeout=30)
@@ -159,34 +179,37 @@ class ScopusDrissionCrawler:
                 
                 print(f"找到 {len(rows)} 行数据")
                 
-                # 遍历前两行：第0行通常是当年(Header)，第1行通常是去年
-                for i, row in enumerate(rows):
-                    if i > 1: break # 我们只需要前两年，拿到后就退出循环
-
+                parsed_years = []
+                for row in rows:
                     cells = row.eles("tag:td")
-                    if not cells: 
-                         cells = row.eles("tag:th")
+                    if not cells:
+                        cells = row.eles("tag:th")
 
                     if len(cells) >= 2:
-                        # 提取年份和数量
                         year_text = cells[0].text.strip()
                         doc_text = cells[1].text.strip()
-                        
-                        # 使用正则提取纯数字 (处理 "176 documents" -> "176")
-                        # 先移除逗号（千位分隔符），处理 "1,001" -> "1001"
+                        year_match = re.search(r"\b(20\d{2})\b", year_text)
                         doc_text_clean = doc_text.replace(',', '')
                         doc_count_match = re.search(r'(\d+)', doc_text_clean)
-                        doc_count = doc_count_match.group(1) if doc_count_match else "0"
+                        if not year_match or not doc_count_match:
+                            continue
+                        parsed_years.append((int(year_match.group(1)), doc_count_match.group(1)))
 
-                        print(f"解析第 {i} 行 -> 年份: {year_text} | 数量: {doc_count}")
-
-                        # 逻辑判断：第0行视为“最新/当年”，第1行视为“去年”
-                        if i == 0:
-                            result["docs_current_year"] = f"{doc_count} ({year_text})"
-                            result["documents_data"].append({"year": year_text, "documents": doc_count})
-                        elif i == 1:
-                            result["docs_last_year"] = f"{doc_count} ({year_text})"
-                            result["documents_data"].append({"year": year_text, "documents": doc_count})
+                current_year = datetime.now().year
+                current_count, previous_count = _select_document_years(
+                    parsed_years,
+                    current_year=current_year,
+                )
+                if current_count is not None:
+                    result["docs_current_year"] = f"{current_count} ({current_year})"
+                    result["documents_data"].append(
+                        {"year": str(current_year), "documents": current_count}
+                    )
+                if previous_count is not None:
+                    result["docs_last_year"] = f"{previous_count} ({current_year - 1})"
+                    result["documents_data"].append(
+                        {"year": str(current_year - 1), "documents": previous_count}
+                    )
 
                 if result["documents_data"]:
                     print(f"✅ 提取成功")
@@ -195,10 +218,20 @@ class ScopusDrissionCrawler:
 
             except Exception as e:
                 print(f"✗ 获取 Documents Published 数据失败: {e}")
-            
-            # ... (后面代码保持不变) ...
+
+            result["success"] = any(
+                result.get(field) not in (None, "")
+                for field in (
+                    "orange_score",
+                    "orange_quartile",
+                    "orange_percentile",
+                    "docs_current_year",
+                    "docs_last_year",
+                )
+            )
                 
         except Exception as e:
+            result["error"] = str(e)
             logger.error(f"❌ 爬取失败: {e}")
         
         finally:
@@ -224,15 +257,59 @@ def _apply_batch(journal_list, offset, size):
     return journal_list[offset:end] if end <= n else journal_list[offset:] + journal_list[:end - n]
 
 
-def _save_jrank(jrank_dict, jrank_file):
-    """把 jrank_dict 写回 YAML（增量保存用，失败不抛出以免中断主循环）。"""
+def _atomic_write_yaml(data, target_file):
+    """Write YAML atomically so a killed runner cannot leave a truncated file."""
+    target_dir = os.path.dirname(target_file) or "."
+    temp_path = None
     try:
-        with open(jrank_file, 'w', encoding='utf-8') as f:
-            yaml.dump(list(jrank_dict.values()), f, default_flow_style=False, allow_unicode=True)
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=target_dir,
+            prefix=f".{os.path.basename(target_file)}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temp_file:
+            temp_path = temp_file.name
+            yaml.dump(data, temp_file, default_flow_style=False, allow_unicode=True)
+        os.replace(temp_path, target_file)
         return True
     except Exception as e:
-        logger.error(f"❌ 增量保存失败: {e}")
+        logger.error(f"❌ 写入 {target_file} 失败: {e}")
+        if temp_path:
+            try:
+                os.unlink(temp_path)
+            except OSError:
+                pass
         return False
+
+
+def _save_jrank(jrank_dict, jrank_file):
+    """把 jrank_dict 原子写回 YAML（增量保存用）。"""
+    return _atomic_write_yaml(list(jrank_dict.values()), jrank_file)
+
+
+def _merge_scopus_metrics(journal_data, scopus_metrics):
+    """Merge only values actually parsed from Scopus, preserving older metrics on failure."""
+    updated = False
+    field_map = {
+        "orange_score": "orange_score",
+        "orange_quartile": "orange_quartile",
+        "orange_percentile": "orange_percentile",
+        "docs_current_year": "documents_current_year",
+        "docs_last_year": "documents_last_year",
+    }
+    for source_field, target_field in field_map.items():
+        value = scopus_metrics.get(source_field)
+        if value not in (None, ""):
+            journal_data[target_field] = value
+            updated = True
+
+    docs_last_year = scopus_metrics.get("docs_last_year")
+    if docs_last_year not in (None, ""):
+        journal_data["documents_published"] = docs_last_year
+
+    return updated
 
 
 def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = False,
@@ -246,7 +323,7 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
         only_missing: 只处理还没有 orange_score 的期刊（跳过已完成的，大幅缩短耗时）
         save_every: 每处理 N 本就写一次盘（防止超时被杀导致整轮丢失）
         batch_offset/batch_size: 轮转窗口——本轮只处理 journal_list[offset:offset+size]
-                                 （绕回开头）。配合管理器的游标实现「每轮 250 本」滚动刷新。
+                                 （绕回开头）。配合管理器的游标实现小批次滚动刷新。
     """
     journal_rank_file = '_data/journal_rank.json'
     jrank_file = '_data/jrank.yml'
@@ -263,7 +340,7 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
             logger.info(f"📖 加载了 {total} 个期刊")
     except Exception as e:
         logger.error(f"❌ 无法读取 {journal_rank_file}: {e}")
-        return
+        return False
     
     # 2. 读取现有的 jrank.yml
     try:
@@ -272,19 +349,26 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
         logger.info(f"📖 加载了 {len(jrank_data)} 条现有数据")
     except FileNotFoundError:
         logger.error(f"❌ 文件不存在: {jrank_file}")
-        return
+        return False
     except Exception as e:
         logger.error(f"❌ 无法读取 {jrank_file}: {e}")
-        return
+        return False
     
     # 3. 创建期刊名称到数据的映射
     jrank_dict = {item['journal']: item for item in jrank_data}
     
     # 4. 创建爬虫实例
-    crawler = ScopusDrissionCrawler(headless=True)
+    try:
+        crawler = ScopusDrissionCrawler(headless=True)
+    except Exception as e:
+        logger.error(f"❌ 无法初始化 Scopus 爬虫: {e}")
+        return False
     
     # 5. 遍历期刊列表，更新橙色系指标
     updated_count = 0
+    attempted_count = 0
+    failed_count = 0
+    save_failed = False
     for journal_info in journal_list:
         journal_name = journal_info['name']
         sourceid = journal_info.get('sourceid')
@@ -296,14 +380,22 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
         # only_missing: 已有 orange_score 的期刊跳过浏览器导航（最贵的一步）
         if only_missing:
             existing = jrank_dict.get(journal_name, {})
-            if existing.get('orange_score'):
+            required_fields = (
+                "orange_score",
+                "orange_quartile",
+                "orange_percentile",
+                "documents_current_year",
+                "documents_last_year",
+            )
+            if all(existing.get(field) not in (None, "") for field in required_fields):
                 logger.info(f"⏩ 跳过 {journal_name} (已有橙色数据)")
                 continue
 
-        if journal_name not in jrank_dict:
-            # 自动创建期刊条目
-            logger.info(f"➕ 创建新条目: {journal_name}")
-            jrank_dict[journal_name] = {
+        is_new_journal = journal_name not in jrank_dict
+        if is_new_journal:
+            # Do not add the blank entry unless at least one real metric is parsed.
+            logger.info(f"➕ 准备创建新条目: {journal_name}")
+            journal_data = {
                 'journal': journal_name,
                 'orange_score': '',
                 'orange_quartile': '',
@@ -312,6 +404,8 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
                 'documents_last_year': '',
                 'documents_published': ''
             }
+        else:
+            journal_data = jrank_dict[journal_name]
         
         logger.info(f"\n{'='*80}")
         logger.info(f"📊 处理: {journal_name} (ID: {sourceid})")
@@ -319,24 +413,19 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
         
         try:
             # 爬取橙色系指标
+            attempted_count += 1
             scopus_metrics = crawler.scrape_journal_metrics(sourceid)
-            
-            # 更新 jrank_dict 中的数据
-            if scopus_metrics['orange_score']:
-                jrank_dict[journal_name]['orange_score'] = scopus_metrics['orange_score']
-            if scopus_metrics['orange_quartile']:
-                jrank_dict[journal_name]['orange_quartile'] = scopus_metrics['orange_quartile']
-            if scopus_metrics['orange_percentile']:
-                jrank_dict[journal_name]['orange_percentile'] = scopus_metrics['orange_percentile']
-            
-            # 使用 split 后的字段
-            if scopus_metrics['docs_current_year']:
-                jrank_dict[journal_name]['documents_current_year'] = scopus_metrics['docs_current_year']
-            if scopus_metrics['docs_last_year']:
-                jrank_dict[journal_name]['documents_last_year'] = scopus_metrics['docs_last_year']
-                # 保留 documents_published 用于兼容（如果需要），或者可以删除
-                jrank_dict[journal_name]['documents_published'] = scopus_metrics['docs_last_year']
-            
+
+            if not scopus_metrics.get("success") or not _merge_scopus_metrics(journal_data, scopus_metrics):
+                failed_count += 1
+                logger.error(
+                    "❌ %s 未解析到任何有效 Scopus 指标，保留旧值%s",
+                    journal_name,
+                    f": {scopus_metrics.get('error')}" if scopus_metrics.get("error") else "",
+                )
+                continue
+
+            jrank_dict[journal_name] = journal_data
             updated_count += 1
             logger.info(f"✅ {journal_name} 更新完成")
 
@@ -344,11 +433,14 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
             if not dry_run and save_every and updated_count % save_every == 0:
                 if _save_jrank(jrank_dict, jrank_file):
                     logger.info(f"💾 增量保存：已写入 {updated_count} 本的进度")
+                else:
+                    save_failed = True
 
             # 延迟，避免请求过快
             time.sleep(2)
 
         except Exception as e:
+            failed_count += 1
             logger.error(f"❌ {journal_name} 更新失败: {e}")
     
     # 6. 保存更新后的数据
@@ -363,18 +455,25 @@ def update_scopus_metrics_in_yaml(dry_run: bool = False, only_missing: bool = Fa
         logger.info("="*80)
     else:
         try:
-            # 转换回列表
-            updated_jrank_data = list(jrank_dict.values())
-            
-            with open(jrank_file, 'w', encoding='utf-8') as f:
-                yaml.dump(updated_jrank_data, f, default_flow_style=False, allow_unicode=True)
-            
-            logger.info("\n" + "="*80)
-            logger.info(f"✅ 成功更新 {jrank_file}")
-            logger.info(f"📊 已更新 {updated_count} 个期刊的橙色系指标")
-            logger.info("="*80)
+            if not _atomic_write_yaml(list(jrank_dict.values()), jrank_file):
+                save_failed = True
+            else:
+                logger.info("\n" + "="*80)
+                logger.info(f"✅ 成功更新 {jrank_file}")
+                logger.info(f"📊 已更新 {updated_count} 个期刊的橙色系指标")
+                logger.info("="*80)
         except Exception as e:
+            save_failed = True
             logger.error(f"❌ 保存文件失败: {e}")
+
+    if save_failed:
+        return False
+    if attempted_count and updated_count == 0:
+        logger.error("❌ 本轮 %d 个 Scopus 请求全部失败", attempted_count)
+        return False
+    if failed_count:
+        logger.warning("⚠️ 本轮有 %d/%d 本未获取到新指标，旧值已保留", failed_count, attempted_count)
+    return True
 
 
 def main():
@@ -399,13 +498,21 @@ def main():
     logger.info("="*80)
     
     try:
-        update_scopus_metrics_in_yaml(dry_run=args.dry_run, only_missing=args.only_missing,
-                                      save_every=args.save_every,
-                                      batch_offset=args.batch_offset, batch_size=args.batch_size)
+        success = update_scopus_metrics_in_yaml(
+            dry_run=args.dry_run,
+            only_missing=args.only_missing,
+            save_every=args.save_every,
+            batch_offset=args.batch_offset,
+            batch_size=args.batch_size,
+        )
+        if not success:
+            sys.exit(1)
     except KeyboardInterrupt:
         logger.info("\n⚠️ 用户中断")
+        sys.exit(130)
     except Exception as e:
         logger.error(f"\n❌ 发生错误: {e}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":

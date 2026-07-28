@@ -2,8 +2,8 @@ name: Update Journal Rankings
 
 on:
   schedule:
-    # Run on the 5th & 25th of every month at 2 AM UTC (10 AM Beijing time)
-    - cron: '0 2 5,25 * *'
+    # Eight 50-journal windows refresh the ~390-journal list about once a month.
+    - cron: '0 2 1,5,9,13,17,21,25,29 * *'
   workflow_dispatch: # Allow manual trigger
     inputs:
       full_refresh:
@@ -14,6 +14,7 @@ on:
 jobs:
   update-rankings:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     
     services:
       # FlareSolverr container for bypassing anti-bot protection
@@ -45,30 +46,35 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests pyyaml DrissionPage python-dotenv
-        
+        pip install requests pyyaml DrissionPage python-dotenv beautifulsoup4 lxml
+
+    - name: Run journal pipeline unit tests
+      run: python -m unittest tests/test_journal_pipeline.py tests/test_data_integrity.py
+
     - name: Update journal rankings
+      id: ranking-update
+      continue-on-error: true
+      timeout-minutes: 300
       env:
         EASYSCHOLAR_KEY: ${{ secrets.EASYSCHOLAR_KEY }}
         FLARESOLVERR_URL: http://localhost:8191
+        FLARESOLVERR_MAX_TIMEOUT_MS: '60000'
+        FLARESOLVERR_REQUEST_TIMEOUT_SECONDS: '75'
       run: |
-        # Default = rotating window of 250 journals. A full re-scrape of all
-        # ~390 journals via the Scopus headless browser exceeds GitHub's 6h job
-        # ceiling → the run is cancelled and commits nothing. Instead each run
-        # refreshes 250 journals starting from a persisted cursor (_data/.rank_cursor)
-        # and advances it; 2 runs cover the whole list, so on the 5th+25th
-        # schedule everything (incl. acceptance rates / review times that DO
-        # drift) is refreshed ~monthly, and no single run gets near 6h.
+        # Default = a rotating window of 50 journals. Incremental atomic saves
+        # preserve completed journals if this step reaches its timeout. The
+        # cursor advances only when both child updaters complete successfully.
         # full_refresh=true forces the old all-at-once behavior on demand.
         if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_refresh }}" = "true" ]; then
           echo "🐢 FULL refresh: re-scraping every journal (may take hours)"
           python bin/journal_data_manager.py --no-diff
         else
-          echo "🔄 Rotating window: 250 journals from the saved cursor"
-          python bin/journal_data_manager.py --no-diff --batch-size 250
+          echo "🔄 Rotating window: 50 journals from the saved cursor"
+          python bin/journal_data_manager.py --no-diff --batch-size 50
         fi
 
     - name: Update journal aims & scope (feeds the venue recommender)
+      if: steps.ranking-update.outcome == 'success'
       env:
         FLARESOLVERR_URL: http://localhost:8191
       run: |
@@ -78,28 +84,29 @@ jobs:
 
     - name: Check for changes
       id: verify-changed-files
+      if: always()
       run: |
-        if [ -n "$(git status --porcelain)" ]; then
+        if [ -n "$(git status --porcelain -- _data/jrank.yml _data/jaims.yml _data/.rank_cursor _data/jrank_meta.yml)" ]; then
           echo "changed=true" >> $GITHUB_OUTPUT
         else
           echo "changed=false" >> $GITHUB_OUTPUT
         fi
         
     - name: Commit and push changes
-      if: steps.verify-changed-files.outputs.changed == 'true'
+      if: always() && steps.verify-changed-files.outputs.changed == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add _data/jrank.yml _data/jaims.yml _data/.rank_cursor
+        git add _data/jrank.yml _data/jaims.yml _data/.rank_cursor _data/jrank_meta.yml
         git commit -m "🤖 Auto-update journal rankings - $(date +'%Y-%m-%d')"
         git pull --rebase origin main
         git push
         
     - name: Create summary
-      if: steps.verify-changed-files.outputs.changed == 'true'
+      if: always() && steps.verify-changed-files.outputs.changed == 'true'
       run: |
         echo "## 📊 Journal Rankings Updated" >> $GITHUB_STEP_SUMMARY
-        echo "Journal ranking data has been automatically updated." >> $GITHUB_STEP_SUMMARY
+        echo "Completed ranking data was committed, including partial progress if the crawler timed out." >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### Data Sources:" >> $GITHUB_STEP_SUMMARY
         echo "- 🟠 Orange metrics (Scopus: CiteScore, Percentile)" >> $GITHUB_STEP_SUMMARY
@@ -108,7 +115,19 @@ jobs:
         echo "- 📝 Publisher websites (Acceptance rates, Review times)" >> $GITHUB_STEP_SUMMARY
         
     - name: No changes summary
-      if: steps.verify-changed-files.outputs.changed == 'false'
+      if: always() && steps.ranking-update.outcome == 'success' && steps.verify-changed-files.outputs.changed == 'false'
       run: |
         echo "## ✅ Journal Rankings Check Complete" >> $GITHUB_STEP_SUMMARY
         echo "No updates were needed - all journal ranking data is current." >> $GITHUB_STEP_SUMMARY
+
+    - name: Incomplete update summary
+      if: always() && steps.ranking-update.outcome != 'success'
+      run: |
+        echo "## ⚠️ Journal Rankings Update Incomplete" >> $GITHUB_STEP_SUMMARY
+        echo "The crawler failed or timed out. Any atomically saved partial progress was committed, but the cursor was not advanced." >> $GITHUB_STEP_SUMMARY
+
+    - name: Fail workflow when ranking update was incomplete
+      if: always() && steps.ranking-update.outcome != 'success'
+      run: |
+        echo "Journal ranking update did not complete; the cursor was not advanced." >&2
+        exit 1

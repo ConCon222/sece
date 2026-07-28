@@ -12,14 +12,20 @@ nav_order: 4
 
 {% assign all_tags = site.data.jrank | map: 'tag' | join: ',' | split: ',' | uniq | sort %}
 {% assign jr_publishers = site.data.jrank | map: 'publisher' | compact | uniq | sort %}
+{% assign jr_publisher_count = 0 %}
+{% for publisher in jr_publishers %}
+  {% assign publisher_name = publisher | strip %}
+  {% if publisher_name != "" %}{% assign jr_publisher_count = jr_publisher_count | plus: 1 %}{% endif %}
+{% endfor %}
+{% assign jr_last_updated = site.data.jrank_meta.last_successful_update | default: site.data.jrank_meta.last_updated %}
 
 <div class="journal-rankings">
   {% include context_rail.liquid items="jr-overview::Overview::概览|jr-filters::Filters::筛选|jr-results::Rankings::排名|jr-notes::Notes::说明" %}
   <section id="jr-overview" class="context-rail-target">
   <!-- What this is -->
   <p class="jr-intro">
-    <span class="only-en">A curated dashboard of education &amp; related-field journals, ranked by an <strong>HM friendliness score</strong> that blends impact metrics (IF · CiteScore · CAS division) with how author-friendly each journal is (acceptance rate · decision speed), so you can quickly see <em>where it's worth submitting</em>.</span>
-    <span class="only-zh">教育及相关领域期刊的精选看板，按 <strong>HM 友好性指数</strong> 排名——它综合了影响力指标（影响因子 · CiteScore · 中科院分区）与对作者的友好程度（录用率 · 审稿速度），帮你一眼看出<em>值得往哪里投稿</em>。</span>
+    <span class="only-en">A curated dashboard of education &amp; related-field journals, ranked by an <strong>HM friendliness score</strong> that combines JCR quartile and Impact Factor, CiteScore and percentile, acceptance rate, and recent article volume, so you can quickly compare potential submission venues.</span>
+    <span class="only-zh">教育及相关领域期刊的精选看板，按 <strong>HM 友好性指数</strong> 排名——该指数综合 JCR 分区与影响因子、CiteScore 与百分位、录用率及近期发文量，便于快速比较潜在投稿目标。</span>
   </p>
 
   <!-- At-a-glance statistics -->
@@ -27,8 +33,8 @@ nav_order: 4
     <div class="row">
       <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Total Journals</span><span class="only-zh">期刊总数</span></h6><span id="total-journals">{{ site.data.jrank | size }}</span></div></div>
       <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Q1 Journals</span><span class="only-zh">Q1 期刊</span></h6><span id="q1-count">{% assign q1_count = 0 %}{% for journal in site.data.jrank %}{% if journal.purple_quartile contains 'Q1' %}{% assign q1_count = q1_count | plus: 1 %}{% endif %}{% endfor %}{{ q1_count }}</span></div></div>
-      <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Publishers</span><span class="only-zh">出版商</span></h6><span>{{ jr_publishers | size }}</span></div></div>
-      <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Last Updated</span><span class="only-zh">最近更新</span></h6><span id="last-updated">{{ site.time | date: "%Y-%m-%d" }}</span></div></div>
+      <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Publishers</span><span class="only-zh">出版商</span></h6><span>{{ jr_publisher_count }}</span></div></div>
+      <div class="col-6 col-md-3"><div class="stat-card"><h6><span class="only-en">Last Updated</span><span class="only-zh">最近更新</span></h6><span id="last-updated">{% if jr_last_updated %}{{ jr_last_updated | date: "%Y-%m-%d" }}{% else %}—{% endif %}</span></div></div>
     </div>
   </div>
   </section>

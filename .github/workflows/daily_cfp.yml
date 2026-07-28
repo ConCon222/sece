@@ -2,16 +2,21 @@ name: Daily CFP Scraper
 
 on:
   schedule:
-    # 每天 UTC 时间 00:00 运行 (北京时间早上 8:00)
-    - cron: '0 21 */2 * *'
+    # Daily at 21:00 UTC (05:00 Beijing time the next day).
+    - cron: '0 21 * * *'
   workflow_dispatch: # 允许手动点按钮触发
 
 permissions:
   contents: write
 
+concurrency:
+  group: daily-cfp
+  cancel-in-progress: false
+
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
 
     services:
       flaresolverr:
@@ -26,36 +31,42 @@ jobs:
           token: ${{ secrets.PAGE }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install curl-cffi DrissionPage beautifulsoup4 pyyaml lxml
+          pip install requests curl-cffi DrissionPage beautifulsoup4 pyyaml lxml
+
+      - name: Run CFP parser tests
+        run: python -m unittest tests/test_cfp_scraper.py tests/test_data_integrity.py
 
       - name: Wait for FlareSolverr to be ready
         run: |
           echo "⏳ 等待 FlareSolverr 启动..."
+          ready=false
           for i in {1..30}; do
             if curl -s http://localhost:8191/health | grep -q "ok"; then
               echo "✅ FlareSolverr 已就绪"
+              ready=true
               break
             fi
             echo "   等待中... ($i/30)"
             sleep 2
           done
+          if [ "$ready" != "true" ]; then
+            echo "FlareSolverr did not become healthy" >&2
+            exit 1
+          fi
 
       - name: Run Scraper
-        run: |
-          # 确保脚本有执行权限（可选）
-          # 假设你的脚本在根目录，且输出到 _data/cfps.yml
-          # 你需要根据实际路径修改下面的路径
-          python bin/scrape_cfps.py 
+        run: python bin/scrape_cfps.py
         env:
-          # 如果你的脚本里写死了路径，这里不需要改；
-          # 建议在脚本里把 OUTPUT_YML_PATH 改为 relative path 如 '_data/cfps.yml'
           PYTHONUNBUFFERED: 1
+          FLARESOLVERR_URL: http://localhost:8191
+          NATURE_MAX_PAGES: 120
+          NATURE_DETAIL_WORKERS: 4
 
       - name: Check for changes
         id: git-check

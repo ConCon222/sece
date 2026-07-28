@@ -395,14 +395,24 @@
       })
     ]).then(function (sets) {
       var cfps = sets[0].map(function (item) {
-        return { t: "cfp", ti: item.title, j: item.journal, p: item.publisher, tg: item.tags || [], dl: item.deadline, u: item.url, d: item.description || "" };
+        return { t: "cfp", ti: item.title, j: item.journal, p: item.publisher, tg: item.tags || [], dl: item.deadline, ds: item.deadlineSort, u: item.url, d: item.description || "" };
       });
       var journals = sets[1].map(function (item) {
         return { t: "journal", j: item.journal, p: item.publisher, tg: item.tags || [], q: item.purpleQuartile, hm: item.hm, ar: item.acceptanceRate, d: item.aims || "" };
       });
       data = cfps.concat(journals).filter(function (item) {
         var title = String(item.ti || item.j || "").toLowerCase();
-        return !/(404 error|page not found|what happened|access denied|just a moment)/.test(title);
+        if (/(404 error|page not found|what happened|access denied|just a moment)/.test(title)) return false;
+        if (item.t !== "cfp") return true;
+        var deadline = String(item.ds || "");
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(deadline) || deadline === "9999-99-99") return true;
+        var now = new Date();
+        var today = [
+          now.getFullYear(),
+          String(now.getMonth() + 1).padStart(2, "0"),
+          String(now.getDate()).padStart(2, "0")
+        ].join("-");
+        return deadline >= today;
       });
       return data;
     }).catch(function (error) {
@@ -541,21 +551,21 @@
 
   function aiRerank(abstract, pool, lang) {
     var langName = lang === "zh" ? "Chinese" : "English";
-    var sys = "You help researchers choose where to submit a paper. You get the paper's title and abstract, plus a NUMBERED candidate list of calls-for-papers (CFP) and journals, pre-filtered from a fixed dataset. Pick the most relevant candidates, up to 10 (fewer, or none, if they are not truly relevant). When both calls-for-papers and journals are relevant, include some of EACH type. Choose ONLY from the numbered list, by index. Reply with STRICT JSON and nothing else: {\"picks\":[{\"i\":<index number>,\"reason\":\"<one concise sentence in " + langName + ">\"}]} ordered from most to least relevant.";
+    var sys = "You help researchers choose where to submit a paper. You get the paper's title and abstract, plus a 1-BASED NUMBERED candidate list of calls-for-papers (CFP) and journals, pre-filtered from a fixed dataset. Pick the most relevant candidates, up to 10 (fewer, or none, if they are not truly relevant). When both calls-for-papers and journals are relevant, include some of EACH type. Choose ONLY from the numbered list, using its 1-based index. Reply with STRICT JSON and nothing else: {\"picks\":[{\"i\":<1-based index number>,\"reason\":\"<one concise sentence in " + langName + ">\"}]} ordered from most to least relevant.";
     var cands = pool.map(function (it, idx) {
       var type = it.t === "cfp" ? "CFP" : "Journal";
       var name = it.t === "cfp" ? (it.ti || it.j) : it.j;
       var at = (it.t === "cfp" && it.j) ? " @" + it.j : ((it.t === "journal" && it.q) ? " (" + it.q + ")" : "");
       var tags = (it.tg || []).join(", ");
       var desc = (it.d || "").replace(/\s+/g, " ").slice(0, 160);
-      return idx + ". [" + type + "] " + name + at + (tags ? " | tags: " + tags : "") + (desc ? " | " + desc : "");
+      return (idx + 1) + ". [" + type + "] " + name + at + (tags ? " | tags: " + tags : "") + (desc ? " | " + desc : "");
     }).join("\n");
     var userMsg = "PAPER:\n" + (abstract || "").slice(0, 4000) + "\n\nCANDIDATES:\n" + cands;
     return callLLM(sys, userMsg).then(function (text) {
       var m = (text || "").match(/\{[\s\S]*\}/);
       if (!m) throw new Error("bad-json");
       var obj = JSON.parse(m[0]);
-      var picks = (obj.picks || []).map(function (p) { return { idx: parseInt(p.i, 10), reason: String(p.reason || "") }; })
+      var picks = (obj.picks || []).map(function (p) { return { idx: parseInt(p.i, 10) - 1, reason: String(p.reason || "") }; })
         .filter(function (p) { return !isNaN(p.idx) && p.idx >= 0 && p.idx < pool.length; });
       var seen = {}, out = [];
       picks.forEach(function (p) { if (!seen[p.idx]) { seen[p.idx] = 1; out.push(p); } });

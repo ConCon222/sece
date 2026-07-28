@@ -12,12 +12,14 @@ import re
 import os
 import sys
 import argparse
+import tempfile
 from datetime import datetime
 import logging
 from typing import Dict, List, Optional, Any
 from urllib.parse import urlparse
 import random
 from dotenv import load_dotenv
+from bs4 import BeautifulSoup
 
 load_dotenv()
 
@@ -26,7 +28,24 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # FlareSolverr configuration
-FLARESOLVERR_URL = "http://127.0.0.1:8191"
+FLARESOLVERR_URL = os.environ.get("FLARESOLVERR_URL", "http://127.0.0.1:8191").rstrip("/")
+
+
+def _env_int(name: str, default: int, minimum: int = 1) -> int:
+    try:
+        return max(minimum, int(os.environ.get(name, default)))
+    except (TypeError, ValueError):
+        logger.warning("Invalid %s value; using %s", name, default)
+        return default
+
+
+FLARESOLVERR_MAX_TIMEOUT_MS = _env_int("FLARESOLVERR_MAX_TIMEOUT_MS", 60000, 5000)
+FLARESOLVERR_REQUEST_TIMEOUT_SECONDS = _env_int(
+    "FLARESOLVERR_REQUEST_TIMEOUT_SECONDS",
+    (FLARESOLVERR_MAX_TIMEOUT_MS // 1000) + 15,
+    10,
+)
+FLARESOLVERR_RETRIES = _env_int("FLARESOLVERR_RETRIES", 2, 1)
 USER_AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -34,12 +53,96 @@ USER_AGENTS = [
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15'
 ]
 
+
+def _atomic_write_yaml(data: Any, target_file: str) -> bool:
+    """Atomically persist YAML so cancellation cannot truncate jrank.yml."""
+    target_dir = os.path.dirname(target_file) or "."
+    temp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=target_dir,
+            prefix=f".{os.path.basename(target_file)}.",
+            suffix=".tmp",
+            delete=False,
+        ) as temp_file:
+            temp_path = temp_file.name
+            yaml.dump(data, temp_file, default_flow_style=False, allow_unicode=True)
+        os.replace(temp_path, target_file)
+        return True
+    except Exception as e:
+        logger.error("Error writing %s: %s", target_file, e)
+        if temp_path:
+            try:
+                os.unlink(temp_path)
+            except OSError:
+                pass
+        return False
+
+
 class FlareSolverrClient:
     """Client for FlareSolverr to bypass anti-bot protection (Enhanced for Wiley)"""
     
-    def __init__(self, base_url: str = FLARESOLVERR_URL):
-        self.base_url = base_url
+    def __init__(
+        self,
+        base_url: str = FLARESOLVERR_URL,
+        max_timeout_ms: int = FLARESOLVERR_MAX_TIMEOUT_MS,
+        request_timeout_seconds: int = FLARESOLVERR_REQUEST_TIMEOUT_SECONDS,
+        retries: int = FLARESOLVERR_RETRIES,
+    ):
+        self.base_url = base_url.rstrip("/")
+        self.max_timeout_ms = max(5000, int(max_timeout_ms))
+        self.request_timeout_seconds = max(
+            int(request_timeout_seconds),
+            (self.max_timeout_ms // 1000) + 5,
+        )
+        self.retries = max(1, int(retries))
         self.session = None
+
+    @staticmethod
+    def is_error_page(html: Optional[str], status_code: Any = 200) -> bool:
+        """Reject HTTP errors and anti-bot/error documents returned with status 200."""
+        try:
+            if int(status_code) >= 400:
+                return True
+        except (TypeError, ValueError):
+            return True
+
+        if not isinstance(html, str) or not html.strip():
+            return True
+
+        lower_html = html.lower()
+        challenge_markers = (
+            "cf-chl-",
+            "challenge-platform",
+            "checking your browser",
+            "enable javascript and cookies to continue",
+            "incapsula incident id",
+            "px-captcha",
+        )
+        if any(marker in lower_html for marker in challenge_markers):
+            metric_evidence = re.search(
+                r"acceptance\s+rate|submission\s+to\s+first|"
+                r"metrics-speed-value|alt-journals-metric",
+                lower_html,
+            )
+            if not metric_evidence:
+                return True
+
+        title_match = re.search(r"<title[^>]*>(.*?)</title>", lower_html, re.DOTALL)
+        title = re.sub(r"<[^>]+>", " ", title_match.group(1)) if title_match else ""
+        error_titles = (
+            "just a moment",
+            "access denied",
+            "attention required",
+            "captcha",
+            "page not found",
+            "404 not found",
+            "internal server error",
+            "service unavailable",
+        )
+        return any(marker in title for marker in error_titles)
         
     def create_session(self) -> Optional[str]:
         """Create a new FlareSolverr session"""
@@ -54,7 +157,9 @@ class FlareSolverrClient:
                 "session": session_id,
                 # 显式指定浏览器参数，尝试模拟真实环境
                 "userAgent": random.choice(USER_AGENTS) 
-            }, timeout=30)
+            }, timeout=min(30, self.request_timeout_seconds))
+
+            response.raise_for_status()
             
             data = response.json()
             if data.get("status") == "ok":
@@ -70,33 +175,23 @@ class FlareSolverrClient:
     
     def get_page(self, url: str) -> Optional[str]:
         """Get page content using FlareSolverr with Retry Logic"""
-        # 增加最大超时时间到 3 分钟 (180000ms)
-        # Wiley 的五秒盾有时候会卡很久
-        max_timeout = 180000 
-        
-        for attempt in range(2): # 尝试 2 次
+        for attempt in range(self.retries):
             if not self.session:
                 if not self.create_session():
                     return None
             
             try:
-                logger.info(f"   🔄 Requesting page (Attempt {attempt+1}): {url}")
+                logger.info(f"   🔄 Requesting page (Attempt {attempt + 1}/{self.retries}): {url}")
                 
-                # 注意：Python 的 requests timeout 必须比 FlareSolverr 的 maxTimeout 大
-                # 这里设为 190秒，给 FlareSolverr 留出 180秒 处理时间
+                # Python request timeout is kept slightly above maxTimeout in __init__.
                 response = requests.post(f"{self.base_url}/v1", json={
                     "cmd": "request.get",
                     "url": url,
-                    "maxTimeout": max_timeout,
+                    "maxTimeout": self.max_timeout_ms,
                     "session": self.session,
                     # 只要 HTML 下载完就算成功，不需要等所有图片加载完 (networkidle0有时会卡死)
                     "returnOnlyHtml": True 
-                }, timeout=190) 
-                
-                if response.status_code == 500:
-                    logger.warning(f"   ⚠️ FlareSolverr 500 Error (Timeout?). Destroying session and retrying...")
-                    self.destroy_session() # 销毁当前 session，下次循环会重建
-                    continue
+                }, timeout=self.request_timeout_seconds)
 
                 response.raise_for_status()
                 data = response.json()
@@ -104,13 +199,16 @@ class FlareSolverrClient:
                 if data.get("status") == "ok":
                     solution = data.get("solution", {})
                     html = solution.get("response")
-                    
-                    # 简单检查是否真的拿到了内容，而不是 blocked 页面
-                    if "Just a moment" in html and len(html) < 5000:
-                         logger.warning("   ⚠️ Still stuck on Cloudflare challenge.")
-                         self.destroy_session()
-                         continue
-                         
+                    solution_status = solution.get("status", 200)
+
+                    if self.is_error_page(html, solution_status):
+                        logger.warning(
+                            "   ⚠️ FlareSolverr returned an error/challenge page (status=%s)",
+                            solution_status,
+                        )
+                        self.destroy_session()
+                        continue
+
                     return html
                 else:
                     logger.error(f"FlareSolverr request failed: {data}")
@@ -594,9 +692,8 @@ class UChicagoCrawler(PublisherCrawler):
             desk = re.search(r'Desk Rejection\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
             reject = re.search(r'Reject with Reviews?\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
             revise = re.search(r'Revise\s+([\d.]+)%\s+(\d+)\s+(\d+)', html)
-
-            if revise:
-                metrics['acceptance_rate'] = f"{revise.group(1)}%"
+            # "Revise" is a first-round decision share, not a final acceptance
+            # rate. Treating it as acceptance corrupts both the table and HM.
 
             rows = []
             for m in (desk, reject, revise):
@@ -617,6 +714,31 @@ class UChicagoCrawler(PublisherCrawler):
 class NatureCrawler:
     """Crawler for Nature Portfolio journals — no Cloudflare, plain requests."""
 
+    SUMMARY_URL = "https://www.nature.com/nature-portfolio/about-journals/journal-metrics"
+
+    @staticmethod
+    def _parse_summary_metrics(html: str, slug: str) -> Dict[str, Any]:
+        soup = BeautifulSoup(html or "", "lxml")
+        slug_path = f"/{slug.strip('/')}/"
+        for row in soup.select("table tr"):
+            link = row.find("a", href=True)
+            if not link:
+                continue
+            link_path = urlparse(link.get("href", "")).path
+            if link_path.rstrip("/") != slug_path.rstrip("/"):
+                continue
+            cells = row.find_all(["td", "th"])
+            if len(cells) < 3:
+                continue
+            first = re.search(r"\d+", cells[1].get_text(" ", strip=True))
+            accept = re.search(r"\d+", cells[2].get_text(" ", strip=True))
+            if first and accept:
+                return {
+                    "first_decision_time": f"{first.group(0)} days",
+                    "acceptance_time": f"{accept.group(0)} days",
+                }
+        return {}
+
     def extract_metrics(self, url: str) -> Dict[str, Any]:
         slug = url.rstrip('/').split('/')[-1]
         metrics_url = f'https://www.nature.com/{slug}/journal-impact'
@@ -629,17 +751,32 @@ class NatureCrawler:
             }, timeout=30)
             if r.status_code != 200:
                 logger.warning(f"Nature page returned {r.status_code}")
-                return metrics
-            html = r.text
-            m1 = re.search(r'first editorial decision \(median days\):\s*(\d+)', html)
-            m2 = re.search(r'acceptance \(median days\):\s*(\d+)', html)
+            html = r.text if r.status_code == 200 else ""
+            m1 = re.search(r'first editorial decision \(median days\):\s*(\d+)', html, re.I)
+            m2 = re.search(r'acceptance \(median days\):\s*(\d+)', html, re.I)
             if m1:
                 metrics['first_decision_time'] = f"{m1.group(1)} days"
             if m2:
                 metrics['acceptance_time'] = f"{m2.group(1)} days"
-            logger.info(f"Extracted Nature metrics: {metrics}")
         except Exception as e:
-            logger.error(f"Error fetching Nature metrics: {e}")
+            logger.warning(f"Nature journal-impact request failed: {e}")
+
+        # Some journals (for example Scientific Reports) redirect
+        # /journal-impact to /about and no longer expose speed there.
+        if not metrics.get("first_decision_time") or not metrics.get("acceptance_time"):
+            try:
+                summary_response = requests.get(
+                    self.SUMMARY_URL,
+                    headers={'User-Agent': random.choice(USER_AGENTS)},
+                    timeout=30,
+                )
+                if summary_response.status_code == 200:
+                    metrics.update(
+                        self._parse_summary_metrics(summary_response.text, slug)
+                    )
+            except Exception as e:
+                logger.error(f"Nature summary request failed: {e}")
+        logger.info(f"Extracted Nature metrics: {metrics}")
         return metrics
 
 
@@ -683,6 +820,16 @@ class JournalRankingUpdater:
             'journals.uchicago.edu': 'uchicago',
             'uchicago.edu': 'uchicago'
         }
+        self.publisher_display_names = {
+            'wiley': 'Wiley',
+            'taylor_francis': 'Taylor & Francis',
+            'springer': 'Springer',
+            'sage': 'SAGE',
+            'elsevier': 'Elsevier',
+            'apa': 'APA',
+            'nature': 'Nature Portfolio',
+            'uchicago': 'University of Chicago Press',
+        }
 
         # Display-name inference for publishers we don't crawl metrics from.
         # Without this, ~27% of journals had an empty publisher and never
@@ -708,6 +855,38 @@ class JournalRankingUpdater:
             'journals.humankinetics.com': 'Human Kinetics',
             'frontiersin.org': 'Frontiers',
             'mdpi.com': 'MDPI',
+            'j-ets.net': 'International Forum of Educational Technology & Society',
+            'jle.aals.org': 'Association of American Law Schools',
+            'ajet.org.au': 'ASCILITE',
+            'lltjournal.org': 'University of Hawaiʻi',
+            'pubs.nctm.org': 'National Council of Teachers of Mathematics',
+            'hepg.org': 'Harvard Education Publishing Group',
+            'revistas.uned.es': 'UNED',
+            'ugr.es': 'University of Granada',
+            'irrodl.org': 'Athabasca University Press',
+            'ncte.org': 'National Council of Teachers of English',
+            'educacionfpydeportes.gob.es': 'Ministry of Education, Spain',
+            'copmadrid.org': 'Colegio Oficial de la Psicología de Madrid',
+            'ensciencias.uab.cat': 'Universitat Autònoma de Barcelona',
+            'scientiasocialis.lt': 'Scientia Socialis',
+            'unisapressjournals.co.za': 'UNISA Press',
+            'kedi.re.kr': 'Korean Educational Development Institute',
+            'ajal.net.au': 'Adult Learning Australia',
+            'educationandscience.ted.org.tr': 'Turkish Education Association',
+            'sajournalofeducation.co.za': 'Education Association of South Africa',
+            'aate.org.au': 'Australian Association for the Teaching of English',
+            'ufrgs.br': 'Federal University of Rio Grande do Sul',
+            'dukeupress.edu': 'Duke University Press',
+            'journalofphilosophy.org': 'Journal of Philosophy, Inc.',
+            'ucpress.edu': 'University of California Press',
+            'harvardlawreview.org': 'Harvard Law Review Association',
+            'biomedcentral.com': 'BMC',
+            'learning-analytics.info': 'Society for Learning Analytics Research',
+            'educationaldatamining.org': 'International Educational Data Mining Society',
+            'plos.org': 'PLOS',
+            'annualreviews.org': 'Annual Reviews',
+            'pnas.org': 'National Academy of Sciences',
+            'misq.org': 'MIS Quarterly',
         }
 
     def infer_publisher_display(self, url: str) -> Optional[str]:
@@ -790,20 +969,25 @@ class JournalRankingUpdater:
     
     def update_journal_rankings(self, dry_run: bool = False, only_missing: bool = False,
                                 save_every: int = 10, batch_offset: int = 0,
-                                batch_size: int = 0):
+                                batch_size: int = 0) -> bool:
         """Main function to update all journal rankings
 
         only_missing: 只处理还没有 EasyScholar 数据(purple_score)的期刊，跳过已完成的，
                       把 388 本的全量重爬（会顶破 6h）缩短为只处理新刊。
         save_every:   每处理 N 本就把 jrank.yml 写一次盘，超时被杀也保住已爬进度。
         batch_offset/batch_size: 轮转窗口——本轮只处理 journal_list[offset:offset+size]
-                      （绕回开头）。配合管理器游标实现「每轮 250 本」滚动刷新，保证
+                      （绕回开头）。配合管理器游标实现小批次滚动刷新，保证
                       录用率/审稿周期等会变的数据也能定期更新，而不超时。
         """
         if dry_run:
             logger.info("Running in DRY-RUN mode - data will NOT be saved")
 
         journal_list, existing_data = self.load_journal_data()
+        if not journal_list:
+            logger.error("No journal configuration was loaded; refusing to report success")
+            return False
+        all_journal_list = journal_list
+        master_names = {item.get("name") for item in all_journal_list if item.get("name")}
 
         # 轮转窗口：只处理本轮分配到的那一段期刊
         if batch_size:
@@ -815,30 +999,82 @@ class JournalRankingUpdater:
                 logger.info(f"Batch window [{off}:+{batch_size}] → processing {len(journal_list)} of {total} journals")
 
         # Create a dictionary for quick lookup of existing data
-        existing_dict = {item['journal']: item for item in existing_data}
+        existing_dict = {
+            item['journal']: item
+            for item in existing_data
+            if item.get('journal') in master_names
+        }
+        orphan_count = len(existing_data) - len(existing_dict)
+        if orphan_count:
+            logger.warning(
+                "Pruning %d jrank entries that are no longer present in journal_rank.json",
+                orphan_count,
+            )
+
+        # Apply canonical metadata to the full existing dataset, not only the
+        # current rotating window. This backfills long-tail publisher names and
+        # prevents stale tags from surviving for months.
+        for master_item in all_journal_list:
+            journal_name = master_item.get('name')
+            journal_data = existing_dict.get(journal_name)
+            if not journal_data:
+                continue
+            tags = master_item.get('tag')
+            if tags:
+                journal_data['tag'] = tags
+            configured_publisher = str(master_item.get('publisher') or '').strip()
+            if configured_publisher:
+                journal_data['publisher'] = configured_publisher
+                continue
+            url = master_item.get('url', '')
+            publisher_key = self.get_publisher_from_url(url) if url else None
+            if publisher_key:
+                journal_data['publisher'] = self.publisher_display_names[publisher_key]
+            elif not journal_data.get('publisher'):
+                display_name = self.infer_publisher_display(url)
+                if display_name:
+                    journal_data['publisher'] = display_name
 
         def _flush():
-            try:
-                with open('_data/jrank.yml', 'w', encoding='utf-8') as f:
-                    yaml.dump(list(existing_dict.values()), f, default_flow_style=False, allow_unicode=True)
-                return True
-            except Exception as e:
-                logger.error(f"❌ 增量保存失败: {e}")
-                return False
+            return _atomic_write_yaml(list(existing_dict.values()), '_data/jrank.yml')
 
         updated_count = 0
+        save_failed = False
+        network_attempted = 0
+        network_parsed = 0
+        network_failed = 0
 
         for journal_info in journal_list:
             journal_name = journal_info['name']
             url = journal_info.get('url', '')
-            sourceid = journal_info.get('sourceid')
             tags = journal_info.get('tag', [])
+            publisher_key = self.get_publisher_from_url(url) if url else None
 
             # only_missing: 已有 purple_score(EasyScholar IF) 的期刊跳过昂贵的
             # 出版社爬虫 + EasyScholar 网络调用，只处理新刊/缺数据的
             if only_missing:
                 ex = existing_dict.get(journal_name)
-                if ex and ex.get('purple_score'):
+                rank_complete = (
+                    self.easyscholar_crawler is None
+                    or bool(ex and ex.get('purple_score') and ex.get('purple_quartile'))
+                )
+                publisher_complete = (
+                    publisher_key not in self.publisher_crawlers
+                    or bool(
+                        ex
+                        and any(
+                            ex.get(field)
+                            for field in (
+                                'acceptance_rate',
+                                'first_decision_time',
+                                'review_time',
+                                'acceptance_time',
+                                'publication_time',
+                            )
+                        )
+                    )
+                )
+                if ex and rank_complete and publisher_complete:
                     continue
 
             logger.info(f"Processing {journal_name}...")
@@ -846,8 +1082,8 @@ class JournalRankingUpdater:
             # 获取现有数据或创建新条目（保留所有现有字段）
             if journal_name in existing_dict:
                 journal_data = existing_dict[journal_name].copy()
-                # 更新 tag（如果有新的）
-                if tags and not journal_data.get('tag'):
+                # journal_rank.json is the canonical tag source.
+                if tags:
                     journal_data['tag'] = tags
             else:
                 # 新期刊，创建基础条目
@@ -871,32 +1107,52 @@ class JournalRankingUpdater:
                 }
             
             # Determine publisher from URL
+            configured_publisher = str(journal_info.get('publisher') or '').strip()
+            if configured_publisher:
+                journal_data['publisher'] = configured_publisher
             if url:
-                publisher_key = self.get_publisher_from_url(url)
-                if publisher_key:
-                    journal_data['publisher'] = publisher_key
-                elif not journal_data.get('publisher'):
+                if publisher_key and not configured_publisher:
+                    journal_data['publisher'] = self.publisher_display_names[publisher_key]
+                elif not configured_publisher and not journal_data.get('publisher'):
                     display_name = self.infer_publisher_display(url)
                     if display_name:
                         journal_data['publisher'] = display_name
             
             # Get publisher-specific metrics
-            if url and journal_data.get('publisher'):
-                publisher_key = journal_data['publisher']
-                if publisher_key in self.publisher_crawlers:
-                    try:
-                        publisher_metrics = self.publisher_crawlers[publisher_key].extract_metrics(url)
-                        # Update only if we got data
-                        for key, value in publisher_metrics.items():
-                            if value:
-                                journal_data[key] = value
-                    except Exception as e:
-                        logger.error(f"Error getting publisher metrics for {journal_name}: {e}")
+            if url and publisher_key in self.publisher_crawlers:
+                network_attempted += 1
+                try:
+                    publisher_metrics = self.publisher_crawlers[publisher_key].extract_metrics(url)
+                    # Update only if we got data. A blocked request therefore
+                    # preserves all previously known publisher values.
+                    parsed_publisher_values = {
+                        key: value
+                        for key, value in publisher_metrics.items()
+                        if key != 'publisher' and value not in (None, '')
+                    }
+                    if parsed_publisher_values:
+                        network_parsed += 1
+                    else:
+                        network_failed += 1
+                    for key, value in publisher_metrics.items():
+                        if value:
+                            journal_data[key] = value
+                except Exception as e:
+                    network_failed += 1
+                    logger.error(f"Error getting publisher metrics for {journal_name}: {e}")
             
             # Get EasyScholar data (紫色分区、红色分区、紫色分数) - 优先级最高
             if self.easyscholar_crawler:
+                network_attempted += 1
                 try:
                     easyscholar_data = self.easyscholar_crawler.get_journal_rank(journal_name)
+                    if any(
+                        easyscholar_data.get(field)
+                        for field in ('purple_quartile', 'red_division', 'purple_score')
+                    ):
+                        network_parsed += 1
+                    else:
+                        network_failed += 1
                     
                     # 更新 3 个字段（EasyScholar 数据优先级最高，会覆盖之前的值）
                     if easyscholar_data.get('purple_quartile'):
@@ -907,6 +1163,7 @@ class JournalRankingUpdater:
                         journal_data['purple_score'] = easyscholar_data['purple_score']
                         
                 except Exception as e:
+                    network_failed += 1
                     logger.error(f"Error getting EasyScholar data for {journal_name}: {e}")
             
             # Calculate HM score
@@ -920,6 +1177,8 @@ class JournalRankingUpdater:
             if not dry_run and save_every and updated_count % save_every == 0:
                 if _flush():
                     logger.info(f"💾 增量保存：已写入 {updated_count} 本的进度")
+                else:
+                    save_failed = True
 
             # Add delay to avoid rate limiting
             time.sleep(random.uniform(2, 5))
@@ -934,17 +1193,28 @@ class JournalRankingUpdater:
         elif updated_count == 0:
             logger.info("ℹ️ 没有数据更新，跳过保存")
         else:
-            try:
-                # 转换回列表（保留所有期刊数据）
-                updated_data = list(existing_dict.values())
-                with open('_data/jrank.yml', 'w', encoding='utf-8') as f:
-                    yaml.dump(updated_data, f, default_flow_style=False, allow_unicode=True)
+            # 转换回列表（保留所有期刊数据）
+            updated_data = list(existing_dict.values())
+            if _atomic_write_yaml(updated_data, '_data/jrank.yml'):
                 logger.info("Successfully updated jrank.yml with %d journals", len(updated_data))
-            except Exception as e:
-                logger.error(f"Error saving updated data: {e}")
+            else:
+                save_failed = True
         
         # Clean up FlareSolverr session
         self.flaresolverr_client.destroy_session()
+        if network_attempted and network_parsed == 0:
+            logger.error(
+                "All %d publisher/EasyScholar network attempts failed; refusing to advance the cursor",
+                network_attempted,
+            )
+            return False
+        if network_failed:
+            logger.warning(
+                "%d/%d publisher/EasyScholar attempts returned no usable metrics; old values were preserved",
+                network_failed,
+                network_attempted,
+            )
+        return not save_failed
     
     def calculate_hm_score(self, journal_data):
         """Calculate HM (Haoming) custom score based on multiple factors
@@ -1054,9 +1324,15 @@ def main():
     
     try:
         logger.info("Starting journal ranking update...")
-        updater.update_journal_rankings(dry_run=args.dry_run, only_missing=args.only_missing,
-                                        save_every=args.save_every,
-                                        batch_offset=args.batch_offset, batch_size=args.batch_size)
+        success = updater.update_journal_rankings(
+            dry_run=args.dry_run,
+            only_missing=args.only_missing,
+            save_every=args.save_every,
+            batch_offset=args.batch_offset,
+            batch_size=args.batch_size,
+        )
+        if not success:
+            raise RuntimeError("journal ranking update did not complete successfully")
         logger.info("Journal ranking update completed successfully")
     except KeyboardInterrupt:
         logger.info("Update interrupted by user")

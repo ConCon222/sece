@@ -215,11 +215,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function sortValue(entry, key) {
     if (key === "name") return String(entry.journal || "").toLowerCase();
-    if (key === "decision") return numeric(entry.firstDecision, 9999);
-    if (key === "accept") return numeric(entry.acceptanceRate, -1);
-    if (key === "hm") return numeric(entry.hm, 0);
-    if (key === "orange") return numeric(entry.orangeScore, 0);
-    return numeric(entry.purpleScore, 0);
+    if (key === "decision") return numeric(entry.firstDecision, null);
+    if (key === "accept") return numeric(entry.acceptanceRate, null);
+    if (key === "hm") return numeric(entry.hm, null);
+    if (key === "orange") return numeric(entry.orangeScore, null);
+    return numeric(entry.purpleScore, null);
+  }
+
+  function missingSortValue(entry, key, value) {
+    if (key === "name") return !value;
+    if (value == null) return true;
+    return value <= 0;
   }
 
   function applyFilters(resetPage) {
@@ -245,11 +251,13 @@ document.addEventListener("DOMContentLoaded", function () {
     matched.sort(function (a, b) {
       var aValue = sortValue(a, currentSort.key);
       var bValue = sortValue(b, currentSort.key);
-      var result = typeof aValue === "string" ? aValue.localeCompare(bValue) : aValue - bValue;
-      if (currentSort.key === "decision") {
-        if (aValue === 9999 && bValue !== 9999) return 1;
-        if (bValue === 9999 && aValue !== 9999) return -1;
+      var aMissing = missingSortValue(a, currentSort.key, aValue);
+      var bMissing = missingSortValue(b, currentSort.key, bValue);
+      if (aMissing !== bMissing) return aMissing ? 1 : -1;
+      if (aMissing && bMissing) {
+        return String(a.journal || "").localeCompare(String(b.journal || ""));
       }
+      var result = typeof aValue === "string" ? aValue.localeCompare(bValue) : aValue - bValue;
       return currentSort.dir === "asc" ? result : -result;
     });
 
@@ -269,15 +277,21 @@ document.addEventListener("DOMContentLoaded", function () {
     currentPage = requestedPage;
   }
 
+  function updateSortHeaders() {
+    document.querySelectorAll(".sortable").forEach(function (header) {
+      var active = header.dataset.sort === currentSort.key;
+      header.classList.remove("sort-asc", "sort-desc");
+      header.setAttribute("aria-sort", active ? (currentSort.dir === "asc" ? "ascending" : "descending") : "none");
+      if (active) header.classList.add(currentSort.dir === "asc" ? "sort-asc" : "sort-desc");
+    });
+  }
+
   document.querySelectorAll(".sortable").forEach(function (header) {
     header.addEventListener("click", function () {
       var key = this.dataset.sort;
       currentSort.dir = currentSort.key === key && currentSort.dir === "desc" ? "asc" : "desc";
       currentSort.key = key;
-      document.querySelectorAll(".sortable").forEach(function (item) {
-        item.classList.remove("sort-asc", "sort-desc");
-      });
-      this.classList.add(currentSort.dir === "asc" ? "sort-asc" : "sort-desc");
+      updateSortHeaders();
       applyFilters(true);
     });
   });
@@ -299,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   restoreUrlState();
+  updateSortHeaders();
   fetch(source, { credentials: "same-origin" })
     .then(function (response) {
       if (!response.ok) throw new Error("Unable to load journal data");
