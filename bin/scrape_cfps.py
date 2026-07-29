@@ -404,13 +404,24 @@ class JournalCFPScraper:
         default_date = "9999-99-99"
         if not date_str or date_str in {"N/A", "未找到日期", ""}:
             return default_date
-        # Date ranges and paragraphs containing both abstract/full-paper
-        # deadlines must sort by the final (usually full-paper) date.
+        # Within one date expression, a range represents a submission window,
+        # so its final date is the deadline. Distinct submission stages (for
+        # example abstract and full-paper deadlines) are compared separately by
+        # _earliest_deadline_sort_key().
         for candidate in reversed(self.extract_dates(date_str)):
             sort_key = self._single_date_to_sort_key(candidate)
             if sort_key:
                 return sort_key
         return default_date
+
+    def _earliest_deadline_sort_key(self, *deadline_values):
+        """Return the earliest parseable submission-stage deadline."""
+        parsed = [
+            self.parse_date_to_sort_key(value)
+            for value in deadline_values
+        ]
+        known = [value for value in parsed if value != "9999-99-99"]
+        return min(known) if known else "9999-99-99"
 
     def fetch_page_fast(self, url, timeout=30):
         """非 Cloudflare 站点用 curl_cffi"""
@@ -1309,7 +1320,12 @@ class JournalCFPScraper:
     def normalize_item_for_yaml(self, journal, item):
         abstract_deadline = self._empty_if_na(item.get("abstract_deadline"))
         fullpaper_deadline = self._empty_if_na(item.get("fullpaper_deadline", "") or item.get("deadline", ""))
-        fullpaper_deadline_sort = self.parse_date_to_sort_key(fullpaper_deadline or abstract_deadline)
+        # Keep the historical field name for template compatibility, but its
+        # value is the earliest known submission-stage deadline.
+        fullpaper_deadline_sort = self._earliest_deadline_sort_key(
+            abstract_deadline,
+            fullpaper_deadline,
+        )
 
         raw_tag = journal.get("tag", [])
         if isinstance(raw_tag, str):
@@ -1359,8 +1375,10 @@ class JournalCFPScraper:
         merged_map = {}
         for raw_item in existing_for_merge + new_records:
             item = dict(raw_item)
-            sort_source = item.get("fullpaper_deadline") or item.get("abstract_deadline")
-            item["fullpaper_deadline_sort"] = self.parse_date_to_sort_key(sort_source)
+            item["fullpaper_deadline_sort"] = self._earliest_deadline_sort_key(
+                item.get("abstract_deadline"),
+                item.get("fullpaper_deadline"),
+            )
             canonical_link = self._canonical_link(item.get("link"))
             title_key = self.clean_text(item.get("title")).casefold()
             key = (item.get("journal"), canonical_link or title_key)

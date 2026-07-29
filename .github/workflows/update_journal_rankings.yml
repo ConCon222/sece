@@ -7,9 +7,13 @@ on:
   workflow_dispatch: # Allow manual trigger
     inputs:
       full_refresh:
-        description: 'Re-scrape ALL journals (slow, hours). Leave off to only fill journals missing data.'
+        description: 'Re-scrape ALL journals (slow, may time out). Leave off for the normal rotating 50-journal window.'
         type: boolean
         default: false
+
+concurrency:
+  group: journal-ranking-rotation
+  cancel-in-progress: false
 
 jobs:
   update-rankings:

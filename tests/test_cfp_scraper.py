@@ -44,6 +44,27 @@ class CFPParserTests(unittest.TestCase):
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0]["abstract_deadline"], "2 February 2027")
         self.assertEqual(results[0]["fullpaper_deadline"], "31 August 2027")
+        normalized = self.scraper.normalize_item_for_yaml(
+            {"name": "Test Journal", "url": "https://example.wiley.com", "tag": []},
+            results[0],
+        )
+        self.assertEqual(normalized["fullpaper_deadline_sort"], "2027-02-02")
+
+    def test_earliest_submission_stage_controls_sort_order(self):
+        self.assertEqual(
+            self.scraper._earliest_deadline_sort_key(
+                "31 August 2027",
+                "March 2028",
+            ),
+            "2027-08-31",
+        )
+        self.assertEqual(
+            self.scraper._earliest_deadline_sort_key(
+                "",
+                "March 2028",
+            ),
+            "2028-03-31",
+        )
 
     def test_taylor_francis_rejects_guidance_page(self):
         guidance = """

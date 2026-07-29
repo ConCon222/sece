@@ -74,6 +74,19 @@ class ScopusMetricMergeTests(unittest.TestCase):
         self.assertEqual(current, "596")
         self.assertEqual(previous, "481")
 
+    def test_eight_rotating_windows_cover_all_386_journals(self):
+        journals = list(range(386))
+        offset = 362
+        covered = set()
+
+        for _ in range(8):
+            window = scopus._apply_batch(journals, offset, 50)
+            self.assertEqual(len(window), 50)
+            covered.update(window)
+            offset = (offset + 50) % len(journals)
+
+        self.assertEqual(covered, set(journals))
+
 
 class JournalManagerStateTests(unittest.TestCase):
     def _manager_in(self, directory, journal_count=4):
@@ -132,8 +145,40 @@ class JournalManagerStateTests(unittest.TestCase):
             metadata = yaml.safe_load(Path(manager.meta_file).read_text(encoding="utf-8"))
             self.assertEqual(metadata["batch_offset"], 1)
             self.assertEqual(metadata["batch_size"], 2)
+            self.assertEqual(metadata["next_batch_offset"], 3)
             self.assertEqual(metadata["journal_count"], 4)
             self.assertRegex(metadata["last_successful_update"], r"^\d{4}-\d{2}-\d{2}$")
+            manager.run_scopus_update.assert_called_once_with(
+                dry_run=False,
+                only_missing=False,
+                batch_offset=1,
+                batch_size=2,
+            )
+            manager.run_publisher_update.assert_called_once_with(
+                dry_run=False,
+                easyscholar_key=None,
+                only_missing=False,
+                batch_offset=1,
+                batch_size=2,
+            )
+
+    def test_metadata_cursor_wraps_and_overrides_stale_legacy_cursor(self):
+        with tempfile.TemporaryDirectory() as directory:
+            manager = self._manager_in(directory)
+            Path(manager.cursor_file).write_text("3", encoding="utf-8")
+            manager.run_scopus_update = mock.Mock(return_value=True)
+            manager.run_publisher_update = mock.Mock(return_value=True)
+
+            success = manager.run_all(show_diff=False, batch_size=2)
+
+            self.assertTrue(success)
+            self.assertEqual(manager.read_cursor(), 1)
+            self.assertEqual(Path(manager.cursor_file).read_text(encoding="utf-8"), "1")
+            metadata = yaml.safe_load(Path(manager.meta_file).read_text(encoding="utf-8"))
+            self.assertEqual(metadata["next_batch_offset"], 1)
+
+            Path(manager.cursor_file).write_text("3", encoding="utf-8")
+            self.assertEqual(manager.read_cursor(), 1)
 
 
 class FlareSolverrValidationTests(unittest.TestCase):

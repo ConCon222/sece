@@ -23,8 +23,8 @@ logger = logging.getLogger(__name__)
 # 文件路径
 JRANK_FILE = '_data/jrank.yml'
 JOURNAL_RANK_FILE = '_data/journal_rank.json'
-CURSOR_FILE = '_data/.rank_cursor'  # 轮转游标：记录下一轮窗口起点（随仓库提交，跨运行保留）
-META_FILE = '_data/jrank_meta.yml'  # 最近一次完整成功更新的信息，供页面和审计使用
+CURSOR_FILE = '_data/.rank_cursor'  # 兼容旧任务的游标镜像
+META_FILE = '_data/jrank_meta.yml'  # 成功批次、下一轮起点和页面更新时间（权威状态）
 
 
 class JournalDataManager:
@@ -64,7 +64,19 @@ class JournalDataManager:
             return []
 
     def read_cursor(self) -> int:
-        """读取轮转游标（下一轮窗口起点）。文件不存在或损坏则从 0 开始。"""
+        """读取轮转游标（下一轮窗口起点）。
+
+        jrank_meta.yml is authoritative because it stores the successful batch
+        and next offset atomically. The legacy cursor file remains a readable
+        mirror for compatibility with older runs.
+        """
+        try:
+            with open(self.meta_file, 'r', encoding='utf-8') as f:
+                metadata = yaml.safe_load(f) or {}
+            if metadata.get("next_batch_offset") is not None:
+                return int(metadata["next_batch_offset"])
+        except Exception:
+            pass
         try:
             with open(self.cursor_file, 'r', encoding='utf-8') as f:
                 return int((f.read() or '0').strip())
@@ -100,7 +112,8 @@ class JournalDataManager:
     def write_cursor(self, offset: int) -> bool:
         return self._atomic_write_text(self.cursor_file, str(int(offset)))
 
-    def write_success_metadata(self, batch_offset: int, batch_size: int, journal_count: int) -> bool:
+    def write_success_metadata(self, batch_offset: int, batch_size: int,
+                               journal_count: int, next_batch_offset: int) -> bool:
         """Record only a fully successful two-stage update."""
         completed_at = datetime.now().astimezone()
         metadata = {
@@ -108,6 +121,7 @@ class JournalDataManager:
             "last_successful_update_at": completed_at.isoformat(timespec="seconds"),
             "batch_offset": int(batch_offset),
             "batch_size": int(batch_size),
+            "next_batch_offset": int(next_batch_offset),
             "journal_count": int(journal_count),
         }
         content = yaml.safe_dump(metadata, allow_unicode=True, sort_keys=False)
@@ -363,14 +377,24 @@ class JournalDataManager:
         # Only a fully successful two-stage run may advance the cursor or update
         # the "last successful" metadata. Partial data remains on disk for CI to commit.
         if success and not dry_run:
-            if not self.write_success_metadata(batch_offset, batch_size, total):
+            next_offset = (
+                (batch_offset + batch_size) % total
+                if batch_size
+                else self.read_cursor() % total
+            )
+            if not self.write_success_metadata(
+                batch_offset,
+                batch_size,
+                total,
+                next_offset,
+            ):
                 success = False
             if success and batch_size:
-                new_offset = (batch_offset + batch_size) % total
-                if self.write_cursor(new_offset):
-                    print(f"\n🔄 游标前移: 下一轮从第 {new_offset} 本开始")
-                else:
-                    success = False
+                # Compatibility mirror only. The atomically written metadata is
+                # authoritative, so a mirror failure must not repeat the batch.
+                if not self.write_cursor(next_offset):
+                    logger.warning("⚠️ 旧游标镜像写入失败；将使用元数据中的下一轮起点")
+                print(f"\n🔄 游标前移: 下一轮从第 {next_offset} 本开始")
 
         # 3. 对比差异
         if show_diff:

@@ -48,6 +48,7 @@ class JournalDataIntegrityTests(unittest.TestCase):
 
     def test_cfps_have_valid_links_dates_and_unique_journal_links(self):
         seen = set()
+        sort_keys = []
         for item in self.cfps:
             self.assertTrue(str(item.get("journal") or "").strip())
             self.assertTrue(str(item.get("title") or "").strip())
@@ -58,8 +59,15 @@ class JournalDataIntegrityTests(unittest.TestCase):
             seen.add(key)
 
             sort_key = item.get("fullpaper_deadline_sort")
+            sort_keys.append(sort_key or "9999-99-99")
             if sort_key != "9999-99-99":
                 datetime.strptime(sort_key, "%Y-%m-%d")
+
+        self.assertEqual(
+            sort_keys,
+            sorted(sort_keys),
+            "cfps.yml is not ordered by its effective earliest deadline",
+        )
 
 
 if __name__ == "__main__":
