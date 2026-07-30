@@ -3765,6 +3765,19 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
+  title: Healthy Aging
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hijffbgchi
+  description: This collection welcomes submissions based on studying preclinical models, as well as population-wide and clinical
+    studies. Studies that advance our understanding of mechanisms behind healthy aging are also welcomed. Clinical research
+    of interest will include epidemiological studies, observational studies, longitudinal cohort studies, systematic reviews
+    and clinical trials.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
   title: (In)civility
   abstract_deadline: ''
   fullpaper_deadline: ''
