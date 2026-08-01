@@ -18,7 +18,7 @@
   documents_current_year: 7 (2026)
   documents_last_year: 25 (2025)
   documents_published: 25 (2025)
-  first_decision_time: 40 days
+  first_decision_time: 25 days
   hm_score: 71.2
   journal: Educational Psychologist
   orange_percentile: '99'
@@ -29,7 +29,7 @@
   purple_quartile: Q1
   purple_score: '10.6'
   red_division: 教育学1区
-  review_time: 58 days
+  review_time: 63 days
   tag:
   - Educational Psychology
 - acceptance_time: 318 days
@@ -73,7 +73,7 @@
   documents_current_year: 6 (2026)
   documents_last_year: 17 (2025)
   documents_published: 17 (2025)
-  first_decision_time: 9 days
+  first_decision_time: 18 days
   hm_score: 67.7
   journal: Studies in Science Education
   orange_percentile: '99'
@@ -83,7 +83,7 @@
   purple_quartile: Q1
   purple_score: '10.3'
   red_division: 教育学1区
-  review_time: 172 days
+  review_time: 97 days
   tag:
   - Review Journal
 - acceptance_rate: 4%
@@ -181,18 +181,18 @@
   documents_current_year: 91 (2026)
   documents_last_year: 182 (2025)
   documents_published: 182 (2025)
-  first_decision_time: 38 days
+  first_decision_time: 44 days
   hm_score: 79.3
   journal: Computer Assisted Language Learning
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '29.7'
-  publication_time: 11 days
+  publication_time: 13 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '8.7'
   red_division: 文学1区
-  review_time: 80 days
+  review_time: 164 days
   tag:
   - Language Education & Acquisition
   - Educational Technology
@@ -314,18 +314,18 @@
   documents_current_year: 282 (2026)
   documents_last_year: 431 (2025)
   documents_published: 431 (2025)
-  first_decision_time: 13 days
+  first_decision_time: 12 days
   hm_score: 75.4
   journal: Interactive Learning Environments
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '17.8'
-  publication_time: 20 days
+  publication_time: 18 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '6.7'
   red_division: 教育学3区
-  review_time: 84 days
+  review_time: 54 days
   tag:
   - Educational Technology
 - documents_current_year: 7 (2026)
@@ -361,36 +361,36 @@
   documents_current_year: 72 (2026)
   documents_last_year: 126 (2025)
   documents_published: 126 (2025)
-  first_decision_time: 53 days
+  first_decision_time: 59 days
   hm_score: 61.2
   journal: Journal of Research on Technology in Education
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '17.9'
-  publication_time: 24 days
+  publication_time: 35 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '3.5'
   red_division: 教育学3区
-  review_time: 61 days
+  review_time: 64 days
   tag:
   - Educational Technology
 - acceptance_rate: 9%
   documents_current_year: 132 (2026)
   documents_last_year: 227 (2025)
   documents_published: 227 (2025)
-  first_decision_time: 12 days
+  first_decision_time: 14 days
   hm_score: 70.7
   journal: Innovations in Education and Teaching International
   orange_percentile: '97'
   orange_quartile: Q1
   orange_score: '12.1'
-  publication_time: 20 days
+  publication_time: 26 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '6.2'
   red_division: 教育学4区
-  review_time: 74 days
+  review_time: 67 days
   tag:
   - General Education
   - Higher Education
@@ -503,6 +503,7 @@
   orange_percentile: '81'
   orange_quartile: Q1
   orange_score: '3.1'
+  publisher: Association of American Law Schools
   purple_quartile: Q3
   purple_score: '0.5'
   red_division: 教育学4区
@@ -639,6 +640,7 @@
   orange_percentile: '97'
   orange_quartile: Q1
   orange_score: '12.0'
+  publisher: ASCILITE
   purple_quartile: Q1
   purple_score: '6.3'
   red_division: 教育学3区
@@ -670,6 +672,7 @@
   orange_percentile: '97'
   orange_quartile: Q1
   orange_score: '7.4'
+  publisher: University of Hawaiʻi
   purple_quartile: Q1
   purple_score: '4.5'
   red_division: 文学2区
@@ -884,6 +887,7 @@
   orange_percentile: '94'
   orange_quartile: Q1
   orange_score: '8.2'
+  publisher: National Council of Teachers of Mathematics
   purple_quartile: Q1
   purple_score: '4.1'
   red_division: 教育学2区
@@ -1111,6 +1115,7 @@
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '8.6'
+  publisher: Harvard Education Publishing Group
   purple_quartile: Q2
   purple_score: '1.6'
   red_division: 教育学2区
@@ -1386,6 +1391,7 @@
   orange_percentile: '84'
   orange_quartile: Q1
   orange_score: '5.7'
+  publisher: UNED
   purple_quartile: Q1
   purple_score: '3.9'
   red_division: 教育学2区
@@ -1788,6 +1794,7 @@
   orange_percentile: '92'
   orange_quartile: Q1
   orange_score: '8.2'
+  publisher: UNED
   purple_quartile: Q1
   purple_score: '3.5'
   red_division: 教育学3区
@@ -2228,6 +2235,7 @@
   orange_percentile: '90'
   orange_quartile: Q1
   orange_score: '3.5'
+  publisher: University of Granada
   purple_quartile: Q1
   purple_score: '2.2'
   red_division: 教育学4区
@@ -2642,6 +2650,7 @@
   orange_percentile: '89'
   orange_quartile: Q1
   orange_score: '6.8'
+  publisher: Athabasca University Press
   purple_quartile: Q1
   purple_score: '4.5'
   red_division: 教育学3区
@@ -3610,6 +3619,7 @@
   orange_percentile: '80'
   orange_quartile: Q1
   orange_score: '2.2'
+  publisher: National Council of Teachers of English
   purple_quartile: Q2
   purple_score: '1.6'
   red_division: 教育学2区
@@ -3681,6 +3691,7 @@
   orange_percentile: '46'
   orange_quartile: Q3
   orange_score: '1.9'
+  publisher: Ministry of Education, Spain
   tag:
   - General Education
   - International/Comparative Education
@@ -3943,6 +3954,7 @@
   orange_percentile: '59'
   orange_quartile: Q2
   orange_score: '3.6'
+  publisher: Colegio Oficial de la Psicología de Madrid
   tag:
   - Educational Psychology
 - documents_current_year: 44 (2026)
@@ -4002,6 +4014,7 @@
   orange_percentile: '53'
   orange_quartile: Q2
   orange_score: '2.4'
+  publisher: Universitat Autònoma de Barcelona
   tag:
   - Science Education
   - Mathematics Education
@@ -4113,6 +4126,7 @@
   orange_percentile: '55'
   orange_quartile: Q2
   orange_score: '2.5'
+  publisher: Scientia Socialis
   purple_quartile: Q2
   purple_score: '1.4'
   red_division: 教育学4区
@@ -4126,6 +4140,7 @@
   orange_percentile: '61'
   orange_quartile: Q2
   orange_score: '2.9'
+  publisher: UNISA Press
   purple_quartile: Q2
   purple_score: '1.8'
   red_division: 教育学4区
@@ -4252,6 +4267,7 @@
   orange_percentile: '21'
   orange_quartile: Q4
   orange_score: '0.8'
+  publisher: Korean Educational Development Institute
   purple_quartile: Q4
   purple_score: '0.4'
   red_division: 教育学4区
@@ -4331,6 +4347,7 @@
   orange_percentile: '28'
   orange_quartile: Q3
   orange_score: '1.0'
+  publisher: Adult Learning Australia
   purple_quartile: Q4
   purple_score: '0.4'
   red_division: 教育学4区
@@ -4362,6 +4379,7 @@
   orange_percentile: '31'
   orange_quartile: Q3
   orange_score: '1.2'
+  publisher: Turkish Education Association
   tag:
   - General Education
 - documents_current_year: 25 (2026)
@@ -4372,6 +4390,7 @@
   orange_percentile: '37'
   orange_quartile: Q3
   orange_score: '1.4'
+  publisher: Education Association of South Africa
   purple_quartile: Q3
   purple_score: '0.7'
   red_division: 教育学4区
@@ -4386,6 +4405,7 @@
   orange_percentile: '53'
   orange_quartile: Q2
   orange_score: '0.4'
+  publisher: Australian Association for the Teaching of English
   purple_quartile: Q4
   purple_score: '0.5'
   red_division: 教育学4区
@@ -4400,6 +4420,7 @@
   orange_percentile: '26'
   orange_quartile: Q3
   orange_score: '0.9'
+  publisher: Federal University of Rio Grande do Sul
   purple_quartile: Q4
   purple_score: '0.4'
   red_division: 教育学4区
@@ -4440,6 +4461,7 @@
   orange_percentile: '97'
   orange_quartile: Q1
   orange_score: '5.6'
+  publisher: Duke University Press
   purple_score: '3.9'
   red_division: 哲学1区
   tag:
@@ -4469,6 +4491,7 @@
   orange_percentile: '90'
   orange_quartile: Q1
   orange_score: '2.9'
+  publisher: Journal of Philosophy, Inc.
   purple_score: '1.6'
   red_division: 哲学1区
   tag:
@@ -4556,6 +4579,7 @@
   orange_percentile: '80'
   orange_quartile: Q1
   orange_score: '1.3'
+  publisher: University of California Press
   purple_quartile: Q2
   purple_score: '0.8'
   red_division: 社会学3区
@@ -5296,6 +5320,7 @@
   orange_percentile: '89'
   orange_quartile: Q1
   orange_score: '4.2'
+  publisher: Harvard Law Review Association
   purple_quartile: Q1
   purple_score: '3.0'
   red_division: 社会学2区
@@ -5637,7 +5662,7 @@
   orange_quartile: Q2
   orange_score: '4.2'
   publication_time: ''
-  publisher: ''
+  publisher: BMC
   purple_quartile: Q1
   purple_score: '4.6'
   red_division: 心理学3区
@@ -5830,7 +5855,7 @@
   orange_quartile: Q1
   orange_score: '6.0'
   publication_time: ''
-  publisher: ''
+  publisher: Society for Learning Analytics Research
   purple_quartile: ''
   purple_score: '3.4'
   red_division: 教育学3区
@@ -5850,7 +5875,7 @@
   orange_quartile: Q1
   orange_score: '4.3'
   publication_time: ''
-  publisher: ''
+  publisher: International Educational Data Mining Society
   purple_quartile: ''
   purple_score: ''
   red_division: ''
@@ -6126,7 +6151,7 @@
   orange_quartile: Q1
   orange_score: '4.8'
   publication_time: ''
-  publisher: ''
+  publisher: PLOS
   purple_quartile: Q2
   purple_score: '2.8'
   red_division: 综合性期刊3区
@@ -6277,18 +6302,18 @@
   documents_current_year: 1027 (2026)
   documents_last_year: 1203 (2025)
   documents_published: 1203 (2025)
-  first_decision_time: 47 days
+  first_decision_time: 42 days
   hm_score: 74.8
   journal: International Journal of Human-Computer Interaction
   orange_percentile: '88'
   orange_quartile: Q1
   orange_score: '10.1'
-  publication_time: 22 days
+  publication_time: 21 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '6.1'
   red_division: 计算机科学3区
-  review_time: 99 days
+  review_time: 78 days
   tag:
   - HCI
   - Psychology
@@ -6360,12 +6385,12 @@
   orange_percentile: '96'
   orange_quartile: Q1
   orange_score: '10.4'
-  publication_time: 15 days
+  publication_time: 14 days
   publisher: Taylor & Francis
   purple_quartile: Q1
   purple_score: '3.6'
   red_division: 文学1区
-  review_time: 104 days
+  review_time: 114 days
   tag:
   - Communication
 - documents_current_year: 8 (2026)
@@ -6425,33 +6450,40 @@
   orange_percentile: '98'
   orange_quartile: Q1
   orange_score: '13.1'
+  publisher: Annual Reviews
   purple_quartile: Q1
   purple_score: '8.4'
   red_division: 社会学1区
   tag:
   - Sociology
-- documents_current_year: 64 (2026)
+- acceptance_rate: 39.8%
+  documents_current_year: 64 (2026)
   documents_last_year: 168 (2025)
   documents_published: 168 (2025)
-  hm_score: 54.8
+  first_decision_time: 46 days
+  hm_score: 90.6
   journal: 'Journal of Experimental Psychology: General'
   orange_percentile: '93'
   orange_quartile: Q1
   orange_score: '7.0'
+  publication_time: 51 days
   publisher: APA
   purple_quartile: Q1
   purple_score: '3.7'
   red_division: 心理学1区
   tag:
   - Psychology
-- documents_current_year: 24 (2026)
+- acceptance_rate: 24.4%
+  documents_current_year: 24 (2026)
   documents_last_year: 79 (2025)
   documents_published: 79 (2025)
-  hm_score: 65.8
+  first_decision_time: 61 days
+  hm_score: 86.2
   journal: Psychological Methods
   orange_percentile: '98'
   orange_quartile: Q1
   orange_score: '23.4'
+  publication_time: 88 days
   publisher: APA
   purple_quartile: Q1
   purple_score: '7.5'
@@ -6514,6 +6546,7 @@
   orange_percentile: '99'
   orange_quartile: Q1
   orange_score: '55.6'
+  publisher: Annual Reviews
   purple_quartile: Q1
   purple_score: '41.8'
   red_division: 心理学1区
@@ -6544,6 +6577,7 @@
   orange_percentile: '94'
   orange_quartile: Q1
   orange_score: '14.7'
+  publisher: National Academy of Sciences
   tag:
   - Multidisciplinary
 - acceptance_time: 337 days
@@ -6573,6 +6607,7 @@
   orange_percentile: '91'
   orange_quartile: Q1
   orange_score: '12.5'
+  publisher: MIS Quarterly
   purple_quartile: Q1
   purple_score: '7.3'
   red_division: 管理学2区
