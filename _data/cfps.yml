@@ -3573,18 +3573,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Advances in Liquid Crystal Elastomers
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bfbehhhfbh
-  description: In this cross-journal Collection between Nature Communications, Communications Materials, Communications Chemistry,
-    and Scientific Reports we welcome contributions on the latest advancements in Liquid-Crystal Elastomer (LCE) materials
-    investigating LCE design, multi-responsive LCEs, and applications using LCE systems.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Gender equity in academia and research
   abstract_deadline: ''
   fullpaper_deadline: ''
