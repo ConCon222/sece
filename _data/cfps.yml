@@ -122,7 +122,7 @@
   fullpaper_deadline_sort: '2026-08-03'
   editors: ''
   link: https://link.springer.com/collections/hjajbgjcfi
-  description: 'BMC Medical Education welcomes submissions to the Clinical reasoning education: advances and updates Collection.
+  description: 'BMC Medical Education welcomed submissions to the Clinical reasoning education: advances and updates Collection.
     Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
 - journal: BMC Medical Education
   publisher: Springer
@@ -3868,6 +3868,17 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Emotions in politics: democratic participation, belonging and division'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gdfdffgfge
+  description: This Collection aims to advance interdisciplinary research on the role of emotions in political participation,
+    democratic life and collective political identities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
