@@ -929,6 +929,18 @@
   editors: 'Guest editors: Hui Li, Steven S. Barnett, Samantha Burns'
   link: https://www.sciencedirect.com/special-issue/335452/advancing-early-childhood-systems-in-an-era-of-macro-level-change-navigating-demographic-policy-and-cultural-shifts
   description: ''
+- journal: Sex Education
+  publisher: Taylor & Francis
+  tag:
+  - Subject Education
+  - Health Education
+  title: The Entangled Histories of Violence and Sex Education
+  abstract_deadline: 01 February 2027
+  fullpaper_deadline: 01 October 2027
+  fullpaper_deadline_sort: '2027-02-01'
+  editors: Tanja Vogler (University of Vienna); Jen Gilbert (University of Toronto); Kellie Burns (University of Sydney)
+  link: https://think.taylorandfrancis.com/special_issues/entangled-histories-violence-sex-education/
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -2246,6 +2258,16 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Chemical modification of proteins
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cdjjefjafh
+  description: This cross-journal Collection highlights advances in methods for chemical protein modification.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Extreme Events in High-Latitude Regions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3396,16 +3418,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Chemical modification of proteins
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cdjjefjafh
-  description: This cross-journal Collection highlights advances in methods for chemical protein modification.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Healthy Islands
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3867,6 +3879,19 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'The rise of informal digital learning: new paradigms for pedagogy, equity and educational futures'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fiigeaggcf
+  description: Informal digital learning, spanning engagement with mobile devices, online platforms, and AI tools, is reshaping
+    how education is experienced and understood in the digital age. Submissions that integrate critical, theoretical, and
+    global perspectives are especially encouraged, as are studies that foreground issues of social justice, diversity, and
+    inclusion in digital learning.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
