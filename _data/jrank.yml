@@ -120,12 +120,12 @@
   tag:
   - Educational Technology
   - Subject Education
-- acceptance_rate: 7.4%
+- acceptance_rate: 8.3%
   documents_current_year: 45 (2026)
   documents_last_year: 88 (2025)
   documents_published: 88 (2025)
-  first_decision_time: 29 days
-  hm_score: 70.0
+  first_decision_time: 27 days
+  hm_score: 70.9
   journal: Review of Educational Research
   orange_percentile: '99'
   orange_quartile: Q1
@@ -135,7 +135,7 @@
   purple_quartile: Q1
   purple_score: '8.6'
   red_division: 教育学1区
-  review_time: 89 days
+  review_time: 94 days
   tag:
   - Review Journal
   - General Education
@@ -414,7 +414,7 @@
   documents_current_year: 49 (2026)
   documents_last_year: 59 (2025)
   documents_published: 59 (2025)
-  first_decision_time: 53 days
+  first_decision_time: 50 days
   hm_score: 63.3
   journal: Educational Researcher
   orange_percentile: '95'
@@ -429,22 +429,22 @@
   tag:
   - General Education
   - Education Policy & Social Issues
-- acceptance_rate: 4.5%
+- acceptance_rate: 4.4%
   documents_current_year: 64 (2026)
   documents_last_year: 73 (2025)
   documents_published: 73 (2025)
   first_decision_time: 14 days
-  hm_score: 63.0
+  hm_score: 62.9
   journal: Journal of Educational Computing Research
   orange_percentile: '98'
   orange_quartile: Q1
   orange_score: '14.8'
-  publication_time: 16 days
+  publication_time: 15 days
   publisher: SAGE
   purple_quartile: Q1
   purple_score: '8.5'
   red_division: 教育学2区
-  review_time: 81 days
+  review_time: 82 days
   tag:
   - Educational Technology
 - acceptance_time: 318 days
