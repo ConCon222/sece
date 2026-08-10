@@ -1,16 +1,3 @@
-- journal: Science Education
-  publisher: Wiley
-  tag:
-  - Subject Education
-  - Science Education
-  title: 'Justice-Centered Approaches to Climate and Environmental Education: Broadening Horizons Toward Socio-Ecological
-    Thriving'
-  abstract_deadline: ''
-  fullpaper_deadline: 30 July 2026
-  fullpaper_deadline_sort: '2026-07-30'
-  editors: ''
-  link: https://onlinelibrary.wiley.com/page/journal/1098237x/call-for-papers/toward-socio-ecological-thriving
-  description: ''
 - journal: Science & Education
   publisher: Springer
   tag:
@@ -112,18 +99,6 @@
   link: https://link.springer.com/collections/hjajbgjcfi
   description: 'BMC Medical Education welcomed submissions to the Clinical reasoning education: advances and updates Collection.
     Clinical reasoning—the ability to gather, interpret, and apply patient information to reach a ...'
-- journal: BMC Medical Education
-  publisher: Springer
-  tag: &id001
-  - Medical Education
-  title: Psychiatric education and its challenges
-  abstract_deadline: ''
-  fullpaper_deadline: 10 August 2026
-  fullpaper_deadline_sort: '2026-08-10'
-  editors: ''
-  link: https://link.springer.com/collections/hjhiagdbaj
-  description: BMC Medical Education is calling for submissions to our Collection on Psychiatric education and its challenges.
-    Mental illnesses account for a significant portion of the global disease burden, underlying the...
 - journal: TESOL Quarterly
   publisher: Wiley
   tag:
@@ -150,7 +125,8 @@
   description: Logambal Souprayen-Cavery , Université de la Réunion logambal.souprayen-cavery@univ-reunion.fr
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: &id001
+  - Medical Education
   title: Lifelong learning and patient safety
   abstract_deadline: ''
   fullpaper_deadline: 18 August 2026
@@ -350,6 +326,17 @@
   link: https://link.springer.com/collections/dhigbaffja
   description: This collection seeks to bring together scholarly, empirical, and practice-informed work that advances understanding
     of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id001
+  title: Psychiatric education and its challenges
+  abstract_deadline: ''
+  fullpaper_deadline: 30 September 2026
+  fullpaper_deadline_sort: '2026-09-30'
+  editors: ''
+  link: https://link.springer.com/collections/hjhiagdbaj
+  description: BMC Medical Education is calling for submissions to our Collection on Psychiatric education and its challenges.
+    Mental illnesses account for a significant portion of the global disease burden, underlying the...
 - journal: European Journal of Education
   publisher: Wiley
   tag: &id010
@@ -3901,6 +3888,17 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Translating food futures: multilingual communication, responsible innovation, and everyday sustainability'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/iiibiahjci
+  description: Food futures refer to emerging transformations in food production, distribution, regulation, and consumption
+    under conditions of climate pressure, technological change, and sustainability transition.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
