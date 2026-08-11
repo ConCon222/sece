@@ -1,56 +1,3 @@
-- journal: Science & Education
-  publisher: Springer
-  tag:
-  - Subject Education
-  - Science Education
-  title: 'Futurizing Science Education: historical, philosophical, and sociological aspects of futures literacy for science
-    education'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 July 2026
-  fullpaper_deadline_sort: '2026-07-31'
-  editors: ''
-  link: https://link.springer.com/collections/jaijhahiff
-  description: The mounting uncertainties of our time—from environmental and climatic disruptions to rapid technological shifts,
-    pandemics, and socio-political crises—have renewed attention to the importance of the future....
-- journal: System
-  publisher: Elsevier
-  tag:
-  - Language Education & Acquisition
-  - Educational Technology
-  title: Online communication and behaviour in EMI Higher Education
-  abstract_deadline: ''
-  fullpaper_deadline: 31 July 2026
-  fullpaper_deadline_sort: '2026-07-31'
-  editors: 'Guest editors: Chihiro Inoue, Fumiyo Nakatsuhara, Parvaneh Tavakoli, Jim Mckinley'
-  link: https://www.sciencedirect.com/special-issue/315925/online-communication-and-behaviour-in-emi-higher-education
-  description: ''
-- journal: Educational Psychology
-  publisher: Taylor & Francis
-  tag: &id004
-  - Educational Psychology
-  title: 'Unpacking the “Black Box” of AI-Assisted Feedback: Teachers’ Feedback Perceptions, Emotions, Actions, and Literacies'
-  abstract_deadline: 31 July 2026
-  fullpaper_deadline: 31 December 2026
-  fullpaper_deadline_sort: '2026-07-31'
-  editors: Lan Yang (The Education University of Hong Kong, China); Shen Ba (The Education University of Hong Kong, China);
-    Hongbiao Yin (The Chinese University of Hong Kong, China); Dragan Gasevic (Monash University, Australia); Gwo-Jen Hwang
-    (Taichung University of Education, Taiwan); Junjun Chen (The Education University of Hong Kong, China); Hui Wang (The
-    Education University of Hong Kong, China)
-  link: https://think.taylorandfrancis.com/special_issues/unpacking-the-black-box-of-ai-assisted-feedback-teachers/
-  description: Gwo-Jen Hwang , Taichung University of Education, Taiwan gjhwang.academic@gmail.com
-- journal: Computer Assisted Language Learning
-  publisher: Taylor & Francis
-  tag:
-  - Language Education & Acquisition
-  - Educational Technology
-  title: 'Reclaiming Pedagogy in CALL: Foregrounding Pedagogical Design in Technology-Enhanced Language Teaching'
-  abstract_deadline: 31 July 2026
-  fullpaper_deadline: 31 May 2027
-  fullpaper_deadline_sort: '2026-07-31'
-  editors: Glenn Stockwell (The Education University of Hong Kong); Kaiqi Shao (Northwestern Polytechnical University); Bin
-    Zou (Xi’an Jiaotong-Liverpool University)
-  link: https://think.taylorandfrancis.com/special_issues/reclaiming-pedagogy-in-call-foregrounding-pedagogical-design-in-technology-enhanced-language-teaching/
-  description: ''
 - journal: Educational Technology & Society
   publisher: International Forum of Educational Technology & Society
   tag:
@@ -76,7 +23,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: &id006
+  tag: &id005
   - Education Policy & Social Issues
   - Gender and Education
   title: Queer Imaginaries as Pedagogy
@@ -266,7 +213,7 @@
     impacts so much of our patient population, medical curricula must evolve to address gaps in knowled...
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: &id005
+  tag: &id004
   - Educational Psychology
   - Educational Technology
   title: Effects of lifestyle behaviours on learning and neuroplasticity
@@ -362,7 +309,8 @@
   description: ''
 - journal: Educational Psychology
   publisher: Taylor & Francis
-  tag: *id004
+  tag: &id006
+  - Educational Psychology
   title: 'Learning success mechanisms and adaptability in the AI era: from reactive to predictive and proactive learning'
   abstract_deadline: 30 September 2026
   fullpaper_deadline: 31 January 2027
@@ -383,7 +331,7 @@
   description: ''
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id004
   title: Reimagining Teaching and Learning in the Age of Generative AI Agents
   abstract_deadline: ''
   fullpaper_deadline: 13 October 2026
@@ -406,7 +354,7 @@
   description: ''
 - journal: Gender and Education
   publisher: Taylor & Francis
-  tag: *id006
+  tag: *id005
   title: 'Solidarity & Beyond: Academic Motherhood, Care, and Collective Futures'
   abstract_deadline: 25 October 2026
   fullpaper_deadline: 30 April 2027
@@ -465,7 +413,7 @@
   description: Alexandra Mihai , Maastricht University, Netherlands a.mihai@maastrichtuniversity.nl
 - journal: Educational Psychology
   publisher: Taylor & Francis
-  tag: *id004
+  tag: *id006
   title: 'AI in Educational Psychology: Reviews, Meta-Analyses, and Position Papers'
   abstract_deadline: ''
   fullpaper_deadline: 31 October 2026
@@ -535,7 +483,7 @@
     and political dimensions of human enhancement.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id004
   title: Mathematical Cognition in Evolving Learning Environments
   abstract_deadline: ''
   fullpaper_deadline: 28 November 2026
@@ -717,7 +665,7 @@
     experiences.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id004
   title: Embodied Learning
   abstract_deadline: ''
   fullpaper_deadline: 10 January 2027
@@ -3548,16 +3496,6 @@
   link: https://www.nature.com/collections/djjhfigfge
   description: This cross-journal Collection with Communications Biology, Communications Medicine, Nature Communications and
     Scientific Reports invites submissions focusing on structural variants (SVs) in organismal biology and disease.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Ecological Consequences of Nano- and Microplastics
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/edicjfgdih
-  description: This cross-journal Collection invites research that investigates the ecological impacts of nano- and microplastics.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
