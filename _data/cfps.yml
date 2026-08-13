@@ -2145,6 +2145,28 @@
   link: https://www.pnas.org/page/ancient-human-studies
   description: This call is for research papers and perspectives on ancient human studies relating to patterns and processes
     in hominin evolution.
+- journal: Educational Technology & Society
+  publisher: Unknown
+  tag:
+  - Educational Technology
+  title: Reimagining Future Learning via Human-AI Hybrid Intelligence
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://drive.google.com/file/d/1ddLOp8MLaZK7j3XrmmiNO3uOHPoH2-nj/view?usp=drive_link
+  description: Call for papers for a special issue on “ Reimagining Future Learning via Human-AI Hybrid Intelligence .”
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Tectonic and magmatic drivers of carbon-cycle change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cbjgjabfii
+  description: With this cross-journal collection, we invite contributions that examine tectonic and magmatic controls on
+    carbon-cycle evolution through Earth history.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -3202,6 +3224,17 @@
   description: With this cross-journal Collection, the editors at Communications AI & Computing and Nature Communications
     invite manuscripts that address the challenges and opportunities in deploying lightweight machine learning models for
     edge computing environments.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Multiscale Engineering and Optimization of Mechanical Metamaterials for Structural Applications
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fddgdhhebd
+  description: This cross-journal Collection highlights the ability of multiscale, programmatic, control of a material’s topology
+    to direct, improve, and drive structure-property relationships.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
