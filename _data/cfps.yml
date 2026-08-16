@@ -399,6 +399,18 @@
   link: https://link.springer.com/collections/ijhbajfjcb
   description: Although outcome-based models (such as Kirkpatrick’s hierarchy) have dominated program evaluation in health
     professions education for decades, it is particularly concerning that many educational evaluations ...
+- journal: Journal of Research on Technology in Education
+  publisher: Taylor & Francis
+  tag:
+  - Educational Technology
+  title: Ethics, Responsibility, and Generative AI in Educational Research
+  abstract_deadline: 15 November 2026
+  fullpaper_deadline: 01 April 2027
+  fullpaper_deadline_sort: '2026-11-15'
+  editors: Lorien S. Jordan, PhD, LMFT (University of South Florida); Bo Pei, PhD (University of South Florida); Xin Qiao,
+    PhD (University of South Florida); Jennifer R. Wolgemuth (University of South Florida)
+  link: https://think.taylorandfrancis.com/special_issues/ethics-responsibility-and-generative-ai-in-educational-research/
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: &id009
@@ -4432,17 +4444,6 @@
   editors: ''
   link: https://www.nature.com/collections/hhjcdjgdcf
   description: This Collection is dedicated to addressing complex problems arising from tourism in high-demand destinations.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: Isobenefit urbanism
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cjbideaagg
-  description: This Collection explores the concept of Isobenefit urbanism; a design idea focused on high quality, localised
-    and walkable cities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
