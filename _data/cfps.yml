@@ -32,8 +32,8 @@
   fullpaper_deadline_sort: '2026-08-18'
   editors: ''
   link: https://link.springer.com/collections/djeaiahcga
-  description: BMC Medical Education is calling for submissions to our Collection, Lifelong learning and patient safety. As
-    healthcare delivery becomes increasingly complex, shaped by biomedical advances, digital transform...
+  description: BMC Medical Education called for submissions to our Collection, Lifelong learning and patient safety. As healthcare
+    delivery becomes increasingly complex, shaped by biomedical advances, digital transformatio...
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id001
@@ -482,7 +482,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag:
+  tag: &id026
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -695,17 +695,6 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Carbon Dioxide Removal
-  abstract_deadline: ''
-  fullpaper_deadline: 16 January 2027
-  fullpaper_deadline_sort: '2027-01-16'
-  editors: ''
-  link: https://www.nature.com/collections/jfjbjjheei
-  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
-    can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
   tag: &id013
@@ -721,6 +710,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Carbon Dioxide Removal
+  abstract_deadline: ''
+  fullpaper_deadline: 16 January 2027
+  fullpaper_deadline_sort: '2027-01-16'
+  editors: ''
+  link: https://www.nature.com/collections/jfjbjjheei
+  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
+    can contribute to climate change mitigation.
+- journal: Nature
+  publisher: Nature Portfolio
+  tag: *id013
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -730,9 +730,9 @@
   description: With this Collection, we aim to highlight some of the latest cancer vaccine-related papers published in the
     journals and we welcome submissions of primary research papers that focus on the clinical development in the field, including
     but not limited to personalized vaccine approaches.
-- journal: Nature
+- journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id013
+  tag: *id007
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -776,9 +776,9 @@
   link: https://link.springer.com/collections/fhbjafcjge
   description: Competency-based education (CBE) focuses on the development of specific competencies necessary for effective
     practice. This Collection aims to gather innovative research that highlights the implementation an...
-- journal: Nature Communications
+- journal: Nature
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id013
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -789,9 +789,9 @@
     Nature Progress Brain Health, and Communications Biology invite submissions that aim to elucidate the molecular mechanisms
     underlying bidirectional cancer–nervous system interactions and their influence on the tumour microenvironment, as well
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
-- journal: Nature
+- journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id013
+  tag: *id007
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -2167,6 +2167,41 @@
   editors: ''
   link: https://drive.google.com/file/d/1ddLOp8MLaZK7j3XrmmiNO3uOHPoH2-nj/view?usp=drive_link
   description: Call for papers for a special issue on “ Reimagining Future Learning via Human-AI Hybrid Intelligence .”
+- journal: Educational Technology & Society
+  publisher: Unknown
+  tag:
+  - Educational Technology
+  title: 'Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity, Engagement Pathways, and Educational
+    Equity'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://drive.google.com/file/d/1fPxOPeAGlZm0MvkEyHss5tDK1m1wFqbH/view?usp=drive_link
+  description: 'Call for papers for a special issue on “ Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity,
+    Engagement Pathways, and Educational Equity .”'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Cognitive Resilience in Aging
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aabfdcdgce
+  description: In this collection we invite original research, reviews and perspectives that advance our understanding of
+    the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Environmental ambitions and social realities in the Global South
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fcibjaibgf
+  description: With this cross-journal Collection, the editors invite manuscripts that highlight the social implications of
+    environmental policy and targets, with a particular focus on including overlooked regions.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -3838,8 +3873,7 @@
     behaviors in health and disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id026
-  - Interdisciplinary Science
+  tag: *id007
   title: Registered Reports
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3850,7 +3884,7 @@
     collection features our published Registered Reports, as well as relevant editorials and other related content.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Replication and generalization
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3859,17 +3893,17 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
-- journal: Nature Communications
+- journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id007
-  title: Environmental ambitions and social realities in the Global South
+  tag: *id026
+  title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
   fullpaper_deadline_sort: '9999-99-99'
   editors: ''
-  link: https://www.nature.com/collections/fcibjaibgf
-  description: With this cross-journal Collection, the editors invite manuscripts that highlight the social implications of
-    environmental policy and targets, with a particular focus on including overlooked regions.
+  link: https://www.nature.com/collections/aabfdcdgce
+  description: In this collection we invite original research, reviews and perspectives that advance our understanding of
+    the mechanisms and determinants of cognitive resilience in the aging brain.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
