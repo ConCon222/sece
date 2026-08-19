@@ -24,7 +24,7 @@
   description: Logambal Souprayen-Cavery , Université de la Réunion logambal.souprayen-cavery@univ-reunion.fr
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id001
+  tag:
   - Medical Education
   title: Lifelong learning and patient safety
   abstract_deadline: ''
@@ -36,7 +36,8 @@
     delivery becomes increasingly complex, shaped by biomedical advances, digital transformatio...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: &id002
+  - Medical Education
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
   fullpaper_deadline: 20 August 2026
@@ -73,7 +74,7 @@
     and adaptation – is more likely to be achieved when the impetus for action emanates from the general...
 - journal: British Journal of Sociology of Education
   publisher: Taylor & Francis
-  tag: &id002
+  tag: &id001
   - Education Policy & Social Issues
   - Sociology of Education
   title: Students and Politics
@@ -86,7 +87,7 @@
   description: ''
 - journal: British Journal of Sociology of Education
   publisher: Taylor & Francis
-  tag: *id002
+  tag: *id001
   title: 'Widening Participation in Higher Education: Has it worked for the working-classes?'
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2026
@@ -143,7 +144,7 @@
   description: Felicitas Macgilchrist , Carl von Ossietzky University Oldenburg felicitas.macgilchrist@uni-oldenburg.de
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Palliative care education
   abstract_deadline: ''
   fullpaper_deadline: 01 September 2026
@@ -154,7 +155,7 @@
     education is an essential component of healthcare training, aimed at equipping healthcare profes...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Disability in medical education
   abstract_deadline: ''
   fullpaper_deadline: 07 September 2026
@@ -227,7 +228,7 @@
     of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 30 September 2026
@@ -482,7 +483,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id026
+  tag: &id027
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -653,7 +654,7 @@
     theory, methods, and edtech.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -664,7 +665,7 @@
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Nutrition science in health professions education
   abstract_deadline: ''
   fullpaper_deadline: 13 January 2027
@@ -686,7 +687,7 @@
     of systematic reviews examining the evidence base for the following topics in psychiatry education: ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Medical education for LGBTQ+ health
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -767,7 +768,7 @@
     sociologists, legal scholars, economists, criminologists, development experts, data scientists and others.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Health professions competency-based education (CBE) innovations around the world
   abstract_deadline: ''
   fullpaper_deadline: 29 January 2027
@@ -1110,7 +1111,7 @@
     exhibit remarkable regenerative capacity and scar-free wound healing.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Health communication in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1121,7 +1122,7 @@
     and fostering collaborative relationships between healthcare providers and communities. This Coll...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Disaster preparedness in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1472,7 +1473,7 @@
     intense experiences.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id001
+  tag: *id002
   title: Programmatic assessment
   abstract_deadline: ''
   fullpaper_deadline: 06 April 2027
@@ -2697,7 +2698,8 @@
     of metastasis, as well as the development of targeted therapeutic approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: &id026
+  - Interdisciplinary Science
   title: Earthquake forecasting and early warning
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2708,7 +2710,7 @@
     current challenges and future pathways towards more reliable forecasting and effective early warning systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Mechanisms of Tissue Fibrosis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2719,7 +2721,7 @@
     activation, fibrogenic signalling pathways, immune–stromal interactions, and extracellular matrix remodelling.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Organoid models for infectious diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2731,7 +2733,7 @@
     the support of stem cell-based organoid systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Medicinal Plant Genomics 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2744,7 +2746,7 @@
     new bioactive compounds.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: The Lunar South
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2755,7 +2757,7 @@
     and surface features of the southern regions of the Moon.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Ultra processed food and health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2768,7 +2770,7 @@
     foods.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Agentic AI Systems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2779,7 +2781,7 @@
     AI systems, spanning theoretical developments and real-world deployments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: 'Biological Oscillators Across Scales: Mathematical and Mechanistic Principles'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2790,7 +2792,7 @@
     approaches to explain data.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Soft materials for drug delivery
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2802,7 +2804,7 @@
     drug release, and liposomal formulations for targeted therapy.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Lesser-known critical elements and the green energy transition
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2814,7 +2816,7 @@
     systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: Microbiome and energy metabolism
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2825,7 +2827,7 @@
     metabolic pathways or impacts of microbial metabolites on host metabolism.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id026
   title: The Gut-Brain axis and health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3893,9 +3895,32 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Health Education Journal
+  publisher: SAGE
+  tag:
+  - Subject Education
+  - Health Education
+  title: Call for papers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
+  description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Biophysical and Structural Principles of Cancer Cell Behaviour
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cjgeaefdib
+  description: This collection will explore how structural organization and biophysical mechanisms govern cancer cell growth,
+    survival, adaptation, and progression.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id027
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
