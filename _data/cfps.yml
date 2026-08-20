@@ -44,8 +44,8 @@
   fullpaper_deadline_sort: '2026-08-20'
   editors: ''
   link: https://link.springer.com/collections/ghfefacdbh
-  description: BMC Medical Education is calling for submissions to our Collection, Diagnostic and interventional CT and MRI.
-    Computed tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have ...
+  description: BMC Medical Education called for submissions to our Collection, Diagnostic and interventional CT and MRI. Computed
+    tomography (CT), magnetic resonance imaging (MRI) and related imaging technologies have unde...
 - journal: Innovation in Language Learning and Teaching
   publisher: Taylor & Francis
   tag: &id006
@@ -153,17 +153,6 @@
   link: https://link.springer.com/collections/ihhfcjgagd
   description: BMC Medical Education is calling for submissions to our Collection, Palliative care education. Palliative care
     education is an essential component of healthcare training, aimed at equipping healthcare profes...
-- journal: BMC Medical Education
-  publisher: Springer
-  tag: *id002
-  title: Disability in medical education
-  abstract_deadline: ''
-  fullpaper_deadline: 07 September 2026
-  fullpaper_deadline_sort: '2026-09-07'
-  editors: ''
-  link: https://link.springer.com/collections/cccbbaigdh
-  description: BMC Medical Education welcomes submissions to our Disability in medical education Collection. As disability
-    impacts so much of our patient population, medical curricula must evolve to address gaps in knowled...
 - journal: npj Science of Learning
   publisher: Nature Portfolio
   tag: &id004
@@ -483,7 +472,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id027
+  tag: &id026
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -493,6 +482,17 @@
   link: https://www.nature.com/collections/ahgacgcgeh
   description: This Collection invites research on cellular senescence, its mechanisms in aging and age-related diseases,
     interactions with inflammation and immunity, and interventions targeting senescent cells to promote healthy longevity.
+- journal: BMC Medical Education
+  publisher: Springer
+  tag: *id002
+  title: Disability in medical education
+  abstract_deadline: ''
+  fullpaper_deadline: 07 December 2026
+  fullpaper_deadline_sort: '2026-12-07'
+  editors: ''
+  link: https://link.springer.com/collections/cccbbaigdh
+  description: BMC Medical Education welcomes submissions to our Disability in medical education Collection. As disability
+    impacts so much of our patient population, medical curricula must evolve to address gaps in knowled...
 - journal: Teaching and Teacher Education
   publisher: Elsevier
   tag:
@@ -2181,6 +2181,29 @@
   link: https://drive.google.com/file/d/1fPxOPeAGlZm0MvkEyHss5tDK1m1wFqbH/view?usp=drive_link
   description: 'Call for papers for a special issue on “ Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity,
     Engagement Pathways, and Educational Equity .”'
+- journal: Health Education Journal
+  publisher: SAGE
+  tag:
+  - Subject Education
+  - Health Education
+  title: Call for papers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
+  description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Biophysical and Structural Principles of Cancer Cell Behaviour
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cjgeaefdib
+  description: This collection will explore how structural organization and biophysical mechanisms govern cancer cell growth,
+    survival, adaptation, and progression.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -2698,8 +2721,7 @@
     of metastasis, as well as the development of targeted therapeutic approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id026
-  - Interdisciplinary Science
+  tag: *id007
   title: Earthquake forecasting and early warning
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2710,7 +2732,7 @@
     current challenges and future pathways towards more reliable forecasting and effective early warning systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Mechanisms of Tissue Fibrosis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2721,7 +2743,7 @@
     activation, fibrogenic signalling pathways, immune–stromal interactions, and extracellular matrix remodelling.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Organoid models for infectious diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2733,7 +2755,7 @@
     the support of stem cell-based organoid systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Medicinal Plant Genomics 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2746,7 +2768,7 @@
     new bioactive compounds.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: The Lunar South
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2757,7 +2779,7 @@
     and surface features of the southern regions of the Moon.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Ultra processed food and health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2770,7 +2792,7 @@
     foods.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Agentic AI Systems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2781,7 +2803,7 @@
     AI systems, spanning theoretical developments and real-world deployments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: 'Biological Oscillators Across Scales: Mathematical and Mechanistic Principles'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2792,7 +2814,7 @@
     approaches to explain data.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Soft materials for drug delivery
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2804,7 +2826,7 @@
     drug release, and liposomal formulations for targeted therapy.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Lesser-known critical elements and the green energy transition
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2816,7 +2838,7 @@
     systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: Microbiome and energy metabolism
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2827,7 +2849,7 @@
     metabolic pathways or impacts of microbial metabolites on host metabolism.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id007
   title: The Gut-Brain axis and health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3895,32 +3917,9 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
-- journal: Health Education Journal
-  publisher: SAGE
-  tag:
-  - Subject Education
-  - Health Education
-  title: Call for papers
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
-  description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Biophysical and Structural Principles of Cancer Cell Behaviour
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cjgeaefdib
-  description: This collection will explore how structural organization and biophysical mechanisms govern cancer cell growth,
-    survival, adaptation, and progression.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id027
+  tag: *id026
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4572,17 +4571,6 @@
     to identify which disciplinary and stakeholder knowledges are relevant, synthesise different perspectives, manage power
     imbalances and legacies of colonisation in researching problems, and accommodate conflicting values and world views, including
     across different cultures.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: 'Humanising epidemiology: non-medical investigations into epi/pandemic phenomena'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fhcefefaab
-  description: This Collection welcomes research that examines the role and contributions of the social sciences in shaping
-    the global response to public health crises.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
