@@ -36,7 +36,7 @@
     delivery becomes increasingly complex, shaped by biomedical advances, digital transformatio...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id002
+  tag:
   - Medical Education
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
@@ -144,7 +144,8 @@
   description: Felicitas Macgilchrist , Carl von Ossietzky University Oldenburg felicitas.macgilchrist@uni-oldenburg.de
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: &id003
+  - Medical Education
   title: Palliative care education
   abstract_deadline: ''
   fullpaper_deadline: 01 September 2026
@@ -168,7 +169,7 @@
     activity and physical education across the lifespan.
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
-  tag: &id003
+  tag: &id002
   - Educational Psychology
   title: 'Hope, Healing, and Care in the Times of Dread: Enacted Utopias and Collective Futures'
   abstract_deadline: 15 September 2026
@@ -180,7 +181,7 @@
   description: ''
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
-  tag: *id003
+  tag: *id002
   title: 'Call for Abstracts: Integrating Critical Theories with Cultural Historical Activity Theory: Toward Examining Multiply
     Marginalized Communities'
   abstract_deadline: 15 September 2026
@@ -217,7 +218,7 @@
     of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 30 September 2026
@@ -263,7 +264,7 @@
   description: ''
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
-  tag: *id003
+  tag: *id002
   title: 'Doing (Un)Availability: Co-Presence as Mediated Activity at the Interface of Focused and Unfocused Interaction'
   abstract_deadline: 30 September 2026
   fullpaper_deadline: 30 September 2027
@@ -484,7 +485,7 @@
     interactions with inflammation and immunity, and interventions targeting senescent cells to promote healthy longevity.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Disability in medical education
   abstract_deadline: ''
   fullpaper_deadline: 07 December 2026
@@ -654,7 +655,7 @@
     theory, methods, and edtech.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -665,7 +666,7 @@
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Nutrition science in health professions education
   abstract_deadline: ''
   fullpaper_deadline: 13 January 2027
@@ -687,7 +688,7 @@
     of systematic reviews examining the evidence base for the following topics in psychiatry education: ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Medical education for LGBTQ+ health
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -768,7 +769,7 @@
     sociologists, legal scholars, economists, criminologists, development experts, data scientists and others.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Health professions competency-based education (CBE) innovations around the world
   abstract_deadline: ''
   fullpaper_deadline: 29 January 2027
@@ -1111,7 +1112,7 @@
     exhibit remarkable regenerative capacity and scar-free wound healing.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Health communication in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1122,7 +1123,7 @@
     and fostering collaborative relationships between healthcare providers and communities. This Coll...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Disaster preparedness in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1473,7 +1474,7 @@
     intense experiences.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id002
+  tag: *id003
   title: Programmatic assessment
   abstract_deadline: ''
   fullpaper_deadline: 06 April 2027
@@ -2193,6 +2194,40 @@
   editors: ''
   link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Climate dynamics of the Southern Ocean
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ihgfjbgbaa
+  description: With this cross-journal Collection, the editors invite manuscripts that highlight ocean small-scale dynamics
+    and the physical role of the Southern Ocean on regional and global climate change.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: 'Inequalities in cancer: addressing challenges in diagnosis and treatment'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aijeificei
+  description: With this cross-journal Collection, the editors invite manuscripts that highlight efforts to increase equity
+    in access to diagnosis and treatment and improve our understanding of oncology in underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Mixed Methods in Psychology
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/agfehgddca
+  description: With this cross-journal Collection, the editors invite manuscripts that utilize mixed methods (i.e., the use
+    of both qualitative and quantitative methods) to address questions of psychological interest as well as methods papers
+    on the development and use of mixed methods.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -4163,6 +4198,17 @@
   editors: ''
   link: https://www.nature.com/collections/ggjdhifbfe
   description: This Collection invites scholarship that explores burnout from across the humanities and social sciences.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Fiscal policies and energy vulnerability: tackling fuel and energy poverty in a changing global landscape'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bcedhjdffh
+  description: This Collection seeks to address the urgent and evolving intersection of fiscal policy and energy poverty,
+    a critical issue amid recent international crises, climate transition imperatives, and rising energy costs.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
