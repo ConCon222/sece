@@ -460,6 +460,18 @@
   link: https://www.nature.com/collections/cgiefaideh
   description: This Collection explores how learning environments shape mathematical cognition across development, particularly
     through their interactions with cognitive, affective, and neural factors
+- journal: Early Education and Development
+  publisher: Taylor & Francis
+  tag:
+  - Early Childhood Education
+  title: 'Reimagining STEM Learning Through Family, Culture, and Community Partnerships: Perspectives Across Home, School,
+    and Informal Learning Contexts'
+  abstract_deadline: 01 December 2026
+  fullpaper_deadline: 01 March 2027
+  fullpaper_deadline_sort: '2026-12-01'
+  editors: Jessica Rush Leeker (Cornell University); Andres Sebastian Bustamante (University of California, Irvine)
+  link: https://think.taylorandfrancis.com/special_issues/reimagining-stem-learning-through-family-culture-and-community-partnerships-perspectives-across-home-school-and-informal-learning-contexts/
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -4460,17 +4472,6 @@
   description: This Humanities and Social Sciences Communications Collection explores the role of cultural perspectives within
     emotional research, and aims to advance knowledge of how emotions are experienced, interpreted and expressed across different
     cultures.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: Natural disaster preparation and policy
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jgcdeifjai
-  description: This Collection examines how societies anticipate, prepare for, and respond to disasters, and how governmental
-    policies shape - and are shaped by - existing or outdated strategies, new threats, and health, gender or racial inequalities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
