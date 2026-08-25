@@ -2209,6 +2209,18 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Form, force, and fertility
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dbhejcchgb
+  description: This joint Collection between Nature Communications and Communications Biology welcomes submissions of primary
+    research, reviews/ perspectives that use/discuss structural, biochemical, and biophysical approaches to uncover the molecular
+    basis of fertility and reproduction.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Climate dynamics of the Southern Ocean
   abstract_deadline: ''
   fullpaper_deadline: ''
