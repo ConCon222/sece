@@ -1,27 +1,3 @@
-- journal: TESOL Quarterly
-  publisher: Wiley
-  tag:
-  - Language Education & Acquisition
-  title: 'Call for Proposals: 2028 Special Topic Issue'
-  abstract_deadline: ''
-  fullpaper_deadline: 15 August 2026
-  fullpaper_deadline_sort: '2026-08-15'
-  editors: ''
-  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-proposals
-  description: ''
-- journal: Language, Culture and Curriculum
-  publisher: Taylor & Francis
-  tag:
-  - Language Education & Acquisition
-  - Curriculum Studies
-  title: Critical perspectives on plurilingualism-driven curricular changes across formal and informal educational settings
-  abstract_deadline: 15 August 2026
-  fullpaper_deadline: 21 December 2026
-  fullpaper_deadline_sort: '2026-08-15'
-  editors: Sílvia Melo-Pfeifer (University of Hamburg); Logambal Souprayen-Cavery (Université de la Réunion); Eftychia-Sofia
-    Damaskou (University of Thessaly)
-  link: https://think.taylorandfrancis.com/special_issues/critical-perspectives-on-plurilingualism-driven-curricular-changes-across-formal-and-informal-educational-settings/
-  description: Logambal Souprayen-Cavery , Université de la Réunion logambal.souprayen-cavery@univ-reunion.fr
 - journal: BMC Medical Education
   publisher: Springer
   tag:
@@ -390,6 +366,21 @@
   link: https://link.springer.com/collections/ijhbajfjcb
   description: Although outcome-based models (such as Kirkpatrick’s hierarchy) have dominated program evaluation in health
     professions education for decades, it is particularly concerning that many educational evaluations ...
+- journal: Teaching in Higher Education
+  publisher: Taylor & Francis
+  tag:
+  - Higher Education
+  - Teacher Education & Development
+  title: The politics of assessment
+  abstract_deadline: 02 November 2026
+  fullpaper_deadline: 24 May 2027
+  fullpaper_deadline_sort: '2026-11-02'
+  editors: Juuso Henrik Nieminen (Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University, Melbourne,
+    Australia); Jan McArthur (Department of Educational Research, Lancaster University, Lancaster, UK); Tim Fawns (Monash
+    Education Academy, Monash University, Clayton, Australia)
+  link: https://think.taylorandfrancis.com/special_issues/the-politics-of-assessment/
+  description: Juuso Henrik Nieminen , Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University,
+    Melbourne, Australia juuso.nieminen@deakin.edu.au
 - journal: Journal of Research on Technology in Education
   publisher: Taylor & Francis
   tag:
@@ -1363,16 +1354,6 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
-  title: Ageism
-  abstract_deadline: ''
-  fullpaper_deadline: 25 March 2027
-  fullpaper_deadline_sort: '2027-03-25'
-  editors: ''
-  link: https://www.nature.com/collections/abccbiafgh
-  description: This Collection invites scholarship that explores ageism in all its forms.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
   title: Digital skills and data literacy
   abstract_deadline: ''
   fullpaper_deadline: 25 March 2027
@@ -2206,6 +2187,41 @@
   editors: ''
   link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Computational approaches to Psychiatric Disorders
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bihaajhbdc
+  description: With this cross-journal Collection, the Editors at Nature Communications, Nature Human Behavior, Nature Mental
+    Health, Communications Psychology, and Scientific Reports invite submissions on the topic of Computational Psychiatry.
+    This Collection aims to bring together research that leverages computational methods to advance our understanding of psychiatric
+    symptoms in humans.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Coupled Photocatalytic Redox Reactions for Value-Added Chemicals
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hbihiicjcf
+  description: Advancing coupled photocatalytic and photoelectrochemical systems for solar-driven redox transformations, sustainable
+    fuels, and value-added chemicals.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Social, economic and governance dimensions of nature-based solutions
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ieebhfhhjh
+  description: This cross-journal Collection brings together research that explores the social and economic challenges associated
+    with nature-based solutions.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -3253,17 +3269,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: AI in Education
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jcejfhfjic
-  description: This Collection highlights research on the role of AI in education. This is a multidisciplinary collaboration
-    bringing together psychological, educational, and computational perspectives.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Evolutionary responses to contemporary global change
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3795,17 +3800,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Understanding species redistributions under global climate change
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cafjaahgaf
-  description: With this cross-journal Collection, we invite submissions of articles that use modern approaches to advance
-    the understanding in species redistributions under global climate change.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Healthy Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3888,17 +3882,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Targeted diagnostics and therapies for autoimmune diseases
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/igahfggcda
-  description: This cross-journal Collection welcomes pre-clinical, translational, clinical and public health research addressing
-    the complexities of immune-mediated diseases and their management.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Artificial intelligence in RNA biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3976,6 +3959,19 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Nature Human Behaviour
+  publisher: Nature Portfolio
+  tag: *id008
+  title: Computational approaches to Psychiatric Disorders
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bihaajhbdc
+  description: With this cross-journal Collection, the Editors at Nature Communications, Nature Human Behavior, Nature Mental
+    Health, Communications Psychology, and Scientific Reports invite submissions on the topic of Computational Psychiatry.
+    This Collection aims to bring together research that leverages computational methods to advance our understanding of psychiatric
+    symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
   tag: *id026
@@ -3987,6 +3983,17 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: Taxes, tariffs and trade wars in the global economy
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gcjdcjabgd
+  description: This Collection invites research that interrogates taxes, tariffs and trade wars primarily through the lens
+    of global economics and finance, and international business studies.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -4068,17 +4075,6 @@
   description: This Collection examines alternative forms of education and their social, cultural, political, and psychological
     implications. We invite research that explores alternative educational practices, including community-led learning, informal
     and non-formal education, experimental pedagogies, digital learning spaces, and decolonial or indigenous knowledge systems.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: Crisis and resilience in Latin American politics
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/dgaccbigjj
-  description: This Collection seeks to explore continuity and change in Latin American politics in both historical and contemporary
-    perspectives.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -4461,17 +4457,6 @@
   description: This Humanities and Social Sciences Communications Collection aims to explore the multi-layered dynamics of
     emotion regulation, assessing the impacts of both individual and social processes on its mechanisms, contexts, functions
     and consequences.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: 'Decolonising economics: justice, plurality, and inclusivity'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jidjebgdic
-  description: This Collection invites contributions that engage with the theme of decolonising economics, both theoretically
-    and practically, exploring its implications for economic thought and transformative action.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
