@@ -248,6 +248,17 @@
   editors: Kreeta Niemi (University of Jyväskylä); Mari Holmström (Tampere University); Iira Rautiainen (University of Jyväskylä)
   link: https://think.taylorandfrancis.com/special_issues/call-for-abstracts-doing-unavailability-co-presence-as-mediated-activity-at-the-interface-of-focused-and-unfocused-interaction/
   description: ''
+- journal: Journal of Teacher Education
+  publisher: SAGE
+  tag:
+  - Teacher Education & Development
+  title: 'Paper Call: Black Teacher Project'
+  abstract_deadline: ''
+  fullpaper_deadline: September 30, 2026
+  fullpaper_deadline_sort: '2026-09-30'
+  editors: ''
+  link: https://journals.sagepub.com/pb-assets/PDF/BTP-Call-FINAL-v3a-1787808880187.pdf
+  description: JTE is seeking papers for special issue 78.5 The first deadline is September 30, 2026.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
   tag: *id004
@@ -891,6 +902,19 @@
   link: https://www.nature.com/collections/ajgiiagfdg
   description: This Collection welcomes contributions that investigate how copyright and creative rights intersect with humanistic
     scholarship, cultural heritage, and artistic practice.
+- journal: International Journal of Science Education
+  publisher: Taylor & Francis
+  tag:
+  - Subject Education
+  - Science Education
+  title: What Makes Creativity Scientific? Recognising and Cultivating Scientific Creativity in Science Education
+  abstract_deadline: 15 February 2027
+  fullpaper_deadline: 15 September 2027
+  fullpaper_deadline_sort: '2027-02-15'
+  editors: Jonathan Plucker (Johns Hopkins University, USA); Michael J. Reiss (University College London, UK); Mihye Won (Monash
+    University, Australia); Shiyu Xu (East China Normal University, China)
+  link: https://think.taylorandfrancis.com/special_issues/what-makes-creativity-scientific/
+  description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -2190,6 +2214,19 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Cerebrovascular health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ffjigbffbb
+  description: This cross-journal collection invites submissions addressing cerebrovascular biology and disorders. We particularly
+    encourage multidisciplinary research on the blood–brain barrier, cerebral perfusion, meningeal lymphatics and perivascular
+    clearance, vascular ageing and inflammation, as well as bidirectional interactions between the cerebral vasculature and
+    cardiac, immune and metabolic systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Computational approaches to Psychiatric Disorders
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3269,6 +3306,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: AI in Education
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jcejfhfjic
+  description: This Collection highlights research on the role of AI in education. This is a multidisciplinary collaboration
+    bringing together psychological, educational, and computational perspectives.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Evolutionary responses to contemporary global change
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3800,6 +3848,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Understanding species redistributions under global climate change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cafjaahgaf
+  description: With this cross-journal Collection, we invite submissions of articles that use modern approaches to advance
+    the understanding in species redistributions under global climate change.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Healthy Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3879,6 +3938,17 @@
   link: https://www.nature.com/collections/ihibjjdcee
   description: In this cross-journal Collection, we invite research into the complex signalling pathways of innate immunity,
     emphasising the activation and regulation of pattern recognition receptors in response to microbial and endogenous triggers.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Targeted diagnostics and therapies for autoimmune diseases
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/igahfggcda
+  description: This cross-journal Collection welcomes pre-clinical, translational, clinical and public health research addressing
+    the complexities of immune-mediated diseases and their management.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -3986,6 +4056,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
+  title: Inclusive education
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dcfjchacag
+  description: This Collection invites interdisciplinary contributions that critically examine the theories, practices, and
+    politics of inclusive education.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
   title: Taxes, tariffs and trade wars in the global economy
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4055,6 +4136,16 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
+  title: Ageism
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/abccbiafgh
+  description: This Collection invites scholarship that explores ageism in all its forms.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
   title: Pharmaceutical intellectual property
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4075,6 +4166,17 @@
   description: This Collection examines alternative forms of education and their social, cultural, political, and psychological
     implications. We invite research that explores alternative educational practices, including community-led learning, informal
     and non-formal education, experimental pedagogies, digital learning spaces, and decolonial or indigenous knowledge systems.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: Crisis and resilience in Latin American politics
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dgaccbigjj
+  description: This Collection seeks to explore continuity and change in Latin American politics in both historical and contemporary
+    perspectives.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -4457,6 +4559,17 @@
   description: This Humanities and Social Sciences Communications Collection aims to explore the multi-layered dynamics of
     emotion regulation, assessing the impacts of both individual and social processes on its mechanisms, contexts, functions
     and consequences.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Decolonising economics: justice, plurality, and inclusivity'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jidjebgdic
+  description: This Collection invites contributions that engage with the theme of decolonising economics, both theoretically
+    and practically, exploring its implications for economic thought and transformative action.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
