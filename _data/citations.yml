@@ -1,15 +1,15 @@
 metadata:
   h_index: 8
   i10_index: 8
-  last_updated: '2026-08-19'
-  total_citations: 1042
+  last_updated: '2026-08-28'
+  total_citations: 1061
 papers:
   RkLnsEwAAAAJ:0EnyYjriUFMC:
     citations: 1
     title: "Human-AI Collaborative Learning Ecosystem: Effects of Multi-Agent-Based Programming Learning on Learning Outcomes, Computational Thinking, and Behavioral Patterns in Higher \u2026"
     year: '2026'
   RkLnsEwAAAAJ:2osOgNQ5qMEC:
-    citations: 159
+    citations: 164
     title: 'Research landscape of adaptive learning in education: A bibliometric study on research publications from 2000 to 2022'
     year: '2023'
   RkLnsEwAAAAJ:3fE2CSJIrl8C:
@@ -49,7 +49,7 @@ papers:
     title: 'Dsadf: Thinking fast and slow for decision making'
     year: '2026'
   RkLnsEwAAAAJ:W7OEmFMy1HYC:
-    citations: 10
+    citations: 11
     title: "Breaking the boundaries of conventional vocabulary learning: the impact of vocabulary learning with intelligent interactive companion in CAVL environments on learning outcomes \u2026"
     year: '2025'
   RkLnsEwAAAAJ:WF5omc3nYNoC:
@@ -57,7 +57,7 @@ papers:
     title: 'Bibliometrics in educational technology: a critical literature review incorporating content analysis'
     year: Unknown Year
   RkLnsEwAAAAJ:Y0pCki6q_DkC:
-    citations: 7
+    citations: 8
     title: 'Evolution in Simulation: AI-Agent School with Dual Memory for High-Fidelity Educational Dynamics'
     year: '2025'
   RkLnsEwAAAAJ:YsMSGLbcyi4C:
@@ -65,7 +65,7 @@ papers:
     title: 'The future landscape of education: constructing an analytical and application framework for generative artificial intelligence in higher education'
     year: '2025'
   RkLnsEwAAAAJ:d1gkVwhDpl0C:
-    citations: 492
+    citations: 499
     title: "\U0001F525\U0001F3C6Factors influencing university students\u2019 behavioral intention to use generative artificial intelligence: Integrating the theory of planned behavior and AI literacy"
     year: '2025'
   RkLnsEwAAAAJ:eQOLeE2rZwMC:
@@ -77,7 +77,7 @@ papers:
     title: 'Academic transformation in the era of artificial intelligence: drivers of university faculty adoption of GenAI based on the UTAUT model'
     year: '2026'
   RkLnsEwAAAAJ:qjMakFHDy7sC:
-    citations: 84
+    citations: 89
     title: "\U0001F3C6Impact of AI-agent-supported collaborative learning on the learning outcomes of University programming courses"
     year: '2025'
   RkLnsEwAAAAJ:roLk4NBRz8UC:
