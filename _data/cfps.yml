@@ -2,18 +2,6 @@
   publisher: Springer
   tag:
   - Medical Education
-  title: Lifelong learning and patient safety
-  abstract_deadline: ''
-  fullpaper_deadline: 18 August 2026
-  fullpaper_deadline_sort: '2026-08-18'
-  editors: ''
-  link: https://link.springer.com/collections/djeaiahcga
-  description: BMC Medical Education called for submissions to our Collection, Lifelong learning and patient safety. As healthcare
-    delivery becomes increasingly complex, shaped by biomedical advances, digital transformatio...
-- journal: BMC Medical Education
-  publisher: Springer
-  tag:
-  - Medical Education
   title: Diagnostic and interventional CT and MRI
   abstract_deadline: ''
   fullpaper_deadline: 20 August 2026
@@ -3988,17 +3976,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Adolescent and adult autism
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ahgbffbegd
-  description: The Editors at Communications Psychology and Nature Communications invite research on autism in adolescence
-    or adulthood.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Reward and anti-reward circuits in health and disease
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4053,6 +4030,17 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Digitalisation and inequality in later-life work: risks, resilience, and inclusion'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/baafedhbdj
+  description: This Collection welcomes interdisciplinary research examining how digitalisation transforms opportunities,
+    risks and inequalities in later-life work.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
@@ -4727,17 +4715,6 @@
   link: https://www.nature.com/collections/zsjgyfyvfr
   description: Explorations of how continuity and change have shaped Russian politics over the last century and what their
     legacies are today.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id009
-  title: 'Discourse studies: theories and methodologies at the crossroads of language and society'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gxplbgvcbv
-  description: Contemporary challenges in the broader context of discourse studies from a range of theoretical and methodological
-    vantage points.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
