@@ -61,7 +61,7 @@
   description: ''
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id015
+  tag: &id016
   - Library & Information Science
   title: Joint Special Issue Call for Papers - Large Language Models (LLMs) for Tourism and Tourists
   abstract_deadline: ''
@@ -475,7 +475,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id026
+  tag: &id027
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -574,7 +574,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id020
+  tag: &id021
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -699,6 +699,17 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Carbon Dioxide Removal
+  abstract_deadline: ''
+  fullpaper_deadline: 16 January 2027
+  fullpaper_deadline_sort: '2027-01-16'
+  editors: ''
+  link: https://www.nature.com/collections/jfjbjjheei
+  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
+    can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
   tag: &id013
@@ -714,17 +725,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Carbon Dioxide Removal
-  abstract_deadline: ''
-  fullpaper_deadline: 16 January 2027
-  fullpaper_deadline_sort: '2027-01-16'
-  editors: ''
-  link: https://www.nature.com/collections/jfjbjjheei
-  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
-    can contribute to climate change mitigation.
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: *id013
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -734,9 +734,9 @@
   description: With this Collection, we aim to highlight some of the latest cancer vaccine-related papers published in the
     journals and we welcome submissions of primary research papers that focus on the clinical development in the field, including
     but not limited to personalized vaccine approaches.
-- journal: Nature Communications
+- journal: Nature
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id013
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -780,9 +780,9 @@
   link: https://link.springer.com/collections/fhbjafcjge
   description: Competency-based education (CBE) focuses on the development of specific competencies necessary for effective
     practice. This Collection aims to gather innovative research that highlights the implementation an...
-- journal: Nature
+- journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id013
+  tag: *id007
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -793,9 +793,9 @@
     Nature Progress Brain Health, and Communications Biology invite submissions that aim to elucidate the molecular mechanisms
     underlying bidirectional cancer–nervous system interactions and their influence on the tumour microenvironment, as well
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
-- journal: Nature Communications
+- journal: Nature
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id013
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -962,7 +962,8 @@
     and entheogens shape human experience, social organisation, and biological systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: &id015
+  - Interdisciplinary Science
   title: Cerebrovascular contributions to neurodegeneration
   abstract_deadline: ''
   fullpaper_deadline: 25 February 2027
@@ -974,7 +975,7 @@
     the pathophysiology, diagnosis and treatment of cerebrovascular dysfunction in neurodegenerative disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Protein Dynamics Informing Structure, Function, and Evolution
   abstract_deadline: ''
   fullpaper_deadline: 25 February 2027
@@ -985,7 +986,7 @@
     submissions of primary research in structural biology that link protein dynamics to function, structure and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: 'Translational challenges in multi drug discovery: model informed design to enhance efficacy and limit resistance'
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2027
@@ -996,7 +997,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id017
+  tag: &id018
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -1009,7 +1010,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id021
+  tag: &id022
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -1022,7 +1023,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Human Admixture and Migration
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1033,7 +1034,7 @@
     shifts or health. Topics of interest include, but are not limited to, genetic or genomic approaches to the study of:'
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Neural Models of Consciousness
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1057,7 +1058,7 @@
   description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Tuberculosis vaccines
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1070,7 +1071,7 @@
     considerations.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Inflammation, Immunometabolism, and Chronic Disease
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1081,7 +1082,7 @@
     into how inflammatory and immunometabolic processes shape chronic disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Expanding the landscape of post-translational modifications
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1115,7 +1116,7 @@
     colonial violence.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Macrophages in scar-free repair and regeneration
   abstract_deadline: ''
   fullpaper_deadline: 10 March 2027
@@ -1185,7 +1186,7 @@
     with a particular focus on how legitimacy is constructed, contested, and operationalised in policy and practice.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Phase-Change Reconfigurable Photonics
   abstract_deadline: ''
   fullpaper_deadline: 16 March 2027
@@ -1208,7 +1209,7 @@
     links to politics, and also the cultural imprint of Islam on society.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Complications of Diabetes
   abstract_deadline: ''
   fullpaper_deadline: 17 March 2027
@@ -1400,7 +1401,7 @@
     and mixed-methods approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id015
   title: Sustainable Transport
   abstract_deadline: ''
   fullpaper_deadline: 28 March 2027
@@ -1423,7 +1424,7 @@
     process and post-process modifications.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id015
+  tag: *id016
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1689,7 +1690,7 @@
   description: ''
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id018
+  tag: &id019
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1702,7 +1703,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id016
+  tag: &id017
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1725,7 +1726,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id015
+  tag: *id016
   title: Multilingual and Multimodal Solutions for Low Resource, Indigenous, Endangered Languages and Dialects
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1760,7 +1761,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id016
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1771,7 +1772,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id017
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1782,7 +1783,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id019
+  tag: &id020
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1793,7 +1794,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id018
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1804,7 +1805,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id024
+  tag: &id025
   - Educational Technology
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
@@ -1854,7 +1855,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id019
+  tag: *id020
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1865,7 +1866,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id020
+  tag: *id021
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1876,7 +1877,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id021
+  tag: *id022
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1898,7 +1899,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id022
+  tag: &id023
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1911,7 +1912,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id022
+  tag: *id023
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1959,7 +1960,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id023
+  tag: &id024
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1971,7 +1972,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2087,7 +2088,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id024
+  tag: *id025
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2098,7 +2099,7 @@
     significant, and innovative topics in the field of educational technology research and develo...
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id023
+  tag: *id024
   title: Series of Short Notes on the State of Educational Change and Its Future
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2131,7 +2132,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id025
+  tag: &id026
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -2143,7 +2144,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id025
+  tag: *id026
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2154,7 +2155,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id025
+  tag: *id026
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4021,7 +4022,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id027
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4715,6 +4716,17 @@
   link: https://www.nature.com/collections/zsjgyfyvfr
   description: Explorations of how continuity and change have shaped Russian politics over the last century and what their
     legacies are today.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id009
+  title: 'Discourse studies: theories and methodologies at the crossroads of language and society'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gxplbgvcbv
+  description: Contemporary challenges in the broader context of discourse studies from a range of theoretical and methodological
+    vantage points.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id009
