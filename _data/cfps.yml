@@ -49,7 +49,7 @@
   description: ''
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id014
+  tag: &id013
   - Library & Information Science
   title: Joint Special Issue Call for Papers - Large Language Models (LLMs) for Tourism and Tourists
   abstract_deadline: ''
@@ -235,6 +235,18 @@
   editors: ''
   link: https://journals.sagepub.com/pb-assets/PDF/BTP-Call-FINAL-v3a-1787808880187.pdf
   description: JTE is seeking papers for special issue 78.5 The first deadline is September 30, 2026.
+- journal: Educational Technology Research and Development
+  publisher: Springer
+  tag: &id017
+  - Educational Technology
+  title: 'Special Issue: Replication Studies'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 September 2026
+  fullpaper_deadline_sort: '2026-09-30'
+  editors: ''
+  link: https://link.springer.com/collections/dbfjdijaae
+  description: We invite proposals for replication studies in the fields of instructional design, learning sciences, and educational
+    technologies. Proposals should focus on one of the following types of replication studies...
 - journal: npj Science of Learning
   publisher: Nature Portfolio
   tag: *id004
@@ -465,7 +477,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id025
+  tag: &id024
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -689,18 +701,6 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: &id012
-  - Interdisciplinary Science
-  title: Carbon Dioxide Removal
-  abstract_deadline: ''
-  fullpaper_deadline: 16 January 2027
-  fullpaper_deadline_sort: '2027-01-16'
-  editors: ''
-  link: https://www.nature.com/collections/jfjbjjheei
-  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
-    can contribute to climate change mitigation.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -712,18 +712,6 @@
   link: https://www.nature.com/collections/jfjbjjheei
   description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
     can contribute to climate change mitigation.
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: *id012
-  title: Cancer vaccines in the immunotherapy era
-  abstract_deadline: ''
-  fullpaper_deadline: 17 January 2027
-  fullpaper_deadline_sort: '2027-01-17'
-  editors: ''
-  link: https://www.nature.com/collections/bibjifjbbj
-  description: With this Collection, we aim to highlight some of the latest cancer vaccine-related papers published in the
-    journals and we welcome submissions of primary research papers that focus on the clinical development in the field, including
-    but not limited to personalized vaccine approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -770,19 +758,6 @@
   link: https://link.springer.com/collections/fhbjafcjge
   description: Competency-based education (CBE) focuses on the development of specific competencies necessary for effective
     practice. This Collection aims to gather innovative research that highlights the implementation an...
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: *id012
-  title: 'Cancer Neuroscience: from mechanisms to therapy'
-  abstract_deadline: ''
-  fullpaper_deadline: 30 January 2027
-  fullpaper_deadline_sort: '2027-01-30'
-  editors: ''
-  link: https://www.nature.com/collections/jhhachcead
-  description: With this collection, Nature Communications, Nature, Nature Cancer, Nature Neuroscience, Nature Progress Oncology,
-    Nature Progress Brain Health, and Communications Biology invite submissions that aim to elucidate the molecular mechanisms
-    underlying bidirectional cancer–nervous system interactions and their influence on the tumour microenvironment, as well
-    as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -811,7 +786,7 @@
     to sustainability practices, seen as place-based, culture-based and community-based. We invit...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: &id013
+  tag: &id012
   - Educational Technology
   - STEM Education
   title: AI Literacy and STEM Education
@@ -824,7 +799,7 @@
     to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id012
   title: Assessment for STEM Education in the AI Era
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -975,7 +950,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id016
+  tag: &id015
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -1279,17 +1254,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: Understanding, preventing, diagnosing and treating cardiometabolic disease
-  abstract_deadline: ''
-  fullpaper_deadline: 22 March 2027
-  fullpaper_deadline_sort: '2027-03-22'
-  editors: ''
-  link: https://www.nature.com/collections/ggehbgffif
-  description: This cross-journal Collection calls for papers that advance mechanistic and clinical understanding of cardiometabolic
-    disease.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Effects of Psychedelics on the Brain
   abstract_deadline: ''
   fullpaper_deadline: 23 March 2027
@@ -1402,7 +1366,7 @@
     process and post-process modifications.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id014
+  tag: *id013
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1668,7 +1632,7 @@
   description: ''
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id017
+  tag: &id016
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1681,7 +1645,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id015
+  tag: &id014
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1693,7 +1657,7 @@
     increasingly multilingual, multicultural, and mobile societies. Across diverse contexts, children n...'
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id012
   title: Mathematics and Effective STEM Learning
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1704,7 +1668,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id014
+  tag: *id013
   title: Multilingual and Multimodal Solutions for Low Resource, Indigenous, Endangered Languages and Dialects
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1739,7 +1703,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id015
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1750,7 +1714,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id016
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1772,7 +1736,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id017
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1783,8 +1747,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id023
-  - Educational Technology
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -2066,7 +2029,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id023
+  tag: *id017
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -2110,7 +2073,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id024
+  tag: &id023
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -2122,7 +2085,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id024
+  tag: *id023
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2133,7 +2096,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id024
+  tag: *id023
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2178,6 +2141,53 @@
   editors: ''
   link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Nature
+  publisher: Nature Portfolio
+  tag:
+  - Interdisciplinary Science
+  title: Alternative cell death mechanisms in cancer
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcibbeeieg
+  description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
+    governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Exposome in Health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jejjbfbhda
+  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
+    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
+    our understanding of the relationship between the exposome and human health. We also welcome work including historically
+    underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Alternative cell death mechanisms in cancer
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcibbeeieg
+  description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
+    governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Decoding Disorder in Glass-forming Materials
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hbicecgjah
+  description: With this Collection, the editors invite submissions that advance our understanding of the fundamental glass
+    physics across a wide range of materials.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -2381,6 +2391,17 @@
   editors: ''
   link: https://www.nature.com/collections/cdjjefjafh
   description: This cross-journal Collection highlights advances in methods for chemical protein modification.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Protein Dynamics Informing Structure, Function, and Evolution
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bhjjedadcb
+  description: This joint Collection between Nature Communications Communications Biology, and Communications Chemistry welcomes
+    submissions of primary research in structural biology that link protein dynamics to function, structure and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -3364,17 +3385,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: Infectious disease modelling for health policy
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cafdeadabd
-  description: With this cross-journal collection, Communications Health, and Nature Communications invite Articles describing
-    the application of infectious disease models to timely health policy questions.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Immune mechanisms in arthritis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3701,166 +3711,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: Gender equity in academia and research
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hgecjdejdd
-  description: This Collection invites research examining the intersection of gender identity and the academic research environment.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Lifespan changes in the human brain
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/efhdahehdi
-  description: This cross-journal collection invites submissions that investigate human brain changes across all or multiple
-    stages of life, from in-utero to older age.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Neuroengineering
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ijbgfjadje
-  description: With this cross-journal Collection, the editors at Nature Biomedical Engineering, Nature Medicine, Nature Neuroscience,
-    Nature Biotechnology, Nature Communications, Communications Medicine, Communications Biology, and Scientific Reports invite
-    manuscripts that highlight the development, use and insight obtained from applying neuroengineering approaches.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Sensing Technologies for Crop Health and Growth
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hdhadgfdbh
-  description: With this cross-journal Collection, we invite manuscripts that highlight continual or real-time sensing systems
-    of any form, primarily for arable farming or crop production.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Comparative Psychology of Cognition, Affect, and Behaviour
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gbbefibjai
-  description: With this cross-journal Collection, the editors at Communications Psychology, Nature Communications and Scientific
-    Reports invite manuscripts that highlight recent progress in Comparative Psychology.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Synthetic Catalysts for Biomedicine and Biotechnology
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/haehcfdeed
-  description: In this cross-journal Collection between Nature Communications, Nature Chemical Biology, Communications Chemistry,
-    Communications Materials, Communications Sustainability and Scientific Reports, we aim to bring together the latest advances
-    in synthetic catalysts for biomedicine and biotechnology, covering design and production, mechanistic studies, and application
-    demonstrations.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Towards low-pressure all-solid-state batteries
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fceiagceha
-  description: This Cross-journal Collection highlights advances in the development of low- or zero-pressure all-solid-state
-    batteries (ASSBs).
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: High-Energy Light Sources - From Tabletop to Large Facilities
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hddiaeiege
-  description: This cross-journal collection born in collaboration between Communications Physics, Nature Communications and
-    Scientific Reports explores recent progress in high-energy light sources, from from tabletop to large scale facilities.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: NeuroAI and Embodied Intelligence
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gififfbfjc
-  description: This cross-journal Collection brings together research at the intersection of neuroscience, artificial intelligence,
-    neuromorphic hardware, and robotics with a focus on how insights from brain function can inspire the design of more adaptive,
-    efficient, and intelligent systems. We welcome submissions that explore neurobiologically-inspired models, architectures,
-    and learning algorithms that have the potential to enhance embodied AI and robotic systems.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Generative AI for mechanical engineering design and optimization
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fafcgigbai
-  description: In this collection we aim to publish exciting advances in the capability of generative AI methods and their
-    application directions within a broad mechanical engineering scope.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Understanding species redistributions under global climate change
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cafjaahgaf
-  description: With this cross-journal Collection, we invite submissions of articles that use modern approaches to advance
-    the understanding in species redistributions under global climate change.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Healthy Aging
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hijffbgchi
-  description: This collection welcomes submissions based on studying preclinical models, as well as population-wide and clinical
-    studies. Studies that advance our understanding of mechanisms behind healthy aging are also welcomed. Clinical research
-    of interest will include epidemiological studies, observational studies, longitudinal cohort studies, systematic reviews
-    and clinical trials.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: (In)civility
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bfcbcefhhg
-  description: With this cross-journal Collection, the editors at Communications Psychology, Nature Communications, and Scientific
-    Reports invite innovative research on incivility.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: 'Global Cancer Care: Obstacles, Solutions, and Impact on Survivorship'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/haifcgbgah
-  description: This cross-journal collection welcomes submissions of research Articles and Registered Reports that highlight
-    developments in understanding barriers to cancer care and strategies to improve them in different regions.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Mechanisms and impact of 3D genome organisation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3882,18 +3732,6 @@
   description: In this joint collection between Communications Biology, Nature Communications, Nature Structural & Molecular
     Biology, and Scientific Reports, we invite submissions containing new methods for the prediction of structure of macromolecules
     such as proteins, peptides and RNA.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: CMOS-compatible semiconductor qubits
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fahiheffaa
-  description: With this cross-journal Collection, the editors at Nature Communications, Communications Physics and Scientific
-    Reports invite manuscripts that advance the fundamental physics of CMOS-compatible semiconductor qubits, tackle scalability
-    issues, and showcase practical applications in quantum computing, communication, and simulation.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -3955,17 +3793,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: Reward and anti-reward circuits in health and disease
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jibjaahicb
-  description: This cross-journal Collection welcomes submissions on novel reward and anti-reward mechanisms regulating motivated
-    behaviors in health and disease.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Registered Reports
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4000,7 +3827,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id025
+  tag: *id024
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4686,17 +4513,6 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id008
-  title: Continuity and change in Russian politics
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/zsjgyfyvfr
-  description: Explorations of how continuity and change have shaped Russian politics over the last century and what their
-    legacies are today.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id008
   title: 'Discourse studies: theories and methodologies at the crossroads of language and society'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4705,13 +4521,3 @@
   link: https://www.nature.com/collections/gxplbgvcbv
   description: Contemporary challenges in the broader context of discourse studies from a range of theoretical and methodological
     vantage points.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id008
-  title: Interdisciplinarity in theory and practice
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/qtqsgncqqp
-  description: This collection is concerned primarily with the theory and practice of interdisciplinarity.
