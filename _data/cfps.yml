@@ -96,7 +96,7 @@
   description: Felicitas Macgilchrist , Carl von Ossietzky University Oldenburg felicitas.macgilchrist@uni-oldenburg.de
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id003
+  tag:
   - Medical Education
   title: Palliative care education
   abstract_deadline: ''
@@ -108,7 +108,7 @@
     education is an essential component of healthcare training, aimed at equipping healthcare profession...
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: &id004
+  tag: &id003
   - Educational Psychology
   - Educational Technology
   title: Effects of lifestyle behaviours on learning and neuroplasticity
@@ -170,7 +170,8 @@
     of how CBME can be thoughtfully implemented, evaluated, and sustained across psychiatry re...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: &id008
+  - Medical Education
   title: Psychiatric education and its challenges
   abstract_deadline: ''
   fullpaper_deadline: 30 September 2026
@@ -204,7 +205,7 @@
   description: ''
 - journal: Educational Psychology
   publisher: Taylor & Francis
-  tag: &id005
+  tag: &id004
   - Educational Psychology
   title: 'Learning success mechanisms and adaptability in the AI era: from reactive to predictive and proactive learning'
   abstract_deadline: 30 September 2026
@@ -249,7 +250,7 @@
     technologies. Proposals should focus on one of the following types of replication studies...
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id004
+  tag: *id003
   title: Reimagining Teaching and Learning in the Age of Generative AI Agents
   abstract_deadline: ''
   fullpaper_deadline: 13 October 2026
@@ -296,7 +297,7 @@
   description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: &id006
+  tag: &id005
   - Interdisciplinary Science
   title: Digital Media and Mental Health
   abstract_deadline: ''
@@ -308,7 +309,7 @@
     welcome submissions examining the role of digital media in mental health.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
-  tag: &id007
+  tag: &id006
   - Psychology
   - Behavioral Science
   title: Digital Media and Mental Health
@@ -333,7 +334,7 @@
   description: Alexandra Mihai , Maastricht University, Netherlands a.mihai@maastrichtuniversity.nl
 - journal: Educational Psychology
   publisher: Taylor & Francis
-  tag: *id005
+  tag: *id004
   title: 'AI in Educational Psychology: Reviews, Meta-Analyses, and Position Papers'
   abstract_deadline: ''
   fullpaper_deadline: 31 October 2026
@@ -396,7 +397,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: &id008
+  tag: &id007
   - Interdisciplinary Science
   - General Education
   title: Arts integration in education
@@ -410,7 +411,7 @@
     and institutional structures in formal and informal learning environments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Basic Psychological Needs and Well-Being
   abstract_deadline: ''
   fullpaper_deadline: 27 November 2026
@@ -421,7 +422,7 @@
     invite submissions that address the importance of psychological needs for well-being and mental health.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id006
   title: Basic Psychological Needs and Well-Being
   abstract_deadline: ''
   fullpaper_deadline: 27 November 2026
@@ -432,7 +433,7 @@
     invite submissions that address the importance of psychological needs for well-being and mental health.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Living with human enhancement – ethical, social, and psychological dimensions
   abstract_deadline: ''
   fullpaper_deadline: 27 November 2026
@@ -443,7 +444,7 @@
     and political dimensions of human enhancement.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id004
+  tag: *id003
   title: Mathematical Cognition in Evolving Learning Environments
   abstract_deadline: ''
   fullpaper_deadline: 28 November 2026
@@ -466,7 +467,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'The Nobel Prize: historical and sociocultural perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 02 December 2026
@@ -489,7 +490,7 @@
     interactions with inflammation and immunity, and interventions targeting senescent cells to promote healthy longevity.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Disability in medical education
   abstract_deadline: ''
   fullpaper_deadline: 07 December 2026
@@ -521,7 +522,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Education for marginalised or displaced populations
   abstract_deadline: ''
   fullpaper_deadline: 20 December 2026
@@ -532,7 +533,7 @@
     possibilities of education for marginalised or displaced populations.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Translational humanities
   abstract_deadline: ''
   fullpaper_deadline: 24 December 2026
@@ -615,7 +616,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Gender, democracy and political violence: A feminist perspective'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -627,7 +628,7 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'The Olympic Games: Media, representation and cultural politics'
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2027
@@ -639,7 +640,7 @@
     them.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Learning spaces and classroom design
   abstract_deadline: ''
   fullpaper_deadline: 08 January 2027
@@ -650,7 +651,7 @@
     experiences.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id004
+  tag: *id003
   title: Embodied Learning
   abstract_deadline: ''
   fullpaper_deadline: 10 January 2027
@@ -661,7 +662,7 @@
     theory, methods, and edtech.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -672,7 +673,7 @@
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Nutrition science in health professions education
   abstract_deadline: ''
   fullpaper_deadline: 13 January 2027
@@ -694,7 +695,7 @@
     of systematic reviews examining the evidence base for the following topics in psychiatry education: ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Medical education for LGBTQ+ health
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -717,7 +718,7 @@
     can contribute to climate change mitigation.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Carbon Dioxide Removal
   abstract_deadline: ''
   fullpaper_deadline: 16 January 2027
@@ -740,7 +741,7 @@
     but not limited to personalized vaccine approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -763,7 +764,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Corruption beyond borders: power, crime, and governance'
   abstract_deadline: ''
   fullpaper_deadline: 28 January 2027
@@ -775,7 +776,7 @@
     sociologists, legal scholars, economists, criminologists, development experts, data scientists and others.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Health professions competency-based education (CBE) innovations around the world
   abstract_deadline: ''
   fullpaper_deadline: 29 January 2027
@@ -799,7 +800,7 @@
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -885,7 +886,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Creative rights, copyright and culture: intellectual property in the arts and humanities'
   abstract_deadline: ''
   fullpaper_deadline: 08 February 2027
@@ -909,7 +910,7 @@
   description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Social Group Dynamics
   abstract_deadline: ''
   fullpaper_deadline: 18 February 2027
@@ -920,7 +921,7 @@
     invite submissions that address psychological aspects of social group dynamics.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id006
   title: Social Group Dynamics
   abstract_deadline: ''
   fullpaper_deadline: 18 February 2027
@@ -931,7 +932,7 @@
     invite submissions that address psychological aspects of social group dynamics.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Behaviour and digital population health
   abstract_deadline: ''
   fullpaper_deadline: 20 February 2027
@@ -942,7 +943,7 @@
     that explore the use of digital technologies to measure, understand and influence population health behaviours.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Advances in Women’s Reproductive Biology
   abstract_deadline: ''
   fullpaper_deadline: 22 February 2027
@@ -954,7 +955,7 @@
     and complicated pregnancies, including preeclampsia and preterm birth risk.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Sacred substances, Social Worlds: Psychedelics Across Cultures'
   abstract_deadline: ''
   fullpaper_deadline: 22 February 2027
@@ -966,7 +967,7 @@
     and entheogens shape human experience, social organisation, and biological systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cerebrovascular contributions to neurodegeneration
   abstract_deadline: ''
   fullpaper_deadline: 25 February 2027
@@ -978,7 +979,7 @@
     the pathophysiology, diagnosis and treatment of cerebrovascular dysfunction in neurodegenerative disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Translational challenges in multi drug discovery: model informed design to enhance efficacy and limit resistance'
   abstract_deadline: ''
   fullpaper_deadline: 27 February 2027
@@ -1015,7 +1016,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Human Admixture and Migration
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1026,7 +1027,7 @@
     shifts or health. Topics of interest include, but are not limited to, genetic or genomic approaches to the study of:'
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neural Models of Consciousness
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
@@ -1050,7 +1051,7 @@
   description: ''
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Tuberculosis vaccines
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1063,7 +1064,7 @@
     considerations.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Inflammation, Immunometabolism, and Chronic Disease
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1074,7 +1075,7 @@
     into how inflammatory and immunometabolic processes shape chronic disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Expanding the landscape of post-translational modifications
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1086,7 +1087,7 @@
     paradigms.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Remembering World War I: archives, history and empire'
   abstract_deadline: ''
   fullpaper_deadline: 01 March 2027
@@ -1097,7 +1098,7 @@
     uncovering overlooked narratives and challenging Eurocentric perspectives.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Race, biopolitics and political violence
   abstract_deadline: ''
   fullpaper_deadline: 05 March 2027
@@ -1108,7 +1109,7 @@
     colonial violence.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Macrophages in scar-free repair and regeneration
   abstract_deadline: ''
   fullpaper_deadline: 10 March 2027
@@ -1120,7 +1121,7 @@
     exhibit remarkable regenerative capacity and scar-free wound healing.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Health communication in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1131,7 +1132,7 @@
     and fostering collaborative relationships between healthcare providers and communities. This Coll...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Disaster preparedness in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1142,7 +1143,7 @@
     of natural and man-made disasters increase. This Collection seeks to explore the evolving lan...
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Leisure reading and reader engagement
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1155,7 +1156,7 @@
     information science, publishing studies, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Adam Smith and the 250th anniversary of "The Wealth of Nations"
   abstract_deadline: ''
   fullpaper_deadline: 12 March 2027
@@ -1167,7 +1168,7 @@
     disciplines.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Maritime security: hybrid actors, legal ambiguity, and state security at sea'
   abstract_deadline: ''
   fullpaper_deadline: 15 March 2027
@@ -1178,7 +1179,7 @@
     with a particular focus on how legitimacy is constructed, contested, and operationalised in policy and practice.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Phase-Change Reconfigurable Photonics
   abstract_deadline: ''
   fullpaper_deadline: 16 March 2027
@@ -1189,7 +1190,7 @@
     technologies toward practical implementation.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Islam – belief, politics and culture
   abstract_deadline: ''
   fullpaper_deadline: 16 March 2027
@@ -1201,7 +1202,7 @@
     links to politics, and also the cultural imprint of Islam on society.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Complications of Diabetes
   abstract_deadline: ''
   fullpaper_deadline: 17 March 2027
@@ -1214,7 +1215,7 @@
     developments in the field.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Children, teenagers and social media
   abstract_deadline: ''
   fullpaper_deadline: 17 March 2027
@@ -1225,7 +1226,7 @@
     and social media.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: AI-Driven Smart Agriculture for Sustainable Food Systems
   abstract_deadline: ''
   fullpaper_deadline: 18 March 2027
@@ -1236,7 +1237,7 @@
     applications of AI in smart agriculture.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Soil microbiomes and carbon sequestration under global change
   abstract_deadline: ''
   fullpaper_deadline: 18 March 2027
@@ -1247,7 +1248,7 @@
     environments to regulate carbon sequestration.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Interdisciplinary approaches to antiquity
   abstract_deadline: ''
   fullpaper_deadline: 18 March 2027
@@ -1258,7 +1259,7 @@
     understanding of the people, societies, environments, and ideas that shaped the ancient world in all its global variations.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Oil economies: markets, governance, and global risk'
   abstract_deadline: ''
   fullpaper_deadline: 24 March 2027
@@ -1269,7 +1270,7 @@
     market behaviour, policy responses, and the financial instruments used to manage uncertainty
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Digital skills and data literacy
   abstract_deadline: ''
   fullpaper_deadline: 25 March 2027
@@ -1280,7 +1281,7 @@
     possibilities of digital skills and data literacy.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Sustainable Transport
   abstract_deadline: ''
   fullpaper_deadline: 28 March 2027
@@ -1301,7 +1302,7 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Off the beaten path: adventurous, dangerous and dark tourism'
   abstract_deadline: ''
   fullpaper_deadline: 01 April 2027
@@ -1312,7 +1313,7 @@
     intense experiences.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id003
+  tag: *id008
   title: Programmatic assessment
   abstract_deadline: ''
   fullpaper_deadline: 06 April 2027
@@ -1323,7 +1324,7 @@
     professionals are well-prepared to meet the multifaceted challenges of patient care. The shif...
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Music education
   abstract_deadline: ''
   fullpaper_deadline: 09 April 2027
@@ -1334,7 +1335,7 @@
     historical and institutional contexts.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Social development and transformation in post-Soviet and satellite states
   abstract_deadline: ''
   fullpaper_deadline: 15 April 2027
@@ -1346,7 +1347,7 @@
     shaped the lived realities of individuals across the region.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Natural capital accounting (NCA) for sustainable society
   abstract_deadline: ''
   fullpaper_deadline: 17 April 2027
@@ -1357,7 +1358,7 @@
     sustainable cities. It also looks for the real effects of natural capital on environmental responsibility and green wealth.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Literacy development across age groups
   abstract_deadline: ''
   fullpaper_deadline: 21 April 2027
@@ -1367,7 +1368,7 @@
   description: This Collection invites scholarship that examines literacy development as a dynamic, age‑spanning phenomenon.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Uncovering Black histories: decolonial approaches'
   abstract_deadline: ''
   fullpaper_deadline: 23 April 2027
@@ -1378,7 +1379,7 @@
     and representation of Black histories across global contexts.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Sexually transmitted viruses – basic mechanisms to translational virology
   abstract_deadline: ''
   fullpaper_deadline: 27 April 2027
@@ -1923,20 +1924,40 @@
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
-  title: Exposome in Health
+  tag: *id005
+  title: Advancing the frontiers of Cryo-EM and in situ structural biology
   abstract_deadline: ''
   fullpaper_deadline: ''
   fullpaper_deadline_sort: '9999-99-99'
   editors: ''
-  link: https://www.nature.com/collections/jejjbfbhda
-  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
-    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
-    our understanding of the relationship between the exposome and human health. We also welcome work including historically
-    underrepresented populations.
+  link: https://www.nature.com/collections/ggfagejfgi
+  description: The era in situ cryo-EM has only just begun. We seek contributions advancing in situ structural biology toward
+    near-atomic resolution with mechanistic and dynamic insights in the native cellular context.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
+  title: Cancer Cell Atlases 2026
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/eeecbfecfa
+  description: This cross-journal collection invites submissions that expand the current catalogue of cancer cell atlases
+    using state-of-the-art omics techniques and algorithms.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Paleo-perspectives on abrupt climate change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/djdbaagifi
+  description: In this cross-journal collection, we bring together studies that collectively inform our understanding of the
+    drivers, pathways, mechanisms and impacts of such abrupt climate changes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: Alternative cell death mechanisms in cancer
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1947,7 +1968,7 @@
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Decoding Disorder in Glass-forming Materials
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1958,7 +1979,7 @@
     physics across a wide range of materials.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cerebrovascular health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1971,7 +1992,7 @@
     cardiac, immune and metabolic systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Computational approaches to Psychiatric Disorders
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1984,7 +2005,7 @@
     symptoms in humans.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Coupled Photocatalytic Redox Reactions for Value-Added Chemicals
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1995,7 +2016,7 @@
     fuels, and value-added chemicals.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Social, economic and governance dimensions of nature-based solutions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2006,7 +2027,7 @@
     with nature-based solutions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Form, force, and fertility
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2018,7 +2039,7 @@
     basis of fertility and reproduction.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Climate dynamics of the Southern Ocean
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2029,7 +2050,7 @@
     and the physical role of the Southern Ocean on regional and global climate change.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Inequalities in cancer: addressing challenges in diagnosis and treatment'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2040,7 +2061,7 @@
     in access to diagnosis and treatment and improve our understanding of oncology in underrepresented populations.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Mixed Methods in Psychology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2052,7 +2073,7 @@
     on the development and use of mixed methods.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Biophysical and Structural Principles of Cancer Cell Behaviour
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2063,7 +2084,7 @@
     survival, adaptation, and progression.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2074,7 +2095,7 @@
     the mechanisms and determinants of cognitive resilience in the aging brain.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Environmental ambitions and social realities in the Global South
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2085,7 +2106,7 @@
     environmental policy and targets, with a particular focus on including overlooked regions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cancer Immunometabolism
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2096,7 +2117,7 @@
     interactions and shape the balance between immunosuppression and immune activation.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cities in transformation under contemporary pressures
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2107,7 +2128,7 @@
     urban change.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Tectonic and magmatic drivers of carbon-cycle change
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2118,7 +2139,7 @@
     carbon-cycle evolution through Earth history.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Porous Materials for Carbon Dioxide Capture and Utilization
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2129,7 +2150,7 @@
     materials for carbon dioxide capture and utilization.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Emerging paradigms in CNS drug discovery for neurological, psychiatric, and addiction disorders
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2140,7 +2161,7 @@
     AI applications, and advanced delivery systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Stromal Immunology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2151,7 +2172,7 @@
     networks, pathways and molecular mediators that contribute to stromal-immune cell interactions and regulation.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Chemical modification of proteins
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2161,7 +2182,277 @@
   description: This cross-journal Collection highlights advances in methods for chemical protein modification.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
+  title: Antibiotic Resistance in the Environment
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/iedjgiejif
+  description: With this cross-journal Collection, we invite submissions that highlight the spread of antibiotic resistance
+    across the environment.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Climate Change and Antimicrobial Resistance: Navigating A One Health Crisis'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aajijgahhd
+  description: The Collection explores how climate change drives antimicrobial resistance and disease emergence and prevalence
+    across human, animal, and environmental systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Plastisphere: plastic-microbial interactions in the environment'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cdhifcdchd
+  description: The collection covers, but is not limited to, how microorganisms, by colonizing plastics, may influence ecosystems,
+    nutrient cycling and biodegradation processes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: AI Data Centers and the Power-Computing-Carbon Nexus
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ciagjhfihf
+  description: This collection invites manuscripts that highlight research advancing the synergistic operation, control, and
+    co-planning of AI Data Centers.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Macrophages in Cancer
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/icgejifgbh
+  description: Editors invite submissions of primary research papers that brings novel insight into the role of macrophages
+    in cancer.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Managing cascading and non-linear climate risks
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dgchcefcij
+  description: This cross-journal Collection focuses on complex climate risks, including cascading impacts, compound events
+    and tipping-point risks.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Programmable chemical systems
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcgbjcfedb
+  description: In this Collection, we aim to showcase diverse strategies for developing programmable chemical systems through
+    molecular, supramolecular, and systems-level design.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Women’s brain health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aedhdjiefh
+  description: With this Collection, editors invite primary, translational, and clinical research submissions focusing on
+    women’s brain health.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Next-Generation Organic Photovoltaics: From Molecular Innovation to Real-World Applications'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gfbjeejcgb
+  description: With this Collection, the editors invite manuscripts that highlight advances in the synthesis, design, fabrication,
+    and real-world testing of organic solar cells.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Advances in Pediatric Cancer Biology, Treatment and Outcomes
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dfighbedfh
+  description: This cross-journal collection invites manuscripts that highlight advances across the pediatric cancer spectrum,
+    from disease mechanism to clinical application and long-term outcomes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Ecological resistance and resilience under global change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/affhjabfgd
+  description: Editors invite submissions that elucidate the mechanisms and general patterns of ecological resistance and
+    resilience across scales and disturbance regimes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Human Behaviour Across the Globe
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hijbjcajec
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology, and Scientific
+    Reports invite manuscripts that highlight human behaviour across different nations and cultures. We are especially interested
+    in work including underrepresented samples.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Sustainable Thermal Processes for Water Treatment
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/igcdfaeigh
+  description: This cross-journal Collection highlights the emerging strategies that use thermal processes to sustainably
+    produce clean water or recover industrially relevant compounds from wastewater.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'The status of infectious diseases in Latin America: emerging, endemic, and multimorbidity'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bfdjbffigf
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Health, Communications
+    Medicine, and Scientific Reports invite manuscripts that highlight the status and advance understanding of infectious
+    diseases in LAC.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Advances in Additive Manufacturing
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ehifibiafb
+  description: This cross-journal Collection highlights research on 3D printing and additive manufacturing, including innovations
+    in the design of organic and inorganic materials, process design, printing methods, devices and on advancing the printing
+    process and post-process modifications.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Cardiovascular metabolism: mechanisms, smart technologies and multi-organ crosstalk'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ecjggcadjf
+  description: This Collection focuses on cutting-edge mechanisms, smart technologies, and translational medicine in cardiovascular
+    metabolism, emphasizing remodeling and multi-organ signaling.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Problematic Internet Use
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cabcfibehd
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology and Scientific
+    Reports invite submissions from across disciplines, particularly studies that move beyond self-report questionnaires and
+    cross-sectional surveys by using longitudinal, experimental, behavioural, clinical, ecological, computational, digital-trace
+    and mixed-methods approaches.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Nonlinear optical probes and ultrafast dynamics of quantum materials
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dfabfijgji
+  description: With this Collection, the editors invite manuscripts highlighting advances in nonlinear optical techniques
+    to reveal and manipulate electronic, lattice, and spin dynamics far from equilibrium.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Arctic Biogeochemistry
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jghajhajfb
+  description: This collection aims to capture circumpolar Arctic biogeochemistry under changing climatic conditions.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Microbial Plastic Degradation
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jdjddecagj
+  description: We invite submissions which provide novel insights into the biochemistry, ecology and organismic potential
+    underlying microbial degradation of plastic.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Effects of Psychedelics on the Brain
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jbfbajaebc
+  description: 'In this Collection, we welcome papers investigating how psychedelic compounds affect the brain across multiple
+    levels of organization: from molecular and cellular processes to systems level dynamics, whole brain network reconfigurations
+    and anatomical changes.'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Advances in neurodevelopmental disorders
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fficgidaja
+  description: Editors welcome original research Articles, Reviews, and Perspectives that advance our understanding of the
+    mechanisms underlying the onset and progression of neurodevelopmental disorders, in humans and animal models, bridging
+    genetic, molecular, cellular, circuit, and systems-level investigations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Coastal Resilience
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/higjfijjdd
+  description: In this cross-journal Collection, we bring together studies that collectively inform our understanding of coastal
+    resilience.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Next-Generation Digital Twins for Drug Discovery
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/eigbhjeech
+  description: With this Collection, the editors invite contributions that advance the foundations and applications of high-fidelity
+    digital twins in drug discovery.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: Understanding, preventing, diagnosing and treating cardiometabolic disease
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2172,7 +2463,7 @@
     disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Protein Dynamics Informing Structure, Function, and Evolution
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2183,7 +2474,7 @@
     submissions of primary research in structural biology that link protein dynamics to function, structure and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Extreme Events in High-Latitude Regions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2194,7 +2485,7 @@
     impacts of extreme events in high-latitude regions under changing climatic conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Lipids in Cell Biology 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2206,7 +2497,7 @@
     submissions from all disciplines with insights into lipid function, regulation or detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Magnetosphere and exosphere of Mercury
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2217,7 +2508,7 @@
     and exosphere, particularly through findings from space missions, as well as relevant theoretical and modelling studies.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cancer Prevention and Control
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2228,7 +2519,7 @@
     the science and practice of cancer prevention, including strategies to reduce cancer risk and improve early detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Next-generation models for metabolic research: from single cell to complex systems'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2239,7 +2530,7 @@
     disease mechanisms, from molecular to whole-organism scales.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Clinical Research in Respiratory Medicine
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2251,7 +2542,7 @@
     hybrid studies integrating mechanistic or translational insights with clinical data.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Advances in Central Nervous System Injuries
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2262,7 +2553,7 @@
     in pathophysiology, diagnosis, treatment and rehabilitation strategies.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Emergent phases in materials under nonequilibrium excitation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2273,7 +2564,7 @@
     their mechanisms under nonequilibrium excitation conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Initially Anode-less and Anode-free Batteries
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2285,7 +2576,7 @@
     conditions in initially anode-less (N/P < 1) and anode-free (N/P = 0) batteries.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: High-resolution modeling for Earth system
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2296,7 +2587,7 @@
     as well as advances in high-resolution model development.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Medical Ultrasound: Emerging Techniques and Applications'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2307,7 +2598,7 @@
     in medical ultrasound.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Functional Soil Ecology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2319,7 +2610,7 @@
     support sustainable land management.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Peptide drug design
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2330,7 +2621,7 @@
     new peptide therapeutics. We also welcome research presenting experimentally validated design of novel peptides.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Coral Biology Under Climate Stress
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2341,7 +2632,7 @@
     resilience across molecular, physiological, ecological, and restoration focused dimensions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Microfluidic advances in biosensing, biofabrication, and next generation microreactors
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2352,7 +2643,7 @@
     engineering biological systems across scales.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: The expanding therapeutic landscape of GLP 1 receptor agonists
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2365,7 +2656,7 @@
     including neurodegenerative processes.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Catalyst design for C1 chemistry
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2377,7 +2668,7 @@
     thermocatalysis.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neurodegeneration and the role of immunopathology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2389,7 +2680,7 @@
     between immune dysregulation and neuronal decline.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Structural biology of viral nano machines
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2400,7 +2691,7 @@
     hosts, replicate, and assemble infectious particles.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neuromorphic Vision Systems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2411,7 +2702,7 @@
     spanning from hardware-software codesigns to real-world deployments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Generative Models in Engineering Biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2423,7 +2714,7 @@
     system.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Implementation Science in Public Health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2435,7 +2726,7 @@
     and improving the effectiveness of interventions in real world settings.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Sustainable strategies for low carbon cement, concrete, and steel
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2446,7 +2737,7 @@
     emissions and support sustainable construction pathways.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Bridging environmental microbes to human, animal and planetary health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2458,7 +2749,7 @@
     with human, animal and planetary health, as well as sustainability goals.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Electric Vehicle Battery Repurposing, Recycling and Regenerating
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2470,7 +2761,7 @@
     recovery, regeneration and upcycling.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Quantum machine learning: understanding capabilities, limitations, and perspectives for quantum advantage'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2481,7 +2772,7 @@
     at clarifying the prospects for quantum advantage in the near future.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Active, Entangled or Confined: Polymer Physics Across Synthetic and Living Matter'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2492,7 +2783,7 @@
     experimental studies that elucidate links between geometry, molecular architecture, and dynamical observables.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Microphysiological systems for advanced modeling, high-throughput evaluation, and clinical translation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2504,7 +2795,7 @@
     systems, organs-on-chips, and microfluidic platforms.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Complex Trait Genetics: From Association to Function'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2517,7 +2808,7 @@
     vivo studies.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Models in Cancer Research
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2529,7 +2820,7 @@
     experimental cancer models to shed light on all aspects of tumour biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Visual Imagery
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2541,7 +2832,7 @@
     methods of assessing visual imagery, and cognitive processes related to visual imagery.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Mitochondrial Quality Control
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2553,7 +2844,7 @@
     damaged mitochondria.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Interpretable models for spatial transcriptomics
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2564,7 +2855,7 @@
     transcriptomic data.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Biohybrid Robotics
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2574,7 +2865,7 @@
   description: This Collection welcomes studies that advance biohybrid robots as functional machines.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neurobiology and neural circuits of parenting behaviours
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2588,7 +2879,7 @@
     chemogenetics and in vivo recording.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Organotropism in cancer metastasis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2600,7 +2891,7 @@
     of metastasis, as well as the development of targeted therapeutic approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Earthquake forecasting and early warning
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2611,7 +2902,7 @@
     current challenges and future pathways towards more reliable forecasting and effective early warning systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Mechanisms of Tissue Fibrosis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2622,7 +2913,151 @@
     activation, fibrogenic signalling pathways, immune–stromal interactions, and extracellular matrix remodelling.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
+  title: Organoid models for infectious diseases
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hdbicfdbeg
+  description: Editors welcome the submission of primary research Articles focusing on recent advances of stem cell-based
+    organoid models for studying infectious diseases, and novel insights in the disease mechanisms of human infections with
+    the support of stem cell-based organoid systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Medicinal Plant Genomics 2026
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/geddhijbdd
+  description: In this cross-journal collection, we invite submissions medicinal plant genomics with the focus on genome assembly,
+    population genetics, comparative genomics, and evolutionary genomics, as well as their combination with multi-omics data
+    and bioinformatic approaches to facilitate rapid discovery of unknown metabolic pathways/enzymes for the production of
+    new bioactive compounds.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: The Lunar South
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fcbibfhjfc
+  description: With this cross-journal Collection, the editors highlight articles that advance our understanding of the geology
+    and surface features of the southern regions of the Moon.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Ultra processed food and health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bjffcddiij
+  description: With this cross-journal Collection, the editors at Communications Health, Nature Food, Nature Communications,
+    Communications Medicine and Scientific Reports invite manuscripts that explore the epidemiology, biological and behavioral
+    mechanisms, community- and population-level patterns, and interventional and policy-related approaches pertaining to ultra-processed
+    foods.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Agentic AI Systems
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gaejiiicah
+  description: In this Collection, we aim to bring together research on the foundations, methods, and applications of agentic
+    AI systems, spanning theoretical developments and real-world deployments.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Biological Oscillators Across Scales: Mathematical and Mechanistic Principles'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gefhgbifhg
+  description: This collection invites research on biological oscillators with an emphasis on combining mechanistic and theoretical
+    approaches to explain data.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Soft materials for drug delivery
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hfdadgcdii
+  description: This cross-journal Collection highlights innovative soft materials towards drug delivery applications, including
+    but not limited to stimuli-responsive drug delivery systems, biodegradable polymeric nanoparticles, hydrogels for sustained
+    drug release, and liposomal formulations for targeted therapy.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Lesser-known critical elements and the green energy transition
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cffbigghgb
+  description: This cross-journal collection highlights studies on how geological and geochemical processes concentrate critical
+    elements across environments such as epithermal, skarn and vein deposits, granitic intrusions, and weathering or sedimentary
+    systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Microbiome and energy metabolism
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hidgieebfe
+  description: This collection invites research on microbial energy metabolism including studies characterizing microbial
+    metabolic pathways or impacts of microbial metabolites on host metabolism.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: The Gut-Brain axis and health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bchejjbhae
+  description: This Collection seeks to unite research on the interplay between metabolic and neurological functions, focusing
+    on topics such as the role of the gut microbiome in modulating mental health and metabolic disorders, the influence of
+    nutritional status and diet on the gut-brain axis, the impact of therapeutic interventions such as GLP-1 agonists, mechanisms
+    linking gut health and mental well-being, the role of gut hormones in metabolic regulation, and inter-organ communication
+    in health and disease.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Solvation structure engineering in battery electrolytes for demanding operating conditions
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/deijdjcfhe
+  description: This cross-journal Collection highlights cutting‑edge research on electrolyte solvation structure engineering
+    that advances molecular design, interfacial chemistry, and electrolyte formulations to enable high-voltage cycling, fast-charging
+    and high-power capabilities and/or wide-temperature range operation.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Implantable wireless communication technologies
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gfibdfaegj
+  description: This collection brings together research that addresses critical engineering challenges in implantable wireless
+    communications. It demonstrates how electromagnetic, optical, acoustic, or hybrid methods can be engineered to achieve
+    reliable wireless communications and power delivery through biological tissues.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: 'Adolescent mental health: advancing understanding to improve outcomes'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2633,7 +3068,7 @@
     mental health across diverse settings as well as innovative prevention, detection and intervention approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Viral infections and the nervous system
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2644,7 +3079,7 @@
     host and population level.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: PFAS and forever chemicals in the environment
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2655,7 +3090,7 @@
     the fate, transport, and effects of persistent pollutants on human health and ecosystems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Plastids: from Phylogeny to Physiology'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2667,7 +3102,7 @@
     principles governing plastid origin, integration, and diversification across the eukaryotic tree of life.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Brain and body physiology in changing ecosystems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2678,7 +3113,7 @@
     responses to contemporary environmental changes.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Confined Plasmas and Nuclear Fusion
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2689,7 +3124,7 @@
     research and invites original research contributions from a variety of devices and laboratories.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: AI-empowered X-ray and neutron studies in material science
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2701,7 +3136,7 @@
     operation, data acquisition, and data analysis.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Digital Medicine for Infectious Diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2712,7 +3147,7 @@
     management.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Nonlinear dynamics of living systems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2723,7 +3158,7 @@
     principles in living systems, together with experiments that are explicitly interpreted through such frameworks.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Structural biology of biomolecular condensation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2734,7 +3169,7 @@
     disruptions of biomolecular condensates.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: The Mobile Genome
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2748,7 +3183,7 @@
     health and disease. Only original research Articles will be considered for this collection.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Crosstalk Between Tissue-Resident Adaptive and Innate Memory Cells
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2760,7 +3195,7 @@
     immune cells in the molecular, cellular and function levels.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Hazards in Mountain Regions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2771,7 +3206,7 @@
     the physical mechanisms and societal impacts of mountain hazards under changing climatic and cryospheric conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Self-healing chemical systems
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2782,7 +3217,7 @@
     mechanistic understanding and application of extrinsic or intrinsic self-healing in chemical systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Tumor Microenvironment Crosstalk and Therapeutic Implications
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2797,7 +3232,7 @@
     advance cancer treatment.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Managing landscapes after land abandonment: afforestation, rewilding and restoration'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2808,7 +3243,7 @@
     biodiversity, climate resilience, and equity.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Plant Epigenetics and Epigenomics
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2821,7 +3256,7 @@
     and multi-omics approaches to provide insights into plant epigenetic mechanisms.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Total Synthesis and Chemistry of Natural Products
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2833,7 +3268,7 @@
     and high-throughput experimentation; as well as natural product discovery and diversification.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cell death and inflammatory signalling
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2846,7 +3281,7 @@
     inflammatory disorders.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: One Health 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2859,7 +3294,7 @@
     into policy and practice.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Critical materials supply chain sustainability
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2870,7 +3305,7 @@
     supply chains, digital transformation, circularity in materials, and governance for a secure energy transition.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Light Signaling in Plants
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2881,7 +3316,7 @@
     these discoveries to address challenges in food security and climate change.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Plant Membrane Biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2894,7 +3329,121 @@
     pH and scavenge.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
+  title: Clinical Trials 2026
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cifccahcgg
+  description: In this call for papers, we are inviting submissions of papers reporting interventional trials - we will consider
+    phase I to phase IV clinical trials - including those yielding negative results for which primary end-points were not
+    met.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Ecosystems under marine heatwaves
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gfcidfabic
+  description: With this cross-journal Collection, we invite manuscripts that highlight impacts of marine heatwaves on ecological
+    systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Kidney Disease and Health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fbjedbfihc
+  description: This is a joint Collection across Communications Medicine, Nature Communications, Communications Biology, and
+    Scientific Reports. We welcome the submission of all papers that advance our understanding of Kidney Disease and Health.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: AI in Education
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jcejfhfjic
+  description: This Collection highlights research on the role of AI in education. This is a multidisciplinary collaboration
+    bringing together psychological, educational, and computational perspectives.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Evolutionary responses to contemporary global change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dhhejgghij
+  description: In this collection, we welcome submissions that further our understanding of species’ evolutionary responses
+    to contemporary global change.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Hormone-based therapies in metabolic disease
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/eagfdghghd
+  description: This Collection seeks to highlight new innovative research and clinical advancements in hormone-based therapies
+    for metabolic diseases, particularly emphasizing the critical role of incretins in treatment strategies.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Large language models in psychology
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/badbafeeca
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology and Communications
+    AI and Computing invite work on the intersection of psychology and LLMs.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: 'Data for AI, AI for Data: cross-disciplinary cleaning, processing and analysis approaches'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dbjjhciiag
+  description: 'With this cross-journal Collection, the editors at Nature Communications and Communications AI & Computing
+    invite manuscripts that highlight comprehensive studies on data cleaning, processing and curating: for AI and by AI.'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Exercise and Physical Activity in Health and Disease
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ggcficdbdg
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Medicine, npj Exercise
+    Medicine and Health, and Scientific Reports invite manuscripts that highlight work exploring the mechanisms through which
+    exercise modulates health, preclinical and clinical interventional studies as well as epidemiological and public health
+    research.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Nanomedicine Applied in Cancer Treatment Failure
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ihiiecbhji
+  description: This cross-journal collection will consider submissions of research articles that highlight advances in nanomedicine
+    aimed at overcoming cancer treatment failure, as well as nanotechnology used to uncover the underlying biological mechanisms
+    of such failure.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: Infectious disease modelling for health policy
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2905,7 +3454,7 @@
     the application of infectious disease models to timely health policy questions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Immune mechanisms in arthritis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2916,7 +3465,7 @@
     studies that explore the immune mechanisms influencing arthritis pathogenesis.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Lightweight machine learning models and edge computing applications
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2928,7 +3477,7 @@
     edge computing environments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Multiscale Engineering and Optimization of Mechanical Metamaterials for Structural Applications
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2939,7 +3488,7 @@
     to direct, improve, and drive structure-property relationships.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Host-Pathogen Interactions – Infection, Immunity and Beyond
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2951,7 +3500,7 @@
     between pathogens and their human and/or animal hosts.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Muscle biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2962,7 +3511,7 @@
     Reports aim to highlight cutting-edge research in muscle biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Orbitronics and unconventional spin-orbit torque for next-generation magnetic memory and spin logic devices
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2973,7 +3522,7 @@
     and orbital phenomena for robust, versatile, energy-efficient memory and logic devices.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Physical Activity and Mental Health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2984,7 +3533,7 @@
     and how activity can influence mental well-being positively or otherwise.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Methods development in Cryo-ET and in situ structural determination
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2995,7 +3544,7 @@
     data acquisition, data analysis, interpretation and integration from different techniques.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Diagnosis and Care of Sepsis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3006,7 +3555,7 @@
     Reports invite manuscripts that highlight diagnostic techniques and treatment modalities for confronting sepsis.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Sustainable agricultural practices
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3017,7 +3566,7 @@
     services.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Deep-Sea Mining
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3028,7 +3577,7 @@
     impacts and management.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neurocognitive perspectives on language comprehension
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3039,7 +3588,7 @@
     providing neurocognitive perspectives on language comprehension.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Climate adaptation and resilience in urban and rural communities
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3049,7 +3598,7 @@
   description: In this cross-journal collection, we showcase studies that focus on adaptation in urban and rural areas.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Immune cell engineering for cancer therapy 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3062,7 +3611,7 @@
     and therapeutic developments.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Life Course Epidemiology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3075,7 +3624,7 @@
     with UN Sustainable Development Goal 3.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Healthy Islands
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3086,7 +3635,7 @@
     health in the Pacific Islands.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Managing Cryospheric Landscapes
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3097,7 +3646,7 @@
     cultural heritage and Indigenous communities, and food and water security, among others.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Multinuclear Complexes and Inorganic Clusters
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3108,7 +3657,7 @@
     of multinuclear complexes and small inorganic clusters.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Biosensing
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3121,7 +3670,7 @@
     of disease conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: 'Designing Order: Crystal polymorphism in Soft and Functional Materials'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3132,7 +3681,7 @@
     brings together the advances in Crystal polymorphism in Soft and Functional Materials.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Electrochemical separations
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3143,7 +3692,7 @@
     from materials design to system characterization, scale-up, and analysis.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Blue Economy
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3154,7 +3703,7 @@
     to blue finance, ocean governance and low-carbon shipping.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Climate Change and Infectious Diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3166,7 +3715,7 @@
     and genetic dimensions of climate-sensitive infectious diseases.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Stress and Health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3177,7 +3726,7 @@
     manuscripts that highlight recent developments in stress and health research.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Cortical-subcortical brain loops
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3188,7 +3737,7 @@
     sensory processing, perception and cognition.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Structural genetic variants, from detection to phenotype
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3199,7 +3748,7 @@
     Scientific Reports invites submissions focusing on structural variants (SVs) in organismal biology and disease.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Proteolysis in Plants
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3210,7 +3759,7 @@
     mechanisms, regulatory networks and roles of proteolysis in plants under both physiological and stress conditions.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Gender equity in academia and research
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3220,7 +3769,7 @@
   description: This Collection invites research examining the intersection of gender identity and the academic research environment.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Lifespan changes in the human brain
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3231,7 +3780,7 @@
     stages of life, from in-utero to older age.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Neuroengineering
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3243,7 +3792,7 @@
     manuscripts that highlight the development, use and insight obtained from applying neuroengineering approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Sensing Technologies for Crop Health and Growth
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3254,7 +3803,7 @@
     of any form, primarily for arable farming or crop production.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Comparative Psychology of Cognition, Affect, and Behaviour
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3265,7 +3814,7 @@
     Reports invite manuscripts that highlight recent progress in Comparative Psychology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Synthetic Catalysts for Biomedicine and Biotechnology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3278,7 +3827,7 @@
     demonstrations.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Towards low-pressure all-solid-state batteries
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3289,7 +3838,7 @@
     batteries (ASSBs).
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: High-Energy Light Sources - From Tabletop to Large Facilities
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3300,7 +3849,7 @@
     Scientific Reports explores recent progress in high-energy light sources, from from tabletop to large scale facilities.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: NeuroAI and Embodied Intelligence
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3313,7 +3862,7 @@
     and learning algorithms that have the potential to enhance embodied AI and robotic systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Generative AI for mechanical engineering design and optimization
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3324,7 +3873,7 @@
     application directions within a broad mechanical engineering scope.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Understanding species redistributions under global climate change
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3335,7 +3884,7 @@
     the understanding in species redistributions under global climate change.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Healthy Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3348,7 +3897,7 @@
     and clinical trials.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: (In)civility
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3359,7 +3908,7 @@
     Reports invite innovative research on incivility.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Mechanisms and impact of 3D genome organisation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3371,7 +3920,7 @@
     organisation.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Artificial Intelligence Methodology in Structural Biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3383,7 +3932,7 @@
     such as proteins, peptides and RNA.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Signalling Pathways of Innate Immunity
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3394,7 +3943,7 @@
     emphasising the activation and regulation of pattern recognition receptors in response to microbial and endogenous triggers.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Targeted diagnostics and therapies for autoimmune diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3405,7 +3954,7 @@
     the complexities of immune-mediated diseases and their management.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Artificial intelligence in RNA biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3417,7 +3966,7 @@
     of RNA biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: DNA repair and human disease
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3429,7 +3978,7 @@
     mechanisms in human disease diagnosis and treatment.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Health outcomes of adversity in early life
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3441,7 +3990,7 @@
     the impact of socioeconomic factors, or advances in treatment options.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Registered Reports
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3452,7 +4001,7 @@
     collection features our published Registered Reports, as well as relevant editorials and other related content.
 - journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id006
+  tag: *id005
   title: Replication and generalization
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3463,7 +4012,7 @@
     in psychology.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
-  tag: *id007
+  tag: *id006
   title: Computational approaches to Psychiatric Disorders
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3487,7 +4036,18 @@
     the mechanisms and determinants of cognitive resilience in the aging brain.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
+  title: 'Political ‘extremists’ and ‘moderates’: psychological mechanisms and social perceptions'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/afhfachibe
+  description: This Collection explores the psychological and social underpinnings of political and ideological extremism
+    and perceptions of what constitutes being politically ‘moderate’.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: 'Digitalisation and inequality in later-life work: risks, resilience, and inclusion'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3498,7 +4058,7 @@
     risks and inequalities in later-life work.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Inclusive education
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3509,7 +4069,7 @@
     politics of inclusive education.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Taxes, tariffs and trade wars in the global economy
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3520,7 +4080,7 @@
     of global economics and finance, and international business studies.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Translating food futures: multilingual communication, responsible innovation, and everyday sustainability'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3531,7 +4091,7 @@
     under conditions of climate pressure, technological change, and sustainability transition.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'The rise of informal digital learning: new paradigms for pedagogy, equity and educational futures'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3544,7 +4104,7 @@
     inclusion in digital learning.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Emotions in politics: democratic participation, belonging and division'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3555,7 +4115,7 @@
     democratic life and collective political identities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Far-right mobilisation and democratic transformation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3568,7 +4128,7 @@
     interact with institutions and opponents, and influence democratic life across different context
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Political trust: trends, crises, and measurement'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3578,7 +4138,7 @@
   description: This Collection invites scholarship that examines political trust as a dynamic, multidimensional phenomenon.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Ageism
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3588,7 +4148,7 @@
   description: This Collection invites scholarship that explores ageism in all its forms.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Pharmaceutical intellectual property
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3599,7 +4159,7 @@
     of pharmaceutical intellectual property from diverse disciplinary perspectives and geographical contexts.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Beyond the classroom: alternative education across contexts'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3611,7 +4171,7 @@
     and non-formal education, experimental pedagogies, digital learning spaces, and decolonial or indigenous knowledge systems.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Crisis and resilience in Latin American politics
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3622,7 +4182,7 @@
     perspectives.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Museums and archives as educational institutions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3633,7 +4193,7 @@
     and informal education, exploring their pedagogical strategies, social responsibilities, and transformative potential.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Nationalism and national identity in contemporary politics and society
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3645,7 +4205,7 @@
     and culture.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Contemporary dialogues in global critical theory
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3656,7 +4216,7 @@
     21st Century and are crucial for the development of our global societies.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Grievances and victimhood in social and political engagement
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3667,7 +4227,7 @@
     social and behavioural psychological dimensions of grievance formation, mobilisation, and political expression.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Food politics in the Global South
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3679,7 +4239,7 @@
     sociology, anthropology, economics, history, development studies, environmental studies, and related fields.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Translating across cultures: literature, film and other media'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3690,7 +4250,7 @@
     political practice across literature, film, and other media.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Sign Languages: acquisition, application and transmission'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3700,7 +4260,7 @@
   description: This Collection seeks to explore sign languages as linguistic, cultural, and social phenomena.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: The politics of museums and national monuments
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3711,7 +4271,7 @@
     monuments.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Forced displacement and migration
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3722,7 +4282,7 @@
     forced displacement.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Art and design in the age of AI
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3733,7 +4293,7 @@
     from across the humanities and social sciences.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Zombies in culture, society, and thought
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3744,7 +4304,7 @@
     and social figure.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Environmental advocacy: psychological and behavioural dynamics'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3755,7 +4315,7 @@
     to understanding how people engage with climate issues - from everyday behaviour to large-scale protest movements.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Burnout
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3765,7 +4325,7 @@
   description: This Collection invites scholarship that explores burnout from across the humanities and social sciences.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Fiscal policies and energy vulnerability: tackling fuel and energy poverty in a changing global landscape'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3776,7 +4336,7 @@
     a critical issue amid recent international crises, climate transition imperatives, and rising energy costs.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Hinduism – belief, politics and culture
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3787,7 +4347,7 @@
     lives of modern Hindus, the religion's links to politics, and also the cultural imprint of Hinduism on society.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: All loved up – exploring love in everyday life
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3798,7 +4358,7 @@
     expressed across different cultures, identities and social positions?
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Trauma: social and psychological dimensions'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3809,7 +4369,7 @@
     politically situated phenomenon, with particular attention to its transcultural, transethnic and transgenerational dimensions.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Nuclear contamination in the Arctic
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3820,7 +4380,7 @@
     in the Arctic. It investigates how contamination is managed, and how affected communities navigate long-term consequences.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Research futures: opportunities, challenges, and competitiveness of doctoral and early-career researchers'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3831,7 +4391,7 @@
     of doctoral and early-career research, including both challenges and opportunities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Reflections of the body: media, culture and image perception'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3842,7 +4402,7 @@
     media, including within underrepresented or marginalised communities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Arctic exceptionalism amidst emerging global tensions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3853,7 +4413,7 @@
     due to rising global geopolitical tension.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Transdisciplinary research for transformative change: from conceptual insights to societal impact'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3864,7 +4424,7 @@
     approaches to societal and global challenges.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Cultures of command: identity, power, and belonging in global militaries'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3875,7 +4435,7 @@
     in how armed forces construct and challenge ideas of gender, race, nationalism, professionalism, and sacrifice.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Political participation and mobilisation in Central and Eastern Europe
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3886,7 +4446,7 @@
     Central and Eastern Europe by examining historical trajectories, contemporary practices, and emerging trends.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Buddhism - beliefs, politics and culture
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3898,7 +4458,7 @@
     links to politics, and also the cultural imprint of Buddhism on society.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Innovation, AI, and education
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3909,7 +4469,7 @@
     and education.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Psychology of racism and prejudice
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3920,7 +4480,7 @@
     social, developmental, and cultural psychology, as well as sociology, history, and anthropology.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: The economics of social mobility
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3931,7 +4491,7 @@
     including labour economics, public finance, development economics, and macroeconomics.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Human-animal interactions and relations
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3947,7 +4507,7 @@
     not be considered. Clinical or physiological studies are not in scope.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'In search of happiness: rethinking well-being and the good life'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3958,7 +4518,7 @@
     and measured, and what can be done to promote it at both individual and societal levels.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Contemporary Catholicism(s): global perspectives on belief, power and identity'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3969,7 +4529,7 @@
     including interdisciplinary perspectives, that explore Catholicism.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: The anatomy of hate and violence
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3980,7 +4540,7 @@
     and online radicalisation to democratic breakdowns and policy implications.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Critical simulation studies
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3992,7 +4552,7 @@
     including algorithms, large language models (GenAI), bots, and technology platforms.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Emotion regulation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4004,7 +4564,7 @@
     and consequences.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Decolonising economics: justice, plurality, and inclusivity'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4015,7 +4575,7 @@
     and practically, exploring its implications for economic thought and transformative action.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Reframing artificial intelligence: critical perspectives from AI social science'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4026,7 +4586,7 @@
     to advance the study of AI’s sociotechnical, cultural and political dimensions.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Rethinking the blue economy: sustainability, equity and ocean futures'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4037,7 +4597,7 @@
     a field of practice, exploring its implications across political, ecological and economic domains.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Terrorism, radicalisation and social order: perspectives on emerging threats and responses'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4050,7 +4610,7 @@
     historical contexts.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Loneliness and social isolation
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4061,7 +4621,7 @@
     as what makes people lonely or socially isolated, and what can be done to alleviate negative effects
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Large language models in psychological science
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4072,7 +4632,7 @@
     and practice.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Education in the Anthropocene
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4083,7 +4643,7 @@
     of a transition economy.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'From bits of history to bytes of data: AI and the study of the ancient Near East'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4094,7 +4654,7 @@
     implications.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Tourists, go home? Sustainable tourism in popular destinations
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4104,7 +4664,7 @@
   description: This Collection is dedicated to addressing complex problems arising from tourism in high-demand destinations.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Culture in code: intercultural competence in the age of AI and globalisation'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4115,7 +4675,7 @@
     tapestry of cultural interactions.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Divisive politics, polarisation and democratic decline
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4126,7 +4686,7 @@
     for society and democracy.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Philosophy [in:of:for:and] digital knowledge infrastructures
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4137,7 +4697,7 @@
     broadly construed.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Toponymy and toponomastics at the intersection between language contact and historical geography
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4148,7 +4708,7 @@
     language and historical geography.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Expertise in integration and implementation for transformative research
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4161,7 +4721,7 @@
     across different cultures.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Continuity and change in Russian politics
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4172,7 +4732,7 @@
     legacies are today.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: 'Discourse studies: theories and methodologies at the crossroads of language and society'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4183,7 +4743,7 @@
     vantage points.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id008
+  tag: *id007
   title: Interdisciplinarity in theory and practice
   abstract_deadline: ''
   fullpaper_deadline: ''
