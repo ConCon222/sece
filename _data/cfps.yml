@@ -1268,17 +1268,6 @@
   link: https://www.nature.com/collections/bghcegbagh
   description: This Collection explores the economic and political economy dimensions of oil, with particular attention to
     market behaviour, policy responses, and the financial instruments used to manage uncertainty
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Digital skills and data literacy
-  abstract_deadline: ''
-  fullpaper_deadline: 25 March 2027
-  fullpaper_deadline_sort: '2027-03-25'
-  editors: ''
-  link: https://www.nature.com/collections/abjfgicgii
-  description: This Collection invites critical, interdisciplinary contributions that examine the politics, practices, and
-    possibilities of digital skills and data literacy.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
@@ -4034,6 +4023,16 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Censorship, power and the politics of expression
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hbjbgffeab
+  description: This Collection welcomes research examining censorship as a historical, political, cultural and social phenomenon.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id007
