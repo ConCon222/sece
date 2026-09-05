@@ -217,7 +217,8 @@
   description: ''
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
-  tag: *id002
+  tag:
+  - Educational Psychology
   title: 'Doing (Un)Availability: Co-Presence as Mediated Activity at the Interface of Focused and Unfocused Interaction'
   abstract_deadline: 30 September 2026
   fullpaper_deadline: 30 September 2027
@@ -248,6 +249,17 @@
   link: https://link.springer.com/collections/dbfjdijaae
   description: We invite proposals for replication studies in the fields of instructional design, learning sciences, and educational
     technologies. Proposals should focus on one of the following types of replication studies...
+- journal: Education and Information Technologies
+  publisher: Springer
+  tag:
+  - Educational Technology
+  title: Open Conference on Computers in Education (OCCE 2025)
+  abstract_deadline: ''
+  fullpaper_deadline: 30 September 2026
+  fullpaper_deadline_sort: '2026-09-30'
+  editors: ''
+  link: https://link.springer.com/collections/ihahaehaeg
+  description: Invited papers from the Open Conference on Computers in Education (OCCE 2025)
 - journal: npj Science of Learning
   publisher: Nature Portfolio
   tag: *id003
@@ -3433,6 +3445,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
+  title: Cost-Effective Instrumentation and Simplified Design for Optical Imaging
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ifgfghhdhg
+  description: This collection highlights innovative approaches that reduce complexity and cost in the design, fabrication,
+    and deployment of optical imaging technologies.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: Infectious disease modelling for health policy
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3977,28 +4000,6 @@
   description: This cross-journal collection welcomes submissions investigating any health outcome resulting from adversity
     experienced in early life, including studies focused on prevention, epidemiological factors, pathophysiological mechanisms,
     the impact of socioeconomic factors, or advances in treatment options.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id005
-  title: Registered Reports
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/edjfhbfahf
-  description: Registered Reports are an article format aimed at promoting robust and rigorous scientific practices. This
-    collection features our published Registered Reports, as well as relevant editorials and other related content.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id005
-  title: Replication and generalization
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ebeibhiihc
-  description: This Collection invites submissions of direct replication and generalization studies of primary research papers
-    in psychology.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
   tag: *id006
@@ -4023,6 +4024,17 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Awe and wonder – cultural, emotional and existential perspectives
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bjbahbehih
+  description: This Collection explores how wonder and awe operate not only within individuals, but across cultures, histories,
+    social structures and belief systems and in contemporary life.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id007
