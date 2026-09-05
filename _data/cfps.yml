@@ -217,8 +217,7 @@
   description: ''
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
-  tag:
-  - Educational Psychology
+  tag: *id002
   title: 'Doing (Un)Availability: Co-Presence as Mediated Activity at the Interface of Focused and Unfocused Interaction'
   abstract_deadline: 30 September 2026
   fullpaper_deadline: 30 September 2027
@@ -4000,6 +3999,28 @@
   description: This cross-journal collection welcomes submissions investigating any health outcome resulting from adversity
     experienced in early life, including studies focused on prevention, epidemiological factors, pathophysiological mechanisms,
     the impact of socioeconomic factors, or advances in treatment options.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Registered Reports
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/edjfhbfahf
+  description: Registered Reports are an article format aimed at promoting robust and rigorous scientific practices. This
+    collection features our published Registered Reports, as well as relevant editorials and other related content.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Replication and generalization
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ebeibhiihc
+  description: This Collection invites submissions of direct replication and generalization studies of primary research papers
+    in psychology.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
   tag: *id006
