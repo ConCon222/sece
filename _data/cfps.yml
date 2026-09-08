@@ -1925,6 +1925,19 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
+  title: Exposome in Health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jejjbfbhda
+  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
+    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
+    our understanding of the relationship between the exposome and human health. We also welcome work including historically
+    underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
   title: Advancing the frontiers of Cryo-EM and in situ structural biology
   abstract_deadline: ''
   fullpaper_deadline: ''
