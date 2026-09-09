@@ -1,16 +1,3 @@
-- journal: Innovation in Language Learning and Teaching
-  publisher: Taylor & Francis
-  tag:
-  - Language Education & Acquisition
-  - Educational Technology
-  title: Pedagogical Innovation in Generative AI-mediated Speaking Practice in Second and Foreign Language Education
-  abstract_deadline: ''
-  fullpaper_deadline: 29 August 2026
-  fullpaper_deadline_sort: '2026-08-29'
-  editors: Bin Zou (Xi'an Jiaotong-Liverpool, University, China); Glenn Stockwell (The Education University of Hong Kong,
-    China)
-  link: https://think.taylorandfrancis.com/special_issues/pedagogical-innovation-in-generative-ai-mediated-speaking-practice-in-second-and-foreign-language-education/
-  description: Glenn Stockwell , The Education University of Hong Kong, China glennrstockwell@gmail.com
 - journal: Research in Science Education
   publisher: Springer
   tag:
@@ -1925,19 +1912,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
-  title: Exposome in Health
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jejjbfbhda
-  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
-    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
-    our understanding of the relationship between the exposome and human health. We also welcome work including historically
-    underrepresented populations.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id005
   title: Advancing the frontiers of Cryo-EM and in situ structural biology
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3033,20 +3007,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
-  title: The Gut-Brain axis and health
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bchejjbhae
-  description: This Collection seeks to unite research on the interplay between metabolic and neurological functions, focusing
-    on topics such as the role of the gut microbiome in modulating mental health and metabolic disorders, the influence of
-    nutritional status and diet on the gut-brain axis, the impact of therapeutic interventions such as GLP-1 agonists, mechanisms
-    linking gut health and mental well-being, the role of gut hormones in metabolic regulation, and inter-organ communication
-    in health and disease.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id005
   title: Solvation structure engineering in battery electrolytes for demanding operating conditions
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3657,17 +3617,6 @@
   link: https://www.nature.com/collections/ehicijifdi
   description: This cross-journal collection invites submissions of papers that advance our understanding of all aspects of
     health in the Pacific Islands.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id005
-  title: Managing Cryospheric Landscapes
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/dbdjajigce
-  description: This cross-journal collection highlights a wide range of research spanning geopolitical and territorial claims,
-    cultural heritage and Indigenous communities, and food and water security, among others.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
