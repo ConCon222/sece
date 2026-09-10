@@ -702,6 +702,17 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Carbon Dioxide Removal
+  abstract_deadline: ''
+  fullpaper_deadline: 16 January 2027
+  fullpaper_deadline_sort: '2027-01-16'
+  editors: ''
+  link: https://www.nature.com/collections/jfjbjjheei
+  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
+    can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
   tag: &id012
@@ -717,17 +728,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
-  title: Carbon Dioxide Removal
-  abstract_deadline: ''
-  fullpaper_deadline: 16 January 2027
-  fullpaper_deadline_sort: '2027-01-16'
-  editors: ''
-  link: https://www.nature.com/collections/jfjbjjheei
-  description: In this cross-journal collection, we showcase articles that help with understanding how carbon dioxide removal
-    can contribute to climate change mitigation.
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: *id012
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -737,9 +737,9 @@
   description: With this Collection, we aim to highlight some of the latest cancer vaccine-related papers published in the
     journals and we welcome submissions of primary research papers that focus on the clinical development in the field, including
     but not limited to personalized vaccine approaches.
-- journal: Nature Communications
+- journal: Nature
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id012
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -783,9 +783,9 @@
   link: https://link.springer.com/collections/fhbjafcjge
   description: Competency-based education (CBE) focuses on the development of specific competencies necessary for effective
     practice. This Collection aims to gather innovative research that highlights the implementation an...
-- journal: Nature
+- journal: Nature Communications
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id005
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -796,9 +796,9 @@
     Nature Progress Brain Health, and Communications Biology invite submissions that aim to elucidate the molecular mechanisms
     underlying bidirectional cancer–nervous system interactions and their influence on the tumour microenvironment, as well
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
-- journal: Nature Communications
+- journal: Nature
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id012
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -1083,6 +1083,20 @@
   description: We encourage submissions that showcase technical and conceptual advances in the discovery, characterisation,
     mechanistic roles and functional consequences of emerging PTMs that extend beyond classical phosphorylation and ubiquitylation
     paradigms.
+- journal: Higher Education Research & Development
+  publisher: Taylor & Francis
+  tag:
+  - Higher Education
+  title: Beyond grades
+  abstract_deadline: ''
+  fullpaper_deadline: 01 March 2027
+  fullpaper_deadline_sort: '2027-03-01'
+  editors: Juuso Henrik Nieminen (Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University, Melbourne,
+    Australia); David Boud (Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University, Melbourne,
+    Australia)
+  link: https://think.taylorandfrancis.com/special_issues/beyond-grades/
+  description: Juuso Henrik Nieminen , Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University,
+    Melbourne, Australia juuso.nieminen@deakin.edu.au
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -1898,17 +1912,6 @@
   editors: ''
   link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
-- journal: Nature
-  publisher: Nature Portfolio
-  tag: *id012
-  title: Alternative cell death mechanisms in cancer
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hcibbeeieg
-  description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
-    governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id005
@@ -3983,6 +3986,77 @@
   link: https://www.nature.com/collections/ebeibhiihc
   description: This Collection invites submissions of direct replication and generalization studies of primary research papers
     in psychology.
+- journal: Nature
+  publisher: Nature Portfolio
+  tag: *id012
+  title: Alternative cell death mechanisms in cancer
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcibbeeieg
+  description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
+    governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Exposome in Health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jejjbfbhda
+  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
+    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
+    our understanding of the relationship between the exposome and human health. We also welcome work including historically
+    underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Functional Connectivity in Psychiatric Disorders
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gcjicbjjcb
+  description: In this collection, we invite original research, reviews and perspectives that advance our understanding of
+    functional connectivity across psychiatric disorders, from fundamental circuit mechanisms to clinical applications.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Machine-learning guided material synthesis and property optimization
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/djidiidfeb
+  description: This cross-journal Collections highlights the power of machine-learning guidance, integrated in experimental
+    works, to optimize the synthesis and properties across all classes of materials.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: The Gut-Brain axis and health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bchejjbhae
+  description: This Collection seeks to unite research on the interplay between metabolic and neurological functions, focusing
+    on topics such as the role of the gut microbiome in modulating mental health and metabolic disorders, the influence of
+    nutritional status and diet on the gut-brain axis, the impact of therapeutic interventions such as GLP-1 agonists, mechanisms
+    linking gut health and mental well-being, the role of gut hormones in metabolic regulation, and inter-organ communication
+    in health and disease.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id005
+  title: Managing Cryospheric Landscapes
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dbdjajigce
+  description: This cross-journal collection highlights a wide range of research spanning geopolitical and territorial claims,
+    cultural heritage and Indigenous communities, and food and water security, among others.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
   tag: *id006
@@ -4007,6 +4081,28 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: 'The new intelligence age: surveillance, espionage and power'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hfiahhicfb
+  description: This Humanities and Social Sciences Communications Collection invites research exploring the transformation
+    of espionage, intelligence, and information-gathering in the contemporary world.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: 'When communication goes wrong: exploring the psychology and linguistics of miscommunication'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/baacgejaga
+  description: Through this call, we aim to bring together research that uncovers the psychological and linguistic processes
+    that underlie miscommunication and offer insights into strategies that can minimise them.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id007
