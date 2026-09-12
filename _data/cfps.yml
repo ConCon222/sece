@@ -2180,6 +2180,143 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
+  title: Programmable chemical systems
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcgbjcfedb
+  description: In this Collection, we aim to showcase diverse strategies for developing programmable chemical systems through
+    molecular, supramolecular, and systems-level design.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Women’s brain health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aedhdjiefh
+  description: With this Collection, editors invite primary, translational, and clinical research submissions focusing on
+    women’s brain health.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: 'Next-Generation Organic Photovoltaics: From Molecular Innovation to Real-World Applications'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gfbjeejcgb
+  description: With this Collection, the editors invite manuscripts that highlight advances in the synthesis, design, fabrication,
+    and real-world testing of organic solar cells.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Advances in Pediatric Cancer Biology, Treatment and Outcomes
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dfighbedfh
+  description: This cross-journal collection invites manuscripts that highlight advances across the pediatric cancer spectrum,
+    from disease mechanism to clinical application and long-term outcomes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Ecological resistance and resilience under global change
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/affhjabfgd
+  description: Editors invite submissions that elucidate the mechanisms and general patterns of ecological resistance and
+    resilience across scales and disturbance regimes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Human Behaviour Across the Globe
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hijbjcajec
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology, and Scientific
+    Reports invite manuscripts that highlight human behaviour across different nations and cultures. We are especially interested
+    in work including underrepresented samples.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Sustainable Thermal Processes for Water Treatment
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/igcdfaeigh
+  description: This cross-journal Collection highlights the emerging strategies that use thermal processes to sustainably
+    produce clean water or recover industrially relevant compounds from wastewater.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: 'The status of infectious diseases in Latin America: emerging, endemic, and multimorbidity'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bfdjbffigf
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Health, Communications
+    Medicine, and Scientific Reports invite manuscripts that highlight the status and advance understanding of infectious
+    diseases in LAC.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Advances in Additive Manufacturing
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ehifibiafb
+  description: This cross-journal Collection highlights research on 3D printing and additive manufacturing, including innovations
+    in the design of organic and inorganic materials, process design, printing methods, devices and on advancing the printing
+    process and post-process modifications.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: 'Cardiovascular metabolism: mechanisms, smart technologies and multi-organ crosstalk'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ecjggcadjf
+  description: This Collection focuses on cutting-edge mechanisms, smart technologies, and translational medicine in cardiovascular
+    metabolism, emphasizing remodeling and multi-organ signaling.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Problematic Internet Use
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cabcfibehd
+  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology and Scientific
+    Reports invite submissions from across disciplines, particularly studies that move beyond self-report questionnaires and
+    cross-sectional surveys by using longitudinal, experimental, behavioural, clinical, ecological, computational, digital-trace
+    and mixed-methods approaches.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Nonlinear optical probes and ultrafast dynamics of quantum materials
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dfabfijgji
+  description: With this Collection, the editors invite manuscripts highlighting advances in nonlinear optical techniques
+    to reveal and manipulate electronic, lattice, and spin dynamics far from equilibrium.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
   title: Arctic Biogeochemistry
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4139,28 +4276,6 @@
   link: https://www.nature.com/collections/bgfibcchjj
   description: This Collection invites interdisciplinary scholarship that interrogates the politics of museums and national
     monuments.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id005
-  title: Forced displacement and migration
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/dcidijgihd
-  description: This Collection invites interdisciplinary research that explores the causes, consequences, and responses to
-    forced displacement.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id005
-  title: Art and design in the age of AI
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cfiadggace
-  description: This Collection invites scholarship that explores the intersections of art, design, and artificial intelligence
-    from across the humanities and social sciences.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id005
