@@ -260,6 +260,19 @@
     China)
   link: https://think.taylorandfrancis.com/special_issues/negotiating-intercultural-awareness-and-informal-digital-language-learning/
   description: ''
+- journal: Distance Education
+  publisher: Taylor & Francis
+  tag:
+  - Educational Technology
+  - Higher Education
+  title: 'Reimagining Distance Education in the Age of Generative AI: Transactional Distance, Human–AI Interaction, and Online
+    Pedagogy'
+  abstract_deadline: 31 October 2026
+  fullpaper_deadline: 31 March 2027
+  fullpaper_deadline_sort: '2026-10-31'
+  editors: David Stein (The Ohio State University); Cixiao Wang (Beijing Normal University); Yang Wang (Nanjing Normal University)
+  link: https://think.taylorandfrancis.com/special_issues/reimagining-distance-education-age-generative-ai/
+  description: ''
 - journal: Advances in Health Sciences Education
   publisher: Springer
   tag:
@@ -357,6 +370,17 @@
   link: https://www.nature.com/collections/cgiefaideh
   description: This Collection explores how learning environments shape mathematical cognition across development, particularly
     through their interactions with cognitive, affective, and neural factors
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: &id014
+  - Library & Information Science
+  title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
+  abstract_deadline: ''
+  fullpaper_deadline: 30 November 2026
+  fullpaper_deadline_sort: '2026-11-30'
+  editors: 'Guest editors: Wenping Zhang, Lele Kang, Juliana Sutanto'
+  link: https://www.sciencedirect.com/special-issue/337409/trustworthy-content-governance-and-safe-generative-ai-in-the-age-of-large-language-models
+  description: ''
 - journal: Early Education and Development
   publisher: Taylor & Francis
   tag:
@@ -910,7 +934,7 @@
   tag: &id021
   - General Education
   - Education Policy & Social Issues
-  title: Humanizing AI-mediated Feedback for Writing
+  title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
   abstract_deadline: ''
   fullpaper_deadline: 28 February 2027
   fullpaper_deadline_sort: '2027-02-28'
@@ -1199,8 +1223,7 @@
     transport to shape the future of mobility.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id014
-  - Library & Information Science
+  tag: *id014
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1718,7 +1741,9 @@
     significant, and innovative topics in the field of educational technology research and develo...
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id023
+  tag:
+  - Education Policy & Social Issues
+  - Educational Management & Leadership
   title: Series of Short Notes on the State of Educational Change and Its Future
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
