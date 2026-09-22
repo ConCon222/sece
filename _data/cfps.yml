@@ -36,7 +36,7 @@
     Associate Editors, and Editorial Board members of the journal celebrate its 20th year of publicati...'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id011
+  tag:
   - Medical Education
   - Educational Psychology
   title: Advancing Competency-Based Medical Education in Psychiatry Training
@@ -117,7 +117,7 @@
   description: JTE is seeking papers for special issue 78.5 The first deadline is September 30, 2026.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id018
+  tag: &id017
   - Educational Technology
   title: 'Special Issue: Replication Studies'
   abstract_deadline: ''
@@ -372,7 +372,7 @@
     through their interactions with cognitive, affective, and neural factors
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id014
+  tag: &id013
   - Library & Information Science
   title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
   abstract_deadline: ''
@@ -507,7 +507,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id020
+  tag: &id019
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -612,7 +612,9 @@
     (GNOME) initiative is calling for submissions to our Collection, Nutrition science in health profe...
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id011
+  tag: &id023
+  - Medical Education
+  - Educational Psychology
   title: Examining the Evidence Base in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -634,7 +636,7 @@
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: &id012
+  tag: &id011
   - Interdisciplinary Science
   title: Carbon Dioxide Removal
   abstract_deadline: ''
@@ -657,7 +659,7 @@
     can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id011
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -715,7 +717,7 @@
     practice. This Collection aims to gather innovative research that highlights the implementation an...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id011
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -754,7 +756,7 @@
     to sustainability practices, seen as place-based, culture-based and community-based. We invit...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: &id013
+  tag: &id012
   - Educational Technology
   - STEM Education
   title: AI Literacy and STEM Education
@@ -767,7 +769,7 @@
     to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id012
   title: Assessment for STEM Education in the AI Era
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -918,7 +920,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id016
+  tag: &id015
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -931,7 +933,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id021
+  tag: &id020
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1223,7 +1225,7 @@
     transport to shape the future of mobility.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id014
+  tag: *id013
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1333,7 +1335,7 @@
   description: ''
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id017
+  tag: &id016
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1346,7 +1348,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id015
+  tag: &id014
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1358,7 +1360,7 @@
     increasingly multilingual, multicultural, and mobile societies. Across diverse contexts, children n...'
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id012
   title: Mathematics and Effective STEM Learning
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1369,7 +1371,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id014
+  tag: *id013
   title: Multilingual and Multimodal Solutions for Low Resource, Indigenous, Endangered Languages and Dialects
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1404,7 +1406,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id015
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1415,7 +1417,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id016
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1426,7 +1428,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id019
+  tag: &id018
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1437,7 +1439,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id017
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1448,7 +1450,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id018
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1497,7 +1499,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id019
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1508,7 +1510,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id020
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1519,7 +1521,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id021
+  tag: *id020
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1541,7 +1543,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id022
+  tag: &id021
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1554,7 +1556,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id022
+  tag: *id021
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1602,7 +1604,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id023
+  tag: &id022
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1614,7 +1616,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id023
+  tag: *id022
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1624,7 +1626,7 @@
   description: School Improvement and Educational Change
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id011
+  tag: *id023
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1707,7 +1709,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id011
+  tag: *id023
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1730,7 +1732,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id018
+  tag: *id017
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1846,7 +1848,7 @@
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id011
   title: Alternative cell death mechanisms in cancer
   abstract_deadline: ''
   fullpaper_deadline: ''
