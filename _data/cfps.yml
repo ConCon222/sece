@@ -370,16 +370,17 @@
   link: https://www.nature.com/collections/cgiefaideh
   description: This Collection explores how learning environments shape mathematical cognition across development, particularly
     through their interactions with cognitive, affective, and neural factors
-- journal: Information Processing & Management
-  publisher: Elsevier
-  tag: &id013
-  - Library & Information Science
-  title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
+- journal: International Journal of Art & Design Education
+  publisher: Wiley
+  tag:
+  - Subject Education
+  - Art Education
+  title: Catalysing Creative Futures
   abstract_deadline: ''
   fullpaper_deadline: 30 November 2026
   fullpaper_deadline_sort: '2026-11-30'
-  editors: 'Guest editors: Wenping Zhang, Lele Kang, Juliana Sutanto'
-  link: https://www.sciencedirect.com/special-issue/337409/trustworthy-content-governance-and-safe-generative-ai-in-the-age-of-large-language-models
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14768070/call-for-papers/catalysing-creative-futures
   description: ''
 - journal: Early Education and Development
   publisher: Taylor & Francis
@@ -470,6 +471,17 @@
   link: https://www.nature.com/collections/feeghfcbgc
   description: This Collection aims to explore the conditions of possibility for a translational humanities. It asks how humanities-based
     knowledge can be made applicable, actionable, and socially engaged.
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: &id013
+  - Library & Information Science
+  title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Wenping Zhang, Lele Kang, Juliana Sutanto'
+  link: https://www.sciencedirect.com/special-issue/337409/trustworthy-content-governance-and-safe-generative-ai-in-the-age-of-large-language-models
+  description: ''
 - journal: Educational Technology & Society
   publisher: International Forum of Educational Technology & Society
   tag:
@@ -1321,6 +1333,16 @@
   link: https://www.nature.com/collections/eafdjicaaa
   description: This Collection highlights sexually transmitted viruses, particularly HIV, ZIKV, HBV, HDV, herpesviruses and
     Mpox from molecular virology to clinical translation.
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id013
+  title: 'Human Reasoning and Large Language Models: Alignments and Divergences'
+  abstract_deadline: ''
+  fullpaper_deadline: 29 April 2027
+  fullpaper_deadline_sort: '2027-04-29'
+  editors: 'Guest editors: Kevin Roitero, Johanne Trippas, Mengdie Zhuang'
+  link: https://www.sciencedirect.com/special-issue/337537/human-reasoning-and-large-language-models-alignments-and-divergences
+  description: ''
 - journal: Journal of Hospitality, Leisure, Sport & Tourism Education
   publisher: Elsevier
   tag:
@@ -1378,6 +1400,18 @@
   fullpaper_deadline_sort: '2027-08-31'
   editors: 'Guest editors: Karol Nowakowski, So Miyagawa, Michal Ptaszynski'
   link: https://www.sciencedirect.com/special-issue/333393/multilingual-and-multimodal-solutions-for-low-resource-indigenous-endangered-languages-and-dialects
+  description: ''
+- journal: System
+  publisher: Elsevier
+  tag:
+  - Language Education & Acquisition
+  - Educational Technology
+  title: Collaboration around and with Generative Artificial Intelligence in Language Learning and Teaching
+  abstract_deadline: ''
+  fullpaper_deadline: 15 September 2027
+  fullpaper_deadline_sort: '2027-09-15'
+  editors: 'Guest editors: Meixiu Zhang and Idoia Elola'
+  link: https://www.sciencedirect.com/special-issue/337504/collaboration-around-and-with-generative-artificial-intelligence-in-language-learning-and-teaching
   description: ''
 - journal: Research in Science Education
   publisher: Springer
@@ -4018,6 +4052,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
+  title: 'Affordable housing: challenges, innovations, and solutions'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bidghfhiga
+  description: "\uFEFFThis Collection welcomes research on the challenges, innovations, and solutions related to affordable\
+    \ housing."
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
   title: 'Emotional memory: construction, recall and meaning-making'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4350,17 +4395,6 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: 'Fiscal policies and energy vulnerability: tackling fuel and energy poverty in a changing global landscape'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bcedhjdffh
-  description: This Collection seeks to address the urgent and evolving intersection of fiscal policy and energy poverty,
-    a critical issue amid recent international crises, climate transition imperatives, and rising energy costs.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Hinduism – belief, politics and culture
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4543,6 +4577,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
+  title: 'Contemporary Catholicism(s): global perspectives on belief, power and identity'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ahacifjjig
+  description: This Collection seeks to critically examine the political, social and cultural dimensions of Catholicism today,
+    including interdisciplinary perspectives, that explore Catholicism.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
   title: Critical simulation studies
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4598,17 +4643,6 @@
     terrorist threats through the lenses of political science, sociology and related disciplines. We welcome original research
     that explores the causes, dynamics and consequences of terrorism, as well as responses to it, in both contemporary and
     historical contexts.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Loneliness and social isolation
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/djjhacjggg
-  description: This Collection invites research that sheds light on loneliness, social isolation and related themes, such
-    as what makes people lonely or socially isolated, and what can be done to alleviate negative effects
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -4698,6 +4732,17 @@
     to identify which disciplinary and stakeholder knowledges are relevant, synthesise different perspectives, manage power
     imbalances and legacies of colonisation in researching problems, and accommodate conflicting values and world views, including
     across different cultures.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: Making and using evidence
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ajechiaggg
+  description: This Collection explores the methods of making and using evidence in the process of policymaking, including
+    empirical, methodological and theoretical work.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
