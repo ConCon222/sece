@@ -1905,6 +1905,18 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id004
+  title: Organic Coatings
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ehigchgehg
+  description: This cross-journal Collection highlights organic coatings research across all applications such as construction,
+    textiles, healthcare, aerospace, etc. to protect against corrosion, fire, wear, and fouling, enhancing durability, and
+    overall performance of the different substrates.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id004
   title: Fire risk and sustainable development
   abstract_deadline: ''
   fullpaper_deadline: ''
