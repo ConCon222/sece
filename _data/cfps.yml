@@ -464,7 +464,7 @@
     knowledge can be made applicable, actionable, and socially engaged.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id012
+  tag: &id010
   - Library & Information Science
   title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
   abstract_deadline: ''
@@ -544,6 +544,16 @@
   fullpaper_deadline_sort: '2026-12-31'
   editors: 'Guest editors: Caroline S Cohrssen, Weipeng Weipeng Yang'
   link: https://www.sciencedirect.com/special-issue/333432/artificial-intelligence-ai-in-early-childhood-development-and-education
+  description: ''
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id010
+  title: 'Human Reasoning and Large Language Models: Alignments and Divergences'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Kevin Roitero, Johanne Trippas, Mengdie Zhuang'
+  link: https://www.sciencedirect.com/special-issue/337537/human-reasoning-and-large-language-models-alignments-and-divergences
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
@@ -650,7 +660,7 @@
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: &id010
+  tag: &id011
   - Interdisciplinary Science
   title: Carbon Dioxide Removal
   abstract_deadline: ''
@@ -673,7 +683,7 @@
     can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id010
+  tag: *id011
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -731,7 +741,7 @@
     practice. This Collection aims to gather innovative research that highlights the implementation an...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id010
+  tag: *id011
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -770,7 +780,7 @@
     to sustainability practices, seen as place-based, culture-based and community-based. We invit...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: &id011
+  tag: &id012
   - Educational Technology
   - STEM Education
   title: AI Literacy and STEM Education
@@ -783,7 +793,7 @@
     to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Assessment for STEM Education in the AI Era
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -1239,7 +1249,7 @@
     transport to shape the future of mobility.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id012
+  tag: *id010
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1335,16 +1345,6 @@
   link: https://www.nature.com/collections/eafdjicaaa
   description: This Collection highlights sexually transmitted viruses, particularly HIV, ZIKV, HBV, HDV, herpesviruses and
     Mpox from molecular virology to clinical translation.
-- journal: Information Processing & Management
-  publisher: Elsevier
-  tag: *id012
-  title: 'Human Reasoning and Large Language Models: Alignments and Divergences'
-  abstract_deadline: ''
-  fullpaper_deadline: 29 April 2027
-  fullpaper_deadline_sort: '2027-04-29'
-  editors: 'Guest editors: Kevin Roitero, Johanne Trippas, Mengdie Zhuang'
-  link: https://www.sciencedirect.com/special-issue/337537/human-reasoning-and-large-language-models-alignments-and-divergences
-  description: ''
 - journal: Journal of Hospitality, Leisure, Sport & Tourism Education
   publisher: Elsevier
   tag:
@@ -1395,7 +1395,7 @@
     increasingly multilingual, multicultural, and mobile societies. Across diverse contexts, children n...'
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Mathematics and Effective STEM Learning
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1406,7 +1406,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id012
+  tag: *id010
   title: Multilingual and Multimodal Solutions for Low Resource, Indigenous, Endangered Languages and Dialects
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1895,7 +1895,7 @@
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id010
+  tag: *id011
   title: Alternative cell death mechanisms in cancer
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1904,6 +1904,17 @@
   link: https://www.nature.com/collections/hcibbeeieg
   description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Unnatural amino acids in biology
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/djecadhaec
+  description: With this cross-journal Collection, the editors at Nature Communications, npj Structural Biology and Scientific
+    Reports invite manuscripts that highlight use of unnatural amino acids in these fields.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
