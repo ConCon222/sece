@@ -1907,6 +1907,18 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
+  title: Protein nanocages
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cheifcifaf
+  description: With this cross-journal Collection, the editors at Nature Communications, npj Structural Biology, npj Viruses
+    and Scientific Reports invite submissions that advance our understanding of protein nanocages, providing insights into
+    the design, assembly, architecture, function and applications of both natural and engineered systems.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
   title: Unnatural amino acids in biology
   abstract_deadline: ''
   fullpaper_deadline: ''
