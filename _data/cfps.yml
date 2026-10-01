@@ -1,16 +1,3 @@
-- journal: International Journal of Computer-Supported Collaborative Learning
-  publisher: Springer
-  tag:
-  - Educational Technology
-  title: '20th Anniversary of International Journal of Computer-supported Collaborative Learning: Reflections on the Past,
-    Visions for the Future'
-  abstract_deadline: ''
-  fullpaper_deadline: 20 September 2026
-  fullpaper_deadline_sort: '2026-09-20'
-  editors: ''
-  link: https://link.springer.com/collections/iacdfefhie
-  description: 'Editors: Michael Baker and Peter Reimann (Editors-in-Chief of IJCSCL) In this collection, Executive Editors,
-    Associate Editors, and Editorial Board members of the journal celebrate its 20th year of publicati...'
 - journal: Academic Psychiatry
   publisher: Springer
   tag:
@@ -34,8 +21,8 @@
   fullpaper_deadline_sort: '2026-09-30'
   editors: ''
   link: https://link.springer.com/collections/hjhiagdbaj
-  description: BMC Medical Education is calling for submissions to our Collection on Psychiatric education and its challenges.
-    Mental illnesses account for a significant portion of the global disease burden, underlying the...
+  description: BMC Medical Education called for submissions to our Collection on Psychiatric education and its challenges.
+    Mental illnesses account for a significant portion of the global disease burden, underlying the nee...
 - journal: European Journal of Education
   publisher: Wiley
   tag: &id008
@@ -95,7 +82,7 @@
   description: JTE is seeking papers for special issue 78.5 The first deadline is September 30, 2026.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id017
+  tag: &id018
   - Educational Technology
   title: 'Special Issue: Replication Studies'
   abstract_deadline: ''
@@ -398,7 +385,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id024
+  tag: &id025
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -510,7 +497,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id019
+  tag: &id020
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -569,7 +556,7 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: TESOL Quarterly
   publisher: Wiley
-  tag:
+  tag: &id013
   - Language Education & Acquisition
   title: 'Negotiating Multilingual Education in an EMI World: Institutions, Ideologies, and Transformation'
   abstract_deadline: ''
@@ -636,7 +623,7 @@
     (GNOME) initiative is calling for submissions to our Collection, Nutrition science in health profe...
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id022
+  tag: &id023
   - Medical Education
   - Educational Psychology
   title: Examining the Evidence Base in Psychiatry Education
@@ -826,6 +813,26 @@
   editors: 'Guest editors: Hui Li, Steven S. Barnett, Samantha Burns'
   link: https://www.sciencedirect.com/special-issue/335452/advancing-early-childhood-systems-in-an-era-of-macro-level-change-navigating-demographic-policy-and-cultural-shifts
   description: ''
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: *id013
+  title: Generative AI in TESOL Teacher Education and Professional Development
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2027
+  fullpaper_deadline_sort: '2027-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001186
+  description: ''
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: *id013
+  title: 'Ecological Approaches to Language Learning and Teaching: Relationality, Languaging, and Participation'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2027
+  fullpaper_deadline_sort: '2027-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001166
+  description: ''
 - journal: Sex Education
   publisher: Taylor & Francis
   tag:
@@ -944,7 +951,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id015
+  tag: &id016
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -957,7 +964,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id013
+  tag: &id014
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1359,7 +1366,7 @@
   description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: Pedagogical Transformation through Human–AI Collaboration in English-Medium Instruction
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2027
@@ -1370,7 +1377,7 @@
     increasingly diverse student populations, and the rapid development of generative artific...
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id016
+  tag: &id017
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1383,7 +1390,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id014
+  tag: &id015
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1453,7 +1460,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id014
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1464,7 +1471,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id015
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1475,7 +1482,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id018
+  tag: &id019
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1486,7 +1493,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id016
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1497,7 +1504,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id017
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1546,7 +1553,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id018
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1557,7 +1564,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id019
+  tag: *id020
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1568,7 +1575,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1590,7 +1597,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id020
+  tag: &id021
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1603,7 +1610,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id020
+  tag: *id021
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1651,7 +1658,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id021
+  tag: &id022
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1663,7 +1670,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id021
+  tag: *id022
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1673,7 +1680,7 @@
   description: School Improvement and Educational Change
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id022
+  tag: *id023
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1756,7 +1763,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id022
+  tag: *id023
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1779,7 +1786,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id017
+  tag: *id018
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1825,7 +1832,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id023
+  tag: &id024
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -1837,7 +1844,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id023
+  tag: *id024
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1848,7 +1855,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id023
+  tag: *id024
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1904,6 +1911,27 @@
   link: https://www.nature.com/collections/hcibbeeieg
   description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Altermagnetic materials
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/aefaahgacc
+  description: In this cross-journal Collection, we aim to highlight articles on Altermagnetic materials.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Microbial metabolic interactions
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dacbjabiah
+  description: In this cross-journal collection, editors seek articles studying microbial metabolic interactions, including
+    nutrient exchange, complex microbial metabolism and physiology, and microbial ecology and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
@@ -3902,28 +3930,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
-  title: Towards low-pressure all-solid-state batteries
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fceiagceha
-  description: This Cross-journal Collection highlights advances in the development of low- or zero-pressure all-solid-state
-    batteries (ASSBs).
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id003
-  title: High-Energy Light Sources - From Tabletop to Large Facilities
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hddiaeiege
-  description: This cross-journal collection born in collaboration between Communications Physics, Nature Communications and
-    Scientific Reports explores recent progress in high-energy light sources, from from tabletop to large scale facilities.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id003
   title: NeuroAI and Embodied Intelligence
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4099,7 +4105,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id024
+  tag: *id025
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
