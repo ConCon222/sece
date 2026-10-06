@@ -2987,17 +2987,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
-  title: Earthquake forecasting and early warning
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bfjaccgaaj
-  description: This cross-journal collection highlights recent progress in understanding earthquake processes, as well as
-    current challenges and future pathways towards more reliable forecasting and effective early warning systems.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id003
   title: Mechanisms of Tissue Fibrosis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3398,17 +3387,6 @@
   link: https://www.nature.com/collections/eaebjccaab
   description: With this cross-journal Collection, the editors invite manuscripts that offer novel insights into resilient
     supply chains, digital transformation, circularity in materials, and governance for a secure energy transition.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id003
-  title: Light Signaling in Plants
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fehfccaigh
-  description: This collection will highlight studies that uncover the mechanisms of light signal transduction and harness
-    these discoveries to address challenges in food security and climate change.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id003
