@@ -3525,17 +3525,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id004
-  title: 'Data for AI, AI for Data: cross-disciplinary cleaning, processing and analysis approaches'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/dbjjhciiag
-  description: 'With this cross-journal Collection, the editors at Nature Communications and Communications AI & Computing
-    invite manuscripts that highlight comprehensive studies on data cleaning, processing and curating: for AI and by AI.'
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id004
   title: Exercise and Physical Activity in Health and Disease
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4583,17 +4572,6 @@
   link: https://www.nature.com/collections/jghdcfgjii
   description: This Collection investigates the psychology of racism and prejudice, bringing together insights from cognitive,
     social, developmental, and cultural psychology, as well as sociology, history, and anthropology.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: The economics of social mobility
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gcdcdcfbce
-  description: This Collection invites research that explores social mobility primarily from the perspective of economics,
-    including labour economics, public finance, development economics, and macroeconomics.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
