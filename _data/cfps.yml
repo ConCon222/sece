@@ -395,7 +395,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id026
+  tag: &id028
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -407,7 +407,7 @@
     interactions with inflammation and immunity, and interventions targeting senescent cells to promote healthy longevity.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: &id011
+  tag: &id012
   - Medical Education
   title: Disability in medical education
   abstract_deadline: ''
@@ -508,7 +508,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id021
+  tag: &id023
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -553,6 +553,19 @@
   editors: 'Guest editors: Kevin Roitero, Johanne Trippas, Mengdie Zhuang'
   link: https://www.sciencedirect.com/special-issue/337537/human-reasoning-and-large-language-models-alignments-and-divergences
   description: ''
+- journal: Sport, Education and Society
+  publisher: Taylor & Francis
+  tag: &id011
+  - Subject Education
+  - Physical Education
+  title: Intergenerational learning to shape the future of health and physical education
+  abstract_deadline: 31 December 2026
+  fullpaper_deadline: 01 August 2027
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: Dylan Scanlon (Deakin University); Carla Valerio (Southern Cross University); Jacqui Peters (Deakin University);
+    Laura Alfrey (Monash University); Jenna Lorusso (University of Limerick)
+  link: https://think.taylorandfrancis.com/special_issues/intergenerational-learning-to-shape-the-future-of-health-and-physical-education/
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -567,7 +580,7 @@
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: TESOL Quarterly
   publisher: Wiley
-  tag: &id014
+  tag: &id015
   - Language Education & Acquisition
   title: 'Negotiating Multilingual Education in an EMI World: Institutions, Ideologies, and Transformation'
   abstract_deadline: ''
@@ -575,6 +588,16 @@
   fullpaper_deadline_sort: '2027-01-01'
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001171
+  description: ''
+- journal: Sport, Education and Society
+  publisher: Taylor & Francis
+  tag: *id011
+  title: Boom or Doom—for Whom? Artificial Intelligence and Social Justice in Sport and Physical Education
+  abstract_deadline: 01 January 2027
+  fullpaper_deadline: 01 May 2027
+  fullpaper_deadline_sort: '2027-01-01'
+  editors: Shu Wan (University at Buffalo); Huijie Zhang (South China Normal University)
+  link: https://think.taylorandfrancis.com/special_issues/boom-or-doom-for-whom-artificial-intelligence-and-social-justice-in-sport-and-physical-education/
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
@@ -612,7 +635,7 @@
     theory, methods, and edtech.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Gamification and virtual reality in medical education and related healthcare professions - Part II
   abstract_deadline: ''
   fullpaper_deadline: 11 January 2027
@@ -623,7 +646,7 @@
     education and healthcare professions - Part II. Fueled by the COVID-19 pandemic, digital teaching fo...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Nutrition science in health professions education
   abstract_deadline: ''
   fullpaper_deadline: 13 January 2027
@@ -647,7 +670,7 @@
     of systematic reviews examining the evidence base for the following topics in psychiatry education: ...'
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Medical education for LGBTQ+ health
   abstract_deadline: ''
   fullpaper_deadline: 15 January 2027
@@ -658,7 +681,7 @@
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: &id012
+  tag: &id013
   - Interdisciplinary Science
   title: Carbon Dioxide Removal
   abstract_deadline: ''
@@ -681,7 +704,7 @@
     can contribute to climate change mitigation.
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id013
   title: Cancer vaccines in the immunotherapy era
   abstract_deadline: ''
   fullpaper_deadline: 17 January 2027
@@ -728,7 +751,7 @@
     sociologists, legal scholars, economists, criminologists, development experts, data scientists and others.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Health professions competency-based education (CBE) innovations around the world
   abstract_deadline: ''
   fullpaper_deadline: 29 January 2027
@@ -739,7 +762,7 @@
     practice. This Collection aims to gather innovative research that highlights the implementation an...
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id013
   title: 'Cancer Neuroscience: from mechanisms to therapy'
   abstract_deadline: ''
   fullpaper_deadline: 30 January 2027
@@ -765,7 +788,7 @@
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
 - journal: Cultural Studies of Science Education
   publisher: Springer
-  tag:
+  tag: &id016
   - Subject Education
   - Science Education
   title: 'Science and Sustainability in Transition: Towards a relational and embodied STEAM education'
@@ -778,7 +801,7 @@
     to sustainability practices, seen as place-based, culture-based and community-based. We invit...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: &id013
+  tag: &id014
   - Educational Technology
   - STEM Education
   title: AI Literacy and STEM Education
@@ -791,7 +814,7 @@
     to the 20th century. Early AI systems were typically standalone computer-based environments, often i...
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: Assessment for STEM Education in the AI Era
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -826,7 +849,7 @@
   description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
-  tag: *id014
+  tag: *id015
   title: Generative AI in TESOL Teacher Education and Professional Development
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -836,7 +859,7 @@
   description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
-  tag: *id014
+  tag: *id015
   title: 'Ecological Approaches to Language Learning and Teaching: Relationality, Languaging, and Participation'
   abstract_deadline: ''
   fullpaper_deadline: 31 January 2027
@@ -846,7 +869,7 @@
   description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
-  tag: *id014
+  tag: *id015
   title: 'Advancing Positive Institutions in TESOL Teacher Education: A Dialogue between Positive Psychology and Critical
     Perspectives'
   abstract_deadline: ''
@@ -936,18 +959,6 @@
   description: We are interested in studies exploring core cellular and developmental aspects such as oocyte biology and ovarian
     ageing, embryo implantation, and embryo-maternal communication, as well as uterine and placental biology in full-term
     and complicated pregnancies, including preeclampsia and preterm birth risk.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: 'Sacred substances, Social Worlds: Psychedelics Across Cultures'
-  abstract_deadline: ''
-  fullpaper_deadline: 22 February 2027
-  fullpaper_deadline_sort: '2027-02-22'
-  editors: ''
-  link: https://www.nature.com/collections/dhjcegfcfh
-  description: This cross-journal Collection collaboratively by Humanities & Social Sciences Communications and Scientific
-    Reports, brings together research from the humanities, social sciences, and natural sciences to examine how psychedelics
-    and entheogens shape human experience, social organisation, and biological systems.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id004
@@ -973,7 +984,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id017
+  tag: &id019
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -986,7 +997,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id015
+  tag: &id017
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1118,7 +1129,7 @@
     exhibit remarkable regenerative capacity and scar-free wound healing.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Health communication in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1129,7 +1140,7 @@
     and fostering collaborative relationships between healthcare providers and communities. This Coll...
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Disaster preparedness in medical education
   abstract_deadline: ''
   fullpaper_deadline: 11 March 2027
@@ -1165,7 +1176,7 @@
     disciplines.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id019
+  tag: &id021
   - Educational Technology
   title: 'Human-AI Co-Regulation and Learner Agency: Rethinking Learning Processes in AI-Supported Learning Contexts'
   abstract_deadline: ''
@@ -1311,7 +1322,7 @@
     intense experiences.
 - journal: BMC Medical Education
   publisher: Springer
-  tag: *id011
+  tag: *id012
   title: Programmatic assessment
   abstract_deadline: ''
   fullpaper_deadline: 06 April 2027
@@ -1386,6 +1397,17 @@
   link: https://www.nature.com/collections/eafdjicaaa
   description: This Collection highlights sexually transmitted viruses, particularly HIV, ZIKV, HBV, HDV, herpesviruses and
     Mpox from molecular virology to clinical translation.
+- journal: Cultural Studies of Science Education
+  publisher: Springer
+  tag: *id016
+  title: 'Science Education in and for Solidarity: Pedagogies of Land, Cultures and Bodies'
+  abstract_deadline: ''
+  fullpaper_deadline: 01 May 2027
+  fullpaper_deadline_sort: '2027-05-01'
+  editors: ''
+  link: https://link.springer.com/collections/fjegbeefab
+  description: This special issue asks how solidarity is understood, practised and lived in the particular settings where
+    science and environmental knowledge is produced and taught. We are interested in work grounded in sp...
 - journal: Journal of Hospitality, Leisure, Sport & Tourism Education
   publisher: Elsevier
   tag:
@@ -1400,7 +1422,7 @@
   description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id015
+  tag: *id017
   title: Pedagogical Transformation through Human–AI Collaboration in English-Medium Instruction
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2027
@@ -1411,7 +1433,7 @@
     increasingly diverse student populations, and the rapid development of generative artific...
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id018
+  tag: &id020
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1424,7 +1446,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id016
+  tag: &id018
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1436,7 +1458,7 @@
     increasingly multilingual, multicultural, and mobile societies. Across diverse contexts, children n...'
 - journal: International Journal of STEM Education
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: Mathematics and Effective STEM Learning
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1494,7 +1516,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id016
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1505,7 +1527,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id017
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1516,7 +1538,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id020
+  tag: &id022
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1527,7 +1549,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id018
+  tag: *id020
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1538,7 +1560,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id019
+  tag: *id021
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1587,7 +1609,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id020
+  tag: *id022
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1598,7 +1620,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id021
+  tag: *id023
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1609,7 +1631,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id015
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1631,7 +1653,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id022
+  tag: &id024
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1644,7 +1666,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id022
+  tag: *id024
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1692,7 +1714,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id023
+  tag: &id025
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1704,7 +1726,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id023
+  tag: *id025
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1714,7 +1736,7 @@
   description: School Improvement and Educational Change
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id024
+  tag: &id026
   - Medical Education
   - Educational Psychology
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
@@ -1799,7 +1821,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id024
+  tag: *id026
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1822,7 +1844,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id019
+  tag: *id021
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1868,7 +1890,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id025
+  tag: &id027
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -1880,7 +1902,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id025
+  tag: *id027
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1891,7 +1913,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id025
+  tag: *id027
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1938,7 +1960,7 @@
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
 - journal: Nature
   publisher: Nature Portfolio
-  tag: *id012
+  tag: *id013
   title: Alternative cell death mechanisms in cancer
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3525,6 +3547,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id004
+  title: 'Data for AI, AI for Data: cross-disciplinary cleaning, processing and analysis approaches'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dbjjhciiag
+  description: 'With this cross-journal Collection, the editors at Nature Communications and Communications AI & Computing
+    invite manuscripts that highlight comprehensive studies on data cleaning, processing and curating: for AI and by AI.'
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id004
   title: Exercise and Physical Activity in Health and Disease
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4040,7 +4073,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id028
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4049,6 +4082,17 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: 'Food security: insights from land use transition, population aging, and agricultural product circulation'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fbebiccjdh
+  description: This Humanities and Social Sciences Communications Collection welcomes research on the challenges, innovations,
+    and solutions related to food security.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -4519,17 +4563,6 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: 'Cultures of command: identity, power, and belonging in global militaries'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jiaeiccaja
-  description: This collection explores the cultural dimensions of military life across global contexts, with an interest
-    in how armed forces construct and challenge ideas of gender, race, nationalism, professionalism, and sacrifice.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
   title: Political participation and mobilisation in Central and Eastern Europe
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4606,6 +4639,17 @@
   link: https://www.nature.com/collections/jidjebgdic
   description: This Collection invites contributions that engage with the theme of decolonising economics, both theoretically
     and practically, exploring its implications for economic thought and transformative action.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: 'Reframing artificial intelligence: critical perspectives from AI social science'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fifadahhfd
+  description: To untangle the links between technological and social forces, this Collection invites social science perspectives
+    to advance the study of AI’s sociotechnical, cultural and political dimensions.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
@@ -4717,6 +4761,17 @@
   link: https://www.nature.com/collections/iiafadfeaf
   description: This Collection will bring together philosophical contributions concerning digital knowledge infrastructure,
     broadly construed.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
+  title: STEM education
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gabichegcb
+  description: This Guest Edited Collection invites research and review articles on all aspects of STEM teaching, learning,
+    and assessment.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
