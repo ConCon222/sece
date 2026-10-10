@@ -4309,6 +4309,18 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
+  title: 'Sacred substances, Social Worlds: Psychedelics Across Cultures'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dhjcegfcfh
+  description: This cross-journal Collection collaboratively by Humanities & Social Sciences Communications and Scientific
+    Reports, brings together research from the humanities, social sciences, and natural sciences to examine how psychedelics
+    and entheogens shape human experience, social organisation, and biological systems.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
   title: Pharmaceutical intellectual property
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4563,6 +4575,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
+  title: 'Cultures of command: identity, power, and belonging in global militaries'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jiaeiccaja
+  description: This collection explores the cultural dimensions of military life across global contexts, with an interest
+    in how armed forces construct and challenge ideas of gender, race, nationalism, professionalism, and sacrifice.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id006
   title: Political participation and mobilisation in Central and Eastern Europe
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4574,37 +4597,14 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
-  title: Buddhism - beliefs, politics and culture
+  title: The economics of social mobility
   abstract_deadline: ''
   fullpaper_deadline: ''
   fullpaper_deadline_sort: '9999-99-99'
   editors: ''
-  link: https://www.nature.com/collections/jdfbcebjfd
-  description: This Collection explores Buddhism and its place in the world today. The Collection is interested in the belief,
-    culture and politics of this major religion, welcoming research on the everyday lives of modern Buddhists, the religion's
-    links to politics, and also the cultural imprint of Buddhism on society.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Innovation, AI, and education
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gffbgaahgb
-  description: This Collection seeks to explore the multifaceted intersections between innovation, artificial intelligence,
-    and education.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id006
-  title: Psychology of racism and prejudice
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jghdcfgjii
-  description: This Collection investigates the psychology of racism and prejudice, bringing together insights from cognitive,
-    social, developmental, and cultural psychology, as well as sociology, history, and anthropology.
+  link: https://www.nature.com/collections/gcdcdcfbce
+  description: This Collection invites research that explores social mobility primarily from the perspective of economics,
+    including labour economics, public finance, development economics, and macroeconomics.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id006
