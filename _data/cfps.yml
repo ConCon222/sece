@@ -490,6 +490,26 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id007
+  title: 'From Posts to Dialogues: Conversational and Contextual AI for Mental Health'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Javier Parapar, Anxo Perez, Xi Wang, Ana-Maria Bucur, Fabio Crestani'
+  link: https://www.sciencedirect.com/special-issue/337985/from-posts-to-dialogues-conversational-and-contextual-ai-for-mental-health
+  description: ''
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id007
+  title: Data-centric AI for Social Science
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Liang Hong, Chengzhi Zhang, Xiaoling Shu, Dawei Cheng'
+  link: https://www.sciencedirect.com/special-issue/337979/data-centric-ai-for-social-science
+  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id012
