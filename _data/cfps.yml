@@ -305,7 +305,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id025
+  tag: &id024
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -420,7 +420,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id020
+  tag: &id019
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -478,18 +478,6 @@
     Laura Alfrey (Monash University); Jenna Lorusso (University of Limerick)
   link: https://think.taylorandfrancis.com/special_issues/intergenerational-learning-to-shape-the-future-of-health-and-physical-education/
   description: ''
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id004
-  title: 'Gender, democracy and political violence: A feminist perspective'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 December 2026
-  fullpaper_deadline_sort: '2026-12-31'
-  editors: ''
-  link: https://www.nature.com/collections/bebcdhbiga
-  description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
-    feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
-    science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: Information Processing & Management
   publisher: Elsevier
   tag: *id007
@@ -510,6 +498,18 @@
   editors: 'Guest editors: Liang Hong, Chengzhi Zhang, Xiaoling Shu, Dawei Cheng'
   link: https://www.sciencedirect.com/special-issue/337979/data-centric-ai-for-social-science
   description: ''
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id004
+  title: 'Gender, democracy and political violence: A feminist perspective'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: ''
+  link: https://www.nature.com/collections/bebcdhbiga
+  description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
+    feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
+    science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id012
@@ -720,7 +720,7 @@
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
 - journal: Cultural Studies of Science Education
   publisher: Springer
-  tag: &id013
+  tag:
   - Subject Education
   - Science Education
   title: 'Science and Sustainability in Transition: Towards a relational and embodied STEAM education'
@@ -916,7 +916,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id016
+  tag: &id015
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -929,7 +929,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id014
+  tag: &id013
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1108,7 +1108,7 @@
     disciplines.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id018
+  tag: &id017
   - Educational Technology
   title: 'Human-AI Co-Regulation and Learner Agency: Rethinking Learning Processes in AI-Supported Learning Contexts'
   abstract_deadline: ''
@@ -1331,7 +1331,9 @@
     Mpox from molecular virology to clinical translation.
 - journal: Cultural Studies of Science Education
   publisher: Springer
-  tag: *id013
+  tag:
+  - Subject Education
+  - Science Education
   title: 'Science Education in and for Solidarity: Pedagogies of Land, Cultures and Bodies'
   abstract_deadline: ''
   fullpaper_deadline: 01 May 2027
@@ -1354,7 +1356,7 @@
   description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id014
+  tag: *id013
   title: Pedagogical Transformation through Human–AI Collaboration in English-Medium Instruction
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2027
@@ -1365,7 +1367,7 @@
     increasingly diverse student populations, and the rapid development of generative artific...
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id017
+  tag: &id016
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1378,7 +1380,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id015
+  tag: &id014
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1448,7 +1450,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id015
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1459,7 +1461,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id016
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1470,7 +1472,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id019
+  tag: &id018
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1481,7 +1483,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id017
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1492,7 +1494,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id018
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1541,7 +1543,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id019
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1552,7 +1554,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id020
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1563,7 +1565,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id014
+  tag: *id013
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1585,7 +1587,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id021
+  tag: &id020
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1598,7 +1600,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id021
+  tag: *id020
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1646,7 +1648,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id022
+  tag: &id021
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1658,7 +1660,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id022
+  tag: *id021
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1668,7 +1670,7 @@
   description: School Improvement and Educational Change
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id023
+  tag: &id022
   - Medical Education
   - Educational Psychology
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
@@ -1753,7 +1755,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id023
+  tag: *id022
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1776,7 +1778,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id018
+  tag: *id017
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1822,7 +1824,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id024
+  tag: &id023
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -1834,7 +1836,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id024
+  tag: *id023
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1845,7 +1847,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id024
+  tag: *id023
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1901,6 +1903,17 @@
   link: https://www.nature.com/collections/hcibbeeieg
   description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Transmembrane signaling of cytokine and growth factor receptors
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gaadbiffii
+  description: This Collection invites research on the control and activation mechanism of TNF, cytokine and growth factor
+    receptors as well as implication to disease and therapeutic intervention.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -1981,17 +1994,6 @@
     We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
     our understanding of the relationship between the exposome and human health. We also welcome work including historically
     underrepresented populations.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
-  title: Functional Connectivity in Psychiatric Disorders
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gcjicbjjcb
-  description: In this collection, we invite original research, reviews and perspectives that advance our understanding of
-    functional connectivity across psychiatric disorders, from fundamental circuit mechanisms to clinical applications.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -3340,19 +3342,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
-  title: Cell death and inflammatory signalling
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jaehbihgeg
-  description: The editor invite submissions of original biological and clinical research focusing on the finely-tuned control
-    of non-immune and immune cell death, the coordinated regulation of programmed cell death and the resulted immune response
-    in health and disease, and the selective targeting of cell death regulatory molecules as a therapeutic solution for chronic
-    inflammatory disorders.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
   title: One Health 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4005,7 +3994,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id025
+  tag: *id024
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4014,6 +4003,18 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id004
+  title: 'Light and the built environment: infrastructure, perception, and the human impacts of illumination'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gdecgbgeii
+  description: This Collection explores the cultural, spatial, human health policy, and general political dimensions of artificial
+    illumination. It considers how light functions as a marker of development, and a medium through which safety and visibility
+    are negotiated.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
@@ -4571,17 +4572,6 @@
   link: https://www.nature.com/collections/jidjebgdic
   description: This Collection invites contributions that engage with the theme of decolonising economics, both theoretically
     and practically, exploring its implications for economic thought and transformative action.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id004
-  title: 'Reframing artificial intelligence: critical perspectives from AI social science'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fifadahhfd
-  description: To untangle the links between technological and social forces, this Collection invites social science perspectives
-    to advance the study of AI’s sociotechnical, cultural and political dimensions.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
