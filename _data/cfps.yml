@@ -11,19 +11,6 @@
     Switzerland); Roeland van der Rijst (Leiden University, The Netherlands)
   link: https://think.taylorandfrancis.com/special_issues/agency-in-and-through-academic-development/
   description: Franziska Zellweger , Zurich University of Teacher Education, Switzerland franziska.zellweger@phzh.ch
-- journal: npj Science of Learning
-  publisher: Nature Portfolio
-  tag: &id005
-  - Educational Psychology
-  - Educational Technology
-  title: Reimagining Teaching and Learning in the Age of Generative AI Agents
-  abstract_deadline: ''
-  fullpaper_deadline: 13 October 2026
-  fullpaper_deadline_sort: '2026-10-13'
-  editors: ''
-  link: https://www.nature.com/collections/aabajbfjfd
-  description: This Collection explores how LLM-powered AI agents transform teaching, learning, and feedback, reshaping educational
-    practices and roles.
 - journal: Studies in Educational Evaluation
   publisher: Elsevier
   tag:
@@ -247,7 +234,9 @@
     and political dimensions of human enhancement.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id005
+  tag: &id008
+  - Educational Psychology
+  - Educational Technology
   title: Mathematical Cognition in Evolving Learning Environments
   abstract_deadline: ''
   fullpaper_deadline: 28 November 2026
@@ -315,6 +304,21 @@
   link: https://www.nature.com/collections/ahgacgcgeh
   description: This Collection invites research on cellular senescence, its mechanisms in aging and age-related diseases,
     interactions with inflammation and immunity, and interventions targeting senescent cells to promote healthy longevity.
+- journal: Physical Education and Sport Pedagogy
+  publisher: Taylor & Francis
+  tag:
+  - Subject Education
+  - Physical Education
+  title: '(Re)connecting Physical Education to the living world: ecocentric, embodied and indigenous pedagogies for sustainability
+    education'
+  abstract_deadline: 04 December 2026
+  fullpaper_deadline: 30 April 2027
+  fullpaper_deadline_sort: '2026-12-04'
+  editors: Mary Schirrer (Université de Lorraine (France), LISEC UR 2310); Léa Gottsmann (Université de Rennes (France), VIPS
+    UR 3646); Lisa Lefèvre (HEP Vaud (Switzerland), E3S UR1342); Aline Paintendre (University de Reims Champagne Ardenne (France),
+    PSMS EA7507); Christophe Schnitzler (HEP Vaud (Switzerland), E3S UR1342)
+  link: https://think.taylorandfrancis.com/special_issues/reconnecting-physical-education-to-the-living-world/
+  description: Aline Paintendre , University de Reims Champagne Ardenne (France), PSMS EA7507 aline.paintendre@univ-reims.fr
 - journal: BMC Medical Education
   publisher: Springer
   tag: &id009
@@ -374,7 +378,7 @@
     knowledge can be made applicable, actionable, and socially engaged.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: &id007
+  tag: &id006
   - Library & Information Science
   title: Trustworthy Content Governance and Safe Generative AI in the Age of Large Language Models
   abstract_deadline: ''
@@ -396,7 +400,7 @@
   description: ET&S special issue on sustainable and responsible educational data use.
 - journal: Research in Science Education
   publisher: Springer
-  tag: &id006
+  tag: &id005
   - Subject Education
   - Science Education
   title: Argumentation and the problem of misinformation in science education
@@ -409,7 +413,7 @@
     reshaped by digital technologies and the diverse ways in which individuals engage with (mis)info...
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: Multimodal literacies and representations for learning
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -457,7 +461,7 @@
   description: ''
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: 'Human Reasoning and Large Language Models: Alignments and Divergences'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -467,7 +471,7 @@
   description: ''
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
-  tag: &id008
+  tag: &id007
   - Subject Education
   - Physical Education
   title: Intergenerational learning to shape the future of health and physical education
@@ -480,7 +484,7 @@
   description: ''
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: 'From Posts to Dialogues: Conversational and Contextual AI for Mental Health'
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -490,7 +494,7 @@
   description: ''
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: Data-centric AI for Social Science
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2026
@@ -523,7 +527,7 @@
   description: ''
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
-  tag: *id008
+  tag: *id007
   title: Boom or Doom—for Whom? Artificial Intelligence and Social Justice in Sport and Physical Education
   abstract_deadline: 01 January 2027
   fullpaper_deadline: 01 May 2027
@@ -556,7 +560,7 @@
     experiences.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
-  tag: *id005
+  tag: *id008
   title: Embodied Learning
   abstract_deadline: ''
   fullpaper_deadline: 10 January 2027
@@ -1233,7 +1237,7 @@
     transport to shape the future of mobility.
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: Explainable AI and Network Science for Social Systems and Collective Intelligence
   abstract_deadline: ''
   fullpaper_deadline: 31 March 2027
@@ -1403,7 +1407,7 @@
     scientific and technological community. This broad movement calls for transformative efforts to pro...
 - journal: Information Processing & Management
   publisher: Elsevier
-  tag: *id007
+  tag: *id006
   title: Multilingual and Multimodal Solutions for Low Resource, Indigenous, Endangered Languages and Dialects
   abstract_deadline: ''
   fullpaper_deadline: 31 August 2027
@@ -1425,7 +1429,7 @@
   description: ''
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: Artificial Intelligence in Science Education
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2027
@@ -1576,7 +1580,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Research in Science Education
   publisher: Springer
-  tag: *id006
+  tag: *id005
   title: Early childhood scientific learning through play
   abstract_deadline: ''
   fullpaper_deadline: 31 December 2030
@@ -1994,6 +1998,17 @@
     We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
     our understanding of the relationship between the exposome and human health. We also welcome work including historically
     underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Functional Connectivity in Psychiatric Disorders
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gcjicbjjcb
+  description: In this collection, we invite original research, reviews and perspectives that advance our understanding of
+    functional connectivity across psychiatric disorders, from fundamental circuit mechanisms to clinical applications.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -3342,6 +3357,19 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
+  title: Cell death and inflammatory signalling
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jaehbihgeg
+  description: The editor invite submissions of original biological and clinical research focusing on the finely-tuned control
+    of non-immune and immune cell death, the coordinated regulation of programmed cell death and the resulted immune response
+    in health and disease, and the selective targeting of cell death regulatory molecules as a therapeutic solution for chronic
+    inflammatory disorders.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
   title: One Health 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4003,6 +4031,17 @@
   link: https://www.nature.com/collections/aabfdcdgce
   description: In this collection we invite original research, reviews and perspectives that advance our understanding of
     the mechanisms and determinants of cognitive resilience in the aging brain.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id004
+  title: 'Mapping propaganda: practices, media and power'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gbddcjbdbi
+  description: This Collection welcomes research that maps propaganda practices across different historical periods, political
+    systems, cultural settings and forms of media.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
