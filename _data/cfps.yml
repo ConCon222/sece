@@ -294,7 +294,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id024
+  tag: &id025
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -1120,8 +1120,8 @@
   fullpaper_deadline_sort: '2027-03-15'
   editors: ''
   link: https://link.springer.com/collections/cdaacabgef
-  description: Focus, Scope, and Rationale This special issue focuses on advancing understanding of how artificial intelligence
-    (AI) reshapes learning processes, learner agency, and co-regulation in AI-supported learning e...
+  description: 'Please note: the Special Issue is currently open for abstract submission only. Please send extended abstracts
+    by email to Guest Editors: Yun-Fang Tu (sandy0692@gmail.com) and Gwo-Jen Hwang (gjhwang.academic@...'
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
@@ -1873,7 +1873,7 @@
   description: Call for papers for a special issue on “ Reimagining Future Learning via Human-AI Hybrid Intelligence .”
 - journal: Educational Technology & Society
   publisher: Unknown
-  tag:
+  tag: &id024
   - Educational Technology
   title: 'Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity, Engagement Pathways, and Educational
     Equity'
@@ -1896,6 +1896,17 @@
   editors: ''
   link: https://journals.sagepub.com/page/hej/call-for-papers/peer-education
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
+- journal: Educational Technology & Society
+  publisher: Unknown
+  tag: *id024
+  title: Trustworthy AI-Enhanced Education Data Governance, Pedagogical Evidence, and Human Oversight
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://drive.google.com/file/d/1exUpgd0gA9gO4dToLqe40zni8YFkpZut/view?usp=drive_link
+  description: Call for papers for a special issue on “ Trustworthy AI-Enhanced Education Data Governance, Pedagogical Evidence,
+    and Human Oversight .”
 - journal: Nature
   publisher: Nature Portfolio
   tag: *id010
@@ -1907,6 +1918,20 @@
   link: https://www.nature.com/collections/hcibbeeieg
   description: With this collection, editors invite submissions that aim to advance our understanding of the molecular mechanisms
     governing alternative cell death mechanisms in cancer and their crosstalk with tumour and tumor microenvironment biology.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Photonic neuromorphic computing
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/cafbdeahha
+  description: This Collection aims to showcase and discuss research ranging from fundamental physics and our current theoretical
+    understanding through to the different experimental platforms and developments in computing hardware. The Collection will
+    also consider articles that discuss the implications of photonic neuromorphic computing beyond fundamental research and
+    how the field can contribute to the development of cognitive computing and AI systems among other future technologies
+    more generally.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -1985,19 +2010,6 @@
   link: https://www.nature.com/collections/gfciebghci
   description: With this cross-journal Collection, the editors bring together studies that advance understanding of how fire
     influences environmental and societal sustainability and explore pathways to reduce fire risk and enhance resilience.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
-  title: Exposome in Health
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jejjbfbhda
-  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
-    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
-    our understanding of the relationship between the exposome and human health. We also welcome work including historically
-    underrepresented populations.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -2571,18 +2583,6 @@
   link: https://www.nature.com/collections/hbdccjgfca
   description: This cross-journal collection from brings together research that explores the physical mechanisms and environmental
     impacts of extreme events in high-latitude regions under changing climatic conditions.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
-  title: Lipids in Cell Biology 2026
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jigabagdjg
-  description: Advances in lipid detection methods and techniques to probe lipid functions continues to uncover roles beyond
-    containment, from organelle morphology, metabolic signaling, cell death, and energy metabolism. This collection invites
-    submissions from all disciplines with insights into lipid function, regulation or detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -3199,17 +3199,6 @@
   link: https://www.nature.com/collections/difaigaifh
   description: This cross-journal Collection welcomes submissions that highlight mechanisms underlying neural and physiological
     responses to contemporary environmental changes.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
-  title: Confined Plasmas and Nuclear Fusion
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hcicbjdfaf
-  description: This cross-journal collection aims at exploring a wide range of topics in confined plasmas and nuclear fusion
-    research and invites original research contributions from a variety of devices and laboratories.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -4022,7 +4011,7 @@
     symptoms in humans.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id024
+  tag: *id025
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4555,17 +4544,6 @@
   link: https://www.nature.com/collections/jiaeiccaja
   description: This collection explores the cultural dimensions of military life across global contexts, with an interest
     in how armed forces construct and challenge ideas of gender, race, nationalism, professionalism, and sacrifice.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id004
-  title: Political participation and mobilisation in Central and Eastern Europe
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bfccjjdhbg
-  description: This Collection aims to facilitate interdisciplinary dialogue on political participation and mobilisation in
-    Central and Eastern Europe by examining historical trajectories, contemporary practices, and emerging trends.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
