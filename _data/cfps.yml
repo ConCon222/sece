@@ -547,6 +547,17 @@
   description: This Collection invites interdisciplinary scholarship that critically explores the dynamic interplay between
     the Olympic and Paralympic Games, media forms, representations, and the cultural politics that shape and are shaped by
     them.
+- journal: Language and Education
+  publisher: Taylor & Francis
+  tag:
+  - Language Education & Acquisition
+  title: 'Language and Literacy in Refugee Education: An Asia-Pacific Perspective'
+  abstract_deadline: 05 January 2027
+  fullpaper_deadline: 30 May 2027
+  fullpaper_deadline_sort: '2027-01-05'
+  editors: Hyun-Sook Kang (University of Illinois Urbana-Champaign); Mun Woo Lee (Yonsei University)
+  link: https://think.taylorandfrancis.com/special_issues/language-and-literacy-in-refugee-education-an-asia-pacific-perspective/
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
@@ -1415,6 +1426,16 @@
   editors: 'Guest editors: Karol Nowakowski, So Miyagawa, Michal Ptaszynski'
   link: https://www.sciencedirect.com/special-issue/333393/multilingual-and-multimodal-solutions-for-low-resource-indigenous-endangered-languages-and-dialects
   description: ''
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: *id012
+  title: 'Translanguaging in TESOL: Psychological Dynamics and L2 Oral Performance in Multilingual Classrooms'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 August 2027
+  fullpaper_deadline_sort: '2027-08-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001253
+  description: ''
 - journal: System
   publisher: Elsevier
   tag:
@@ -2013,6 +2034,19 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
+  title: Exposome in Health
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jejjbfbhda
+  description: This cross-journal collection aims to bring together the latest research on the exposome and human health.
+    We welcome epidemiological, conceptual, methodological, mechanistic, large-scale, and policy-focused studies that advance
+    our understanding of the relationship between the exposome and human health. We also welcome work including historically
+    underrepresented populations.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
   title: Functional Connectivity in Psychiatric Disorders
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2583,6 +2617,18 @@
   link: https://www.nature.com/collections/hbdccjgfca
   description: This cross-journal collection from brings together research that explores the physical mechanisms and environmental
     impacts of extreme events in high-latitude regions under changing climatic conditions.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Lipids in Cell Biology 2026
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jigabagdjg
+  description: Advances in lipid detection methods and techniques to probe lipid functions continues to uncover roles beyond
+    containment, from organelle morphology, metabolic signaling, cell death, and energy metabolism. This collection invites
+    submissions from all disciplines with insights into lipid function, regulation or detection.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -3199,6 +3245,17 @@
   link: https://www.nature.com/collections/difaigaifh
   description: This cross-journal Collection welcomes submissions that highlight mechanisms underlying neural and physiological
     responses to contemporary environmental changes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Confined Plasmas and Nuclear Fusion
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hcicbjdfaf
+  description: This cross-journal collection aims at exploring a wide range of topics in confined plasmas and nuclear fusion
+    research and invites original research contributions from a variety of devices and laboratories.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
