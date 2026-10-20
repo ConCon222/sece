@@ -1942,6 +1942,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
+  title: Conversion of plastics and biomass-derived polymers using heterogeneous catalysis
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ffiaaiifff
+  description: This cross-journal collection invites manuscripts that realize advances in using heterogeneous catalysis for
+    the conversion of plastics and biomass-derived polymers into smaller molecules.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
   title: Photonic neuromorphic computing
   abstract_deadline: ''
   fullpaper_deadline: ''
