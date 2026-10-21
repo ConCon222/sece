@@ -514,6 +514,16 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id006
+  title: 'FIRM: Foundation-model Integrity and Ranking Methods in the LLM Era'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Ben He, Zhaochun Ren, Xiao Wang, Xuanang Chen, Ying Zhou'
+  link: https://www.sciencedirect.com/special-issue/338285/firm-foundation-model-integrity-and-ranking-methods-in-the-llm-era
+  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id012
@@ -626,6 +636,17 @@
   link: https://link.springer.com/collections/egeghiajba
   description: BMC Medical Education is calling for submissions to our Collection, Medical education for LGBTQ+ health. The
     landscape of medical education has evolved significantly to incorporate the unique health needs of...
+- journal: Journal of Research in Reading
+  publisher: Wiley
+  tag:
+  - Language Education & Acquisition
+  title: 'Call for Abstracts - Beyond the Diglossic Deficit: Rethinking Linguistic Distance in Reading Development'
+  abstract_deadline: ''
+  fullpaper_deadline: 15 January 2027
+  fullpaper_deadline_sort: '2027-01-15'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14679817/call-for-abstracts/beyond-the-diglossic-deficit
+  description: ''
 - journal: Nature
   publisher: Nature Portfolio
   tag: &id010
@@ -1942,17 +1963,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
-  title: Conversion of plastics and biomass-derived polymers using heterogeneous catalysis
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ffiaaiifff
-  description: This cross-journal collection invites manuscripts that realize advances in using heterogeneous catalysis for
-    the conversion of plastics and biomass-derived polymers into smaller molecules.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
   title: Photonic neuromorphic computing
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1964,6 +1974,17 @@
     also consider articles that discuss the implications of photonic neuromorphic computing beyond fundamental research and
     how the field can contribute to the development of cognitive computing and AI systems among other future technologies
     more generally.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id002
+  title: Conversion of plastics and biomass-derived polymers using heterogeneous catalysis
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ffiaaiifff
+  description: This cross-journal collection invites manuscripts that realize advances in using heterogeneous catalysis for
+    the conversion of plastics and biomass-derived polymers into smaller molecules.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
@@ -3734,17 +3755,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id002
-  title: Neurocognitive perspectives on language comprehension
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fdgceidggh
-  description: The Editors at Communications Psychology, Nature Communications, and Scientific Reports invite submissions
-    providing neurocognitive perspectives on language comprehension.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id002
   title: Immune cell engineering for cancer therapy 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4077,6 +4087,19 @@
     Health, Communications Psychology, and Scientific Reports invite submissions on the topic of Computational Psychiatry.
     This Collection aims to bring together research that leverages computational methods to advance our understanding of psychiatric
     symptoms in humans.
+- journal: npj Science of Learning
+  publisher: Nature Portfolio
+  tag: *id008
+  title: Neurodivergence and Learning Differences
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jgbjeghifd
+  description: This Collection invites researchers to contribute insights into the relationship between neurodivergence and
+    learning, exploring the genetic, cellular, and psychological aspects of how diverse cognitive profiles affect learning.
+    By addressing the intersection of educational and clinical practices, technology, and neurodivergence, this Collection
+    aims to promote inclusive strategies and foster a deeper understanding of learning in all its forms.
 - journal: Nature Aging
   publisher: Nature Portfolio
   tag: *id025
@@ -4725,16 +4748,6 @@
   link: https://www.nature.com/collections/ibaaacccci
   description: This Collection aims at examining the computational and digital study of “greater Western Asia” and its epistemological
     implications.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id004
-  title: Tourists, go home? Sustainable tourism in popular destinations
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hhjcdjgdcf
-  description: This Collection is dedicated to addressing complex problems arising from tourism in high-demand destinations.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
