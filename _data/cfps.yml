@@ -11,18 +11,6 @@
     Switzerland); Roeland van der Rijst (Leiden University, The Netherlands)
   link: https://think.taylorandfrancis.com/special_issues/agency-in-and-through-academic-development/
   description: Franziska Zellweger , Zurich University of Teacher Education, Switzerland franziska.zellweger@phzh.ch
-- journal: Studies in Educational Evaluation
-  publisher: Elsevier
-  tag:
-  - General Education
-  - Educational Assessment
-  title: Long-term change in school and teaching culture
-  abstract_deadline: ''
-  fullpaper_deadline: 15 October 2026
-  fullpaper_deadline_sort: '2026-10-15'
-  editors: 'Guest editors: Prof. Dr. Eckhard Klieme, Prof. Dr. Falk Radisch, Prof. Dr. Katharina Maag Merki'
-  link: https://www.sciencedirect.com/special-issue/334556/long-term-change-in-school-and-teaching-culture
-  description: ''
 - journal: Mind, Culture, and Activity
   publisher: Taylor & Francis
   tag:
@@ -269,6 +257,18 @@
   editors: ''
   link: https://onlinelibrary.wiley.com/page/journal/21689830/call-for-papers/si-2026-001195
   description: ''
+- journal: Studies in Educational Evaluation
+  publisher: Elsevier
+  tag:
+  - General Education
+  - Educational Assessment
+  title: Long-term change in school and teaching culture
+  abstract_deadline: ''
+  fullpaper_deadline: 01 December 2026
+  fullpaper_deadline_sort: '2026-12-01'
+  editors: 'Guest editors: Prof. Dr. Eckhard Klieme, Prof. Dr. Falk Radisch, Prof. Dr. Katharina Maag Merki'
+  link: https://www.sciencedirect.com/special-issue/334556/long-term-change-in-school-and-teaching-culture
+  description: ''
 - journal: Early Education and Development
   publisher: Taylor & Francis
   tag:
@@ -502,6 +502,16 @@
   editors: 'Guest editors: Liang Hong, Chengzhi Zhang, Xiaoling Shu, Dawei Cheng'
   link: https://www.sciencedirect.com/special-issue/337979/data-centric-ai-for-social-science
   description: ''
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id006
+  title: 'FIRM: Foundation-model Integrity and Ranking Methods in the LLM Era'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Ben He, Zhaochun Ren, Xiao Wang, Xuanang Chen, Ying Zhou'
+  link: https://www.sciencedirect.com/special-issue/338285/firm-foundation-model-integrity-and-ranking-methods-in-the-llm-era
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
@@ -514,16 +524,6 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
-- journal: Information Processing & Management
-  publisher: Elsevier
-  tag: *id006
-  title: 'FIRM: Foundation-model Integrity and Ranking Methods in the LLM Era'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 December 2026
-  fullpaper_deadline_sort: '2026-12-31'
-  editors: 'Guest editors: Ben He, Zhaochun Ren, Xiao Wang, Xuanang Chen, Ying Zhou'
-  link: https://www.sciencedirect.com/special-issue/338285/firm-foundation-model-integrity-and-ranking-methods-in-the-llm-era
-  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id012
@@ -4624,17 +4624,6 @@
   link: https://www.nature.com/collections/dajgjhbcfg
   description: This article Collection aims to advance transdisciplinary and transformative conceptual and methodological
     approaches to societal and global challenges.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id004
-  title: 'Cultures of command: identity, power, and belonging in global militaries'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jiaeiccaja
-  description: This collection explores the cultural dimensions of military life across global contexts, with an interest
-    in how armed forces construct and challenge ideas of gender, race, nationalism, professionalism, and sacrifice.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id004
