@@ -124,7 +124,7 @@
     Argument Guest Editors: Yusuke Shinno, Christine Knipping, Takeshi Miyakawa, and David A Reid ...'
 - journal: Advances in Health Sciences Education
   publisher: Springer
-  tag:
+  tag: &id012
   - Medical Education
   title: 'Special Issue: Program Evaluation Scholarship in Health Professions Education'
   abstract_deadline: ''
@@ -282,7 +282,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id024
+  tag: &id025
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -412,7 +412,7 @@
     a range of reasons, in a range of contexts. Whilst these activities can be seen as having primari...
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: &id018
+  tag: &id019
   - Subject Education
   - Mathematics Education
   - Science Education
@@ -500,6 +500,16 @@
   editors: 'Guest editors: Ben He, Zhaochun Ren, Xiao Wang, Xuanang Chen, Ying Zhou'
   link: https://www.sciencedirect.com/special-issue/338285/firm-foundation-model-integrity-and-ranking-methods-in-the-llm-era
   description: ''
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id005
+  title: 'Academic Search and Learning with GenAI: New Agency, New Behavior, and New Ecology'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Chang Liu, Soo Young Rieh, Luanne Sinnamon, Orland Hoeber, Xiaoxuan Song'
+  link: https://www.sciencedirect.com/special-issue/338378/academic-search-and-learning-with-genai-new-agency-new-behavior-and-new-ecology
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
@@ -512,16 +522,6 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
-- journal: Information Processing & Management
-  publisher: Elsevier
-  tag: *id005
-  title: 'Academic Search and Learning with GenAI: New Agency, New Behavior, and New Ecology'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 December 2026
-  fullpaper_deadline_sort: '2026-12-31'
-  editors: 'Guest editors: Chang Liu, Soo Young Rieh, Luanne Sinnamon, Orland Hoeber, Xiaoxuan Song'
-  link: https://www.sciencedirect.com/special-issue/338378/academic-search-and-learning-with-genai-new-agency-new-behavior-and-new-ecology
-  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id011
@@ -950,7 +950,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id014
+  tag: &id015
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -963,7 +963,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id012
+  tag: &id013
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1142,7 +1142,7 @@
     disciplines.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id016
+  tag: &id017
   - Educational Technology
   title: 'Human-AI Co-Regulation and Learner Agency: Rethinking Learning Processes in AI-Supported Learning Contexts'
   abstract_deadline: ''
@@ -1376,6 +1376,17 @@
   link: https://link.springer.com/collections/fjegbeefab
   description: This special issue asks how solidarity is understood, practised and lived in the particular settings where
     science and environmental knowledge is produced and taught. We are interested in work grounded in sp...
+- journal: Advances in Health Sciences Education
+  publisher: Springer
+  tag: *id012
+  title: Emotions in Health Professions Education
+  abstract_deadline: ''
+  fullpaper_deadline: 01 May 2027
+  fullpaper_deadline_sort: '2027-05-01'
+  editors: ''
+  link: https://link.springer.com/collections/hgddhjhife
+  description: This special issue of Advances in Health Sciences Education aims to broaden and elevate the discussion on emotion
+    in health professions education. For decades, researchers in fields such as psychology and so...
 - journal: Journal of Hospitality, Leisure, Sport & Tourism Education
   publisher: Elsevier
   tag:
@@ -1390,7 +1401,7 @@
   description: ''
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id012
+  tag: *id013
   title: Pedagogical Transformation through Human–AI Collaboration in English-Medium Instruction
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2027
@@ -1412,7 +1423,7 @@
     into the training of health professionals. As medical education increasingly shifts from tradit...
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id015
+  tag: &id016
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1425,7 +1436,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id013
+  tag: &id014
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1505,7 +1516,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1516,7 +1527,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id014
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1527,7 +1538,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id017
+  tag: &id018
   - Language Education & Acquisition
   title: ARWA
   abstract_deadline: ''
@@ -1538,7 +1549,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id015
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1549,7 +1560,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id016
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1598,7 +1609,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id017
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1609,7 +1620,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: International Journal of Science and Mathematics Education
   publisher: Springer
-  tag: *id018
+  tag: *id019
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1620,7 +1631,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id012
+  tag: *id013
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1642,7 +1653,7 @@
     in Research In Science Education (RISE) since 1989. Emphasizing the unique pedagogical and contextu...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id019
+  tag: &id020
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Navigating Emotional and Psychological Landscapes in AI-Enhanced Education'
@@ -1655,7 +1666,7 @@
     by delving into users’ emotional and psychological perspectives. Studies may contribute to the cre...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id019
+  tag: *id020
   title: 'Special Issue: Sustainable university-school partnerships in teacher development and pedagogical innovation'
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1703,7 +1714,7 @@
     the Relationship between Science and Democracy during Crises Guest Editor(s): ● Alexander Bogner, Aus...'
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: &id020
+  tag: &id021
   - Education Policy & Social Issues
   - Educational Management & Leadership
   title: COVID-19 and Educational Change
@@ -1715,7 +1726,7 @@
   description: COVID-19 and Educational Change
 - journal: Journal of Educational Change
   publisher: Springer
-  tag: *id020
+  tag: *id021
   title: School Improvement and Educational Change
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1725,7 +1736,7 @@
   description: School Improvement and Educational Change
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: &id021
+  tag: &id022
   - Medical Education
   - Educational Psychology
   title: What Can Be Done? Systemic Problems in the Practice of Medicine
@@ -1810,7 +1821,7 @@
   description: 'Submit to the special issue: School-based Health Education: Policy, Curriculum and Practice in Troubling Times'
 - journal: Academic Psychiatry
   publisher: Springer
-  tag: *id021
+  tag: *id022
   title: Call for Papers on Media in Psychiatry Education
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1833,7 +1844,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id016
+  tag: *id017
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -1879,7 +1890,7 @@
   description: ''
 - journal: PNAS
   publisher: PNAS
-  tag: &id022
+  tag: &id023
   - Interdisciplinary Science
   title: PNAS 2025 Call for Papers in Select UN Sustainable Development Goals (SDGs)
   abstract_deadline: ''
@@ -1891,7 +1902,7 @@
     Energy.'
 - journal: PNAS
   publisher: PNAS
-  tag: *id022
+  tag: *id023
   title: 'Animal Communication: Diversity and Complexity Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1902,7 +1913,7 @@
     at different scales of biological organization.
 - journal: PNAS
   publisher: PNAS
-  tag: *id022
+  tag: *id023
   title: 'Ancient Human Studies: Patterns and Processes in Hominin Evolution Call for Papers Collection'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1924,7 +1935,7 @@
   description: Call for papers for a special issue on “ Reimagining Future Learning via Human-AI Hybrid Intelligence .”
 - journal: Educational Technology & Society
   publisher: Unknown
-  tag: &id023
+  tag: &id024
   - Educational Technology
   title: 'Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity, Engagement Pathways, and Educational
     Equity'
@@ -1949,7 +1960,7 @@
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
 - journal: Educational Technology & Society
   publisher: Unknown
-  tag: *id023
+  tag: *id024
   title: Trustworthy AI-Enhanced Education Data Governance, Pedagogical Evidence, and Human Oversight
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4111,7 +4122,7 @@
     aims to promote inclusive strategies and foster a deeper understanding of learning in all its forms.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id024
+  tag: *id025
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
