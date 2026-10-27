@@ -185,17 +185,6 @@
   link: https://www.nature.com/collections/diihddgjcg
   description: The Editors at Communications Psychology, Nature Human Behaviour, Nature Communications and Scientific Reports
     invite submissions that address the importance of psychological needs for well-being and mental health.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id003
-  title: Living with human enhancement – ethical, social, and psychological dimensions
-  abstract_deadline: ''
-  fullpaper_deadline: 27 November 2026
-  fullpaper_deadline_sort: '2026-11-27'
-  editors: ''
-  link: https://www.nature.com/collections/biafefeaci
-  description: This Collection aims to explore and reframe the psychological, sociological, philosophical, ethical, cultural,
-    and political dimensions of human enhancement.
 - journal: npj Science of Learning
   publisher: Nature Portfolio
   tag: &id007
@@ -510,6 +499,16 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id005
+  title: Data Elements and Data-intelligence Empowerment
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Jiang Wu, Michal Ptaszynski, Qingpeng Zhang, Dongming Xu, Cong Wang'
+  link: https://www.sciencedirect.com/special-issue/338472/data-elements-and-data-intelligence-empowerment
+  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id011
@@ -1971,6 +1970,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: Bio-based Polymers
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fdegacicef
+  description: This cross-journal Collection highlights advances in the synthesis, modification, application and end-of-life
+    management of polymers from bio-based feedstocks and natural biopolymers.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: Photonic neuromorphic computing
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2120,7 +2130,7 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
-  title: Cancer Cell Atlases 2026
+  title: Cancer cell atlases 2026
   abstract_deadline: ''
   fullpaper_deadline: ''
   fullpaper_deadline_sort: '9999-99-99'
@@ -4122,6 +4132,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
+  title: Multimodal literacy and media literacy
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dgeabeahab
+  description: This Collection welcomes research examining multimodal and media literacies as social, cultural, educational
+    and political practices.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id003
   title: 'Mapping propaganda: practices, media and power'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4244,16 +4265,6 @@
   link: https://www.nature.com/collections/bjbahbehih
   description: This Collection explores how wonder and awe operate not only within individuals, but across cultures, histories,
     social structures and belief systems and in contemporary life.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id003
-  title: Censorship, power and the politics of expression
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hbjbgffeab
-  description: This Collection welcomes research examining censorship as a historical, political, cultural and social phenomenon.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
