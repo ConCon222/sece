@@ -487,6 +487,16 @@
   editors: 'Guest editors: Chang Liu, Soo Young Rieh, Luanne Sinnamon, Orland Hoeber, Xiaoxuan Song'
   link: https://www.sciencedirect.com/special-issue/338378/academic-search-and-learning-with-genai-new-agency-new-behavior-and-new-ecology
   description: ''
+- journal: Information Processing & Management
+  publisher: Elsevier
+  tag: *id005
+  title: Data Elements and Data-intelligence Empowerment
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: 'Guest editors: Jiang Wu, Michal Ptaszynski, Qingpeng Zhang, Dongming Xu, Cong Wang'
+  link: https://www.sciencedirect.com/special-issue/338472/data-elements-and-data-intelligence-empowerment
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
@@ -499,16 +509,6 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
-- journal: Information Processing & Management
-  publisher: Elsevier
-  tag: *id005
-  title: Data Elements and Data-intelligence Empowerment
-  abstract_deadline: ''
-  fullpaper_deadline: 31 December 2026
-  fullpaper_deadline_sort: '2026-12-31'
-  editors: 'Guest editors: Jiang Wu, Michal Ptaszynski, Qingpeng Zhang, Dongming Xu, Cong Wang'
-  link: https://www.sciencedirect.com/special-issue/338472/data-elements-and-data-intelligence-empowerment
-  description: ''
 - journal: TESOL Quarterly
   publisher: Wiley
   tag: &id011
@@ -4268,6 +4268,16 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
+  title: Censorship, power and the politics of expression
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hbjbgffeab
+  description: This Collection welcomes research examining censorship as a historical, political, cultural and social phenomenon.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id003
   title: 'Political ‘extremists’ and ‘moderates’: psychological mechanisms and social perceptions'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4389,6 +4399,17 @@
   description: This cross-journal Collection collaboratively by Humanities & Social Sciences Communications and Scientific
     Reports, brings together research from the humanities, social sciences, and natural sciences to examine how psychedelics
     and entheogens shape human experience, social organisation, and biological systems.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Living with human enhancement – ethical, social, and psychological dimensions
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/biafefeaci
+  description: This Collection aims to explore and reframe the psychological, sociological, philosophical, ethical, cultural,
+    and political dimensions of human enhancement.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
@@ -4631,6 +4652,17 @@
   link: https://www.nature.com/collections/dajgjhbcfg
   description: This article Collection aims to advance transdisciplinary and transformative conceptual and methodological
     approaches to societal and global challenges.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id003
+  title: Psychology of racism and prejudice
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jghdcfgjii
+  description: This Collection investigates the psychology of racism and prejudice, bringing together insights from cognitive,
+    social, developmental, and cultural psychology, as well as sociology, history, and anthropology.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
