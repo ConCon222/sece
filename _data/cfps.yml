@@ -1970,6 +1970,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: Machine Learning for Sustainable Materials Design, Discovery and Circularity
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gbhhiaeifa
+  description: With this Collection, the editors invite submissions that advance the development and application of artificial
+    intelligence, machine learning, and computational methods for sustainable materials research.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: Bio-based Polymers
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4478,17 +4489,6 @@
   link: https://www.nature.com/collections/ciiaeejbii
   description: This Collection aims to explore social, political, and academic debates that have emerged specifically in the
     21st Century and are crucial for the development of our global societies.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id003
-  title: Grievances and victimhood in social and political engagement
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/cgebiajcie
-  description: This Collection explores how grievance and victimhood shape political and social engagement, particularly the
-    social and behavioural psychological dimensions of grievance formation, mobilisation, and political expression.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
