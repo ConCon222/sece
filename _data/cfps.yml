@@ -497,6 +497,19 @@
   editors: 'Guest editors: Jiang Wu, Michal Ptaszynski, Qingpeng Zhang, Dongming Xu, Cong Wang'
   link: https://www.sciencedirect.com/special-issue/338472/data-elements-and-data-intelligence-empowerment
   description: ''
+- journal: Educational Assessment, Evaluation and Accountability
+  publisher: Springer
+  tag:
+  - Education Policy & Social Issues
+  - Educational Assessment
+  title: 'Education Management Information Systems in Europe: Country Perspectives on Linked Education Data for Research'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: ''
+  link: https://link.springer.com/collections/ddiejbfhhd
+  description: Education Management Information Systems (EMIS) are national systems that collect, store, manage, and report
+    data on education. They are usually maintained by ministries of education, statistical offices, or...
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id003
@@ -1970,6 +1983,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: 'Quantum Geometry in Topological Matter: Structure, Bounds, and Metrology'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ajheehaihh
+  description: In this cross-journal Collection, we highlight articles that probe quantum geometry itself, from higher-order
+    structure and topological bounds to geometry-first measurement.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: Machine Learning for Sustainable Materials Design, Discovery and Circularity
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2035,17 +2059,6 @@
   editors: ''
   link: https://www.nature.com/collections/aefaahgacc
   description: In this cross-journal Collection, we aim to highlight articles on Altermagnetic materials.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: Microbial metabolic interactions
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/dacbjabiah
-  description: In this cross-journal collection, editors seek articles studying microbial metabolic interactions, including
-    nutrient exchange, complex microbial metabolism and physiology, and microbial ecology and evolution.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
@@ -3250,17 +3263,6 @@
   description: This collection brings together research that addresses critical engineering challenges in implantable wireless
     communications. It demonstrates how electromagnetic, optical, acoustic, or hybrid methods can be engineered to achieve
     reliable wireless communications and power delivery through biological tissues.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: 'Adolescent mental health: advancing understanding to improve outcomes'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/igabdcacch
-  description: This cross-journal collection invites manuscripts that investigate the distribution and determinants of adolescent
-    mental health across diverse settings as well as innovative prevention, detection and intervention approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id001
