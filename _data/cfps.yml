@@ -941,7 +941,7 @@
     and limiting resistance evolution.
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id015
+  tag: &id016
   - General Education
   - Education Policy & Social Issues
   title: Humanizing AI-mediated Feedback for Writing
@@ -954,7 +954,7 @@
     the feedback landscape in writing education. While AI tools can alleviate teacher workload and p...
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: &id013
+  tag: &id014
   - General Education
   - Education Policy & Social Issues
   title: 'Special Issue: Humanizing AI-mediated Feedback for Writing'
@@ -1133,7 +1133,7 @@
     disciplines.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: &id017
+  tag: &id013
   - Educational Technology
   title: 'Human-AI Co-Regulation and Learner Agency: Rethinking Learning Processes in AI-Supported Learning Contexts'
   abstract_deadline: ''
@@ -1266,6 +1266,18 @@
   editors: 'Guest editors: Tao Wen, Xinyi Zhou, Richard Allmendinger, Kang Hao Cheong'
   link: https://www.sciencedirect.com/special-issue/332020/explainable-ai-and-network-science-for-social-systems-and-collective-intelligence
   description: ''
+- journal: Reading and Writing
+  publisher: Springer
+  tag: &id017
+  - Language Education & Acquisition
+  title: Assessing and Teaching Writing
+  abstract_deadline: ''
+  fullpaper_deadline: 01 April 2027
+  fullpaper_deadline_sort: '2027-04-01'
+  editors: ''
+  link: https://link.springer.com/collections/gbjfaejjdg
+  description: 'Guest Editors: Steve Graham, Arizona State University, USA and Albert W. Li, University of Houston, USA Writing
+    is an essential skill for success in the world today. Students who do not develop strong writin...'
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
@@ -1390,9 +1402,20 @@
   editors: 'Guest editors: Kai-Sean Lee, Stefanie Kate Benjamin, Hongping Zhang, Swechchha Subedi, Shawn Bucher'
   link: https://www.sciencedirect.com/special-issue/329013/unlearning-qualitative-inquiry
   description: ''
-- journal: Asia-Pacific Education Researcher
+- journal: Educational Technology Research and Development
   publisher: Springer
   tag: *id013
+  title: 'Human-in-the-Loop: Reenvisioning Instructional Design and Technology Development in the Era of AI'
+  abstract_deadline: ''
+  fullpaper_deadline: 30 May 2027
+  fullpaper_deadline_sort: '2027-05-30'
+  editors: ''
+  link: https://link.springer.com/collections/jddbiegiid
+  description: This Special Issue examines human-in-the-loop approaches to generative AI in instructional design and educational
+    technology development. As generative AI increasingly automates design and development tasks,...
+- journal: Asia-Pacific Education Researcher
+  publisher: Springer
+  tag: *id014
   title: Pedagogical Transformation through Human–AI Collaboration in English-Medium Instruction
   abstract_deadline: ''
   fullpaper_deadline: 31 May 2027
@@ -1414,7 +1437,7 @@
     into the training of health professionals. As medical education increasingly shifts from tradit...
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: &id016
+  tag: &id018
   - Educational Technology
   - STEM Education
   title: Integrating Generative AI into Scientific Practices and Its Implications for Science Education
@@ -1427,7 +1450,7 @@
     (AI) has been transforming how science is practiced and communicated (Wang et al., 2023)...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: &id014
+  tag: &id015
   - Early Childhood Education
   title: 'Plurilingual Childhoods: Languages, Learning, and Participation in Early Childhood Education and Care'
   abstract_deadline: ''
@@ -1507,7 +1530,7 @@
     education. They provide an early indication of promising instructional, methodological, or policy i...
 - journal: Early Childhood Education Journal
   publisher: Springer
-  tag: *id014
+  tag: *id015
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1518,7 +1541,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id015
+  tag: *id016
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1529,8 +1552,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: &id018
-  - Language Education & Acquisition
+  tag: *id017
   title: ARWA
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1540,7 +1562,7 @@
   description: 'Guest Editor: Poh Wee Koh'
 - journal: Journal of Science Education and Technology
   publisher: Springer
-  tag: *id016
+  tag: *id018
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1551,7 +1573,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id017
+  tag: *id013
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1600,7 +1622,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Reading and Writing
   publisher: Springer
-  tag: *id018
+  tag: *id017
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1622,7 +1644,7 @@
     Citizenship, in support of the UN Sustainable Development Goal: SDG 4 which aims to ensure inclusive...'
 - journal: Asia-Pacific Education Researcher
   publisher: Springer
-  tag: *id013
+  tag: *id014
   title: SDG 4 Quality Education Collection
   abstract_deadline: ''
   fullpaper_deadline: 01 January 2030
@@ -1835,7 +1857,7 @@
     the Submit Now button.
 - journal: Educational Technology Research and Development
   publisher: Springer
-  tag: *id017
+  tag: *id013
   title: Open Call for ETR&D Special Issue Proposals
   abstract_deadline: ''
   fullpaper_deadline: Ongoing
@@ -3710,17 +3732,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Multiscale Engineering and Optimization of Mechanical Metamaterials for Structural Applications
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fddgdhhebd
-  description: This cross-journal Collection highlights the ability of multiscale, programmatic, control of a material’s topology
-    to direct, improve, and drive structure-property relationships.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Host-Pathogen Interactions – Infection, Immunity and Beyond
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3774,17 +3785,6 @@
   link: https://www.nature.com/collections/fecjcifefd
   description: With this cross-journal Collection, the editors at Communications Medicine, Nature Communications, and Scientific
     Reports invite manuscripts that highlight diagnostic techniques and treatment modalities for confronting sepsis.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Sustainable agricultural practices
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/chaifjdada
-  description: In this cross-journal collection we focus on current research to optimize resource use and enhance ecosystem
-    services.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -3900,18 +3900,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Neuroengineering
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ijbgfjadje
-  description: With this cross-journal Collection, the editors at Nature Biomedical Engineering, Nature Medicine, Nature Neuroscience,
-    Nature Biotechnology, Nature Communications, Communications Medicine, Communications Biology, and Scientific Reports invite
-    manuscripts that highlight the development, use and insight obtained from applying neuroengineering approaches.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Sensing Technologies for Crop Health and Growth
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3920,17 +3908,6 @@
   link: https://www.nature.com/collections/hdhadgfdbh
   description: With this cross-journal Collection, we invite manuscripts that highlight continual or real-time sensing systems
     of any form, primarily for arable farming or crop production.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Comparative Psychology of Cognition, Affect, and Behaviour
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gbbefibjai
-  description: With this cross-journal Collection, the editors at Communications Psychology, Nature Communications and Scientific
-    Reports invite manuscripts that highlight recent progress in Comparative Psychology.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -4038,29 +4015,6 @@
   link: https://www.nature.com/collections/ihibjjdcee
   description: In this cross-journal Collection, we invite research into the complex signalling pathways of innate immunity,
     emphasising the activation and regulation of pattern recognition receptors in response to microbial and endogenous triggers.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Targeted diagnostics and therapies for autoimmune diseases
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/igahfggcda
-  description: This cross-journal Collection welcomes pre-clinical, translational, clinical and public health research addressing
-    the complexities of immune-mediated diseases and their management.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: DNA repair and human disease
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ehffcdddfb
-  description: This cross-journal Collection between Nature Communications, Communications Biology and Scientific Reports
-    welcomes submissions on the mechanisms of DNA repair using multiple modelling systems and the applications of DNA repair
-    mechanisms in human disease diagnosis and treatment.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
