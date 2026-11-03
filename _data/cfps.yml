@@ -3439,17 +3439,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Hazards in Mountain Regions
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ibebgagchc
-  description: This cross-journal collection from Communications Earth & Environment brings together research that explores
-    the physical mechanisms and societal impacts of mountain hazards under changing climatic and cryospheric conditions.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Self-healing chemical systems
   abstract_deadline: ''
   fullpaper_deadline: ''
