@@ -487,17 +487,6 @@
   description: This Humanities and Social Sciences Communications Collection brings together interdisciplinary research on
     feminism and democratic politics. We welcome contributions (theoretical, empirical, historical or comparative) from political
     science, sociology, gender studies, history, law, philosophy, anthropology, and related fields.
-- journal: TESOL Quarterly
-  publisher: Wiley
-  tag: &id011
-  - Language Education & Acquisition
-  title: 'Negotiating Multilingual Education in an EMI World: Institutions, Ideologies, and Transformation'
-  abstract_deadline: ''
-  fullpaper_deadline: 1 January 2027
-  fullpaper_deadline_sort: '2027-01-01'
-  editors: ''
-  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001171
-  description: ''
 - journal: Sport, Education and Society
   publisher: Taylor & Francis
   tag: *id004
@@ -727,6 +716,17 @@
     Nature Progress Brain Health, and Communications Biology invite submissions that aim to elucidate the molecular mechanisms
     underlying bidirectional cancer–nervous system interactions and their influence on the tumour microenvironment, as well
     as pre-clinical and clinical studies exploring potential therapeutic strategies to target neural–cancer interactions.
+- journal: TESOL Quarterly
+  publisher: Wiley
+  tag: &id011
+  - Language Education & Acquisition
+  title: 'Negotiating Multilingual Education in an EMI World: Institutions, Ideologies, and Transformation'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 January 2027
+  fullpaper_deadline_sort: '2027-01-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/15457249/homepage/call-for-papers/si-2026-001171
+  description: ''
 - journal: Cultural Studies of Science Education
   publisher: Springer
   tag:
@@ -4434,6 +4434,18 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: Food politics in the Global South
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ighcaihiec
+  description: This Humanities and Social Sciences Communications Collection seeks critical, interdisciplinary reflections
+    on the politics of food in the Global South. We welcome empirical and theoretical contributions from political science,
+    sociology, anthropology, economics, history, development studies, environmental studies, and related fields.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: 'Translating across cultures: literature, film and other media'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4539,28 +4551,6 @@
   link: https://www.nature.com/collections/fjedfcgbad
   description: This Collection invites contributions that explore trauma as a socially embedded, psychologically complex and
     politically situated phenomenon, with particular attention to its transcultural, transethnic and transgenerational dimensions.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: Nuclear contamination in the Arctic
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/eaabdbjegg
-  description: This Collection explores the intersections of nuclear risk, environmental safety policy, and geopolitical contestation
-    in the Arctic. It investigates how contamination is managed, and how affected communities navigate long-term consequences.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: 'Research futures: opportunities, challenges, and competitiveness of doctoral and early-career researchers'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/jjbecghcag
-  description: This Collection aims to generate a comprehensive, interdisciplinary exploration of the evolving conditions
-    of doctoral and early-career research, including both challenges and opportunities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
