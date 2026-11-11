@@ -1,66 +1,3 @@
-- journal: International Journal for Academic Development
-  publisher: Taylor & Francis
-  tag:
-  - Higher Education
-  title: Academic Development Through an Organisational Lens
-  abstract_deadline: 31 October 2026
-  fullpaper_deadline: 01 May 2027
-  fullpaper_deadline_sort: '2026-10-31'
-  editors: Mary C. Wright (University of Sydney, Australia); Laura Cruz (The Pennsylvania State University, U.S.); Alexandra
-    Mihai (Maastricht University, Netherlands)
-  link: https://think.taylorandfrancis.com/special_issues/academic-development-organisational-lens/
-  description: Alexandra Mihai , Maastricht University, Netherlands a.mihai@maastrichtuniversity.nl
-- journal: Educational Psychology
-  publisher: Taylor & Francis
-  tag:
-  - Educational Psychology
-  title: 'AI in Educational Psychology: Reviews, Meta-Analyses, and Position Papers'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 October 2026
-  fullpaper_deadline_sort: '2026-10-31'
-  editors: Bor-Chen Kuo (National Taichung University of Education, Taiwan); Yuan-Hsuan Lee (University of North Texas, United
-    States)
-  link: https://think.taylorandfrancis.com/special_issues/special-issue-on-ai-in-educational-psychology-reviews-meta-analyses-and-position-papers/
-  description: Bor-Chen Kuo , National Taichung University of Education, Taiwan kbc@mail.ntcu.edu.tw
-- journal: Innovation in Language Learning and Teaching
-  publisher: Taylor & Francis
-  tag:
-  - Language Education & Acquisition
-  - Educational Technology
-  title: Negotiating Intercultural Awareness and Informal Digital Language Learning
-  abstract_deadline: 31 October 2026
-  fullpaper_deadline: 31 May 2027
-  fullpaper_deadline_sort: '2026-10-31'
-  editors: Guangxiang Leon Liu (Southeast University, Nanjing, China); Chun Lai (The University of Hong Kong, Hong Kong SAR,
-    China)
-  link: https://think.taylorandfrancis.com/special_issues/negotiating-intercultural-awareness-and-informal-digital-language-learning/
-  description: ''
-- journal: Distance Education
-  publisher: Taylor & Francis
-  tag:
-  - Educational Technology
-  - Higher Education
-  title: 'Reimagining Distance Education in the Age of Generative AI: Transactional Distance, Human–AI Interaction, and Online
-    Pedagogy'
-  abstract_deadline: 31 October 2026
-  fullpaper_deadline: 31 March 2027
-  fullpaper_deadline_sort: '2026-10-31'
-  editors: David Stein (The Ohio State University); Cixiao Wang (Beijing Normal University); Yang Wang (Nanjing Normal University)
-  link: https://think.taylorandfrancis.com/special_issues/reimagining-distance-education-age-generative-ai/
-  description: ''
-- journal: Educational Studies in Mathematics
-  publisher: Springer
-  tag:
-  - Subject Education
-  - Mathematics Education
-  title: 'Special Issue: Cultural Practices in Mathematical Argument'
-  abstract_deadline: ''
-  fullpaper_deadline: 31 October 2026
-  fullpaper_deadline_sort: '2026-10-31'
-  editors: ''
-  link: https://link.springer.com/collections/ibbfbhdcag
-  description: 'Call for Abstracts for a Special Issue in Educational Studies in Mathematics: Cultural Practices in Mathematical
-    Argument Guest Editors: Yusuke Shinno, Christine Knipping, Takeshi Miyakawa, and David A Reid ...'
 - journal: Teaching in Higher Education
   publisher: Taylor & Francis
   tag:
@@ -4066,6 +4003,18 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: 'Framing US interventionism: media, representation, and foreign policy'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dafbffddbi
+  description: This Humanities and Social Sciences Communications Collection examines the communicative and symbolic aspects
+    of US interventionism, with a focus on how the media, both domestic and foreign, portray the US and the states it interacts
+    with.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: Human judgment, governance, and well-being in digitally mediated service systems.
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4553,6 +4502,17 @@
   link: https://www.nature.com/collections/dajgjhbcfg
   description: This article Collection aims to advance transdisciplinary and transformative conceptual and methodological
     approaches to societal and global challenges.
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id001
+  title: Political participation and mobilisation in Central and Eastern Europe
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bfccjjdhbg
+  description: This Collection aims to facilitate interdisciplinary dialogue on political participation and mobilisation in
+    Central and Eastern Europe by examining historical trajectories, contemporary practices, and emerging trends.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
