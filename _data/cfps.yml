@@ -1359,6 +1359,19 @@
   link: https://link.springer.com/collections/djhaaaccge
   description: Higher education is undergoing a profound pedagogical transformation as universities respond to internationalization,
     increasingly diverse student populations, and the rapid development of generative artific...
+- journal: Media, Culture & Society
+  publisher: SAGE
+  tag:
+  - Media Studies
+  - Cultural Studies
+  title: Call for Papers
+  abstract_deadline: ''
+  fullpaper_deadline: June 2027
+  fullpaper_deadline_sort: '2027-06-30'
+  editors: ''
+  link: https://journals.sagepub.com/page/mcs/call-for-papers/crosscurrents_special_section
+  description: 'Seeking submissions for Cross-Currents Special Section on ''Media & Communication Research Scholarship in
+    the age of AI’. Submission Deadline: 1st of June 2027.'
 - journal: BMC Medical Education
   publisher: Springer
   tag: *id006
@@ -4480,6 +4493,17 @@
   link: https://www.nature.com/collections/adgcffdjhe
   description: This Collection is interested in scholarship that examines love in all its everyday expressions. How is love
     expressed across different cultures, identities and social positions?
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id001
+  title: 'Research futures: opportunities, challenges, and competitiveness of doctoral and early-career researchers'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/jjbecghcag
+  description: This Collection aims to generate a comprehensive, interdisciplinary exploration of the evolving conditions
+    of doctoral and early-career research, including both challenges and opportunities.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
