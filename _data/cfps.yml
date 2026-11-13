@@ -1,18 +1,3 @@
-- journal: Teaching in Higher Education
-  publisher: Taylor & Francis
-  tag:
-  - Higher Education
-  - Teacher Education & Development
-  title: The politics of assessment
-  abstract_deadline: 02 November 2026
-  fullpaper_deadline: 24 May 2027
-  fullpaper_deadline_sort: '2026-11-02'
-  editors: Juuso Henrik Nieminen (Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University, Melbourne,
-    Australia); Jan McArthur (Department of Educational Research, Lancaster University, Lancaster, UK); Tim Fawns (Monash
-    Education Academy, Monash University, Clayton, Australia)
-  link: https://think.taylorandfrancis.com/special_issues/the-politics-of-assessment/
-  description: Juuso Henrik Nieminen , Centre for Research in Assessment and Digital Learning (CRADLE), Deakin University,
-    Melbourne, Australia juuso.nieminen@deakin.edu.au
 - journal: Journal of Research on Technology in Education
   publisher: Taylor & Francis
   tag:
@@ -4482,17 +4467,6 @@
   link: https://www.nature.com/collections/ahbabiafdj
   description: This Collection looks to explore Hinduism and its place in the world today, welcoming research on the everyday
     lives of modern Hindus, the religion's links to politics, and also the cultural imprint of Hinduism on society.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: All loved up – exploring love in everyday life
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/adgcffdjhe
-  description: This Collection is interested in scholarship that examines love in all its everyday expressions. How is love
-    expressed across different cultures, identities and social positions?
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
