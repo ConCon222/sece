@@ -386,6 +386,17 @@
   link: https://link.springer.com/collections/ddiejbfhhd
   description: Education Management Information Systems (EMIS) are national systems that collect, store, manage, and report
     data on education. They are usually maintained by ministries of education, statistical offices, or...
+- journal: International Journal of Applied Linguistics
+  publisher: Wiley
+  tag:
+  - Language Education & Acquisition
+  title: 'Transversalizing Intersectionality: EDI in/for Applied Linguistics'
+  abstract_deadline: ''
+  fullpaper_deadline: 31 December 2026
+  fullpaper_deadline_sort: '2026-12-31'
+  editors: ''
+  link: https://onlinelibrary.wiley.com/page/journal/14734192/call-for-papers/si-2026-001360
+  description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
@@ -1930,6 +1941,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: 'Machine learning in brain health: clinical applications, biomarkers, and personalised treatment'
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/dbebbebacb
+  description: This cross-journal collection welcomes research that applies AI and machine learning to precision medicine
+    and clinical practice.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Membrane transport and separation processes
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3336,17 +3358,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Structural biology of biomolecular condensation
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/fcfdbdedif
-  description: This Collection invites work on the structural biology of the interactions, regulation, and disease-associated
-    disruptions of biomolecular condensates.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: The Mobile Genome
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4001,6 +4012,17 @@
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
+  title: Multilingual educational futures
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/efjadjcgfc
+  description: "\uFEFFThis Collection explores the daily realities of multilingual education and the ways in which it can\
+    \ support inclusive, equitable and effective learning across all stages of education."
+- journal: Humanities and Social Sciences Communications
+  publisher: Nature Portfolio
+  tag: *id001
   title: 'Framing US interventionism: media, representation, and foreign policy'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4445,28 +4467,6 @@
   editors: ''
   link: https://www.nature.com/collections/ggjdhifbfe
   description: This Collection invites scholarship that explores burnout from across the humanities and social sciences.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: 'Fiscal policies and energy vulnerability: tackling fuel and energy poverty in a changing global landscape'
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bcedhjdffh
-  description: This Collection seeks to address the urgent and evolving intersection of fiscal policy and energy poverty,
-    a critical issue amid recent international crises, climate transition imperatives, and rising energy costs.
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: *id001
-  title: Hinduism – belief, politics and culture
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ahbabiafdj
-  description: This Collection looks to explore Hinduism and its place in the world today, welcoming research on the everyday
-    lives of modern Hindus, the religion's links to politics, and also the cultural imprint of Hinduism on society.
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
   tag: *id001
