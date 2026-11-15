@@ -3358,6 +3358,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Structural biology of biomolecular condensation
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fcfdbdedif
+  description: This Collection invites work on the structural biology of the interactions, regulation, and disease-associated
+    disruptions of biomolecular condensates.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: The Mobile Genome
   abstract_deadline: ''
   fullpaper_deadline: ''
