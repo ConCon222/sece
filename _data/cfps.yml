@@ -1941,6 +1941,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Heterogeneous catalysis for circular nitrogen chemistry
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/effgdhfgge
+  description: This Collection highlights advances in heterogeneous thermal catalysis for converting these resources into
+    useful chemicals, encompassing catalyst development, reaction engineering and integrated conversion and separation processes.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: 'Machine learning in brain health: clinical applications, biomarkers, and personalised treatment'
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2821,17 +2832,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: Coral Biology Under Climate Stress
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/bjjgjegbhg
-  description: Editors invite manuscripts that advance the scientific understanding of coral stress responses and climate
-    resilience across molecular, physiological, ecological, and restoration focused dimensions.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Microfluidic advances in biosensing, biofabrication, and next generation microreactors
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3076,18 +3076,6 @@
     parenting behaviors. We particularly encourage studies in rodent models exploring the intersection of parenting behavior,
     motivation and epigenetics with an emphasis on neurobiology probed using methods such as transcriptomics, optogenetics,
     chemogenetics and in vivo recording.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Organotropism in cancer metastasis
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/iicgiachhj
-  description: This collection aims to highlight recent advances in the molecular and cellular mechanisms underlying the complexity
-    of metastatic organotropism, and how these actionable insights could be leveraged to facilitate early detection and diagnosis
-    of metastasis, as well as the development of targeted therapeutic approaches.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
