@@ -1941,6 +1941,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Carbon dioxide conversion using homogeneous catalysis
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/fgbfecgjch
+  description: This cross-journal Collection invites manuscripts that realize advances in transforming carbon dioxide into
+    other molecules through homogeneous catalysis.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Heterogeneous catalysis for circular nitrogen chemistry
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -2832,6 +2843,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Coral Biology Under Climate Stress
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/bjjgjegbhg
+  description: Editors invite manuscripts that advance the scientific understanding of coral stress responses and climate
+    resilience across molecular, physiological, ecological, and restoration focused dimensions.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Microfluidic advances in biosensing, biofabrication, and next generation microreactors
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3079,6 +3101,18 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Organotropism in cancer metastasis
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/iicgiachhj
+  description: This collection aims to highlight recent advances in the molecular and cellular mechanisms underlying the complexity
+    of metastatic organotropism, and how these actionable insights could be leveraged to facilitate early detection and diagnosis
+    of metastasis, as well as the development of targeted therapeutic approaches.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Earthquake forecasting and early warning
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3193,17 +3227,6 @@
   description: This cross-journal collection highlights studies on how geological and geochemical processes concentrate critical
     elements across environments such as epithermal, skarn and vein deposits, granitic intrusions, and weathering or sedimentary
     systems.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Microbiome and energy metabolism
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/hidgieebfe
-  description: This collection invites research on microbial energy metabolism including studies characterizing microbial
-    metabolic pathways or impacts of microbial metabolites on host metabolism.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
@@ -3960,17 +3983,6 @@
   link: https://www.nature.com/collections/edjfhbfahf
   description: Registered Reports are an article format aimed at promoting robust and rigorous scientific practices. This
     collection features our published Registered Reports, as well as relevant editorials and other related content.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Replication and generalization
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/ebeibhiihc
-  description: This Collection invites submissions of direct replication and generalization studies of primary research papers
-    in psychology.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
   tag: *id012
