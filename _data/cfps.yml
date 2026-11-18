@@ -3230,6 +3230,17 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: Microbiome and energy metabolism
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/hidgieebfe
+  description: This collection invites research on microbial energy metabolism including studies characterizing microbial
+    metabolic pathways or impacts of microbial metabolites on host metabolism.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: The Gut-Brain axis and health
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3983,6 +3994,17 @@
   link: https://www.nature.com/collections/edjfhbfahf
   description: Registered Reports are an article format aimed at promoting robust and rigorous scientific practices. This
     collection features our published Registered Reports, as well as relevant editorials and other related content.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
+  title: Replication and generalization
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/ebeibhiihc
+  description: This Collection invites submissions of direct replication and generalization studies of primary research papers
+    in psychology.
 - journal: Nature Human Behaviour
   publisher: Nature Portfolio
   tag: *id012
