@@ -1941,6 +1941,18 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
+  title: The changing geopolitics of global energy
+  abstract_deadline: ''
+  fullpaper_deadline: ''
+  fullpaper_deadline_sort: '9999-99-99'
+  editors: ''
+  link: https://www.nature.com/collections/gijhabbjjh
+  description: With this Collection, the editors invite manuscripts that highlight how energy transitions and geopolitical
+    dynamics are shaping one another through changing power relations, energy security, technological competition, governance,
+    and trade across scales.
+- journal: Nature Communications
+  publisher: Nature Portfolio
+  tag: *id007
   title: Carbon dioxide conversion using homogeneous catalysis
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3346,18 +3358,6 @@
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
-  title: AI-empowered X-ray and neutron studies in material science
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/gcchdgacge
-  description: This cross-journal Collection highlights the application of AI techniques to advance X-ray and neutron scattering
-    and spectroscopy techniques in material science. Explore the latest research including AI-enabled approaches for instrument
-    operation, data acquisition, and data analysis.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
   title: Digital Medicine for Infectious Diseases
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -3604,17 +3604,6 @@
   link: https://www.nature.com/collections/eagfdghghd
   description: This Collection seeks to highlight new innovative research and clinical advancements in hormone-based therapies
     for metabolic diseases, particularly emphasizing the critical role of incretins in treatment strategies.
-- journal: Nature Communications
-  publisher: Nature Portfolio
-  tag: *id007
-  title: Large language models in psychology
-  abstract_deadline: ''
-  fullpaper_deadline: ''
-  fullpaper_deadline_sort: '9999-99-99'
-  editors: ''
-  link: https://www.nature.com/collections/badbafeeca
-  description: With this cross-journal Collection, the editors at Nature Communications, Communications Psychology and Communications
-    AI and Computing invite work on the intersection of psychology and LLMs.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: *id007
