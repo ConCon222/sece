@@ -1,17 +1,3 @@
-- journal: Humanities and Social Sciences Communications
-  publisher: Nature Portfolio
-  tag: &id001
-  - Interdisciplinary Science
-  - General Education
-  title: Arts integration in education
-  abstract_deadline: ''
-  fullpaper_deadline: 26 November 2026
-  fullpaper_deadline_sort: '2026-11-26'
-  editors: ''
-  link: https://www.nature.com/collections/fcfjchajej
-  description: This Collection examines arts integration in education and its social, cultural, political, cognitive, and
-    affective dimensions. We invite research that explores how artistic processes intersect with curriculum, pedagogy, assessment,
-    and institutional structures in formal and informal learning environments.
 - journal: Nature Communications
   publisher: Nature Portfolio
   tag: &id007
@@ -100,7 +86,9 @@
   description: ''
 - journal: Humanities and Social Sciences Communications
   publisher: Nature Portfolio
-  tag: *id001
+  tag: &id001
+  - Interdisciplinary Science
+  - General Education
   title: 'The Nobel Prize: historical and sociocultural perspectives'
   abstract_deadline: ''
   fullpaper_deadline: 02 December 2026
@@ -111,7 +99,7 @@
     and cultural frameworks.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: &id026
+  tag: &id027
   - Life Sciences
   title: Cellular Senescence 2025
   abstract_deadline: ''
@@ -419,6 +407,19 @@
   description: This Collection invites interdisciplinary scholarship that critically explores the dynamic interplay between
     the Olympic and Paralympic Games, media forms, representations, and the cultural politics that shape and are shaped by
     them.
+- journal: Health Education Journal
+  publisher: SAGE
+  tag: &id025
+  - Subject Education
+  - Health Education
+  title: Call for Social Media Editor!
+  abstract_deadline: ''
+  fullpaper_deadline: 4 January 2027
+  fullpaper_deadline_sort: '2027-01-04'
+  editors: ''
+  link: https://journals.sagepub.com/page/hej/call-for-social-media-editor
+  description: 'Health Education Journal is recruiting for a Social Media Editor to lead online promotion of the journal.
+    Deadline: 4 January 2027'
 - journal: Language and Education
   publisher: Taylor & Francis
   tag:
@@ -1903,7 +1904,7 @@
   description: Call for papers for a special issue on “ Reimagining Future Learning via Human-AI Hybrid Intelligence .”
 - journal: Educational Technology & Society
   publisher: Unknown
-  tag: &id025
+  tag: &id026
   - Educational Technology
   title: 'Person-Centered Evidence on Generative AI in Education: Learner Heterogeneity, Engagement Pathways, and Educational
     Equity'
@@ -1916,9 +1917,7 @@
     Engagement Pathways, and Educational Equity .”'
 - journal: Health Education Journal
   publisher: SAGE
-  tag:
-  - Subject Education
-  - Health Education
+  tag: *id025
   title: Call for papers
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -1928,7 +1927,7 @@
   description: 'Submit to the Special Issue: The Power of Peers: Peer education and Peer-based Programmes for Health Education'
 - journal: Educational Technology & Society
   publisher: Unknown
-  tag: *id025
+  tag: *id026
   title: Trustworthy AI-Enhanced Education Data Governance, Pedagogical Evidence, and Human Oversight
   abstract_deadline: ''
   fullpaper_deadline: ''
@@ -4055,7 +4054,7 @@
     aims to promote inclusive strategies and foster a deeper understanding of learning in all its forms.
 - journal: Nature Aging
   publisher: Nature Portfolio
-  tag: *id026
+  tag: *id027
   title: Cognitive Resilience in Aging
   abstract_deadline: ''
   fullpaper_deadline: ''
